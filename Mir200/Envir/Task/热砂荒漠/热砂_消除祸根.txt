@@ -1,0 +1,10 @@
+[setup]
+stepcount = 3
+title = 热砂荒漠—消除祸根
+ID = 34
+stepaim1 = 去<神工堂/@@goplace m009 194,72>杀10个任意怪物 <color=green [传]/@@flyto 37 m009 194 72>
+stepaim2 = 还要杀<$TASKVAL(34).I0>个<怪物/@@goplace m009 194,72> <color=green [传]/@@flyto 37 m009 194 72>
+stepaim3 = 任务完成！去找<李将军/@@goto 2 李将军 215,436> <color=green [传]/@@flyto 34 2 215 436>
+stepDESC1 = <color=graygolden 任务目的：>去<color=green 神工堂>干掉10个任意怪物后找<李将军/@@goto 2 李将军 215,436>\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：400000 </@@!PIC2 10,229>绑定金币：2000\<color=graygolden 任务介绍:>\  这次，我需要你去机关洞深处的<color=green 神工堂>，去干掉<color=green 10个任意>\<color=green 的怪物>，我要看看他们是不是被魔族给蛊惑了。
+stepDESC2 = <color=graygolden 任务目的：>去<color=green 神工堂>干掉10个任意怪物后找<李将军/@@goto 2 李将军 215,436>\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：400000 </@@!PIC2 10,229>绑定金币：2000\<color=graygolden 任务介绍:>\还要干掉<$TASKVAL(34).I0>个怪物
+stepDESC3 = <color=graygolden 任务目的：>去<color=green 神工堂>干掉10个任意怪物后找<李将军/@@goto 2 李将军 215,436>\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：400000 </@@!PIC2 10,229>绑定金币：2000\<color=graygolden 任务介绍:>\恭喜，圆满完成任务！快用向李将军回报吧！

@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="gb2312"?>
+<WSP material0="兽谱魂魄" material0_value="10"  material1="兽谱精魄" material1_value="100" desc="  上古之战时留下的神器，随中州先皇一起埋葬于皇陵地宫之中，逐渐被遗忘，如今幻境魔神降临，风云再起，尘封的神器将再次启封随英雄征战四方。万兽谱可以记录勇士获得的灵兽外形，并且可以提升勇士自身的战斗能力和骑战能力。">
+    <LevelData>
+		<Level value="1" nextlevelexp="1000" autolevelup="1" cur_wsp_lv="1">
+			<jobprop job="0" name0="hp" value_0_0="30" value_0_1="30" name1="gj" value_1_0="0" value_1_1="1" name2="fy" value_2_0="0" value_2_1="0" name3="mffy" value_3_0="0" value_3_1="0" name4="xxz" value_4_0="1" value_4_1="1" />
+			<jobprop job="1" name0="hp" value_0_0="10" value_0_1="10" name1="mfgj" value_1_0="0" value_1_1="1" name2="fy" value_2_0="0" value_2_1="0" name3="mffy" value_3_0="0" value_3_1="0" name4="xxz" value_4_0="1" value_4_1="1" />
+			<jobprop job="2" name0="hp" value_0_0="20" value_0_1="20" name1="dsgj" value_1_0="0" value_1_1="1" name2="fy" value_2_0="0" value_2_1="0" name3="mffy" value_3_0="0" value_3_1="0" name4="xxz" value_4_0="1" value_4_1="1" />
+		</Level>
+		<Level value="2" nextlevelexp="1650" autolevelup="1" cur_wsp_lv="2">
+			<jobprop job="0" name0="hp" value_0_0="45" value_0_1="45" name1="gj" value_1_0="0" value_1_1="1" name2="fy" value_2_0="0" value_2_1="0" name3="mffy" value_3_0="0" value_3_1="0" name4="xxz" value_4_0="1" value_4_1="1" />
+			<jobprop job="1" name0="hp" value_0_0="15" value_0_1="15" name1="mfgj" value_1_0="0" value_1_1="1" name2="fy" value_2_0="0" value_2_1="0" name3="mffy" value_3_0="0" value_3_1="0" name4="xxz" value_4_0="1" value_4_1="1" />
+			<jobprop job="2" name0="hp" value_0_0="30" value_0_1="30" name1="dsgj" value_1_0="0" value_1_1="1" name2="fy" value_2_0="0" value_2_1="0" name3="mffy" value_3_0="0" value_3_1="0" name4="xxz" value_4_0="1" value_4_1="1" />
+		</Level>
+		<Level value="3" nextlevelexp="2500" autolevelup="1" cur_wsp_lv="3">
+			<jobprop job="0" name0="hp" value_0_0="60" value_0_1="60" name1="gj" value_1_0="0" value_1_1="2" name2="fy" value_2_0="0" value_2_1="0" name3="mffy" value_3_0="0" value_3_1="0" name4="xxz" value_4_0="2" value_4_1="2" />
+			<jobprop job="1" name0="hp" value_0_0="20" value_0_1="20" name1="mfgj" value_1_0="0" value_1_1="2" name2="fy" value_2_0="0" value_2_1="0" name3="mffy" value_3_0="0" value_3_1="0" name4="xxz" value_4_0="2" value_4_1="2" />
+			<jobprop job="2" name0="hp" value_0_0="40" value_0_1="40" name1="dsgj" value_1_0="0" value_1_1="2" name2="fy" value_2_0="0" value_2_1="0" name3="mffy" value_3_0="0" value_3_1="0" name4="xxz" value_4_0="2" value_4_1="2" />
+		</Level>
+		<Level value="4" nextlevelexp="3500" autolevelup="1" cur_wsp_lv="4">
+			<jobprop job="0" name0="hp" value_0_0="75" value_0_1="75" name1="gj" value_1_0="0" value_1_1="2" name2="fy" value_2_0="0" value_2_1="1" name3="mffy" value_3_0="0" value_3_1="1" name4="xxz" value_4_0="2" value_4_1="2" />
+			<jobprop job="1" name0="hp" value_0_0="25" value_0_1="25" name1="mfgj" value_1_0="0" value_1_1="2" name2="fy" value_2_0="0" value_2_1="1" name3="mffy" value_3_0="0" value_3_1="1" name4="xxz" value_4_0="2" value_4_1="2" />
+			<jobprop job="2" name0="hp" value_0_0="50" value_0_1="50" name1="dsgj" value_1_0="0" value_1_1="2" name2="fy" value_2_0="0" value_2_1="1" name3="mffy" value_3_0="0" value_3_1="1" name4="xxz" value_4_0="2" value_4_1="2" />
+		</Level>
+		<Level value="5" nextlevelexp="4500" autolevelup="1" cur_wsp_lv="5">
+			<jobprop job="0" name0="hp" value_0_0="90" value_0_1="90" name1="gj" value_1_0="1" value_1_1="2" name2="fy" value_2_0="0" value_2_1="1" name3="mffy" value_3_0="0" value_3_1="1" name4="xxz" value_4_0="3" value_4_1="3" />
+			<jobprop job="1" name0="hp" value_0_0="30" value_0_1="30" name1="mfgj" value_1_0="1" value_1_1="2" name2="fy" value_2_0="0" value_2_1="1" name3="mffy" value_3_0="0" value_3_1="1" name4="xxz" value_4_0="3" value_4_1="3" />
+			<jobprop job="2" name0="hp" value_0_0="60" value_0_1="60" name1="dsgj" value_1_0="1" value_1_1="2" name2="fy" value_2_0="0" value_2_1="1" name3="mffy" value_3_0="0" value_3_1="1" name4="xxz" value_4_0="3" value_4_1="3" />
+		</Level>
+		<Level value="6" nextlevelexp="5500" autolevelup="1" cur_wsp_lv="6">
+			<jobprop job="0" name0="hp" value_0_0="105" value_0_1="105" name1="gj" value_1_0="1" value_1_1="2" name2="fy" value_2_0="0" value_2_1="1" name3="mffy" value_3_0="0" value_3_1="1" name4="xxz" value_4_0="3" value_4_1="3" />
+			<jobprop job="1" name0="hp" value_0_0="35" value_0_1="35" name1="mfgj" value_1_0="1" value_1_1="2" name2="fy" value_2_0="0" value_2_1="1" name3="mffy" value_3_0="0" value_3_1="1" name4="xxz" value_4_0="3" value_4_1="3" />
+			<jobprop job="2" name0="hp" value_0_0="70" value_0_1="70" name1="dsgj" value_1_0="1" value_1_1="2" name2="fy" value_2_0="0" value_2_1="1" name3="mffy" value_3_0="0" value_3_1="1" name4="xxz" value_4_0="3" value_4_1="3" />
+		</Level>
+		<Level value="7" nextlevelexp="6500" autolevelup="1" cur_wsp_lv="7">
+			<jobprop job="0" name0="hp" value_0_0="120" value_0_1="120" name1="gj" value_1_0="1" value_1_1="3" name2="fy" value_2_0="0" value_2_1="2" name3="mffy" value_3_0="0" value_3_1="2" name4="xxz" value_4_0="4" value_4_1="4" />
+			<jobprop job="1" name0="hp" value_0_0="40" value_0_1="40" name1="mfgj" value_1_0="1" value_1_1="3" name2="fy" value_2_0="0" value_2_1="2" name3="mffy" value_3_0="0" value_3_1="2" name4="xxz" value_4_0="4" value_4_1="4" />
+			<jobprop job="2" name0="hp" value_0_0="80" value_0_1="80" name1="dsgj" value_1_0="1" value_1_1="3" name2="fy" value_2_0="0" value_2_1="2" name3="mffy" value_3_0="0" value_3_1="2" name4="xxz" value_4_0="4" value_4_1="4" />
+		</Level>
+		<Level value="8" nextlevelexp="7500" autolevelup="1" cur_wsp_lv="8">
+			<jobprop job="0" name0="hp" value_0_0="135" value_0_1="135" name1="gj" value_1_0="1" value_1_1="3" name2="fy" value_2_0="0" value_2_1="2" name3="mffy" value_3_0="0" value_3_1="2" name4="xxz" value_4_0="4" value_4_1="4" />
+			<jobprop job="1" name0="hp" value_0_0="45" value_0_1="45" name1="mfgj" value_1_0="1" value_1_1="3" name2="fy" value_2_0="0" value_2_1="2" name3="mffy" value_3_0="0" value_3_1="2" name4="xxz" value_4_0="4" value_4_1="4" />
+			<jobprop job="2" name0="hp" value_0_0="90" value_0_1="90" name1="dsgj" value_1_0="1" value_1_1="3" name2="fy" value_2_0="0" value_2_1="2" name3="mffy" value_3_0="0" value_3_1="2" name4="xxz" value_4_0="4" value_4_1="4" />
+		</Level>
+		<Level value="9" nextlevelexp="8500" autolevelup="1" cur_wsp_lv="9">
+			<jobprop job="0" name0="hp" value_0_0="150" value_0_1="150" name1="gj" value_1_0="2" value_1_1="3" name2="fy" value_2_0="0" value_2_1="2" name3="mffy" value_3_0="0" value_3_1="2" name4="xxz" value_4_0="5" value_4_1="5" />
+			<jobprop job="1" name0="hp" value_0_0="50" value_0_1="50" name1="mfgj" value_1_0="2" value_1_1="3" name2="fy" value_2_0="0" value_2_1="2" name3="mffy" value_3_0="0" value_3_1="2" name4="xxz" value_4_0="5" value_4_1="5" />
+			<jobprop job="2" name0="hp" value_0_0="100" value_0_1="100" name1="dsgj" value_1_0="2" value_1_1="3" name2="fy" value_2_0="0" value_2_1="2" name3="mffy" value_3_0="0" value_3_1="2" name4="xxz" value_4_0="5" value_4_1="5" />
+		</Level>
+		<Level value="10" nextlevelexp="9500" autolevelup="0" material="兽谱进阶丹" material_num ="2" cur_wsp_lv="10">
+			<jobprop job="0" name0="hp" value_0_0="165" value_0_1="165" name1="gj" value_1_0="2" value_1_1="3" name2="fy" value_2_0="1" value_2_1="2" name3="mffy" value_3_0="1" value_3_1="2" name4="xxz" value_4_0="5" value_4_1="5" />
+			<jobprop job="1" name0="hp" value_0_0="55" value_0_1="55" name1="mfgj" value_1_0="2" value_1_1="3" name2="fy" value_2_0="1" value_2_1="2" name3="mffy" value_3_0="1" value_3_1="2" name4="xxz" value_4_0="5" value_4_1="5" />
+			<jobprop job="2" name0="hp" value_0_0="110" value_0_1="110" name1="dsgj" value_1_0="2" value_1_1="3" name2="fy" value_2_0="1" value_2_1="2" name3="mffy" value_3_0="1" value_3_1="2" name4="xxz" value_4_0="5" value_4_1="5" />
+		</Level>
+		<Level value="11" nextlevelexp="10500" autolevelup="1" cur_wsp_lv="11">
+			<jobprop job="0" name0="hp" value_0_0="180" value_0_1="180" name1="gj" value_1_0="2" value_1_1="4" name2="fy" value_2_0="1" value_2_1="2" name3="mffy" value_3_0="1" value_3_1="2" name4="xxz" value_4_0="6" value_4_1="6" />
+			<jobprop job="1" name0="hp" value_0_0="60" value_0_1="60" name1="mfgj" value_1_0="2" value_1_1="4" name2="fy" value_2_0="1" value_2_1="2" name3="mffy" value_3_0="1" value_3_1="2" name4="xxz" value_4_0="6" value_4_1="6" />
+			<jobprop job="2" name0="hp" value_0_0="120" value_0_1="120" name1="dsgj" value_1_0="2" value_1_1="4" name2="fy" value_2_0="1" value_2_1="2" name3="mffy" value_3_0="1" value_3_1="2" name4="xxz" value_4_0="6" value_4_1="6" />
+		</Level>
+		<Level value="12" nextlevelexp="12500" autolevelup="1" cur_wsp_lv="12">
+			<jobprop job="0" name0="hp" value_0_0="195" value_0_1="195" name1="gj" value_1_0="2" value_1_1="4" name2="fy" value_2_0="1" value_2_1="2" name3="mffy" value_3_0="1" value_3_1="2" name4="xxz" value_4_0="6" value_4_1="6" />
+			<jobprop job="1" name0="hp" value_0_0="65" value_0_1="65" name1="mfgj" value_1_0="2" value_1_1="4" name2="fy" value_2_0="1" value_2_1="2" name3="mffy" value_3_0="1" value_3_1="2" name4="xxz" value_4_0="6" value_4_1="6" />
+			<jobprop job="2" name0="hp" value_0_0="130" value_0_1="130" name1="dsgj" value_1_0="2" value_1_1="4" name2="fy" value_2_0="1" value_2_1="2" name3="mffy" value_3_0="1" value_3_1="2" name4="xxz" value_4_0="6" value_4_1="6" />
+		</Level>
+		<Level value="13" nextlevelexp="14500" autolevelup="1" cur_wsp_lv="13">
+			<jobprop job="0" name0="hp" value_0_0="210" value_0_1="210" name1="gj" value_1_0="3" value_1_1="4" name2="fy" value_2_0="1" value_2_1="3" name3="mffy" value_3_0="1" value_3_1="3" name4="xxz" value_4_0="7" value_4_1="7" />
+			<jobprop job="1" name0="hp" value_0_0="70" value_0_1="70" name1="mfgj" value_1_0="3" value_1_1="4" name2="fy" value_2_0="1" value_2_1="3" name3="mffy" value_3_0="1" value_3_1="3" name4="xxz" value_4_0="7" value_4_1="7" />
+			<jobprop job="2" name0="hp" value_0_0="140" value_0_1="140" name1="dsgj" value_1_0="3" value_1_1="4" name2="fy" value_2_0="1" value_2_1="3" name3="mffy" value_3_0="1" value_3_1="3" name4="xxz" value_4_0="7" value_4_1="7" />
+		</Level>
+		<Level value="14" nextlevelexp="16500" autolevelup="1" cur_wsp_lv="14">
+			<jobprop job="0" name0="hp" value_0_0="225" value_0_1="225" name1="gj" value_1_0="3" value_1_1="4" name2="fy" value_2_0="1" value_2_1="3" name3="mffy" value_3_0="1" value_3_1="3" name4="xxz" value_4_0="7" value_4_1="7" />
+			<jobprop job="1" name0="hp" value_0_0="75" value_0_1="75" name1="mfgj" value_1_0="3" value_1_1="4" name2="fy" value_2_0="1" value_2_1="3" name3="mffy" value_3_0="1" value_3_1="3" name4="xxz" value_4_0="7" value_4_1="7" />
+			<jobprop job="2" name0="hp" value_0_0="150" value_0_1="150" name1="dsgj" value_1_0="3" value_1_1="4" name2="fy" value_2_0="1" value_2_1="3" name3="mffy" value_3_0="1" value_3_1="3" name4="xxz" value_4_0="7" value_4_1="7" />
+		</Level>
+		<Level value="15" nextlevelexp="18500" autolevelup="1" cur_wsp_lv="15">
+			<jobprop job="0" name0="hp" value_0_0="240" value_0_1="240" name1="gj" value_1_0="3" value_1_1="5" name2="fy" value_2_0="2" value_2_1="3" name3="mffy" value_3_0="2" value_3_1="3" name4="xxz" value_4_0="8" value_4_1="8" />
+			<jobprop job="1" name0="hp" value_0_0="80" value_0_1="80" name1="mfgj" value_1_0="3" value_1_1="5" name2="fy" value_2_0="2" value_2_1="3" name3="mffy" value_3_0="2" value_3_1="3" name4="xxz" value_4_0="8" value_4_1="8" />
+			<jobprop job="2" name0="hp" value_0_0="160" value_0_1="160" name1="dsgj" value_1_0="3" value_1_1="5" name2="fy" value_2_0="2" value_2_1="3" name3="mffy" value_3_0="2" value_3_1="3" name4="xxz" value_4_0="8" value_4_1="8" />
+		</Level>
+		<Level value="16" nextlevelexp="20500" autolevelup="1" cur_wsp_lv="16">
+			<jobprop job="0" name0="hp" value_0_0="255" value_0_1="255" name1="gj" value_1_0="3" value_1_1="5" name2="fy" value_2_0="2" value_2_1="3" name3="mffy" value_3_0="2" value_3_1="3" name4="xxz" value_4_0="8" value_4_1="8" />
+			<jobprop job="1" name0="hp" value_0_0="85" value_0_1="85" name1="mfgj" value_1_0="3" value_1_1="5" name2="fy" value_2_0="2" value_2_1="3" name3="mffy" value_3_0="2" value_3_1="3" name4="xxz" value_4_0="8" value_4_1="8" />
+			<jobprop job="2" name0="hp" value_0_0="170" value_0_1="170" name1="dsgj" value_1_0="3" value_1_1="5" name2="fy" value_2_0="2" value_2_1="3" name3="mffy" value_3_0="2" value_3_1="3" name4="xxz" value_4_0="8" value_4_1="8" />
+		</Level>
+		<Level value="17" nextlevelexp="24500" autolevelup="1" cur_wsp_lv="17">
+			<jobprop job="0" name0="hp" value_0_0="270" value_0_1="270" name1="gj" value_1_0="4" value_1_1="5" name2="fy" value_2_0="2" value_2_1="3" name3="mffy" value_3_0="2" value_3_1="3" name4="xxz" value_4_0="9" value_4_1="9" />
+			<jobprop job="1" name0="hp" value_0_0="90" value_0_1="90" name1="mfgj" value_1_0="4" value_1_1="5" name2="fy" value_2_0="2" value_2_1="3" name3="mffy" value_3_0="2" value_3_1="3" name4="xxz" value_4_0="9" value_4_1="9" />
+			<jobprop job="2" name0="hp" value_0_0="180" value_0_1="180" name1="dsgj" value_1_0="4" value_1_1="5" name2="fy" value_2_0="2" value_2_1="3" name3="mffy" value_3_0="2" value_3_1="3" name4="xxz" value_4_0="9" value_4_1="9" />
+		</Level>
+		<Level value="18" nextlevelexp="28500" autolevelup="1" cur_wsp_lv="18">
+			<jobprop job="0" name0="hp" value_0_0="285" value_0_1="285" name1="gj" value_1_0="4" value_1_1="5" name2="fy" value_2_0="2" value_2_1="3" name3="mffy" value_3_0="2" value_3_1="3" name4="xxz" value_4_0="9" value_4_1="9" />
+			<jobprop job="1" name0="hp" value_0_0="95" value_0_1="95" name1="mfgj" value_1_0="4" value_1_1="5" name2="fy" value_2_0="2" value_2_1="3" name3="mffy" value_3_0="2" value_3_1="3" name4="xxz" value_4_0="9" value_4_1="9" />
+			<jobprop job="2" name0="hp" value_0_0="190" value_0_1="190" name1="dsgj" value_1_0="4" value_1_1="5" name2="fy" value_2_0="2" value_2_1="3" name3="mffy" value_3_0="2" value_3_1="3" name4="xxz" value_4_0="9" value_4_1="9" />
+		</Level>
+		<Level value="19" nextlevelexp="32500" autolevelup="1" cur_wsp_lv="19">
+			<jobprop job="0" name0="hp" value_0_0="300" value_0_1="300" name1="gj" value_1_0="4" value_1_1="6" name2="fy" value_2_0="2" value_2_1="4" name3="mffy" value_3_0="2" value_3_1="4" name4="xxz" value_4_0="10" value_4_1="10" />
+			<jobprop job="1" name0="hp" value_0_0="100" value_0_1="100" name1="mfgj" value_1_0="4" value_1_1="6" name2="fy" value_2_0="2" value_2_1="4" name3="mffy" value_3_0="2" value_3_1="4" name4="xxz" value_4_0="10" value_4_1="10" />
+			<jobprop job="2" name0="hp" value_0_0="200" value_0_1="200" name1="dsgj" value_1_0="4" value_1_1="6" name2="fy" value_2_0="2" value_2_1="4" name3="mffy" value_3_0="2" value_3_1="4" name4="xxz" value_4_0="10" value_4_1="10" />
+		</Level>
+		<Level value="20" nextlevelexp="36500" autolevelup="0" material="兽谱进阶丹" material_num ="8" cur_wsp_lv="20">
+			<jobprop job="0" name0="hp" value_0_0="315" value_0_1="315" name1="gj" value_1_0="4" value_1_1="6" name2="fy" value_2_0="2" value_2_1="4" name3="mffy" value_3_0="2" value_3_1="4" name4="xxz" value_4_0="10" value_4_1="10" />
+			<jobprop job="1" name0="hp" value_0_0="105" value_0_1="105" name1="mfgj" value_1_0="4" value_1_1="6" name2="fy" value_2_0="2" value_2_1="4" name3="mffy" value_3_0="2" value_3_1="4" name4="xxz" value_4_0="10" value_4_1="10" />
+			<jobprop job="2" name0="hp" value_0_0="210" value_0_1="210" name1="dsgj" value_1_0="4" value_1_1="6" name2="fy" value_2_0="2" value_2_1="4" name3="mffy" value_3_0="2" value_3_1="4" name4="xxz" value_4_0="10" value_4_1="10" />
+		</Level>
+		<Level value="21" nextlevelexp="40500" autolevelup="1" cur_wsp_lv="21">
+			<jobprop job="0" name0="hp" value_0_0="330" value_0_1="330" name1="gj" value_1_0="5" value_1_1="6" name2="fy" value_2_0="2" value_2_1="4" name3="mffy" value_3_0="2" value_3_1="4" name4="xxz" value_4_0="11" value_4_1="11" />
+			<jobprop job="1" name0="hp" value_0_0="110" value_0_1="110" name1="mfgj" value_1_0="5" value_1_1="6" name2="fy" value_2_0="2" value_2_1="4" name3="mffy" value_3_0="2" value_3_1="4" name4="xxz" value_4_0="11" value_4_1="11" />
+			<jobprop job="2" name0="hp" value_0_0="220" value_0_1="220" name1="dsgj" value_1_0="5" value_1_1="6" name2="fy" value_2_0="2" value_2_1="4" name3="mffy" value_3_0="2" value_3_1="4" name4="xxz" value_4_0="11" value_4_1="11" />
+		</Level>
+		<Level value="22" nextlevelexp="44500" autolevelup="1" cur_wsp_lv="22">
+			<jobprop job="0" name0="hp" value_0_0="345" value_0_1="345" name1="gj" value_1_0="5" value_1_1="6" name2="fy" value_2_0="3" value_2_1="4" name3="mffy" value_3_0="3" value_3_1="4" name4="xxz" value_4_0="11" value_4_1="11" />
+			<jobprop job="1" name0="hp" value_0_0="115" value_0_1="115" name1="mfgj" value_1_0="5" value_1_1="6" name2="fy" value_2_0="3" value_2_1="4" name3="mffy" value_3_0="3" value_3_1="4" name4="xxz" value_4_0="11" value_4_1="11" />
+			<jobprop job="2" name0="hp" value_0_0="230" value_0_1="230" name1="dsgj" value_1_0="5" value_1_1="6" name2="fy" value_2_0="3" value_2_1="4" name3="mffy" value_3_0="3" value_3_1="4" name4="xxz" value_4_0="11" value_4_1="11" />
+		</Level>
+		<Level value="23" nextlevelexp="48500" autolevelup="1" cur_wsp_lv="23">
+			<jobprop job="0" name0="hp" value_0_0="345" value_0_1="345" name1="gj" value_1_0="5" value_1_1="7" name2="fy" value_2_0="3" value_2_1="4" name3="mffy" value_3_0="3" value_3_1="4" name4="xxz" value_4_0="12" value_4_1="12" />
+			<jobprop job="1" name0="hp" value_0_0="115" value_0_1="115" name1="mfgj" value_1_0="5" value_1_1="7" name2="fy" value_2_0="3" value_2_1="4" name3="mffy" value_3_0="3" value_3_1="4" name4="xxz" value_4_0="12" value_4_1="12" />
+			<jobprop job="2" name0="hp" value_0_0="230" value_0_1="230" name1="dsgj" value_1_0="5" value_1_1="7" name2="fy" value_2_0="3" value_2_1="4" name3="mffy" value_3_0="3" value_3_1="4" name4="xxz" value_4_0="12" value_4_1="12" />
+		</Level>
+		<Level value="24" nextlevelexp="52500" autolevelup="1" cur_wsp_lv="24">
+			<jobprop job="0" name0="hp" value_0_0="375" value_0_1="375" name1="gj" value_1_0="5" value_1_1="7" name2="fy" value_2_0="3" value_2_1="4" name3="mffy" value_3_0="3" value_3_1="4" name4="xxz" value_4_0="12" value_4_1="12" />
+			<jobprop job="1" name0="hp" value_0_0="125" value_0_1="125" name1="mfgj" value_1_0="5" value_1_1="7" name2="fy" value_2_0="3" value_2_1="4" name3="mffy" value_3_0="3" value_3_1="4" name4="xxz" value_4_0="12" value_4_1="12" />
+			<jobprop job="2" name0="hp" value_0_0="250" value_0_1="250" name1="dsgj" value_1_0="5" value_1_1="7" name2="fy" value_2_0="3" value_2_1="4" name3="mffy" value_3_0="3" value_3_1="4" name4="xxz" value_4_0="12" value_4_1="12" />
+		</Level>
+		<Level value="25" nextlevelexp="57500" autolevelup="1" cur_wsp_lv="25">
+			<jobprop job="0" name0="hp" value_0_0="390" value_0_1="390" name1="gj" value_1_0="6" value_1_1="7" name2="fy" value_2_0="3" value_2_1="5" name3="mffy" value_3_0="3" value_3_1="5" name4="xxz" value_4_0="13" value_4_1="13" />
+			<jobprop job="1" name0="hp" value_0_0="130" value_0_1="130" name1="mfgj" value_1_0="6" value_1_1="7" name2="fy" value_2_0="3" value_2_1="5" name3="mffy" value_3_0="3" value_3_1="5" name4="xxz" value_4_0="13" value_4_1="13" />
+			<jobprop job="2" name0="hp" value_0_0="250" value_0_1="250" name1="dsgj" value_1_0="6" value_1_1="7" name2="fy" value_2_0="3" value_2_1="5" name3="mffy" value_3_0="3" value_3_1="5" name4="xxz" value_4_0="13" value_4_1="13" />
+		</Level>
+		<Level value="26" nextlevelexp="62500" autolevelup="1" cur_wsp_lv="26">
+			<jobprop job="0" name0="hp" value_0_0="405" value_0_1="405" name1="gj" value_1_0="6" value_1_1="7" name2="fy" value_2_0="3" value_2_1="5" name3="mffy" value_3_0="3" value_3_1="5" name4="xxz" value_4_0="13" value_4_1="13" />
+			<jobprop job="1" name0="hp" value_0_0="135" value_0_1="135" name1="mfgj" value_1_0="6" value_1_1="7" name2="fy" value_2_0="3" value_2_1="5" name3="mffy" value_3_0="3" value_3_1="5" name4="xxz" value_4_0="13" value_4_1="13" />
+			<jobprop job="2" name0="hp" value_0_0="270" value_0_1="270" name1="dsgj" value_1_0="6" value_1_1="7" name2="fy" value_2_0="3" value_2_1="5" name3="mffy" value_3_0="3" value_3_1="5" name4="xxz" value_4_0="13" value_4_1="13" />
+		</Level>
+		<Level value="27" nextlevelexp="67500" autolevelup="1" cur_wsp_lv="27">
+			<jobprop job="0" name0="hp" value_0_0="420" value_0_1="420" name1="gj" value_1_0="6" value_1_1="8" name2="fy" value_2_0="3" value_2_1="5" name3="mffy" value_3_0="3" value_3_1="5" name4="xxz" value_4_0="14" value_4_1="14" />
+			<jobprop job="1" name0="hp" value_0_0="140" value_0_1="140" name1="mfgj" value_1_0="6" value_1_1="8" name2="fy" value_2_0="3" value_2_1="5" name3="mffy" value_3_0="3" value_3_1="5" name4="xxz" value_4_0="14" value_4_1="14" />
+			<jobprop job="2" name0="hp" value_0_0="280" value_0_1="280" name1="dsgj" value_1_0="6" value_1_1="8" name2="fy" value_2_0="3" value_2_1="5" name3="mffy" value_3_0="3" value_3_1="5" name4="xxz" value_4_0="14" value_4_1="14" />
+		</Level>
+		<Level value="28" nextlevelexp="75500" autolevelup="1" cur_wsp_lv="28">
+			<jobprop job="0" name0="hp" value_0_0="435" value_0_1="435" name1="gj" value_1_0="6" value_1_1="8" name2="fy" value_2_0="4" value_2_1="5" name3="mffy" value_3_0="4" value_3_1="5" name4="xxz" value_4_0="14" value_4_1="14" />
+			<jobprop job="1" name0="hp" value_0_0="145" value_0_1="145" name1="mfgj" value_1_0="6" value_1_1="8" name2="fy" value_2_0="4" value_2_1="5" name3="mffy" value_3_0="4" value_3_1="5" name4="xxz" value_4_0="14" value_4_1="14" />
+			<jobprop job="2" name0="hp" value_0_0="290" value_0_1="290" name1="dsgj" value_1_0="6" value_1_1="8" name2="fy" value_2_0="4" value_2_1="5" name3="mffy" value_3_0="4" value_3_1="5" name4="xxz" value_4_0="14" value_4_1="14" />
+		</Level>
+		<Level value="29" nextlevelexp="83500" autolevelup="1" cur_wsp_lv="29">
+			<jobprop job="0" name0="hp" value_0_0="450" value_0_1="450" name1="gj" value_1_0="7" value_1_1="8" name2="fy" value_2_0="4" value_2_1="5" name3="mffy" value_3_0="4" value_3_1="5" name4="xxz" value_4_0="15" value_4_1="15" />
+			<jobprop job="1" name0="hp" value_0_0="150" value_0_1="150" name1="mfgj" value_1_0="7" value_1_1="8" name2="fy" value_2_0="4" value_2_1="5" name3="mffy" value_3_0="4" value_3_1="5" name4="xxz" value_4_0="15" value_4_1="15" />
+			<jobprop job="2" name0="hp" value_0_0="300" value_0_1="300" name1="dsgj" value_1_0="7" value_1_1="8" name2="fy" value_2_0="4" value_2_1="5" name3="mffy" value_3_0="4" value_3_1="5" name4="xxz" value_4_0="15" value_4_1="15" />
+		</Level>
+		<Level value="30" nextlevelexp="91500" autolevelup="0" material="兽谱进阶丹" material_num ="15" cur_wsp_lv="30">
+			<jobprop job="0" name0="hp" value_0_0="455" value_0_1="455" name1="gj" value_1_0="7" value_1_1="8" name2="fy" value_2_0="4" value_2_1="5" name3="mffy" value_3_0="4" value_3_1="5" name4="xxz" value_4_0="15" value_4_1="15" />
+			<jobprop job="1" name0="hp" value_0_0="155" value_0_1="155" name1="mfgj" value_1_0="7" value_1_1="8" name2="fy" value_2_0="4" value_2_1="5" name3="mffy" value_3_0="4" value_3_1="5" name4="xxz" value_4_0="15" value_4_1="15" />
+			<jobprop job="2" name0="hp" value_0_0="310" value_0_1="310" name1="dsgj" value_1_0="7" value_1_1="8" name2="fy" value_2_0="4" value_2_1="5" name3="mffy" value_3_0="4" value_3_1="5" name4="xxz" value_4_0="15" value_4_1="15" />
+		</Level>
+		<Level value="31" nextlevelexp="95500" autolevelup="1" cur_wsp_lv="31">
+			<jobprop job="0" name0="hp" value_0_0="480" value_0_1="480" name1="gj" value_1_0="7" value_1_1="9" name2="fy" value_2_0="4" value_2_1="6" name3="mffy" value_3_0="4" value_3_1="6" name4="xxz" value_4_0="16" value_4_1="16" />
+			<jobprop job="1" name0="hp" value_0_0="160" value_0_1="160" name1="mfgj" value_1_0="7" value_1_1="9" name2="fy" value_2_0="4" value_2_1="6" name3="mffy" value_3_0="4" value_3_1="6" name4="xxz" value_4_0="16" value_4_1="16" />
+			<jobprop job="2" name0="hp" value_0_0="320" value_0_1="320" name1="dsgj" value_1_0="7" value_1_1="9" name2="fy" value_2_0="4" value_2_1="6" name3="mffy" value_3_0="4" value_3_1="6" name4="xxz" value_4_0="16" value_4_1="16" />
+		</Level>
+		<Level value="32" nextlevelexp="105500" autolevelup="1" cur_wsp_lv="32">
+			<jobprop job="0" name0="hp" value_0_0="495" value_0_1="495" name1="gj" value_1_0="7" value_1_1="9" name2="fy" value_2_0="4" value_2_1="6" name3="mffy" value_3_0="4" value_3_1="6" name4="xxz" value_4_0="16" value_4_1="16" />
+			<jobprop job="1" name0="hp" value_0_0="165" value_0_1="165" name1="mfgj" value_1_0="7" value_1_1="9" name2="fy" value_2_0="4" value_2_1="6" name3="mffy" value_3_0="4" value_3_1="6" name4="xxz" value_4_0="16" value_4_1="16" />
+			<jobprop job="2" name0="hp" value_0_0="330" value_0_1="330" name1="dsgj" value_1_0="7" value_1_1="9" name2="fy" value_2_0="4" value_2_1="6" name3="mffy" value_3_0="4" value_3_1="6" name4="xxz" value_4_0="16" value_4_1="16" />
+		</Level>
+		<Level value="33" nextlevelexp="115500" autolevelup="1" cur_wsp_lv="33">
+			<jobprop job="0" name0="hp" value_0_0="510" value_0_1="510" name1="gj" value_1_0="8" value_1_1="9" name2="fy" value_2_0="4" value_2_1="6" name3="mffy" value_3_0="4" value_3_1="6" name4="xxz" value_4_0="17" value_4_1="17" />
+			<jobprop job="1" name0="hp" value_0_0="170" value_0_1="170" name1="mfgj" value_1_0="8" value_1_1="9" name2="fy" value_2_0="4" value_2_1="6" name3="mffy" value_3_0="4" value_3_1="6" name4="xxz" value_4_0="17" value_4_1="17" />
+			<jobprop job="2" name0="hp" value_0_0="340" value_0_1="340" name1="dsgj" value_1_0="8" value_1_1="9" name2="fy" value_2_0="4" value_2_1="6" name3="mffy" value_3_0="4" value_3_1="6" name4="xxz" value_4_0="17" value_4_1="17" />
+		</Level>
+		<Level value="34" nextlevelexp="125500" autolevelup="1" cur_wsp_lv="34">
+			<jobprop job="0" name0="hp" value_0_0="525" value_0_1="525" name1="gj" value_1_0="8" value_1_1="9" name2="fy" value_2_0="5" value_2_1="6" name3="mffy" value_3_0="5" value_3_1="6" name4="xxz" value_4_0="17" value_4_1="17" />
+			<jobprop job="1" name0="hp" value_0_0="175" value_0_1="175" name1="mfgj" value_1_0="8" value_1_1="9" name2="fy" value_2_0="5" value_2_1="6" name3="mffy" value_3_0="5" value_3_1="6" name4="xxz" value_4_0="17" value_4_1="17" />
+			<jobprop job="2" name0="hp" value_0_0="350" value_0_1="350" name1="dsgj" value_1_0="8" value_1_1="9" name2="fy" value_2_0="5" value_2_1="6" name3="mffy" value_3_0="5" value_3_1="6" name4="xxz" value_4_0="17" value_4_1="17" />
+		</Level>
+		<Level value="35" nextlevelexp="135500" autolevelup="1" cur_wsp_lv="35">
+			<jobprop job="0" name0="hp" value_0_0="540" value_0_1="540" name1="gj" value_1_0="8" value_1_1="10" name2="fy" value_2_0="5" value_2_1="6" name3="mffy" value_3_0="5" value_3_1="6" name4="xxz" value_4_0="18" value_4_1="18" />
+			<jobprop job="1" name0="hp" value_0_0="180" value_0_1="180" name1="mfgj" value_1_0="8" value_1_1="10" name2="fy" value_2_0="5" value_2_1="6" name3="mffy" value_3_0="5" value_3_1="6" name4="xxz" value_4_0="18" value_4_1="18" />
+			<jobprop job="2" name0="hp" value_0_0="360" value_0_1="360" name1="dsgj" value_1_0="8" value_1_1="10" name2="fy" value_2_0="5" value_2_1="6" name3="mffy" value_3_0="5" value_3_1="6" name4="xxz" value_4_0="18" value_4_1="18" />
+		</Level>
+		<Level value="36" nextlevelexp="145500" autolevelup="1" cur_wsp_lv="36">
+			<jobprop job="0" name0="hp" value_0_0="555" value_0_1="555" name1="gj" value_1_0="8" value_1_1="10" name2="fy" value_2_0="5" value_2_1="6" name3="mffy" value_3_0="5" value_3_1="6" name4="xxz" value_4_0="18" value_4_1="18" />
+			<jobprop job="1" name0="hp" value_0_0="185" value_0_1="185" name1="mfgj" value_1_0="8" value_1_1="10" name2="fy" value_2_0="5" value_2_1="6" name3="mffy" value_3_0="5" value_3_1="6" name4="xxz" value_4_0="18" value_4_1="18" />
+			<jobprop job="2" name0="hp" value_0_0="370" value_0_1="370" name1="dsgj" value_1_0="8" value_1_1="10" name2="fy" value_2_0="5" value_2_1="6" name3="mffy" value_3_0="5" value_3_1="6" name4="xxz" value_4_0="18" value_4_1="18" />
+		</Level>
+		<Level value="37" nextlevelexp="155500" autolevelup="1" cur_wsp_lv="37">
+			<jobprop job="0" name0="hp" value_0_0="570" value_0_1="570" name1="gj" value_1_0="9" value_1_1="10" name2="fy" value_2_0="5" value_2_1="7" name3="mffy" value_3_0="5" value_3_1="7" name4="xxz" value_4_0="19" value_4_1="19" />
+			<jobprop job="1" name0="hp" value_0_0="190" value_0_1="190" name1="mfgj" value_1_0="9" value_1_1="10" name2="fy" value_2_0="5" value_2_1="7" name3="mffy" value_3_0="5" value_3_1="7" name4="xxz" value_4_0="19" value_4_1="19" />
+			<jobprop job="2" name0="hp" value_0_0="380" value_0_1="380" name1="dsgj" value_1_0="9" value_1_1="10" name2="fy" value_2_0="5" value_2_1="7" name3="mffy" value_3_0="5" value_3_1="7" name4="xxz" value_4_0="19" value_4_1="19" />
+		</Level>
+		<Level value="38" nextlevelexp="165500" autolevelup="1" cur_wsp_lv="38">
+			<jobprop job="0" name0="hp" value_0_0="585" value_0_1="585" name1="gj" value_1_0="9" value_1_1="10" name2="fy" value_2_0="5" value_2_1="7" name3="mffy" value_3_0="5" value_3_1="7" name4="xxz" value_4_0="19" value_4_1="19" />
+			<jobprop job="1" name0="hp" value_0_0="195" value_0_1="195" name1="mfgj" value_1_0="9" value_1_1="10" name2="fy" value_2_0="5" value_2_1="7" name3="mffy" value_3_0="5" value_3_1="7" name4="xxz" value_4_0="19" value_4_1="19" />
+			<jobprop job="2" name0="hp" value_0_0="390" value_0_1="390" name1="dsgj" value_1_0="9" value_1_1="10" name2="fy" value_2_0="5" value_2_1="7" name3="mffy" value_3_0="5" value_3_1="7" name4="xxz" value_4_0="19" value_4_1="19" />
+		</Level>
+		<Level value="39" nextlevelexp="165500" autolevelup="1" cur_wsp_lv="39">
+			<jobprop job="0" name0="hp" value_0_0="600" value_0_1="600" name1="gj" value_1_0="9" value_1_1="11" name2="fy" value_2_0="5" value_2_1="7" name3="mffy" value_3_0="5" value_3_1="7" name4="xxz" value_4_0="20" value_4_1="20" />
+			<jobprop job="1" name0="hp" value_0_0="200" value_0_1="200" name1="mfgj" value_1_0="9" value_1_1="11" name2="fy" value_2_0="5" value_2_1="7" name3="mffy" value_3_0="5" value_3_1="7" name4="xxz" value_4_0="20" value_4_1="20" />
+			<jobprop job="2" name0="hp" value_0_0="400" value_0_1="400" name1="dsgj" value_1_0="9" value_1_1="11" name2="fy" value_2_0="5" value_2_1="7" name3="mffy" value_3_0="5" value_3_1="7" name4="xxz" value_4_0="20" value_4_1="20" />
+		</Level>
+		<Level value="40" nextlevelexp="195500" autolevelup="0" material="兽谱进阶丹" material_num ="30" cur_wsp_lv="40">
+			<jobprop job="0" name0="hp" value_0_0="615" value_0_1="615" name1="gj" value_1_0="9" value_1_1="11" name2="fy" value_2_0="6" value_2_1="7" name3="mffy" value_3_0="6" value_3_1="7" name4="xxz" value_4_0="20" value_4_1="20" />
+			<jobprop job="1" name0="hp" value_0_0="205" value_0_1="205" name1="mfgj" value_1_0="9" value_1_1="11" name2="fy" value_2_0="6" value_2_1="7" name3="mffy" value_3_0="6" value_3_1="7" name4="xxz" value_4_0="20" value_4_1="20" />
+			<jobprop job="2" name0="hp" value_0_0="410" value_0_1="410" name1="dsgj" value_1_0="9" value_1_1="11" name2="fy" value_2_0="6" value_2_1="7" name3="mffy" value_3_0="6" value_3_1="7" name4="xxz" value_4_0="20" value_4_1="20" />
+		</Level>
+		<Level value="41" nextlevelexp="215500" autolevelup="1" cur_wsp_lv="41">
+			<jobprop job="0" name0="hp" value_0_0="630" value_0_1="630" name1="gj" value_1_0="10" value_1_1="11" name2="fy" value_2_0="6" value_2_1="7" name3="mffy" value_3_0="6" value_3_1="7" name4="xxz" value_4_0="21" value_4_1="21" />
+			<jobprop job="1" name0="hp" value_0_0="210" value_0_1="210" name1="mfgj" value_1_0="10" value_1_1="11" name2="fy" value_2_0="6" value_2_1="7" name3="mffy" value_3_0="6" value_3_1="7" name4="xxz" value_4_0="21" value_4_1="21" />
+			<jobprop job="2" name0="hp" value_0_0="420" value_0_1="420" name1="dsgj" value_1_0="10" value_1_1="11" name2="fy" value_2_0="6" value_2_1="7" name3="mffy" value_3_0="6" value_3_1="7" name4="xxz" value_4_0="21" value_4_1="21" />
+		</Level>
+		<Level value="42" nextlevelexp="235500" autolevelup="1" cur_wsp_lv="42">
+			<jobprop job="0" name0="hp" value_0_0="645" value_0_1="645" name1="gj" value_1_0="10" value_1_1="11" name2="fy" value_2_0="6" value_2_1="7" name3="mffy" value_3_0="6" value_3_1="7" name4="xxz" value_4_0="21" value_4_1="21" />
+			<jobprop job="1" name0="hp" value_0_0="215" value_0_1="215" name1="mfgj" value_1_0="10" value_1_1="11" name2="fy" value_2_0="6" value_2_1="7" name3="mffy" value_3_0="6" value_3_1="7" name4="xxz" value_4_0="21" value_4_1="21" />
+			<jobprop job="2" name0="hp" value_0_0="430" value_0_1="430" name1="dsgj" value_1_0="10" value_1_1="11" name2="fy" value_2_0="6" value_2_1="7" name3="mffy" value_3_0="6" value_3_1="7" name4="xxz" value_4_0="21" value_4_1="21" />
+		</Level>
+		<Level value="43" nextlevelexp="255500" autolevelup="1" cur_wsp_lv="43">
+			<jobprop job="0" name0="hp" value_0_0="660" value_0_1="660" name1="gj" value_1_0="10" value_1_1="12" name2="fy" value_2_0="6" value_2_1="8" name3="mffy" value_3_0="6" value_3_1="8" name4="xxz" value_4_0="22" value_4_1="22" />
+			<jobprop job="1" name0="hp" value_0_0="220" value_0_1="220" name1="mfgj" value_1_0="10" value_1_1="12" name2="fy" value_2_0="6" value_2_1="8" name3="mffy" value_3_0="6" value_3_1="8" name4="xxz" value_4_0="22" value_4_1="22" />
+			<jobprop job="2" name0="hp" value_0_0="440" value_0_1="440" name1="dsgj" value_1_0="10" value_1_1="12" name2="fy" value_2_0="6" value_2_1="8" name3="mffy" value_3_0="6" value_3_1="8" name4="xxz" value_4_0="22" value_4_1="22" />
+		</Level>
+		<Level value="44" nextlevelexp="275500" autolevelup="1" cur_wsp_lv="44">
+			<jobprop job="0" name0="hp" value_0_0="675" value_0_1="675" name1="gj" value_1_0="10" value_1_1="12" name2="fy" value_2_0="6" value_2_1="8" name3="mffy" value_3_0="6" value_3_1="8" name4="xxz" value_4_0="22" value_4_1="22" />
+			<jobprop job="1" name0="hp" value_0_0="225" value_0_1="225" name1="mfgj" value_1_0="10" value_1_1="12" name2="fy" value_2_0="6" value_2_1="8" name3="mffy" value_3_0="6" value_3_1="8" name4="xxz" value_4_0="22" value_4_1="22" />
+			<jobprop job="2" name0="hp" value_0_0="450" value_0_1="450" name1="dsgj" value_1_0="10" value_1_1="12" name2="fy" value_2_0="6" value_2_1="8" name3="mffy" value_3_0="6" value_3_1="8" name4="xxz" value_4_0="22" value_4_1="22" />
+		</Level>
+		<Level value="45" nextlevelexp="295500" autolevelup="1" cur_wsp_lv="45">
+			<jobprop job="0" name0="hp" value_0_0="690" value_0_1="690" name1="gj" value_1_0="11" value_1_1="12" name2="fy" value_2_0="6" value_2_1="8" name3="mffy" value_3_0="6" value_3_1="8" name4="xxz" value_4_0="23" value_4_1="23" />
+			<jobprop job="1" name0="hp" value_0_0="230" value_0_1="230" name1="mfgj" value_1_0="11" value_1_1="12" name2="fy" value_2_0="6" value_2_1="8" name3="mffy" value_3_0="6" value_3_1="8" name4="xxz" value_4_0="23" value_4_1="23" />
+			<jobprop job="2" name0="hp" value_0_0="460" value_0_1="460" name1="dsgj" value_1_0="11" value_1_1="12" name2="fy" value_2_0="6" value_2_1="8" name3="mffy" value_3_0="6" value_3_1="8" name4="xxz" value_4_0="23" value_4_1="23" />
+		</Level>
+		<Level value="46" nextlevelexp="310500" autolevelup="1" cur_wsp_lv="46">
+			<jobprop job="0" name0="hp" value_0_0="705" value_0_1="705" name1="gj" value_1_0="11" value_1_1="12" name2="fy" value_2_0="7" value_2_1="8" name3="mffy" value_3_0="7" value_3_1="8" name4="xxz" value_4_0="23" value_4_1="23" />
+			<jobprop job="1" name0="hp" value_0_0="235" value_0_1="235" name1="mfgj" value_1_0="11" value_1_1="12" name2="fy" value_2_0="7" value_2_1="8" name3="mffy" value_3_0="7" value_3_1="8" name4="xxz" value_4_0="23" value_4_1="23" />
+			<jobprop job="2" name0="hp" value_0_0="470" value_0_1="470" name1="dsgj" value_1_0="11" value_1_1="12" name2="fy" value_2_0="7" value_2_1="8" name3="mffy" value_3_0="7" value_3_1="8" name4="xxz" value_4_0="23" value_4_1="23" />
+		</Level>
+		<Level value="47" nextlevelexp="325500" autolevelup="1" cur_wsp_lv="47">
+			<jobprop job="0" name0="hp" value_0_0="720" value_0_1="720" name1="gj" value_1_0="11" value_1_1="13" name2="fy" value_2_0="7" value_2_1="8" name3="mffy" value_3_0="7" value_3_1="8" name4="xxz" value_4_0="24" value_4_1="24" />
+			<jobprop job="1" name0="hp" value_0_0="240" value_0_1="240" name1="mfgj" value_1_0="11" value_1_1="13" name2="fy" value_2_0="7" value_2_1="8" name3="mffy" value_3_0="7" value_3_1="8" name4="xxz" value_4_0="24" value_4_1="24" />
+			<jobprop job="2" name0="hp" value_0_0="480" value_0_1="480" name1="dsgj" value_1_0="11" value_1_1="13" name2="fy" value_2_0="7" value_2_1="8" name3="mffy" value_3_0="7" value_3_1="8" name4="xxz" value_4_0="24" value_4_1="24" />
+		</Level>
+		<Level value="48" nextlevelexp="340500" autolevelup="1" cur_wsp_lv="48">
+			<jobprop job="0" name0="hp" value_0_0="735" value_0_1="735" name1="gj" value_1_0="11" value_1_1="13" name2="fy" value_2_0="7" value_2_1="8" name3="mffy" value_3_0="7" value_3_1="8" name4="xxz" value_4_0="24" value_4_1="24" />
+			<jobprop job="1" name0="hp" value_0_0="245" value_0_1="245" name1="mfgj" value_1_0="11" value_1_1="13" name2="fy" value_2_0="7" value_2_1="8" name3="mffy" value_3_0="7" value_3_1="8" name4="xxz" value_4_0="24" value_4_1="24" />
+			<jobprop job="2" name0="hp" value_0_0="490" value_0_1="490" name1="dsgj" value_1_0="11" value_1_1="13" name2="fy" value_2_0="7" value_2_1="8" name3="mffy" value_3_0="7" value_3_1="8" name4="xxz" value_4_0="24" value_4_1="24" />
+		</Level>
+		<Level value="49" nextlevelexp="355500" autolevelup="1" cur_wsp_lv="49">
+			<jobprop job="0" name0="hp" value_0_0="750" value_0_1="750" name1="gj" value_1_0="12" value_1_1="13" name2="fy" value_2_0="7" value_2_1="9" name3="mffy" value_3_0="7" value_3_1="9" name4="xxz" value_4_0="25" value_4_1="25" />
+			<jobprop job="1" name0="hp" value_0_0="250" value_0_1="250" name1="mfgj" value_1_0="12" value_1_1="13" name2="fy" value_2_0="7" value_2_1="9" name3="mffy" value_3_0="7" value_3_1="9" name4="xxz" value_4_0="25" value_4_1="25" />
+			<jobprop job="2" name0="hp" value_0_0="500" value_0_1="500" name1="dsgj" value_1_0="12" value_1_1="13" name2="fy" value_2_0="7" value_2_1="9" name3="mffy" value_3_0="7" value_3_1="9" name4="xxz" value_4_0="25" value_4_1="25" />
+		</Level>
+		<Level value="50" nextlevelexp="370500" autolevelup="0" material="兽谱进阶丹" material_num ="40" cur_wsp_lv="50">
+			<jobprop job="0" name0="hp" value_0_0="765" value_0_1="765" name1="gj" value_1_0="12" value_1_1="13" name2="fy" value_2_0="7" value_2_1="9" name3="mffy" value_3_0="7" value_3_1="9" name4="xxz" value_4_0="25" value_4_1="25" />
+			<jobprop job="1" name0="hp" value_0_0="255" value_0_1="255" name1="mfgj" value_1_0="12" value_1_1="13" name2="fy" value_2_0="7" value_2_1="9" name3="mffy" value_3_0="7" value_3_1="9" name4="xxz" value_4_0="25" value_4_1="25" />
+			<jobprop job="2" name0="hp" value_0_0="510" value_0_1="510" name1="dsgj" value_1_0="12" value_1_1="13" name2="fy" value_2_0="7" value_2_1="9" name3="mffy" value_3_0="7" value_3_1="9" name4="xxz" value_4_0="25" value_4_1="25" />
+		</Level>
+		<Level value="51" nextlevelexp="385500" autolevelup="1" cur_wsp_lv="51">
+			<jobprop job="0" name0="hp" value_0_0="780" value_0_1="780" name1="gj" value_1_0="12" value_1_1="14" name2="fy" value_2_0="7" value_2_1="9" name3="mffy" value_3_0="7" value_3_1="9" name4="xxz" value_4_0="26" value_4_1="26" />
+			<jobprop job="1" name0="hp" value_0_0="260" value_0_1="260" name1="mfgj" value_1_0="12" value_1_1="14" name2="fy" value_2_0="7" value_2_1="9" name3="mffy" value_3_0="7" value_3_1="9" name4="xxz" value_4_0="26" value_4_1="26" />
+			<jobprop job="2" name0="hp" value_0_0="520" value_0_1="520" name1="dsgj" value_1_0="12" value_1_1="14" name2="fy" value_2_0="7" value_2_1="9" name3="mffy" value_3_0="7" value_3_1="9" name4="xxz" value_4_0="26" value_4_1="26" />
+		</Level>
+		<Level value="52" nextlevelexp="400500" autolevelup="1" cur_wsp_lv="52">
+			<jobprop job="0" name0="hp" value_0_0="795" value_0_1="795" name1="gj" value_1_0="12" value_1_1="14" name2="fy" value_2_0="8" value_2_1="9" name3="mffy" value_3_0="8" value_3_1="9" name4="xxz" value_4_0="26" value_4_1="26" />
+			<jobprop job="1" name0="hp" value_0_0="265" value_0_1="265" name1="mfgj" value_1_0="12" value_1_1="14" name2="fy" value_2_0="8" value_2_1="9" name3="mffy" value_3_0="8" value_3_1="9" name4="xxz" value_4_0="26" value_4_1="26" />
+			<jobprop job="2" name0="hp" value_0_0="530" value_0_1="530" name1="dsgj" value_1_0="12" value_1_1="14" name2="fy" value_2_0="8" value_2_1="9" name3="mffy" value_3_0="8" value_3_1="9" name4="xxz" value_4_0="26" value_4_1="26" />
+		</Level>
+		<Level value="53" nextlevelexp="415500" autolevelup="1" cur_wsp_lv="53">
+			<jobprop job="0" name0="hp" value_0_0="810" value_0_1="810" name1="gj" value_1_0="13" value_1_1="14" name2="fy" value_2_0="8" value_2_1="9" name3="mffy" value_3_0="8" value_3_1="9" name4="xxz" value_4_0="27" value_4_1="27" />
+			<jobprop job="1" name0="hp" value_0_0="270" value_0_1="270" name1="mfgj" value_1_0="13" value_1_1="14" name2="fy" value_2_0="8" value_2_1="9" name3="mffy" value_3_0="8" value_3_1="9" name4="xxz" value_4_0="27" value_4_1="27" />
+			<jobprop job="2" name0="hp" value_0_0="540" value_0_1="540" name1="dsgj" value_1_0="13" value_1_1="14" name2="fy" value_2_0="8" value_2_1="9" name3="mffy" value_3_0="8" value_3_1="9" name4="xxz" value_4_0="27" value_4_1="27" />
+		</Level>
+		<Level value="54" nextlevelexp="430500" autolevelup="1" cur_wsp_lv="54">
+			<jobprop job="0" name0="hp" value_0_0="825" value_0_1="825" name1="gj" value_1_0="13" value_1_1="14" name2="fy" value_2_0="8" value_2_1="9" name3="mffy" value_3_0="8" value_3_1="9" name4="xxz" value_4_0="27" value_4_1="27" />
+			<jobprop job="1" name0="hp" value_0_0="275" value_0_1="275" name1="mfgj" value_1_0="13" value_1_1="14" name2="fy" value_2_0="8" value_2_1="9" name3="mffy" value_3_0="8" value_3_1="9" name4="xxz" value_4_0="27" value_4_1="27" />
+			<jobprop job="2" name0="hp" value_0_0="550" value_0_1="550" name1="dsgj" value_1_0="13" value_1_1="14" name2="fy" value_2_0="8" value_2_1="9" name3="mffy" value_3_0="8" value_3_1="9" name4="xxz" value_4_0="27" value_4_1="27" />
+		</Level>
+		<Level value="55" nextlevelexp="445500" autolevelup="1" cur_wsp_lv="55">
+			<jobprop job="0" name0="hp" value_0_0="840" value_0_1="840" name1="gj" value_1_0="13" value_1_1="15" name2="fy" value_2_0="8" value_2_1="10" name3="mffy" value_3_0="8" value_3_1="10" name4="xxz" value_4_0="28" value_4_1="28" />
+			<jobprop job="1" name0="hp" value_0_0="280" value_0_1="280" name1="mfgj" value_1_0="13" value_1_1="15" name2="fy" value_2_0="8" value_2_1="10" name3="mffy" value_3_0="8" value_3_1="10" name4="xxz" value_4_0="28" value_4_1="28" />
+			<jobprop job="2" name0="hp" value_0_0="560" value_0_1="560" name1="dsgj" value_1_0="13" value_1_1="15" name2="fy" value_2_0="8" value_2_1="10" name3="mffy" value_3_0="8" value_3_1="10" name4="xxz" value_4_0="28" value_4_1="28" />
+		</Level>
+		<Level value="56" nextlevelexp="460500" autolevelup="1" cur_wsp_lv="56">
+			<jobprop job="0" name0="hp" value_0_0="855" value_0_1="855" name1="gj" value_1_0="13" value_1_1="15" name2="fy" value_2_0="8" value_2_1="10" name3="mffy" value_3_0="8" value_3_1="10" name4="xxz" value_4_0="28" value_4_1="28" />
+			<jobprop job="1" name0="hp" value_0_0="285" value_0_1="285" name1="mfgj" value_1_0="13" value_1_1="15" name2="fy" value_2_0="8" value_2_1="10" name3="mffy" value_3_0="8" value_3_1="10" name4="xxz" value_4_0="28" value_4_1="28" />
+			<jobprop job="2" name0="hp" value_0_0="570" value_0_1="570" name1="dsgj" value_1_0="13" value_1_1="15" name2="fy" value_2_0="8" value_2_1="10" name3="mffy" value_3_0="8" value_3_1="10" name4="xxz" value_4_0="28" value_4_1="28" />
+		</Level>
+		<Level value="57" nextlevelexp="475500" autolevelup="1" cur_wsp_lv="57">
+			<jobprop job="0" name0="hp" value_0_0="870" value_0_1="870" name1="gj" value_1_0="14" value_1_1="15" name2="fy" value_2_0="8" value_2_1="10" name3="mffy" value_3_0="8" value_3_1="10" name4="xxz" value_4_0="29" value_4_1="29" />
+			<jobprop job="1" name0="hp" value_0_0="290" value_0_1="290" name1="mfgj" value_1_0="14" value_1_1="15" name2="fy" value_2_0="8" value_2_1="10" name3="mffy" value_3_0="8" value_3_1="10" name4="xxz" value_4_0="29" value_4_1="29" />
+			<jobprop job="2" name0="hp" value_0_0="580" value_0_1="580" name1="dsgj" value_1_0="14" value_1_1="15" name2="fy" value_2_0="8" value_2_1="10" name3="mffy" value_3_0="8" value_3_1="10" name4="xxz" value_4_0="29" value_4_1="29" />
+		</Level>
+		<Level value="58" nextlevelexp="490500" autolevelup="1" cur_wsp_lv="58">
+			<jobprop job="0" name0="hp" value_0_0="885" value_0_1="885" name1="gj" value_1_0="14" value_1_1="15" name2="fy" value_2_0="9" value_2_1="10" name3="mffy" value_3_0="9" value_3_1="10" name4="xxz" value_4_0="29" value_4_1="29" />
+			<jobprop job="1" name0="hp" value_0_0="295" value_0_1="295" name1="mfgj" value_1_0="14" value_1_1="15" name2="fy" value_2_0="9" value_2_1="10" name3="mffy" value_3_0="9" value_3_1="10" name4="xxz" value_4_0="29" value_4_1="29" />
+			<jobprop job="2" name0="hp" value_0_0="590" value_0_1="590" name1="dsgj" value_1_0="14" value_1_1="15" name2="fy" value_2_0="9" value_2_1="10" name3="mffy" value_3_0="9" value_3_1="10" name4="xxz" value_4_0="29" value_4_1="29" />
+		</Level>
+		<Level value="59" nextlevelexp="505500" autolevelup="1" cur_wsp_lv="59">
+			<jobprop job="0" name0="hp" value_0_0="900" value_0_1="900" name1="gj" value_1_0="14" value_1_1="16" name2="fy" value_2_0="9" value_2_1="10" name3="mffy" value_3_0="9" value_3_1="10" name4="xxz" value_4_0="30" value_4_1="30" />
+			<jobprop job="1" name0="hp" value_0_0="300" value_0_1="300" name1="mfgj" value_1_0="14" value_1_1="16" name2="fy" value_2_0="9" value_2_1="10" name3="mffy" value_3_0="9" value_3_1="10" name4="xxz" value_4_0="30" value_4_1="30" />
+			<jobprop job="2" name0="hp" value_0_0="600" value_0_1="600" name1="dsgj" value_1_0="14" value_1_1="16" name2="fy" value_2_0="9" value_2_1="10" name3="mffy" value_3_0="9" value_3_1="10" name4="xxz" value_4_0="30" value_4_1="30" />
+		</Level>
+		<Level value="60" nextlevelexp="520500" autolevelup="0" material="兽谱进阶丹" material_num ="50" cur_wsp_lv="60">
+			<jobprop job="0" name0="hp" value_0_0="915" value_0_1="915" name1="gj" value_1_0="14" value_1_1="16" name2="fy" value_2_0="9" value_2_1="10" name3="mffy" value_3_0="9" value_3_1="10" name4="xxz" value_4_0="30" value_4_1="30" />
+			<jobprop job="1" name0="hp" value_0_0="305" value_0_1="305" name1="mfgj" value_1_0="14" value_1_1="16" name2="fy" value_2_0="9" value_2_1="10" name3="mffy" value_3_0="9" value_3_1="10" name4="xxz" value_4_0="30" value_4_1="30" />
+			<jobprop job="2" name0="hp" value_0_0="610" value_0_1="610" name1="dsgj" value_1_0="14" value_1_1="16" name2="fy" value_2_0="9" value_2_1="10" name3="mffy" value_3_0="9" value_3_1="10" name4="xxz" value_4_0="30" value_4_1="30" />
+		</Level>
+		<Level value="61" nextlevelexp="535500" autolevelup="1" cur_wsp_lv="61">
+			<jobprop job="0" name0="hp" value_0_0="930" value_0_1="930" name1="gj" value_1_0="15" value_1_1="16" name2="fy" value_2_0="9" value_2_1="11" name3="mffy" value_3_0="9" value_3_1="11" name4="xxz" value_4_0="31" value_4_1="31" />
+			<jobprop job="1" name0="hp" value_0_0="310" value_0_1="310" name1="mfgj" value_1_0="15" value_1_1="16" name2="fy" value_2_0="9" value_2_1="11" name3="mffy" value_3_0="9" value_3_1="11" name4="xxz" value_4_0="31" value_4_1="31" />
+			<jobprop job="2" name0="hp" value_0_0="620" value_0_1="620" name1="dsgj" value_1_0="15" value_1_1="16" name2="fy" value_2_0="9" value_2_1="11" name3="mffy" value_3_0="9" value_3_1="11" name4="xxz" value_4_0="31" value_4_1="31" />
+		</Level>
+		<Level value="62" nextlevelexp="550500" autolevelup="1" cur_wsp_lv="62">
+			<jobprop job="0" name0="hp" value_0_0="945" value_0_1="945" name1="gj" value_1_0="15" value_1_1="16" name2="fy" value_2_0="9" value_2_1="11" name3="mffy" value_3_0="9" value_3_1="11" name4="xxz" value_4_0="31" value_4_1="31" />
+			<jobprop job="1" name0="hp" value_0_0="315" value_0_1="315" name1="mfgj" value_1_0="15" value_1_1="16" name2="fy" value_2_0="9" value_2_1="11" name3="mffy" value_3_0="9" value_3_1="11" name4="xxz" value_4_0="31" value_4_1="31" />
+			<jobprop job="2" name0="hp" value_0_0="630" value_0_1="630" name1="dsgj" value_1_0="15" value_1_1="16" name2="fy" value_2_0="9" value_2_1="11" name3="mffy" value_3_0="9" value_3_1="11" name4="xxz" value_4_0="31" value_4_1="31" />
+		</Level>
+		<Level value="63" nextlevelexp="550500" autolevelup="1" cur_wsp_lv="63">
+			<jobprop job="0" name0="hp" value_0_0="960" value_0_1="960" name1="gj" value_1_0="15" value_1_1="17" name2="fy" value_2_0="9" value_2_1="11" name3="mffy" value_3_0="9" value_3_1="11" name4="xxz" value_4_0="32" value_4_1="32" />
+			<jobprop job="1" name0="hp" value_0_0="320" value_0_1="320" name1="mfgj" value_1_0="15" value_1_1="17" name2="fy" value_2_0="9" value_2_1="11" name3="mffy" value_3_0="9" value_3_1="11" name4="xxz" value_4_0="32" value_4_1="32" />
+			<jobprop job="2" name0="hp" value_0_0="640" value_0_1="640" name1="dsgj" value_1_0="15" value_1_1="17" name2="fy" value_2_0="9" value_2_1="11" name3="mffy" value_3_0="9" value_3_1="11" name4="xxz" value_4_0="32" value_4_1="32" />
+		</Level>
+		<Level value="64" nextlevelexp="580500" autolevelup="1" cur_wsp_lv="64">
+			<jobprop job="0" name0="hp" value_0_0="975" value_0_1="975" name1="gj" value_1_0="15" value_1_1="17" name2="fy" value_2_0="10" value_2_1="11" name3="mffy" value_3_0="10" value_3_1="11" name4="xxz" value_4_0="32" value_4_1="32" />
+			<jobprop job="1" name0="hp" value_0_0="325" value_0_1="325" name1="mfgj" value_1_0="15" value_1_1="17" name2="fy" value_2_0="10" value_2_1="11" name3="mffy" value_3_0="10" value_3_1="11" name4="xxz" value_4_0="32" value_4_1="32" />
+			<jobprop job="2" name0="hp" value_0_0="650" value_0_1="650" name1="dsgj" value_1_0="15" value_1_1="17" name2="fy" value_2_0="10" value_2_1="11" name3="mffy" value_3_0="10" value_3_1="11" name4="xxz" value_4_0="32" value_4_1="32" />
+		</Level>
+		<Level value="65" nextlevelexp="595500" autolevelup="1" cur_wsp_lv="65">
+			<jobprop job="0" name0="hp" value_0_0="990" value_0_1="990" name1="gj" value_1_0="16" value_1_1="17" name2="fy" value_2_0="10" value_2_1="11" name3="mffy" value_3_0="10" value_3_1="11" name4="xxz" value_4_0="33" value_4_1="33" />
+			<jobprop job="1" name0="hp" value_0_0="330" value_0_1="330" name1="mfgj" value_1_0="16" value_1_1="17" name2="fy" value_2_0="10" value_2_1="11" name3="mffy" value_3_0="10" value_3_1="11" name4="xxz" value_4_0="33" value_4_1="33" />
+			<jobprop job="2" name0="hp" value_0_0="660" value_0_1="660" name1="dsgj" value_1_0="16" value_1_1="17" name2="fy" value_2_0="10" value_2_1="11" name3="mffy" value_3_0="10" value_3_1="11" name4="xxz" value_4_0="33" value_4_1="33" />
+		</Level>
+		<Level value="66" nextlevelexp="610500" autolevelup="1" cur_wsp_lv="66">
+			<jobprop job="0" name0="hp" value_0_0="1005" value_0_1="1005" name1="gj" value_1_0="16" value_1_1="17" name2="fy" value_2_0="10" value_2_1="11" name3="mffy" value_3_0="10" value_3_1="11" name4="xxz" value_4_0="33" value_4_1="33" />
+			<jobprop job="1" name0="hp" value_0_0="335" value_0_1="335" name1="mfgj" value_1_0="16" value_1_1="17" name2="fy" value_2_0="10" value_2_1="11" name3="mffy" value_3_0="10" value_3_1="11" name4="xxz" value_4_0="33" value_4_1="33" />
+			<jobprop job="2" name0="hp" value_0_0="670" value_0_1="670" name1="dsgj" value_1_0="16" value_1_1="17" name2="fy" value_2_0="10" value_2_1="11" name3="mffy" value_3_0="10" value_3_1="11" name4="xxz" value_4_0="33" value_4_1="33" />
+		</Level>
+		<Level value="67" nextlevelexp="625500" autolevelup="1" cur_wsp_lv="67">
+			<jobprop job="0" name0="hp" value_0_0="1020" value_0_1="1020" name1="gj" value_1_0="16" value_1_1="18" name2="fy" value_2_0="10" value_2_1="12" name3="mffy" value_3_0="10" value_3_1="12" name4="xxz" value_4_0="34" value_4_1="34" />
+			<jobprop job="1" name0="hp" value_0_0="340" value_0_1="340" name1="mfgj" value_1_0="16" value_1_1="18" name2="fy" value_2_0="10" value_2_1="12" name3="mffy" value_3_0="10" value_3_1="12" name4="xxz" value_4_0="34" value_4_1="34" />
+			<jobprop job="2" name0="hp" value_0_0="680" value_0_1="680" name1="dsgj" value_1_0="16" value_1_1="18" name2="fy" value_2_0="10" value_2_1="12" name3="mffy" value_3_0="10" value_3_1="12" name4="xxz" value_4_0="34" value_4_1="34" />
+		</Level>
+		<Level value="68" nextlevelexp="640500" autolevelup="1" cur_wsp_lv="68">
+			<jobprop job="0" name0="hp" value_0_0="1035" value_0_1="1035" name1="gj" value_1_0="16" value_1_1="18" name2="fy" value_2_0="10" value_2_1="12" name3="mffy" value_3_0="10" value_3_1="12" name4="xxz" value_4_0="34" value_4_1="34" />
+			<jobprop job="1" name0="hp" value_0_0="345" value_0_1="345" name1="mfgj" value_1_0="16" value_1_1="18" name2="fy" value_2_0="10" value_2_1="12" name3="mffy" value_3_0="10" value_3_1="12" name4="xxz" value_4_0="34" value_4_1="34" />
+			<jobprop job="2" name0="hp" value_0_0="690" value_0_1="690" name1="dsgj" value_1_0="16" value_1_1="18" name2="fy" value_2_0="10" value_2_1="12" name3="mffy" value_3_0="10" value_3_1="12" name4="xxz" value_4_0="34" value_4_1="34" />
+		</Level>
+		<Level value="69" nextlevelexp="655500" autolevelup="1" cur_wsp_lv="69">
+			<jobprop job="0" name0="hp" value_0_0="1050" value_0_1="1050" name1="gj" value_1_0="17" value_1_1="18" name2="fy" value_2_0="10" value_2_1="12" name3="mffy" value_3_0="10" value_3_1="12" name4="xxz" value_4_0="35" value_4_1="35" />
+			<jobprop job="1" name0="hp" value_0_0="350" value_0_1="350" name1="mfgj" value_1_0="17" value_1_1="18" name2="fy" value_2_0="10" value_2_1="12" name3="mffy" value_3_0="10" value_3_1="12" name4="xxz" value_4_0="35" value_4_1="35" />
+			<jobprop job="2" name0="hp" value_0_0="700" value_0_1="700" name1="dsgj" value_1_0="17" value_1_1="18" name2="fy" value_2_0="10" value_2_1="12" name3="mffy" value_3_0="10" value_3_1="12" name4="xxz" value_4_0="35" value_4_1="35" />
+		</Level>
+		<Level value="70" nextlevelexp="670500" autolevelup="0" material="兽谱进阶丹" material_num ="60" cur_wsp_lv="70">
+			<jobprop job="0" name0="hp" value_0_0="1065" value_0_1="1065" name1="gj" value_1_0="17" value_1_1="18" name2="fy" value_2_0="11" value_2_1="12" name3="mffy" value_3_0="11" value_3_1="12" name4="xxz" value_4_0="35" value_4_1="35" />
+			<jobprop job="1" name0="hp" value_0_0="355" value_0_1="355" name1="mfgj" value_1_0="17" value_1_1="18" name2="fy" value_2_0="11" value_2_1="12" name3="mffy" value_3_0="11" value_3_1="12" name4="xxz" value_4_0="35" value_4_1="35" />
+			<jobprop job="2" name0="hp" value_0_0="710" value_0_1="710" name1="dsgj" value_1_0="17" value_1_1="18" name2="fy" value_2_0="11" value_2_1="12" name3="mffy" value_3_0="11" value_3_1="12" name4="xxz" value_4_0="35" value_4_1="35" />
+		</Level>
+		<Level value="71" nextlevelexp="685500" autolevelup="1" cur_wsp_lv="71">
+			<jobprop job="0" name0="hp" value_0_0="1080" value_0_1="1080" name1="gj" value_1_0="17" value_1_1="19" name2="fy" value_2_0="11" value_2_1="12" name3="mffy" value_3_0="11" value_3_1="12" name4="xxz" value_4_0="36" value_4_1="36" />
+			<jobprop job="1" name0="hp" value_0_0="360" value_0_1="360" name1="mfgj" value_1_0="17" value_1_1="19" name2="fy" value_2_0="11" value_2_1="12" name3="mffy" value_3_0="11" value_3_1="12" name4="xxz" value_4_0="36" value_4_1="36" />
+			<jobprop job="2" name0="hp" value_0_0="720" value_0_1="720" name1="dsgj" value_1_0="17" value_1_1="19" name2="fy" value_2_0="11" value_2_1="12" name3="mffy" value_3_0="11" value_3_1="12" name4="xxz" value_4_0="36" value_4_1="36" />
+		</Level>
+		<Level value="72" nextlevelexp="700500" autolevelup="1" cur_wsp_lv="72">
+			<jobprop job="0" name0="hp" value_0_0="1095" value_0_1="1095" name1="gj" value_1_0="17" value_1_1="19" name2="fy" value_2_0="11" value_2_1="12" name3="mffy" value_3_0="11" value_3_1="12" name4="xxz" value_4_0="36" value_4_1="36" />
+			<jobprop job="1" name0="hp" value_0_0="365" value_0_1="365" name1="mfgj" value_1_0="17" value_1_1="19" name2="fy" value_2_0="11" value_2_1="12" name3="mffy" value_3_0="11" value_3_1="12" name4="xxz" value_4_0="36" value_4_1="36" />
+			<jobprop job="2" name0="hp" value_0_0="730" value_0_1="730" name1="dsgj" value_1_0="17" value_1_1="19" name2="fy" value_2_0="11" value_2_1="12" name3="mffy" value_3_0="11" value_3_1="12" name4="xxz" value_4_0="36" value_4_1="36" />
+		</Level>
+		<Level value="73" nextlevelexp="715500" autolevelup="1" cur_wsp_lv="73">
+			<jobprop job="0" name0="hp" value_0_0="1110" value_0_1="1110" name1="gj" value_1_0="18" value_1_1="19" name2="fy" value_2_0="11" value_2_1="13" name3="mffy" value_3_0="11" value_3_1="13" name4="xxz" value_4_0="37" value_4_1="37" />
+			<jobprop job="1" name0="hp" value_0_0="370" value_0_1="370" name1="mfgj" value_1_0="18" value_1_1="19" name2="fy" value_2_0="11" value_2_1="13" name3="mffy" value_3_0="11" value_3_1="13" name4="xxz" value_4_0="37" value_4_1="37" />
+			<jobprop job="2" name0="hp" value_0_0="740" value_0_1="740" name1="dsgj" value_1_0="18" value_1_1="19" name2="fy" value_2_0="11" value_2_1="13" name3="mffy" value_3_0="11" value_3_1="13" name4="xxz" value_4_0="37" value_4_1="37" />
+		</Level>
+		<Level value="74" nextlevelexp="730500" autolevelup="1" cur_wsp_lv="74">
+			<jobprop job="0" name0="hp" value_0_0="1125" value_0_1="1125" name1="gj" value_1_0="18" value_1_1="19" name2="fy" value_2_0="11" value_2_1="13" name3="mffy" value_3_0="11" value_3_1="13" name4="xxz" value_4_0="37" value_4_1="37" />
+			<jobprop job="1" name0="hp" value_0_0="375" value_0_1="375" name1="mfgj" value_1_0="18" value_1_1="19" name2="fy" value_2_0="11" value_2_1="13" name3="mffy" value_3_0="11" value_3_1="13" name4="xxz" value_4_0="37" value_4_1="37" />
+			<jobprop job="2" name0="hp" value_0_0="750" value_0_1="750" name1="dsgj" value_1_0="18" value_1_1="19" name2="fy" value_2_0="11" value_2_1="13" name3="mffy" value_3_0="11" value_3_1="13" name4="xxz" value_4_0="37" value_4_1="37" />
+		</Level>
+		<Level value="75" nextlevelexp="745500" autolevelup="1" cur_wsp_lv="75">
+			<jobprop job="0" name0="hp" value_0_0="1140" value_0_1="1140" name1="gj" value_1_0="18" value_1_1="20" name2="fy" value_2_0="11" value_2_1="13" name3="mffy" value_3_0="11" value_3_1="13" name4="xxz" value_4_0="38" value_4_1="38" />
+			<jobprop job="1" name0="hp" value_0_0="380" value_0_1="380" name1="mfgj" value_1_0="18" value_1_1="20" name2="fy" value_2_0="11" value_2_1="13" name3="mffy" value_3_0="11" value_3_1="13" name4="xxz" value_4_0="38" value_4_1="38" />
+			<jobprop job="2" name0="hp" value_0_0="760" value_0_1="760" name1="dsgj" value_1_0="18" value_1_1="20" name2="fy" value_2_0="11" value_2_1="13" name3="mffy" value_3_0="11" value_3_1="13" name4="xxz" value_4_0="38" value_4_1="38" />
+		</Level>
+		<Level value="76" nextlevelexp="760500" autolevelup="1" cur_wsp_lv="76">
+			<jobprop job="0" name0="hp" value_0_0="1115" value_0_1="1115" name1="gj" value_1_0="18" value_1_1="20" name2="fy" value_2_0="12" value_2_1="13" name3="mffy" value_3_0="12" value_3_1="13" name4="xxz" value_4_0="38" value_4_1="38" />
+			<jobprop job="1" name0="hp" value_0_0="385" value_0_1="385" name1="mfgj" value_1_0="18" value_1_1="20" name2="fy" value_2_0="12" value_2_1="13" name3="mffy" value_3_0="12" value_3_1="13" name4="xxz" value_4_0="38" value_4_1="38" />
+			<jobprop job="2" name0="hp" value_0_0="770" value_0_1="770" name1="dsgj" value_1_0="18" value_1_1="20" name2="fy" value_2_0="12" value_2_1="13" name3="mffy" value_3_0="12" value_3_1="13" name4="xxz" value_4_0="38" value_4_1="38" />
+		</Level>
+		<Level value="77" nextlevelexp="775500" autolevelup="1" cur_wsp_lv="77">
+			<jobprop job="0" name0="hp" value_0_0="1170" value_0_1="1170" name1="gj" value_1_0="19" value_1_1="20" name2="fy" value_2_0="12" value_2_1="13" name3="mffy" value_3_0="12" value_3_1="13" name4="xxz" value_4_0="39" value_4_1="39" />
+			<jobprop job="1" name0="hp" value_0_0="390" value_0_1="390" name1="mfgj" value_1_0="19" value_1_1="20" name2="fy" value_2_0="12" value_2_1="13" name3="mffy" value_3_0="12" value_3_1="13" name4="xxz" value_4_0="39" value_4_1="39" />
+			<jobprop job="2" name0="hp" value_0_0="780" value_0_1="780" name1="dsgj" value_1_0="19" value_1_1="20" name2="fy" value_2_0="12" value_2_1="13" name3="mffy" value_3_0="12" value_3_1="13" name4="xxz" value_4_0="39" value_4_1="39" />
+		</Level>
+		<Level value="78" nextlevelexp="790500" autolevelup="1" cur_wsp_lv="78">
+			<jobprop job="0" name0="hp" value_0_0="1185" value_0_1="1185" name1="gj" value_1_0="19" value_1_1="20" name2="fy" value_2_0="12" value_2_1="13" name3="mffy" value_3_0="12" value_3_1="13" name4="xxz" value_4_0="39" value_4_1="39" />
+			<jobprop job="1" name0="hp" value_0_0="395" value_0_1="395" name1="mfgj" value_1_0="19" value_1_1="20" name2="fy" value_2_0="12" value_2_1="13" name3="mffy" value_3_0="12" value_3_1="13" name4="xxz" value_4_0="39" value_4_1="39" />
+			<jobprop job="2" name0="hp" value_0_0="790" value_0_1="790" name1="dsgj" value_1_0="19" value_1_1="20" name2="fy" value_2_0="12" value_2_1="13" name3="mffy" value_3_0="12" value_3_1="13" name4="xxz" value_4_0="39" value_4_1="39" />
+		</Level>
+		<Level value="79" nextlevelexp="805500" autolevelup="1" cur_wsp_lv="79">
+			<jobprop job="0" name0="hp" value_0_0="1200" value_0_1="1200" name1="gj" value_1_0="19" value_1_1="21" name2="fy" value_2_0="12" value_2_1="14" name3="mffy" value_3_0="12" value_3_1="14" name4="xxz" value_4_0="40" value_4_1="40" />
+			<jobprop job="1" name0="hp" value_0_0="400" value_0_1="400" name1="mfgj" value_1_0="19" value_1_1="21" name2="fy" value_2_0="12" value_2_1="14" name3="mffy" value_3_0="12" value_3_1="14" name4="xxz" value_4_0="40" value_4_1="40" />
+			<jobprop job="2" name0="hp" value_0_0="800" value_0_1="800" name1="dsgj" value_1_0="19" value_1_1="21" name2="fy" value_2_0="12" value_2_1="14" name3="mffy" value_3_0="12" value_3_1="14" name4="xxz" value_4_0="40" value_4_1="40" />
+		</Level>
+		<Level value="80" nextlevelexp="825500" autolevelup="1" cur_wsp_lv="80">
+			<jobprop job="0" name0="hp" value_0_0="1215" value_0_1="1215" name1="gj" value_1_0="19" value_1_1="21" name2="fy" value_2_0="12" value_2_1="14" name3="mffy" value_3_0="12" value_3_1="14" name4="xxz" value_4_0="40" value_4_1="40" />
+			<jobprop job="1" name0="hp" value_0_0="405" value_0_1="405" name1="mfgj" value_1_0="19" value_1_1="21" name2="fy" value_2_0="12" value_2_1="14" name3="mffy" value_3_0="12" value_3_1="14" name4="xxz" value_4_0="40" value_4_1="40" />
+			<jobprop job="2" name0="hp" value_0_0="810" value_0_1="810" name1="dsgj" value_1_0="19" value_1_1="21" name2="fy" value_2_0="12" value_2_1="14" name3="mffy" value_3_0="12" value_3_1="14" name4="xxz" value_4_0="40" value_4_1="40" />
+		</Level>
+    </LevelData>
+    <Skills>
+		<Skill id="1" name="兽袭" active_lv="10">
+			<SkillLevel value="1" nextlevelexp = "1000" desc0="骑战时增加攻击2-2,提升技能等级可以额外提高攻击力增强效果。" desc1="骑战时增加魔法2-2,提升技能等级可以额外提高攻击力增强效果。" desc2="骑战时增加道术2-2,提升技能等级可以额外提高攻击力增强效果。">
+				<jobprop job="0" value0="2" value1="2"/>
+				<jobprop job="1" value0="2" value1="2"/>
+				<jobprop job="2" value0="2" value1="2"/>
+			</SkillLevel>
+			<SkillLevel value="2" nextlevelexp = "2000" desc0="骑战时增加攻击4-4,提升技能等级可以额外提高攻击力增强效果。" desc1="骑战时增加魔法4-4,提升技能等级可以额外提高攻击力增强效果。" desc2="骑战时增加道术4-4,提升技能等级可以额外提高攻击力增强效果。">
+				<jobprop job="0" value0="4" value1="4"/>
+				<jobprop job="1" value0="4" value1="4"/>
+				<jobprop job="2" value0="4" value1="4"/>
+			</SkillLevel>
+			<SkillLevel value="3" nextlevelexp = "4000" desc0="骑战时增加攻击6-6,提升技能等级可以额外提高攻击力增强效果。" desc1="骑战时增加魔法6-6,提升技能等级可以额外提高攻击力增强效果。" desc2="骑战时增加道术6-6,提升技能等级可以额外提高攻击力增强效果。">
+				<jobprop job="0" value0="6" value1="6"/>
+				<jobprop job="1" value0="6" value1="6"/>
+				<jobprop job="2" value0="6" value1="6"/>
+			</SkillLevel>
+			<SkillLevel value="4" nextlevelexp = "6000" desc0="骑战时增加攻击8-8,提升技能等级可以额外提高攻击力增强效果。" desc1="骑战时增加魔法8-8,提升技能等级可以额外提高攻击力增强效果。" desc2="骑战时增加道术8-8,提升技能等级可以额外提高攻击力增强效果。">
+				<jobprop job="0" value0="8" value1="8"/>
+				<jobprop job="1" value0="8" value1="8"/>
+				<jobprop job="2" value0="8" value1="8"/>
+			</SkillLevel>
+			<SkillLevel value="5" nextlevelexp = "8000" desc0="骑战时增加攻击10-10,提升技能等级可以额外提高攻击力增强效果。" desc1="骑战时增加魔法10-10,提升技能等级可以额外提高攻击力增强效果。" desc2="骑战时增加道术8-8,提升技能等级可以额外提高攻击力增强效果。">
+				<jobprop job="0" value0="10" value1="10"/>
+				<jobprop job="1" value0="10" value1="10"/>
+				<jobprop job="2" value0="10" value1="10"/>
+			</SkillLevel>
+		</Skill>
+		<Skill id="2" name="灵巧" active_lv="15">
+			<SkillLevel value="1" nextlevelexp = "1000" desc0="骑战时提升自身的躲避和魔法躲避，提升技能等级可以额外提高效果。" desc1="//骑战时提升自身的躲避和魔法躲避，提升技能等级可以额外提高效果。" desc2="骑战时提升自身的躲避和魔法躲避，提升技能等级可以额外提高效果。">
+				<jobprop job="0" value0="1" value1="2"/>
+				<jobprop job="1" value0="1" value1="2"/>
+				<jobprop job="2" value0="1" value1="2"/>
+			</SkillLevel>
+			<SkillLevel value="2" nextlevelexp = "2000" desc0="骑战时提升自身的躲避和魔法躲避，提升技能等级可以额外提高效果。" desc1="//骑战时提升自身的躲避和魔法躲避，提升技能等级可以额外提高效果。" desc2="骑战时提升自身的躲避和魔法躲避，提升技能等级可以额外提高效果。">
+				<jobprop job="0" value0="2" value1="3"/>
+				<jobprop job="1" value0="2" value1="3"/>
+				<jobprop job="2" value0="2" value1="3"/>
+			</SkillLevel>
+			<SkillLevel value="3" nextlevelexp = "4000" desc0="骑战时提升自身的躲避和魔法躲避，提升技能等级可以额外提高效果。" desc1="//骑战时提升自身的躲避和魔法躲避，提升技能等级可以额外提高效果。" desc2="骑战时提升自身的躲避和魔法躲避，提升技能等级可以额外提高效果。">
+				<jobprop job="0" value0="3" value1="4"/>
+				<jobprop job="1" value0="3" value1="4"/>
+				<jobprop job="2" value0="3" value1="4"/>
+			</SkillLevel>
+			<SkillLevel value="4" nextlevelexp = "6000" desc0="骑战时提升自身的躲避和魔法躲避，提升技能等级可以额外提高效果。" desc1="//骑战时提升自身的躲避和魔法躲避，提升技能等级可以额外提高效果。" desc2="骑战时提升自身的躲避和魔法躲避，提升技能等级可以额外提高效果。">
+				<jobprop job="0" value0="4" value1="5"/>
+				<jobprop job="1" value0="4" value1="5"/>
+				<jobprop job="2" value0="4" value1="5"/>
+			</SkillLevel>
+			<SkillLevel value="5" nextlevelexp = "8000" desc0="骑战时提升自身的躲避和魔法躲避，提升技能等级可以额外提高效果。" desc1="//骑战时提升自身的躲避和魔法躲避，提升技能等级可以额外提高效果。" desc2="骑战时提升自身的躲避和魔法躲避，提升技能等级可以额外提高效果。">
+				<jobprop job="0" value0="5" value1="6"/>
+				<jobprop job="1" value0="5" value1="6"/>
+				<jobprop job="2" value0="5" value1="6"/>
+			</SkillLevel>
+		</Skill>
+		<Skill id="3" name="野性" active_lv="20">
+			<SkillLevel value="1" nextlevelexp = "1000" desc0="骑战时攻击有概率忽视目标的防御能力，提升技能等级可以额外提升忽视触发概率。" desc1="骑战时攻击有概率忽视目标的防御能力，提升技能等级可以额外提升忽视触发概率。" desc2="骑战时攻击有概率忽视目标的防御能力，提升技能等级可以额外提升忽视触发概率。">
+				<jobprop job="0" value0="2"/>
+				<jobprop job="1" value0="2"/>
+				<jobprop job="2" value0="2"/>
+			</SkillLevel>
+			<SkillLevel value="2" nextlevelexp = "2000" desc0="骑战时攻击有概率忽视目标的防御能力，提升技能等级可以额外提升忽视触发概率。" desc1="骑战时攻击有概率忽视目标的防御能力，提升技能等级可以额外提升忽视触发概率。" desc2="骑战时攻击有概率忽视目标的防御能力，提升技能等级可以额外提升忽视触发概率。">
+				<jobprop job="0" value0="3"/>
+				<jobprop job="1" value0="3"/>
+				<jobprop job="2" value0="3"/>
+			</SkillLevel>
+			<SkillLevel value="3" nextlevelexp = "4000" desc0="骑战时攻击有概率忽视目标的防御能力，提升技能等级可以额外提升忽视触发概率。" desc1="骑战时攻击有概率忽视目标的防御能力，提升技能等级可以额外提升忽视触发概率。" desc2="骑战时攻击有概率忽视目标的防御能力，提升技能等级可以额外提升忽视触发概率。">
+				<jobprop job="0" value0="4"/>
+				<jobprop job="1" value0="4"/>
+				<jobprop job="2" value0="4"/>
+			</SkillLevel>
+			<SkillLevel value="4" nextlevelexp = "6000" desc0="骑战时攻击有概率忽视目标的防御能力，提升技能等级可以额外提升忽视触发概率。" desc1="骑战时攻击有概率忽视目标的防御能力，提升技能等级可以额外提升忽视触发概率。" desc2="骑战时攻击有概率忽视目标的防御能力，提升技能等级可以额外提升忽视触发概率。">
+				<jobprop job="0" value0="5"/>
+				<jobprop job="1" value0="5"/>
+				<jobprop job="2" value0="5"/>
+			</SkillLevel>
+			<SkillLevel value="5" nextlevelexp = "8000" desc0="骑战时攻击有概率忽视目标的防御能力，提升技能等级可以额外提升忽视触发概率。" desc1="骑战时攻击有概率忽视目标的防御能力，提升技能等级可以额外提升忽视触发概率。" desc2="骑战时攻击有概率忽视目标的防御能力，提升技能等级可以额外提升忽视触发概率。">
+				<jobprop job="0" value0="6"/>
+				<jobprop job="1" value0="6"/>
+				<jobprop job="2" value0="6"/>
+			</SkillLevel>
+		</Skill>
+		<Skill id="4" name="霸体" active_lv="25">
+			<SkillLevel value="1" nextlevelexp = "1000" desc0="/骑战时有概率抵消敌方对你造成的部分伤害，提升技能等级可以额外提高触发概率和抵消伤害效果" desc1="/骑战时有概率抵消敌方对你造成的部分伤害，提升技能等级可以额外提高触发概率和抵消伤害效果" desc2="/骑战时有概率抵消敌方对你造成的部分伤害，提升技能等级可以额外提高触发概率和抵消伤害效果">
+				<jobprop job="0" value0="3" value1="5"/>
+				<jobprop job="1" value0="3" value1="5"/>
+				<jobprop job="2" value0="3" value1="5"/>
+			</SkillLevel>
+			<SkillLevel value="2" nextlevelexp = "2000" desc0="/骑战时有概率抵消敌方对你造成的部分伤害，提升技能等级可以额外提高触发概率和抵消伤害效果" desc1="/骑战时有概率抵消敌方对你造成的部分伤害，提升技能等级可以额外提高触发概率和抵消伤害效果" desc2="/骑战时有概率抵消敌方对你造成的部分伤害，提升技能等级可以额外提高触发概率和抵消伤害效果">
+				<jobprop job="0" value0="5" value1="8"/>
+				<jobprop job="1" value0="5" value1="8"/>
+				<jobprop job="2" value0="5" value1="8"/>
+			</SkillLevel>
+			<SkillLevel value="3" nextlevelexp = "4000" desc0="/骑战时有概率抵消敌方对你造成的部分伤害，提升技能等级可以额外提高触发概率和抵消伤害效果" desc1="/骑战时有概率抵消敌方对你造成的部分伤害，提升技能等级可以额外提高触发概率和抵消伤害效果" desc2="/骑战时有概率抵消敌方对你造成的部分伤害，提升技能等级可以额外提高触发概率和抵消伤害效果">
+				<jobprop job="0" value0="8" value1="10"/>
+				<jobprop job="1" value0="8" value1="10"/>
+				<jobprop job="2" value0="8" value1="10"/>
+			</SkillLevel>
+			<SkillLevel value="4" nextlevelexp = "6000" desc0="/骑战时有概率抵消敌方对你造成的部分伤害，提升技能等级可以额外提高触发概率和抵消伤害效果" desc1="/骑战时有概率抵消敌方对你造成的部分伤害，提升技能等级可以额外提高触发概率和抵消伤害效果" desc2="/骑战时有概率抵消敌方对你造成的部分伤害，提升技能等级可以额外提高触发概率和抵消伤害效果">
+				<jobprop job="0" value0="10" value1="13"/>
+				<jobprop job="1" value0="10" value1="13"/>
+				<jobprop job="2" value0="10" value1="13"/>
+			</SkillLevel>
+			<SkillLevel value="5" nextlevelexp = "8000" desc0="/骑战时有概率抵消敌方对你造成的部分伤害，提升技能等级可以额外提高触发概率和抵消伤害效果" desc1="/骑战时有概率抵消敌方对你造成的部分伤害，提升技能等级可以额外提高触发概率和抵消伤害效果" desc2="/骑战时有概率抵消敌方对你造成的部分伤害，提升技能等级可以额外提高触发概率和抵消伤害效果">
+				<jobprop job="0" value0="15" value1="16"/>
+				<jobprop job="1" value0="15" value1="16"/>
+				<jobprop job="2" value0="15" value1="16"/>
+			</SkillLevel>
+		</Skill>
+		<Skill id="5" name="噬血" active_lv="30">
+			<SkillLevel value="1" nextlevelexp = "1000" desc0="骑战时释放烈火或者雷霆时拥有概率吸血效果，吸血效果为伤害的20%，技能等级越高，触发吸血几率越高" desc1="骑战时释放狂龙或者雷电时拥有概率吸血效果，吸血效果为伤害的20%，技能等级越高，触发吸血几率越高" desc2="骑战时释放火符或者火咒时拥有概率吸血效果，吸血效果为伤害的20%，技能等级越高，触发吸血几率越高">
+				<jobprop job="0" value0="3" value1="20"/>
+				<jobprop job="1" value0="3" value1="20"/>
+				<jobprop job="2" value0="3" value1="20"/>
+			</SkillLevel>
+			<SkillLevel value="2" nextlevelexp = "2000" desc0="骑战时释放烈火或者雷霆时拥有概率吸血效果，吸血效果为伤害的30%，技能等级越高，触发吸血几率越高" desc1="骑战时释放狂龙或者雷电时拥有概率吸血效果，吸血效果为伤害的20%，技能等级越高，触发吸血几率越高" desc2="骑战时释放火符或者火咒时拥有概率吸血效果，吸血效果为伤害的20%，技能等级越高，触发吸血几率越高">
+				<jobprop job="0" value0="5" value1="30"/>
+				<jobprop job="1" value0="5" value1="30"/>
+				<jobprop job="2" value0="5" value1="30"/>
+			</SkillLevel>
+			<SkillLevel value="3" nextlevelexp = "4000" desc0="骑战时释放烈火或者雷霆时拥有概率吸血效果，吸血效果为伤害的40%，技能等级越高，触发吸血几率越高" desc1="骑战时释放狂龙或者雷电时拥有概率吸血效果，吸血效果为伤害的20%，技能等级越高，触发吸血几率越高" desc2="骑战时释放火符或者火咒时拥有概率吸血效果，吸血效果为伤害的20%，技能等级越高，触发吸血几率越高">
+				<jobprop job="0" value0="7" value1="40"/>
+				<jobprop job="1" value0="7" value1="40"/>
+				<jobprop job="2" value0="7" value1="40"/>
+			</SkillLevel>
+			<SkillLevel value="4" nextlevelexp = "6000" desc0="骑战时释放烈火或者雷霆时拥有概率吸血效果，吸血效果为伤害的50%，技能等级越高，触发吸血几率越高" desc1="骑战时释放狂龙或者雷电时拥有概率吸血效果，吸血效果为伤害的20%，技能等级越高，触发吸血几率越高" desc2="骑战时释放火符或者火咒时拥有概率吸血效果，吸血效果为伤害的20%，技能等级越高，触发吸血几率越高">
+				<jobprop job="0" value0="10" value1="50"/>
+				<jobprop job="1" value0="10" value1="50"/>
+				<jobprop job="2" value0="10" value1="50"/>
+			</SkillLevel>
+			<SkillLevel value="5" nextlevelexp = "8000" desc0="骑战时释放烈火或者雷霆时拥有概率吸血效果，吸血效果为伤害的60%，技能等级越高，触发吸血几率越高" desc1="骑战时释放狂龙或者雷电时拥有概率吸血效果，吸血效果为伤害的20%，技能等级越高，触发吸血几率越高" desc2="骑战时释放火符或者火咒时拥有概率吸血效果，吸血效果为伤害的20%，技能等级越高，触发吸血几率越高">
+				<jobprop job="0" value0="15" value1="60"/>
+				<jobprop job="1" value0="15" value1="60"/>
+				<jobprop job="2" value0="15" value1="60"/>
+			</SkillLevel>
+		</Skill>
+    </Skills>
+</WSP>

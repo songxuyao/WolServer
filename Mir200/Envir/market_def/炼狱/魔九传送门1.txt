@@ -1,0 +1,3 @@
+[@main]
+#ACT
+MAPMOVE NL008 132 40

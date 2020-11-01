@@ -1,0 +1,35 @@
+[@main]
+#IF
+RANDOM 1
+#ACT
+MOV S10 "<color=gray 进入财神庙>"
+#IF
+EQUAL $DATE.WEEK 5
+#ACT
+MOV S10 <进入财神庙/@startBianpao>
+#IF
+EQUAL $DATE.WEEK 6
+#ACT
+MOV S10 <进入财神庙/@startBianpao>
+#IF
+RANDOM 1
+#SAY
+  <color=yellow 新春来，财神到！>\
+  即日起每周五周六所有46级以上的勇士进入财神庙可\
+  参加财神庙内活动迎接财神并可获得丰厚奖励。\
+  财神庙活动：<color=yellow 进香祈福、财神上贡、许愿池许愿，>\
+  <color=red 活动道具请在财神庙接待员处购买>\\\
+  <$STR(S10)>\
+
+[@startBianpao]
+#IF
+CHECKLEVELEX < 46
+#SAY
+抱歉勇士您的等级不足46级！  <返回/@main>
+#ACT
+break
+#IF
+RANDOM 1
+#ACT
+MAPMOVE CAISHENMIAO 20 66
+break

@@ -1,0 +1,947 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Fabao>
+	<inlay index="1" desp="解锁条件: 法宝lv.20"/>
+	<inlay index="2" desp="解锁条件: 法宝lv.30"/>
+	<inlay index="3" desp="解锁条件: 法宝lv.40"/>
+	<inlay index="4" desp="解锁条件: 法宝lv.50"/>
+	<item index="100" ext_id="17429" name="红莲(一级)" looks="25807">
+		<jobprops job="0">
+			<prop name="hp" value_1 ="150" value_2 ="150"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="hp" value_1 ="40" value_2 ="40"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="hp" value_1 ="110" value_2 ="110"/>
+		</jobprops>
+	</item>
+	<item index="101" ext_id="17430" name="红莲(二级)" looks="25807">
+		<jobprops job="0">
+			<prop name="hp" value_1 ="200" value_2 ="200"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="hp" value_1 ="60" value_2 ="60"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="hp" value_1 ="140" value_2 ="140"/>
+		</jobprops>
+	</item>
+	<item index="102" ext_id="17431" name="红莲(三级)" looks="25807">
+		<jobprops job="0">
+			<prop name="hp" value_1 ="250" value_2 ="250"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="hp" value_1 ="80" value_2 ="80"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="hp" value_1 ="170" value_2 ="170"/>
+		</jobprops>
+	</item>
+	<item index="103" ext_id="17432" name="红莲(四级)" looks="25807">
+		<jobprops job="0">
+			<prop name="hp" value_1 ="300" value_2 ="300"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="hp" value_1 ="100" value_2 ="100"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="hp" value_1 ="200" value_2 ="200"/>
+		</jobprops>
+	</item>
+	<item index="104" ext_id="17433" name="红莲(五级)" looks="25807">
+		<jobprops job="0">
+			<prop name="hp" value_1 ="350" value_2 ="350"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="hp" value_1 ="120" value_2 ="120"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="hp" value_1 ="230" value_2 ="230"/>
+		</jobprops>
+	</item>
+	<item index="105" ext_id="17434" name="红莲(六级)" looks="25807">
+		<jobprops job="0">
+			<prop name="hp" value_1 ="400" value_2 ="400"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="hp" value_1 ="140" value_2 ="140"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="hp" value_1 ="260" value_2 ="260"/>
+		</jobprops>
+	</item>
+	<item index="106" ext_id="17435" name="红莲(七级)" looks="25807">
+		<jobprops job="0">
+			<prop name="hp" value_1 ="450" value_2 ="450"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="hp" value_1 ="160" value_2 ="160"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="hp" value_1 ="290" value_2 ="290"/>
+		</jobprops>
+	</item>
+	<item index="107" ext_id="17436" name="红莲(八级)" looks="25807">
+		<jobprops job="0">
+			<prop name="hp" value_1 ="500" value_2 ="500"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="hp" value_1 ="180" value_2 ="180"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="hp" value_1 ="320" value_2 ="320"/>
+		</jobprops>
+	</item>
+	<item index="108" ext_id="17437" name="红莲(九级)" looks="25807">
+		<jobprops job="0">
+			<prop name="hp" value_1 ="550" value_2 ="550"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="hp" value_1 ="200" value_2 ="200"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="hp" value_1 ="350" value_2 ="350"/>
+		</jobprops>
+	</item>
+	<item index="109" ext_id="17438" name="红莲(十级)" looks="25807">
+		<jobprops job="0">
+			<prop name="hp" value_1 ="600" value_2 ="600"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="hp" value_1 ="220" value_2 ="220"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="hp" value_1 ="380" value_2 ="380"/>
+		</jobprops>
+	</item>
+	<item index="110" ext_id="17439" name="火纹(一级)" looks="25807">
+		<jobprops job="0">
+			<prop name="gj" value_1 ="0" value_2 ="4"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="gj" value_1 ="0" value_2 ="4"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="gj" value_1 ="0" value_2 ="4"/>
+		</jobprops>
+	</item>
+	<item index="111" ext_id="17440" name="火纹(二级)" looks="25807">
+		<jobprops job="0">
+			<prop name="gj" value_1 ="1" value_2 ="6"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="gj" value_1 ="1" value_2 ="6"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="gj" value_1 ="1" value_2 ="6"/>
+		</jobprops>
+	</item>
+	<item index="112" ext_id="17441" name="火纹(三级)" looks="25807">
+		<jobprops job="0">
+			<prop name="gj" value_1 ="2" value_2 ="8"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="gj" value_1 ="2" value_2 ="8"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="gj" value_1 ="2" value_2 ="8"/>
+		</jobprops>
+	</item>
+	<item index="113" ext_id="17442" name="火纹(四级)" looks="25807">
+		<jobprops job="0">
+			<prop name="gj" value_1 ="3" value_2 ="10"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="gj" value_1 ="3" value_2 ="10"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="gj" value_1 ="3" value_2 ="10"/>
+		</jobprops>
+	</item>
+	<item index="114" ext_id="17443" name="火纹(五级)" looks="25807">
+		<jobprops job="0">
+			<prop name="gj" value_1 ="5" value_2 ="14"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="gj" value_1 ="5" value_2 ="14"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="gj" value_1 ="5" value_2 ="14"/>
+		</jobprops>
+	</item>
+	<item index="115" ext_id="17444" name="火纹(六级)" looks="25807">
+		<jobprops job="0">
+			<prop name="gj" value_1 ="7" value_2 ="18"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="gj" value_1 ="7" value_2 ="18"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="gj" value_1 ="7" value_2 ="18"/>
+		</jobprops>
+	</item>
+	<item index="116" ext_id="17445" name="火纹(七级)" looks="25807">
+		<jobprops job="0">
+			<prop name="gj" value_1 ="9" value_2 ="12"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="gj" value_1 ="9" value_2 ="12"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="gj" value_1 ="9" value_2 ="12"/>
+		</jobprops>
+	</item>
+	<item index="117" ext_id="17446" name="火纹(八级)" looks="25807">
+		<jobprops job="0">
+			<prop name="gj" value_1 ="11" value_2 ="26"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="gj" value_1 ="11" value_2 ="26"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="gj" value_1 ="11" value_2 ="26"/>
+		</jobprops>
+	</item>
+	<item index="118" ext_id="17447" name="火纹(九级)" looks="25807">
+		<jobprops job="0">
+			<prop name="gj" value_1 ="13" value_2 ="30"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="gj" value_1 ="13" value_2 ="30"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="gj" value_1 ="13" value_2 ="30"/>
+		</jobprops>
+	</item>
+	<item index="119" ext_id="17448" name="火纹(十级)" looks="25807">
+		<jobprops job="0">
+			<prop name="gj" value_1 ="15" value_2 ="34"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="gj" value_1 ="15" value_2 ="34"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="gj" value_1 ="15" value_2 ="34"/>
+		</jobprops>
+	</item>
+	<item index="120" ext_id="17449" name="赤阳(一级)" looks="25807">
+		<jobprops job="0">
+			<prop name="dsgj" value_1 ="0" value_2 ="4"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="dsgj" value_1 ="0" value_2 ="4"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="dsgj" value_1 ="0" value_2 ="4"/>
+		</jobprops>
+	</item>
+	<item index="121" ext_id="17450" name="赤阳(二级)" looks="25807">
+		<jobprops job="0">
+			<prop name="dsgj" value_1 ="1" value_2 ="6"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="dsgj" value_1 ="1" value_2 ="6"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="dsgj" value_1 ="1" value_2 ="6"/>
+		</jobprops>
+	</item>
+	<item index="122" ext_id="17451" name="赤阳(三级)" looks="25807">
+		<jobprops job="0">
+			<prop name="dsgj" value_1 ="2" value_2 ="8"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="dsgj" value_1 ="2" value_2 ="8"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="dsgj" value_1 ="2" value_2 ="8"/>
+		</jobprops>
+	</item>
+	<item index="123" ext_id="17452" name="赤阳(四级)" looks="25807">
+		<jobprops job="0">
+			<prop name="dsgj" value_1 ="3" value_2 ="10"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="dsgj" value_1 ="3" value_2 ="10"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="dsgj" value_1 ="3" value_2 ="10"/>
+		</jobprops>
+	</item>
+	<item index="124" ext_id="17453" name="赤阳(五级)" looks="25807">
+		<jobprops job="0">
+			<prop name="dsgj" value_1 ="5" value_2 ="14"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="dsgj" value_1 ="5" value_2 ="14"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="dsgj" value_1 ="5" value_2 ="14"/>
+		</jobprops>
+	</item>
+	<item index="125" ext_id="17454" name="赤阳(六级)" looks="25807">
+		<jobprops job="0">
+			<prop name="dsgj" value_1 ="7" value_2 ="18"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="dsgj" value_1 ="7" value_2 ="18"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="dsgj" value_1 ="7" value_2 ="18"/>
+		</jobprops>
+	</item>	
+	<item index="126" ext_id="17455" name="赤阳(七级)" looks="25807">
+		<jobprops job="0">
+			<prop name="dsgj" value_1 ="9" value_2 ="22"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="dsgj" value_1 ="9" value_2 ="22"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="dsgj" value_1 ="9" value_2 ="22"/>
+		</jobprops>
+	</item>
+	<item index="127" ext_id="17456" name="赤阳(八级)" looks="25807">
+		<jobprops job="0">
+			<prop name="dsgj" value_1 ="11" value_2 ="26"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="dsgj" value_1 ="11" value_2 ="26"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="dsgj" value_1 ="11" value_2 ="26"/>
+		</jobprops>
+	</item>
+	<item index="128" ext_id="17457" name="赤阳(九级)" looks="25807">
+		<jobprops job="0">
+			<prop name="dsgj" value_1 ="13" value_2 ="30"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="dsgj" value_1 ="13" value_2 ="30"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="dsgj" value_1 ="13" value_2 ="30"/>
+		</jobprops>
+	</item>
+	<item index="129" ext_id="17458" name="赤阳(十级)" looks="25807">
+		<jobprops job="0">
+			<prop name="dsgj" value_1 ="15" value_2 ="34"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="dsgj" value_1 ="15" value_2 ="34"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="dsgj" value_1 ="15" value_2 ="34"/>
+		</jobprops>
+	</item>
+	<item index="130" ext_id="17459" name="六阳(一级)" looks="25807">
+		<jobprops job="0">
+			<prop name="mfgj" value_1 ="0" value_2 ="4"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mfgj" value_1 ="0" value_2 ="4"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mfgj" value_1 ="0" value_2 ="4"/>
+		</jobprops>
+	</item>
+	<item index="131" ext_id="17460" name="六阳(二级)" looks="25807">
+		<jobprops job="0">
+			<prop name="mfgj" value_1 ="1" value_2 ="6"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mfgj" value_1 ="1" value_2 ="6"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mfgj" value_1 ="1" value_2 ="6"/>
+		</jobprops>
+	</item>
+	<item index="132" ext_id="17461" name="六阳(三级)" looks="25807">
+		<jobprops job="0">
+			<prop name="mfgj" value_1 ="2" value_2 ="8"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mfgj" value_1 ="2" value_2 ="8"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mfgj" value_1 ="2" value_2 ="8"/>
+		</jobprops>
+	</item>
+	<item index="133" ext_id="17462" name="六阳(四级)" looks="25807">
+		<jobprops job="0">
+			<prop name="mfgj" value_1 ="3" value_2 ="10"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mfgj" value_1 ="3" value_2 ="10"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mfgj" value_1 ="3" value_2 ="10"/>
+		</jobprops>
+	</item>
+	<item index="134" ext_id="17463" name="六阳(五级)" looks="25807">
+		<jobprops job="0">
+			<prop name="mfgj" value_1 ="5" value_2 ="14"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mfgj" value_1 ="5" value_2 ="14"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mfgj" value_1 ="5" value_2 ="14"/>
+		</jobprops>
+	</item>
+	<item index="135" ext_id="17464" name="六阳(六级)" looks="25807">
+		<jobprops job="0">
+			<prop name="mfgj" value_1 ="7" value_2 ="18"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mfgj" value_1 ="7" value_2 ="18"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mfgj" value_1 ="7" value_2 ="18"/>
+		</jobprops>
+	</item>
+	<item index="136" ext_id="17465" name="六阳(七级)" looks="25807">
+		<jobprops job="0">
+			<prop name="mfgj" value_1 ="9" value_2 ="22"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mfgj" value_1 ="9" value_2 ="22"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mfgj" value_1 ="9" value_2 ="22"/>
+		</jobprops>
+	</item>
+	<item index="137" ext_id="17466" name="六阳(八级)" looks="25807">
+		<jobprops job="0">
+			<prop name="mfgj" value_1 ="11" value_2 ="26"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mfgj" value_1 ="11" value_2 ="26"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mfgj" value_1 ="11" value_2 ="26"/>
+		</jobprops>
+	</item>
+	<item index="138" ext_id="17467" name="六阳(九级)" looks="25807">
+		<jobprops job="0">
+			<prop name="mfgj" value_1 ="13" value_2 ="30"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mfgj" value_1 ="13" value_2 ="30"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mfgj" value_1 ="13" value_2 ="30"/>
+		</jobprops>
+	</item>
+	<item index="139" ext_id="17468" name="六阳(十级)" looks="25807">
+		<jobprops job="0">
+			<prop name="mfgj" value_1 ="15" value_2 ="34"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mfgj" value_1 ="15" value_2 ="34"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mfgj" value_1 ="15" value_2 ="34"/>
+		</jobprops>
+	</item>
+	<item index="140" ext_id="17469" name="水月(一级)" looks="25811">
+		<jobprops job="0">
+			<prop name="fy" value_1 ="0" value_2 ="4"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="fy" value_1 ="0" value_2 ="4"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="fy" value_1 ="0" value_2 ="4"/>
+		</jobprops>
+	</item>
+	<item index="141" ext_id="17470" name="水月(二级)" looks="25811">
+		<jobprops job="0">
+			<prop name="fy" value_1 ="1" value_2 ="6"/>
+		</jobprops>
+		<jobprops job="1">
+		<prop name="fy" value_1 ="1" value_2 ="6"/>
+		</jobprops>
+		<jobprops job="2">
+		<prop name="fy" value_1 ="1" value_2 ="6"/>
+		</jobprops>
+	</item>
+	<item index="142" ext_id="17471" name="水月(三级)" looks="25811">
+		<jobprops job="0">
+		<prop name="fy" value_1 ="2" value_2 ="8"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="fy" value_1 ="2" value_2 ="8"/>
+		</jobprops>
+		<jobprops job="2">
+		<prop name="fy" value_1 ="2" value_2 ="8"/>
+		</jobprops>
+	</item>
+	<item index="143" ext_id="17472" name="水月(四级)" looks="25811">
+		<jobprops job="0">
+		<prop name="fy" value_1 ="3" value_2 ="10"/>
+		</jobprops>
+		<jobprops job="1">
+		<prop name="fy" value_1 ="3" value_2 ="10"/>
+		</jobprops>
+		<jobprops job="2">
+		<prop name="fy" value_1 ="3" value_2 ="10"/>
+		</jobprops>
+	</item>
+	<item index="144" ext_id="17473" name="水月(五级)" looks="25811">
+		<jobprops job="0">
+		<prop name="fy" value_1 ="5" value_2 ="14"/>
+		</jobprops>
+		<jobprops job="1">
+		<prop name="fy" value_1 ="5" value_2 ="14"/>
+		</jobprops>
+		<jobprops job="2">
+		<prop name="fy" value_1 ="5" value_2 ="14"/>
+		</jobprops>
+	</item>
+	<item index="145" ext_id="17474" name="水月(六级)" looks="25811">
+		<jobprops job="0">
+		<prop name="fy" value_1 ="7" value_2 ="10"/>
+		</jobprops>
+		<jobprops job="1">
+		<prop name="fy" value_1 ="7" value_2 ="10"/>
+		</jobprops>
+		<jobprops job="2">
+		<prop name="fy" value_1 ="7" value_2 ="10"/>
+		</jobprops>
+	</item>
+	<item index="146" ext_id="17475" name="水月(七级)" looks="25811">
+		<jobprops job="0">
+	    <prop name="fy" value_1 ="9" value_2 ="22"/>
+		</jobprops>
+		<jobprops job="1">
+		<prop name="fy" value_1 ="9" value_2 ="22"/>
+		</jobprops>
+		<jobprops job="2">
+		<prop name="fy" value_1 ="9" value_2 ="22"/>
+		</jobprops>
+	</item>
+	<item index="147" ext_id="17476" name="水月(八级)" looks="25811">
+		<jobprops job="0">
+			<prop name="fy" value_1 ="11" value_2 ="26"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="fy" value_1 ="11" value_2 ="26"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="fy" value_1 ="11" value_2 ="26"/>
+		</jobprops>
+	</item>
+	<item index="148" ext_id="17477" name="水月(九级)" looks="25811">
+		<jobprops job="0">
+			<prop name="fy" value_1 ="13" value_2 ="30"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="fy" value_1 ="13" value_2 ="30"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="fy" value_1 ="13" value_2 ="30"/>
+		</jobprops>
+	</item>
+	<item index="149" ext_id="17478" name="水月(十级)" looks="25811">
+		<jobprops job="0">
+			<prop name="fy" value_1 ="15" value_2 ="34"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="fy" value_1 ="15" value_2 ="34"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="fy" value_1 ="15" value_2 ="34"/>
+		</jobprops>
+	</item>
+	<item index="150" ext_id="17479" name="冰魄(一级)" looks="25811">
+		<jobprops job="0">
+			<prop name="mffy" value_1 ="0" value_2 ="4"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mffy" value_1 ="0" value_2 ="4"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mffy" value_1 ="0" value_2 ="4"/>
+		</jobprops>
+	</item>
+	<item index="151" ext_id="17480" name="冰魄(二级)" looks="25811">
+		<jobprops job="0">
+			<prop name="mffy" value_1 ="1" value_2 ="6"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mffy" value_1 ="1" value_2 ="6"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mffy" value_1 ="1" value_2 ="6"/>
+		</jobprops>
+	</item>
+	<item index="152" ext_id="17481" name="冰魄(三级)" looks="25811">
+		<jobprops job="0">
+			<prop name="mffy" value_1 ="2" value_2 ="8"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mffy" value_1 ="2" value_2 ="8"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mffy" value_1 ="2" value_2 ="8"/>
+		</jobprops>
+	</item>
+	<item index="153" ext_id="17482" name="冰魄(四级)" looks="25811">
+		<jobprops job="0">
+			<prop name="mffy" value_1 ="3" value_2 ="10"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mffy" value_1 ="3" value_2 ="10"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mffy" value_1 ="3" value_2 ="10"/>
+		</jobprops>
+	</item>
+	<item index="154" ext_id="17483" name="冰魄(五级)" looks="25811">
+		<jobprops job="0">
+			<prop name="mffy" value_1 ="5" value_2 ="14"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mffy" value_1 ="5" value_2 ="14"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mffy" value_1 ="5" value_2 ="14"/>
+		</jobprops>
+	</item>
+	<item index="155" ext_id="17484" name="冰魄(六级)" looks="25811">
+		<jobprops job="0">
+			<prop name="mffy" value_1 ="7" value_2 ="18"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mffy" value_1 ="7" value_2 ="18"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mffy" value_1 ="7" value_2 ="18"/>
+		</jobprops>
+	</item>
+	<item index="156" ext_id="17485" name="冰魄(七级)" looks="25811">
+		<jobprops job="0">
+			<prop name="mffy" value_1 ="9" value_2 ="22"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mffy" value_1 ="9" value_2 ="22"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mffy" value_1 ="9" value_2 ="22"/>
+		</jobprops>
+	</item>
+	<item index="157" ext_id="17486" name="冰魄(八级)" looks="25811">
+		<jobprops job="0">
+			<prop name="mffy" value_1 ="11" value_2 ="26"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mffy" value_1 ="11" value_2 ="26"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mffy" value_1 ="11" value_2 ="26"/>
+		</jobprops>
+	</item>
+	<item index="158" ext_id="17487" name="冰魄(九级)" looks="25811">
+		<jobprops job="0">
+			<prop name="mffy" value_1 ="13" value_2 ="30"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mffy" value_1 ="13" value_2 ="30"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mffy" value_1 ="13" value_2 ="30"/>
+		</jobprops>
+	</item>
+	<item index="159" ext_id="17488" name="冰魄(十级)" looks="25811">
+		<jobprops job="0">
+			<prop name="mffy" value_1 ="15" value_2 ="34"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mffy" value_1 ="15" value_2 ="34"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mffy" value_1 ="15" value_2 ="34"/>
+		</jobprops>
+	</item>
+	<item index="160" ext_id="17489" name="寒霜(一级)" looks="25811">
+		<jobprops job="0">
+			<prop name="mz" value_1 ="1" value_2 ="1"/>
+			<prop name="mfmz" value_1 ="4" value_2 ="4"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mz" value_1 ="1" value_2 ="1"/>
+			<prop name="mfmz" value_1 ="4" value_2 ="4"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mz" value_1 ="1" value_2 ="1"/>
+			<prop name="mfmz" value_1 ="4" value_2 ="4"/>
+		</jobprops>
+	</item>
+	<item index="161" ext_id="17490" name="寒霜(二级)" looks="25811">
+		<jobprops job="0">
+			<prop name="mz" value_1 ="2" value_2 ="2"/>
+			<prop name="mfmz" value_1 ="6" value_2 ="6"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mz" value_1 ="2" value_2 ="2"/>
+			<prop name="mfmz" value_1 ="6" value_2 ="6"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mz" value_1 ="2" value_2 ="2"/>
+			<prop name="mfmz" value_1 ="6" value_2 ="6"/>
+		</jobprops>
+	</item>	
+	<item index="162" ext_id="17491" name="寒霜(三级)" looks="25811">
+		<jobprops job="0">
+			<prop name="mz" value_1 ="3" value_2 ="3"/>
+			<prop name="mfmz" value_1 ="8" value_2 ="8"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mz" value_1 ="3" value_2 ="3"/>
+			<prop name="mfmz" value_1 ="8" value_2 ="8"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mz" value_1 ="3" value_2 ="3"/>
+			<prop name="mfmz" value_1 ="8" value_2 ="8"/>
+		</jobprops>
+	</item>		
+	<item index="163" ext_id="17492" name="寒霜(四级)" looks="25811">
+		<jobprops job="0">
+			<prop name="mz" value_1 ="5" value_2 ="5"/>
+			<prop name="mfmz" value_1 ="10" value_2="10"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mz" value_1 ="5" value_2 ="5"/>
+			<prop name="mfmz" value_1 ="10" value_2 ="10"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mz" value_1 ="5" value_2 ="5"/>
+			<prop name="mfmz" value_1 ="10" value_2 ="10"/>
+		</jobprops>
+	</item>	
+	<item index="164" ext_id="17493" name="寒霜(五级)" looks="25811">
+		<jobprops job="0">
+			<prop name="mz" value_1 ="7" value_2 ="7"/>
+			<prop name="mfmz" value_1 ="14" value_2="14"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mz" value_1 ="7" value_2 ="7"/>
+			<prop name="mfmz" value_1 ="14" value_2 ="14"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mz" value_1 ="7" value_2 ="7"/>
+			<prop name="mfmz" value_1 ="14" value_2 ="14"/>
+		</jobprops>
+	</item>	
+	<item index="165" ext_id="17494" name="寒霜(六级)" looks="25811">
+		<jobprops job="0">
+			<prop name="mz" value_1 ="9" value_2 ="9"/>
+			<prop name="mfmz" value_1 ="18" value_2="18"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mz" value_1 ="9" value_2 ="9"/>
+			<prop name="mfmz" value_1 ="18" value_2 ="18"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mz" value_1 ="9" value_2 ="9"/>
+			<prop name="mfmz" value_1 ="18" value_2 ="18"/>
+		</jobprops>
+	</item>	
+	<item index="166" ext_id="17495" name="寒霜(七级)" looks="25811">
+		<jobprops job="0">
+			<prop name="mz" value_1 ="11" value_2 ="11"/>
+			<prop name="mfmz" value_1 ="22" value_2="22"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mz" value_1 ="11" value_2 ="11"/>
+			<prop name="mfmz" value_1 ="22" value_2 ="22"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mz" value_1 ="11" value_2 ="11"/>
+			<prop name="mfmz" value_1 ="22" value_2 ="22"/>
+		</jobprops>
+	</item>	
+	<item index="167" ext_id="17496" name="寒霜(八级)" looks="25811">
+		<jobprops job="0">
+			<prop name="mz" value_1 ="13" value_2 ="13"/>
+			<prop name="mfmz" value_1 ="26" value_2="26"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mz" value_1 ="13" value_2 ="13"/>
+			<prop name="mfmz" value_1 ="26" value_2 ="26"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mz" value_1 ="13" value_2 ="13"/>
+			<prop name="mfmz" value_1 ="26" value_2 ="26"/>
+		</jobprops>
+	</item>
+	<item index="168" ext_id="17497" name="寒霜(九级)" looks="25811">
+		<jobprops job="0">
+			<prop name="mz" value_1 ="15" value_2 ="15"/>
+			<prop name="mfmz" value_1 ="30" value_2="30"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mz" value_1 ="15" value_2 ="15"/>
+			<prop name="mfmz" value_1 ="30" value_2 ="30"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mz" value_1 ="15" value_2 ="15"/>
+			<prop name="mfmz" value_1 ="30" value_2 ="30"/>
+		</jobprops>
+	</item>
+	<item index="169" ext_id="17498" name="寒霜(十级)" looks="25811">
+		<jobprops job="0">
+			<prop name="mz" value_1 ="17" value_2 ="17"/>
+			<prop name="mfmz" value_1 ="34" value_2="34"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="mz" value_1 ="17" value_2 ="17"/>
+			<prop name="mfmz" value_1 ="34" value_2 ="34"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="mz" value_1 ="17" value_2 ="17"/>
+			<prop name="mfmz" value_1 ="34" value_2 ="34"/>
+		</jobprops>
+	</item>
+	<item index="170" ext_id="17499" name="北冥(一级)" looks="25811">
+		<jobprops job="0">
+			<prop name="db" value_1 ="1" value_2 ="1"/>
+			<prop name="mfdb" value_1 ="4" value_2 ="4"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="db" value_1 ="1" value_2 ="1"/>
+			<prop name="mfdb" value_1 ="4" value_2 ="4"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="db" value_1 ="1" value_2 ="1"/>
+			<prop name="mfdb" value_1 ="4" value_2 ="4"/>
+		</jobprops>
+	</item>
+	<item index="171" ext_id="17500" name="北冥(二级)" looks="25811">
+		<jobprops job="0">
+			<prop name="db" value_1 ="2" value_2 ="2"/>
+			<prop name="mfdb" value_1 ="6" value_2 ="6"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="db" value_1 ="2" value_2 ="2"/>
+			<prop name="mfdb" value_1 ="6" value_2 ="6"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="db" value_1 ="2" value_2 ="2"/>
+			<prop name="mfdb" value_1 ="6" value_2 ="6"/>
+		</jobprops>
+	</item>
+	<item index="172" ext_id="17501" name="北冥(三级)" looks="25811">
+		<jobprops job="0">
+			<prop name="db" value_1 ="3" value_2 ="3"/>
+			<prop name="mfdb" value_1 ="8" value_2 ="8"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="db" value_1 ="3" value_2 ="3"/>
+			<prop name="mfdb" value_1 ="8" value_2 ="8"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="db" value_1 ="3" value_2 ="3"/>
+			<prop name="mfdb" value_1 ="8" value_2 ="8"/>
+		</jobprops>
+	</item>
+	<item index="173" ext_id="17502" name="北冥(四级)" looks="25811">
+		<jobprops job="0">
+			<prop name="db" value_1 ="5" value_2 ="5"/>
+			<prop name="mfdb" value_1 ="10" value_2 ="10"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="db" value_1 ="5" value_2 ="5"/>
+			<prop name="mfdb" value_1 ="10" value_2 ="10"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="db" value_1 ="5" value_2 ="5"/>
+			<prop name="mfdb" value_1 ="10" value_2 ="10"/>
+		</jobprops>
+	</item>
+	<item index="174" ext_id="17503" name="北冥(五级)" looks="25811">
+		<jobprops job="0">
+			<prop name="db" value_1 ="7" value_2 ="7"/>
+			<prop name="mfdb" value_1 ="14" value_2 ="14"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="db" value_1 ="7" value_2 ="7"/>
+			<prop name="mfdb" value_1 ="14" value_2 ="14"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="db" value_1 ="7" value_2 ="7"/>
+			<prop name="mfdb" value_1 ="14" value_2 ="14"/>
+		</jobprops>
+	</item>
+	<item index="175" ext_id="17504" name="北冥(六级)" looks="25811">
+		<jobprops job="0">
+			<prop name="db" value_1 ="9" value_2 ="9"/>
+			<prop name="mfdb" value_1 ="18" value_2 ="18"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="db" value_1 ="9" value_2 ="9"/>
+			<prop name="mfdb" value_1 ="18" value_2 ="18"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="db" value_1 ="9" value_2 ="9"/>
+			<prop name="mfdb" value_1 ="18" value_2 ="18"/>
+		</jobprops>
+	</item>
+	<item index="176" ext_id="17505" name="北冥(七级)" looks="25811">
+		<jobprops job="0">
+			<prop name="db" value_1 ="11" value_2 ="11"/>
+			<prop name="mfdb" value_1 ="22" value_2 ="22"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="db" value_1 ="11" value_2 ="11"/>
+			<prop name="mfdb" value_1 ="22" value_2 ="22"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="db" value_1 ="11" value_2 ="11"/>
+			<prop name="mfdb" value_1 ="22" value_2 ="22"/>
+		</jobprops>
+	</item>
+	<item index="177" ext_id="17506" name="北冥(八级)" looks="25811">
+		<jobprops job="0">
+			<prop name="db" value_1 ="13" value_2 ="13"/>
+			<prop name="mfdb" value_1 ="26" value_2 ="26"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="db" value_1 ="13" value_2 ="13"/>
+			<prop name="mfdb" value_1 ="26" value_2 ="26"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="db" value_1 ="13" value_2 ="13"/>
+			<prop name="mfdb" value_1 ="26" value_2 ="26"/>
+		</jobprops>
+	</item>
+	<item index="178" ext_id="17507" name="北冥(九级)" looks="25811">
+		<jobprops job="0">
+			<prop name="db" value_1 ="15" value_2 ="15"/>
+			<prop name="mfdb" value_1 ="30" value_2 ="30"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="db" value_1 ="15" value_2 ="15"/>
+			<prop name="mfdb" value_1 ="30" value_2 ="30"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="db" value_1 ="15" value_2 ="15"/>
+			<prop name="mfdb" value_1 ="30" value_2 ="30"/>
+		</jobprops>
+	</item>
+	<item index="179" ext_id="17508" name="北冥(十级)" looks="25811">
+		<jobprops job="0">
+			<prop name="db" value_1 ="17" value_2 ="17"/>
+			<prop name="mfdb" value_1 ="34" value_2 ="34"/>
+		</jobprops>
+		<jobprops job="1">
+			<prop name="db" value_1 ="17" value_2 ="17"/>
+			<prop name="mfdb" value_1 ="34" value_2 ="34"/>
+		</jobprops>
+		<jobprops job="2">
+			<prop name="db" value_1 ="17" value_2 ="17"/>
+			<prop name="mfdb" value_1 ="34" value_2 ="34"/>
+		</jobprops>
+	</item>
+</Fabao>

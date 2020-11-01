@@ -1,0 +1,40 @@
+[@个人变量]
+{
+
+#IF
+RANDOM 1
+#ACT
+VAR Integer HUMAN 寄售
+VAR String HUMAN 结婚
+VAR String HUMAN 寄言
+LOADVAR HUMAN 寄售 ..\QuestDiary\数据文件\个人变量\寄售.txt
+LOADVAR HUMAN 结婚 ..\QuestDiary\数据文件\个人变量\结婚.txt
+LOADVAR HUMAN 寄言 ..\QuestDiary\数据文件\个人变量\寄言.txt
+#IF
+LARGE $TABLE(SG_PRIVITE).Hum03 3600
+#ACT
+MOV P1 $TABLE(SG_PRIVITE).Hum03
+MOV P2 $TABLE(SG_PRIVITE).Hum03
+DIV P1 3600
+MOV P3 3600
+MULT P3 $STR(P1)
+DEC P2 $STR(P3)
+SENDMSG 5 "您帐号的剩余游戏时间为： <$STR(P1)>小时 <$STR(P2)>秒"
+#ELSEACT
+SENDMSG 5 "您帐号的剩余游戏时间为： <$TABLE(SG_PRIVITE).Hum03>秒"
+#IF
+LARGE $VIPLEVEL 8
+#ACT
+CHANGENAMECOLOR 253
+#IF
+!EQUAL $Table(SG_Pritime).Tim14 $DATE
+#ACT
+CLEARCUSTOMVALUE 0 44
+Table SG_Pritime Tim14 = $DATE
+#IF
+CHECKLEVELEX > 0
+#ACT
+SENDMSG 5 您的元宝还有<$GAMEGOLD>个
+break
+
+}

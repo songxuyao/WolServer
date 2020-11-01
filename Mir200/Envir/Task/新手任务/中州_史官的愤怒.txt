@@ -1,0 +1,12 @@
+[setup]
+stepcount = 4
+title = 新手任务--史官的愤怒
+ID = 23
+stepaim1 = 去找<王城史官/@@goto 0 史官 475,150>聊聊 <color=green [传]/@@flyto 21 0 475 150>
+stepaim2 = 去<将军坟东/@@goplace H081 207,321>杀10个蝎子或蝙蝠 <color=green [传]/@@flyto 27 H081 207 321>
+stepaim3 = 还要杀<$TASKVAL(23).I0>个<蝎子或蝙蝠/@@goplace H081 207,321> <color=green [传]/@@flyto 27 H081 207 321>
+stepaim4 = 任务完成！去找<王城史官/@@goto 0 史官 475,150> <color=green [传]/@@flyto 21 0 475 150>
+stepDESC1 = <color=graygolden 任务目的：>去找<王城史官/@@goto 0 史官 475,150>聊聊\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：300000\<color=graygolden 任务介绍:>\    穿齐了装备，是不是觉得战斗力增加了很多？\    1个勇士的强大程度，与他的等级、装备、技能、人脉\等息息相关。好了，准备好接受全新的挑战了吗？\    你现在去找<王城史官/@@goto 0 史官 475,150>聊聊，他正在寻找个可以帮助他的\年轻人。
+stepDESC2 = <color=graygolden 任务目的：>去<将军坟东/@@goplace H081 207,321>杀10个蝎子或蝙蝠\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：300000\<color=graygolden 任务介绍:>\    <将军坟东/@@goplace H081 207,321>，是将军坟的一个影冢，里面的怪物相比来说\要弱小很多。但是你也不能大意。\    既然仅供的号角即将吹响，让我们先去试探试探敌人的\实力吧。\    去灭10只蝎子和蝙蝠后回来找我。
+stepDESC3 = <color=graygolden 任务目的：>去<将军坟东/@@goplace H081 207,321>杀10个蝎子或蝙蝠\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：300000\<color=graygolden 任务介绍:>\    <将军坟东/@@goplace H081 207,321>，是将军坟的一个影冢，里面的怪物相比来说\要弱小很多。但是你也不能大意。\    既然仅供的号角即将吹响，让我们先去试探试探敌人的\实力吧。\    还要干掉<$TASKVAL(23).I0>个蝎子或蝙蝠
+stepDESC4 = <color=graygolden 任务目的：>去<将军坟东/@@goplace H081 207,321>杀10个蝎子或蝙蝠\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：300000\<color=graygolden 任务介绍:>\    <将军坟东/@@goplace H081 207,321>，是将军坟的一个影冢，里面的怪物相比来说\要弱小很多。但是你也不能大意。\    既然仅供的号角即将吹响，让我们先去试探试探敌人的\实力吧。\    恭喜，圆满完成任务！快用向王城史官回报吧！

@@ -1,0 +1,8 @@
+[@main]
+#IF
+EQUAL $Task(11) 4
+#ACT
+UpdateTask 11 5
+give 结婚戒指 1
+SENDMSG 5 你获得了结婚戒指！
+break

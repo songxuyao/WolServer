@@ -1,0 +1,65 @@
+[@main]
+这差事真无聊，天天站在这里风吹雨淋，你找我有什么事？\\
+<想快速到达其他地区/@main1>    <挑战炼狱/@_LB_newlianyu>\
+<可接任务/@_RW_entry>\
+
+[@_RW_entry]
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+[@main1]
+这是国王为了对抗邪恶力量而特别开辟的骑兵驿道，能够\
+以最快的速度帮助你往返于各个地区 。不过为此你必须付\
+出一些代价做为使用费用。你确定要使用这条驿道吗？\\
+<热砂荒漠/@city>\
+<禁地地表/@field>\
+<关闭/@exit>
+
+[@city]
+要去热砂荒漠吗？\
+1000金币就可以了，没有的话就自己走着去吧。\\
+<付钱/@city1>\
+<没钱/@exit>
+
+[@city1]
+#IF
+CHECKBINDGOLD > 999
+#ACT
+BINDGOLD - 1000
+MAPMOVE 2 277 491
+break
+#IF
+CHECKGOLD 1000
+#ACT
+TAKE 金币 1000
+MAPMOVE 2 277 491
+break
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@field]
+送你去禁地的费用是2000金币。\
+那里的怪物相当厉害，你确定要去吗？\\
+<我要去/@field1> \
+<不去了/@exit>
+
+[@field1]
+#IF
+CHECKBINDGOLD > 1999
+#ACT
+BINDGOLD - 2000
+MAPMOVE 4 323 223
+break
+#IF
+CHECKGOLD 2000
+#ACT
+TAKE 金币 2000
+MAPMOVE 4 323 223
+break
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@_LB_newlianyu]
+#CALL [\商人\挑战炼狱.txt] @newlianyu

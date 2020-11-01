@@ -1,0 +1,8 @@
+(@SysComment)
+[@main]
+#IF
+EQUAL $NPCAPPR 172
+#SAY
+  本旗位虚位以待，请到商城购买黄榜大旗道具，在此发布你的信息。
+#ELSEACT
+SENDCOMMENT

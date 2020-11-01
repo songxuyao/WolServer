@@ -1,0 +1,68 @@
+[@main]
+#IF
+HOUR 20 20
+EQUAL I8 1
+#SAY
+  <color=ggreen 夺宝奇兵>活动中<color=ggreen 通天教主>将出现在此。进入后请小心戒备！\
+  开启通天教主的宝盒将会获得<color=green 蟠龙金甲、蟠龙金袍>随机一件。\
+  <color=purple 蟠龙级服饰为顶级装备，夺宝奇兵则是唯一出处！>\
+  <进入夺宝奇兵地图/@gotoyxslc>\
+  <合成蟠龙服饰披风/@clothes>\
+  <离开/@exit>\
+#ELSESAY
+  <color=ggreen 夺宝奇兵>活动中<color=ggreen 通天教主>将出现在此。进入后请小心戒备！\
+  开启通天教主的宝盒将会获得<color=green 蟠龙金甲、蟠龙金袍>随机一件。\
+  <color=purple 蟠龙级服饰为顶级装备，夺宝奇兵则是唯一出处！>\
+  每天的<color=green 20:00-21:00>才可以进入。\
+  <合成蟠龙服饰披风/@clothes>\
+  <离开/@exit>\
+
+[@clothes]
+  请选择你要合成的衣服类型：\\
+  <color=gray 蟠龙金甲披风 = 蟠龙金甲x3 + 蟠龙精魄x1 + 10000元宝>\
+  <color=gray 蟠龙金袍披风 = 蟠龙金袍x3 + 蟠龙精魄x1 + 10000元宝>\\
+  <color=ggreen 男战士：> <蟠龙金甲披风/@hcclothes&蟠龙金甲&蟠龙金甲披风1>     <color=ggreen 女战士：> <蟠龙金袍披风/@hcclothes&蟠龙金袍&蟠龙金甲披风1>\
+  <color=ggreen 男法师：> <蟠龙金甲披风/@hcclothes&蟠龙金甲&蟠龙金甲披风2>     <color=ggreen 女法师：> <蟠龙金袍披风/@hcclothes&蟠龙金袍&蟠龙金甲披风2>\
+  <color=ggreen 男道士：> <蟠龙金甲披风/@hcclothes&蟠龙金甲&蟠龙金甲披风3>     <color=ggreen 女道士：> <蟠龙金袍披风/@hcclothes&蟠龙金袍&蟠龙金甲披风3>\
+
+[@hcclothes]
+#IF
+CHECKITEM $SCRIPTPARAM(1) 3
+#ACT
+#ELSESAY
+  你身上的<$SCRIPTPARAM(1)>不足3件，无法兑换。\
+  <返回/@clothes>\
+#ELSEACT
+break
+#IF
+CHECKITEM 蟠龙精魄 1
+#ACT
+#ELSESAY
+  你身上的蟠龙精魄不足1个，无法兑换。\
+  <返回/@clothes>\
+#ELSEACT
+break
+#IF
+CHECKGAMEGOLD > 9999
+#SAY
+  你成功合成一件<color=green 蟠龙披风服饰>。\
+  <返回/@clothes>\
+#ACT
+TAKE $SCRIPTPARAM(1) 3
+TAKE 蟠龙精魄 1
+GAMEGOLD - 10000
+GIVE $SCRIPTPARAM(2) 1
+break
+#ELSESAY
+  你身上的元宝不足10000个，无法兑换。\
+  <返回/@clothes>\
+
+[@gotoyxslc]
+#IF
+CHECKLEVELEX > 35
+#ACT
+MAP DBDT
+break
+#ELSESAY
+  勇士，你的等级未达到36级，无法进入！\
+  <离开/@exit>\

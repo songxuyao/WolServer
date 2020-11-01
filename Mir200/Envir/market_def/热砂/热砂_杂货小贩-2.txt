@@ -1,0 +1,29 @@
+(@fastbuy @buy @sell)
+%100
++3
++25
+[@main]
+既然你来到这里，我也不用跟你客气了，\
+怎么来的你自己心里也清楚，我这里所有\
+东西都会比外面贵,你有意见吗？\
+<快捷交易/@fastbuy>\
+<购入物品/@buy>\
+<出售物品/@sell>\
+<绑定金币购买物品/@bindbuy>\
+<询问商品/@questionprize>\
+<关闭选单/@exit>
+
+[@fastbuy]
+#CALL [\商人\杂货.txt] @快捷交易
+
+[@buy]
+#CALL [\商人\杂货.txt] @购入物品
+
+[@sell]
+#CALL [\商人\杂货.txt] @出售物品
+
+[@bindbuy]
+#CALL [\商人\杂货.txt] @绑定购买
+
+[@questionprize]
+#CALL [\商人\杂货.txt] @询问商品

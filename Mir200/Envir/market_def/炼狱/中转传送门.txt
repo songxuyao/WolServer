@@ -1,0 +1,158 @@
+[@main]
+#IF
+CheckUserGap > 3
+#SAY
+<太远了，过不去…/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH008
+#SAY
+你要进入炼狱的更深层吗？\
+按照你职业的不同，所走的道路也不相同，\
+不过最终的终点是相同的。你准备好了吗？\\
+<我准备好了，前进/@next1>\
+<直接前往密林/@gomap&MH012&35&95>\
+<还没准备好，等等/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH012
+#SAY
+你要进入炼狱的更深层吗？\
+按照你职业的不同，所走的道路也不相同，\
+不过最终的终点是相同的。你准备好了吗？\\
+<我准备好了，前进/@next2>\
+<直接前往幽静空间/@gomap&MH019&140&131>\
+<先返回海滨平原/@gomap&MH008&125&61>\
+<还没准备好，等等/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH019
+#SAY
+你要进入炼狱的更深层吗？\
+按照你职业的不同，所走的道路也不相同，\
+不过最终的终点是相同的。你准备好了吗？\\
+<我准备好了，前进/@next3>\
+<直接前往投石谷/@gomap&MH026&166&90>\
+<先返回密林/@gomap&MH012&35&95>\
+<还没准备好，等等/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH026
+#SAY
+你要进入炼狱的更深层吗？\
+按照你职业的不同，所走的道路也不相同，\
+不过最终的终点是相同的。你准备好了吗？\\
+<我准备好了，前进/@next4>\
+<直接前往红池/@gomap&MH036&65&50>\
+<先返回幽静空间/@gomap&MH019&140&131>\
+<还没准备好，等等/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH036
+#SAY
+你要进入炼狱的更深层吗？\
+按照你职业的不同，所走的道路也不相同，\
+不过最终的终点是相同的。你准备好了吗？\\
+<我准备好了，前进/@next5>\
+<先返回投石谷/@gomap&MH026&166&90>\
+<还没准备好，等等/@exit>
+#ACT
+break
+
+[@next5]
+#IF
+checkjob warrior
+#ACT
+MAPMOVE MH037
+break
+#IF
+checkjob wizard
+#ACT
+MAPMOVE MH038
+break
+#IF
+checkjob taoist
+#ACT
+MAPMOVE MH039
+break
+
+[@next4]
+#IF
+checkjob warrior
+#ACT
+MAPMOVE MH027 210 125
+break
+#IF
+checkjob wizard
+#ACT
+MAPMOVE MH028 147 41
+break
+#IF
+checkjob taoist
+#ACT
+MAPMOVE MH029 209 153
+break
+
+[@next3]
+#IF
+checkjob warrior
+#ACT
+MAPMOVE MH020 33 33
+break
+#IF
+checkjob wizard
+#ACT
+MAPMOVE MH021 151 131
+break
+#IF
+checkjob taoist
+#ACT
+MAPMOVE MH022 171 146
+break
+
+[@next2]
+#IF
+checkjob warrior
+#ACT
+MAPMOVE MH013 66 71
+break
+#IF
+checkjob wizard
+#ACT
+MAPMOVE MH014 90 87
+break
+#IF
+checkjob taoist
+#ACT
+MAPMOVE MH015 89 36
+break
+
+[@next1]
+#IF
+checkjob warrior
+#ACT
+MAPMOVE MH009
+break
+#IF
+checkjob wizard
+#ACT
+MAPMOVE MH010
+break
+#IF
+checkjob taoist
+#ACT
+MAPMOVE MH011
+break
+
+[@gomap]
+#IF
+RANDOM 1
+#ACT
+MAPMOVE $SCRIPTPARAM(1) $SCRIPTPARAM(2) $SCRIPTPARAM(3)
+close
+break

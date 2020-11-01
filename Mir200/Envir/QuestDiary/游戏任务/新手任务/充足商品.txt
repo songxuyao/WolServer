@@ -1,0 +1,63 @@
+[@中州_杂货]
+{
+
+#IF
+EQUAL $Task(22) 1
+#SAY
+可以完成的任务：\
+<新手任务--聪明的杂货店掌柜/@_RW_fulzhskilTaskDesp>\\
+<离开/@exit>
+#ACT
+break
+#ELSESAY
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+[@_RW_fulzhskilTaskDesp]
+    这些商品是送个你试用的，如果真的对你的历练有帮助\
+的话，下次带上足够的钱过来买吧！\
+    当然，商城里有些更高级的替代品，你空洞时候也可以\
+随便逛逛。\
+    <谢谢/@_RW_fulzhfilTask305>                <离开/@exit>
+
+[@_RW_fulzhfilTask305]
+#IF
+EQUAL $Task(22) 1
+#SAY
+    穿齐了装备，是不是觉得战斗力增加了很多？\
+    1个勇士的强大程度，与他的等级、装备、技能、人脉\
+等息息相关。好了，准备好接受全新的挑战了吗？\
+    你现在去找王城史官聊聊，他正在寻找个可以帮助他的\
+年轻人。\
+    <离开/@exit>\
+#ACT
+#ELSESAY
+您当前没有可以接的任务。\\
+<离开/@exit>
+#ELSEACT
+break
+#IF
+checkjob taoist
+#ACT
+EndTask 22
+BINDGOLD + 5000
+CHANGEEXP + 50000
+GIVE 道符（大） 2
+GIVE 地牢逃脱卷包 1
+GIVE 随机传送卷包 1
+AddTask 23
+SENDMSG 5 你成功增加了5000绑定金币。
+break
+#IF
+CHECKLEVELEX > 0
+#ACT
+EndTask 22
+BINDGOLD + 5000
+CHANGEEXP + 50000
+GIVE 地牢逃脱卷包 1
+GIVE 随机传送卷包 1
+AddTask 23
+SENDMSG 5 你成功增加了5000绑定金币。
+break
+
+}

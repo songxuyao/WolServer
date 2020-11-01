@@ -1,0 +1,23 @@
+[@main]
+大门将为奉还令牌者敞开.\
+<进入魔殿/@gomd>
+
+[@gomd]
+#IF
+CHECKGUILDLIST ..\QuestDiary\数据文件\临时数据\铁血魔城行会.txt
+#ACT
+#ELSESAY
+你没有权利进入，只有成功攻打铁血魔城的行会才能进入。\\
+<离开/@exit>
+#ELSEACT
+break
+#IF
+HOUR 19 21
+#SAY
+每天晚上19点到21点无法进入魔殿。\\
+<离开/@exit>
+#ACT
+break
+#ELSEACT
+mapmove MC009 26 115
+break

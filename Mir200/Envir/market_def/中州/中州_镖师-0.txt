@@ -1,0 +1,762 @@
+[@main]
+#IF
+CheckUserGap < 9
+#ACT
+#ELSEACT
+break
+#IF
+EQUAL $Task(45) 1
+#SAY
+    海角村附近最近时常有魔族出现，侵扰村民。圣王决定\
+集结神武军清剿周围的魔族。大军未动，粮草先行！第一步\
+便是需要勇士们<color=orange 护送物资>前往海角村。\\
+    <可接任务/@_RW_entry>\
+    <开启护镖/@StartEscort2014>                 <运镖排行榜/@showRankMain>\
+    <领取奖励/@showEscortInfo>\
+;    <节日镖车乐享不停！/@showChrisMain>\
+#ELSESAY
+    海角村附近最近时常有魔族出现，侵扰村民。圣王决定\
+集结神武军清剿周围的魔族。大军未动，粮草先行！第一步\
+便是需要勇士们<color=orange 护送物资>前往海角村。\\
+    <开启护镖/@StartEscort2014>                 <运镖排行榜/@showRankMain>\
+    <领取奖励/@showEscortInfo>\
+;    <节日镖车乐享不停！/@showChrisMain>\
+
+
+[@showChrisMain]
+  喜迎佳节，节日镖车乐享不停！活动期间，圣诞老人将以迅\
+雷不及掩耳盗铃儿响叮当之势接连发出节日特别镖车，勇士们\
+去找他要礼物吧；节日镖车不仅产出经验物资，还有大量圣诞\
+活动道具，勇士切勿错过哦！\
+<color=red   注：每日0：00-23：00 系统在整点都会发出一辆节日镖车！>\
+<color=red   勇士速速前来吧！>\\
+  <勇士专属圣诞镖车/@showChrisEscortMenu>           <领取专属镖车奖励/@showChrisAwardMenu&0>\
+
+[@showChrisEscortMenu]
+  勇士个人可冠名节日镖车作为自己专属镖车发出，得到更为\
+丰厚的奖励！\
+  预约成功后，系统节日镖车将以勇士个人名义发出，系统发出\
+勇士专属镖车公告，同时略微提高专属镖车的奖励产出。
+\\\  <预约发出自己的专属镖车/@showYuYueAward>\
+
+[@showYuYueAward]
+  如果你的专属镖车到达终点后，根据镖车剩余血量，还可以获\
+得<color=red 每1%的血量*1个册封封号令牌>的奖励！
+\\\  <查看当前空余可预约的镖车/@showYuYueStatus&0>\
+
+[@showYuYueStatus]
+#IF
+EQUAL $SCRIPTPARAM(1) 0
+#SAY
+  <color=orange 可预约镖车时间：0：00-23：00 。>\
+ <color=ggreen  0：00 >专属镖车状态：<color=gray 节日镖车已发车>\
+ <color=ggreen  1：00 >专属镖车状态：<color=ggreen 统一Ξ绿茶的节日镖车>已发车\
+ <color=ggreen  2：00 >专属镖车状态：<color=gray 节日镖车已发车>\
+ <color=ggreen  3：00 >专属镖车状态：<color=gray 节日镖车已发车>\
+ <color=ggreen  4：00 >专属镖车状态：<color=gray 节日镖车已发车>\
+ <color=ggreen  5：00 >专属镖车状态：<color=gray 节日镖车已发车>\\
+  <color=gray 上一页>   <下一页/@showYuYueStatus&1>
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 1
+#SAY
+  <color=orange 可预约镖车时间：0：00-23：00 。>\
+ <color=ggreen  6：00 >专属镖车状态：<color=gray 节日镖车已发车>\
+ <color=ggreen  7：00 >专属镖车状态：<color=gray 节日镖车已发车>\
+ <color=ggreen  8：00 >专属镖车状态：<color=ggreen 紫月亮的节日镖车>已发车\
+ <color=ggreen  9：00 >专属镖车状态：<color=ggreen 暴力男的节日镖车>已发车\
+ <color=ggreen 10：00 >专属镖车状态：<color=ggreen 慢慢砍的节日镖车>已发车\
+ <color=ggreen 11：00 >专属镖车状态：<color=gray 节日镖车已发车>\\
+  <上一页/@showYuYueStatus&0>   <下一页/@showYuYueStatus&2>
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 2
+#SAY
+  <color=orange 可预约镖车时间：0：00-23：00 。>\
+ <color=ggreen 12：00 >专属镖车状态：<color=ggreen 一刀一个小朋友的节日镖车>已发车\
+ <color=ggreen 13：00 >专属镖车状态：<color=gray 节日镖车已发车>\
+ <color=ggreen 14：00 >专属镖车状态：<color=gray 节日镖车已发车>\
+ <color=ggreen 15：00 >专属镖车状态：<color=gray 节日镖车已发车>\
+ <color=ggreen 16：00 >专属镖车状态：<color=gray 节日镖车已发车>\
+ <color=ggreen 17：00 >专属镖车状态：<color=gray 节日镖车已发车>\\
+  <上一页/@showYuYueStatus&1>   <下一页/@showYuYueStatus&3>
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 3
+#SAY
+  <color=orange 可预约镖车时间：0：00-23：00 。>\
+ <color=ggreen 18：00 >专属镖车状态：<color=gray 节日镖车已发车>\
+ <color=ggreen 19：00 >专属镖车状态：<color=gray 节日镖车已发车>\
+ <color=ggreen 20：00 >专属镖车状态：<color=gray 节日镖车已发车>\
+ <color=ggreen 21：00 >专属镖车状态：<color=gray 节日镖车已发车>\
+ <color=ggreen 22：00 >专属镖车状态：<color=gray 节日镖车已发车>\
+ <color=ggreen 23：00 >专属镖车状态：<可预约/@dianYuYue&23>\\
+  <上一页/@showYuYueStatus&2>   <color=gray 下一页>
+
+[@dianYuYue]
+  如果你的专属镖车到达终点后，根据镖车剩余血量，还可以\
+获得<color=red 每1%的血量*1个册封封号令牌>的奖励！\\
+<color=orange 您选择了预约23:00点的专属镖车:>\
+  <确认（消耗200绑定元宝）/@KouYuanBaoYuYue&23&2>
+
+[@KouYuanBaoYuYue]
+\  绑定元宝不足200个!  <返回/@main>
+
+
+[@showChrisAwardMenu]
+#IF
+EQUAL $SCRIPTPARAM(1) 0
+#SAY
+  <color=orange 镖车时间：0：00-23：00 。>\
+ <color=ggreen  0：00 >专属镖车状态：<color=gray  无奖可领>\
+ <color=ggreen  1：00 >专属镖车状态：<color=gray  无奖可领>\
+ <color=ggreen  2：00 >专属镖车状态：<color=gray  无奖可领>\
+ <color=ggreen  3：00 >专属镖车状态：<color=gray  无奖可领>\
+ <color=ggreen  4：00 >专属镖车状态：<color=gray  无奖可领>\
+ <color=ggreen  5：00 >专属镖车状态：<color=gray  无奖可领>\\
+  <color=gray 上一页>   <下一页/@showChrisAwardMenu&1>
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 1
+#SAY
+  <color=orange 镖车时间：0：00-23：00 。>\
+ <color=ggreen  6：00 >专属镖车状态：<color=gray  无奖可领>\
+ <color=ggreen  7：00 >专属镖车状态：<color=gray  无奖可领>\
+ <color=ggreen  8：00 >专属镖车状态：<color=gray  无奖可领>\
+ <color=ggreen  9：00 >专属镖车状态：<color=gray  无奖可领>\
+ <color=ggreen 10：00 >专属镖车状态：<color=gray  无奖可领>\
+ <color=ggreen 11：00 >专属镖车状态：<color=gray  无奖可领>\\
+  <上一页/@showChrisAwardMenu&0>   <下一页/@showChrisAwardMenu&2>
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 2
+#SAY
+  <color=orange 镖车时间：0：00-23：00 。>\
+ <color=ggreen 12：00 >专属镖车状态：<color=gray  无奖可领>\
+ <color=ggreen 13：00 >专属镖车状态：<color=gray  无奖可领>\
+ <color=ggreen 14：00 >专属镖车状态：<color=gray  无奖可领>\
+ <color=ggreen 15：00 >专属镖车状态：<color=gray  无奖可领>\
+ <color=ggreen 16：00 >专属镖车状态：<color=gray  无奖可领>\
+ <color=ggreen 17：00 >专属镖车状态：<color=gray  无奖可领>\\
+  <上一页/@showChrisAwardMenu&1>   <下一页/@showChrisAwardMenu&3>
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 3
+#SAY
+  <color=orange 镖车时间：0：00-23：00 。>\
+ <color=ggreen 18：00 >专属镖车状态：<color=gray  无奖可领>\
+ <color=ggreen 19：00 >专属镖车状态：<color=gray  无奖可领>\
+ <color=ggreen 20：00 >专属镖车状态：<color=gray  无奖可领>\
+ <color=ggreen 21：00 >专属镖车状态：<color=gray  无奖可领>\
+ <color=ggreen 22：00 >专属镖车状态：<color=gray  无奖可领>\
+ <color=ggreen 23：00 >专属镖车状态：<color=gray  无奖可领>\\
+  <上一页/@showChrisAwardMenu&2>   <color=gray 下一页>
+#ACT
+break
+
+[@showRankMain]
+\\\
+    <行会押镖排行榜(昨日)/@showLastWeekRankGuild>     <至尊押镖排行榜(上周)/@showLastWeekRank>\
+    <行会押镖排行榜(今日)/@showThisWeekRankGuild>     <至尊押镖排行榜(本周)/@showThisWeekRank>\
+
+[@showThisWeekRankGuild]
+#IF
+HAVEGUILD
+#ACT
+MOV S10 |
+INC S10 $GUILDNAME
+INC S10 |
+MOV P10 0
+#IF
+HAVEGUILD
+PosInList $STR(S10) ..\QuestDiary\数据文件\临时数据\行会今日运镖.txt S13
+#ACT
+GETVALIDSTR $STR(S13) | S14 P10
+#IF
+HAVEGUILD
+#ACT
+MOV S15 您当前行会积分为:
+INC S15 $STR(P10)
+#ELSEACT
+MOV S15 您还没有加入行会
+#IF
+EQUAL $SCRIPTPARAM(1)
+#ACT
+MOV P11 0
+MOV P12 1
+MOV P13 4
+MOV P14 1
+MOV S20 
+GOTO @LookThisWeekRank
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 1
+#ACT
+MOV P11 0
+MOV P12 1
+MOV P13 4
+MOV P14 1
+MOV S20 
+GOTO @LookThisWeekRank
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 2
+#ACT
+MOV P11 5
+MOV P12 6
+MOV P13 9
+MOV P14 2
+MOV S20 
+GOTO @LookThisWeekRank
+break
+
+[@LookThisWeekRank]
+#IF
+LARGE P11 $STR(P13)
+EQUAL P14 2
+#SAY
+{color=orange <$STR(S15)>} <返回/@main> <上一页/@showThisWeekRankGuild&1> <color=gray 下一页> \
+                <color=green 今日行会押镖排行榜>\<color=green 排名 行会名               当前积分>\
+<$STR(S20)>
+<离开/@exit>
+#ACT
+break
+#IF
+LARGE P11 $STR(P13)
+EQUAL P14 1
+#SAY
+{color=orange <$STR(S15)>} <返回/@main> <color=gray 上一页> <下一页/@showThisWeekRankGuild&2> \
+                <color=green 今日行会押镖排行榜>\<color=green 排名 行会名               当前积分>\
+<$STR(S20)>
+<离开/@exit>
+#ACT
+break
+#IF
+RANDOM 1
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\临时数据\行会今日运镖.txt S16 $STR(P11) 0 2 |
+#IF
+!EQUAL S16 
+#ACT
+GETVALIDSTR $STR(S16) | S17 P18
+FORMATSTR S19 "%4s %-14s%15s" <$STR(P12)>|<$STR(S17)>|<$STR(P18)>
+INC S20 $STR(S19)
+INC S20 \
+#ELSEACT
+INC S20 \
+#IF
+RANDOM 1
+#ACT
+INC P11 1
+INC P12 1
+GOTO @LookThisWeekRank
+break
+
+[@showLastWeekRankGuild]
+#IF
+RANDOM 1
+#ACT
+MOV P10 0
+MOV P11 1
+MOV S20 
+GOTO @LookWeekRankGuild
+break
+
+[@LookWeekRankGuild]
+#IF
+LARGE P10 5
+#SAY
+                <color=green 昨日行会押镖排行榜>\<color=green 排名 行会名                   积分>\
+<$STR(S20)>
+<离开/@exit>
+#ACT
+break
+#IF
+RANDOM 1
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\临时数据\行会昨日运镖.txt S16 $STR(P10) 0 2 |
+#IF
+!EQUAL S16 
+#ACT
+GETVALIDSTR $STR(S16) | S17 P18
+FORMATSTR S19 "%4s %-14s%15s" <$STR(P11)>|<$STR(S17)>|<$STR(P18)>
+INC S20 $STR(S19)
+INC S20 \
+#ELSEACT
+INC S20 \
+#IF
+RANDOM 1
+#ACT
+INC P10 1
+INC P11 1
+GOTO @LookWeekRankGuild
+break
+
+[@showEscortInfo]
+#IF
+EQUAL $SCRIPTPARAM(1) 常规运镖
+#ACT
+FormatStr S10 |%s|%s| <$USERNAME>|<$SCRIPTPARAM(1)>
+GOTO @showEscortInfoItem
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 金币护镖
+#ACT
+FormatStr S10 |%s|%s| <$USERNAME>|<$SCRIPTPARAM(1)>
+GOTO @showEscortInfoItem
+break
+#ELSESAY
+<colo=ggreen 选择类型:>\
+    <领取经验运镖奖励/@showEscortInfo&常规运镖>\
+    每天可以免费完成1次，累计完成次数越多，奖励越丰厚\\
+    <领取金币护镖奖励/@showEscortInfo&金币护镖>\
+    护送成功最高可以获得双倍的金币奖励\\
+
+[@showEscortInfoItem]
+#IF
+PosInList $STR(S10) ..\QuestDiary\数据文件\临时数据\运镖领奖名单.txt S13
+#ACT
+SPLIT $STR(S13) | S14
+#ELSESAY
+<colo=ggreen 点击领取奖励:>\
+     <colo=ggray 领取>\
+#ELSEACT
+break
+#IF
+EQUAL S15 常规运镖
+#SAY
+<colo=ggreen 点击领取奖励:>\
+    <$STR(S16)>万经验 <领取/@AcceptCompletePrize&常规运镖>
+#ACT
+break
+#IF
+EQUAL S15 金币护镖
+#SAY
+<colo=ggreen 点击领取奖励:>\
+    <$STR(S16)>金币 <领取/@AcceptCompletePrize&金币护镖>
+#ACT
+break
+
+[@AcceptCompletePrize]
+#IF
+RANDOM 1
+#ACT
+FormatStr S10 |%s|%s| <$USERNAME>|<$SCRIPTPARAM(1)>
+#IF
+PosInList $STR(S10) ..\QuestDiary\数据文件\临时数据\运镖领奖名单.txt S13
+EQUAL $SCRIPTPARAM(1) 常规运镖
+#SAY
+领奖完成!! <返回/@main>
+#ACT
+SPLIT $STR(S13) | S14
+MOV P11 $STR(S16)
+MULT P11 10000
+CHANGEEXP + $STR(P11)
+DELVARLIST $STR(S13) ..\QuestDiary\数据文件\临时数据\运镖领奖名单.txt
+break
+#IF
+PosInList $STR(S10) ..\QuestDiary\数据文件\临时数据\运镖领奖名单.txt S13
+EQUAL $SCRIPTPARAM(1) 金币护镖
+#SAY
+领奖完成!! <返回/@main>
+#ACT
+SPLIT $STR(S13) | S14
+MOV P11 $STR(S16)
+GIVE 金币 $STR(P11)
+DELVARLIST $STR(S13) ..\QuestDiary\数据文件\临时数据\运镖领奖名单.txt
+break
+#ELSESAY
+    对不起，系统正忙，请稍后再试！\\
+    <离开/@exit>
+#ELSEACT
+break
+
+[@金币护镖]
+<10万金币运镖一次/@KouJinBI&金币护镖&0> \
+每天区服限制<color=green 200>次\\
+<100万金币运镖一次/@KouJinBI&金币护镖&1> \
+每天区服限制<color=green 20>次\\
+<1000万金币运镖一次/@KouJinBI&金币护镖&2> \
+每天区服限制<color=green 5>次\\
+
+[@KouJinBI]
+#IF
+HOUR 1 22
+#ACT
+FormatStr S10 |%s| <$USERNAME>
+#ELSESAY
+当前时间不能押镖!<返回/@main>
+#ELSEACT
+break
+#IF
+PosInList $STR(S10) ..\QuestDiary\数据文件\临时数据\运镖领奖名单.txt
+#SAY
+请先取上次领奖!<返回/@main>
+#ACT
+break
+#IF
+PosInList $STR(S10) ..\QuestDiary\数据文件\临时数据\运镖列队名单.txt S13 P11
+#SAY
+  您的前面还有<$STR(P11)>辆镖车等待押运,系统每10秒开启一趟镖车!\
+请勇士时刻准备着! <返回/@main>
+#ACT
+break
+#IF
+PosInList $STR(S10) ..\QuestDiary\数据文件\临时数据\运镖进行名单.txt
+#SAY
+当前您有一镖车还未押送完毕!<返回/@main>
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(2) 0
+SMALL G5 1
+#SAY
+10万金币运镖的次数为0!<返回/@main>
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(2) 1
+SMALL G6 1
+#SAY
+100万金币运镖的次数为0!<返回/@main>
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(2) 2
+SMALL G7 1
+#SAY
+100万金币运镖的次数为0!<返回/@main>
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(2) 0
+#ACT
+MOV P12 100000
+MOV P13 100000
+MULT P13 2
+MOV P14 1
+MOV P15 10
+#IF
+EQUAL $SCRIPTPARAM(2) 1
+#ACT
+MOV P12 1000000
+MOV P13 1000000
+MULT P13 2
+MOV P14 2
+MOV P15 100
+#IF
+EQUAL $SCRIPTPARAM(2) 2
+#ACT
+MOV P12 10000000
+MOV P13 10000000
+MULT P13 2
+MOV P14 3
+MOV P15 1000
+#IF
+CheckGold $STR(P12)
+#SAY
+  您的前面还有<$TXTLINE(..\QuestDiary\数据文件\临时数据\运镖列队名单.txt)>辆镖车等待押运,系统每10秒开启一趟镖车!\
+请勇士时刻准备着! <返回/@main>
+#ACT
+take 金币 $STR(P12)
+FormatStr S12 金币护镖|%s的金币护镖(%s级)(%s万)|%s|%s|金币镖车%s|%s|%s <$USERNAME>|<$LEVEL>|<$STR(P15)>|<$USERNAME>|<$STR(P13)>|<$STR(P14)>|无|2000
+ADDVARLIST $STR(S12) ..\QuestDiary\数据文件\临时数据\运镖列队名单.txt
+#ELSESAY
+金币不足<$STR(P12)>!, 当前金币<$GOLDCOUNT>! <返回/@main>
+#ELSEACT
+break
+#IF
+EQUAL $SCRIPTPARAM(2) 0
+#ACT
+DEC G5 1
+break
+#IF
+EQUAL $SCRIPTPARAM(2) 0
+#ACT
+DEC G6 1
+break
+#IF
+EQUAL $SCRIPTPARAM(2) 0
+#ACT
+DEC G7 1
+break
+
+[@StartEscort2014]
+#IF
+EQUAL $SCRIPTPARAM(1) 常规运镖
+#ACT
+GOTO @常规运镖
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 金币护镖
+#ACT
+GOTO @金币护镖
+break
+#IF
+!EQUAL $Table(SG_Pritime).Tim09 $DATE
+#ACT
+TABLE SG_PRIVITE Hum09 = 0
+Table SG_Pritime Tim09 = $DATE
+#IF
+CHECKLEVELEX > 41
+#SAY
+    <color=red 至尊镖车[功能调整，暂时关闭]> \
+    作为补偿，系统会定时发送至尊镖车，请留意游戏内公告。\\
+    <常规运镖/@StartEscort2014&常规运镖> <color=green [01:00-23:00]>\
+    每天可以免费完成1次，累计完成次数越多，奖励越丰厚\\
+    <金币护镖/@StartEscort2014&金币护镖> <color=green [01:00-23:00]>\
+    护送成功最高可以获得双倍的金币奖励\\
+#ACT
+break
+#ELSESAY
+护镖系统将在42级后开放
+#ELSEACT
+break
+
+[@常规运镖]
+#IF
+HOUR 1 22
+#ACT
+FormatStr S10 |%s| <$USERNAME>
+#ELSESAY
+当前时间不能押镖!<返回/@main>
+#ELSEACT
+break
+#IF
+PosInList $STR(S10) ..\QuestDiary\数据文件\临时数据\运镖领奖名单.txt
+#SAY
+请先取上次领奖!<返回/@main>
+#ACT
+break
+#IF
+PosInList $STR(S10) ..\QuestDiary\数据文件\临时数据\运镖列队名单.txt S13 P11
+#SAY
+  您的前面还有<$STR(P11)>辆镖车等待押运,系统每10秒开启一趟镖车!\
+请勇士时刻准备着! <返回/@main>
+#ACT
+break
+#IF
+PosInList $STR(S10) ..\QuestDiary\数据文件\临时数据\运镖进行名单.txt
+#SAY
+当前您有一镖车还未押送完毕!<返回/@main>
+#ACT
+break
+#IF
+LARGE $TABLE(SG_PRIVITE).Hum09 4
+#SAY
+你今天护送的次数为0!<返回/@main>
+#ACT
+break
+#IF
+EQUAL $TABLE(SG_PRIVITE).Hum09 0
+#SAY
+{color=green 您今天已经参与了经验运镖<$TABLE(SG_PRIVITE).Hum09>次。每天可以参加5次经验运镖 }\\
+<免费运镖第一次/@FreeYunBiao&150>\\
+100%完成时奖励: 150万经验\
+<color=orange 神将运镖:> <花费5绑定元宝秒完成/@KouYuanBaoSjyb&5>\
+可直接完成本次运镖!\
+#ACT
+MOV D7 500
+MOV D8 150
+break
+#IF
+EQUAL $TABLE(SG_PRIVITE).Hum09 1
+#SAY
+{color=green 您今天已经参与了经验运镖<$TABLE(SG_PRIVITE).Hum09>次。每天可以参加5次经验运镖 }\\
+<花费5绑定元宝运镖一次/@KouYuanBao&5&600>\
+100%完成时奖励: 600万经验\
+<color=orange 神将运镖:> <花费10绑定元宝秒完成/@KouYuanBaoSjyb&10>\
+可直接完成本次运镖!\
+#ACT
+MOV D7 2000
+MOV D8 600
+break
+#IF
+EQUAL $TABLE(SG_PRIVITE).Hum09 2
+#SAY
+{color=green 您今天已经参与了经验运镖<$TABLE(SG_PRIVITE).Hum09>次。每天可以参加5次经验运镖 }\\
+<花费10绑定元宝运镖一次/@KouYuanBao&10&750>\
+100%完成时奖励: 750万经验\
+<color=orange 神将运镖:> <花费20绑定元宝秒完成/@KouYuanBaoSjyb&20>\
+可直接完成本次运镖!\
+#ACT
+MOV D7 2500
+MOV D8 750
+break
+#IF
+EQUAL $TABLE(SG_PRIVITE).Hum09 3
+#SAY
+{color=green 您今天已经参与了经验运镖<$TABLE(SG_PRIVITE).Hum09>次。每天可以参加5次经验运镖 }\\
+<花费15绑定元宝运镖一次/@KouYuanBao&15&850>\
+100%完成时奖励: 850万经验\
+<color=orange 神将运镖:> <花费30绑定元宝秒完成/@KouYuanBaoSjyb&30>\
+可直接完成本次运镖!\
+#ACT
+MOV D7 2750
+MOV D8 850
+break
+#IF
+EQUAL $TABLE(SG_PRIVITE).Hum09 4
+#SAY
+{color=green 您今天已经参与了经验运镖<$TABLE(SG_PRIVITE).Hum09>次。每天可以参加5次经验运镖 }\\
+<花费20绑定元宝运镖一次/@KouYuanBao&20&1050>\
+100%完成时奖励: 1050万经验\
+<color=orange 神将运镖:> <花费40绑定元宝秒完成/@KouYuanBaoSjyb&40>\
+可直接完成本次运镖!\
+#ACT
+MOV D7 3500
+MOV D8 1050
+break
+
+[@KouYuanBaoSjyb]
+#IF
+CHECKBINDGAMEGOLD < $SCRIPTPARAM(1)
+#SAY
+绑定元宝不足<$SCRIPTPARAM(1)>
+#ACT
+break
+#IF
+HAVEGUILD
+#ACT
+SENDMSG 5 行会<$GUILDNAME>
+#ELSEACT
+SENDMSG 5 行会
+#IF
+RANDOM 1
+#SAY
+   <color=green 神将运镖成功！立即去领取奖励吧！勇士!>\\\\\\\\
+   <领取奖励/@showEscortInfo&常规运镖>    <返回/@main>\
+#ACT
+MOV S10 |
+INC S10 $USERNAME
+INC S10 |常规运镖|
+INC S10 $STR(D8)
+BINDGAMEGOLD - $SCRIPTPARAM(1)
+TABLE SG_PRIVITE Hum09 + 1
+ADDVARLIST $STR(S10) ..\QuestDiary\数据文件\临时数据\运镖领奖名单.txt
+SENDMSG 5 今日第<$TABLE(SG_PRIVITE).Hum09>次完成[常规运镖]!
+#IF
+HAVEGUILD
+#ACT
+MOV S19 |
+INC S19 $GUILDNAME
+INC S19 |
+MOV P12 $STR(D7)
+#ELSEACT
+break
+#IF
+PosInList $STR(S19) ..\QuestDiary\数据文件\临时数据\行会今日运镖.txt S20
+#ACT
+DELVARLIST $STR(S20) ..\QuestDiary\数据文件\临时数据\运镖进行名单.txt
+GETVALIDSTR $STR(S20) | S21 P13
+INC P12 $STR(P13)
+INC S19 $STR(P12)
+ADDVARLIST $STR(S19) ..\QuestDiary\数据文件\临时数据\行会今日运镖.txt
+break
+#ELSEACT
+INC S19 $STR(P12)
+ADDVARLIST $STR(S19) ..\QuestDiary\数据文件\临时数据\行会今日运镖.txt
+break
+
+[@KouYuanBao]
+#IF
+CHECKBINDGAMEGOLD < $SCRIPTPARAM(1)
+#SAY
+你绑定元宝不足，不能押镖!<返回/@main>
+#ACT
+break
+#IF
+HOUR 1 22
+#ACT
+MOV S11 无
+MOV P10 $TXTLINE(..\QuestDiary\数据文件\临时数据\运镖列队名单.txt)
+#ELSESAY
+当前时间不能押镖!<返回/@main>
+#ELSEACT
+break
+#IF
+HAVEGUILD
+#SAY
+  镖车物资：<$STR(D7)>\
+  您的前面还有<$STR(P10)>辆镖车等待押运,系统每10秒开启一趟镖车!\
+请勇士时刻准备着! <返回/@main>
+#ACT
+BINDGAMEGOLD - $SCRIPTPARAM(1)
+FormatStr S12 常规运镖|%s的经验镖车(%s级)(%s)|%s|%s|经验镖车%s|%s|%s <$USERNAME>|<$LEVEL>|<$GUILDNAME>|<$USERNAME>|<$SCRIPTPARAM(1)>|<$TABLE(SG_PRIVITE).Hum09>|<$GUILDNAME>|<$STR(D7)>
+ADDVARLIST $STR(S12) ..\QuestDiary\数据文件\临时数据\运镖列队名单.txt
+SENDMSG 5 减少绑定元宝<$SCRIPTPARAM(1)>
+break
+#ELSESAY
+  镖车物资：<$STR(D7)>\
+  您的前面还有<$STR(P10)>辆镖车等待押运,系统每10秒开启一趟镖车!\
+请勇士时刻准备着! <返回/@main>
+#ELSEACT
+BINDGAMEGOLD - $SCRIPTPARAM(1)
+FormatStr S12 常规运镖|%s的经验镖车(%s级)|%s|%s|经验镖车%s|%s|%s <$USERNAME>|<$LEVEL>|<$USERNAME>|<$SCRIPTPARAM(1)>|<$TABLE(SG_PRIVITE).Hum09>|<$STR(S11)>|<$STR(D7)>
+ADDVARLIST $STR(S12) ..\QuestDiary\数据文件\临时数据\运镖列队名单.txt
+SENDMSG 5 减少绑定元宝<$SCRIPTPARAM(1)>
+break
+
+[@FreeYunBiao]
+#IF
+HOUR 1 22
+#ACT
+MOV S11 无
+MOV P10 $TXTLINE(..\QuestDiary\数据文件\临时数据\运镖列队名单.txt)
+TABLE SG_PRIVITE Hum09 + 1
+#ELSESAY
+当前时间不能押镖!<返回/@main>
+#ELSEACT
+break
+#IF
+HAVEGUILD
+#SAY
+  镖车物资：<$STR(D7)>\
+  您的前面还有<$STR(P10)>辆镖车等待押运,系统每10秒开启一趟镖车!\
+请勇士时刻准备着! <返回/@main>
+#ACT
+FormatStr S12 常规运镖|%s的经验镖车(%s级)(%s)|%s|%s|经验镖车%s|%s|%s <$USERNAME>|<$LEVEL>|<$GUILDNAME>|<$USERNAME>|<$SCRIPTPARAM(1)>|<$TABLE(SG_PRIVITE).Hum09>|<$GUILDNAME>|<$STR(D7)>
+ADDVARLIST $STR(S12) ..\QuestDiary\数据文件\临时数据\运镖列队名单.txt
+break
+#ELSESAY
+  镖车物资：<$STR(D7)>\
+  您的前面还有<$STR(P10)>辆镖车等待押运,系统每10秒开启一趟镖车!\
+请勇士时刻准备着! <返回/@main>
+#ELSEACT
+FormatStr S12 常规运镖|%s的经验镖车(%s级)|%s|%s|经验镖车%s|%s|%s <$USERNAME>|<$LEVEL>|<$USERNAME>|<$SCRIPTPARAM(1)>|<$TABLE(SG_PRIVITE).Hum09>|<$STR(S11)>|<$STR(D7)>
+ADDVARLIST $STR(S12) ..\QuestDiary\数据文件\临时数据\运镖列队名单.txt
+break
+
+[@_RW_entry]
+#IF
+EQUAL $Task(45) 1
+#SAY
+可以完成的任务：\
+<了解押镖任务/@_RW_fullyTaskDesp>\
+#ELSESAY
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+[@_RW_fullyTaskDesp]
+    玩家每天可以免费完成1次，最高可完成5次运镖任务。\
+累计完成次数越多，奖励越丰厚！\
+    <已了解运镖任务/@_RW_fulfilTask2510>                <以后再看/@exit>
+
+[@_RW_fulfilTask2510]
+#IF
+EQUAL $Task(45) 1
+#SAY
+    希望运镖任务能够帮助到你，祝你游戏愉快！\
+    <离开/@exit>
+#ACT
+EndTask 45
+BINDGOLD + 7500
+CHANGEEXP + 100000
+SENDMSG 5 你成功增加了7500绑定金币。
+break

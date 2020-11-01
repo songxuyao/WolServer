@@ -1,0 +1,14 @@
+[@main]
+                    中州广场\
+    你要去哪里？\\
+    <返回中州/@gotozz>\
+    <前往皇宫/@gotohg>\
+    <离开/@exit>\
+
+[@gotozz]
+#ACT
+MAPMOVE 0 470 220
+
+[@gotohg]
+#ACT
+MAPMOVE SH000 17 48

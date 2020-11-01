@@ -1,0 +1,33 @@
+[@main]
+<进入修罗神殿/@xiuluo>\
+<用精炼五行魔石进入封印魔地/@modi>\
+<离开/@exit>\
+
+[@xiuluo]
+#IF
+EQUAL $Table(SG_Pritime).Tim05 $DATE
+#SAY
+很抱歉，您今天已经前往过修罗天一次，请改日再来！\\
+<离开/@exit>\
+#ACT
+break
+#IF
+CHECKLEVELEX > 45
+#ACT
+MAPMOVE AS004 18 180
+Table SG_Pritime Tim05 = $DATE
+break
+#ELSESAY
+无法催动法阵\\
+<离开/@exit>\
+
+[@modi]
+#IF
+CHECKITEM 精炼五行魔石 1
+#ACT
+take 精炼五行魔石 1
+MAPMOVE AS003 38 58
+break
+#ELSESAY
+没有精炼五行魔石，无法发动法阵。\
+<离开/@exit>\

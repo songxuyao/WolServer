@@ -1,0 +1,72 @@
+[@main]
+    为了更好保障游戏账号安全，避免自己虚拟财产的损失。\
+请您在注册帐号时认真填写<color=green 姓名、生日、以及密码保护资料>。\
+它们将是您保护和找回游戏资料的唯一保证。\
+    <color=red 认真填写绑定信息，将是为您游戏付出有更好的保障。>\
+    <可接任务/@_RW_entry>\
+    <离开/@exit>\
+
+[@_RW_entry]
+#IF
+EQUAL $Task(28) 1
+#SAY
+可以完成的任务：\
+<绑定个人帐号信息/@_RW_fullyTaskDesp>\
+#ELSESAY
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+[@_RW_fullyTaskDesp]
+#IF
+RANDOM 1
+#SAY
+\
+    请认真输入您的真实姓名；\\
+    <color=red 认真填写绑定信息，将是为您游戏付出有更好的保障。>\
+#ACT
+QueryVal 5 0 8 @xingming 请认真输入您的真实姓名；[后期无法更改]
+break
+
+[@xingming]
+#IF
+!EQUAL S5 
+#SAY
+\
+    请认真输入您的身份证号码；\\
+    <color=red 认真填写绑定信息，将是为您游戏付出有更好的保障。>\
+#ACT
+QueryVal 6 0 18 @shenfenzheng 请认真输入您的身份证号码；[后期无法更改]
+break
+#ELSESAY
+    你的真实姓名信息输入错误！
+
+[@shenfenzheng]
+#IF
+!EQUAL S6 
+#SAY
+\
+    请认真输入您的QQ号；\\
+    <color=red 认真填写绑定信息，将是为您游戏付出有更好的保障。>\
+#ACT
+QueryVal 7 0 10 @tengxuqq 请认真输入您的QQ号；[后期无法更改]
+break
+#ELSESAY
+    你的身份证号码信息输入错误！
+
+[@tengxuqq]
+#IF
+EQUAL $Task(28) 1
+#SAY
+\
+    谢谢您的配合，你的游戏帐户信息提高了更好的保障。\
+    祝您游戏开心!\
+    在游戏中遇到任何问题可以联系客服。\\
+    <谢谢/@exit>\
+#ACT
+EndTask 28
+BINDGOLD + 100000
+CHANGEEXP + 100000
+SENDMSG 5 你成功增加了100000绑定金币。
+FORMATSTR S8 游戏帐号:%-15s游戏名字:%-16s姓名:%-10s身份证号码:%-20sQQ号码:%-12s登陆IP:%-17s时间:%-4s年%-2s月%-2s日地点：%s <$ACCOUNT>|<$USERNAME>|<$STR(S5)>|<$STR(S6)>|<$STR(S7)>|<$IPADDR>|<$DATE.YEAR>|<$DATE.MONTH>|<$DATE.DAY>|<$IPLOCAL>
+ADDVARLIST $STR(S8) ..\QuestDiary\数据文件\管理数据\帐号绑定信息.txt
+break

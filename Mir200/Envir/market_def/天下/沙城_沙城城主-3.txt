@@ -1,0 +1,10 @@
+[@main]
+#IF
+CHECKVAR GLOBAL 城主级 < 1
+#SAY
+当前沙城城主信息暂无\
+<离开/@exit>
+#ELSESAY
+城主名字：<$GLOBAL(城主名)>　职业：<$GLOBAL(城主职)>　级别：<$GLOBAL(城主级)>级\
+城主宣言：<$STR(A0)>\\
+<离开/@exit>\

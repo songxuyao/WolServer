@@ -1,0 +1,10 @@
+[setup]
+stepcount = 3
+title = 群蛇乱舞—魔甲虫
+ID = 41
+stepaim1 = 前往蛇洞，杀掉10个魔甲虫。 <color=green [传]/@@flyto 41 n001 192 263>
+stepaim2 = 还要杀<$TASKVAL(41).I0>个<魔甲虫/@@goplace n001 192,263> <color=green [传]/@@flyto 41 n001 192 263>
+stepaim3 = 任务完成！向<李虎/@@goto 10 前锋队长李虎 79,58>复命 <color=green [传]/@@flyto 39 10 79 58>
+stepDESC1 = <color=graygolden 任务目的：>前往蛇洞中，杀掉<color=green 10个魔甲虫>后，去找<前锋队长/@@goto 10 前锋队长李虎 79,58>\<李虎/@@goto 10 前锋队长李虎 79,58>\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：350000 </@@!PIC2 10,229>绑定金币：2000	\<color=graygolden 任务介绍:>\  英雄果然是实力不凡。那好吧，正好我们需要去蛇洞中清\理一下魔甲虫.  这些小飞虫每次都给我们造成不小的困扰\，终于找到人对付他们了。
+stepDESC2 = <color=graygolden 任务目的：>前往蛇洞中，杀掉<color=green 10个魔甲虫>后，去找<前锋队长/@@goto 10 前锋队长李虎 79,58>\<李虎/@@goto 10 前锋队长李虎 79,58>\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：350000 </@@!PIC2 10,229>绑定金币：2000	\<color=graygolden 任务介绍:>\还要杀掉<$TASKVAL(41).I0>个魔甲虫
+stepDESC3 = <color=graygolden 任务目的：>前往蛇洞中，杀掉<color=green 10个魔甲虫>后，去找<前锋队长/@@goto 10 前锋队长李虎 79,58>\<李虎/@@goto 10 前锋队长李虎 79,58>\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：350000 </@@!PIC2 10,229>绑定金币：2000	\<color=graygolden 任务介绍:>\恭喜，圆满完成任务！快用向前锋哨兵回报吧！

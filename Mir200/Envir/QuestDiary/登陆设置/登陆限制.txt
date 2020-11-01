@@ -1,0 +1,45 @@
+[@登陆限制]
+{
+
+#IF
+POS 你的 $HUMAN(寄言)
+#ACT
+SENDMSG 5 (*)<$HUMAN(寄言)>
+CALCVAR HUMAN 寄言 =
+SAVEVAR HUMAN 寄言 ..\QUESTDIARY\数据文件\个人变量\寄言.txt
+#IF
+CHECKNAMELIST ..\QuestDiary\数据文件\管理数据\禁止登陆人物.txt
+#ACT
+MAP 128
+SENDMSG 5 %s，你现在的人物禁止登陆，请更换人物名字登陆，如有疑问请联系客服
+kick
+#IF
+CHECKACCOUNTLIST ..\QuestDiary\数据文件\管理数据\禁止登陆帐号.txt
+#ACT
+SENDMSG 5 %s，你现在的帐号禁止登陆，请更换帐号登陆，如有疑问请联系客服
+kick
+#IF
+CHECKIPLIST ..\QuestDiary\数据文件\管理数据\禁止登陆IP.txt
+#ACT
+MAP 128
+SENDMSG 5 %s，你现在的登陆IP已被封，请更换IP登陆，如有疑问请联系客服
+kick
+#IF
+CHECKNAMELIST ..\QuestDiary\数据文件\管理数据\禁止游戏名单.txt
+#ACT
+MAPMOVE 128
+#IF
+!ISCASTLEMASTER
+CHECKITEMW 至尊屠龙
+#ACT
+takew 至尊屠龙 1
+SENDMSG 11 (*)你不是沙城城主，你的嗜血至尊屠龙被系统回收了。
+#IF
+!ISCASTLEMASTER
+CHECKITEM 至尊屠龙 1
+#ACT
+take 至尊屠龙 9
+SENDMSG 11 (*)你不是沙城城主，你的嗜血至尊屠龙被系统回收了。
+break
+
+}

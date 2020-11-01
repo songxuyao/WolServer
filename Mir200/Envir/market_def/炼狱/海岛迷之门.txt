@@ -1,0 +1,42 @@
+[@main]
+哈哈！你终于发现了谜之门，你要进入吗？\\
+<是的，我要进入/@comein>\
+<怪吓人的，还是算了！/@exit>
+
+[@comein]
+#IF
+EQUAL $DATE.WEEK 1
+#ACT
+MAPMOVE AS004 93 209
+break
+#IF
+EQUAL $DATE.WEEK 2
+#ACT
+MAPMOVE NB001
+break
+#IF
+EQUAL $DATE.WEEK 3
+#ACT
+MAPMOVE J008
+break
+#IF
+EQUAL $DATE.WEEK 4
+#ACT
+MAPMOVE J009
+break
+#IF
+EQUAL $DATE.WEEK 5
+#ACT
+MAPMOVE MC008
+break
+#IF
+EQUAL $DATE.WEEK 6
+#ACT
+MAPMOVE TT009
+break
+#IF
+EQUAL $DATE.WEEK 7
+#ACT
+MAPMOVE MG001 215 226
+break
+

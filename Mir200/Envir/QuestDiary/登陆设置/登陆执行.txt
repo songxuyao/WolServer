@@ -1,0 +1,216 @@
+[@登陆执行]
+{
+
+#IF
+EQUAL G17 2
+#ACT
+SENDMSG 14 当前超级夺宝活动正在火热进行中
+#IF
+EQUAL G17 1
+#ACT
+SENDMSG 14 超级夺宝将在<$STR(G18)>月<$STR(G19)>日<$STR(G20)>点<$STR(G21)>分举行！
+#IF
+CHECKLEVELEX > 0
+#ACT
+GOTO @每日资源检测
+GOTO @每日捐献属性
+GOTO @每日在线礼物
+GOTO @离线时间经验
+GOTO @签到奖励系统
+#IF
+CHECKVAR GLOBAL 男战士 = $USERNAME
+#ACT
+SENDMSG 14 天下最强<$JOB><$USERNAME>上线
+break
+#IF
+CHECKVAR GLOBAL 男法师 = $USERNAME
+#ACT
+SENDMSG 14 天下最强<$JOB><$USERNAME>上线
+break
+#IF
+CHECKVAR GLOBAL 男道士 = $USERNAME
+#ACT
+SENDMSG 14 天下最强<$JOB><$USERNAME>上线
+break
+#IF
+CHECKVAR GLOBAL 女战士 = $USERNAME
+#ACT
+SENDMSG 14 天下最强<$JOB><$USERNAME>上线
+break
+#IF
+CHECKVAR GLOBAL 女法师 = $USERNAME
+#ACT
+SENDMSG 14 天下最强<$JOB><$USERNAME>上线
+break
+#IF
+CHECKVAR GLOBAL 女道士 = $USERNAME
+#ACT
+SENDMSG 14 天下最强<$JOB><$USERNAME>上线
+break
+
+[@签到奖励系统]
+#IF
+EQUAL $Table(SG_Pritime).Tim01 $DATE
+#ACT
+break
+#IF
+LARGE $Table(SG_Signing).Sign1 27
+#ACT
+Table SG_Pritime Tim01 = $DATE
+Table SG_Signing Sign1 = 0
+Table SG_Signing Sign2 = 1
+Table SG_Signing Sign3 = 0
+Table SG_Signing Sign4 = 0
+Table SG_Signing Sign5 = 0
+Table SG_Signing Sign6 = 0
+Table SG_Signing Sign7 = 0
+break
+#IF
+RANDOM 1
+#ACT
+Table SG_Signing Sign2 = 1
+Table SG_Pritime Tim01 = $DATE
+break
+
+[@每日在线礼物]
+#CALL [\游戏功能\每日礼物.txt] @礼物发放
+
+[@离线时间经验]
+#CALL [\游戏功能\离线经验.txt] @领取离线
+
+[@每日资源检测]
+#IF
+HAVEGUILD
+#ACT
+#ELSEACT
+break
+#IF
+SMALL $GUILD.TOWERGRADE 1
+#ACT
+break
+#ELSEACT
+GOTO @每日捐献属性
+#IF
+CHECKGUILDLIST ..\QuestDiary\通灵塔\每日名单.txt
+#ACT
+break
+#IF
+SMALL $GUILD.ORE $GUILD.OREMAX
+SMALL $GUILD.WOOD $GUILD.WOODMAX
+SMALL $GUILD.GEM $GUILD.GEMMAX
+SMALL $GUILD.BAR $GUILD.BARMAX
+SMALL $GUILD.ROCK $GUILD.ROCKMAX
+EQUAL $GUILD.TOWERSTATUS 0
+#ACT
+break
+#IF
+SMALL $GUILD.ORE $GUILD.OREMAX
+SMALL $GUILD.WOOD $GUILD.WOODMAX
+SMALL $GUILD.GEM $GUILD.GEMMAX
+SMALL $GUILD.BAR $GUILD.BARMAX
+SMALL $GUILD.ROCK $GUILD.ROCKMAX
+#ACT
+GUILDSTABILITYPOINT = 0
+GUILDFLOURISHPOINT = 0
+GUILDAURAEPOINT = 0
+GuildTowerStatus SELF = 0
+SENDMSG 5 行会通灵塔资源不足，停止运转。
+break
+#ELSEACT
+GuildTowerRes SELF 0 - $GUILD.OREMAX
+GuildTowerRes SELF 1 - $GUILD.GEMMAX
+GuildTowerRes SELF 2 - $GUILD.WOODMAX
+GuildTowerRes SELF 3 - $GUILD.BARMAX
+GuildTowerRes SELF 4 - $GUILD.ROCKMAX
+GUILDSTABILITYPOINT = 0
+GUILDFLOURISHPOINT = 0
+GUILDAURAEPOINT = 0
+GuildTowerStatus SELF = 1
+SENDMSG 5 行会通灵塔恢复正常运作
+ADDGUILDLIST ..\QuestDiary\通灵塔\每日名单.txt
+break
+
+[@每日捐献属性]
+#IF
+!HAVEGUILD
+EQUAL $PROFFER 1
+#ACT
+SetProffer = 0
+break
+#IF
+HAVEGUILD
+#ACT
+#ELSEACT
+break
+#IF
+SMALL $GUILD.TOWERGRADE 1
+#ACT
+break
+#IF
+CHECKVAR HUMAN 日46 = $DATE
+#ACT
+SetProffer = 1
+#ELSEACT
+SetProffer = 0
+break
+
+[@飞出铁血魔城]
+#IF
+CHECKMAPNAME MC010
+#ACT
+MAPMOVE 7 61 38
+break
+#IF
+CHECKMAPNAME MC009
+#ACT
+MAPMOVE 7 61 38
+break
+
+[@江湖告急]
+#IF
+CHECKOFGUILD $GLOBAL(江湖01)
+#ACT
+SHOWHUMEFFECT 44
+SENDMSG 5 (*)<$GLOBAL(江湖02)>
+break
+
+[@江湖穿云箭1]
+#IF
+EQUAL A7 $GUILDNAME
+#ACT
+SHOWHUMEFFECT 44
+SENDMSG 8 (*)<$STR(A8)>：启动穿云箭<$GUILDNAME>行会的兄弟们，我在<$HUMANINFO[$STR(A8)].$MAPNAME>坐标<$HUMANINFO[$STR(A8)].$X>：<$HUMANINFO[$STR(A8)].$Y>附近被人杀，是兄弟的就来帮忙，打命令　@江湖救急　就可以飞过来
+SENDMSG 5 (*)<$STR(A8)>：启动穿云箭<$GUILDNAME>行会的兄弟们，我在<$HUMANINFO[$STR(A10)].$MAPNAME>坐标<$HUMANINFO[$STR(A10)].$X>：<$HUMANINFO[$STR(A10)].$Y>附近被人杀，是兄弟的就来帮忙，打命令　@江湖救急　就可以飞过来
+break
+
+[@江湖穿云箭2]
+#IF
+EQUAL A9 $GUILDNAME
+#ACT
+SHOWHUMEFFECT 44
+SENDMSG 8 (*)<$STR(A10)>：启动穿云箭<$GUILDNAME>行会的兄弟们，我在<$HUMANINFO[$STR(A10)].$MAPNAME>坐标<$HUMANINFO[$STR(A10)].$X>：<$HUMANINFO[$STR(A10)].$Y>附近被人杀，是兄弟的就来帮忙，打命令　@江湖救急　就可以飞过来
+SENDMSG 5 (*)<$STR(A10)>：启动穿云箭<$GUILDNAME>行会的兄弟们，我在<$HUMANINFO[$STR(A10)].$MAPNAME>坐标<$HUMANINFO[$STR(A10)].$X>：<$HUMANINFO[$STR(A10)].$Y>附近被人杀，是兄弟的就来帮忙，打命令　@江湖救急　就可以飞过来
+break
+
+[@LYJSSJ]
+#IF
+CHECKITEM 炼狱体验卡 1
+#ACT
+break
+#IF
+LARGE $TABLE(SG_PRIVITE).Hum03 9
+#ACT
+TABLE SG_PRIVITE Hum03 - 10
+break
+#IF
+CHECKGAMEGOLD < 1
+#ACT
+MAPMOVE 0
+break
+#ELSEACT
+GAMEGOLD - 1
+TABLE SG_PRIVITE Hum03 + 3600
+SENDMSG 5 系统已经自动将1元宝为你转换成了1小时炼狱时间
+break
+
+}

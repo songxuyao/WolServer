@@ -1,0 +1,10 @@
+[setup]
+stepcount = 3
+title = 悬赏<$TASKVAL(44).S0>
+ID = 44
+stepaim1 = 去<$TASKVAL(44).S2>击杀<$TASKVAL(44).I0>只<$TASKVAL(44).S0>！任\务难度为<$TASKVAL(44).S1>。
+stepaim2 = 还要杀<$TASKVAL(44).I1>个<$TASKVAL(44).S0>。
+stepaim3 = 任务完成！向<日常任务仙子/@@goto zzgc 日常任务仙子 104,78>回报 \<color=green [传]/@@flyto 32 zzgc 104 78>
+stepDESC1 = <color=graygolden 任务目的：>击杀<$TASKVAL(44).I0>只<$TASKVAL(44).S0>！任务难度为<$TASKVAL(44).S1>。\<color=graygolden 任务介绍:>\  <$TASKVAL(44).S3>
+stepDESC2 = <color=graygolden 任务目的：>击杀<$TASKVAL(44).I0>只<$TASKVAL(44).S0>！任务难度为<$TASKVAL(44).S1>。\<color=graygolden 任务介绍:>\  击杀<$TASKVAL(44).I1>只<$TASKVAL(44).S0>
+stepDESC3 = <color=graygolden 任务目的：>击杀<$TASKVAL(44).I0>只<$TASKVAL(44).S0>！任务难度为<$TASKVAL(44).S1>。\<color=graygolden 任务介绍:>\  恭喜你，任务完成！

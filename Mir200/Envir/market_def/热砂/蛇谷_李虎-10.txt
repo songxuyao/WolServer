@@ -1,0 +1,106 @@
+[@main]
+  将军命令我们驻扎在这里，定期清理蛇怪，以防止蛇怪\
+过度繁殖，导致出现灾难\
+  不过这可不是一件什么好差事，这个地方的腥臭味真让\
+人受不了，真想快点离开这里\
+<可接任务/@_RW_entry>\
+<离开/@exit>
+
+[@_RW_entry]
+#IF
+EQUAL $Task(39) 1
+#SAY
+可以完成的任务：\
+<群蛇乱舞—初入蛇谷/@_RW_fulfilTaskDesp411>\\
+<离开/@exit>
+#ACT
+break
+#IF
+EQUAL $Task(40) 3
+#SAY
+可以完成的任务：\
+<热砂荒漠—清理外围/@_RW_fulfilTaskDesp412>\\
+<离开/@exit>
+#ACT
+break
+#IF
+EQUAL $Task(41) 3
+#SAY
+可以完成的任务：\
+<热砂荒漠—魔甲虫/@_RW_fulfilTaskDesp413>\\
+<离开/@exit>
+#ACT
+break
+#ELSESAY
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+[@_RW_fulfilTaskDesp413]
+   英雄，你真厉害，做的漂亮！  这下能过个舒服的假期\
+了\
+<我干掉了好多甲虫/@_RW_fulfilTask413>                <关闭/@exit>
+
+
+[@_RW_fulfilTask413]
+#IF
+EQUAL $Task(41) 3
+#SAY
+    好了，现在要进行最后一步了，这次你需要深入蛇洞，\
+进入到<color=green 百虫穴>，在那里的蛇妖才是我们真正最麻烦的敌人。\
+去那里杀掉20只蛇妖，无论是红蛇妖，还是黑蛇妖。  干掉\
+后直接去向李将军汇报吧，谢谢你的帮助了。\
+<离开/@exit>  <返回/@main>
+#ACT
+EndTask 41
+BINDGOLD + 2000
+CHANGEEXP + 350000
+AddTask 42
+SetTaskValue 42 I0 = 20
+SENDMSG 5 你成功增加了2000绑定金币。
+break
+
+[@_RW_fulfilTaskDesp412]
+   很好，最起码现在我们有立足之地了。看起来环境好多\
+了，这些该死的蛇。 \
+<我想来点更有挑战的任务/@_RW_fulfilTask412>                <关闭/@exit>
+
+[@_RW_fulfilTask412]
+#IF
+EQUAL $Task(40) 3
+#SAY
+  英雄果然是实力不凡。那好吧，正好我们需要去蛇洞中清\
+理一下魔甲虫.  这些小飞虫每次都给我们造成不小的困扰\
+，终于找到人对付他们了。\
+<离开/@exit>  <返回/@main>
+#ACT
+EndTask 40
+BINDGOLD + 2000
+CHANGEEXP + 500000
+AddTask 41
+SetTaskValue 41 I0 = 10
+SENDMSG 5 你成功增加了2000绑定金币。
+break
+
+[@_RW_fulfilTaskDesp411]
+   将军竟然给我们派来了增援，我还以为我们要独自坚守\
+到被蛇吃掉呢。 \
+<我能做什么？/@_RW_fulfilTask411>                <无视，让他们被吃掉吧！/@exit>
+
+[@_RW_fulfilTask411]
+#IF
+EQUAL $Task(39) 1
+#SAY
+  自从将军从我们这抽调了一半的人手去增援机关洞后，我\
+们的人手真是太少了，兄弟们不停的杀蛇，可是这段时间以\
+来，蛇真的是越来越多了，别说是蛇洞里面了，连外面都开\
+始被蛇给覆盖了。你先帮忙在洞外杀掉10条大土蛇吧。不然\
+我怕我们很快连站着说话的地方都没有了.\
+<离开/@exit>  <返回/@main>
+#ACT
+EndTask 39
+BINDGOLD + 2000
+CHANGEEXP + 450000
+AddTask 40
+SetTaskValue 40 I0 = 10
+SENDMSG 5 你成功增加了2000绑定金币。
+break

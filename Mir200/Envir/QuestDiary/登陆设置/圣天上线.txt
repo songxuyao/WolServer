@@ -1,0 +1,354 @@
+[@新手登陆]
+{
+
+#IF
+ISNEWHUMAN
+#ACT
+GIVE 战斗号角 1
+#ELSEACT
+break
+#IF
+EQUAL G0 0
+#ACT
+AddTask 1
+SpirityMax = 10000
+DecomPoseLevel = 1
+DecomPoseExpMax = 1000
+give 飞行靴 30 1
+give 超级天山雪莲1 1
+give 成长礼包(1级) 1 1
+DelayCall 2 @NewHumanitem
+break
+#IF
+LARGE G0 0
+#ACT
+AddTask 1
+SpirityMax = 10000
+DecomPoseLevel = 1
+DecomPoseExpMax = 1000
+BagSize 66
+CHANGELEVEL = 71
+GAMEGOLD + 90000000
+give 金币 90000000
+humanhp + 2000
+humanmp + 2000
+give 回城神石(大) 1
+GIVE 淬炼石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 2000
+GIVE 强化石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 2000
+GIVE 雷炼石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 2000
+GIVE 圣盾结晶 1
+UPGRADEUSERITEM $PARAM(10) 20 = 2000
+GIVE 觉醒灵石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 2000
+GIVE 专家盾牌神石 1
+SENDMSG 7 当前游戏为测试模式，所有数据都将在正式开区后删除。
+goto @测试模式
+break
+
+[@NewHumanitem]
+#IF
+Gender Man
+#ACT
+takeon 1 硬木剑
+takeon 0 粗布衣(男)
+break
+#IF
+Gender WoMan
+#ACT
+takeon 1 硬木剑
+takeon 0 粗布衣(女)
+break
+
+[@测试模式]
+#IF
+Gender Man
+checkjob warrior
+#ACT
+give 炙焰天战甲 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+takeon 0 炙焰天战甲
+#IF
+Gender WoMan
+checkjob warrior
+#ACT
+give 炙焰天战袍 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+takeon 0 炙焰天战袍
+#IF
+Gender Man
+checkjob wizard
+#ACT
+give 魔焰绝魔袍 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+takeon 0 魔焰绝魔袍
+#IF
+Gender WoMan
+checkjob wizard
+#ACT
+give 魔焰绝魔衣 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+takeon 0 魔焰绝魔衣
+#IF
+Gender Man
+checkjob taoist
+#ACT
+give 灵焰灵道袍 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+takeon 0 灵焰灵道袍
+#IF
+Gender WoMan
+checkjob taoist
+#ACT
+give 灵焰灵道衣 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+takeon 0 灵焰灵道衣
+#IF
+ISNEWHUMAN
+checkjob warrior
+#ACT
+ADDSKILL 初级剑法 3
+ADDSKILL 攻杀剑法 3
+ADDSKILL 护身真气 3
+ADDSKILL 刺杀剑术 3
+ADDSKILL 半月弯刀 3
+ADDSKILL 野蛮冲撞 3
+ADDSKILL 烈火剑法 3
+ADDSKILL 破盾斩 3
+ADDSKILL 突斩 3
+ADDSKILL 金刚护体 3
+ADDSKILL 擒龙手 3
+;ADDSKILL 移形换影 3
+give 圣天头盔 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+UPGRADEUSERITEM $PARAM(10) 240 = 4
+give 圣天项链 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+UPGRADEUSERITEM $PARAM(10) 240 = 4
+give 圣天手镯 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+UPGRADEUSERITEM $PARAM(10) 240 = 4
+give 圣天手镯 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+UPGRADEUSERITEM $PARAM(10) 240 = 4
+give 圣天戒指 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+UPGRADEUSERITEM $PARAM(10) 240 = 4
+give 圣天戒指 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+UPGRADEUSERITEM $PARAM(10) 240 = 4
+give 圣天腰带 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+UPGRADEUSERITEM $PARAM(10) 240 = 4
+give 圣天靴子 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+UPGRADEUSERITEM $PARAM(10) 240 = 4
+give 赤火降魔杵 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+UPGRADEUSERITEM $PARAM(10) 240 = 4
+give 圣王盾1 1
+UPGRADEUSERITEM $PARAM(10) 217 = 3
+UPGRADEUSERITEM $PARAM(10) 218 = 8
+UPGRADEUSERITEM $PARAM(10) 0 = 54
+UPGRADEUSERITEM $PARAM(10) 2 = 54
+UPGRADEUSERITEM $PARAM(10) 4 = 31
+UPGRADEUSERITEM $PARAM(10) 216 = 3270
+UPGRADEUSERITEM $PARAM(10) 231 = 10
+UPGRADEUSERITEM $PARAM(10) 232 = 10000
+UPGRADEUSERITEM $PARAM(10) 235 = 1000000
+UPGRADEUSERITEM $PARAM(10) 236 = 10
+give 仙魂珠 1
+give 金猴典藏勋章 1
+give 金猴典藏宝石 1
+give 神龙之魂1 1
+give 金猴面具(战) 1
+takeon 1 赤火降魔杵
+takeon 2 金猴典藏勋章
+takeon 3 圣天项链
+takeon 4 圣天头盔
+takeon 5 圣天手镯
+takeon 6 圣天手镯
+takeon 7 圣天戒指
+takeon 8 圣天戒指
+takeon 9 圣天靴子
+takeon 10 圣天腰带
+takeon 11 金猴典藏宝石
+takeon 13 圣王盾1
+takeon 14 仙魂珠
+takeon 18 神龙之魂1
+takeon 19 金猴面具(战)
+break
+#IF
+ISNEWHUMAN
+checkjob wizard
+#ACT
+ADDSKILL 小火球 3
+ADDSKILL 抗拒火环 3
+ADDSKILL 诱惑之光 3
+ADDSKILL 地狱火焰 3
+ADDSKILL 雷电术 3
+ADDSKILL 瞬间移动 3
+ADDSKILL 火炎刀 3
+ADDSKILL 爆裂火焰 3
+ADDSKILL 火墙 3
+ADDSKILL 疾光电影 3
+ADDSKILL 地狱雷光 3
+ADDSKILL 魔法盾 3
+ADDSKILL 圣言术 3
+ADDSKILL 冰咆哮 3
+ADDSKILL 风影盾 3
+ADDSKILL 兽灵术 3
+ADDSKILL 冰旋风 3
+ADDSKILL 狂龙紫电 3
+;ADDSKILL 化身蝙蝠 3
+ADDSKILL 魔魂术 3
+ADDSKILL 流星火雨 3
+give 圣魔头盔 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+UPGRADEUSERITEM $PARAM(10) 240 = 4
+give 圣魔项链 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+UPGRADEUSERITEM $PARAM(10) 240 = 4
+give 圣魔手镯 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+UPGRADEUSERITEM $PARAM(10) 240 = 4
+give 圣魔手镯 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+UPGRADEUSERITEM $PARAM(10) 240 = 4
+give 圣魔戒指 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+UPGRADEUSERITEM $PARAM(10) 240 = 4
+give 圣魔戒指 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+UPGRADEUSERITEM $PARAM(10) 240 = 4
+give 圣魔腰带 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+UPGRADEUSERITEM $PARAM(10) 240 = 4
+give 圣魔靴子 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+UPGRADEUSERITEM $PARAM(10) 240 = 4
+give 火龙风雷鞭 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+UPGRADEUSERITEM $PARAM(10) 240 = 4
+give 圣王盾2 1
+UPGRADEUSERITEM $PARAM(10) 217 = 3
+UPGRADEUSERITEM $PARAM(10) 218 = 8
+UPGRADEUSERITEM $PARAM(10) 0 = 54
+UPGRADEUSERITEM $PARAM(10) 2 = 54
+UPGRADEUSERITEM $PARAM(10) 4 = 31
+UPGRADEUSERITEM $PARAM(10) 216 = 1090
+UPGRADEUSERITEM $PARAM(10) 231 = 10
+UPGRADEUSERITEM $PARAM(10) 232 = 10000
+UPGRADEUSERITEM $PARAM(10) 235 = 1000000
+UPGRADEUSERITEM $PARAM(10) 236 = 10
+give 仙魂珠 1
+give 金猴典藏勋章 1
+give 金猴典藏宝石 1
+give 神龙之魂2 1
+give 金猴面具(法) 1
+takeon 1 火龙风雷鞭
+takeon 2 金猴典藏勋章
+takeon 3 圣魔项链
+takeon 4 圣魔头盔
+takeon 5 圣魔手镯
+takeon 6 圣魔手镯
+takeon 7 圣魔戒指
+takeon 8 圣魔戒指
+takeon 9 圣魔靴子
+takeon 10 圣魔腰带
+takeon 11 金猴典藏宝石
+takeon 13 圣王盾2
+takeon 14 仙魂珠
+takeon 18 神龙之魂2
+takeon 19 金猴面具(法)
+break
+#IF
+ISNEWHUMAN
+checkjob taoist
+#ACT
+ADDSKILL 治疗术 3
+ADDSKILL 精神战法 3
+ADDSKILL 施毒术 3
+ADDSKILL 灵魂道符 3
+ADDSKILL 骷髅召唤术 3
+ADDSKILL 隐身术 3
+ADDSKILL 集体隐身术 3
+ADDSKILL 幽灵盾 3
+ADDSKILL 神圣战甲术 3
+ADDSKILL 狮子吼 3
+ADDSKILL 困魔咒 3
+ADDSKILL 群体治愈术 3
+ADDSKILL 召唤神兽 3
+ADDSKILL 神光术 3
+ADDSKILL 解毒术 3
+ADDSKILL 幽冥火咒 3
+ADDSKILL 强化骷髅术 3
+ADDSKILL 心灵召唤 3
+;ADDSKILL 遁地 3
+give 道尊神符 1
+give 道神符印 1
+give 道尊灵毒(绿) 1
+give 道尊灵毒(红) 1
+give 圣道头盔 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+UPGRADEUSERITEM $PARAM(10) 240 = 4
+give 圣道项链 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+UPGRADEUSERITEM $PARAM(10) 240 = 4
+give 圣道手镯 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+UPGRADEUSERITEM $PARAM(10) 240 = 4
+give 圣道手镯 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+UPGRADEUSERITEM $PARAM(10) 240 = 4
+give 圣道戒指 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+UPGRADEUSERITEM $PARAM(10) 240 = 4
+give 圣道戒指 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+UPGRADEUSERITEM $PARAM(10) 240 = 4
+give 圣道腰带 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+UPGRADEUSERITEM $PARAM(10) 240 = 4
+give 圣道靴子 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+UPGRADEUSERITEM $PARAM(10) 240 = 4
+give 天音碧玉笛 1
+UPGRADEUSERITEM $PARAM(10) 87 = 3
+UPGRADEUSERITEM $PARAM(10) 240 = 4
+give 圣王盾3 1
+UPGRADEUSERITEM $PARAM(10) 217 = 3
+UPGRADEUSERITEM $PARAM(10) 218 = 8
+UPGRADEUSERITEM $PARAM(10) 0 = 54
+UPGRADEUSERITEM $PARAM(10) 2 = 54
+UPGRADEUSERITEM $PARAM(10) 4 = 31
+UPGRADEUSERITEM $PARAM(10) 216 = 2180
+UPGRADEUSERITEM $PARAM(10) 231 = 10
+UPGRADEUSERITEM $PARAM(10) 232 = 10000
+UPGRADEUSERITEM $PARAM(10) 235 = 1000000
+UPGRADEUSERITEM $PARAM(10) 236 = 10
+give 仙魂珠 1
+give 金猴典藏勋章 1
+give 金猴典藏宝石 1
+give 神龙之魂3 1
+give 金猴面具(道) 1
+takeon 1 天音碧玉笛
+takeon 2 金猴典藏勋章
+takeon 3 圣道项链
+takeon 4 圣道头盔
+takeon 5 圣道手镯
+takeon 6 圣道手镯
+takeon 7 圣道戒指
+takeon 8 圣道戒指
+takeon 9 圣道靴子
+takeon 10 圣道腰带
+takeon 11 金猴典藏宝石
+takeon 13 圣王盾3
+takeon 14 仙魂珠
+takeon 18 神龙之魂3
+takeon 19 金猴面具(道)
+break
+
+}

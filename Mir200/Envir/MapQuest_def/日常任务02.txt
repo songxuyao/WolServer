@@ -1,0 +1,144 @@
+[@main]
+#IF
+HasTask 32
+CHECKMAPNAME M005
+#ACT
+GOTO @JCGWMZ
+break
+#IF
+HasTask 33
+CHECKMAPNAME M005
+#ACT
+GOTO @JCGWMZ1
+break
+#IF
+HasTask 34
+CHECKMAPNAME M009
+#ACT
+GOTO @JCGWMZ2
+break
+#IF
+HasTask 44
+#ACT
+#ELSEACT
+break
+#IF
+POS $M M0
+#ACT
+#ELSEACT
+break
+#IF
+POS $PARAM(2) $TASKVAL(44).S0
+#ACT
+#ELSEACT
+break
+#IF
+EQUAL $Task(44) 2
+#ACT
+SetTaskValue 44 I1 - 1
+SetTaskValue 44 I2 + 1
+RefreshTask 44 2
+#IF
+EQUAL $Task(44) 1
+#ACT
+SetTaskValue 44 I1 - 1
+SetTaskValue 44 I2 + 1
+UpdateTask 44 2
+#IF
+EQUAL $TASKVAL(44).I0 $TASKVAL(44).I2
+#ACT
+UpdateTask 44 3
+break
+
+[@JCGWMZ2]
+#IF
+EQUAL $Task(34) 2
+SMALL $TASKVAL(34).I0 2
+#ACT
+UpdateTask 34 3
+break
+#IF
+EQUAL $Task(34) 1
+EQUAL $TASKVAL(34).I0 10
+#ACT
+SetTaskValue 34 I0 - 1
+UpdateTask 34 2
+break
+#IF
+EQUAL $Task(34) 2
+#ACT
+SetTaskValue 34 I0 - 1
+RefreshTask 34 2
+break
+
+#IF
+EQUAL $Task(33) 2
+SMALL $TASKVAL(33).I0 2
+#ACT
+UpdateTask 33 3
+break
+#IF
+EQUAL $Task(33) 1
+EQUAL $TASKVAL(33).I0 15
+#ACT
+SetTaskValue 33 I0 - 1
+UpdateTask 33 2
+break
+#IF
+EQUAL $Task(33) 2
+#ACT
+SetTaskValue 33 I0 - 1
+RefreshTask 33 2
+break
+
+[@JCGWMZ1]
+#IF
+POS $PARAM(2) «‡Õ≠ ﬁ
+#ACT
+#ELSEACT
+break
+#IF
+EQUAL $Task(33) 2
+SMALL $TASKVAL(33).I0 2
+#ACT
+UpdateTask 33 3
+break
+#IF
+EQUAL $Task(33) 1
+EQUAL $TASKVAL(33).I0 15
+#ACT
+SetTaskValue 33 I0 - 1
+UpdateTask 33 2
+break
+#IF
+EQUAL $Task(33) 2
+#ACT
+SetTaskValue 33 I0 - 1
+RefreshTask 33 2
+break
+
+[@JCGWMZ]
+#IF
+POS $PARAM(2) Õ≠»À
+#ACT
+#ELSEACT
+break
+#IF
+EQUAL $Task(32) 2
+SMALL $TASKVAL(32).I0 2
+#ACT
+UpdateTask 32 3
+break
+#IF
+EQUAL $Task(32) 1
+EQUAL $TASKVAL(32).I0 10
+#ACT
+SetTaskValue 32 I0 - 1
+UpdateTask 32 2
+break
+#IF
+EQUAL $Task(32) 2
+#ACT
+SetTaskValue 32 I0 - 1
+RefreshTask 32 2
+break

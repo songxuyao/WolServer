@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="gb2312" standalone="yes"?>
+<EnchantItems>
+	<enchant id="16769" name="战刃" maxlevel="4" desc="强化你的剑气，使你释放隔位刺杀时造成的伤害提高，提升等级可以额外提高伤害">
+	<!-- Value0:提高第二格伤害百分比 --> 
+		<level maxexp="2000" Value0 = "10"/>
+		<level maxexp="4000" Value0 = "20"/>
+		<level maxexp="8000" Value0 = "30"/>
+		<level maxexp="0" Value0 = "40"/>
+	</enchant>
+	<enchant id="16770" name="聚气" maxlevel="4" desc="刺杀剑术击中敌人有概率使自身会获得一个状态，状态达到三层后，下一次刺杀攻击必定暴击，切换目标后状态重置，升级可以提升触发概率">
+	<!-- Value0:触发概率 --> 
+		<level maxexp="2000" Value0 = "20"/>
+		<level maxexp="4000" Value0 = "30"/>
+		<level maxexp="8000" Value0 = "40"/>
+		<level maxexp="0" Value0 = "50"/>
+	</enchant>
+	<enchant id="16771" name="噬魂" maxlevel="4" desc="剑气穿透敌人的护甲，使目标短时间内物理防御力降低，提升等级可以额外提高削弱物理防御力的效果">
+	<!-- Value0:持续时间 Value1:防御下限 Value2:防御上限 --> 
+		<level maxexp="2000" Value0 = "5" Value1 = "1" Value2 = "3"/>
+		<level maxexp="4000" Value0 = "6" Value1 = "1" Value2 = "5"/>
+		<level maxexp="8000" Value0 = "7" Value1 = "1" Value2 = "7"/>
+		<level maxexp="0" Value0 = "8" Value1 = "1" Value2 = "9"/>
+	</enchant>
+	<enchant id="16772" name="屠戮" maxlevel="1" desc="刺杀剑术对召唤的宠物攻击无视其防御，该符文无法升级">
+	<!-- 无参数 --> 
+		<level maxexp="0"/>
+		<level maxexp="0"/>
+		<level maxexp="0"/>
+		<level maxexp="0"/>
+	</enchant>
+	<enchant id="16773" name="烈焰" maxlevel="4" desc="提高对元素之力的掌控，使烈火剑法/雷霆剑对普通怪物的伤害提高；提升等级可以提高伤害效果">
+	<!-- Value0:提高对怪物伤害百分比 --> 
+		<level maxexp="12000" Value0 = "20"/>
+		<level maxexp="24000" Value0 = "30"/>
+		<level maxexp="40000" Value0 = "40"/>
+		<level maxexp="0" Value0 = "50"/>
+	</enchant>
+	<enchant id="16774" name="爆裂" maxlevel="4" desc="更强的元素力量从武器中爆发，使烈火剑法/雷霆剑对敌方角色造成更大的伤害，提升等级可以提高伤害效果">
+	<!-- Value0:提高对人物伤害百分比 --> 
+		<level maxexp="12000" Value0 = "15"/>
+		<level maxexp="24000" Value0 = "20"/>
+		<level maxexp="40000" Value0 = "25"/>
+		<level maxexp="0" Value0 = "30"/>
+	</enchant>
+	<enchant id="16775" name="穿刺" maxlevel="4" desc="火焰和雷电能够穿透敌人的护甲，有概率忽视目标一定量的物理防御力，提升等级可以提高触发概率和忽视物理防御的效果">
+	<!-- Value0:触发概率 Value1:忽视防御百分比 --> 
+		<level maxexp="12000" value0="30" value1="20"/>
+		<level maxexp="24000" value0="40" value1="30"/>
+		<level maxexp="40000" value0="50" value1="40"/>
+		<level maxexp="0" value0="60" value1="50"/>
+	</enchant>
+	<enchant id="16776" name="重伤" maxlevel="4" desc="烈火剑法/雷霆剑有概率对敌人造成重伤效果，使其短时间内回血速度降低；提升等级可以提高触发概率和降低回血速度的效果">
+	<!-- Value0:触发概率 Value1:持续时间 Value2:重伤效果(数值越小威力越强) 表示目标回血值得百分比！ --> 
+		<level maxexp="12000" value0="10" value1="10" value2="90"/>
+		<level maxexp="24000" value0="15" value1="10" value2="80"/>
+		<level maxexp="40000" value0="20" value1="10" value2="70"/>
+		<level maxexp="0" value0="25" value1="10" value2="60"/>
+	</enchant>
+	<enchant id="16777" name="狂暴" maxlevel="4" desc="将烈火和雷电控制于爆发的一瞬间，当提升烈火剑法/雷霆剑的暴击伤害；提升等级可以提高暴击伤害效果">
+	<!-- Value0:提高暴击伤害百分比 --> 
+		<level maxexp="12000" Value0 = "15"/>
+		<level maxexp="24000" Value0 = "20"/>
+		<level maxexp="40000" Value0 = "25"/>
+		<level maxexp="0" Value0 = "35"/>
+	</enchant>
+	<enchant id="16778" name="暴怒" maxlevel="4" desc="将自身的怒气汇入剑气之中，自身的生命值越低烈火剑法/雷霆剑的伤害越高；提升等级可以提高伤害效果">
+	<!-- Value0:血量80%阶段获得Value1的千分比加成 Value2:血量60%阶段获得Value3的千分比加成 Value4:血量40%阶段获得Value5的千分比加成 Value6:血量60%阶段获得Value7的千分比加成 -->
+    <!-- 如果人物剩余50%的血量,根据等级1的参数，获得的伤害千分比为：（20*5 + 10*6）‰ -->
+		<level maxexp="12000" value0="80" value1="5" value2="60" value3="6" value4="40" value5="8" value6="20" value7="10"/>
+		<level maxexp="24000" value0="80" value1="6" value2="60" value3="7" value4="40" value5="9" value6="20" value7="12"/>
+		<level maxexp="40000" value0="80" value1="7" value2="60" value3="8" value4="10" value5="10" value6="20" value7="14"/>
+		<level maxexp="0" value0="80" value1="8" value2="60" value3="9" value4="40" value5="11" value6="20" value7="16"/>
+	</enchant>
+	<enchant id="16779" name="闪避" maxlevel="4" desc="金刚护体额外提高物理闪避；提升等级可以提高闪避效果">
+	<!-- Value0:躲避值 -->
+		<level maxexp="12000" Value0 = "3"/>
+		<level maxexp="24000" Value0 = "5"/>
+		<level maxexp="40000" Value0 = "7"/>
+		<level maxexp="0" Value0 = "9"/>
+	</enchant>
+	<enchant id="16780" name="强壮" maxlevel="4" desc="金刚护体额外增加生命上限；提升等级可以提高生命上限">
+	<!-- Value0:生命值 -->
+		<level maxexp="12000" Value0 = "150"/>
+		<level maxexp="24000" Value0 = "250"/>
+		<level maxexp="40000" Value0 = "350"/>
+		<level maxexp="0" Value0 = "450"/>
+	</enchant>
+	<enchant id="16781" name="强韧" maxlevel="4" desc="强化金刚护体效果，可以承受更多的伤害；提升等级可以承受更多伤害">
+	<!-- Value0:增加强度系数 -->
+		<level maxexp="12000" Value0 = "5"/>
+		<level maxexp="24000" Value0 = "10"/>
+		<level maxexp="40000" Value0 = "15"/>
+		<level maxexp="0" Value0 = "20"/>
+	</enchant>
+	<enchant id="16782" name="迅捷" maxlevel="4" desc="金刚护体额外提高魔法躲避;提升等级可以提高躲避效果">
+	<!-- Value0:魔法躲避值 -->
+		<level maxexp="12000" Value0 = "3"/>
+		<level maxexp="24000" Value0 = "5"/>
+		<level maxexp="40000" Value0 = "7"/>
+		<level maxexp="0" Value0 = "9"/>
+	</enchant>
+	<enchant id="16783" name="滋养" maxlevel="4" desc="提高治疗术的治愈效果；提升等级可以调高治疗效果">
+	<!-- Value0:提高治疗术每次加生命的百分比 --> 
+		<level maxexp="2000" Value0 = "20"/>
+		<level maxexp="4000" Value0 = "40"/>
+		<level maxexp="8000" Value0 = "60"/>
+		<level maxexp="0" Value0 = "80"/>
+	</enchant>
+	<enchant id="16784" name="凝神" maxlevel="4" desc="治疗术对召唤兽使用时治疗效果增强；提升等级可以提高治疗效果">
+	<!-- Value0:提高治疗术每次加生命的百分比，仅对宠物有效 --> 
+		<level maxexp="2000" Value0 = "30"/>
+		<level maxexp="4000" Value0 = "50"/>
+		<level maxexp="8000" Value0 = "70"/>
+		<level maxexp="0" Value0 = "90"/>
+	</enchant>
+	<enchant id="16785" name="延绵" maxlevel="4" desc="以道术驱法，延长治疗术的持续时间；提升等级可以额外延长持续时间">
+	<!-- Value0:提高治疗术回血总血量百分比 --> 
+		<level maxexp="2000" Value0 = "20"/>
+		<level maxexp="4000" Value0 = "30"/>
+		<level maxexp="8000" Value0 = "40"/>
+		<level maxexp="0" Value0 = "50"/>
+	</enchant>
+	<enchant id="16786" name="联结" maxlevel="4" desc="施放治疗术时有概率使自身同时释放一个治疗术效果；提升等级可以提高触发概率">
+	<!-- Value0:触发概率百分比 --> 
+		<level maxexp="2000" Value0 = "30"/>
+		<level maxexp="4000" Value0 = "50"/>
+		<level maxexp="8000" Value0 = "70"/>
+		<level maxexp="0" Value0 = "90"/>
+	</enchant>
+	<enchant id="16787" name="急救" maxlevel="4" desc="治疗术对目标血量低于30%的目标治疗效果加强；提升等级可以额外提高效果">
+	<!-- Value0:提高治疗术每次加生命的百分比 --> 
+		<level maxexp="2000" Value0 = "30"/>
+		<level maxexp="4000" Value0 = "35"/>
+		<level maxexp="8000" Value0 = "40"/>
+		<level maxexp="0" Value0 = "45"/>
+	</enchant>
+	<enchant id="16788" name="净化" maxlevel="4" desc="治疗术可以对不死生物释放造成伤害">
+	<!-- Value0:治疗值变成伤害威力！威力百分比 --> 
+		<level maxexp="0" Value0 = "30"/>
+		<level maxexp="0" Value0 = "30"/>
+		<level maxexp="0" Value0 = "30"/>
+		<level maxexp="0" Value0 = "30"/>
+	</enchant>
+	<enchant id="16789" name="专注" maxlevel="4" desc="用精神力强化道符，提升灵魂道符对普通怪物的伤害；提升等级可以提高伤害效果">
+	<!-- Value0:提高对怪物伤害威力百分比 --> 
+		<level maxexp="2000" Value0 = "20"/>
+		<level maxexp="4000" Value0 = "30"/>
+		<level maxexp="8000" Value0 = "40"/>
+		<level maxexp="0" Value0 = "50"/>
+	</enchant>
+	<enchant id="16790" name="凋死" maxlevel="4" desc="将毒咒打入灵魂道符之中，命中敌人后有几率给目标释放一个施毒术效果；提升等级可以提高触发概率和毒素效果">
+	<!-- Value0:概率 Value1:红毒降低防御点数 Value2:红毒降低魔防点数 Value3:绿毒威力 Value4:中毒时间 --> 
+		<level maxexp="2000" Value0 = "15" Value1 = "2" Value2 = "3" Value3 = "20" Value4 = "30"/>
+		<level maxexp="4000" Value0 = "20" Value1 = "3" Value2 = "4" Value3 = "25" Value4 = "30"/>
+		<level maxexp="8000" Value0 = "25" Value1 = "4" Value2 = "5" Value3 = "30" Value4 = "30"/>
+		<level maxexp="0" Value0 = "30" Value1 = "5" Value2 = "6" Value3 = "35" Value4 = "30"/>
+	</enchant>
+	<enchant id="16791" name="圣灵" maxlevel="4" desc="强大的精神力释放于灵魂道符中，使道符的威力剧增，使灵魂道符对敌对玩家的伤害提高；提升等级可以提高伤害效果">
+	<!-- Value0:提高对人物伤害威力百分比 --> 
+		<level maxexp="2000" Value0 = "25"/>
+		<level maxexp="4000" Value0 = "30"/>
+		<level maxexp="8000" Value0 = "35"/>
+		<level maxexp="0" Value0 = "40"/>
+	</enchant>
+	<enchant id="16792" name="诛心" maxlevel="4" desc="灵魂道符可以爆发出更强的威力，对敌人的暴击伤害提高；提升等级可以提高暴击伤害">
+		<!-- Value0:提高对暴击威力百分比 --> 
+		<level maxexp="2000" Value0 = "25"/>
+		<level maxexp="4000" Value0 = "30"/>
+		<level maxexp="8000" Value0 = "35"/>
+		<level maxexp="0" Value0 = "40"/>
+	</enchant>
+	<enchant id="16793" name="会心" maxlevel="4" desc="灵魂直击敌人心腹，提高道符的暴击概率；提升等级可以提高暴击概率">
+		<!-- Value0:提高暴击几率百分比 --> 
+		<level maxexp="2000" Value0 = "3"/>
+		<level maxexp="4000" Value0 = "5"/>
+		<level maxexp="8000" Value0 = "7"/>
+		<level maxexp="0" Value0 = "9"/>
+	</enchant>
+	<enchant id="16794" name="强体" maxlevel="4" desc="提升召唤物的生命值；提升等级可以额外提高生命值">
+		<!-- Value0:增加宠物生命值 --> 
+		<level maxexp="12000" Value0 = "200"/>
+		<level maxexp="24000" Value0 = "300"/>
+		<level maxexp="40000" Value0 = "400"/>
+		<level maxexp="0" Value0 = "500"/>
+	</enchant>
+	<enchant id="16795" name="石肤" maxlevel="4" desc="提升召唤物的双抗；提升等级可以额外提高双抗">
+		<!-- Value0:增加宠物防御 Value1:增加宠物魔防 --> 
+		<level maxexp="12000" Value0 = "5" Value1 = "10"/>
+		<level maxexp="24000" Value0 = "15" Value1 = "20"/>
+		<level maxexp="40000" Value0 = "20" Value1 = "25"/>
+		<level maxexp="0" Value0 = "25" Value1 = "30"/>
+	</enchant>
+	<enchant id="16796" name="狂心" maxlevel="4" desc="提高召唤物的攻击；提升等级可以额外提高伤害效果">
+		<!-- Value0:增加宠物攻击下限 Value1:增加宠物攻击上限 --> 
+		<level maxexp="12000" Value0 = "10" Value1 = "15"/>
+		<level maxexp="24000" Value0 = "15" Value1 = "20"/>
+		<level maxexp="40000" Value0 = "20" Value1 = "25"/>
+		<level maxexp="0" Value0 = "25" Value1 = "30"/>
+	</enchant>
+	<enchant id="16797" name="生命连接" maxlevel="4" desc="召唤物可以额外分担主体受到的伤害；提升等级可以提高分担效果">
+		<!-- Value0:分担伤害百分比 (转移几率以引擎面板功能设置中宝宝设置为准，分担伤害百分比会进行叠加) --> 
+		<level maxexp="12000" Value0 = "5"/>
+		<level maxexp="24000" Value0 = "7"/>
+		<level maxexp="40000" Value0 = "9"/>
+		<level maxexp="0" Value0 = "10"/>
+	</enchant>
+	<enchant id="16798" name="暴雷" maxlevel="4" desc="法术中融合元素之力，使雷电术/冰箭术对所有怪物的伤害效果；提升等级可以提高伤害效果">
+	<!-- Value0:提高伤害百分比 -->
+		<level maxexp="2000" value0 = "20"/>
+		<level maxexp="4000" value0 = "30"/>
+		<level maxexp="8000" value0 = "40"/>
+		<level maxexp="0" value0 = "50"/>
+	</enchant>
+	<enchant id="16799" name="静心" maxlevel="4" desc="释放雷电术/冰箭术时有几率使下一个雷电术/冰箭术伤害提升且不消耗魔法；提升等级可以提高概率和伤害效果">
+	<!-- Value0:提高概率(百分比) Value1:提高伤害百分比  Value2:是否叠加 -->
+	<!-- value0 = "100"  value1="20" value2="1" 表示100%提高20%，叠加的意思是第2次使用1.2倍，第3次使用是1.2*1.2=1.44倍，第四次就是 1.2*1.2*1.2倍 -->
+		<level maxexp="2000" value0 = "20" value1="20" value2="0"/>
+		<level maxexp="4000" value0 = "25" value1="30" value2="0"/>
+		<level maxexp="8000" value0 = "30" value1="40" value2="0"/>
+		<level maxexp="0" value0 = "35" value1="50" value2="0"/>
+	</enchant>
+	<enchant id="16800" name="天赋" maxlevel="4" desc="激发自身的潜能，使雷电术/冰箭术对敌对玩家的伤害提高；提升等级可以提高伤害效果">
+		<!-- Value0:提高伤害百分比 -->
+		<level maxexp="2000" value0 = "10"/>
+		<level maxexp="4000" value0 = "20"/>
+		<level maxexp="8000" value0 = "30"/>
+		<level maxexp="0" value0 = "40"/>
+	</enchant>
+	<enchant id="16801" name="雷暴" maxlevel="4" desc="释放雷电术/冰箭术时，触发暴击的概率提高；提升等级可以额外提高暴击率">
+		<!-- Value0:提高暴击几率(百分比) -->
+		<level maxexp="2000" value0 = "3"/>
+		<level maxexp="4000" value0 = "5"/>
+		<level maxexp="8000" value0 = "7"/>
+		<level maxexp="0" value0 = "9"/>
+	</enchant>
+	<enchant id="16802" name="致命" maxlevel="4" desc="释放雷电术/冰箭术时发生暴击时，暴击伤害提高；提升等级可以额外提高暴击伤害">
+		<!-- Value0:提高暴击伤害(百分比) -->
+		<level maxexp="2000" value0 = "10"/>
+		<level maxexp="4000" value0 = "15"/>
+		<level maxexp="8000" value0 = "20"/>
+		<level maxexp="0" value0 = "25"/>
+	</enchant>
+	<enchant id="16803" name="暗影" maxlevel="4" desc="不稳定的暗影能量附着于魔法盾，魔法盾被击破后有一定几率爆炸，对身边敌方单位造成范围伤害；提升等级可以提高爆炸概率和伤害效果">
+		<!-- Value0:触发爆炸概率 Value1:伤害百分比 Value2: 范围-->
+		<level maxexp="2000" value0 = "100" value1 = "10" value2 = "1"/>
+		<level maxexp="4000" value0 = "30" value1 = "15" value2 = "1"/>
+		<level maxexp="8000" value0 = "40" value1 = "20" value2 = "1"/>
+		<level maxexp="0" value0 = "50" value1 = "25" value2 = "1"/>
+	</enchant>
+	<enchant id="16804" name="防护" maxlevel="4" desc="魔法盾被击破后有一定几率会出现一个有暗影能量汇聚的持续短时间的魔法盾，临时魔法盾可以被击破或者自动消失；提升等级可以调高触发概率和持续时间">
+		<!-- Value0:触发概率 Value1:持续时间 Value2: 抵抗次数-->
+		<level maxexp="2000" value0 = "10" value1 = "15" value2 = "10"/>
+		<level maxexp="4000" value0 = "20" value1 = "20" value2 = "15"/>
+		<level maxexp="8000" value0 = "30" value1 = "25" value2 = "20"/>
+		<level maxexp="0" value0 = "40" value1 = "30" value2 = "25"/>
+	</enchant>
+	<enchant id="16805" name="魔心" maxlevel="4" desc="降低释放魔法盾的魔法消耗；提升等级可以额外降低魔法值消耗">
+		<!-- Value0:消耗降低百分比(百分比) -->
+		<level maxexp="2000" value0 = "10"/>
+		<level maxexp="4000" value0 = "20"/>
+		<level maxexp="8000" value0 = "30"/>
+		<level maxexp="0" value0 = "40"/>
+	</enchant>
+	<enchant id="16806" name="贯注" maxlevel="4" desc="暗影能量固化魔法盾，使魔法盾不容易被破；提升等级可以额外降低被破盾概率">
+	    <!-- Value0:抵抗成功概率(百分比) -->
+		<level maxexp="2000" value0 = "10"/>
+		<level maxexp="4000" value0 = "20"/>
+		<level maxexp="8000" value0 = "30"/>
+		<level maxexp="0" value0 = "40"/>
+	</enchant>
+	<enchant id="16807" name="斗气" maxlevel="4" desc="魔法盾被击破后有概率增加一定量的元气值；提升等级可以提高增加元气值量">
+		<!-- Value0:增加概率(百分比) Value1:元气值 -->
+		<level maxexp="2000" value0 = "10" value1 = "200"/>
+		<level maxexp="4000" value0 = "30" value1 = "500"/>
+		<level maxexp="8000" value0 = "40" value1 = "700"/>
+		<level maxexp="0" value0 = "50" value1 = "900"/>
+	</enchant>
+	<enchant id="16808" name="冰封领域" maxlevel="4" desc="强化自身对冰系魔法的掌控能力，增加技能的影响范围；该技能无法升级">
+		<level maxexp="2000"/>
+		<level maxexp="4000"/>
+		<level maxexp="8000"/>
+		<level maxexp="0"/>
+	</enchant>
+	<enchant id="16809" name="寒霜" maxlevel="4" desc="降低释放技能所需要的魔法值；升级可以降低更多魔法消耗">
+		<level maxexp="2000"/>
+		<level maxexp="4000"/>
+		<level maxexp="8000"/>
+		<level maxexp="0"/>
+	</enchant>
+	<enchant id="16810" name="冰刃" maxlevel="4" desc="将冰系魔法施展的根据杀伤力，提高技能所造成的伤害；提升等级可以提高伤害效果">
+		<level maxexp="2000"/>
+		<level maxexp="4000"/>
+		<level maxexp="8000"/>
+		<level maxexp="0"/>
+	</enchant>
+	<enchant id="16811" name="盛焰" maxlevel="4" desc="以强劲魔法力催动火焰，提高火墙的伤害；提升等级可以提高伤害效果">
+		<!-- Value0:提高火墙伤害百分比 --> 
+		<level maxexp="2000" value0 = "10"/>
+		<level maxexp="4000" value0 = "15"/>
+		<level maxexp="8000" value0 = "20"/>
+		<level maxexp="0" value0 = "25"/>
+	</enchant>
+	<enchant id="16812" name="蓄谋" maxlevel="4" desc="源源不断的发力灌输于火焰之中，提高火墙的持续时间；提升等级可以延长更多时间">
+		<!-- Value0:提高火墙时间百分比 --> 
+		<level maxexp="2000" value0 = "20"/>
+		<level maxexp="4000" value0 = "40"/>
+		<level maxexp="8000" value0 = "60"/>
+		<level maxexp="0" value0 = "80"/>
+	</enchant>
+	<enchant id="16813" name="魔焰" maxlevel="4" desc="释放火墙时有几率释放黑色的地狱烈焰，地狱烈焰有概率会灼伤玩家魔法值；提升等级可以提高触发概率和魔法值">
+		<!-- Value0:触发概率  Value1: MP下限 Value2: MP上限  --> 
+		<level maxexp="2000" value0 = "40" value1 = "3" value2 = "7"/>
+		<level maxexp="4000" value0 = "50" value1 = "5" value2 = "9"/>
+		<level maxexp="8000" value0 = "60" value1 = "7" value2 = "11"/>
+		<level maxexp="0" value0 = "70" value1 = "9" value2 = "13"/>
+	</enchant>
+	<enchant id="16814" name="火焰掌控" maxlevel="4" desc="降低释放技能所需要的魔法值；提升等级可以降低更多魔法值">
+		<!-- Value0:降低耗蓝百分比 --> 
+		<level maxexp="2000" value0 = "20"/>
+		<level maxexp="4000" value0 = "30"/>
+		<level maxexp="8000" value0 = "40"/>
+		<level maxexp="0" value0 = "50"/>
+	</enchant>
+	<enchant id="16815" name="锋利" maxlevel="4" desc="打磨剑锋，释放出更强的剑气，提高破盾斩的伤害；提升等级可以提高伤害效果">
+	    <!-- Value0:提高威力百分比 --> 
+		<level maxexp="12000" value0 = "10"/>
+		<level maxexp="24000" value0 = "20"/>
+		<level maxexp="40000" value0 = "25"/>
+		<level maxexp="0" value0 = "30"/>
+	</enchant>
+	<enchant id="16816" name="破败" maxlevel="4" desc="剑气交错能够渗入防护法术之内，提高破盾斩的破盾成功率；提升等级可以额外提高破盾成功率">
+	    <!-- Value0:破盾几率百分比 --> 
+		<level maxexp="12000" value0 = "5"/>
+		<level maxexp="24000" value0 = "7"/>
+		<level maxexp="40000" value0 = "9"/>
+		<level maxexp="0" value0 = "12"/>
+	</enchant>
+	<enchant id="16817" name="斩魂" maxlevel="4" desc="剑气直击灵魂，破盾斩有概率可以扣除对方一定的魔法值百分比；提升等级可以提高触发概率和魔法值扣除比例">
+		<!-- Value0:触发概率百分比 Value1:扣篮百分比 -->
+		<level maxexp="12000" value0 = "10" value1 = "5"/>
+		<level maxexp="24000" value0 = "15" value1 = "7"/>
+		<level maxexp="40000" value0 = "20" value1 = "9"/>
+		<level maxexp="0" value0 = "25" value1 = "12"/>
+	</enchant>
+	<enchant id="16818" name="破甲" maxlevel="4" desc="剑气划破护甲，破盾成功会在短时间内降低目标的物理防御；提升等级可以提高降低物理防御值">
+		<!-- Value0:持续时间 Value1:防御下限 Value2:防御上限 -->
+		<level maxexp="12000" value0 = "5" value1 = "3" value2 = "3"/>
+		<level maxexp="24000" value0 = "5" value1 = "5" value2 = "5"/>
+		<level maxexp="40000" value0 = "5" value1 = "7" value2 = "7"/>
+		<level maxexp="0" value0 = "5" value1 = "9" value2 = "9"/>
+	</enchant>
+	<enchant id="16819" name="魔火" maxlevel="4" desc="魔性的气息强化火咒的效果，提高幽冥火咒对所有目标的伤害；提升等级可以提高伤害量">
+		<!-- Value0:提高伤害百分比 -->
+		<level maxexp="12000" value0 = "10"/>
+		<level maxexp="24000" value0 = "20"/>
+		<level maxexp="40000" value0 = "25"/>
+		<level maxexp="0" value0 = "30"/>
+	</enchant>
+	<enchant id="16820" name="蚀骨" maxlevel="4" desc="幽冥火咒中融合毒咒命中目标时有概率会对目标释放一个施毒术；提升等级提高触发概率">
+		<!-- Value0:触发施毒术几率 -->
+		<level maxexp="12000" value0 = "10"/>
+		<level maxexp="24000" value0 = "20"/>
+		<level maxexp="40000" value0 = "30"/>
+		<level maxexp="0" value0 = "40"/>
+	</enchant>
+	<enchant id="16821" name="渗透" maxlevel="4" desc="强大的精神力注入火咒之中，提高幽冥火咒度普通怪物的伤害；提升等级可以提高伤害">
+		<!-- Value0:提高伤害百分比 -->
+		<level maxexp="12000" value0 = "20"/>
+		<level maxexp="24000" value0 = "30"/>
+		<level maxexp="40000" value0 = "40"/>
+		<level maxexp="0" value0 = "50"/>
+	</enchant>
+	<enchant id="16822" name="狂咒" maxlevel="4" desc="将精神力融入火咒，并且在短时间内爆发，提高幽冥火咒的暴击伤害；提升等级可以额外提高暴击伤害">
+		<!-- Value0:提高暴击伤害百分比 -->
+		<level maxexp="12000" value0 = "10"/>
+		<level maxexp="24000" value0 = "15"/>
+		<level maxexp="40000" value0 = "20"/>
+		<level maxexp="0" value0 = "25"/>
+	</enchant>
+	<enchant id="16823" name="幽泉" maxlevel="4" desc="集中精神力，提高幽冥火咒的暴击概率；提升等级可以额外提高暴击概率">
+		<!-- Value0:提高暴击几率百分比 -->
+		<level maxexp="12000" value0 = "3"/>
+		<level maxexp="24000" value0 = "4"/>
+		<level maxexp="40000" value0 = "5"/>
+		<level maxexp="0" value0 = "6"/>
+	</enchant>
+	<enchant id="16824" name="蒸腾" maxlevel="10" desc="暗影能量提高流星火雨的伤害；提升等级可以额外提高伤害量">
+		<!-- Value0:提高伤害百分比 --> 
+		<level maxexp="12000" value0 = "20"/>
+		<level maxexp="24000" value0 = "25"/>
+		<level maxexp="40000" value0 = "30"/>
+		<level maxexp="0" value0 = "35"/>
+	</enchant>
+	<enchant id="16825" name="升腾" maxlevel="4" desc="提高流星火雨的持续时间；提升等级可以提高持续时间">
+		<!-- Value0:火云持续时间 --> 
+		<level maxexp="12000" value0 = "5"/>
+		<level maxexp="24000" value0 = "10"/>
+		<level maxexp="40000" value0 = "15"/>
+		<level maxexp="0" value0 = "20"/>
+	</enchant>
+	<enchant id="16826" name="魔雨" maxlevel="4" desc="释放流星火雨使有概率出现黑色的地狱烈焰，造成伤害的同时有概率减少目标的魔法值；提升等级增加触发概率和减少魔法值效果">
+		<!-- Value0:触发概率 Value1:消耗MP下限 Value2:消耗MP上限  --> 
+		<level maxexp="12000" value0 = "10" value1 = "5" value2 = "10"/>
+		<level maxexp="24000" value0 = "15" value1 = "10" value2 = "15"/>
+		<level maxexp="40000" value0 = "20" value1 = "15" value2 = "20"/>
+		<level maxexp="0" value0 = "25" value1 = "20" value2 = "25"/>
+	</enchant>
+	<enchant id="16827" name="轻灵" maxlevel="4" desc="降低释放技能所需要的魔法值，提升等级可以提高降低魔法值量">
+		<!-- Value0:减少消耗MP百分比 --> 
+		<level maxexp="12000" value0 = "10"/>
+		<level maxexp="24000" value0 = "20"/>
+		<level maxexp="40000" value0 = "30"/>
+		<level maxexp="0" value0 = "40"/>
+	</enchant>
+	<enchant id="16828" name="龙腾" maxlevel="4" desc="增强狂龙紫电的伤害能力，提升等级可以增加伤害效果">
+		<!-- Value0:提高伤害百分比 --> 
+		<level maxexp="12000" Value0 = "10"/>
+		<level maxexp="24000" Value0 = "15"/>
+		<level maxexp="40000" Value0 = "20"/>
+		<level maxexp="0" Value0 = "25"/>
+	</enchant>
+	<enchant id="16829" name="龙之怒" maxlevel="4" desc="增强狂龙紫电的爆发力，提高其暴击伤害；提升等级可以增加暴击伤害效果">
+		<!-- Value0:提高暴击伤害百分比 --> 
+		<level maxexp="12000" Value0 = "10"/>
+		<level maxexp="24000" Value0 = "15"/>
+		<level maxexp="40000" Value0 = "20"/>
+		<level maxexp="0" Value0 = "25"/>
+	</enchant>
+	<enchant id="16830" name="龙吟" maxlevel="4" desc="使狂龙紫电带有短时间的腐蚀能力，有概率使敌方目标魔法防御降低；提升等级可以增加触发概率和魔法防御降低效果">
+		<!-- Value0:触发概率 Value1:持续时间 Value2:降低魔防下限点数 Value3:降低魔防上限点数 --> 
+		<level maxexp="12000" Value0 = "10" Value1 = "5" Value2 = "1" Value3 = "3"/>
+		<level maxexp="24000" Value0 = "15" Value1 = "5" Value2 = "1" Value3 = "4"/>
+		<level maxexp="40000" Value0 = "20" Value1 = "5" Value2 = "2" Value3 = "5"/>
+		<level maxexp="0" Value0 = "25" Value1 = "5" Value2 = "2" Value3 = "6"/>
+	</enchant>
+	<enchant id="16831" name="龙附" maxlevel="4" desc="掌控元素之力，释放狂龙紫电后有概率使下一个狂龙紫电必定暴击；提升等级可以提高触发概率">
+		<!-- Value0:触发概率 --> 
+		<level maxexp="12000" Value0 = "10"/>
+		<level maxexp="24000" Value0 = "20"/>
+		<level maxexp="40000" Value0 = "30"/>
+		<level maxexp="0" Value0 = "40"/>
+	</enchant>
+	<enchant id="16832" name="苦痛" maxlevel="4" desc="提高施毒术的伤害和防御降低效果；提升等级可以提高伤害和防御降低效果">
+		<!-- Value0:红毒降低防御点数 Value1:红毒降低防御魔御点数 Value2:绿毒威力 --> 
+		<level maxexp="2000" Value0 = "2" Value1 = "2" Value2 = "5"/>
+		<level maxexp="4000" Value0 = "3" Value1 = "3" Value2 = "8"/>
+		<level maxexp="8000" Value0 = "4" Value1 = "4" Value2 = "10"/>
+		<level maxexp="0" Value0 = "5" Value1 = "5" Value2 = "12"/>
+	</enchant>
+	<enchant id="16833" name="清心" maxlevel="4" desc="施展施毒术有概率不消耗魔法值，提升等级可以提高概率">
+	<!-- Value0:概率百分比 --> 
+		<level maxexp="2000" Value0 = "20"/>
+		<level maxexp="4000" Value0 = "40"/>
+		<level maxexp="8000" Value0 = "60"/>
+		<level maxexp="0" Value0 = "80"/>
+	</enchant>
+	<enchant id="16834" name="凋零" maxlevel="4" desc="现在施展施毒术会有一个初始伤害，提升等级可以提高伤害效果">
+	<!-- Value0:人物属性道术随机值百分比 Value1:附加伤害下限 Value2:附加伤害上限 --> 
+		<level maxexp="2000" Value0 = "20" Value1 = "20" Value2 = "30"/>
+		<level maxexp="4000" Value0 = "25" Value1 = "30" Value2 = "40"/>
+		<level maxexp="8000" Value0 = "30" Value1 = "40" Value2 = "50"/>
+		<level maxexp="0" Value0 = "35" Value1 = "50" Value2 = "60"/>
+	</enchant>
+	<enchant id="16835" name="夺魂" maxlevel="4" desc="受施毒术影响的目标在扣除生命值时有概率同时损失魔法值">
+	<!-- Value0:概率百分比 --> 
+		<level maxexp="2000" Value0 = "20" Value1 = "5" Value2 = "8"/>
+		<level maxexp="4000" Value0 = "30" Value1 = "10" Value2 = "15"/>
+		<level maxexp="8000" Value0 = "40" Value1 = "12" Value2 = "18"/>
+		<level maxexp="0" Value0 = "50" Value1 = "15" Value2 = "20"/>
+	</enchant>
+	<enchant id="16836" name="迅敏" maxlevel="4" desc="风影盾可以额外提升闪避值；提升等级可以额外提高闪避值">
+		<!-- Value0:躲避值 --> 
+		<level maxexp="12000" Value0 = "5"/>
+		<level maxexp="24000" Value0 = "7"/>
+		<level maxexp="40000" Value0 = "9"/>
+		<level maxexp="0" Value0 = "11"/>
+	</enchant>
+	<enchant id="16837" name="灵敏" maxlevel="4" desc="风影盾可以额外提升魔法躲避值；提升等级可以额外提高魔法躲避值">
+		<!-- Value0:魔法躲避值 --> 
+		<level maxexp="12000" Value0 = "2"/>
+		<level maxexp="24000" Value0 = "4"/>
+		<level maxexp="40000" Value0 = "6"/>
+		<level maxexp="0" Value0 = "8"/>
+	</enchant>
+	<enchant id="16838" name="护身" maxlevel="4" desc="风影盾可以额外提升毒躲避；提升等级可以额外提高毒躲避">
+		<!-- Value0:中毒躲避值 --> 
+		<level maxexp="12000" Value0 = "2"/>
+		<level maxexp="24000" Value0 = "4"/>
+		<level maxexp="40000" Value0 = "6"/>
+		<level maxexp="0" Value0 = "8"/>
+	</enchant>
+	<enchant id="16839" name="速救" maxlevel="4" desc="风影盾充斥的能量，有几率在风影盾被击破时给释放者回复一定量的生命值；提升等级可以提高触发概率和生命回复量">
+	<!-- Value0:触发几率 Value1:回复最大生命百分比 --> 
+		<level maxexp="12000" Value0 = "10" Value1 = "5"/>
+		<level maxexp="24000" Value0 = "15" Value1 = "6"/>
+		<level maxexp="40000" Value0 = "20" Value1 = "7"/>
+		<level maxexp="0" Value0 = "30" Value1 = "8"/>
+	</enchant>
+	<enchant id="16840" name="破绽" maxlevel="4" desc="成功使用野蛮冲撞撞击目标后会使目标暴露弱点，使其受到下一次攻击伤害提升；提升等级增加伤害提升效果">
+		<!-- Value0:提供下一次攻击伤害百分比 --> 
+		<level maxexp="2000" Value0 = "200"/>
+		<level maxexp="4000" Value0 = "30"/>
+		<level maxexp="8000" Value0 = "40"/>
+		<level maxexp="0" Value0 = "50"/>
+	</enchant>
+	<enchant id="16841" name="金刚" maxlevel="4" desc="成功使用野蛮冲撞撞击目标后，使自身获得伤害减免的状态；提升等级可以提高伤害减免效果">
+		<!-- Value0:持续时间 Value1:获得免伤百分比 -->
+		<level maxexp="2000" Value0 = "50" Value1 = "100"/>
+		<level maxexp="4000" Value0 = "5" Value1 = "2"/>
+		<level maxexp="8000" Value0 = "5" Value1 = "3"/>
+		<level maxexp="0" Value0 = "5" Value1 = "4"/>
+	</enchant>
+	<enchant id="16842" name="战神" maxlevel="1" desc="战神附体，使野蛮冲撞增加1格距离；该技能无法升级">
+		<!-- Value0:冲撞距离 --> 
+		<level maxexp="0" Value0 = "1"/>
+		<level maxexp="0" Value0 = "1"/>
+		<level maxexp="0" Value0 = "1"/>
+		<level maxexp="0" Value0 = "1"/>
+	</enchant>
+	<enchant id="16843" name="轻咒" maxlevel="4" desc="释放诅咒术有一定概率不消耗魔法值；提升等级可以提高触发概率">
+		<!-- Value0:概率百分比 --> 
+		<level maxexp="2000" Value0 = "20"/>
+		<level maxexp="4000" Value0 = "25"/>
+		<level maxexp="8000" Value0 = "30"/>
+		<level maxexp="0" Value0 = "35"/>
+	</enchant>
+	<enchant id="16844" name="强咒" maxlevel="4" desc="强化诅咒效果，延长诅咒术的时间；提升等级可以额外增加">
+		<!-- Value0:增加时间百分比 --> 
+		<level maxexp="2000"  Value0 = "15"/>
+		<level maxexp="4000"  Value0 = "20"/>
+		<level maxexp="8000"  Value0 = "30"/>
+		<level maxexp="0"  Value0 = "40"/>
+	</enchant>
+	<enchant id="16845" name="腐蚀" maxlevel="4" desc="增强诅咒术降低防御的效果，升级可以提高降低防御的效果">
+			<!-- Value0:减少防御点数 Value1:减少魔防点数 --> 
+		<level maxexp="2000" Value0 = "2"  Value1 = "0"/>
+		<level maxexp="4000" Value0 = "4"  Value1 = "0"/>
+		<level maxexp="8000" Value0 = "6"  Value1 = "0"/>
+		<level maxexp="0" Value0 = "8"  Value1 = "0"/>
+	</enchant>
+</EnchantItems>

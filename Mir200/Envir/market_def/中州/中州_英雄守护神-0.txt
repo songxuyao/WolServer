@@ -1,0 +1,1720 @@
+[@main]
+年轻的英雄啊，你能够在这里找到我，足以证明我们之\
+间有缘。既然有缘相遇，就让我来帮助你实现一个心愿吧。\
+说吧，你想要实现什么样的愿望？\\
+<我要财富/@Treasure>  <我要经验/@Experience>  <我要武器/@Weapon>\
+<我要战袍/@Clothing>  <我要饰品/@Adornment>  <我要升级/@Level>\
+<我要宝石/@Gold>\
+<我要放弃愿望/@Giveup>\
+<真的这么厉害？我看是假的吧……/@exit>
+
+[@Gold]
+哦，你想要宝石啊，没问题，只要你帮我找齐我不小心\
+遗失的七颗龙珠，我就有足够的法力帮你实现这个愿望。\
+不过，愿望的实现结果也有好坏之分，到底会如何？就\
+要看你的诚意和运气了。你将可能获得：\
+一、12颗宝石，三种宝石各4颗；二、15颗宝石，三种宝\
+石各5颗；三、21颗宝石，三种宝石各7颗。\
+<到哪里才能找到那七颗龙珠？/@HowFindLongZhu>\
+<我要许这个愿望/@IWantGold>   <还有其它的愿望吗？/@main>\
+<我已经把龙珠带来了，快帮我实现愿望吧！/@IGet7LongZhu7>
+
+[@IGet7LongZhu7]
+#IF
+CHECKBAGSIZE 21
+#ACT
+#ELSESAY
+你的包裹放不下这么多东西，请整理一下再来！
+<稍后再来/@exit>
+#ELSEACT
+break
+#IF
+CHECKITEM 一星珠 1
+CHECKITEM 二星珠 1
+CHECKITEM 三星珠 1
+CHECKITEM 四星珠 1
+CHECKITEM 五星珠 1
+CHECKITEM 六星珠 1
+CHECKITEM 七星珠 1
+#ACT
+TAKE 一星珠 1
+TAKE 二星珠 1
+TAKE 三星珠 1
+TAKE 四星珠 1
+TAKE 五星珠 1
+TAKE 六星珠 1
+TAKE 七星珠 1
+#ELSESAY
+你的龙珠还没有收集。\\
+<离开/@exit>
+#ELSEACT
+break
+#IF
+RANDOM 100
+#SAY
+恭喜！你得到了宝石的奖励！\\
+<离开/@exit>
+#ACT
+give 红宝石 7
+give 绿宝石 7
+give 蓝宝石 7
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了宝石的奖励！快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 20
+#SAY
+恭喜！你得到了宝石的奖励！\\
+<离开/@exit>
+#ACT
+give 红宝石 5
+give 绿宝石 5
+give 蓝宝石 5
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了宝石的奖励！快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 1
+#SAY
+恭喜！你得到了宝石的奖励！\\
+<离开/@exit>
+#ACT
+give 红宝石 4
+give 绿宝石 4
+give 蓝宝石 4
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了宝石的奖励！快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+
+[@Level]
+哦，你想要升级啊，没问题，只要你帮我找齐我不小心\
+遗失的七颗龙珠，我就有足够的法力帮你实现这个愿望，让\
+你可以直接升一级。不过，请务必注意两点：\
+1、我的能力还不够帮助35级以上的角色直接升级；\
+2、这个愿望有可能会落空，让你一无所获；\\
+<到哪里才能找到那七颗龙珠？/@HowFindLongZhu>\
+<我要许这个愿望/@IWantLevel>   <还有其它的愿望吗？/@main>\
+<我已经把龙珠带来了，快帮我实现愿望吧！/@IGet7LongZhu6>
+
+[@IGet7LongZhu6]
+#IF
+CHECKITEM 一星珠 1
+CHECKITEM 二星珠 1
+CHECKITEM 三星珠 1
+CHECKITEM 四星珠 1
+CHECKITEM 五星珠 1
+CHECKITEM 六星珠 1
+CHECKITEM 七星珠 1
+#ACT
+TAKE 一星珠 1
+TAKE 二星珠 1
+TAKE 三星珠 1
+TAKE 四星珠 1
+TAKE 五星珠 1
+TAKE 六星珠 1
+TAKE 七星珠 1
+#ELSESAY
+你的龙珠还没有收集。\\
+<离开/@exit>
+#ELSEACT
+break
+#IF
+CHECKLEVELEX > 35
+#SAY
+我的能力有限，不能帮助你实现愿望！
+<离开/@exit>
+#ACT
+break
+#IF
+RANDOM 7
+#SAY
+恭喜！你得到了直升一级的奖励！\\
+<离开/@exit>
+#ACT
+CHANGELEVEL + 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了直升一级的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 1
+#SAY
+很可惜，我没能帮助你实现愿望！\\
+<离开/@exit>
+#ACT
+break
+
+[@Adornment]
+#IF
+checkjob warrior
+#SAY
+哦，你想要饰品啊，没问题，只要你帮我找齐我不小心\
+遗失的七颗龙珠，我就有足够的法力帮你实现这个愿望。\
+愿望的实现结果也有好坏之分，你将可能获得：\
+金手镯、幽冥项链、珊瑚戒指、龙戒、光芒手套、祈祷\
+头盔、猛士手镯、绿色项链、力量戒指、圣战戒指、\
+圣战手镯、圣战项链、圣战头盔……其中一件。 \
+<到哪里才能找到那七颗龙珠？/@HowFindLongZhu>\
+<我要许这个愿望/@IWantAdornment>   <还有其它的愿望吗？/@main>\
+<我已经把龙珠带来了，快帮我实现愿望吧！/@IGet7LongZhu51>
+#ACT
+break
+#IF
+checkjob wizard
+#SAY
+哦，你想要饰品啊，没问题，只要你帮我找齐我不小心\
+遗失的七颗龙珠，我就有足够的法力帮你实现这个愿望。\
+愿望的实现结果也有好坏之分，你将可能获得：\
+天珑手镯、生命项链、紫晶戒指、红宝戒指、魔魂戒指\
+、祈祷头盔、龙鳞手镯、恶魔铃、碧螺戒指、法神戒指\
+法神手镯、法神项链、法神头盔……其中一件。 \
+<到哪里才能找到那七颗龙珠？/@HowFindLongZhu>\
+<我要许这个愿望/@IWantAdornment>   <还有其它的愿望吗？/@main>\
+<我已经把龙珠带来了，快帮我实现愿望吧！/@IGet7LongZhu52>
+#ACT
+break
+#IF
+checkjob taoist
+#SAY
+哦，你想要饰品啊，没问题，只要你帮我找齐我不小心\
+遗失的七颗龙珠，我就有足够的法力帮你实现这个愿望。\
+愿望的实现结果也有好坏之分，你将可能获得：\
+楼兰手镯、思诺项链、记忆头盔、白金戒指、天珠项链\
+、心灵护腕、灵魂项链、泰坦戒指、三眼护腕、祈祷头盔、\
+天尊戒指、天尊手镯、天尊项链、天尊头盔……其中一件。\
+<到哪里才能找到那七颗龙珠？/@HowFindLongZhu>\
+<我要许这个愿望/@IWantAdornment>   <还有其它的愿望吗？/@main>\
+<我已经把龙珠带来了，快帮我实现愿望吧！/@IGet7LongZhu53>
+#ACT
+break
+
+[@IGet7LongZhu53]
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSESAY
+你的包裹放不下这么多东西，请整理一下再来！
+<稍后再来/@exit>
+#ELSEACT
+break
+#IF
+CHECKITEM 一星珠 1
+CHECKITEM 二星珠 1
+CHECKITEM 三星珠 1
+CHECKITEM 四星珠 1
+CHECKITEM 五星珠 1
+CHECKITEM 六星珠 1
+CHECKITEM 七星珠 1
+#ACT
+TAKE 一星珠 1
+TAKE 二星珠 1
+TAKE 三星珠 1
+TAKE 四星珠 1
+TAKE 五星珠 1
+TAKE 六星珠 1
+TAKE 七星珠 1
+#ELSESAY
+你的龙珠还没有收集。\\
+<离开/@exit>
+#ELSEACT
+break
+#IF
+RANDOM 200
+#SAY
+恭喜！你得到了天尊头盔\\
+<离开/@exit>
+#ACT
+give 天尊头盔 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了天尊头盔的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 200
+#SAY
+恭喜！你得到了天尊项链\\
+<离开/@exit>
+#ACT
+give 天尊项链 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了天尊项链的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 200
+#SAY
+恭喜！你得到了天尊手镯\\
+<离开/@exit>
+#ACT
+give 天尊手镯 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了天尊手镯的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 200
+#SAY
+恭喜！你得到了天尊戒指\\
+<离开/@exit>
+#ACT
+give 天尊戒指 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了天尊戒指的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 100
+#SAY
+恭喜！你得到了三眼护腕\\
+<离开/@exit>
+#ACT
+give 三眼护腕 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了三眼护腕的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 100
+#SAY
+恭喜！你得到了泰坦戒指\\
+<离开/@exit>
+#ACT
+give 泰坦戒指 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了泰坦戒指的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 100
+#SAY
+恭喜！你得到了灵魂项链\\
+<离开/@exit>
+#ACT
+give 灵魂项链 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了灵魂项链的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 20
+#SAY
+恭喜！你得到了心灵护腕\\
+<离开/@exit>
+#ACT
+give 心灵护腕 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了心灵护腕的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 20
+#SAY
+恭喜！你得到了天珠项链\\
+<离开/@exit>
+#ACT
+give 天珠项链 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了天珠项链的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 10
+#SAY
+恭喜！你得到了白金戒指\\
+<离开/@exit>
+#ACT
+give 白金戒指 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了白金戒指的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 7
+#SAY
+恭喜！你得到了祈祷头盔\\
+<离开/@exit>
+#ACT
+give 祈祷头盔 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了祈祷头盔的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 5
+#SAY
+恭喜！你得到了记忆头盔\\
+<离开/@exit>
+#ACT
+give 记忆头盔 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了记忆头盔的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 5
+#SAY
+恭喜！你得到了思诺项链\\
+<离开/@exit>
+#ACT
+give 思诺项链 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了思诺项链的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 1
+#SAY
+恭喜！你得到了楼兰手镯\\
+<离开/@exit>
+#ACT
+give 楼兰手镯 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了楼兰手镯的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+
+[@IGet7LongZhu52]
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSESAY
+你的包裹放不下这么多东西，请整理一下再来！
+<稍后再来/@exit>
+#ELSEACT
+break
+#IF
+CHECKITEM 一星珠 1
+CHECKITEM 二星珠 1
+CHECKITEM 三星珠 1
+CHECKITEM 四星珠 1
+CHECKITEM 五星珠 1
+CHECKITEM 六星珠 1
+CHECKITEM 七星珠 1
+#ACT
+TAKE 一星珠 1
+TAKE 二星珠 1
+TAKE 三星珠 1
+TAKE 四星珠 1
+TAKE 五星珠 1
+TAKE 六星珠 1
+TAKE 七星珠 1
+#ELSESAY
+你的龙珠还没有收集。\\
+<离开/@exit>
+#ELSEACT
+break
+#IF
+RANDOM 200
+#SAY
+恭喜！你得到了法神头盔\\
+<离开/@exit>
+#ACT
+give 法神头盔 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了法神头盔的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 200
+#SAY
+恭喜！你得到了法神项链\\
+<离开/@exit>
+#ACT
+give 法神项链 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了法神项链的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 200
+#SAY
+恭喜！你得到了法神手镯\\
+<离开/@exit>
+#ACT
+give 法神手镯 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了法神手镯的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 200
+#SAY
+恭喜！你得到了法神戒指\\
+<离开/@exit>
+#ACT
+give 法神戒指 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了法神戒指的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 100
+#SAY
+恭喜！你得到了碧螺戒指\\
+<离开/@exit>
+#ACT
+give 碧螺戒指 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了碧螺戒指的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 100
+#SAY
+恭喜！你得到了恶魔铃\\
+<离开/@exit>
+#ACT
+give 恶魔铃 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了恶魔铃的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 100
+#SAY
+恭喜！你得到了龙鳞手镯\\
+<离开/@exit>
+#ACT
+give 龙鳞手镯 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了龙鳞手镯的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 10
+#SAY
+恭喜！你得到了魔魂手镯\\
+<离开/@exit>
+#ACT
+give 魔魂手镯 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了魔魂手镯的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 10
+#SAY
+恭喜！你得到了红宝石戒指\\
+<离开/@exit>
+#ACT
+give 红宝石戒指 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了红宝石戒指的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 7
+#SAY
+恭喜！你得到了祈祷头盔\\
+<离开/@exit>
+#ACT
+give 祈祷头盔 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了祈祷头盔的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 5
+#SAY
+恭喜！你得到了紫晶戒指\\
+<离开/@exit>
+#ACT
+give 紫晶戒指 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了紫晶戒指的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 5
+#SAY
+恭喜！你得到了生命项链\\
+<离开/@exit>
+#ACT
+give 生命项链 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了生命项链的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 1
+#SAY
+恭喜！你得到了天珑手镯\\
+<离开/@exit>
+#ACT
+give 天珑手镯 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了天珑手镯的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+
+[@IGet7LongZhu51]
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSESAY
+你的包裹放不下这么多东西，请整理一下再来！
+<稍后再来/@exit>
+#ELSEACT
+break
+#IF
+CHECKITEM 一星珠 1
+CHECKITEM 二星珠 1
+CHECKITEM 三星珠 1
+CHECKITEM 四星珠 1
+CHECKITEM 五星珠 1
+CHECKITEM 六星珠 1
+CHECKITEM 七星珠 1
+#ACT
+TAKE 一星珠 1
+TAKE 二星珠 1
+TAKE 三星珠 1
+TAKE 四星珠 1
+TAKE 五星珠 1
+TAKE 六星珠 1
+TAKE 七星珠 1
+#ELSESAY
+你的龙珠还没有收集。\\
+<离开/@exit>
+#ELSEACT
+break
+#IF
+RANDOM 200
+#SAY
+恭喜！你得到了圣战手镯\\
+<离开/@exit>
+#ACT
+give 圣战手镯 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了圣战手镯的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 200
+#SAY
+恭喜！你得到了圣战戒指\\
+<离开/@exit>
+#ACT
+give 圣战戒指 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了圣战戒指的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 200
+#SAY
+恭喜！你得到了圣战项链\\
+<离开/@exit>
+#ACT
+give 圣战项链 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了圣战项链的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 100
+#SAY
+恭喜！你得到了绿色项链\\
+<离开/@exit>
+#ACT
+give 绿色项链 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了绿色项链的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 100
+#SAY
+恭喜！你得到了猛士手镯\\
+<离开/@exit>
+#ACT
+give 猛士手镯 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了猛士手镯的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 100
+#SAY
+恭喜！你得到了力量戒指\\
+<离开/@exit>
+#ACT
+give 力量戒指 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了力量戒指的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 100
+#SAY
+恭喜！你得到了黑铁头盔\\
+<离开/@exit>
+#ACT
+give 黑铁头盔 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了黑铁头盔的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 10
+#SAY
+恭喜！你得到了龙戒\\
+<离开/@exit>
+#ACT
+give 龙戒 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了龙戒的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 7
+#SAY
+恭喜！你得到了祈祷头盔\\
+<离开/@exit>
+#ACT
+give 祈祷头盔 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了祈祷头盔的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 6
+#SAY
+恭喜！你得到了记忆项链\\
+<离开/@exit>
+#ACT
+give 记忆项链 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了记忆项链的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 6
+#SAY
+恭喜！你得到了幽冥项链\\
+<离开/@exit>
+#ACT
+give 幽冥项链 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了幽冥项链的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 5
+#SAY
+恭喜！你得到了记忆头盔\\
+<离开/@exit>
+#ACT
+give 记忆头盔 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了记忆头盔的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 1
+#SAY
+恭喜！你得到了珊瑚戒指\\
+<离开/@exit>
+#ACT
+give 珊瑚戒指 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了珊瑚戒指的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+
+[@Clothing]
+#IF
+gender MAN
+checkjob warrior
+#SAY
+哦，你想要战袍啊，没问题，只要你帮我找齐我不小心\
+遗失的七颗龙珠，我就有足够的法力帮你实现这个愿望。\
+记住，愿望的实现结果也有好坏之分，到底会如何？就\
+要看你的诚意和运气了。你将可能获得：\
+一、布衣(男)；　二、中盔(男)； 　　三、重盔(男)\
+四、战神(男)；　五、金鹏宝甲(男)； 六、天魔战甲\
+<到哪里才能找到那七颗龙珠？/@HowFindLongZhu>\
+<我要许这个愿望/@IWantClothing>   <还有其它的愿望吗？/@main>\
+<我已经把龙珠带来了，快帮我实现愿望吧！/@IGet7LongZhu41>
+#ACT
+break
+#IF
+gender WOMAN
+checkjob warrior
+#SAY
+哦，你想要战袍啊，没问题，只要你帮我找齐我不小心\
+遗失的七颗龙珠，我就有足够的法力帮你实现这个愿望。\
+记住，愿望的实现结果也有好坏之分，到底会如何？就\
+要看你的诚意和运气了。你将可能获得：\
+一、布衣(男)；　二、中盔(女)； 　　三、重盔(女)\
+四、战神(女)；　五、金鹏宝甲(女)； 六、圣战战甲\
+<到哪里才能找到那七颗龙珠？/@HowFindLongZhu>\
+<我要许这个愿望/@IWantClothing>   <还有其它的愿望吗？/@main>\
+<我已经把龙珠带来了，快帮我实现愿望吧！/@IGet7LongZhu42>
+#ACT
+break
+#IF
+gender MAN
+checkjob wizard
+#SAY
+哦，你想要战袍啊，没问题，只要你帮我找齐我不小心\
+遗失的七颗龙珠，我就有足够的法力帮你实现这个愿望。\
+记住，愿望的实现结果也有好坏之分，到底会如何？就\
+要看你的诚意和运气了。你将可能获得：\
+一、布衣(男)；　　 二、中盔(男)； 　  三、魔袍(男)\
+四、恶魔长袍(男)； 五、金鹏宝甲(男)； 六、法神披风\
+<到哪里才能找到那七颗龙珠？/@HowFindLongZhu>\
+<我要许这个愿望/@IWantClothing>   <还有其它的愿望吗？/@main>\
+<我已经把龙珠带来了，快帮我实现愿望吧！/@IGet7LongZhu43>
+#ACT
+break
+#IF
+gender WOMAN
+checkjob wizard
+#SAY
+哦，你想要战袍啊，没问题，只要你帮我找齐我不小心\
+遗失的七颗龙珠，我就有足够的法力帮你实现这个愿望。\
+记住，愿望的实现结果也有好坏之分，到底会如何？就\
+要看你的诚意和运气了。你将可能获得：\
+一、布衣(男)；　　 二、中盔(女)； 　  三、魔袍(女)\
+四、恶魔长袍(女)； 五、金鹏宝甲(女)； 六、法神羽衣\
+<到哪里才能找到那七颗龙珠？/@HowFindLongZhu>\
+<我要许这个愿望/@IWantClothing>   <还有其它的愿望吗？/@main>\
+<我已经把龙珠带来了，快帮我实现愿望吧！/@IGet7LongZhu44>
+#ACT
+break
+#IF
+gender MAN
+checkjob taoist
+#SAY
+哦，你想要战袍啊，没问题，只要你帮我找齐我不小心\
+遗失的七颗龙珠，我就有足够的法力帮你实现这个愿望。\
+记住，愿望的实现结果也有好坏之分，到底会如何？就\
+要看你的诚意和运气了。你将可能获得：\
+一、布衣(男)；　　 二、中盔(男)； 　  三、灵魂战甲(男)\
+四、幽灵战甲(男)； 五、金鹏宝甲(男)； 六、天尊道袍\
+<到哪里才能找到那七颗龙珠？/@HowFindLongZhu>\
+<我要许这个愿望/@IWantClothing>   <还有其它的愿望吗？/@main>\
+<我已经把龙珠带来了，快帮我实现愿望吧！/@IGet7LongZhu45>
+#ACT
+break
+#IF
+gender WOMAN
+checkjob taoist
+#SAY
+哦，你想要战袍啊，没问题，只要你帮我找齐我不小心\
+遗失的七颗龙珠，我就有足够的法力帮你实现这个愿望。\
+记住，愿望的实现结果也有好坏之分，到底会如何？就\
+要看你的诚意和运气了。你将可能获得：\
+一、布衣(男)；　　 二、中盔(女)； 　  三、灵魂战甲(女)\
+四、幽灵战甲(女)； 五、金鹏宝甲(女)； 六、天师道袍\
+<到哪里才能找到那七颗龙珠？/@HowFindLongZhu>\
+<我要许这个愿望/@IWantClothing>   <还有其它的愿望吗？/@main>\
+<我已经把龙珠带来了，快帮我实现愿望吧！/@IGet7LongZhu46>
+#ACT
+break
+
+[@IGet7LongZhu46]
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSESAY
+你的包裹放不下这么多东西，请整理一下再来！
+<稍后再来/@exit>
+#ELSEACT
+break
+#IF
+CHECKITEM 一星珠 1
+CHECKITEM 二星珠 1
+CHECKITEM 三星珠 1
+CHECKITEM 四星珠 1
+CHECKITEM 五星珠 1
+CHECKITEM 六星珠 1
+CHECKITEM 七星珠 1
+#ACT
+TAKE 一星珠 1
+TAKE 二星珠 1
+TAKE 三星珠 1
+TAKE 四星珠 1
+TAKE 五星珠 1
+TAKE 六星珠 1
+TAKE 七星珠 1
+#ELSESAY
+你的龙珠还没有收集。\\
+<离开/@exit>
+#ELSEACT
+break
+#IF
+RANDOM 150
+#SAY
+恭喜！你得到了天师道袍\\
+<离开/@exit>
+#ACT
+give 天师道袍 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了天师道袍的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 60
+#SAY
+恭喜！你得到了金鹏宝甲(女)\\
+<离开/@exit>
+#ACT
+give 金鹏宝甲(女) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了金鹏宝甲(女)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 20
+#SAY
+恭喜！你得到了灵魂战甲(女)\\
+<离开/@exit>
+#ACT
+give 灵魂战甲(女) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了灵魂战甲(女)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 20
+#SAY
+恭喜！你得到了中盔(女)\\
+<离开/@exit>
+#ACT
+give 中盔(女) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了中盔(女)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 2
+#SAY
+恭喜！你得到了幽灵战甲(女)\\
+<离开/@exit>
+#ACT
+give 幽灵战甲(女) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了幽灵战甲(女)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 1
+#SAY
+恭喜！你得到了粗布衣(女)\\
+<离开/@exit>
+#ACT
+give 粗布衣(女) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了粗布衣(女)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+
+[@IGet7LongZhu45]
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSESAY
+你的包裹放不下这么多东西，请整理一下再来！
+<稍后再来/@exit>
+#ELSEACT
+break
+#IF
+CHECKITEM 一星珠 1
+CHECKITEM 二星珠 1
+CHECKITEM 三星珠 1
+CHECKITEM 四星珠 1
+CHECKITEM 五星珠 1
+CHECKITEM 六星珠 1
+CHECKITEM 七星珠 1
+#ACT
+TAKE 一星珠 1
+TAKE 二星珠 1
+TAKE 三星珠 1
+TAKE 四星珠 1
+TAKE 五星珠 1
+TAKE 六星珠 1
+TAKE 七星珠 1
+#ELSESAY
+你的龙珠还没有收集。\\
+<离开/@exit>
+#ELSEACT
+break
+#IF
+RANDOM 150
+#SAY
+恭喜！你得到了法神披风\\
+<离开/@exit>
+#ACT
+give 法神披风 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了法神披风的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 60
+#SAY
+恭喜！你得到了金鹏宝甲(男)\\
+<离开/@exit>
+#ACT
+give 金鹏宝甲(男) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了金鹏宝甲(男)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 20
+#SAY
+恭喜！你得到了灵魂战甲(男)\\
+<离开/@exit>
+#ACT
+give 灵魂战甲(男) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了灵魂战甲(男)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 20
+#SAY
+恭喜！你得到了中盔(男)\\
+<离开/@exit>
+#ACT
+give 中盔(男) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了中盔(男)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 2
+#SAY
+恭喜！你得到了幽灵战甲(男)\\
+<离开/@exit>
+#ACT
+give 幽灵战甲(男) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了幽灵战甲(男)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 1
+#SAY
+恭喜！你得到了粗布衣(男)\\
+<离开/@exit>
+#ACT
+give 粗布衣(男) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了粗布衣(男)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+
+[@IGet7LongZhu44]
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSESAY
+你的包裹放不下这么多东西，请整理一下再来！
+<稍后再来/@exit>
+#ELSEACT
+break
+#IF
+CHECKITEM 一星珠 1
+CHECKITEM 二星珠 1
+CHECKITEM 三星珠 1
+CHECKITEM 四星珠 1
+CHECKITEM 五星珠 1
+CHECKITEM 六星珠 1
+CHECKITEM 七星珠 1
+#ACT
+TAKE 一星珠 1
+TAKE 二星珠 1
+TAKE 三星珠 1
+TAKE 四星珠 1
+TAKE 五星珠 1
+TAKE 六星珠 1
+TAKE 七星珠 1
+#ELSESAY
+你的龙珠还没有收集。\\
+<离开/@exit>
+#ELSEACT
+break
+#IF
+RANDOM 150
+#SAY
+恭喜！你得到了法神羽衣\\
+<离开/@exit>
+#ACT
+give 法神羽衣 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了法神羽衣的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 60
+#SAY
+恭喜！你得到了金鹏宝甲(女)\\
+<离开/@exit>
+#ACT
+give 金鹏宝甲(女) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了金鹏宝甲(女)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 20
+#SAY
+恭喜！你得到了魔袍(女)\\
+<离开/@exit>
+#ACT
+give 魔袍(女) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了魔袍(女)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 20
+#SAY
+恭喜！你得到了中盔(女)\\
+<离开/@exit>
+#ACT
+give 中盔(女) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了中盔(女)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 2
+#SAY
+恭喜！你得到了恶魔长袍(女)\\
+<离开/@exit>
+#ACT
+give 恶魔长袍(女) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了恶魔长袍(女)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 1
+#SAY
+恭喜！你得到了粗布衣(女)\\
+<离开/@exit>
+#ACT
+give 粗布衣(女) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了粗布衣(女)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+
+[@IGet7LongZhu43]
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSESAY
+你的包裹放不下这么多东西，请整理一下再来！
+<稍后再来/@exit>
+#ELSEACT
+break
+#IF
+CHECKITEM 一星珠 1
+CHECKITEM 二星珠 1
+CHECKITEM 三星珠 1
+CHECKITEM 四星珠 1
+CHECKITEM 五星珠 1
+CHECKITEM 六星珠 1
+CHECKITEM 七星珠 1
+#ACT
+TAKE 一星珠 1
+TAKE 二星珠 1
+TAKE 三星珠 1
+TAKE 四星珠 1
+TAKE 五星珠 1
+TAKE 六星珠 1
+TAKE 七星珠 1
+#ELSESAY
+你的龙珠还没有收集。\\
+<离开/@exit>
+#ELSEACT
+break
+#IF
+RANDOM 150
+#SAY
+恭喜！你得到了法神披风\\
+<离开/@exit>
+#ACT
+give 法神披风 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了法神披风的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 60
+#SAY
+恭喜！你得到了金鹏宝甲(男)\\
+<离开/@exit>
+#ACT
+give 金鹏宝甲(男) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了金鹏宝甲(男)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 20
+#SAY
+恭喜！你得到了魔袍(男)\\
+<离开/@exit>
+#ACT
+give 魔袍(男) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了魔袍(男)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 20
+#SAY
+恭喜！你得到了中盔(男)\\
+<离开/@exit>
+#ACT
+give 中盔(男) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了中盔(男)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 2
+#SAY
+恭喜！你得到了恶魔长袍(男)\\
+<离开/@exit>
+#ACT
+give 恶魔长袍(男) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了恶魔长袍(男)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 1
+#SAY
+恭喜！你得到了粗布衣(男)\\
+<离开/@exit>
+#ACT
+give 粗布衣(男) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了粗布衣(男)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+
+[@IGet7LongZhu42]
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSESAY
+你的包裹放不下这么多东西，请整理一下再来！
+<稍后再来/@exit>
+#ELSEACT
+break
+#IF
+CHECKITEM 一星珠 1
+CHECKITEM 二星珠 1
+CHECKITEM 三星珠 1
+CHECKITEM 四星珠 1
+CHECKITEM 五星珠 1
+CHECKITEM 六星珠 1
+CHECKITEM 七星珠 1
+#ACT
+TAKE 一星珠 1
+TAKE 二星珠 1
+TAKE 三星珠 1
+TAKE 四星珠 1
+TAKE 五星珠 1
+TAKE 六星珠 1
+TAKE 七星珠 1
+#ELSESAY
+你的龙珠还没有收集。\\
+<离开/@exit>
+#ELSEACT
+break
+#IF
+RANDOM 150
+#SAY
+恭喜！你得到了圣战战甲\\
+<离开/@exit>
+#ACT
+give 圣战战甲 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了圣战战甲的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 60
+#SAY
+恭喜！你得到了金鹏宝甲(女)\\
+<离开/@exit>
+#ACT
+give 金鹏宝甲(女) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了金鹏宝甲(女)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 20
+#SAY
+恭喜！你得到了重盔(女)\\
+<离开/@exit>
+#ACT
+give 重盔(女) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了重盔(女)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 20
+#SAY
+恭喜！你得到了中盔(女)\\
+<离开/@exit>
+#ACT
+give 中盔(女) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了中盔(女)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 2
+#SAY
+恭喜！你得到了战神(女)\\
+<离开/@exit>
+#ACT
+give 战神(女) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了战神(女)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 1
+#SAY
+恭喜！你得到了粗布衣(女)\\
+<离开/@exit>
+#ACT
+give 粗布衣(女) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了粗布衣(女)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+
+[@IGet7LongZhu41]
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSESAY
+你的包裹放不下这么多东西，请整理一下再来！
+<稍后再来/@exit>
+#ELSEACT
+break
+#IF
+CHECKITEM 一星珠 1
+CHECKITEM 二星珠 1
+CHECKITEM 三星珠 1
+CHECKITEM 四星珠 1
+CHECKITEM 五星珠 1
+CHECKITEM 六星珠 1
+CHECKITEM 七星珠 1
+#ACT
+TAKE 一星珠 1
+TAKE 二星珠 1
+TAKE 三星珠 1
+TAKE 四星珠 1
+TAKE 五星珠 1
+TAKE 六星珠 1
+TAKE 七星珠 1
+#ELSESAY
+你的龙珠还没有收集。\\
+<离开/@exit>
+#ELSEACT
+break
+#IF
+RANDOM 150
+#SAY
+恭喜！你得到了天魔战甲\\
+<离开/@exit>
+#ACT
+give 天魔战甲 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了天魔战甲的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 60
+#SAY
+恭喜！你得到了金鹏宝甲(男)\\
+<离开/@exit>
+#ACT
+give 金鹏宝甲(男) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了金鹏宝甲(男)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 20
+#SAY
+恭喜！你得到了重盔(男)\\
+<离开/@exit>
+#ACT
+give 重盔(男) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了重盔(男)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 20
+#SAY
+恭喜！你得到了中盔(男)\\
+<离开/@exit>
+#ACT
+give 中盔(男) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了中盔(男)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 2
+#SAY
+恭喜！你得到了战神(男)\\
+<离开/@exit>
+#ACT
+give 战神(男) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了战神(男)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 1
+#SAY
+恭喜！你得到了粗布衣(男)\\
+<离开/@exit>
+#ACT
+give 粗布衣(男) 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了粗布衣(男)的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+
+[@Weapon]
+#IF
+checkjob warrior
+#SAY
+哦，你想要武器啊，没问题，只要你帮我找齐我不小心\
+遗失的七颗龙珠，我就有足够的法力帮你实现这个愿望。\
+不过，愿望的实现结果也有好坏之分，到底会如何？就\
+要看你的诚意和运气了。你将可能获得：\
+一、乌木剑；二、修罗战斧； 三、铜锤\
+四、井中月；五、裁决；\
+<到哪里才能找到那七颗龙珠？/@HowFindLongZhu>\
+<我要许这个愿望/@IWantWeapon>   <还有其它的愿望吗？/@main>\
+<我已经把龙珠带来了，快帮我实现愿望吧！/@IGet7LongZhu31>
+#ACT
+break
+#IF
+checkjob wizard
+#SAY
+哦，你想要武器啊，没问题，只要你帮我找齐我不小心\
+遗失的七颗龙珠，我就有足够的法力帮你实现这个愿望。\
+不过，愿望的实现结果也有好坏之分，到底会如何？就\
+要看你的诚意和运气了。你将可能获得：\
+一、乌木剑；二、狼牙棒； 三、魔法权杖\
+四、骨玉；　五、血饮；\
+<到哪里才能找到那七颗龙珠？/@HowFindLongZhu>\
+<我要许这个愿望/@IWantWeapon>   <还有其它的愿望吗？/@main>\
+<我已经把龙珠带来了，快帮我实现愿望吧！/@IGet7LongZhu32>
+#ACT
+break
+#IF
+checkjob taoist
+#SAY
+哦，你想要武器啊，没问题，只要你帮我找齐我不小心\
+遗失的七颗龙珠，我就有足够的法力帮你实现这个愿望。\
+不过，愿望的实现结果也有好坏之分，到底会如何？就\
+要看你的诚意和运气了。你将可能获得：\
+一、乌木剑；二、银蛇剑； 三、离别钩\
+四、无极；　五、龙纹；\
+<到哪里才能找到那七颗龙珠？/@HowFindLongZhu>\
+<我要许这个愿望/@IWantWeapon>   <还有其它的愿望吗？/@main>\
+<我已经把龙珠带来了，快帮我实现愿望吧！/@IGet7LongZhu33>
+#ACT
+break
+
+[@IGet7LongZhu33]
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSESAY
+你的包裹放不下这么多东西，请整理一下再来！
+<稍后再来/@exit>
+#ELSEACT
+break
+#IF
+CHECKITEM 一星珠 1
+CHECKITEM 二星珠 1
+CHECKITEM 三星珠 1
+CHECKITEM 四星珠 1
+CHECKITEM 五星珠 1
+CHECKITEM 六星珠 1
+CHECKITEM 七星珠 1
+#ACT
+TAKE 一星珠 1
+TAKE 二星珠 1
+TAKE 三星珠 1
+TAKE 四星珠 1
+TAKE 五星珠 1
+TAKE 六星珠 1
+TAKE 七星珠 1
+#ELSESAY
+你的龙珠还没有收集。\\
+<离开/@exit>
+#ELSEACT
+break
+#IF
+RANDOM 150
+#SAY
+恭喜！你得到了龙纹\\
+<离开/@exit>
+#ACT
+give 龙纹 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了龙纹的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 15
+#SAY
+恭喜！你得到了无极\\
+<离开/@exit>
+#ACT
+give 无极 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了无极的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 3
+#SAY
+恭喜！你得到了银蛇剑\\
+<离开/@exit>
+#ACT
+give 银蛇剑 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了银蛇剑的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 2
+#SAY
+恭喜！你得到了离别钩\\
+<离开/@exit>
+#ACT
+give 离别钩 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了离别钩的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 1
+#SAY
+恭喜！你得到了乌木剑\\
+<离开/@exit>
+#ACT
+give 乌木剑 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了乌木剑的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+
+[@IGet7LongZhu32]
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSESAY
+你的包裹放不下这么多东西，请整理一下再来！
+<稍后再来/@exit>
+#ELSEACT
+break
+#IF
+CHECKITEM 一星珠 1
+CHECKITEM 二星珠 1
+CHECKITEM 三星珠 1
+CHECKITEM 四星珠 1
+CHECKITEM 五星珠 1
+CHECKITEM 六星珠 1
+CHECKITEM 七星珠 1
+#ACT
+TAKE 一星珠 1
+TAKE 二星珠 1
+TAKE 三星珠 1
+TAKE 四星珠 1
+TAKE 五星珠 1
+TAKE 六星珠 1
+TAKE 七星珠 1
+#ELSESAY
+你的龙珠还没有收集。\\
+<离开/@exit>
+#ELSEACT
+break
+#IF
+RANDOM 150
+#SAY
+恭喜！你得到了血饮\\
+<离开/@exit>
+#ACT
+give 血饮 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了血饮的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 60
+#SAY
+恭喜！你得到了骨玉\\
+<离开/@exit>
+#ACT
+give 骨玉 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了骨玉的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 3
+#SAY
+恭喜！你得到了狼牙棒\\
+<离开/@exit>
+#ACT
+give 狼牙棒 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了狼牙棒的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 2
+#SAY
+恭喜！你得到了魔法权杖\\
+<离开/@exit>
+#ACT
+give 魔法权杖 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了魔法权杖的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 1
+#SAY
+恭喜！你得到了乌木剑\\
+<离开/@exit>
+#ACT
+give 乌木剑 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了乌木剑的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+
+[@IGet7LongZhu31]
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSESAY
+你的包裹放不下这么多东西，请整理一下再来！
+<稍后再来/@exit>
+#ELSEACT
+break
+#IF
+CHECKITEM 一星珠 1
+CHECKITEM 二星珠 1
+CHECKITEM 三星珠 1
+CHECKITEM 四星珠 1
+CHECKITEM 五星珠 1
+CHECKITEM 六星珠 1
+CHECKITEM 七星珠 1
+#ACT
+TAKE 一星珠 1
+TAKE 二星珠 1
+TAKE 三星珠 1
+TAKE 四星珠 1
+TAKE 五星珠 1
+TAKE 六星珠 1
+TAKE 七星珠 1
+#ELSESAY
+你的龙珠还没有收集。\\
+<离开/@exit>
+#ELSEACT
+break
+#IF
+RANDOM 150
+#SAY
+恭喜！你得到了裁决\\
+<离开/@exit>
+#ACT
+give 裁决 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了裁决的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 10
+#SAY
+恭喜！你得到了炼狱战斧\\
+<离开/@exit>
+#ACT
+give 炼狱战斧 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了炼狱战斧的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 3
+#SAY
+恭喜！你得到了井中月\\
+<离开/@exit>
+#ACT
+give 井中月 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了井中月的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 2
+#SAY
+恭喜！你得到了铜锤\\
+<离开/@exit>
+#ACT
+give 铜锤 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了铜锤的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 1
+#SAY
+恭喜！你得到了乌木剑\\
+<离开/@exit>
+#ACT
+give 乌木剑 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了乌木剑的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+
+[@Experience]
+哦，你想要经验啊，没问题，只要你帮我找齐我不小心\
+遗失的七颗龙珠，我就有足够的法力帮你实现这个愿望。\
+不过，愿望的实现结果也有好坏之分，到底会如何？就\
+要看你的诚意和运气了。你将可能获得：\
+一、 10万经验；二、 20万经验；三、 40万经验；\
+四、 80万经验；五、100万经验；四、300万经验\
+<到哪里才能找到那七颗龙珠？/@HowFindLongZhu>\
+<我要许这个愿望/@IWantExperience> <还有其它的愿望吗？/@main>\
+<我已经把龙珠带来了，快帮我实现愿望吧！/@IGet7LongZhu22>
+
+[@IGet7LongZhu22]
+#IF
+CHECKITEM 一星珠 1
+CHECKITEM 二星珠 1
+CHECKITEM 三星珠 1
+CHECKITEM 四星珠 1
+CHECKITEM 五星珠 1
+CHECKITEM 六星珠 1
+CHECKITEM 七星珠 1
+#ACT
+TAKE 一星珠 1
+TAKE 二星珠 1
+TAKE 三星珠 1
+TAKE 四星珠 1
+TAKE 五星珠 1
+TAKE 六星珠 1
+TAKE 七星珠 1
+#ELSESAY
+你的龙珠还没有收集。\\
+<离开/@exit>
+#ELSEACT
+break
+#IF
+RANDOM 100
+#SAY
+恭喜！你得到了1000000经验值\\
+<离开/@exit>
+#ACT
+CHANGEEXP + 1000000
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了1000000经验值的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 50
+#SAY
+恭喜！你得到了800000经验值\\
+<离开/@exit>
+#ACT
+CHANGEEXP + 800000
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了800000经验值的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 50
+#SAY
+恭喜！你得到了400000经验值\\
+<离开/@exit>
+#ACT
+CHANGEEXP + 400000
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了400000经验值的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 6
+#SAY
+恭喜！你得到了200000经验值\\
+<离开/@exit>
+#ACT
+CHANGEEXP + 200000
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了200000经验值的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 1
+#SAY
+恭喜！你得到了100000经验值\\
+<离开/@exit>
+#ACT
+CHANGEEXP + 100000
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了100000经验值的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+
+[@Treasure]
+哦，你想要财富啊，没问题，只要你帮我找齐我不小心\
+遗失的七颗龙珠，我就有足够的法力帮你实现这个愿望。\
+不过，愿望的实现结果也有好坏之分，到底会如何？就\
+要看你的诚意和运气了。你将可能获得：\
+一、20万金币；二、30万金币；三、50万金币；\
+四、80万金币；五、 1根金条；六、 1块金砖\
+<到哪里才能找到那七颗龙珠？/@HowFindLongZhu>\
+<我要许这个愿望/@IWantTreasure>   <还有其它的愿望吗？/@main>\
+<我已经把龙珠带来了，快帮我实现愿望吧！/@IGet7LongZhu11>
+
+[@IGet7LongZhu11]
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSESAY
+你的包裹放不下这么多东西，请整理一下再来！
+<稍后再来/@exit>
+#ELSEACT
+break
+#IF
+CHECKITEM 一星珠 1
+CHECKITEM 二星珠 1
+CHECKITEM 三星珠 1
+CHECKITEM 四星珠 1
+CHECKITEM 五星珠 1
+CHECKITEM 六星珠 1
+CHECKITEM 七星珠 1
+#ACT
+TAKE 一星珠 1
+TAKE 二星珠 1
+TAKE 三星珠 1
+TAKE 四星珠 1
+TAKE 五星珠 1
+TAKE 六星珠 1
+TAKE 七星珠 1
+#ELSESAY
+你的龙珠还没有收集。\\
+<离开/@exit>
+#ELSEACT
+break
+#IF
+RANDOM 30
+#SAY
+恭喜！你得到了金砖\\
+<离开/@exit>
+#ACT
+give 金砖 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了金砖的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 20
+#SAY
+恭喜！你得到了金砖\\
+<离开/@exit>
+#ACT
+give 金条 1
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了金条的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 10
+#SAY
+恭喜！你得到了800000金币\\
+<离开/@exit>
+#ACT
+give 金币 800000
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了800000金币的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 3
+#SAY
+恭喜！你得到了300000金币\\
+<离开/@exit>
+#ACT
+give 金币 300000
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了300000金币的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+#IF
+RANDOM 1
+#SAY
+恭喜！你得到了200000金币\\
+<离开/@exit>
+#ACT
+give 金币 200000
+SENDMSG 10 七颗龙珠绽放出奇异的光芒，%s获得了200000金币的奖励。快到王城擂台“英雄守护神”处许下你的愿望，祝你梦想成真！
+break
+
+[@Giveup]
+你可以选择放弃你的愿望，重新许个愿！\
+你考虑好了吗？\\
+<考虑好了！我要放弃愿望。/@Giveup1>\
+<让我再想想/@exit>
+
+[@Giveup1]
+#IF
+CHECKLEVELEX > 0
+#SAY
+现在你可以重新许个愿了！\\
+<我明白了！/@main>
+#ACT
+SET [2] 0
+break
+
+[@IWantTreasure]
+#IF
+CHECK [2] 1
+#SAY
+你已经许过愿望了，快去寻找龙珠吧。\\
+<离开/@exit>
+#ACT
+break
+#ELSEACT
+SET [2] 1
+break
+#ELSESAY
+我已经记下了你的愿望，快去寻找龙珠吧！\\
+<如何寻找龙珠/@HowFindLongZhu>\
+<离开/@exit>
+
+[@HowFindLongZhu]
+“一星珠”散落在各大地表\
+“二星珠”散落在将军坟\
+“三星珠”散落在逆魔古刹\
+“四星珠”散落在机关洞\
+“五星珠”散落在蛇洞\
+“六星珠”散落在通天塔\
+“七星珠”散落在铁血魔城\
+你现在已经知道了七颗龙珠的秘密，快去找到它们，实现你的愿望吧！\
+<离开/@exit>

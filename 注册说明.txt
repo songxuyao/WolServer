@@ -1,0 +1,1 @@
+打开WolServer.exe获取机器码,SeDll.dll文件请不要删除

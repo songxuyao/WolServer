@@ -1,0 +1,38 @@
+[@落霞岛_铁匠1]
+{
+
+#IF
+EQUAL $Task(4) 1
+#SAY
+可以完成的任务：\
+<新手任务--打听挖矿/@_RW_fulfilTaskDesp1>\\
+<离开/@exit>
+#ACT
+break
+#ELSESAY
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+[@_RW_fulfilTaskDesp1]
+年轻人，你帮屠夫阿三磨好刀子了啊，他刚才还在我面前夸\
+你能干呢！你找我有什么事情吗？\
+<打听挖矿/@_RW_fulfilTask1_1>                <没事/@exit>
+
+[@_RW_fulfilTask1_1]
+#IF
+EQUAL $Task(4) 1
+#SAY
+你可以在我这里购买鹤嘴锄，装备上后去落霞的东南部的矿\
+洞（476，400）中，攻击矿洞的墙壁就可以获得矿石了，回\
+来卖给我，我会根据纯度收购的。你现在去杂货店掌柜那里\
+看看，他会教你如何加好友的。\
+<离开/@exit>  <返回/@main>
+#ACT
+EndTask 4
+CHANGEEXP + 2200
+BINDGOLD + 1000
+AddTask 5
+SENDMSG 5 您成功增加了1000绑定金币。
+break
+
+}

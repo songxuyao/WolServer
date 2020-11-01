@@ -1,0 +1,32 @@
+[@main]
+    我是中州巡捕，专门负责将百姓丢失的东西归还给大家，\
+请问有什么可以帮助您的？\\
+　　<Color=yellow 如果领不到，请放出元神再尝试领一次。>\
+    <领取物品/@getSp>
+
+[@getSp]
+#IF
+CHECKNAMELIST ..\QuestDiary\数据文件\临时数据\灵符高级修炼.txt
+#ACT
+DELNAMELIST ..\QuestDiary\数据文件\临时数据\灵符高级修炼.txt
+ReadRandomStr ..\QuestDiary\数据文件\装备品级\圣王上.txt S7
+GIVE $STR(S7) 1
+SENDMSG 5 你本次通过灵符高级修炼获得了<$STR(S7)>
+break
+#SAY
+    恭喜你通过灵符高级修炼，获得了{color=green <$STR(S7)>}奖励。\\
+    <离开/@exit>\
+#IF
+CHECKNAMELIST ..\QuestDiary\数据文件\临时数据\灵符低级修炼.txt
+#ACT
+DELNAMELIST ..\QuestDiary\数据文件\临时数据\灵符低级修炼.txt
+ReadRandomStr ..\QuestDiary\数据文件\装备品级\圣王中.txt S7
+GIVE $STR(S7) 1
+SENDMSG 5 你本次通过灵符低级修炼获得了<$STR(S7)>
+break
+#SAY
+    恭喜你通过灵符低级修炼，获得了{color=green <$STR(S7)>}奖励。\\
+    <离开/@exit>\
+#ELSEACT
+SENDMSG 5 你没有东西可领取。
+break

@@ -1,0 +1,75 @@
+[@中州_药店]
+{
+
+#IF
+EQUAL $Task(21) 1
+#SAY
+可以完成的任务：\
+<新手任务--带上充足的药品/@_RW_fulypskilTaskDesp>\\
+<离开/@exit>
+#ACT
+break
+#ELSESAY
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+[@_RW_fulypskilTaskDesp]
+    这些基本的药品这次免费提供给你，以后如果还需要，\
+可以在我这里购买。\
+    <谢谢/@_RW_fulydfilTask305>                <离开/@exit>
+
+[@_RW_fulydfilTask305]
+#IF
+EQUAL $Task(21) 1
+#SAY
+    去找杂货铺掌柜吧，他那里的商品，一定会让你大开眼\
+界的。\
+    能够在同一地图内随机移动的“随机卷轴”；\
+    能够迅速逃离地下城的“地牢卷轴”；\
+    能够瞬间修复武器的“修复神油”；\
+    能够供道士施法用的“道符”；\
+    去找他吧，说不定他会送你点儿什么。\
+    <离开/@exit>\
+#ACT
+#ELSESAY
+您当前没有可以接的任务。\\
+<离开/@exit>
+#ELSEACT
+break
+#IF
+checkjob warrior
+#ACT
+EndTask 21
+BINDGOLD + 5000
+CHANGEEXP + 50000
+GIVE 超级金创药 3
+GIVE 魔法药（中）包 1
+AddTask 22
+SENDMSG 5 你成功增加了5000绑定金币。
+break
+#IF
+checkjob wizard
+#ACT
+EndTask 21
+BINDGOLD + 5000
+CHANGEEXP + 50000
+GIVE 超级魔法药 3
+GIVE 金创药（中）包 1
+AddTask 22
+SENDMSG 5 你成功增加了5000绑定金币。
+break
+#IF
+checkjob taoist
+#ACT
+EndTask 21
+BINDGOLD + 5000
+CHANGEEXP + 50000
+GIVE 超级金创药 2
+GIVE 超级魔法药 2
+GIVE 绿色毒药(大量) 1
+GIVE 红色毒药(大量) 1
+AddTask 22
+SENDMSG 5 你成功增加了5000绑定金币。
+break
+
+}

@@ -1,0 +1,120 @@
+[@main]
+
+我是能干的老兵，你找我有什么事情吗？\
+<想快速到达其他地区/@main1>    <记录回城点/@_LB_homePos>     <挑战炼狱/@_LB_newlianyu>  \
+<可接任务/@_RW_entry>    <没事/@exit>
+
+[@_RW_entry]
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+[@main1]
+这是国王为了对抗邪恶力量而特别开辟的骑兵驿道，能够\
+以最快的速度帮助你往返于各个地区 。不过为此你必须付\
+出一些代价做为使用费用。你确定要使用这条驿道吗？\
+<中州关隘/@cpass>\
+<去死水沼泽入口/@deadwater>\
+<蛇谷/@snake>\
+<逆魔古刹/@plain>\
+<不去了/@exit>
+
+[@plain]
+你想到逆魔古刹去吗？\
+付1000金币，我可以送你过去，你准备好了吗？\\
+<准备好了，带我过去/@go>\
+<我不想去/@exit>
+
+[@go]
+#IF
+CHECKBINDGOLD > 999
+#ACT
+BINDGOLD - 1000
+MAPMOVE 3 366 714
+break
+#IF
+CHECKGOLD 1000
+#ACT
+TAKE 金币 1000
+MAPMOVE 3 366 714
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@snake]
+要去蛇谷吗？\
+500金币就可以了，没有的话就自己走着去吧。\\
+<付钱/@snake1> \
+<没钱/@snake2>
+
+[@snake1]
+#IF
+CHECKBINDGOLD > 499
+#ACT
+BINDGOLD - 500
+MAPMOVE 2 345 26
+break
+#IF
+CHECKGOLD 500
+#ACT
+TAKE 金币 500
+MAPMOVE 2 345 26
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@snake2]
+那就自己到350，20附近去找吧。\\
+<返回/@main1>
+
+[@deadwater]
+去死水沼泽入口要1200金币，你去么？\
+<去死水沼泽/@godeadwater>\
+<返回/@main1>\
+
+[@godeadwater]
+#IF
+CHECKBINDGOLD > 1199
+#ACT
+BINDGOLD - 1200
+MAPMOVE 0 771 514
+break
+#IF
+CHECKGOLD 1200
+#ACT
+TAKE 金币 1200
+MAPMOVE 0 771 514
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@cpass]
+要去中州关隘吗？\
+500金币就可以了，没有的话就自己走着去吧。\\
+<付钱/@cpass1>\
+<没钱/@cpass2>\
+
+[@cpass1]
+#IF
+CHECKBINDGOLD > 499
+#ACT
+BINDGOLD - 500
+MAPMOVE 2 438 969
+break
+#IF
+CHECKGOLD 500
+#ACT
+TAKE 金币 500
+MAPMOVE 2 438 969
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@cpass2]
+那就自己到440，970附近去找吧。\\
+<返回/@main1>
+
+[@_LB_homePos]
+#CALL [\商人\记录回城.txt] @homePos
+
+[@_LB_newlianyu]
+#CALL [\商人\挑战炼狱.txt] @newlianyu

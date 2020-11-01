@@ -1,0 +1,118 @@
+[@main]
+#IF
+CHECKJOB warrior
+CHECKMAGIC 雷霆剑
+#SAY
+\<使用特效凭证激活烈火剑法、雷霆剑、狂龙紫电、幽冥火咒> \
+<技能特效特权，激活后，对应技能显示新的特效，持续7天。> \\
+<开启金色雷霆剑/@putMateria> \
+<开启紫色雷霆剑/@putMateria> \
+<取消技能特效特权/@cancelSpecialEffectFlag>\
+<查看当前特权有效期/@GetSpecialEffectTag>    <使用技能特效兑换卷/@exchange>\
+#ACT
+break
+#IF
+CHECKJOB wizard
+#SAY
+\<使用特效凭证激活烈火剑法、雷霆剑、狂龙紫电、幽冥火咒> \
+<技能特效特权，激活后，对应技能显示新的特效，持续7天。> \\
+<开启金色狂龙紫电/@putMateria> \
+<开启紫色狂龙紫电/@putMateria> \
+<取消技能特效特权/@cancelSpecialEffectFlag>\
+<查看当前特权有效期/@GetSpecialEffectTag>    <使用技能特效兑换卷/@exchange>\
+#ACT
+break
+#IF
+CHECKJOB taoist
+#SAY
+\<使用特效凭证激活烈火剑法、雷霆剑、狂龙紫电、幽冥火咒> \
+<技能特效特权，激活后，对应技能显示新的特效，持续7天。> \\
+<开启蓝色幽冥火咒/@putMateria> \
+<开启紫色幽冥火咒/@putMateria> \
+<取消技能特效特权/@cancelSpecialEffectFlag>\
+<查看当前特权有效期/@GetSpecialEffectTag>    <使用技能特效兑换卷/@exchange>\
+#ACT
+break
+#IF
+RANDOM 1
+#SAY
+\<使用特效凭证激活烈火剑法、雷霆剑、狂龙紫电、幽冥火咒> \
+<技能特效特权，激活后，对应技能显示新的特效，持续7天。> \\
+<开启金色烈火剑法/@putMaterial> \
+<开启紫色烈火剑法/@putMaterial> \
+<取消技能特效特权/@cancelSpecialEffectFlag>\
+<查看当前特权有效期/@GetSpecialEffectTag>    <使用技能特效兑换卷/@exchange>\
+#ACT
+break
+
+[@exchange]
+#IF
+EQUAL $SCRIPTPARAM(1)
+#SAY
+    <使用技能特效兑换卷兑换/@exchange&0>\\\\\\\\
+    <返回/@main>\
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 0
+EQUAL $SCRIPTPARAM(2)
+#SAY
+    <兑换烈火剑法卷轴金/@exchange&0&1&0>    <兑换烈火剑法卷轴紫/@exchange&0&1&1>\
+    <兑换雷霆剑卷轴蓝/@exchange&0&1&2>    <兑换雷霆剑卷轴紫/@exchange&0&1&3>\
+    <兑换狂龙紫电卷轴金/@exchange&0&1&4>    <兑换狂龙紫电卷轴蓝/@exchange&0&1&5>\
+    <兑换幽冥火咒卷轴蓝/@exchange&0&1&6>    <兑换幽冥火咒卷轴紫/@exchange&0&1&7>\\\\\
+    <返回/@exchange>
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 0
+EQUAL $SCRIPTPARAM(2) 1
+CHECKITEMINLIST ..\QuestDiary\数据文件\文本数据\技能特效卷轴.txt S10
+#SAY
+    兑换成功！\
+    <返回/@exchange&0>
+#ACT
+TAKE $STR(S10) 1
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\技能特效卷轴.txt S11 $SCRIPTPARAM(3)
+GIVE $STR(S11) 1
+break
+#ELSESAY
+    对不起，物品不足\
+    <返回/@exchange&0>
+
+[@cancelSpecialEffectFlag]
+取消成功 <返回/@main>
+
+[@GetSpecialEffectTag]
+尚未获取特效特权  <返回/@main>
+
+[@putMaterial]
+#ACT
+ShowSpotDlg 6 请放入技能特效卷轴： @givejuanzhou
+
+[@givejuanzhou]
+#IF
+CHECKVARLIST $PARAM(0) ..\QuestDiary\数据文件\文本数据\技能特效卷轴.txt
+#ACT
+MOV S10 $PARAM(0)
+ReplaceText S10 卷轴
+ReplaceText S10 金
+ReplaceText S10 紫
+ReplaceText S10 蓝
+MOV S11 $ITEMINFO[$PARAM(1)].AC
+#ELSESAY
+抱歉，您放入不是技能特效卷轴 <返回/@main>
+#ELSEACT
+break
+#IF
+CHECKMAGIC $STR(S10)
+#SAY
+获取特效特权  <返回/@main>
+#ACT
+TAKEM $PARAM(1)
+ChangeMode 40 $STR(S11)
+break
+#ELSESAY
+你还没有学习此技能 <返回/@main>
+#ELSEACT
+break

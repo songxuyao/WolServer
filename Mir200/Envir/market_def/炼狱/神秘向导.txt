@@ -1,0 +1,388 @@
+[@main]
+#IF
+CHECKMAPNAME MH002
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我500元，我就可以送你回海岛。\
+需要我帮忙吗？\\
+<好的/@gomap&MH001&500>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH003
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我500元，我就可以送你回海岛。\
+需要我帮忙吗？\\
+<好的/@gomap&MH001&500>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH004
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我500元，我就可以送你回海岛。\
+需要我帮忙吗？\\
+<好的/@gomap&MH001&500>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH005
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我500元，我就可以送你回海岛。\
+需要我帮忙吗？\\
+<好的/@gomap&MH001&500>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH006
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我500元，我就可以送你回海岛。\
+需要我帮忙吗？\\
+<好的/@gomap&MH001&500>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH007
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我500元，我就可以送你回海岛。\
+需要我帮忙吗？\\
+<好的/@gomap&MH001&500>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH009
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我1000元，我就可以送你回海滨平原。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH008&125&61&1000>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH010
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我1000元，我就可以送你回海滨平原。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH008&125&61&1000>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH011
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我1000元，我就可以送你回海滨平原。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH008&125&61&1000>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH013
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我1500元，我就可以送你回密林。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH012&164&92&1500>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH014
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我1500元，我就可以送你回密林。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH012&164&92&1500>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH015
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我1500元，我就可以送你回密林。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH012&164&92&1500>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH016
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我1500元，我就可以送你回密林。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH012&164&92&1500>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH017
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我1500元，我就可以送你回密林。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH012&164&92&1500>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH018
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我1500元，我就可以送你回密林。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH012&164&92&1500>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH020
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我2000元，我就可以送你回幽静空间。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH019&35&43&2000>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH021
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我2000元，我就可以送你回幽静空间。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH019&35&43&2000>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH022
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我2000元，我就可以送你回幽静空间。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH019&35&43&2000>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH023
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我2000元，我就可以送你回幽静空间。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH019&35&43&2000>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH024
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我2000元，我就可以送你回幽静空间。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH019&35&43&2000>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH025
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我2000元，我就可以送你回幽静空间。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH019&35&43&2000>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH027
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我2500元，我就可以送你回投石谷。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH026&91&102&2500>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH028
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我2500元，我就可以送你回投石谷。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH026&91&102&2500>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH029
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我2500元，我就可以送你回投石谷。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH026&91&102&2500>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH030
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我2500元，我就可以送你回投石谷。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH026&91&102&2500>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH031
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我2500元，我就可以送你回投石谷。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH026&91&102&2500>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH032
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我2500元，我就可以送你回投石谷。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH026&91&102&2500>\
+<不必/@exit>
+#ACT
+break
+
+#IF
+CHECKMAPNAME MH033
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我2500元，我就可以送你回投石谷。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH026&91&102&2500>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH034
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我2500元，我就可以送你回投石谷。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH026&91&102&2500>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH035
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我2500元，我就可以送你回投石谷。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH026&91&102&2500>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH037
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我3000元，我就可以送你回红池。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH036&150&62&3000>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH038
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我3000元，我就可以送你回红池。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH036&150&62&3000>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH039
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我3000元，我就可以送你回红池。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH036&150&62&3000>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH040
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我3000元，我就可以送你回红池。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH036&150&62&3000>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH041
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我3000元，我就可以送你回红池。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH036&150&62&3000>\
+<不必/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME MH042
+#SAY
+我常在这一带走动，对每条道路都很熟悉。\
+只要给我3000元，我就可以送你回红池。\
+需要我帮忙吗？\\
+<好的/@gotomap&MH036&150&62&3000>\
+<不必/@exit>
+#ACT
+break
+
+[@gotomap]
+#IF
+CHECKGOLD $SCRIPTPARAM(2)
+#ACT
+TAKE 金币 $SCRIPTPARAM(2)
+MAPMOVE $SCRIPTPARAM(1) $SCRIPTPARAM(2) $SCRIPTPARAM(3)
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@gomap]
+#IF
+CHECKGOLD $SCRIPTPARAM(2)
+#ACT
+TAKE 金币 $SCRIPTPARAM(2)
+MAP $SCRIPTPARAM(1)
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+
+
+
+
+$SCRIPTPARAM(1) $SCRIPTPARAM(2) $SCRIPTPARAM(3)

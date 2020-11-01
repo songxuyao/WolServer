@@ -1,0 +1,6 @@
+[setup]
+stepcount = 1
+title = 药材商人的订单
+ID = 57
+stepaim1 = 收集10个食人花果实
+stepDESC1 = <color=graygolden 任务目的：>  收集10个食人花果实\<color=graygolden 任务介绍:>\  药材商人在我这里下了订单，需要10个食人花果实。如果\你能帮我完成这份订单，我将给你丰厚的奖励。

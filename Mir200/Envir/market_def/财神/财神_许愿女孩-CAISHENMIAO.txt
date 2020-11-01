@@ -1,0 +1,41 @@
+[@main]
+  最近许愿池似乎和以前不一样了，出现了很多闪光的宝\
+物，不但有特殊装备的碎片，还听说有特殊的原石和传说中\
+的祝福水晶！勇士赶紧来看看吧;\
+  <color=red 许愿池奖励更新，更多豪礼勇士切勿错过>\
+  <color=yellow 活动时间:每周五、周六！>\
+  <我也去试试/@exit>    <祝福水晶/@zhufu>
+
+[@zhufu]
+听说祝福水晶是一些强大勇士修炼出元神后产生的一种神奇\
+物品，是元神可以佩戴的强大首饰；\
+勇士如果你在许愿池里找到了碎片，我可以免费帮你合成更\
+高级的祝福水晶哦；\
+<合成祝福水晶/@toUpgradeCSHF>
+
+[@toUpgradeCSHF]
+使用<color=green 10个祝福水晶碎片>可合成<color=green 1个一星祝福水晶；>\
+    <合成/@popUpgradeCSHF&0&1>\
+使用<color=green 3个一星祝福水晶>可合成<color=green 1个二星祝福水晶；>\
+    <合成/@popUpgradeCSHF&1&1>\
+使用<color=green 3个二星祝福水晶>可合成<color=green 1个三星祝福水晶；>\
+    <合成/@popUpgradeCSHF&2&1>\
+使用<color=green 3个三星祝福水晶>可合成<color=green 1个四星祝福水晶；>\
+    <合成/@popUpgradeCSHF&3&1>\
+<color=gray 第1页>  <第2页/@toUpgradeCSHF&2>  <返回/@main> 
+
+使用<color=green 3个四星祝福水晶>可合成<color=green 1个五星祝福水晶；>\
+    <合成/@popUpgradeCSHF&4&2>\
+使用<color=green 3个五星祝福水晶>可合成<color=green 1个六星祝福水晶；>\
+    <合成/@popUpgradeCSHF&5&2>\
+使用<color=green 3个六星祝福水晶>可合成<color=green 1个七星祝福水晶；>\
+    <合成/@popUpgradeCSHF&6&2>\
+使用<color=green 3个七星祝福水晶>可合成<color=green 1个八星祝福水晶；>\
+    <合成/@popUpgradeCSHF&7&2>\
+<第1页/@toUpgradeCSHF&1>  <color=gray 第2页>  <返回/@main> 
+
+
+[@popUpgradeCSHF]
+对不起，您的包裹中七星祝福水晶不足\\\\\\\\<返回/@main>\
+
+

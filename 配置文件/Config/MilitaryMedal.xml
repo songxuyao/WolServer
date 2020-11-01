@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="gb2312"?>
+<xunzhang>
+	<level value="1" nextlevelexp="100000">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="30" prop_value_0_2="30" prop_name1="gj" prop_value_1_1="0" prop_value_1_2="1" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="0" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="0"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="10" prop_value_0_2="10" prop_name1="mfgj" prop_value_1_1="0" prop_value_1_2="1" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="0" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="0"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="15" prop_value_0_2="15" prop_name1="dsgj" prop_value_1_1="0" prop_value_1_2="1" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="0" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="0"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="30" prop_value_0_2="30" prop_name1="ylgj" prop_value_1_1="0" prop_value_1_2="1" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="0" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="0"/>
+	</level>
+	<level value="2" nextlevelexp="200000">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="60" prop_value_0_2="60" prop_name1="gj" prop_value_1_1="1" prop_value_1_2="2" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="20" prop_value_0_2="20" prop_name1="mfgj" prop_value_1_1="1" prop_value_1_2="2" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="30" prop_value_0_2="30" prop_name1="dsgj" prop_value_1_1="1" prop_value_1_2="2" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="60" prop_value_0_2="60" prop_name1="ylgj" prop_value_1_1="1" prop_value_1_2="2" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+	</level>
+	<level value="3" nextlevelexp="400000">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="90" prop_value_0_2="90" prop_name1="gj" prop_value_1_1="2" prop_value_1_2="4" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="2"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="40" prop_value_0_2="40" prop_name1="mfgj" prop_value_1_1="2" prop_value_1_2="4" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="2"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="60" prop_value_0_2="60" prop_name1="dsgj" prop_value_1_1="2" prop_value_1_2="4" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="2"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="90" prop_value_0_2="90" prop_name1="ylgj" prop_value_1_1="2" prop_value_1_2="4" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="2"/>
+	</level>
+	<level value="4" nextlevelexp="600000">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="120" prop_value_0_2="120" prop_name1="gj" prop_value_1_1="4" prop_value_1_2="8" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="4"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="60" prop_value_0_2="60" prop_name1="mfgj" prop_value_1_1="4" prop_value_1_2="8" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="4"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="80" prop_value_0_2="80" prop_name1="dsgj" prop_value_1_1="4" prop_value_1_2="8" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="4"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="120" prop_value_0_2="120" prop_name1="ylgj" prop_value_1_1="4" prop_value_1_2="8" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="4"/>
+	</level>
+	<level value="5" nextlevelexp="800000">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="150" prop_value_0_2="150" prop_name1="gj" prop_value_1_1="6" prop_value_1_2="10" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="6" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="6"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="80" prop_value_0_2="80" prop_name1="mfgj" prop_value_1_1="6" prop_value_1_2="10" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="6" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="6"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="100" prop_value_0_2="100" prop_name1="dsgj" prop_value_1_1="6" prop_value_1_2="10" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="6" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="6"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="150" prop_value_0_2="150" prop_name1="ylgj" prop_value_1_1="6" prop_value_1_2="10" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="6" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="6"/>
+	</level>
+	<level value="6" nextlevelexp="1000000">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="180" prop_value_0_2="180" prop_name1="gj" prop_value_1_1="8" prop_value_1_2="12" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="8" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="8"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="100" prop_value_0_2="100" prop_name1="mfgj" prop_value_1_1="8" prop_value_1_2="12" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="8" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="8"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="130" prop_value_0_2="130" prop_name1="dsgj" prop_value_1_1="8" prop_value_1_2="12" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="8" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="8"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="180" prop_value_0_2="180" prop_name1="ylgj" prop_value_1_1="8" prop_value_1_2="12" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="8" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="8"/>
+	</level>
+	<level value="7" nextlevelexp="12000000">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="230" prop_value_0_2="230" prop_name1="gj" prop_value_1_1="10" prop_value_1_2="14" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="10" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="10"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="120" prop_value_0_2="120" prop_name1="mfgj" prop_value_1_1="10" prop_value_1_2="14" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="10" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="10"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="160" prop_value_0_2="160" prop_name1="dsgj" prop_value_1_1="10" prop_value_1_2="14" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="10" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="10"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="230" prop_value_0_2="230" prop_name1="ylgj" prop_value_1_1="10" prop_value_1_2="14" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="10" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="10"/>
+	</level>
+	<level value="8" nextlevelexp="14000000">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="280" prop_value_0_2="280" prop_name1="gj" prop_value_1_1="12" prop_value_1_2="16" prop_name2="fy" prop_value_2_1="10" prop_value_2_2="12" prop_name3="mffy" prop_value_3_1="10" prop_value_3_2="12"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="140" prop_value_0_2="140" prop_name1="mfgj" prop_value_1_1="12" prop_value_1_2="16" prop_name2="fy" prop_value_2_1="10" prop_value_2_2="12" prop_name3="mffy" prop_value_3_1="10" prop_value_3_2="12"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="190" prop_value_0_2="190" prop_name1="dsgj" prop_value_1_1="12" prop_value_1_2="16" prop_name2="fy" prop_value_2_1="10" prop_value_2_2="12" prop_name3="mffy" prop_value_3_1="10" prop_value_3_2="12"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="280" prop_value_0_2="280" prop_name1="ylgj" prop_value_1_1="12" prop_value_1_2="16" prop_name2="fy" prop_value_2_1="10" prop_value_2_2="12" prop_name3="mffy" prop_value_3_1="10" prop_value_3_2="12"/>
+	</level>
+	<level value="9" nextlevelexp="16000000">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="330" prop_value_0_2="330" prop_name1="gj" prop_value_1_1="14" prop_value_1_2="18" prop_name2="fy" prop_value_2_1="12" prop_value_2_2="14" prop_name3="mffy" prop_value_3_1="12" prop_value_3_2="14"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="160" prop_value_0_2="160" prop_name1="mfgj" prop_value_1_1="14" prop_value_1_2="18" prop_name2="fy" prop_value_2_1="12" prop_value_2_2="14" prop_name3="mffy" prop_value_3_1="12" prop_value_3_2="14"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="230" prop_value_0_2="230" prop_name1="dsgj" prop_value_1_1="14" prop_value_1_2="18" prop_name2="fy" prop_value_2_1="12" prop_value_2_2="14" prop_name3="mffy" prop_value_3_1="12" prop_value_3_2="14"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="330" prop_value_0_2="330" prop_name1="ylgj" prop_value_1_1="14" prop_value_1_2="18" prop_name2="fy" prop_value_2_1="12" prop_value_2_2="14" prop_name3="mffy" prop_value_3_1="12" prop_value_3_2="14"/>
+	</level>
+</xunzhang>

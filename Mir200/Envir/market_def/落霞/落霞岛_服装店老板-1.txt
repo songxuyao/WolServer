@@ -1,0 +1,34 @@
+(@fastbuy @buy @sell @repair @s_repair )
+%100
++10
++11
++15
++58
++81
+[@main]
+欢迎光临，有什么事情需要我帮忙吗？\
+<可接任务/@_RW_entry>\
+<快捷交易/@fastbuy>\
+<购入衣服/@buy>\
+<出售衣服/@sell>\
+<修复衣服/@repair>\
+<特殊修理/@s_repair>\
+<关闭选单/@exit>
+
+[@_RW_entry]
+#CALL [\游戏任务\新手任务\打听结婚.txt] @落霞岛_衣服
+
+[@fastbuy]
+#CALL [\商人\衣服.txt] @快捷交易
+
+[@buy]
+#CALL [\商人\衣服.txt] @购买衣服
+
+[@sell]
+#CALL [\商人\衣服.txt] @出售衣服
+
+[@repair]
+#CALL [\商人\衣服.txt] @修复衣服
+
+[@s_repair]
+#CALL [\商人\衣服.txt] @特殊修理

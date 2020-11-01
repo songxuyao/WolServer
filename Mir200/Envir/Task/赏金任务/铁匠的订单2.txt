@@ -1,0 +1,6 @@
+[setup]
+stepcount = 1
+title = 铁匠的订单
+ID = 54
+stepaim1 = 收集10块纯度10的银矿
+stepDESC1 = <color=graygolden 任务目的：>  收集10块纯度10的银矿\<color=graygolden 任务介绍:>\  中州铁匠在我这里提交订单，需求10块纯度10的银矿。如\果你能帮我完成这份订单，我将给你丰厚的奖励。

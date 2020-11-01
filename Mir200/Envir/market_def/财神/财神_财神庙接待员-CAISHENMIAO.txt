@@ -1,0 +1,198 @@
+[@main]
+\
+    满面春风财神迎，\
+    载歌载舞笑盈盈。\
+    快乐吉祥财源旺，\
+    亲朋和睦满门庭。\\\\
+    <传送去中州广场/@chuansong>  <购买道具/@doBuy> 
+
+[@doBuy]
+#IF
+EQUAL $SCRIPTPARAM(1) 2
+#SAY
+    活动道具仅在周五、周六出售，根据VIP等级不同，可购买\
+道具<数量也不一样/@viewPrize>；\
+    原价1888   <color=red 财运亨通（限时特价1688元宝）>\
+    <元宝购买/@doBuycyht>    \
+    原价5   <color=red 1个财神许愿符（限时特价5元宝）>\
+    <元宝购买/@doBuycsxyf1>    \
+    原价100   <color=red 20个财神许愿符（限时特价88元宝）>\
+    <元宝购买/@doBuycsxyf20>    \
+    <上一页/@doBuy&1>  <color=orange 2 ／3>  <下一页/@doBuy&3>    <返回/@doBuy>
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 3
+#SAY
+    活动道具仅在周五、周六出售，根据VIP等级不同，可购买\
+道具<数量也不一样/@viewPrize>；\
+    原价500   <color=red 100个财神许愿符（限时特价418元宝）>\
+    <元宝购买/@doBuycsxyf100>    \\\\\
+    <上一页/@doBuy&2>  <color=orange 3 ／3>  <color=gray 下一页>    <返回/@doBuy>
+#ACT
+break
+#IF
+RANDOM 1
+#SAY
+    活动道具仅在周五、周六出售，根据VIP等级不同，可购买\
+道具<数量也不一样/@viewPrize>；\
+    原价18   <color=red 招财进宝（限时特价15元宝）>\
+    <元宝购买/@doBuyzcjb>    \
+    原价58   <color=red 财源茂盛（限时特价50元宝）>\
+    <元宝购买/@doBuycmws>    \
+    原价118   <color=red 金玉满堂（限时特价98元宝）>\
+    <元宝购买/@doBuyjymt>    \
+    <color=gray 上一页>  <color=orange 1 ／3>  <下一页/@doBuy&2>    <返回/@doBuy>
+#ACT
+break
+
+[@doBuycsxyf100]
+#IF
+CHECKGAMEGOLD > 417
+#SAY
+    您购买了<color=green 100个财神许愿符>！\
+    <color=red 注：系统可能存在延迟，未购买成功不会扣除元宝。>\\\\\\\
+    <返回/@doBuy>
+#ACT
+GAMEGOLD - 418
+GIVE 财神许愿符 1 1
+break
+#ELSESAY
+    您目前好像没有足够的元宝哦。\\\\\\\\
+    <返回/@main>
+
+[@doBuycsxyf20]
+#IF
+CHECKGAMEGOLD > 87
+#SAY
+    您购买了<color=green 20个财神许愿符>！\
+    <color=red 注：系统可能存在延迟，未购买成功不会扣除元宝。>\\\\\\\
+    <返回/@doBuy>
+#ACT
+GAMEGOLD - 88
+GIVE 财神许愿符 1 1
+break
+#ELSESAY
+    您目前好像没有足够的元宝哦。\\\\\\\\
+    <返回/@main>
+
+[@doBuycsxyf1]
+#IF
+CHECKGAMEGOLD > 4
+#SAY
+    您购买了<color=green 1个财神许愿符>！\
+    <color=red 注：系统可能存在延迟，未购买成功不会扣除元宝。>\\\\\\\
+    <返回/@doBuy>
+#ACT
+GAMEGOLD - 5
+GIVE 财神许愿符 1 1
+break
+#ELSESAY
+    您目前好像没有足够的元宝哦。\\\\\\\\
+    <返回/@main>
+
+[@doBuycyht]
+#IF
+CHECKGAMEGOLD > 1687
+#SAY
+    您购买了<color=green 1个财运亨通香>！\
+    <color=red 注：系统可能存在延迟，未购买成功不会扣除元宝。>\\\\\\\
+    <返回/@doBuy>
+#ACT
+GAMEGOLD - 1688
+GIVE 财运亨通香 1 1
+break
+#ELSESAY
+    您目前好像没有足够的元宝哦。\\\\\\\\
+    <返回/@main>
+
+[@doBuyjymt]
+#IF
+CHECKGAMEGOLD > 97
+#SAY
+    您购买了<color=green 1个金玉满堂香>！\
+    <color=red 注：系统可能存在延迟，未购买成功不会扣除元宝。>\\\\\\\
+    <返回/@doBuy>
+#ACT
+GAMEGOLD - 98
+GIVE 金玉满堂香 1 1
+break
+#ELSESAY
+    您目前好像没有足够的元宝哦。\\\\\\\\
+    <返回/@main>
+
+[@doBuycmws]
+#IF
+CHECKGAMEGOLD > 49
+#SAY
+    您购买了<color=green 1个财源茂盛香>！\
+    <color=red 注：系统可能存在延迟，未购买成功不会扣除元宝。>\\\\\\\
+    <返回/@doBuy>
+#ACT
+GAMEGOLD - 50
+GIVE 财源茂盛香 1 1
+break
+#ELSESAY
+    您目前好像没有足够的元宝哦。\\\\\\\\
+    <返回/@main>
+
+[@doBuyzcjb]
+#IF
+CHECKGAMEGOLD > 14
+#SAY
+    您购买了<color=green 1个招财进宝香>！\
+    <color=red 注：系统可能存在延迟，未购买成功不会扣除元宝。>\\\\\\\
+    <返回/@doBuy>
+#ACT
+GAMEGOLD - 15
+GIVE 招财进宝香 1 1
+break
+#ELSESAY
+    您目前好像没有足够的元宝哦。\\\\\\\\
+    <返回/@main>
+
+[@viewPrize]
+#IF
+EQUAL $SCRIPTPARAM(1) 2
+#SAY
+V4	32次\
+V5	50次\
+V6	80次\
+V7	100次\
+V8	150次\
+V9	180次\
+V10 200次\
+V11 300次\
+    <上一页/@viewPrize&1>  <color=orange 2 ／3>  <下一页/@viewPrize&3>    <返回/@main>
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 3
+#SAY
+V13 500次\
+V14 600次\
+V15 700次\\\\\\
+    <上一页/@viewPrize&2>  <color=orange 3 ／3>  <color=gray 下一页>    <返回/@main>
+#ACT
+break
+#IF
+RANDOM 1
+#SAY
+<color=yellow 购买各种香：>\
+V1-V9  每种香每日可购买1次\
+V10-V13 每种香每日可购买2次\
+V14-V15 每种香每日可购买3次\
+<color=yellow 购买许愿符：>\
+V1	6次\
+V2	12次\
+V3	20次\
+    <color=gray 上一页>  <color=orange 1 ／3>  <下一页/@viewPrize&2>    <返回/@main>
+#ACT
+break
+
+[@chuansong]
+#IF
+RANDOM 1
+#ACT
+MAPMOVE ZZGC 100 75
+break

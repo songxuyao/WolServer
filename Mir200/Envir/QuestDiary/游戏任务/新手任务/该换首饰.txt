@@ -1,0 +1,56 @@
+[@该换首饰_首饰]
+{
+
+这是我免费送给你最后一套首饰了。\
+以后如果想要更好的，就要自己去打魔兵爆了。\\
+<谢谢/@_RW_fulssfilTask305>                <离开/@exit>
+
+[@_RW_fulssfilTask305]
+#IF
+EQUAL $Task(17) 1
+#SAY
+    当然，如果有人将一些好首饰卖给我的话，我也会给你\
+留着的，不过别忘了带钱过来。\
+    去找服装店掌柜吧，她会送你最后一件衣服。\\
+    <离开/@exit>\
+#ACT
+#ELSEACT
+break
+#IF
+checkjob warrior
+#ACT
+EndTask 17
+BINDGOLD + 5000
+CHANGEEXP + 50000
+GIVE 翡翠项链 1
+GIVE 魔力手镯 2
+GIVE 黑色水晶戒指 2
+AddTask 18
+SENDMSG 5 你成功增加了7500绑定金币。
+break
+#IF
+checkjob wizard
+#ACT
+EndTask 17
+BINDGOLD + 5000
+CHANGEEXP + 50000
+GIVE 魔镜 1
+GIVE 黑檀木手镯 2
+GIVE 魔眼戒指 2
+AddTask 18
+SENDMSG 5 你成功增加了7500绑定金币。
+break
+#IF
+checkjob taoist
+#ACT
+EndTask 17
+BINDGOLD + 5000
+CHANGEEXP + 50000
+GIVE 骨笛 1
+GIVE 道士手镯 2
+GIVE 珍珠戒指 2
+AddTask 18
+SENDMSG 5 你成功增加了7500绑定金币。
+break
+
+}

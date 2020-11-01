@@ -1,0 +1,10 @@
+[setup]
+stepcount = 3
+title = 躁动的炎魔
+ID = 58
+stepaim1 = 在铁血魔宫内，击杀10只炎魔
+stepaim2 = 还需击杀<$TASKVAL(58).I0>只炎魔。
+stepaim3 = 恭喜你，任务完成！
+stepDESC1 = <color=graygolden 任务目的：>  在铁血魔宫内，击杀10只炎魔\<color=graygolden 任务介绍:>\  在铁血魔宫内，击杀10只炎魔
+stepDESC2 = <color=graygolden 任务目的：>  在铁血魔宫内，击杀10只炎魔\<color=graygolden 任务介绍:>\  还需击杀<$TASKVAL(58).I0>只炎魔
+stepDESC3 = <color=graygolden 任务目的：>  在铁血魔宫内，击杀10只炎魔\<color=graygolden 任务介绍:>\  恭喜你，任务完成！

@@ -1,0 +1,27 @@
+[@main]
+您确定要离开这里吗？\\
+<去中州/@out1>\
+<去落霞岛/@out2>\
+<去跃马平原/@out3>\
+<不是/@exit>
+
+[@out1]
+#IF
+RANDOM 1
+#ACT
+MAP 1
+break
+
+[@out2]
+#IF
+RANDOM 1
+#ACT
+MAP 2
+break
+
+[@out3]
+#IF
+RANDOM 1
+#ACT
+MAP 3
+break

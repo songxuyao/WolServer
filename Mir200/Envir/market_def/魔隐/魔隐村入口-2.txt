@@ -1,0 +1,3 @@
+[@main]
+#ACT
+MAPMOVE 6 115 82

@@ -1,0 +1,10 @@
+[setup]
+stepcount = 3
+title = 群蛇乱舞—灭蛇
+ID = 42
+stepaim1 = 前往百虫穴，杀掉20只蛇妖! <color=green [传]/@@flyto 42 n003 70 94>
+stepaim2 = 还要杀<$TASKVAL(42).I0>个<蛇妖/@@goplace n003 70,94> <color=green [传]/@@flyto 42 n003 70 94>
+stepaim3 = 任务完成！向<李将军/@@goto 2 李将军 215,436>回报 <color=green [传]/@@flyto 34 2 215 436>
+stepDESC1 = <color=graygolden 任务目的：>前往<color=green 百虫穴>杀掉<color=green 20只蛇妖>后，找<李将军/@@goto 2 李将军 215,436>回报\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：350000 </@@!PIC2 10,229>绑定金币：2000	\<color=graygolden 任务介绍:>\    好了，现在要进行最后一步了，这次你需要深入蛇洞，\进入到<color=green 百虫穴>，在那里的蛇妖才是我们真正最麻烦的敌人。\去那里杀掉20只蛇妖，无论是红蛇妖，还是黑蛇妖。  干掉\后直接去向李将军汇报吧，谢谢你的帮助了。
+stepDESC2 = <color=graygolden 任务目的：>前往<color=green 百虫穴>杀掉<color=green 20只蛇妖>后，找<李将军/@@goto 2 李将军 215,436>回报\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：350000 </@@!PIC2 10,229>绑定金币：2000	\<color=graygolden 任务介绍:>\还要杀掉<$TASKVAL(42).I0>个蛇妖
+stepDESC3 = <color=graygolden 任务目的：>前往<color=green 百虫穴>杀掉<color=green 20只蛇妖>后，找<李将军/@@goto 2 李将军 215,436>回报\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：350000 </@@!PIC2 10,229>绑定金币：2000	\<color=graygolden 任务介绍:>\恭喜，圆满完成任务！快用向李将军回报吧！

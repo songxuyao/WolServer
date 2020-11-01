@@ -1,0 +1,62 @@
+(@fastbuy @buy @sell @repair @s_repair )
+%100
++5
++6
++43
+[@main]
+#IF
+EQUAL $Task(1) 2
+#SAY
+欢迎光临。请问有什么事情帮忙吗？\
+<可接任务/@_RW_entry>\
+<快捷交易/@fastbuy>\
+<购入武器/@buy>\
+<出售武器/@sell>\
+<修理武器/@repair>\
+<特殊修理/@s_repair>\
+<关闭选单/@exit>
+#ACT
+break
+#IF
+EQUAL $Task(4) 1
+#SAY
+欢迎光临。请问有什么事情帮忙吗？\
+<可接任务/@_RW_entry1>\
+<快捷交易/@fastbuy>\
+<购入武器/@buy>\
+<出售武器/@sell>\
+<修理武器/@repair>\
+<特殊修理/@s_repair>\
+<关闭选单/@exit>
+#ACT
+break
+#ELSESAY
+欢迎光临。请问有什么事情帮忙吗？\
+<可接任务/@_RW_entry>\
+<快捷交易/@fastbuy>\
+<购入武器/@buy>\
+<出售武器/@sell>\
+<修理武器/@repair>\
+<特殊修理/@s_repair>\
+<关闭选单/@exit>
+
+[@_RW_entry]
+#CALL [\游戏任务\新手任务\屠夫的刀子.txt] @落霞岛_铁匠
+
+[@_RW_entry1]
+#CALL [\游戏任务\新手任务\打听挖矿.txt] @落霞岛_铁匠1
+
+[@fastbuy]
+#CALL [\商人\武器.txt] @快捷交易
+
+[@buy]
+#CALL [\商人\武器.txt] @购入武器
+
+[@sell]
+#CALL [\商人\武器.txt] @出售武器
+
+[@repair]
+#CALL [\商人\武器.txt] @修理武器
+
+[@s_repair]
+#CALL [\商人\武器.txt] @特殊修理

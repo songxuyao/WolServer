@@ -1,0 +1,68 @@
+[@中州_太史令]
+{
+
+#IF
+EQUAL $Task(24) 1
+#SAY
+可以完成的任务：\
+<新手任务--再探将军坟/@_RW_fultsTaskDesp>\\
+<离开/@exit>
+#ACT
+break
+#IF
+EQUAL $Task(24) 4
+#SAY
+可以完成的任务：\
+<新手任务--再探将军坟/@_RW_fultsTaskDesp04>\\
+<离开/@exit>
+#ACT
+break
+#ELSESAY
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+[@_RW_fultsTaskDesp]
+    将军坟东里的魔兵现在蠢蠢欲动，我想你或许愿意顺便帮我\
+消灭他们。我可以告诉你一些关于将军坟的消息。\
+    <包在我身上/@_RW_fultsfilTask>                <离开/@exit>
+
+[@_RW_fultsfilTask]
+#IF
+EQUAL $Task(24) 1
+#SAY
+    蝎子和蝙蝠支持产生了变异的普通生物，将军坟内部的\
+不死生物才是真正强大的魔物。\
+    去消灭10个尸卫后回来找我。\
+    <离开/@exit>
+#ACT
+UpdateTask 24 2
+BINDGOLD + 7500
+CHANGEEXP + 400000
+SetTaskValue 24 I0 = 10
+SENDMSG 5 你成功增加了7500绑定金币。
+break
+
+[@_RW_fultsTaskDesp04]
+    你杀光它们了么？\
+    <已经消灭它们了/@_RW_fultsfilTask04>                <离开/@exit>\
+
+[@_RW_fultsfilTask04]
+#IF
+EQUAL $Task(24) 4
+#SAY
+    传说将军坟的BOSS是尸霸，非常凶猛！这个我至今\
+都没有见过，你想了解的话，可以去皇宫找到史官，他\
+知道关于尸霸的一些故事。\
+    <好的/@exit>  <返回/@main>
+#ACT
+EndTask 24
+BINDGOLD + 7500
+CHANGEEXP + 400000
+AddTask 25
+SENDMSG 5 你成功增加了7500绑定金币。
+break
+#ELSESAY
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+}

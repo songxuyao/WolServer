@@ -1,0 +1,6 @@
+[setup]
+stepcount = 1
+title = 群蛇乱舞—回报国王
+ID = 43
+stepaim1 = 去中州皇宫和<国王/@@goto sh000 国王 30,34>交谈 <color=green [传]/@@flyto 33 sh000 30 34>
+stepDESC1 = <color=graygolden 任务目的：>与和<中州皇宫/@@goto 0 中州皇宫 482,144>的<color=green 国王>交谈\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：500000 </@@!PIC2 10,229>绑定金币：2000	\<color=graygolden 任务介绍:>\  很感谢你的帮助。  你这段时间的优异表现，我已经向国\王奏明了。  回去面见国王吧，他会给你应得的赏赐。

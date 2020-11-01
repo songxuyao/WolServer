@@ -1,0 +1,317 @@
+[@main]
+\\
+      <color=red 欢度五一，全民减负！任务减半，奖励翻倍！>\\\\
+            <每日任务，高额经验等你拿/@toTaskMenu>\
+
+[@toTaskMenu]
+#IF
+CHECKLEVELEX < 28
+#SAY
+  勇士，你的等级未达到28级，无法接取日常任务！\
+  <离开/@exit>\
+#ACT
+break
+#IF
+EQUAL $Task(29) 1
+#SAY
+    勇士每天可以在我这里接取共计5轮任务，任务分为1~5\
+★难度，难度越高所需要击杀的怪物难度也越高，当然对应获\
+得的<color=red 经验奖励>也越高。大侠如果觉得完成任务有困难，可以花\
+费一定数量的元宝或者绑定元宝立即完成任务获得<color=red 经验奖励>，\
+也可以选择放弃当前的任务继续领取任务。\
+    <可接任务/@_RW_entry>\
+    <好！请给我任务/@toAcceptTask>    <我已经完成任务了/@toCompleteTask>\
+    <好难啊，给你元宝直接完成吧/@toCompleteTaskAuto>\
+    <好难啊，给你绑定元宝直接完成吧/@toCompleteTaskAutoUseBindYuanBao>
+#ELSESAY
+    勇士每天可以在我这里接取共计5轮任务，任务分为1~5\
+★难度，难度越高所需要击杀的怪物难度也越高，当然对应获\
+得的<color=red 经验奖励>也越高。大侠如果觉得完成任务有困难，可以花\
+费一定数量的元宝或者绑定元宝立即完成任务获得<color=red 经验奖励>，\
+也可以选择放弃当前的任务继续领取任务。\
+    <好！请给我任务/@toAcceptTask>    <我已经完成任务了/@toCompleteTask>\
+    <好难啊，给你元宝直接完成吧/@toCompleteTaskAuto>\
+    <好难啊，给你绑定元宝直接完成吧/@toCompleteTaskAutoUseBindYuanBao>
+
+[@toCompleteTaskAutoUseBindYuanBao]
+#IF
+HasTask 44
+#ACT
+#ELSESAY
+请您接过任务再来吧！\\\\\\\\
+    <返回/@toTaskMenu>
+#ELSEACT
+break
+#IF
+EQUAL $TASKVAL(44).S1 ★
+#SAY
+    直接完成任务需要消耗2个绑定元宝。\\\\\\\\
+    <确认/@toCompleteTaskAutoUseBindYuanBao_KOUYB&2>    <返回/@toTaskMenu>
+#ACT
+break
+#IF
+EQUAL $TASKVAL(44).S1 ★★
+#SAY
+    直接完成任务需要消耗4个绑定元宝。\\\\\\\\
+    <确认/@toCompleteTaskAutoUseBindYuanBao_KOUYB&4>    <返回/@toTaskMenu>
+#ACT
+break
+#IF
+EQUAL $TASKVAL(44).S1 ★★★
+#SAY
+    直接完成任务需要消耗6个绑定元宝。\\\\\\\\
+    <确认/@toCompleteTaskAutoUseBindYuanBao_KOUYB&6>    <返回/@toTaskMenu>
+#ACT
+break
+#IF
+EQUAL $TASKVAL(44).S1 ★★★★
+#SAY
+    直接完成任务需要消耗8个绑定元宝。\\\\\\\\
+    <确认/@toCompleteTaskAutoUseBindYuanBao_KOUYB&8>    <返回/@toTaskMenu>
+#ACT
+break
+#IF
+EQUAL $TASKVAL(44).S1 ★★★★★
+#SAY
+    直接完成任务需要消耗10个绑定元宝。\\\\\\\\
+    <确认/@toCompleteTaskAutoUseBindYuanBao_KOUYB&10>    <返回/@toTaskMenu>
+#ACT
+break
+
+[@toCompleteTaskAutoUseBindYuanBao_KOUYB]
+#IF
+CHECKBINDGAMEGOLD < $SCRIPTPARAM(1)
+#SAY
+    您目前好像没有足够的绑定元宝哦。\\\\\\\\
+    <返回/@toTaskMenu>
+#ACT
+break
+#IF
+HasTask 44
+#SAY
+    恭喜成功提交直接完成任务的请求。\
+    <color=red 注：系统可能存在延迟，如发奖失败不会扣除绑定元宝。>\\\\\\\
+    <返回/@toTaskMenu>
+#ACT
+BINDGAMEGOLD - $SCRIPTPARAM(1)
+goto @getexp
+break
+#ELSESAY
+请您接过任务再来吧！\\\\\\\\
+    <返回/@toTaskMenu>
+
+[@toCompleteTaskAuto]
+#IF
+HasTask 44
+#ACT
+#ELSESAY
+请您接过任务再来吧！\\\\\\\\
+    <返回/@toTaskMenu>
+#ELSEACT
+break
+#IF
+EQUAL $TASKVAL(44).S1 ★
+#SAY
+    直接完成任务需要消耗2个元宝。\\\\\\\\
+    <确认/@toCompleteTaskAuto0&2>    <返回/@toTaskMenu>
+#ACT
+break
+#IF
+EQUAL $TASKVAL(44).S1 ★★
+#SAY
+    直接完成任务需要消耗4个元宝。\\\\\\\\
+    <确认/@toCompleteTaskAuto0&4>    <返回/@toTaskMenu>
+#ACT
+break
+#IF
+EQUAL $TASKVAL(44).S1 ★★★
+#SAY
+    直接完成任务需要消耗6个元宝。\\\\\\\\
+    <确认/@toCompleteTaskAuto0&6>    <返回/@toTaskMenu>
+#ACT
+break
+#IF
+EQUAL $TASKVAL(44).S1 ★★★★
+#SAY
+    直接完成任务需要消耗8个元宝。\\\\\\\\
+    <确认/@toCompleteTaskAuto0&8>    <返回/@toTaskMenu>
+#ACT
+break
+#IF
+EQUAL $TASKVAL(44).S1 ★★★★★
+#SAY
+    直接完成任务需要消耗10个元宝。\\\\\\\\
+    <确认/@toCompleteTaskAuto0&10>    <返回/@toTaskMenu>
+#ACT
+break
+
+[@toCompleteTaskAuto0]
+#IF
+CHECKGAMEGOLD < $SCRIPTPARAM(1)
+#SAY
+    您目前好像没有足够的元宝哦。\\\\\\\\
+    <返回/@toTaskMenu>
+#ACT
+break
+#IF
+HasTask 44
+#SAY
+    恭喜成功提交直接完成任务的请求。\
+    <color=red 注：系统可能存在延迟，如发奖失败不会扣除元宝。>\\\\\\\
+    <返回/@toTaskMenu>
+#ACT
+GAMEGOLD - $SCRIPTPARAM(1)
+goto @getexp
+break
+#ELSESAY
+请您接过任务再来吧！\\\\\\\\
+    <返回/@toTaskMenu>
+
+[@toCompleteTask]
+#IF
+HasTask 44
+#ACT
+#ELSESAY
+请您接过任务再来吧！\\\\\\\\
+    <返回/@toTaskMenu>
+#ELSEACT
+break
+#IF
+EQUAL $Task(44) 3
+#SAY
+恭喜你勇士，你已经完成了任务，并获得了丰厚的奖励。\\\\\\\\
+    <返回/@toTaskMenu>
+#ACT
+goto @getexp
+break
+#ELSESAY
+任务还未完成，勇士尚需努力阿！\\\\\\\\
+    <返回/@toTaskMenu>
+#ELSEACT
+break
+
+[@getexp]
+#IF
+EQUAL $TASKVAL(44).S1 ★
+#ACT
+EndTask 44
+CHANGEEXP + 1200000
+SENDMSG 5 恭喜成功获得1200000经验值奖励
+break
+#IF
+EQUAL $TASKVAL(44).S1 ★★
+#ACT
+EndTask 44
+CHANGEEXP + 2400000
+SENDMSG 5 恭喜成功获得2400000经验值奖励
+break
+#IF
+EQUAL $TASKVAL(44).S1 ★★★
+#ACT
+EndTask 44
+CHANGEEXP + 3600000
+SENDMSG 5 恭喜成功获得3600000经验值奖励
+break
+#IF
+EQUAL $TASKVAL(44).S1 ★★★★
+#ACT
+EndTask 44
+CHANGEEXP + 4800000
+SENDMSG 5 恭喜成功获得4800000经验值奖励
+break
+#IF
+EQUAL $TASKVAL(44).S1 ★★★★★
+#ACT
+EndTask 44
+CHANGEEXP + 6000000
+SENDMSG 5 恭喜成功获得6000000经验值奖励
+break
+
+[@toAcceptTask]
+#IF
+CHECKLEVELEX < 28
+#SAY
+  勇士，你的等级未达到28级，无法接取日常任务！\
+  <离开/@exit>\
+#ACT
+break
+#IF
+!EQUAL $Table(SG_Pritime).Tim06 $DATE
+#ACT
+TABLE SG_PRIVITE Hum06 = 5
+Table SG_Pritime Tim06 = $DATE
+#IF
+SMALL $TABLE(SG_PRIVITE).Hum06 1
+#SAY
+勇士已经接过不少任务了，还是休息一下，\
+明天再来找我吧！\\\\\\\
+    <返回/@toTaskMenu>
+#ACT
+break
+#IF
+HasTask 44
+#SAY
+您已有任务在身，还是完成上一个任务\
+再来接新的任务吧！\\\\\\\
+    <返回/@toTaskMenu>
+#ACT
+break
+#IF
+RANDOM 1
+#ACT
+AddTask 44
+TABLE SG_PRIVITE Hum06 - 1
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\日常游戏任务.txt S10
+SPLIT $STR(S10) | S11
+SetTaskValue 44 I0 = $STR(S12)
+SetTaskValue 44 I1 = $STR(S12)
+SetTaskValue 44 I2 = 0
+SetTaskValue 44 S0 = $STR(S11)
+SetTaskValue 44 S1 = $STR(S13)
+SetTaskValue 44 S2 = $STR(S14)
+SetTaskValue 44 S3 = $STR(S15)
+UpdateTask 44 1
+break
+#SAY
+  <$TASKVAL(44).S3>\<离开/@exit>  <返回/@main>
+
+[@_RW_entry]
+#IF
+EQUAL $Task(29) 1
+#SAY
+可以完成的任务：\
+<了解日常任务/@_RW_fullyTaskDesp>\
+#ELSESAY
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+[@_RW_fullyTaskDesp]
+    每天完成日常任务可以获得大量经验，让您可以快速提\
+升！勇士每天可以在我这里接取共计5轮任务。如果觉得完成\
+任务有困难，可以花费一定数量的元宝或者绑定元宝立即完\
+成任务。\
+    <已了日常任务/@_RW_fulfilTask2510>                <以后再看/@exit>
+
+[@_RW_fulfilTask2510]
+#IF
+CHECKLEVELEX < 31
+#SAY
+    请31级后在这里完成任务吧，祝你游戏愉快！\
+    <离开/@exit>
+#ACT
+break
+#IF
+EQUAL $Task(29) 1
+#SAY
+    希望日常任务能够帮助到你，祝你游戏愉快！\
+    镖师那里每天都有一些物资需要勇士护送前往海角村。\
+完成押镖任务，将会获得巨额经验奖励。是不是很心动啊，\
+赶快去中州王城找镖师吧。\
+    <离开/@exit>
+#ACT
+EndTask 29
+AddTask 45
+BINDGOLD + 7500
+CHANGEEXP + 100000
+SENDMSG 5 你成功增加了7500绑定金币。
+break

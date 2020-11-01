@@ -1,0 +1,268 @@
+[@GlobalVar]
+#CALL [\登陆设置\全局变量.txt] @全局变量
+
+[@GuildVar]
+#CALL [\登陆设置\行会变量.txt] @行会变量
+
+[@Initialize]
+#CALL [\登陆设置\个人变量.txt] @个人变量
+
+[@Login]
+#CALL [\登陆设置\新手登陆.txt] @新手登陆
+#CALL [\封号系统\封号系统.txt] @封号分类
+#CALL [\登陆设置\登陆限制.txt] @登陆限制
+#CALL [\登陆设置\登陆执行.txt] @登陆执行
+
+[@VIP系统触发]
+#CALL [\游戏功能\VIP功能.txt] @VIP触发
+
+[@LoginNotice]
+#IF
+LARGE $RankList.1.1.1 $LEVEL
+#ACT
+MOV M6 $RankList.1.1.1
+DEC M6 $LEVEL
+MOV M7 $STR(M6)
+MULT M7 10
+MOV M8 $STR(M7)
+INC M7 100
+KILLMONEXPRATEEX $STR(M7)
+MESSAGEBOX 　　　　　　　　　当前全服最高等级为：<$RankList.1.1.1>级\　\　　　　　　　您的等级为:<$LEVEL>级，比世界等级低<$STR(M6)>级\　\　　　　打怪可享受<$STR(M8)>%经验加成，祝您更快赶上高等级玩家
+break
+
+[@请求拜师]
+#IF
+LARGE $HUMANINFO[$PARAM(0)].$LEVEL 37
+#ACT
+$PARAM(0).SENDMSG 5 您的等级过高，不能拜师
+break
+#IF
+EQUAL $HUMANINFO[$PARAM(0)].$MASTERNAME
+#ELSEACT
+$PARAM(0).SENDMSG 5 你现在已经是别人的徒弟了
+break
+#IF
+LARGE $PRENTICECOUNT 2
+#ACT
+$PARAM(0).SENDMSG 5 对方的徒弟数太多了，已经不能再招收徒弟了
+break
+#IF
+CHECKISMASTER
+#ACT
+$PARAM(0).SENDMSG 5 对方目前还是别人的徒弟，不能拜师
+break
+#IF
+CHECKLEVELEX < 38
+#ACT
+$PARAM(0).SENDMSG 5 对方的等级太低了，还没有资格作为你的师傅
+break
+#ELSEACT
+AddPrentice $PARAM(0)
+$PARAM(0).SENDMSG 5 恭喜你成为<$PARAM(0)>的徒弟，从现在开始，每当你等级提升时你都将获得声望奖励
+$PARAM(0).SENDMSG 6 当你的等级达到50级时即可出师
+break
+
+[@扩展包裹]
+#IF
+LARGE $BAGSIZE 65
+#ACT
+break
+#IF
+CHECKGOLD 100000
+#ACT
+#ELSEACT
+SENDMSG 5 你的剩余金币不足，不能扩充包裹
+break
+#IF
+CHECKGAMEGOLD > 4
+#ACT
+BagSize 66
+GAMEGOLD - 5
+take 金币 100000
+SENDMSG 5 恭喜你的包裹扩充成功。
+break
+#ELSEACT
+SENDMSG 5 你的剩余元宝不足，不能扩充包裹
+break
+
+[@扩展仓库]
+#IF
+LARGE $STORAGESIZE 59
+#ACT
+break
+#IF
+CHECKGAMEGOLD > 9
+#ACT
+GameGold - 10
+StorageSize + 21
+SENDMSG 5 您获得20格仓库使用权！
+break
+#ELSEACT
+SENDMSG 5 元宝不足
+break
+
+[@_历_签到_HOME]
+栏目数量=5\
+累计签到=<$Table(SG_Signing).Sign1>\
+签到状态=<$Table(SG_Signing).Sign2>\
+栏目状态=<$Table(SG_Signing).Sign3>|<$Table(SG_Signing).Sign4>|<$Table(SG_Signing).Sign5>|<$Table(SG_Signing).Sign6>|<$Table(SG_Signing).Sign7>\
+栏目名称=当日签到1次|累计签到7次|累计签到14次|累计签到21次|累计签到28次\
+栏目内容1=双倍经验卡1小时;826;1,绑定金币;995;20000\
+栏目内容2=双倍经验卡1小时;826;1,绑定金币;995;20000,赤日神饰/极品爆出率+3;492;1\
+栏目内容3=双倍经验卡1小时;826;1,绑定金币;995;20000,赤日神饰/极品爆出率+3;492;1,强化技能灵丹;751;2\
+栏目内容4=双倍经验卡1小时;826;1,绑定金币;995;20000,赤日神饰/极品爆出率+3;492;1,月光宝盒(大);907;1,白银宝藏;855;1\
+栏目内容5=双倍经验卡1小时;826;1,绑定金币;995;20000,赤日神饰/极品爆出率+3;492;1,月光宝盒(特大);907;2\
+
+[@_历_签到_GETPRIZE]
+#IF
+CHECKBAGSIZE 3
+#ACT
+#ELSEACT
+MESSAGEBOX 请腾出更多包裹!
+break
+#IF
+HOUR 0 0
+MIN 0 30
+#ACT
+MESSAGEBOX 请在00:30之后再来签到!!
+break
+#IF
+EQUAL $PARAM(0) 1
+#ACT
+BINDGOLD + 20000
+give 双倍经验小时卡 1 1
+Table SG_Signing Sign3 = 2
+#IF
+EQUAL $PARAM(0) 2
+#ACT
+BINDGOLD + 20000
+give 赤日神饰 1 1
+give 双倍经验小时卡 1 1
+Table SG_Signing Sign4 = 2
+#IF
+EQUAL $PARAM(0) 3
+#ACT
+BINDGOLD + 20000
+give 赤日神饰 1 1
+give 双倍经验小时卡 1 1
+give 强化技能灵丹2 1 1
+Table SG_Signing Sign5 = 2
+#IF
+EQUAL $PARAM(0) 4
+#ACT
+BINDGOLD + 20000
+give 赤日神饰 1 1
+give 月光宝盒(大) 1 1
+give 白银宝藏 1 1
+give 双倍经验小时卡 1 1
+Table SG_Signing Sign6 = 2
+#IF
+EQUAL $PARAM(0) 5
+#ACT
+BINDGOLD + 20000
+give 赤日神饰 1 1
+give 月光宝盒(特大) 1 1
+give 双倍经验小时卡 1 1
+Table SG_Signing Sign7 = 2
+MESSAGEBOX 您已成功完成28次签到，签到次数清零，每天坚持不懈，必能收获丰厚奖励!
+#IF
+RANDOM 1
+#ACT
+goto @_历_签到_HOME
+break
+
+[@_历_签到_SIGNIN]
+#IF
+EQUAL $Table(SG_Signing).Sign2 1
+#ACT
+Table SG_Signing Sign1 + 1
+Table SG_Signing Sign2 = 0
+Table SG_Signing Sign3 = 1
+#IF
+EQUAL $Table(SG_Signing).Sign1 7
+#ACT
+Table SG_Signing Sign4 = 1
+#IF
+EQUAL $Table(SG_Signing).Sign1 14
+#ACT
+Table SG_Signing Sign5 = 1
+#IF
+EQUAL $Table(SG_Signing).Sign1 21
+#ACT
+Table SG_Signing Sign6 = 1
+#IF
+EQUAL $Table(SG_Signing).Sign1 28
+#ACT
+Table SG_Signing Sign7 = 1
+#IF
+RANDOM 1
+#ACT
+goto @_历_签到_HOME
+break
+
+[@PlayReconnection]
+#IF
+RANDOM 1
+#ACT
+Table SG_PRIVITE Hum01 = $LONGDATE
+break
+
+[@PlayOffLine]
+#IF
+RANDOM 1
+#ACT
+Table SG_PRIVITE Hum01 = $LONGDATE
+break
+
+[@加点装备]
+#IF
+CHECKITEMID $PARAM(1)
+POS $PARAM(3) 荣誉勋章
+#ACT
+MOVR P2 5
+INC P2 1
+SETHONORSHAPE $STR(P2) $PARAM(1)
+SENDMSG 5 您的勋章被命运石改造成功，拥有了特别的造型。
+break
+
+[@GetExpFucn]
+#IF
+RANDOM 1
+#ACT
+MOV M99 $PARAM(20)
+DIV M99 5
+MULT M99 3
+AddItemExp 月光宝盒 $STR(M99)
+#IF
+EQUAL $ITEMINFO[14].NAME 
+#ACT
+break
+#IF
+EQUAL $ITEMINFO[14].NAME 真魂珠
+LARGE $ITEMINFO[14].SOULBEADLEVEL 8
+#ACT
+break
+#IF
+EQUAL $ITEMINFO[14].NAME 仙魂珠
+LARGE $ITEMINFO[14].SOULBEADLEVEL 0
+#ACT
+break
+#IF
+EQUAL $ITEMINFO[14].SOULBEADCUREXP $ITEMINFO[14].SOULBEADMAXEXP
+#ACT
+UPGRADEUSERITEM $USEITEMMAKEINDEX(14) 76 = 0
+UPGRADEUSERITEM $USEITEMMAKEINDEX(14) 12 + 1
+MOV S20 $ITEMINFO[14].NAME
+INC S20 $ITEMINFO[14].SOULBEADLEVEL
+#ELSEACT
+break
+#IF
+PosInList $STR(S20) ..\QuestDiary\数据文件\文本数据\魂珠属性列表.txt S21
+#ACT
+SPLIT $STR(S21) | S22
+UPGRADEUSERITEM $USEITEMMAKEINDEX(14) 1 + $STR(S23)
+UPGRADEUSERITEM $USEITEMMAKEINDEX(14) 3 + $STR(S23)
+UPGRADEUSERITEM $USEITEMMAKEINDEX(14) 5 + $STR(S24)
+UPGRADEUSERITEM $USEITEMMAKEINDEX(14) 73 + $STR(S25)
+UPGRADEUSERITEM $USEITEMMAKEINDEX(14) 75 + $STR(S26)
+break

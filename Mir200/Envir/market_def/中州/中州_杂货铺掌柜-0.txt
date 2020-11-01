@@ -1,0 +1,76 @@
+(@bindbuy @fastbuy @buy @sell )
+%100
++31
++25
+[@main]
+    欢迎你，你需要些什么帮助？\\
+    <可接任务/@_RW_entry>\
+    <快捷购入/@fastbuy>\
+    <购入物品/@buy>    <出售物品/@sell>\
+    <绑定金币购买物品/@bindbuy>\
+    <询问商品/@questionprize>\
+　　<我有些扔不掉的东西，想要卖给你/@meltN>\
+    <关闭选单/@exit>
+
+[@_RW_entry]
+#CALL [\游戏任务\新手任务\充足商品.txt] @中州_杂货
+
+[@fastbuy]
+#CALL [\商人\杂货.txt] @快捷交易
+
+[@buy]
+#CALL [\商人\杂货.txt] @购入物品
+
+[@sell]
+#CALL [\商人\杂货.txt] @出售物品
+
+[@bindbuy]
+#CALL [\商人\杂货.txt] @绑定购买
+
+[@questionprize]
+#CALL [\商人\杂货.txt] @询问商品
+
+[@meltN]
+#ACT
+ShowSpotDlg 6 请放入你想卖的东西: @meltN1
+#SAY
+　　恩，是有些东西是扔不掉的，我可以回收。但也不是所\
+有的东西我都要的。而且这类东西都不值钱，我是不可能给\
+你好价钱的，你还是先拿出来让我看看吧。\\
+　　<那算了/@exit>
+
+[@meltN1]
+#IF
+CHECKVARLIST $PARAM(0) ..\QuestDiary\数据文件\文本数据\允许销毁物品.txt
+#SAY
+    这个物品如果你觉的没什么用了，卖我就行了。\\
+　　<好的，就卖你了。/@meltNowN>\
+　　<这么少的钱，那算了。/@exit>\
+#ACT
+MOV S50 $PARAM(1)
+break
+#ELSESAY
+　　这个东西，我不要，我拿来也没有用处，你还是卖给其 \
+他人吧，说不定可以卖个好价钱。\\\
+<好的，谢谢。/@exit>
+
+[@meltNowN]
+#ACT
+ShowSpotDlg 6 请放上你想卖的东西: @meltNowN1
+#SAY
+　　把你要卖的东西放上来吧\\
+　　<还是算了/@exit>
+
+[@meltNowN1]
+#IF
+EQUAL S50 $PARAM(1)
+#SAY
+　　东西我收下了，给你点金币吧，也就值这么多了。\\
+　　<算你狠/@exit>　　<返回/@meltN>
+#ACT
+TAKEM $PARAM(1)
+give 金币 1500
+break
+#ELSESAY
+　　恐怕这不是刚才你给我的那件东西吧。 \\\
+　　<我再找找/@exit>

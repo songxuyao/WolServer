@@ -1,0 +1,109 @@
+[@main]
+                    凡人宝地\
+开放时间：每天12点-24点\
+进入条件：30级以上\
+其他    ：非VIP每天可进入1小时，VIP每天可进入2小时。\
+<掉落物品/@diaoluo>：逆魔级以上装备、高级技能书、淬炼石等\
+注：每人每天只能进入一次，非VIP最多进入1小时，VIP最\
+    多进入2小时。    <进入凡人宝地/@gotofrbd>\\
+<离开/@exit>\
+
+[@gotofrbd]
+#IF
+CHECKLEVELEX > 65
+#SAY
+    你当前等级为<$LEVEL>级，可进入凡人宝地五。\
+    凡人宝地五掉落逆魔、圣战、神武、战神级装备，各类\
+技能书以及淬炼石。\
+注：每人每天只能进入一次，非VIP最多进入1小时，VIP最\
+    多进入2小时。\
+<进入凡人宝地五/@fanrenbd&凡人宝地五&FJDB5>\
+#ACT
+break
+#IF
+CHECKLEVELEX > 54
+#SAY
+    你当前等级为<$LEVEL>级，可进入凡人宝地四。\
+    凡人宝地五掉落逆魔、圣战、神武、战神级装备，各类\
+技能书以及淬炼石。\
+注：每人每天只能进入一次，非VIP最多进入1小时，VIP最\
+    多进入2小时。\
+<进入凡人宝地四/@fanrenbd&凡人宝地四&FJDB4>\
+#ACT
+break
+#IF
+CHECKLEVELEX > 49
+#SAY
+    你当前等级为<$LEVEL>级，可进入凡人宝地三。\
+    凡人宝地五掉落逆魔、圣战、神武级装备，各类技能书\
+以及淬炼石。\
+注：每人每天只能进入一次，非VIP最多进入1小时，VIP最\
+    多进入2小时。\
+<进入凡人宝地三/@fanrenbd&凡人宝地三&FJDB3>\
+#ACT
+break
+#IF
+CHECKLEVELEX > 39
+#SAY
+    你当前等级为<$LEVEL>级，可进入凡人宝地二。\
+    凡人宝地五掉落逆魔、圣战级装备，各类技能书以及淬\
+炼石。\
+注：每人每天只能进入一次，非VIP最多进入1小时，VIP最\
+    多进入2小时。\
+<进入凡人宝地二/@fanrenbd&凡人宝地二&FJDB2>\
+#ACT
+break
+#IF
+CHECKLEVELEX > 29
+#SAY
+    你当前等级为30级，可进入凡人宝地一。\
+    凡人宝地一掉落逆魔级装备、各类技能书以及淬炼石。\
+注：每人每天只能进入一次，非VIP最多进入1小时，VIP最\
+    多进入2小时。\
+<进入凡人宝地一/@fanrenbd&凡人宝地一&FJDB1>\
+#ACT
+break
+#ELSESAY
+    只有30级以上才能进入凡人宝地。。\
+    <好的/@exit>\
+
+[@fanrenbd]
+#IF
+EQUAL $Table(SG_Pritime).Tim04 $DATE
+#SAY
+你今天已经进入过宝地，每天只能进入一次。\\
+　　<离开/@exit>\
+#ACT
+break
+#IF
+HOUR 12 23
+#ACT
+#ELSESAY
+    宝地开放时间为每天12点-24点。\
+    请稍后再来。\\
+    <好的/@main>\
+#IF
+SMALL $VIPLEVEL 1
+#ACT
+TimeReCall 60
+MAP $SCRIPTPARAM(2)
+Table SG_Pritime Tim04 = $DATE
+SENDMSG 5 你在<$SCRIPTPARAM(1)>停留的时间只有1小时，祝你好运！
+break
+#IF
+RANDOM 1
+#ACT
+TimeReCall 120
+MAP $SCRIPTPARAM(2)
+Table SG_Pritime Tim04 = $DATE
+SENDMSG 5 今日第1次完成[凡人宝地],增加活跃度积分4!
+SENDMSG 5 尊敬的VIP用户，你在<$SCRIPTPARAM(1)>停留的时间只有2小时，祝你好运！
+break
+
+[@diaoluo]
+  凡人宝地一掉落逆魔级装备。\
+  凡人宝地二掉落逆魔、圣战级装备.\
+  凡人宝地三掉落逆魔、圣战、神武级装备。\
+  凡人宝地四掉落逆魔、圣战、神武、战神级装备。\
+  凡人宝地一至四层均会掉落各类技能书以及淬炼石。\
+  <返回/@main>\

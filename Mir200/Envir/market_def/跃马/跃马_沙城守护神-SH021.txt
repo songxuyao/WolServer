@@ -1,0 +1,159 @@
+[@main]
+#IF
+HOUR 20 20
+#SAY
+　　<color=CCCA9A 每天晚上21:01-22:06之间才可领取攻城奖励。>\\
+　　{color=CCCA9A 当前系统时间:<$DATETIME>}\\
+　　<离开/@exit>\
+#ACT
+break
+#IF
+HOUR 21 21
+MIN 1 10
+#SAY
+　　<color=CCCA9A 每天晚上21:01-22:06之间才可领取攻城奖励。>\
+　　<领取新区攻城奖励/@getjiangli>  <color=CCCA9A 可领取10000元宝奖励>\
+　　<领取合区攻城奖励/@getjiang03>  <color=CCCA9A 可领取5000元宝奖励>\
+　　<领取沙城奖励/@getsabukprize>\
+　　<直达各地/@gogogo>\
+#ACT
+break
+#IF
+RANDOM 1
+#SAY
+　　<领取沙城奖励/@getsabukprize>\
+　　<直达各地/@gogogo>\
+#ACT
+break
+
+[@getjiang03]
+#IF
+!ISCASTLEMASTER
+#SAY
+    <color=orange 你不是沙城之主，不能领取奖励哦。>\\
+    <返回/@main>
+#ACT
+break
+#IF
+SMALL G2 4
+#SAY
+    <color=orange 只有第3天后才能领取合区攻城奖励。>\\
+    <返回/@main>
+#ACT
+break
+#IF
+EQUAL I7 3
+#SAY
+    本行会已经领取了攻城奖励，无法重复领取。\\
+    <离开/@exit>
+#ACT
+break
+#IF
+EQUAL I7 1
+#SAY
+恭喜城主获得新区沙城奖励:<Color=green 5000元宝。>\
+<确认/@exit>\
+#ACT
+MOV I7 3
+GAMEGOLD + 5000
+SENDMSG 10 恭喜沙城会长[<$USERNAME>]在领取合区攻城奖励，获得[5000]个元宝奖励！
+SENDMSG 14 恭喜沙城会长[<$USERNAME>]在领取合区攻城奖励，获得[5000]个元宝奖励！
+break
+#IF
+EQUAL I7 0
+#SAY
+    当前没有攻城奖励可领取。\\
+    <离开/@exit>
+#ACT
+break
+
+[@getjiangli]
+#IF
+!ISCASTLEMASTER
+#SAY
+    <color=orange 你不是沙城之主，不能领取奖励哦。>\\
+    <返回/@main>
+#ACT
+break
+#IF
+!EQUAL G2 3
+#SAY
+    <color=orange 只有开区第3天才能领取新区攻城奖励。>\\
+    <返回/@main>
+#ACT
+break
+#IF
+EQUAL I7 3
+#SAY
+    本行会已经领取了攻城奖励，无法重复领取。\\
+    <离开/@exit>
+#ACT
+break
+#IF
+EQUAL I7 2
+#SAY
+恭喜城主获得新区沙城奖励:<Color=green 10000元宝。>\
+<确认/@exit>\
+#ACT
+MOV I7 3
+GAMEGOLD + 10000
+SENDMSG 10 恭喜沙城会长[<$USERNAME>]在领取新区攻城奖励，获得[10000]个元宝奖励！
+SENDMSG 14 恭喜沙城会长[<$USERNAME>]在领取新区攻城奖励，获得[10000]个元宝奖励！
+break
+#IF
+EQUAL I7 0
+#SAY
+    当前没有攻城奖励可领取。\\
+    <离开/@exit>
+#ACT
+break
+
+[@gogogo]
+    直接选择要去的地点。\
+    <炼狱海岛/@_LB_newlianyu>\
+    <将军坟二层/@scgo&H072&32&213>\
+    <逆魔古刹四层/@scgo&S018&158&290>\
+    <蛇洞百虫穴/@scgo&N003&231&161>\
+    <机关洞天机堂/@scgo&M007&215&66>\
+    <通天塔六层/@scgo&TT006&188&326>\
+    <禁地青玉宫/@scgo&J005&2857346>\
+    <地下魔域四层/@scgo&MC004&191&31>\
+
+[@_LB_newlianyu]
+#CALL [\商人\挑战炼狱.txt] @newlianyu
+
+[@scgo]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MAPMOVE $SCRIPTPARAM(1) $SCRIPTPARAM(2) $SCRIPTPARAM(3)
+break
+
+[@getsabukprize]
+#IF
+!ISCASTLEGUILD
+#SAY
+只有沙城之主才能领取至尊屠龙。\
+<返回/@main>\
+#ACT
+break
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSESAY
+你的包裹空间不够，请整理出至少1个空位。\
+<返回/@main>\
+#ELSEACT
+break
+#IF
+!EQUAL A17 $GUILDNAME
+#SAY
+恭喜城主获得沙城至尊奖励。\
+<确认/@exit>\
+#ACT
+MOV A17 $GUILDNAME
+give 至尊屠龙 1
+break
+#ELSESAY
+你的行会已经领过奖励。
+<返回/@main>

@@ -1,0 +1,22 @@
+[@main]
+    背包拥有<Color=green 道神符印>，则道士召唤所有骷髅都获得大幅度\
+加强且拥有<Color=green 斗转技能效果>，骷髅能够分担玩家受到的一定百分\
+比伤害，主体等级越高，骷髅分担的伤害百分比越高。可以用\
+<Color=green 10>个<Color=green 道神符印碎片>兑换一个<Color=green 道神符印>。<Color=green 宝地四层和五层>几率产\
+出<Color=green 道神符印碎片>，请问大侠需要兑换么？\
+<道神符印兑换/@doDaoshenfuyinMerge>
+
+[@doDaoshenfuyinMerge]
+#IF
+CHECKITEM 道神符印碎片 10
+#SAY
+    恭喜您成功兑换了<color=red 道神符印 x 1>。\\
+   <离开/@exit>
+#ACT
+TAKE 道神符印碎片 10
+give 道神符印 1
+break
+#ELSESAY
+    对不起，您的道神符印碎片数量不足！\
+    <离开/@exit>
+

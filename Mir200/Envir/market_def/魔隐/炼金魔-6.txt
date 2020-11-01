@@ -1,0 +1,146 @@
+(@buy)
+%100
++5
++6
++43
+[@main]
+找到我的人，都是为了赌一赌自己的运气，打造一把只属于\
+自己的"命运之刃"。这可不是一件普通的兵器，但如果你带\
+来了必要的材料，我可以帮你打造。必需提醒你的是：命运\
+的轨迹是无常的，虽然每一把命运之刃的外形都看似一样，\
+但在品质和属性上却经常判若云泥。刚出炉就碎掉的我也见\
+得多了。所以，请三思而后行。\
+<我要打造命运之刃/@makefakeblade>\
+<了解命运之刃的打造方法/@aboutmake>\
+<我只是想买些寻常的兵器/@buy>\
+
+[@makefakeblade]
+#IF
+CHECKLEVELEX > 0
+#SAY
+虽然影响打造命运之刃的成功因素有很多，但我知道，如果\
+你能提供"蓝魔之泪"和其他材料一起打造，成功的机会会大\
+大提高。\
+<我要用"蓝魔之泪"一起打造/@maketask01>\
+<就这样打造吧/@maketask02>
+#ACT
+MOV P1 0
+break
+
+[@maketask01]
+#IF
+CHECKITEM 蓝魔之泪 1
+#ACT
+MOV P1 1
+take 蓝魔之泪 1
+goto @maketask02
+break
+#ELSESAY
+你没有蓝魔之泪，你只能用普通的方法打造。\
+<返回/@main>\
+
+[@maketask02]
+#IF
+CHECKCREDITPOINT < 1
+#SAY
+你的声望值不够，或者材料还不全。
+<离开/@exit>
+#ACT
+break
+#IF
+CHECKITEMDURE 金矿 15000 1
+CHECKITEMDURE 银矿 15000 1
+CHECKITEMDURE 铁矿 15000 1
+CHECKITEMDURE 铜矿 15000 1
+CHECKITEMDURE 木材 15000 1
+#ACT
+MOVR P0 100
+TAKEDUREITEM 金矿 15000 1
+TAKEDUREITEM 银矿 15000 1
+TAKEDUREITEM 铁矿 15000 1
+TAKEDUREITEM 铜矿 15000 1
+TAKEDUREITEM 木材 15000 1
+CREDITPOINT - 1
+goto @StartBuild
+#ELSESAY
+你身上的材料不够呀，等凑齐了再来找我吧。\
+<离开/@exit>
+
+[@StartBuild]
+#IF
+EQUAL P1 1
+#ACT
+INC P0 25
+#IF
+SMALL P0 50
+#SAY
+真遗憾，你的命运之刃经受不起炉火的淬炼，\
+彻底破碎了……我的能力只能帮你做到这一步了。\
+<离开/@exit>\
+#ACT
+break
+#IF
+CHECKLEVELEX > 0
+#SAY
+锻造成功，你拥有了自己的命运之刃。\
+<离开/@exit>
+#ACT
+MOVR P2 27
+#IF
+LARGE P2 26
+#ACT
+give 命运9 1
+break
+#IF
+LARGE P2 25
+#ACT
+give 命运8 1
+break
+#IF
+LARGE P2 24
+#ACT
+give 命运7 1
+break
+#IF
+LARGE P2 21
+#ACT
+give 命运6 1
+break
+#IF
+LARGE P2 18
+#ACT
+give 命运5 1
+break
+#IF
+LARGE P2 15
+#ACT
+give 命运4 1
+break
+#IF
+LARGE P2 10
+#ACT
+give 命运3 1
+break
+#IF
+LARGE P2 5
+#ACT
+give 命运2 1
+break
+#IF
+LARGE P2 0
+#ACT
+give 命运1 1
+break
+
+[@aboutmake]
+打造命运之刃需要纯度15以上（含15）的金矿、银矿、铁矿\
+、铜矿和木材各一块，而且要消耗一点你的声望。这些都是\
+人界寻常的材料，相信难不倒你。但只靠这些，锻造出高属\
+性命运之刃的机率也是有限的。去寻找"蓝魔之泪"吧，它是\
+一颗可以改写人类命运轨迹的魔界宝石，如果有请务必交给\
+我一起锻造！\
+<好的，我要打造/@makefakeblade>\
+<不了，再看看/@exit>
+
+[@buy]
+#CALL [\商人\武器.txt] @购入武器

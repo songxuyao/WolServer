@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="gb2312"?>
+<FabaoUpgrade>
+	<fabao index="1" desp="1.强化成功会增加1颗星，强化失败会损失1颗星2.到达1星，4星，7星和11星时强化失败后星数不会降低。">
+		<level value="1" material1="玄灵石" num1="5" material2="普通祝福石" num2="0" skill_lv="1" next_skill_lv="5" rate="75" down_level="0">
+			<jobprops job="0" name="gj" value_1 ="2" value_2 ="2"/>
+			<jobprops job="1" name="mfgj" value_1 ="2" value_2 ="2"/>
+			<jobprops job="2" name="dsgj" value_1 ="2" value_2 ="2"/>
+		</level>
+		<level value="2" material1="玄灵石" num1="5" material2="普通祝福石" num2="0" skill_lv="1" next_skill_lv="5" rate="60" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="4" value_2 ="4"/>
+			<jobprops job="1" name="mfgj" value_1 ="4" value_2 ="4"/>
+			<jobprops job="2" name="dsgj" value_1 ="4" value_2 ="4"/>
+		</level>
+		<level value="3" material1="玄灵石" num1="10" material2="普通祝福石" num2="0" skill_lv="1" next_skill_lv="5" rate="50" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="6" value_2 ="6"/>
+			<jobprops job="1" name="mfgj" value_1 ="6" value_2 ="6"/>
+			<jobprops job="2" name="dsgj" value_1 ="6" value_2 ="6"/>
+		</level>
+		<level value="4" material1="玄灵石" num1="10" material2="普通祝福石" num2="0" skill_lv="1" next_skill_lv="5" rate="40" down_level="0">
+			<jobprops job="0" name="gj" value_1 ="8" value_2 ="8"/>
+			<jobprops job="1" name="mfgj" value_1 ="8" value_2 ="8"/>
+			<jobprops job="2" name="dsgj" value_1 ="8" value_2 ="8"/>
+		</level>
+		<level value="5" material1="玄灵石" num1="15" material2="普通祝福石" num2="5" skill_lv="2" next_skill_lv="9" rate="30" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="10" value_2 ="10"/>
+			<jobprops job="1" name="mfgj" value_1 ="10" value_2 ="10"/>
+			<jobprops job="2" name="dsgj" value_1 ="10" value_2 ="10"/>
+		</level>
+		<level value="6" material1="玄灵石" num1="15" material2="普通祝福石" num2="5" skill_lv="2" next_skill_lv="9" rate="25" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="12" value_2 ="12"/>
+			<jobprops job="1" name="mfgj" value_1 ="12" value_2 ="12"/>
+			<jobprops job="2" name="dsgj" value_1 ="12" value_2 ="12"/>
+		</level>
+		<level value="7" material1="玄灵石" num1="20" material2="普通祝福石" num2="0" skill_lv="2" next_skill_lv="9" rate="20" down_level="0">
+			<jobprops job="0" name="gj" value_1 ="14" value_2 ="14"/>
+			<jobprops job="1" name="mfgj" value_1 ="14" value_2 ="14"/>
+			<jobprops job="2" name="dsgj" value_1 ="14" value_2 ="14"/>
+		</level>
+		<level value="8" material1="玄灵宝玉" num1="20" material2="普通祝福石" num2="10" skill_lv="2" next_skill_lv="9" rate="20" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="16" value_2 ="16"/>
+			<jobprops job="1" name="mfgj" value_1 ="16" value_2 ="16"/>
+			<jobprops job="2" name="dsgj" value_1 ="16" value_2 ="16"/>
+		</level>
+		<level value="9" material1="玄灵宝玉" num1="25" material2="普通祝福石" num2="10" skill_lv="3" next_skill_lv="12" rate="15" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="18" value_2 ="18"/>
+			<jobprops job="1" name="mfgj" value_1 ="18" value_2 ="18"/>
+			<jobprops job="2" name="dsgj" value_1 ="18" value_2 ="18"/>
+		</level>
+		<level value="10" material1="玄灵宝玉" num1="25" material2="普通祝福石" num2="10" skill_lv="3" next_skill_lv="12" rate="13" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="21" value_2 ="21"/>
+			<jobprops job="1" name="mfgj" value_1 ="21" value_2 ="21"/>
+			<jobprops job="2" name="dsgj" value_1 ="21" value_2 ="21"/>
+		</level>
+		<level value="11" material1="玄灵宝玉" num1="30" material2="普通祝福石" num2="0" skill_lv="3" next_skill_lv="12" rate="10" down_level="0">
+			<jobprops job="0" name="gj" value_1 ="24" value_2 ="24"/>
+			<jobprops job="1" name="mfgj" value_1 ="24" value_2 ="24"/>
+			<jobprops job="2" name="dsgj" value_1 ="24" value_2 ="24"/>
+		</level>
+		<level value="12" material1="玄灵宝玉" num1="30" material2="普通祝福石" num2="15" skill_lv="4" next_skill_lv="15" rate="8" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="27" value_2 ="27"/>
+			<jobprops job="1" name="mfgj" value_1 ="27" value_2 ="27"/>
+			<jobprops job="2" name="dsgj" value_1 ="27" value_2 ="27"/>
+		</level>
+		<level value="13" material1="玄灵宝玉" num1="35" material2="普通祝福石" num2="15" skill_lv="4" next_skill_lv="15" rate="6" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="30" value_2 ="30"/>
+			<jobprops job="1" name="mfgj" value_1 ="30" value_2 ="30"/>
+			<jobprops job="2" name="dsgj" value_1 ="30" value_2 ="30"/>
+		</level>
+		<level value="14" material1="玄灵宝玉" num1="35" material2="普通祝福石" num2="20" skill_lv="4" next_skill_lv="15" rate="4" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="33" value_2 ="33"/>
+			<jobprops job="1" name="mfgj" value_1 ="33" value_2 ="33"/>
+			<jobprops job="2" name="dsgj" value_1 ="33" value_2 ="33"/>
+		</level>
+		<level value="15" material1="玄灵宝玉" num1="40" material2="普通祝福石" num2="20" skill_lv="5" next_skill_lv="17" rate="2" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="36" value_2 ="36"/>
+			<jobprops job="1" name="mfgj" value_1 ="36" value_2 ="36"/>
+			<jobprops job="2" name="dsgj" value_1 ="36" value_2 ="36"/>
+		</level>
+	</fabao>
+	<fabao index="2" material1="玄灵石" material2="普通祝福石" desp="1.强化成功会增加1颗星，强化失败会损失1颗星2.到达1星，4星，7星和11星时强化失败后星数不会降低。">
+		<level value="1" material1="玄灵石" num1="5" material2="普通祝福石" num2="0" skill_lv="1" next_skill_lv="5" rate="75" down_level="0">
+			<jobprops job="0" name="gj" value_1 ="2" value_2 ="2"/>
+			<jobprops job="1" name="mfgj" value_1 ="2" value_2 ="2"/>
+			<jobprops job="2" name="dsgj" value_1 ="2" value_2 ="2"/>
+		</level>
+		<level value="2" material1="玄灵石" num1="5" material2="普通祝福石" num2="0" skill_lv="1" next_skill_lv="5" rate="60" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="4" value_2 ="4"/>
+			<jobprops job="1" name="mfgj" value_1 ="4" value_2 ="4"/>
+			<jobprops job="2" name="dsgj" value_1 ="4" value_2 ="4"/>
+		</level>
+		<level value="3" material1="玄灵石" num1="10" material2="普通祝福石" num2="0" skill_lv="1" next_skill_lv="5" rate="50" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="6" value_2 ="6"/>
+			<jobprops job="1" name="mfgj" value_1 ="6" value_2 ="6"/>
+			<jobprops job="2" name="dsgj" value_1 ="6" value_2 ="6"/>
+		</level>
+		<level value="4" material1="玄灵石" num1="10" material2="普通祝福石" num2="0" skill_lv="1" next_skill_lv="5" rate="40" down_level="0">
+			<jobprops job="0" name="gj" value_1 ="8" value_2 ="8"/>
+			<jobprops job="1" name="mfgj" value_1 ="8" value_2 ="8"/>
+			<jobprops job="2" name="dsgj" value_1 ="8" value_2 ="8"/>
+		</level>
+		<level value="5" material1="玄灵石" num1="15" material2="普通祝福石" num2="5" skill_lv="2" next_skill_lv="9" rate="30" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="10" value_2 ="10"/>
+			<jobprops job="1" name="mfgj" value_1 ="10" value_2 ="10"/>
+			<jobprops job="2" name="dsgj" value_1 ="10" value_2 ="10"/>
+		</level>
+		<level value="6" material1="玄灵石" num1="15" material2="普通祝福石" num2="5" skill_lv="2" next_skill_lv="9" rate="25" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="12" value_2 ="12"/>
+			<jobprops job="1" name="mfgj" value_1 ="12" value_2 ="12"/>
+			<jobprops job="2" name="dsgj" value_1 ="12" value_2 ="12"/>
+		</level>
+		<level value="7" material1="玄灵石" num1="20" material2="普通祝福石" num2="0" skill_lv="2" next_skill_lv="9" rate="20" down_level="0">
+			<jobprops job="0" name="gj" value_1 ="14" value_2 ="14"/>
+			<jobprops job="1" name="mfgj" value_1 ="14" value_2 ="14"/>
+			<jobprops job="2" name="dsgj" value_1 ="14" value_2 ="14"/>
+		</level>
+		<level value="8" material1="玄灵宝玉" num1="20" material2="普通祝福石" num2="10" skill_lv="2" next_skill_lv="9" rate="20" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="16" value_2 ="16"/>
+			<jobprops job="1" name="mfgj" value_1 ="16" value_2 ="16"/>
+			<jobprops job="2" name="dsgj" value_1 ="16" value_2 ="16"/>
+		</level>
+		<level value="9" material1="玄灵宝玉" num1="25" material2="普通祝福石" num2="10" skill_lv="3" next_skill_lv="12" rate="15" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="18" value_2 ="18"/>
+			<jobprops job="1" name="mfgj" value_1 ="18" value_2 ="18"/>
+			<jobprops job="2" name="dsgj" value_1 ="18" value_2 ="18"/>
+		</level>
+		<level value="10" material1="玄灵宝玉" num1="25" material2="普通祝福石" num2="10" skill_lv="3" next_skill_lv="12" rate="13" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="21" value_2 ="21"/>
+			<jobprops job="1" name="mfgj" value_1 ="21" value_2 ="21"/>
+			<jobprops job="2" name="dsgj" value_1 ="21" value_2 ="21"/>
+		</level>
+		<level value="11" material1="玄灵宝玉" num1="30" material2="普通祝福石" num2="0" skill_lv="3" next_skill_lv="12" rate="10" down_level="0">
+			<jobprops job="0" name="gj" value_1 ="24" value_2 ="24"/>
+			<jobprops job="1" name="mfgj" value_1 ="24" value_2 ="24"/>
+			<jobprops job="2" name="dsgj" value_1 ="24" value_2 ="24"/>
+		</level>
+		<level value="12" material1="玄灵宝玉" num1="30" material2="普通祝福石" num2="15" skill_lv="4" next_skill_lv="15" rate="8" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="27" value_2 ="27"/>
+			<jobprops job="1" name="mfgj" value_1 ="27" value_2 ="27"/>
+			<jobprops job="2" name="dsgj" value_1 ="27" value_2 ="27"/>
+		</level>
+		<level value="13" material1="玄灵宝玉" num1="35" material2="普通祝福石" num2="15" skill_lv="4" next_skill_lv="15" rate="6" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="30" value_2 ="30"/>
+			<jobprops job="1" name="mfgj" value_1 ="30" value_2 ="30"/>
+			<jobprops job="2" name="dsgj" value_1 ="30" value_2 ="30"/>
+		</level>
+		<level value="14" material1="玄灵宝玉" num1="35" material2="普通祝福石" num2="20" skill_lv="4" next_skill_lv="15" rate="4" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="33" value_2 ="33"/>
+			<jobprops job="1" name="mfgj" value_1 ="33" value_2 ="33"/>
+			<jobprops job="2" name="dsgj" value_1 ="33" value_2 ="33"/>
+		</level>
+		<level value="15" material1="玄灵宝玉" num1="40" material2="普通祝福石" num2="20" skill_lv="5" next_skill_lv="17" rate="2" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="36" value_2 ="36"/>
+			<jobprops job="1" name="mfgj" value_1 ="36" value_2 ="36"/>
+			<jobprops job="2" name="dsgj" value_1 ="36" value_2 ="36"/>
+		</level>
+	</fabao>
+	<fabao index="3" material1="玄灵石" material2="普通祝福石" desp="1.强化成功会增加1颗星，强化失败会损失1颗星2.到达1星，4星，7星和11星时强化失败后星数不会降低。">
+		<level value="1" material1="玄灵石" num1="5" material2="普通祝福石" num2="0" skill_lv="1" next_skill_lv="5" rate="75" down_level="0">
+			<jobprops job="0" name="gj" value_1 ="2" value_2 ="2"/>
+			<jobprops job="1" name="mfgj" value_1 ="2" value_2 ="2"/>
+			<jobprops job="2" name="dsgj" value_1 ="2" value_2 ="2"/>
+		</level>
+		<level value="2" material1="玄灵石" num1="5" material2="普通祝福石" num2="0" skill_lv="1" next_skill_lv="5" rate="60" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="4" value_2 ="4"/>
+			<jobprops job="1" name="mfgj" value_1 ="4" value_2 ="4"/>
+			<jobprops job="2" name="dsgj" value_1 ="4" value_2 ="4"/>
+		</level>
+		<level value="3" material1="玄灵石" num1="10" material2="普通祝福石" num2="0" skill_lv="1" next_skill_lv="5" rate="50" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="6" value_2 ="6"/>
+			<jobprops job="1" name="mfgj" value_1 ="6" value_2 ="6"/>
+			<jobprops job="2" name="dsgj" value_1 ="6" value_2 ="6"/>
+		</level>
+		<level value="4" material1="玄灵石" num1="10" material2="普通祝福石" num2="0" skill_lv="1" next_skill_lv="5" rate="40" down_level="0">
+			<jobprops job="0" name="gj" value_1 ="8" value_2 ="8"/>
+			<jobprops job="1" name="mfgj" value_1 ="8" value_2 ="8"/>
+			<jobprops job="2" name="dsgj" value_1 ="8" value_2 ="8"/>
+		</level>
+		<level value="5" material1="玄灵石" num1="15" material2="普通祝福石" num2="5" skill_lv="2" next_skill_lv="9" rate="30" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="10" value_2 ="10"/>
+			<jobprops job="1" name="mfgj" value_1 ="10" value_2 ="10"/>
+			<jobprops job="2" name="dsgj" value_1 ="10" value_2 ="10"/>
+		</level>
+		<level value="6" material1="玄灵石" num1="15" material2="普通祝福石" num2="5" skill_lv="2" next_skill_lv="9" rate="25" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="12" value_2 ="12"/>
+			<jobprops job="1" name="mfgj" value_1 ="12" value_2 ="12"/>
+			<jobprops job="2" name="dsgj" value_1 ="12" value_2 ="12"/>
+		</level>
+		<level value="7" material1="玄灵石" num1="20" material2="普通祝福石" num2="0" skill_lv="2" next_skill_lv="9" rate="20" down_level="0">
+			<jobprops job="0" name="gj" value_1 ="14" value_2 ="14"/>
+			<jobprops job="1" name="mfgj" value_1 ="14" value_2 ="14"/>
+			<jobprops job="2" name="dsgj" value_1 ="14" value_2 ="14"/>
+		</level>
+		<level value="8" material1="玄灵宝玉" num1="20" material2="普通祝福石" num2="10" skill_lv="2" next_skill_lv="9" rate="20" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="16" value_2 ="16"/>
+			<jobprops job="1" name="mfgj" value_1 ="16" value_2 ="16"/>
+			<jobprops job="2" name="dsgj" value_1 ="16" value_2 ="16"/>
+		</level>
+		<level value="9" material1="玄灵宝玉" num1="25" material2="普通祝福石" num2="10" skill_lv="3" next_skill_lv="12" rate="15" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="18" value_2 ="18"/>
+			<jobprops job="1" name="mfgj" value_1 ="18" value_2 ="18"/>
+			<jobprops job="2" name="dsgj" value_1 ="18" value_2 ="18"/>
+		</level>
+		<level value="10" material1="玄灵宝玉" num1="25" material2="普通祝福石" num2="10" skill_lv="3" next_skill_lv="12" rate="13" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="21" value_2 ="21"/>
+			<jobprops job="1" name="mfgj" value_1 ="21" value_2 ="21"/>
+			<jobprops job="2" name="dsgj" value_1 ="21" value_2 ="21"/>
+		</level>
+		<level value="11" material1="玄灵宝玉" num1="30" material2="普通祝福石" num2="0" skill_lv="3" next_skill_lv="12" rate="10" down_level="0">
+			<jobprops job="0" name="gj" value_1 ="24" value_2 ="24"/>
+			<jobprops job="1" name="mfgj" value_1 ="24" value_2 ="24"/>
+			<jobprops job="2" name="dsgj" value_1 ="24" value_2 ="24"/>
+		</level>
+		<level value="12" material1="玄灵宝玉" num1="30" material2="普通祝福石" num2="15" skill_lv="4" next_skill_lv="15" rate="8" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="27" value_2 ="27"/>
+			<jobprops job="1" name="mfgj" value_1 ="27" value_2 ="27"/>
+			<jobprops job="2" name="dsgj" value_1 ="27" value_2 ="27"/>
+		</level>
+		<level value="13" material1="玄灵宝玉" num1="35" material2="普通祝福石" num2="15" skill_lv="4" next_skill_lv="15" rate="6" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="30" value_2 ="30"/>
+			<jobprops job="1" name="mfgj" value_1 ="30" value_2 ="30"/>
+			<jobprops job="2" name="dsgj" value_1 ="30" value_2 ="30"/>
+		</level>
+		<level value="14" material1="玄灵宝玉" num1="35" material2="普通祝福石" num2="20" skill_lv="4" next_skill_lv="15" rate="4" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="33" value_2 ="33"/>
+			<jobprops job="1" name="mfgj" value_1 ="33" value_2 ="33"/>
+			<jobprops job="2" name="dsgj" value_1 ="33" value_2 ="33"/>
+		</level>
+		<level value="15" material1="玄灵宝玉" num1="40" material2="普通祝福石" num2="20" skill_lv="5" next_skill_lv="17" rate="2" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="36" value_2 ="36"/>
+			<jobprops job="1" name="mfgj" value_1 ="36" value_2 ="36"/>
+			<jobprops job="2" name="dsgj" value_1 ="36" value_2 ="36"/>
+		</level>
+	</fabao>
+	<fabao index="4" material1="玄灵石" material2="普通祝福石" desp="1.强化成功会增加1颗星，强化失败会损失1颗星2.到达1星，4星，7星和11星时强化失败后星数不会降低。">
+		<level value="1" material1="玄灵石" num1="5" material2="普通祝福石" num2="0" skill_lv="1" next_skill_lv="5" rate="75" down_level="0">
+			<jobprops job="0" name="gj" value_1 ="2" value_2 ="2"/>
+			<jobprops job="1" name="mfgj" value_1 ="2" value_2 ="2"/>
+			<jobprops job="2" name="dsgj" value_1 ="2" value_2 ="2"/>
+		</level>
+		<level value="2" material1="玄灵石" num1="5" material2="普通祝福石" num2="0" skill_lv="1" next_skill_lv="5" rate="60" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="4" value_2 ="4"/>
+			<jobprops job="1" name="mfgj" value_1 ="4" value_2 ="4"/>
+			<jobprops job="2" name="dsgj" value_1 ="4" value_2 ="4"/>
+		</level>
+		<level value="3" material1="玄灵石" num1="10" material2="普通祝福石" num2="0" skill_lv="1" next_skill_lv="5" rate="50" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="6" value_2 ="6"/>
+			<jobprops job="1" name="mfgj" value_1 ="6" value_2 ="6"/>
+			<jobprops job="2" name="dsgj" value_1 ="6" value_2 ="6"/>
+		</level>
+		<level value="4" material1="玄灵石" num1="10" material2="普通祝福石" num2="0" skill_lv="1" next_skill_lv="5" rate="40" down_level="0">
+			<jobprops job="0" name="gj" value_1 ="8" value_2 ="8"/>
+			<jobprops job="1" name="mfgj" value_1 ="8" value_2 ="8"/>
+			<jobprops job="2" name="dsgj" value_1 ="8" value_2 ="8"/>
+		</level>
+		<level value="5" material1="玄灵石" num1="15" material2="普通祝福石" num2="5" skill_lv="2" next_skill_lv="9" rate="30" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="10" value_2 ="10"/>
+			<jobprops job="1" name="mfgj" value_1 ="10" value_2 ="10"/>
+			<jobprops job="2" name="dsgj" value_1 ="10" value_2 ="10"/>
+		</level>
+		<level value="6" material1="玄灵石" num1="15" material2="普通祝福石" num2="5" skill_lv="2" next_skill_lv="9" rate="25" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="12" value_2 ="12"/>
+			<jobprops job="1" name="mfgj" value_1 ="12" value_2 ="12"/>
+			<jobprops job="2" name="dsgj" value_1 ="12" value_2 ="12"/>
+		</level>
+		<level value="7" material1="玄灵石" num1="20" material2="普通祝福石" num2="0" skill_lv="2" next_skill_lv="9" rate="20" down_level="0">
+			<jobprops job="0" name="gj" value_1 ="14" value_2 ="14"/>
+			<jobprops job="1" name="mfgj" value_1 ="14" value_2 ="14"/>
+			<jobprops job="2" name="dsgj" value_1 ="14" value_2 ="14"/>
+		</level>
+		<level value="8" material1="玄灵宝玉" num1="20" material2="普通祝福石" num2="10" skill_lv="2" next_skill_lv="9" rate="20" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="16" value_2 ="16"/>
+			<jobprops job="1" name="mfgj" value_1 ="16" value_2 ="16"/>
+			<jobprops job="2" name="dsgj" value_1 ="16" value_2 ="16"/>
+		</level>
+		<level value="9" material1="玄灵宝玉" num1="25" material2="普通祝福石" num2="10" skill_lv="3" next_skill_lv="12" rate="15" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="18" value_2 ="18"/>
+			<jobprops job="1" name="mfgj" value_1 ="18" value_2 ="18"/>
+			<jobprops job="2" name="dsgj" value_1 ="18" value_2 ="18"/>
+		</level>
+		<level value="10" material1="玄灵宝玉" num1="25" material2="普通祝福石" num2="10" skill_lv="3" next_skill_lv="12" rate="13" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="21" value_2 ="21"/>
+			<jobprops job="1" name="mfgj" value_1 ="21" value_2 ="21"/>
+			<jobprops job="2" name="dsgj" value_1 ="21" value_2 ="21"/>
+		</level>
+		<level value="11" material1="玄灵宝玉" num1="30" material2="普通祝福石" num2="0" skill_lv="3" next_skill_lv="12" rate="10" down_level="0">
+			<jobprops job="0" name="gj" value_1 ="24" value_2 ="24"/>
+			<jobprops job="1" name="mfgj" value_1 ="24" value_2 ="24"/>
+			<jobprops job="2" name="dsgj" value_1 ="24" value_2 ="24"/>
+		</level>
+		<level value="12" material1="玄灵宝玉" num1="30" material2="普通祝福石" num2="15" skill_lv="4" next_skill_lv="15" rate="8" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="27" value_2 ="27"/>
+			<jobprops job="1" name="mfgj" value_1 ="27" value_2 ="27"/>
+			<jobprops job="2" name="dsgj" value_1 ="27" value_2 ="27"/>
+		</level>
+		<level value="13" material1="玄灵宝玉" num1="35" material2="普通祝福石" num2="15" skill_lv="4" next_skill_lv="15" rate="6" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="30" value_2 ="30"/>
+			<jobprops job="1" name="mfgj" value_1 ="30" value_2 ="30"/>
+			<jobprops job="2" name="dsgj" value_1 ="30" value_2 ="30"/>
+		</level>
+		<level value="14" material1="玄灵宝玉" num1="35" material2="普通祝福石" num2="20" skill_lv="4" next_skill_lv="15" rate="4" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="33" value_2 ="33"/>
+			<jobprops job="1" name="mfgj" value_1 ="33" value_2 ="33"/>
+			<jobprops job="2" name="dsgj" value_1 ="33" value_2 ="33"/>
+		</level>
+		<level value="15" material1="玄灵宝玉" num1="40" material2="普通祝福石" num2="20" skill_lv="5" next_skill_lv="17" rate="2" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="36" value_2 ="36"/>
+			<jobprops job="1" name="mfgj" value_1 ="36" value_2 ="36"/>
+			<jobprops job="2" name="dsgj" value_1 ="36" value_2 ="36"/>
+		</level>
+	</fabao>
+	<fabao index="5" material1="玄灵石" material2="普通祝福石" desp="1.强化成功会增加1颗星，强化失败会损失1颗星2.到达1星，4星，7星和11星时强化失败后星数不会降低。">
+		<level value="1" material1="玄灵石" num1="5" material2="普通祝福石" num2="0" skill_lv="1" next_skill_lv="5" rate="75" down_level="0">
+			<jobprops job="0" name="gj" value_1 ="2" value_2 ="2"/>
+			<jobprops job="1" name="mfgj" value_1 ="2" value_2 ="2"/>
+			<jobprops job="2" name="dsgj" value_1 ="2" value_2 ="2"/>
+		</level>
+		<level value="2" material1="玄灵石" num1="5" material2="普通祝福石" num2="0" skill_lv="1" next_skill_lv="5" rate="60" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="4" value_2 ="4"/>
+			<jobprops job="1" name="mfgj" value_1 ="4" value_2 ="4"/>
+			<jobprops job="2" name="dsgj" value_1 ="4" value_2 ="4"/>
+		</level>
+		<level value="3" material1="玄灵石" num1="10" material2="普通祝福石" num2="0" skill_lv="1" next_skill_lv="5" rate="50" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="6" value_2 ="6"/>
+			<jobprops job="1" name="mfgj" value_1 ="6" value_2 ="6"/>
+			<jobprops job="2" name="dsgj" value_1 ="6" value_2 ="6"/>
+		</level>
+		<level value="4" material1="玄灵石" num1="10" material2="普通祝福石" num2="0" skill_lv="1" next_skill_lv="5" rate="40" down_level="0">
+			<jobprops job="0" name="gj" value_1 ="8" value_2 ="8"/>
+			<jobprops job="1" name="mfgj" value_1 ="8" value_2 ="8"/>
+			<jobprops job="2" name="dsgj" value_1 ="8" value_2 ="8"/>
+		</level>
+		<level value="5" material1="玄灵石" num1="15" material2="普通祝福石" num2="5" skill_lv="2" next_skill_lv="9" rate="30" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="10" value_2 ="10"/>
+			<jobprops job="1" name="mfgj" value_1 ="10" value_2 ="10"/>
+			<jobprops job="2" name="dsgj" value_1 ="10" value_2 ="10"/>
+		</level>
+		<level value="6" material1="玄灵石" num1="15" material2="普通祝福石" num2="5" skill_lv="2" next_skill_lv="9" rate="25" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="12" value_2 ="12"/>
+			<jobprops job="1" name="mfgj" value_1 ="12" value_2 ="12"/>
+			<jobprops job="2" name="dsgj" value_1 ="12" value_2 ="12"/>
+		</level>
+		<level value="7" material1="玄灵石" num1="20" material2="普通祝福石" num2="0" skill_lv="2" next_skill_lv="9" rate="20" down_level="0">
+			<jobprops job="0" name="gj" value_1 ="14" value_2 ="14"/>
+			<jobprops job="1" name="mfgj" value_1 ="14" value_2 ="14"/>
+			<jobprops job="2" name="dsgj" value_1 ="14" value_2 ="14"/>
+		</level>
+		<level value="8" material1="玄灵宝玉" num1="20" material2="普通祝福石" num2="10" skill_lv="2" next_skill_lv="9" rate="20" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="16" value_2 ="16"/>
+			<jobprops job="1" name="mfgj" value_1 ="16" value_2 ="16"/>
+			<jobprops job="2" name="dsgj" value_1 ="16" value_2 ="16"/>
+		</level>
+		<level value="9" material1="玄灵宝玉" num1="25" material2="普通祝福石" num2="10" skill_lv="3" next_skill_lv="12" rate="15" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="18" value_2 ="18"/>
+			<jobprops job="1" name="mfgj" value_1 ="18" value_2 ="18"/>
+			<jobprops job="2" name="dsgj" value_1 ="18" value_2 ="18"/>
+		</level>
+		<level value="10" material1="玄灵宝玉" num1="25" material2="普通祝福石" num2="10" skill_lv="3" next_skill_lv="12" rate="13" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="21" value_2 ="21"/>
+			<jobprops job="1" name="mfgj" value_1 ="21" value_2 ="21"/>
+			<jobprops job="2" name="dsgj" value_1 ="21" value_2 ="21"/>
+		</level>
+		<level value="11" material1="玄灵宝玉" num1="30" material2="普通祝福石" num2="0" skill_lv="3" next_skill_lv="12" rate="10" down_level="0">
+			<jobprops job="0" name="gj" value_1 ="24" value_2 ="24"/>
+			<jobprops job="1" name="mfgj" value_1 ="24" value_2 ="24"/>
+			<jobprops job="2" name="dsgj" value_1 ="24" value_2 ="24"/>
+		</level>
+		<level value="12" material1="玄灵宝玉" num1="30" material2="普通祝福石" num2="15" skill_lv="4" next_skill_lv="15" rate="8" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="27" value_2 ="27"/>
+			<jobprops job="1" name="mfgj" value_1 ="27" value_2 ="27"/>
+			<jobprops job="2" name="dsgj" value_1 ="27" value_2 ="27"/>
+		</level>
+		<level value="13" material1="玄灵宝玉" num1="35" material2="普通祝福石" num2="15" skill_lv="4" next_skill_lv="15" rate="6" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="30" value_2 ="30"/>
+			<jobprops job="1" name="mfgj" value_1 ="30" value_2 ="30"/>
+			<jobprops job="2" name="dsgj" value_1 ="30" value_2 ="30"/>
+		</level>
+		<level value="14" material1="玄灵宝玉" num1="35" material2="普通祝福石" num2="20" skill_lv="4" next_skill_lv="15" rate="4" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="33" value_2 ="33"/>
+			<jobprops job="1" name="mfgj" value_1 ="33" value_2 ="33"/>
+			<jobprops job="2" name="dsgj" value_1 ="33" value_2 ="33"/>
+		</level>
+		<level value="15" material1="玄灵宝玉" num1="40" material2="普通祝福石" num2="20" skill_lv="5" next_skill_lv="17" rate="2" down_level="1">
+			<jobprops job="0" name="gj" value_1 ="36" value_2 ="36"/>
+			<jobprops job="1" name="mfgj" value_1 ="36" value_2 ="36"/>
+			<jobprops job="2" name="dsgj" value_1 ="36" value_2 ="36"/>
+		</level>
+	</fabao>
+</FabaoUpgrade>

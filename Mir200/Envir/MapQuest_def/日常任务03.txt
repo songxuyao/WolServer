@@ -1,0 +1,33 @@
+[@main]
+#IF
+HasTask 44
+#ACT
+#ELSEACT
+break
+#IF
+POS $M TT00
+#ACT
+#ELSEACT
+break
+#IF
+POS $PARAM(2) $TASKVAL(44).S0
+#ACT
+#ELSEACT
+break
+#IF
+EQUAL $Task(44) 2
+#ACT
+SetTaskValue 44 I1 - 1
+SetTaskValue 44 I2 + 1
+RefreshTask 44 2
+#IF
+EQUAL $Task(44) 1
+#ACT
+SetTaskValue 44 I1 - 1
+SetTaskValue 44 I2 + 1
+UpdateTask 44 2
+#IF
+EQUAL $TASKVAL(44).I0 $TASKVAL(44).I2
+#ACT
+UpdateTask 44 3
+break

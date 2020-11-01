@@ -1,0 +1,9 @@
+[@main]
+#IF
+CheckUserGap < 3
+#ACT
+MAPMOVE MG001 211 222
+close
+#ELSEACT
+SENDMSG 5 太远了，过不去…
+break

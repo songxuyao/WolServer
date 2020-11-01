@@ -1,0 +1,4 @@
+[@main]
+#ACT
+MAPMOVE 0
+break

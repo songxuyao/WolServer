@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="gb2312"?>
+
+<Skill>
+	<GoblinPellet id = "1" Name= "追踪">  
+	<!-- Level表示技能等级，Value1表示学习技能增加的命中点数 -->
+  		<Skill Lv = "1" Value1 = "2"/>
+  		<Skill Lv = "2" Value1 = "3"/>
+		<Skill Lv = "3" Value1 = "4"/>
+  		<Skill Lv = "4" Value1 = "5"/>
+  		<Skill Lv = "5" Value1 = "8"/>
+  		<Skill Lv = "6" Value1 = "11"/>
+  		<Skill Lv = "7" Value1 = "14"/>
+  		<Skill Lv = "8" Value1 = "17"/>	
+	</GoblinPellet>
+	
+	<GoblinPellet id = "2" Name= "折射">
+	<!-- 追踪 Level表示技能等级、Value1表示转移伤害百分比 -->
+	<!-- 攻击主体折射伤害给元神、攻击元神折射伤害给主体(不受妖丹技能孤立影响) -->
+		<Skill Lv = "1" Value1 = "10"/>
+		<Skill Lv = "2" Value1 = "20"/>
+		<Skill Lv = "3" Value1 = "30"/>
+		<Skill Lv = "4" Value1 = "40"/>
+		<Skill Lv = "5" Value1 = "42"/>
+		<Skill Lv = "6" Value1 = "45"/>
+		<Skill Lv = "7" Value1 = "48"/>
+		<Skill Lv = "8" Value1 = "50"/>
+	</GoblinPellet>
+	
+	<GoblinPellet id = "3" Name= "虚弱打击">
+		<!-- 虚弱打击 Level表示技能等级、Value1表示触发虚弱打击 额外伤害百分比%s(额外造成的伤害计算折射) -->
+		<!-- 对处于虚弱状态下的目标造成额外 s%   普通伤害100，虚弱状态下 额外伤害 100*35%=35 -->
+		<Skill Lv = "1" Value1 = "20"/>
+		<Skill Lv = "2" Value1 = "25"/>
+		<Skill Lv = "3" Value1 = "30"/>
+		<Skill Lv = "4" Value1 = "35"/>
+		<Skill Lv = "5" Value1 = "40"/>
+		<Skill Lv = "6" Value1 = "45"/>
+		<Skill Lv = "7" Value1 = "50"/>
+		<Skill Lv = "8" Value1 = "60"/>
+	</GoblinPellet>	
+	
+	<GoblinPellet id = "4" Name= "孤立">
+	<!-- 孤立 Level表示技能等级、Value1表示额外对元神造成伤害百分比%s(额外造成的伤害不计算折射) -->
+	<!-- 妖士对元神造成300点伤害，学习专家孤立对元神造成330，额外伤害 300*10%=30 -->
+		<Skill Lv = "1" Value1 = "3"/>
+		<Skill Lv = "2" Value1 = "5"/>
+		<Skill Lv = "3" Value1 = "8"/>
+		<Skill Lv = "4" Value1 = "10"/>
+		<Skill Lv = "5" Value1 = "12"/>
+		<Skill Lv = "6" Value1 = "15"/>
+		<Skill Lv = "7" Value1 = "18"/>
+		<Skill Lv = "8" Value1 = "20"/>
+	</GoblinPellet>
+
+	<GoblinPellet id = "5" Name= "熔岩爆发">
+		<!-- 熔岩爆发 Level表示技能等级、Value1表示学习该技能后增加的暴击%s点 -->
+		<Skill Lv = "1" Value1 = "1"/>
+		<Skill Lv = "2" Value1 = "2"/>
+		<Skill Lv = "3" Value1 = "3"/>
+		<Skill Lv = "4" Value1 = "4"/>
+		<Skill Lv = "5" Value1 = "5"/>
+		<Skill Lv = "6" Value1 = "6"/>
+		<Skill Lv = "7" Value1 = "7"/>
+		<Skill Lv = "8" Value1 = "8"/>
+	</GoblinPellet>	
+	
+	<GoblinPellet id = "6" Name= "怒火">
+	<!-- 怒火 Level表示技能等级、Value1表示增加破魔触发炙热的几率百分比%s -->
+		<Skill Lv = "1" Value1 = "10"/>
+		<Skill Lv = "2" Value1 = "15"/>
+		<Skill Lv = "3" Value1 = "20"/>
+		<Skill Lv = "4" Value1 = "25"/>
+		<Skill Lv = "5" Value1 = "30"/>
+		<Skill Lv = "6" Value1 = "35"/>
+		<Skill Lv = "7" Value1 = "40"/>
+		<Skill Lv = "8" Value1 = "50"/>
+	</GoblinPellet>
+
+	<GoblinPellet id = "7" Name= "嗜血">
+	<!-- 嗜血 Level表示技能等级、Value1表示触发概率%s，Value2表示吸血百分比%s(吸血值=Value2*对目标产生的攻击值)-->
+		<Skill Lv = "1" Value1 = "5" Value2= "20"/>
+		<Skill Lv = "2" Value1 = "5" Value2= "25"/>
+		<Skill Lv = "3" Value1 = "5" Value2= "30"/>
+		<Skill Lv = "4" Value1 = "5" Value2= "35"/>
+		<Skill Lv = "5" Value1 = "10" Value2= "40"/>
+		<Skill Lv = "6" Value1 = "10" Value2= "45"/>
+		<Skill Lv = "7" Value1 = "10" Value2= "50"/>
+		<Skill Lv = "8" Value1 = "10" Value2= "80"/>
+	</GoblinPellet>	
+	
+	<GoblinPellet id = "8" Name= "协调">
+	<!-- 协调 Level表示技能等级、Value1表示使用吐炎后%s几率连击点+1,总数量不能超过最大连击点数-->
+		<Skill Lv = "1" Value1 = "10"/>
+		<Skill Lv = "2" Value1 = "12"/>
+		<Skill Lv = "3" Value1 = "14"/>
+		<Skill Lv = "4" Value1 = "16"/>
+		<Skill Lv = "5" Value1 = "18"/>
+		<Skill Lv = "6" Value1 = "20"/>
+		<Skill Lv = "7" Value1 = "25"/>
+		<Skill Lv = "8" Value1 = "30"/>
+	</GoblinPellet>
+	
+	<GoblinPellet id = "9" Name= "定身">
+	<!-- 定身 Level表示技能等级、Value1表示触发定身概率%s，Value2表示定身时间-->
+		<Skill Lv = "1" Value1 = "5" Value2= "2"/>
+		<Skill Lv = "2" Value1 = "5" Value2= "2"/>
+		<Skill Lv = "3" Value1 = "5" Value2= "2"/>
+		<Skill Lv = "4" Value1 = "5" Value2= "2"/>
+		<Skill Lv = "5" Value1 = "10" Value2= "3"/>
+		<Skill Lv = "6" Value1 = "10" Value2= "3"/>
+		<Skill Lv = "7" Value1 = "10" Value2= "3"/>
+		<Skill Lv = "8" Value1 = "10" Value2= "3"/>
+	</GoblinPellet>
+
+	<GoblinPellet id = "10" Name= "毁灭">
+	<!-- 毁灭 Level表示技能等级、Value1表示消弱对方减伤技能%s,专家魔法盾能吸收40%伤害，如果被妖士攻击那么只能吸收30%伤害(目标伤害吸收值 = 技能吸收值-毁灭技能.Value1)-->
+		<Skill Lv = "1" Value1 = "10"/>
+		<Skill Lv = "2" Value1 = "12"/>
+		<Skill Lv = "3" Value1 = "14"/>
+		<Skill Lv = "4" Value1 = "16"/>
+		<Skill Lv = "5" Value1 = "18"/>
+		<Skill Lv = "6" Value1 = "20"/>
+		<Skill Lv = "7" Value1 = "25"/>
+		<Skill Lv = "8" Value1 = "30"/>
+	</GoblinPellet>
+	
+	<GoblinPellet id = "11" Name= "炎甲">
+	<!-- 追踪 Level表示技能等级、Value1表示增加防御下限%s点、Value2表示增加防御上限%s点、Value3表示增加魔防下限%s点、Value4表示增加魔防上限%s点 -->
+		<Skill Lv = "1" Value1 = "0" Value2 = "2" Value3 = "0" Value4 = "2"/>
+		<Skill Lv = "2" Value1 = "0" Value2 = "3" Value3 = "0" Value4 = "3"/>
+		<Skill Lv = "3" Value1 = "0" Value2 = "4" Value3 = "0" Value4 = "4"/>
+		<Skill Lv = "4" Value1 = "0" Value2 = "5" Value3 = "0" Value4 = "5"/>
+		<Skill Lv = "5" Value1 = "2" Value2 = "8" Value3 = "2" Value4 = "8"/>
+		<Skill Lv = "6" Value1 = "3" Value2 = "8" Value3 = "3" Value4 = "8"/>
+		<Skill Lv = "7" Value1 = "8" Value2 = "10" Value3 = "8" Value4 = "10"/>
+		<Skill Lv = "8" Value1 = "10" Value2 = "15" Value3 = "10" Value4 = "15"/>
+	</GoblinPellet>	
+	
+	<GoblinPellet id = "12" Name= "朱雀内甲">
+	<!-- 朱雀内甲 Level表示技能等级、Value1表示吸收伤害百分比(可减免五行属性) -->
+		<Skill Lv = "1" Value1 = "25"/>
+		<Skill Lv = "2" Value1 = "28"/>
+		<Skill Lv = "3" Value1 = "30"/>
+		<Skill Lv = "4" Value1 = "35"/>
+		<Skill Lv = "5" Value1 = "38"/>
+		<Skill Lv = "6" Value1 = "40"/>
+		<Skill Lv = "7" Value1 = "45"/>
+		<Skill Lv = "8" Value1 = "50"/>
+	</GoblinPellet>
+
+	<GoblinPellet id = "13" Name= "妖魂">
+	<!-- 妖魂 Level表示技能等级、Value1表示吸收怪物伤害百分比%s，Value2表示打怪额外获得经验百分比%s -->
+		<Skill Lv = "1" Value1 = "8" Value2= "20"/>
+		<Skill Lv = "2" Value1 = "10" Value2= "25"/>
+		<Skill Lv = "3" Value1 = "13" Value2= "30"/>
+		<Skill Lv = "4" Value1 = "15" Value2= "50"/>
+		<Skill Lv = "5" Value1 = "17" Value2= "65"/>
+		<Skill Lv = "6" Value1 = "20" Value2= "70"/>
+		<Skill Lv = "7" Value1 = "22" Value2= "80"/>
+		<Skill Lv = "8" Value1 = "25" Value2= "90"/>		
+	</GoblinPellet>
+	
+	<GoblinPellet id = "14" Name= "以牙还牙">
+	<!-- 以牙还牙 Level表示技能等级、Value1表示触发概率%s，Value2表示反弹伤害百分比%s-->
+		<Skill Lv = "1" Value1 = "5" Value2= "20"/>
+		<Skill Lv = "2" Value1 = "5" Value2= "25"/>
+		<Skill Lv = "3" Value1 = "5" Value2= "30"/>
+		<Skill Lv = "4" Value1 = "5" Value2= "35"/>
+		<Skill Lv = "5" Value1 = "10" Value2= "40"/>
+		<Skill Lv = "6" Value1 = "10" Value2= "45"/>
+		<Skill Lv = "7" Value1 = "10" Value2= "50"/>
+		<Skill Lv = "8" Value1 = "10" Value2= "60"/>
+	</GoblinPellet>
+	
+	<GoblinPellet id = "15" Name= "避魔">
+	<!-- 避魔 Level表示技能等级、Value1表示增加妖士魔法躲避%s-->
+		<Skill Lv = "1" Value1 = "10"/>
+		<Skill Lv = "2" Value1 = "12"/>
+		<Skill Lv = "3" Value1 = "14"/>
+		<Skill Lv = "4" Value1 = "16"/>
+		<Skill Lv = "5" Value1 = "18"/>
+		<Skill Lv = "6" Value1 = "20"/>
+		<Skill Lv = "7" Value1 = "25"/>
+		<Skill Lv = "8" Value1 = "30"/>
+	</GoblinPellet>
+
+	<GoblinPellet id = "16" Name= "朱雀护佑">
+	<!-- 朱雀护佑 Level表示技能等级、Value1表示免疫几率(麻痹、冰冻、沉默、重力) 触发后5秒内免疫-->
+		<Skill Lv = "1" Value1 = "10"/>
+		<Skill Lv = "2" Value1 = "12"/>
+		<Skill Lv = "3" Value1 = "14"/>
+		<Skill Lv = "4" Value1 = "16"/>
+		<Skill Lv = "5" Value1 = "18"/>
+		<Skill Lv = "6" Value1 = "20"/>
+		<Skill Lv = "7" Value1 = "25"/>
+		<Skill Lv = "8" Value1 = "30"/>
+	</GoblinPellet>
+
+	<GoblinPellet id = "17" Name= "急速闪避">
+	<!-- 急速闪避 Level表示技能等级、Value1表示学习该妖丹技能后，增加妖士躲避%s点-->
+		<Skill Lv = "1" Value1 = "5"/>
+		<Skill Lv = "2" Value1 = "6"/>
+		<Skill Lv = "3" Value1 = "7"/>
+		<Skill Lv = "4" Value1 = "8"/>
+		<Skill Lv = "5" Value1 = "9"/>
+		<Skill Lv = "6" Value1 = "10"/>
+		<Skill Lv = "7" Value1 = "11"/>
+		<Skill Lv = "8" Value1 = "12"/>
+	</GoblinPellet>
+
+	<GoblinPellet id = "18" Name= "绝处逢生">
+	<!-- 绝处逢生 Level表示技能等级、Value1表示触发绝处逢生概率%s，受到单次伤害超过30%生命值，有几率免疫此次伤害-->
+		<Skill Lv = "1" Value1 = "10"/>
+		<Skill Lv = "2" Value1 = "12"/>
+		<Skill Lv = "3" Value1 = "14"/>
+		<Skill Lv = "4" Value1 = "16"/>
+		<Skill Lv = "5" Value1 = "18"/>
+		<Skill Lv = "6" Value1 = "20"/>
+		<Skill Lv = "7" Value1 = "25"/>
+		<Skill Lv = "8" Value1 = "30"/>
+	</GoblinPellet>
+
+	<GoblinPellet id = "19" Name= "磐石之坚">
+	<!-- 磐石之坚 Level表示技能等级、Value1表示概率%s，防御抗拒火环、突斩、野蛮、狮子吼、追炎、毒凌波等一切推动效果-->
+		<Skill Lv = "1" Value1 = "10"/>
+		<Skill Lv = "2" Value1 = "12"/>
+		<Skill Lv = "3" Value1 = "14"/>
+		<Skill Lv = "4" Value1 = "16"/>
+		<Skill Lv = "5" Value1 = "18"/>
+		<Skill Lv = "6" Value1 = "20"/>
+		<Skill Lv = "7" Value1 = "25"/>
+		<Skill Lv = "8" Value1 = "30"/>
+	</GoblinPellet>	
+	
+</Skill>

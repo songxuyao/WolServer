@@ -1,0 +1,6 @@
+[setup]
+stepcount = 1
+title = 新手任务--学习新技能
+ID = 20
+stepaim1 = 去找<书店老板/@@goto SH010 书店老板 10,9>索要新技能书 <color=green [传]/@@flyto 43 SH010 8 12>
+stepDESC1 = <color=graygolden 任务目的：>去找<书店老板/@@goto SH010 书店老板 10,9>索要新技能书\<color=graygolden 任务奖励：>\ </@@!PIC2 10,951>经验：50000\<color=graygolden 任务介绍:>\    当然，如果有人将一些好武器卖给我的话，我也会给你\留着的，不过别忘了带钱过来。\    去找<书店老板/@@goto SH010 书店老板 10,9>吧，他会把你现在可以学的新技能书全部\送你的。

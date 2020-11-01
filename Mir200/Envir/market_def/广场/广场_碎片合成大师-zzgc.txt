@@ -1,0 +1,55 @@
+[@main]
+  <color=red 亲爱的勇士，我是合成大师！>\
+  <color=red 本大师可以帮你将首饰碎片合成为装备。>\
+  30个神武首饰碎片可合成<color=green 神武首饰>随机一件   <立即合成/@doDuihuan1&神武首饰碎片>\
+  30个神武首饰碎片可合成<color=green 幻魔首饰>随机一件   <立即合成/@doDuihuan2&神武首饰碎片>\
+  30个神武首饰碎片可合成<color=green 天玄首饰>随机一件   <立即合成/@doDuihuan3&神武首饰碎片>\\\
+  <离开/@exit>\
+
+[@doDuihuan1]
+#IF
+LARGE $ITEMVALSUM(神武首饰碎片).DURA 29
+#SAY
+    碎片合成成功！\
+    <好的/@exit>
+#ACT
+take 神武首饰碎片 30
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\神武装备系统.txt S10
+give $STR(S10) 1
+SENDMSG 14 恭喜勇士<$USERNAME>在碎片合成师处成功合成<$STR(S10)>一件！
+break
+#ELSESAY
+  你没有足够的神武首饰碎片，无法合成！\
+  <返回/@main>\
+
+[@doDuihuan2]
+#IF
+LARGE $ITEMVALSUM(神武首饰碎片).DURA 29
+#SAY
+    碎片合成成功！\
+    <好的/@exit>
+#ACT
+take 神武首饰碎片 30
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\幻魔装备系统.txt S10
+give $STR(S10) 1
+SENDMSG 14 恭喜勇士<$USERNAME>在碎片合成师处成功合成<$STR(S10)>一件！
+break
+#ELSESAY
+  你没有足够的神武首饰碎片，无法合成！\
+  <返回/@main>\
+
+[@doDuihuan3]
+#IF
+LARGE $ITEMVALSUM(神武首饰碎片).DURA 29
+#SAY
+    碎片合成成功！\
+    <好的/@exit>
+#ACT
+take 神武首饰碎片 30
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\天玄装备系统.txt S10
+give $STR(S10) 1
+SENDMSG 14 恭喜勇士<$USERNAME>在碎片合成师处成功合成<$STR(S10)>一件！
+break
+#ELSESAY
+  你没有足够的神武首饰碎片，无法合成！\
+  <返回/@main>\

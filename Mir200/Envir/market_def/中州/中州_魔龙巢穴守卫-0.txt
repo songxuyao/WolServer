@@ -1,0 +1,20 @@
+[@main]
+等级达到<color=red 46级以上>的勇士每天<color=red 0点-23点>期间可以进入魔龙巢\
+穴挑战双头暗炎魔龙，击杀魔龙将有机会获得<color=yellow 逍遥无极扇、血>\
+<color=yellow 饮、雷霆怒斩、暴击腰带碎片、护体戒指碎片、神武级首饰、>\
+<color=yellow 血煞级首饰、蟠龙精魄>\\\
+<进入魔龙巢穴/@EnterBaoKu>\
+<离开/@exit>
+
+[@EnterBaoKu]
+#IF
+CHECKLEVEL > 45
+#ACT
+MAP shuangtoulong
+break
+#ELSESAY
+  您的等级未达到46级，无法进入副本！\
+  <离开/@exit>
+
+
+

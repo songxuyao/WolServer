@@ -1,0 +1,16 @@
+[@main]
+#IF
+HOUR 20 20
+#ACT
+#ELSEACT
+MOV G3 0
+MOV A11 目前无行会
+CLEARMAPMON MC010
+SENDMSG 14 (*)行会<$STR(A11)>攻打铁血魔城失败
+GMEXECUTE 在线提问 @飞出铁血魔城
+break
+#IF
+CheckMapMonNameCount MC010 77 73 20 投石巨魔 0
+#ACT
+MONGENEX MC010 76 72 铁血魔王3 0 1
+break

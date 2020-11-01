@@ -1,0 +1,22 @@
+[@main]
+
+我是落霞岛矿洞的守卫，你来找我，有什么事么？\
+<可接任务/@_RW_entry>\
+<前往矿区入口/@kqrk>\
+<前往疏散通道/@sstd>\
+<前往中部矿区/@zbkq>\
+
+[@_RW_entry]
+#CALL [\游戏任务\新手任务\莽撞的新兵.txt] @落霞岛_守卫
+
+[@kqrk]
+#ACT
+MAPMOVE T011 17 135
+
+[@sstd]
+#ACT
+MAPMOVE T011 69 63
+
+[@zbkq]
+#ACT
+MAPMOVE T015 23 20

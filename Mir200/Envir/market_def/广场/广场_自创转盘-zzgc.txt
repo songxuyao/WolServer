@@ -1,0 +1,54 @@
+[@main]
+            <color=red 自创转盘，奖励由你自定义！>\
+    收集7个自创转盘材料并放入转盘，合成一个幸运转盘。\
+    放置的转盘材料不可重复，材料可在宝地打怪获得。\
+    只有60级以上勇士可以开启自创转盘。\
+    <color=red 每周开启转盘次数最多的前五位勇士>可额外获得：圣盾\
+结晶X10、觉醒灵石X10。\
+    <启动自创转盘/@openturn>    <领取寄存奖励/@AcceptAward>    <我的成绩/@ShowSelfScore>\
+    <本周排行榜/@ShowRanking>      <上周排行榜/@ShowPreviousRanking>      <领取排行奖励/@GetRankingAward>\
+    <技能残章合成/@skill>    <回收材料/@DuiHuanCaiLiao>        <离开/@exit>\
+
+[@DuiHuanCaiLiao]
+    转盘材料可以用来换取经验，每个材料兑换20W经验！\\\\\\\\
+    <马上兑换/@GetDuiHuanItem>
+
+[@GetDuiHuanItem]
+#ACT
+ShowSpotDlg 6 请放入要兑换的材料: @givecailiao
+break
+
+[@givecailiao]
+#IF
+CHECKVARLIST $PARAM(0) ..\QuestDiary\数据文件\文本数据\允许兑换材料.txt
+#SAY
+    1个 <color=red 120万经验> 材料成功兑换经验20万！\\\\\\\\
+    <继续兑换/@GetDuiHuanItem>        <离开/@exit>
+#ACT
+TAKEM $PARAM(1)
+CHANGEEXP + 200000
+break
+#ELSESAY
+    此材料不能兑换！\\\\\\\\
+    <离开/@exit>
+
+[@openturn]
+  VIP0-3：每天可以启动5次转盘。\
+  VIP4-8：每天可以启动7次转盘。\
+  VIP9-15：每天可以启动10次转盘。\
+  请选择开启转盘的方式：\
+  <color=red 孤注一掷>：每次必中1个奖励，需要1个白银钥匙和50万金币。\
+  <color=red 乾坤双旋>：每次必中2个奖励，需要1个赤金钥匙和250万金币。\
+  钥匙可在宝地打怪获得，或直接在商城购买。\
+  <孤注一掷/@SingleTurn>    <乾坤双旋/@DoubleTurn>\
+  <返回/@main>\
+
+[@SingleTurn]
+#IF
+CHECKLEVELEX > 64
+#ACT
+break
+#ELSESAY
+    对不起，只有65级以上勇士可以开启自创转盘。\
+    <好的/@exit>
+

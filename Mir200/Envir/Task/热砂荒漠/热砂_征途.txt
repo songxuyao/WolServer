@@ -1,0 +1,10 @@
+[setup]
+stepcount = 1
+title = 热砂荒漠—征途
+ID = 30
+stepaim1 = 去皇宫找<国王/@@goto sh000 国王 30,34> <color=green [传]/@@flyto 33 sh000 30 34>
+stepDESC1 = <color=graygolden 任务目的：>去皇宫找<国王/@@goto sh000 国王 30,34>谈谈\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：200000\<color=graygolden 任务介绍:>\    勇敢的英雄，你目前已经可以承担起维护传世大陆的责\任了。不过需要不断提升自己，最大助力去中州皇宫找<color=green 国王>\吧，他有任务交给你。
+
+
+
+

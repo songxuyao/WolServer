@@ -1,0 +1,91 @@
+[@baishou]
+{
+
+    百兽园全新改版，畅享豪礼乐不停，年轻人还不来“百兽\
+园”逛逛？里面有20位“幸运大使”，由于前世罪孽深重，作为\
+惩罚，他们身中魔咒，形象丑陋。为了洗刷前世的冤孽，恢复\
+本相，他们肩负起了“幸运大使”的职责……看你满面红光，一\
+定是福星高照，财神驾到，没准儿今天就能发大财。您只要给\
+我10个元宝，我就会送你一份惊喜奖励，同时可以免费参与我\
+们的新版百兽园活动，马上就有机会赢得出乎意料的巨奖！\
+    <太棒了，我要碰碰运气/@gobsy0>    <绑定元宝进入/@gobsy1>\
+    <查看活动规则/@viewPrize>    <没兴趣/@exit>
+
+[@_LB_knowsome]
+规则其实很简单，“百兽园”里有20位能带给你好运的“幸\
+运大使”。别看他们外表丑陋，他们却能给你带来很多额外惊\
+喜哦。不过我要事先提醒一下，前世罪孽深重的“幸运大使”\
+本身就是两面人……如果你在不恰当的时候去找他说话，那可\
+能就会被赶出“百兽园”。总之先祝你好运吧！\
+<color=red 注：每天每位玩家最多只有10次进入机会；>\\\
+    <color=gray 上一页>  <color=orange 1 ／1>  <color=gray 下一页>    <返回/@main>
+
+[@gobsy0]
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSESAY
+    您没有足够的包裹空间，请清理一下！\\\\\\\\
+    <返回/@main>
+#ELSEACT
+break
+#IF
+!EQUAL $Table(SG_Pritime).Tim03 $DATE
+#ACT
+TABLE SG_PRIVITE Hum05 = 10
+Table SG_Pritime Tim03 = $DATE
+#ELSEACT
+#IF
+SMALL $TABLE(SG_PRIVITE).Hum05 1
+#SAY
+　　你今天已使用<Color=green 10次>进入机会，\
+　　请明天再来吧。\
+　　<离开/@exit>\
+#ACT
+break
+#IF
+CHECKGAMEGOLD > 9
+#ACT
+GAMEGOLD - 10
+MAPMOVE F025
+TABLE SG_PRIVITE Hum05 - 1
+break
+#ELSESAY
+    您目前好像没有足够的元宝哦。\\\\\\\\
+    <返回/@main>
+
+[@gobsy1]
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSESAY
+    您没有足够的包裹空间，请清理一下！\\\\\\\\
+    <返回/@main>
+#ELSEACT
+break
+#IF
+!EQUAL $Table(SG_Pritime).Tim03 $DATE
+#ACT
+TABLE SG_PRIVITE Hum05 = 10
+Table SG_Pritime Tim03 = $DATE
+#ELSEACT
+#IF
+SMALL $TABLE(SG_PRIVITE).Hum05 1
+#SAY
+　　你今天已使用<Color=green 10次>进入机会，\
+　　请明天再来吧。\
+　　<离开/@exit>\
+#ACT
+break
+#IF
+CHECKBINDGAMEGOLD > 9
+#ACT
+BINDGAMEGOLD - 10
+MAPMOVE F025
+TABLE SG_PRIVITE Hum05 - 1
+break
+#ELSESAY
+    您目前好像没有足够的绑定元宝哦。\\\\\\\\
+    <返回/@main>
+
+}

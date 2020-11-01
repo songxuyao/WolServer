@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="gb2312"?>
+<NewShop>
+	<Gold index="0" name="元宝"/>
+	<Gold index="1" name="绑元"/>
+	<Gold index="2" name="主宰币"/>
+	<Gold index="3" name="通宝"/>
+	<Page index="0" name="限购商城">
+		<Cate index="0" name="">
+			<item id="1"/>
+			<item id="2"/>
+			<item id="3"/>
+		</Cate>
+	</Page>
+	<Page index="1" name="元宝">	
+		<Cate index="0" name="热销">
+			<item id="4"/>
+		</Cate>
+		<Cate index="1" name="符石">
+			<item id="36"/>
+		</Cate>
+		<Cate index="2" name="辅助">
+			<item id="54"/>
+		</Cate>
+		<Cate index="3" name="灵兽">
+			<item id="74"/>
+		</Cate>
+		<Cate index="4" name="其他">
+			<item id="78"/>
+		</Cate>
+	</Page>
+	
+	<Page index="2" name="绑元">	
+		<Cate index="0" name="热销">
+			<item id="118"/>
+		</Cate>
+		<Cate index="1" name="符石">
+			<item id="147"/>
+		</Cate>
+		<Cate index="2" name="辅助">
+			<item id="165"/>
+		</Cate>
+		<Cate index="3" name="灵兽">
+			<item id="185"/>
+		</Cate>
+		<Cate index="4" name="其他">
+			<item id="189"/>
+		</Cate>
+	</Page>
+	
+	<Page index="3" name="通宝">
+		<Cate index="0" name="">
+			<item id="228"/>
+		</Cate>
+	</Page>
+	
+	<Page index="4" name="特权"/>
+	<Page index="5" name="搜索"/>
+	
+	<Hot>
+		<item id="17"/>
+		<item id="18"/>
+		<item id="19"/>
+		<item id="20"/>
+		<item id="21"/>
+	</Hot>
+	<Items>
+	<!--<     serial:序号  page:标签ID	cate:分类ID	ord：商品顺序 name:商品数据库名字 	show_name：界面显示名字   		buy_num：数量	looks：物品外观  price：价格   type：货币类型   vip：VIP等级限制  level：游戏等级限制  limit_count：已购买数量  discount：商品折扣 pic：图片ID   max：最大购买数	desc：描述/> -->
+		<item serial="1" 	page="0" 	cate="0" 	ord="0"		name="初级骑术丹" 		show_name="初级骑术丹" 			buy_num="1" 	looks="26886" 	price="1" 		type="0" 	vip="0" 	level="42" 	limit_count="$CustomValue(50)" 	discount="6" 	pic="0" 	max="100" 		desc="灵兽骑术界面使用，可增加150点骑术经验。用于提升骑术等级，升级后会解锁骑术特技。 #cEE0000 \购买后绑定不可交易"/>
+		<item serial="2" 	page="0" 	cate="0" 	ord="1"		name="中级骑术丹" 		show_name="中级骑术丹" 			buy_num="5" 	looks="26887" 	price="5" 		type="0" 	vip="0" 	level="42" 	limit_count="$CustomValue(51)" 	discount="6" 	pic="0" 	max="100" 	  	desc="灵兽骑术界面使用，可增加650点骑术经验。用于提升骑术等级，升级后会解锁骑术特技。 #cEE0000 \购买后绑定不可交易"/>
+		<item serial="3" 	page="0" 	cate="0" 	ord="2"		name="高级骑术丹" 		show_name="高级骑术丹" 			buy_num="30" 	looks="26888" 	price="30" 		type="0" 	vip="0" 	level="42" 	limit_count="$CustomValue(52)" 	discount="6" 	pic="0" 	max="100" 	  	desc="灵兽骑术界面使用，可增加3000点骑术经验。用于提升骑术等级，升级后会解锁骑术特技。 #cEE0000 \购买后绑定不可交易"/>
+		<item serial="4" 	page="1" 	cate="0" 	ord="0"		name="初级升星石" 		show_name="初级升星石25个" 	buy_num="25" 	looks="30653" 	price="100" 	type="0" 	vip="0" 	level="0" 	limit_count="0" 	discount="0" 	pic="0" 	max="0" 	desc="装备升星1-5星的必备材料，升星装备部位后，属性可以大幅提升。"/>
+		<item serial="36" 	page="1" 	cate="1" 	ord="0"		name="攻击符石二级" 	show_name="攻击符石二级" 		buy_num="1" 	looks="26780" 	price="30" 		type="0" 	vip="0" 	level="35" 	limit_count="0" 	discount="0" 	pic="0" 	max="0" 	desc="攻击：2-6 \可以镶嵌在武器、戒指、手镯部位上，5个可以合成攻击符石三级。"/>
+		<item serial="54" 	page="1" 	cate="2" 	ord="0"		name="超级天山雪莲" 	show_name="超级天山雪莲" 		buy_num="1" 	looks="793" 	price="3" 		type="0" 	vip="0" 	level="0" 	limit_count="0" 	discount="0" 	pic="96" 	max="0" 	desc="持久补充生命值的上古灵药，采摘自西域天山雪峰之上，使用后较长时间内，当角色受到攻击时就会持续自动恢复大量生命值，是你勇闯魔穴，行会争霸时的不二选择！\每个超级天山雪莲可使用十次，药水的魔力在跨地图、下线时失效。"/>
+		<item serial="74" 	page="1" 	cate="3" 	ord="0"		name="御兽天袍" 		show_name="御兽天袍(30天)" 		buy_num="1" 	looks="885" 	price="30" 		type="0" 	vip="0" 	level="0" 	limit_count="0" 	discount="0" 	pic="0" 	max="0" 	desc="灵兽不同于寻常猛兽，天赋灵智极高且脾气暴躁，又对异常气息十分敏感。如果和他们亲密接触（如骑乘、骑战时）都需要穿着御兽天袍。"/>
+		<item serial="78" 	page="1" 	cate="4" 	ord="0"		name="五色晶石" 		show_name="五色晶石" 			buy_num="1" 	looks="802" 	price="20" 		type="0" 	vip="0" 	level="0" 	limit_count="0" 	discount="0" 	pic="228" 	max="0" 	desc="天地灵气凝结之物，使用后可修复破碎的装备、首饰、防具。\一个五色晶石蕴涵了20点灵力，修理不同的装备需要消耗不同点数的灵力值，修理必定成功。"/>
+		<item serial="118" 	page="2" 	cate="0" 	ord="0"		name="初级升星石" 		show_name="初级升星石10个" 	buy_num="10" 	looks="30653" 	price="40" 		type="1" 	vip="0" 	level="0" 	limit_count="0" 	discount="0" 	pic="0" 	max="0" 	desc="装备升星1-5星的必备材料，升星装备部位后，属性可以大幅提升。 #cEE0000 \购买后绑定不可交易"/>
+		<item serial="147" 	page="2" 	cate="1" 	ord="0"		name="攻击符石二级" 	show_name="攻击符石二级" 		buy_num="1" 	looks="26780" 	price="30" 		type="1" 	vip="0" 	level="0" 	limit_count="0" 	discount="0" 	pic="0" 	max="0" 	desc="攻击：2-6 \可以镶嵌在武器、戒指、手镯部位上，5个可以合成攻击符石三级。 #cEE0000 \购买后绑定不可交易"/>
+		<item serial="165" 	page="2" 	cate="2" 	ord="0"		name="超级天山雪莲" 	show_name="超级天山雪莲" 		buy_num="1" 	looks="793" 	price="3" 		type="1" 	vip="0" 	level="0" 	limit_count="0" 	discount="0" 	pic="96" 	max="0" 	desc="持久补充生命值的上古灵药，采摘自西域天山雪峰之上，使用后较长时间内，当角色受到攻击时就会持续自动恢复大量生命值，是你勇闯魔穴，行会争霸时的不二选择！\每个超级天山雪莲可使用十次，药水的魔力在跨地图、下线时失效。 #cEE0000 \购买后绑定不可交易"/>
+		<item serial="185" 	page="2" 	cate="3" 	ord="0"		name="御兽天袍" 		show_name="御兽天袍(30天)" 		buy_num="1" 	looks="885" 	price="30" 		type="1" 	vip="0" 	level="0" 	limit_count="0" 	discount="0" 	pic="0" 	max="0" 	desc="灵兽不同于寻常猛兽，天赋灵智极高且脾气暴躁，又对异常气息十分敏感。如果和他们亲密接触（如骑乘、骑战时）都需要穿着御兽天袍。 #cEE0000 \购买后绑定不可交易"/>
+		<item serial="189" 	page="2" 	cate="4" 	ord="0"		name="五色晶石" 		show_name="五色晶石" 			buy_num="1" 	looks="802" 	price="20" 		type="1" 	vip="0" 	level="0" 	limit_count="0" 	discount="0" 	pic="228" 	max="0" 	desc="天地灵气凝结之物，使用后可修复破碎的装备、首饰、防具。\一个五色晶石蕴涵了20点灵力，修理不同的装备需要消耗不同点数的灵力值，修理必定成功。 #cEE0000 \购买后绑定不可交易"/>
+		<item serial="228" 	page="3" 	cate="0" 	ord="0"		name="超级天山雪莲" 	show_name="超级天山雪莲" 		buy_num="1" 	looks="793" 	price="30" 		type="3" 	vip="0" 	level="0" 	limit_count="0" 	discount="0" 	pic="96" 	max="0" 	desc="持久补充生命值的上古灵药，采摘自西域天山雪峰之上，使用后较长时间内，当角色受到攻击时就会持续自动恢复大量生命值，是你勇闯魔穴，行会争霸时的不二选择！\每个超级天山雪莲可使用十次，药水的魔力在跨地图、下线时失效。 #cEE0000 \购买后绑定不可交易"/>
+
+	</Items>
+</NewShop>

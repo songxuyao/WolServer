@@ -1,0 +1,358 @@
+[@main]
+元宝寄售由我来全权负责，不管你是商界名流还是来做点小\
+本生意，只要是诚心来做生意的顾客就是我的上帝，我愿给\
+你提供最周全的服务。\\
+<寄售元宝/@YuanBaoSell>                <购买元宝/@YuanBaoBuy>\
+<取消寄售/@YuanBaoCancel>                <查询元宝/@YuanBaoQuery>\
+<领取金币/@Takegold>\\
+<离开/@exit>
+
+[@Takegold]
+#IF
+CHECKVAR HUMAN 寄售 > 0
+#SAY
+欢迎回来，亲爱的顾客。\
+请先确认以下内容，然后把属于你的金币领走。\
+领取奖品之前请先确认你的金币是否达到了\
+上限\\
+<领取金币/@give>\
+<取消/@exit>
+#ELSESAY
+对不起，你无法领取奖品，请确认下列可能：\
+1、你并没有寄售元宝！\
+2、你寄售的元宝并未售出\
+3、你已经领取过金币了\
+<确认/@exit>
+
+[@give]
+#IF
+CHECKBAGSIZE 10
+#ACT
+MOV P15 $HUMAN(寄售)
+DIV P15 5000000
+MOV P17 $GOLDCOUNT
+#ELSESAY
+您的包裹空间不足，请整理以后再来\
+<离开/@exit>
+#ELSEACT
+break
+#IF
+LARGE P15 9
+#ACT
+give 金砖 10
+CALCVAR HUMAN 寄售 - 50000000
+SAVEVAR HUMAN 寄售 ..\QuestDiary\数据文件\个人变量\寄售.txt
+#ACT
+break
+#SAY
+你领取了10个金砖！\
+还剩<$HUMAN(寄售)>金币未领取\
+请将包裹保留10格以上空位后再来领取。\
+<离开/@exit>
+#IF
+LARGE P15 0
+#ACT
+give 金砖 $STR(P15)
+MOV P16 $STR(P15)
+MULT P16 5000000
+CALCVAR HUMAN 寄售 - $STR(P16)
+SAVEVAR HUMAN 寄售 ..\QuestDiary\数据文件\个人变量\寄售.txt
+break
+#SAY
+你领取了金砖！\
+还剩<$HUMAN(寄售)>金币未领取\
+<离开/@exit>
+#IF
+CHECKVAR HUMAN 寄售 > 0
+#ACT
+INC P17 $HUMAN(寄售)
+#IF
+SMALL P17 20000000
+#SAY
+恭喜你成功领取金币！\
+<离开/@exit>
+#ACT
+give 金币 $HUMAN(寄售)
+CALCVAR HUMAN 寄售 = 0
+SAVEVAR HUMAN 寄售 ..\QuestDiary\数据文件\个人变量\寄售.txt
+break
+#ELSESAY
+你无法再携带更多的金币
+#ELSEACT
+break
+
+[@YuanBaoCancel]
+#IF
+SMALL D6 1
+#ACT
+MOV S10 &
+INC S10 $USERNAME
+INC S10 &
+#ELSESAY
+很抱歉，您每隔一分钟才能操作元宝一次！\\
+<离开/@exit>
+#ELSEACT
+break
+#IF
+PosInList $STR(S10) ..\QuestDiary\数据文件\临时数据\寄售元宝名单.txt S11
+#SAY
+取消操作成功！\\
+<离开/@exit>
+#ACT
+SPLIT $STR(S11) " " S12
+MOV P11 $STR(S15)
+GAMEGOLD + $STR(P11)
+DELVARLIST $STR(S11) ..\QuestDiary\数据文件\临时数据\寄售元宝名单.txt
+MOV D6 60
+DelayCall 1 @operationtime
+break
+#ELSESAY
+对不起，你并没有在我这里寄售元宝！\\
+<离开/@exit>
+
+[@YuanBaoQuery]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV S10 &
+INC S10 $USERNAME
+INC S10 &
+#IF
+PosInList $STR(S10) ..\QuestDiary\数据文件\临时数据\寄售元宝名单.txt S11
+#ACT
+SPLIT $STR(S11) " " S12
+#SAY
+欢迎回来，你目前在我这里寄售的元宝数量是<$STR(S15)>个。\\
+<离开/@exit>
+#ELSESAY
+欢迎回来，你目前在我这里寄售的元宝数量是0个。\\
+<离开/@exit>
+
+[@YuanBaoBuy]
+#IF
+RANDOM 1
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\临时数据\寄售元宝名单.txt S16 0 -1 4 " "
+ReadRandomStr ..\QuestDiary\数据文件\临时数据\寄售元宝名单.txt S17 1 -1 4 " "
+ReadRandomStr ..\QuestDiary\数据文件\临时数据\寄售元宝名单.txt S18 2 -1 4 " "
+ReadRandomStr ..\QuestDiary\数据文件\临时数据\寄售元宝名单.txt S19 3 -1 4 " "
+ReadRandomStr ..\QuestDiary\数据文件\临时数据\寄售元宝名单.txt S20 4 -1 4 " "
+ReadRandomStr ..\QuestDiary\数据文件\临时数据\寄售元宝名单.txt S21 5 -1 4 " "
+break
+#SAY
+目前寄售元宝价格最优惠的商家信息：\
+玩家姓名        		元宝数量		单价\
+<$STR(S16)>\
+<$STR(S17)>\
+<$STR(S18)>\
+<$STR(S19)>\
+<$STR(S20)>\
+<$STR(S21)>\
+<离开/@exit>
+
+[@YuanBaoSell]
+#IF
+SMALL D6 1
+#SAY
+注意事项：\
+请输入你要寄售的元宝数量\\
+<离开/@exit>
+#ACT
+QUERYVAL 91 1 3 @Sellnumber 请输入你要寄售的元宝数量：
+break
+#ELSESAY
+很抱歉，您每隔一分钟才能操作元宝一次！\\
+<离开/@exit>
+#ELSEACT
+break
+
+[@Sellnumber]
+#IF
+SMALL D6 1
+#SAY
+注意事项：\
+请输入你要寄售元宝的<Color=green 单价>（单位：万）\\
+<离开/@exit>
+#ACT
+QUERYVAL 92 1 3 @Sellprice 请输入你要寄售元宝的单价（单位：万）：
+break
+#ELSESAY
+很抱歉，您每隔一分钟才能操作元宝一次！\\
+<离开/@exit>
+#ELSEACT
+break
+
+[@Sellprice]
+#IF
+SMALL D6 1
+#SAY
+请核对你输入的元宝数量和价格：\
+元宝数量    {Color=yellow <$STR(M91)>}\
+寄售元宝的<Color=green 单价>  {Color=yellow <$STR(M92)>}万\\
+{确认/@YuanBaoConfirmInput&<$STR(M91)>&<$STR(M92)>}    <更正/@YuanBaoSell>    <离开/@exit>\
+#ACT
+break
+#ELSESAY
+很抱歉，您每隔一分钟才能操作元宝一次！\\
+<离开/@exit>
+#ELSEACT
+break
+
+[@YuanBaoConfirmInput]
+#IF
+SMALL $SCRIPTPARAM(1) 1
+#SAY
+输入的元宝数量不正确，请重新输入。\\
+<离开/@exit>
+#ACT
+break
+#IF
+LARGE $SCRIPTPARAM(1) 200
+#SAY
+输入的元宝数量不能大于200，请重新输入。\\
+<离开/@exit>
+#ACT
+break
+#IF
+SMALL $SCRIPTPARAM(2) 1
+#SAY
+输入的单价数量不正确，请重新输入。\\
+<离开/@exit>
+#ACT
+break
+#IF
+LARGE $SCRIPTPARAM(2) 500
+#SAY
+输入的单价数量不正确，请重新输入。\\
+<离开/@exit>
+#ACT
+break
+#IF
+SMALL D6 1
+#ACT
+MOV S10 &
+INC S10 $USERNAME
+INC S10 &
+#ELSESAY
+很抱歉，您每隔一分钟才能操作元宝一次！\\
+<离开/@exit>
+#ELSEACT
+break
+#IF
+PosInList $STR(S10) ..\QuestDiary\数据文件\临时数据\寄售元宝名单.txt S11
+#SAY
+你的元宝正在寄售中！\\
+<离开/@exit>
+#ACT
+break
+#IF
+CHECKGAMEGOLD / $SCRIPTPARAM(1)
+#SAY
+你已经成功寄售了<$SCRIPTPARAM(1)>个元宝，请常来关注元宝的寄售情况，如\
+果在离线期间你所寄售的元宝成功售出，我们会通过系统短消\
+息通知你。请上线后留意对话框中的红字提示。\\
+<离开/@exit>
+#ACT
+MOV D6 60
+GAMEGOLD - $SCRIPTPARAM(1)
+MULT M92 10000
+FORMATSTR S14 {Color=yellow#32%-16s}#32#32%-10s%-12s%s <$USERNAME>|<$SCRIPTPARAM(1)>|<$STR(M92)>|{购买/@YuanBaoBuy2&<$USERNAME>&<$SCRIPTPARAM(1)>&<$STR(M92)>}
+ADDVARLIST $STR(S14) ..\QuestDiary\数据文件\临时数据\寄售元宝名单.txt
+DelayCall 1 @operationtime
+break
+#ELSESAY
+很抱歉，你没有足够的元宝！\\
+<离开/@exit>
+
+[@YuanBaoBuy2]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV S10 &
+INC S10 $SCRIPTPARAM(1)
+INC S10 &
+MOV M93 $SCRIPTPARAM(2)
+MOV M94 $SCRIPTPARAM(3)
+QUERYVAL 95 1 3 @BuyGmaegoldnumber 请输入你要购买的元宝数量：
+
+[@BuyGmaegoldnumber]
+#IF
+EQUAL $USERNAME $SCRIPTPARAM(1)
+#SAY
+系统正忙，请再次尝试！\\
+<离开/@exit>
+#ACT
+break
+#IF
+SMALL M95 1
+#SAY
+输入的元宝数量不正确，请重新输入\\
+<离开/@exit>
+#ACT
+break
+#IF
+SMALL M95 201
+#ACT
+MOV M96 $STR(M95)
+MULT M96 $STR(M94)
+#ELSESAY
+输入的元宝数量不能大于200，请重新输入。\\
+<离开/@exit>
+#ELSEACT
+break
+#IF
+!CHECKGOLD $STR(M96)
+#SAY
+你似乎没有那么多钱啊，还是先少买点元宝吧！\\
+<返回/@YuanBaoBuy>
+#ACT
+break
+#IF
+LARGE M95 $STR(M93)
+#SAY
+寄售的元宝数量不足或者已经售出，请重新刷新（<刷新/@YuanBaoBuy>）购买。\\
+<离开/@exit>
+#ACT
+break
+#IF
+PosInList $STR(S10) ..\QuestDiary\数据文件\临时数据\寄售元宝名单.txt S11
+#SAY
+恭喜你已经成功购买了<$STR(M95)>个元宝。\\
+<离开/@exit>
+#ACT
+SPLIT $STR(S11) " " S12
+MOV M97 $STR(S15)
+DEC M97 $STR(M95)
+take 金币 $STR(M96)
+GAMEGOLD + $STR(M95)
+SENDMSG 0 恭喜<$SCRIPTPARAM(1)>的元宝已经以<$STR(M94)>的单价成功售出
+DELVARLIST $STR(S11) ..\QuestDiary\数据文件\临时数据\寄售元宝名单.txt
+#ELSESAY
+    对不起，系统正忙，请稍后再试！\\
+    <离开/@exit>
+#ELSEACT
+break
+#IF
+LARGE M97 0
+#ACT
+FORMATSTR S17 {Color=yellow#32%-16s}#32#32%-10s%-12s%s <$SCRIPTPARAM(1)>|<$STR(M97)>|<$STR(M94)>|{购买/@YuanBaoBuy2&<$SCRIPTPARAM(1)>&<$STR(M97)>&<$STR(M94)>}
+ADDVARLIST $STR(S17) ..\QuestDiary\数据文件\临时数据\寄售元宝名单.txt
+#IF
+CHECKONLINE $SCRIPTPARAM(1)
+#ACT
+$SCRIPTPARAM(1).CALCVAR HUMAN 寄售 + $STR(M96)
+$SCRIPTPARAM(1).SAVEVAR HUMAN 寄售 ..\QUESTDIARY\数据文件\个人变量\寄售.txt
+break
+#ELSEACT
+LOADEXVar M98 $SCRIPTPARAM(1) 寄售 ..\QuestDiary\数据文件\个人变量\寄售.txt
+INC M98 $STR(M96)
+SaveExVar $STR(M98) $SCRIPTPARAM(1) 寄售 ..\QuestDiary\数据文件\个人变量\寄售.txt
+break
+
+[@operationtime]
+#IF
+LARGE D6 0
+#ACT
+DEC D6 1
+DelayCall 1 @operationtime
+break

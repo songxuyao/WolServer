@@ -1,0 +1,41 @@
+(@Storage @getback @FastStorge)
+%100
+[@main]
+这里是驿站仓库，可以替你保管很多东西，目前还暂不收保\
+管费，有什么可以先放我这里。为方便大家搜集红、绿、蓝\
+三种颜色的宝石以兑换小宝石，隆重推出“宝石仓库”的服\
+务。\
+<存放物品/@storage>    <元宝绑定密宝/@_CK_yuanbaobangmibao>    <元宝密宝解除/@_CK_yuanbaojiemibao>\
+<取出物品/@getback>    <宝石仓库/@_CK_goldsave>\
+<捆扎物品/@_CK_mbind>\
+<关闭选单/@exit>
+
+[@_CK_mbind]
+#CALL [\商人\仓库.txt] @捆扎物品
+
+[@_CK_goldsave]
+#CALL [\商人\仓库.txt] @宝石仓库
+
+[@storage]
+#CALL [\商人\仓库.txt] @保管物品
+
+[@getback]
+#CALL [\商人\仓库.txt] @取出物品
+
+[@FastStorge]
+#CALL [\商人\仓库.txt] @快捷存取
+
+[@_CK_yuanbaobangmibao]
+  嗯，要申请元宝密宝绑定啊，那<Color=green 先得验证一下你的>\
+<Color=green 密宝。>待会儿你在我这<Color=green 填密宝密码>，如果提示你验证\
+成功。<Color=green 千万记得再来点击一次申请元宝密宝绑定>，到\
+时候我直接帮你都办好。\
+<好，我来先验证密宝/@_CK_yuanbaomibao>
+
+[@_CK_yuanbaomibao]
+对不起，你不是密宝用户。\\
+<离开/@exit>
+
+[@_CK_yuanbaojiemibao]
+你的元宝还没有绑定密宝\\
+<离开/@exit>

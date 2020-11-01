@@ -1,0 +1,272 @@
+[@main]
+#IF
+HOUR 20 21
+EQUAL A11 $GUILDNAME
+#SAY
+我会帮助有实力的行会攻打铁血魔城，想要申请攻打魔城或\
+者在攻打魔城中遇到困难，都可以来找我。不必再犹豫了，\
+展示你们行会的实力挑战铁血魔王！\
+<快速进入魔城战场/@fight>\
+<申请攻打铁血魔城/@sign>\
+<查看攻打魔城行会排名/@aboutlist&0&1&13&5&6>\
+<查看哪些行会要攻城/@attacklist>\
+<打听消息/@ask>\
+<离开/@exit>\
+#ELSESAY
+我会帮助有实力的行会攻打铁血魔城，想要申请攻打魔城或\
+者在攻打魔城中遇到困难，都可以来找我。不必再犹豫了，\
+展示你们行会的实力挑战铁血魔王！\
+<申请攻打铁血魔城/@sign>\
+<查看攻打魔城行会排名/@aboutlist&1>\
+<查看哪些行会要攻城/@attacklist>\
+<打听消息/@ask>\
+<离开/@exit>\
+
+[@aboutlist]
+#IF
+SMALL $TXTLINE(..\QuestDiary\数据文件\临时数据\铁血魔城排名.txt) 1
+#SAY
+　　目前暂无信息，请稍后查看。\\
+　　<离开/@exit>\
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 1
+#ACT
+MOV P11 0
+MOV P12 1
+MOV P13 4
+MOV P14 1
+MOV S20 
+GOTO @Lookaboutlist
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 2
+#ACT
+MOV P11 5
+MOV P12 6
+MOV P13 9
+MOV P14 2
+MOV S20 
+GOTO @Lookaboutlist
+break
+
+[@Lookaboutlist]
+#IF
+LARGE P11 $STR(P13)
+EQUAL P14 2
+#SAY
+下面就是迄今为止攻陷铁血魔城最强最迅速的十个行会。\
+<Color=Green 名次      行会名         会长             所用时间(秒)>\
+<$STR(S20)>
+　　<第 1页/@aboutlist&1>    <color=gray 第 2页>\
+    <返回/@main>    <关闭/@exit>\
+#ACT
+break
+#IF
+LARGE P11 $STR(P13)
+EQUAL P14 1
+#SAY
+下面就是迄今为止攻陷铁血魔城最强最迅速的十个行会。\
+<Color=Green 名次      行会名         会长             所用时间(秒)>\
+<$STR(S20)>
+　　<color=gray 第 1页>    <第 2页/@aboutlist&2>\
+    <返回/@main>    <关闭/@exit>\
+#ACT
+break
+#IF
+RANDOM 1
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\临时数据\铁血魔城排名.txt S15 $STR(P11) 1 3 |
+#IF
+!EQUAL S15 
+#ACT
+SPLIT $STR(S15) | S16
+FORMATSTR S19 %-10s%-15s%-17s{Color=orange#32%s} <$STR(P12)>|<$STR(S16)>|<$STR(S17)>|<$STR(S18)>
+INC S20 $STR(S19)
+INC S20 \
+#ELSEACT
+INC S20 \
+#IF
+RANDOM 1
+#ACT
+INC P11 1
+INC P12 1
+GOTO @Lookaboutlist
+break
+
+[@attacklist]
+<查看今天攻打铁血魔城的行会/@Today>\
+<查看明天即将攻打铁血魔城的行会/@Tomorrow>
+
+[@Today]
+#IF
+RANDOM 1
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\临时数据\今日攻打行会.txt S5 0
+#IF
+!EQUAL S5 
+#SAY
+今天申请攻打铁血魔城的行会是：<$STR(S5)>\\
+<离开/@exit>\
+#ELSESAY
+今天没有攻打铁血魔城的行会。\
+<离开/@exit>
+
+[@Tomorrow]
+#IF
+RANDOM 1
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\临时数据\明日攻打行会.txt S5 0
+#IF
+!EQUAL S5 
+#SAY
+今天申请攻打铁血魔城的行会是：<$STR(S5)>\\
+<离开/@exit>\
+#ELSESAY
+下次攻城还不知猴年马月呢\
+<返回/@main>
+
+[@ask]
+铁血魔城就在眼前，如果你的行会有足够的勇气和实力，就\
+来我这里申请攻打铁血魔城吧。请注意，申请人必须是行会\
+会长，任何时候都可以来申请，攻打魔城的时间是申请后的\
+第二天晚上8点至9点，请好好把握时机。\\
+<申请攻打铁血魔城/@sign>\
+<返回/@main>\
+
+[@sign]
+#IF
+HAVEGUILD
+#ACT
+#ELSESAY
+你没有参加任何行会？难道想单枪匹马打败魔城？你可以跑\
+去试试，但建议你不要鲁莽。总之不是行会会长，是不可以\
+来申请的。\\
+<离开/@exit>\
+#ELSEACT
+break
+#IF
+ISGUILDMASTER
+#ACT
+#ELSESAY
+你不是行会会长，你不能申请攻打魔城。你可以请行会的会长\
+来找我申请，但是申请的行会必须有一百万以上的行会经验。\\
+<离开/@exit>
+<离开/@exit>\
+#ELSEACT
+break
+#IF
+CHECKGUILDLIST ..\QuestDiary\数据文件\临时数据\明日攻打行会.txt
+#SAY
+你的行会已经申请过了。\\
+<离开/@exit>\
+#ACT
+break
+#IF
+LARGE $TXTLINE(..\QuestDiary\数据文件\临时数据\明日攻打行会.txt) 0
+#SAY
+其他行会今天已经申请了魔城攻城战，请隔日再来申请！\\
+<离开/@exit>\
+#ACT
+break
+#IF
+SMALL $GUILD.GUILDEXP 1000000
+#SAY
+你的行会还没有足够的行会经验。申请攻打魔城至少需\
+要10000000的行会经验。\\
+<离开/@exit>\
+#ACT
+break
+#ELSESAY
+申请攻打铁血魔城将消耗行会经验10000000点。\
+你确定要申请么？\
+<确定申请/@requestinfernowarnow>\
+<离开/@exit>\
+
+[@requestinfernowarnow]
+#IF
+HAVEGUILD
+#ACT
+#ELSESAY
+你没有参加任何行会？难道想单枪匹马打败魔城？你可以跑\
+去试试，但建议你不要鲁莽。总之不是行会会长，是不可以\
+来申请的。\\
+<离开/@exit>\
+#ELSEACT
+break
+#IF
+ISGUILDMASTER
+#ACT
+#ELSESAY
+你不是行会会长，你不能申请攻打魔城。你可以请行会的会长\
+来找我申请，但是申请的行会必须有一百万以上的行会经验。\\
+<离开/@exit>
+<离开/@exit>\
+#ELSEACT
+break
+#IF
+CHECKGUILDLIST ..\QuestDiary\数据文件\临时数据\明日攻打行会.txt
+#SAY
+你的行会已经申请过了。\\
+<离开/@exit>\
+#ACT
+break
+#IF
+LARGE $TXTLINE(..\QuestDiary\数据文件\临时数据\明日攻打行会.txt) 0
+#SAY
+其他行会今天已经申请了魔城攻城战，请隔日再来申请！\\
+<离开/@exit>\
+#ACT
+break
+#IF
+SMALL $GUILD.GUILDEXP 1000000
+#SAY
+你的行会还没有足够的行会经验。申请攻打魔城至少需\
+要10000000的行会经验。\\
+<离开/@exit>\
+#ACT
+break
+#IF
+CHECKVAR GUILD 行会01  < $LONGDATE
+#SAY
+你的行会已经成功申请了攻打铁血魔城。明天晚上8点可以\
+开始攻打魔城。\\
+<离开/@exit>\
+#ACT
+MOV P10 $LONGDATE
+INC P10 604800
+GuildExp $GUILDNAME - 1000000
+CALCVAR GUILD 行会01 = $STR(P10)
+SAVEVAR GUILD 行会01 ..\QUESTDIARY\数据文件\行会变量\<$GUILDNAME>.txt
+ADDGUILDLIST ..\QuestDiary\数据文件\临时数据\明日攻打行会.txt
+SENDMSG 0 (*)<$USERNAME>'会长申请攻打铁血魔城成功，他将率领<$GUILDNAME>行会于明天晚上8点正式开始对魔城进行攻打。
+break
+#ELSESAY
+7天内你的行会已经申请过攻城，再等几天吧\\
+<离开/@exit>
+
+[@fight]
+#IF
+EQUAL A11 $GUILDNAME
+#SAY
+不要因暂时的挫折而气馁，你的行会同伴应该正在浴血奋战！\
+尽快准备好必要的补给品，我可以快速的把你送回魔城的战场\
+让你参加战斗。你做好准备了吗？\
+<进入魔城战场/@fly02>\
+<离开/@exit>\
+#ELSESAY
+你的行会没有申请攻打铁血魔城，或者你的行会不是今天攻城\
+的行会。我不能帮你快速进入战场。\
+<离开/@exit>\
+
+[@fly02]
+#IF
+EQUAL A11 $GUILDNAME
+#ACT
+MAPMOVE MC010 214 266
+break
+#ELSESAY
+你的行会没有申请攻打铁血魔城，或者你的行会不是今天攻城\
+的行会。我不能帮你快速进入战场。\
+<离开/@exit>\

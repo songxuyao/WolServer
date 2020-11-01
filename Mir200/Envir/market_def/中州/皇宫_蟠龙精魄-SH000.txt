@@ -1,0 +1,52 @@
+[@main]
+    天命的勇士，如果您已经获得了神奇的<color=yellow 蟠龙精魄>，我可以\
+帮您进行铸造，再加入一些必须的材料，就可以制造出威力巨\
+大的<color=red 蟠龙级装备>，助你称霸中州，纵横天下！\\\\
+<蟠龙精魄兑换蟠龙级装备/@jinpoExchange>
+
+[@jinpoExchange]
+兑换蟠龙级装备需要蟠龙精魄、300个强化石及100个淬炼石。\
+    战士:  <蟠龙傲天头盔/@doExchangejinpo&蟠龙傲天头盔> <蟠龙傲天项链/@doExchangejinpo&蟠龙傲天项链> <蟠龙傲天手镯/@doExchangejinpo&蟠龙傲天手镯> \
+<蟠龙傲天戒指/@doExchangejinpo&蟠龙傲天戒指> <蟠龙傲天靴子/@doExchangejinpo&蟠龙傲天靴子> <蟠龙傲天腰带/@doExchangejinpo&蟠龙傲天腰带> \\
+    法师:  <蟠龙幻天头盔/@doExchangejinpo&蟠龙幻天头盔> <蟠龙幻天项链/@doExchangejinpo&蟠龙幻天项链> <蟠龙幻天手镯/@doExchangejinpo&蟠龙幻天手镯> \
+<蟠龙幻天戒指/@doExchangejinpo&蟠龙幻天戒指> <蟠龙幻天靴子/@doExchangejinpo&蟠龙幻天靴子> <蟠龙幻天腰带/@doExchangejinpo&蟠龙幻天腰带> \\
+    道士:  <蟠龙玄天头盔/@doExchangejinpo&蟠龙玄天头盔> <蟠龙玄天项链/@doExchangejinpo&蟠龙玄天项链> <蟠龙玄天手镯/@doExchangejinpo&蟠龙玄天手镯> \
+<蟠龙玄天戒指/@doExchangejinpo&蟠龙玄天戒指> <蟠龙玄天靴子/@doExchangejinpo&蟠龙玄天靴子> <蟠龙玄天腰带/@doExchangejinpo&蟠龙玄天腰带> \
+
+[@doExchangejinpo]
+#IF
+RANDOM 1
+#SAY
+    兑换蟠龙级装备需要一个蟠龙精魄。\
+#ACT
+ShowSpotDlg 6 请放入蟠龙精魄： @givejingpo
+break
+
+[@givejingpo]
+#IF
+!EQUAL $PARAM(0) 蟠龙精魄
+#SAY
+    对不起，您给的不是蟠龙精魄。\
+#ACT
+break
+#IF
+!CHECKITEM 强化石 300
+#SAY
+    对不起，您的强化石不足。\
+#ACT
+break
+#IF
+CHECKITEM 淬炼石 100
+#SAY
+    恭喜勇士兑换1个<$SCRIPTPARAM(1)>!\
+    <返回/@jinpoExchange>
+#ACT
+TAKEM $PARAM(1)
+TAKE 强化石 300
+TAKE 淬炼石 100
+GIVE $SCRIPTPARAM(1) 1
+break
+#ELSESAY
+    对不起，您的淬炼石不足。\
+#ELSEACT
+break

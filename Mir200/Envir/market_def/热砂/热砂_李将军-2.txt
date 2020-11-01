@@ -1,0 +1,180 @@
+[@main]
+  我奉国王命令驻守此处，负责守卫本城安全\
+  年轻人，你可愿意帮助我共同抗敌！\
+<可接任务/@_RW_entry>\
+<离开/@exit>\
+
+[@_RW_entry]
+#IF
+EQUAL $Task(31) 1
+#SAY
+可以完成的任务：\
+<热砂荒漠—李将军/@_RW_fulfilztTaskDesp02>\\
+<离开/@exit>
+#ACT
+break
+#IF
+EQUAL $Task(32) 3
+#SAY
+可以完成的任务：\
+<热砂荒漠—考验/@_RW_fulfilztTaskDesp03>\\
+<离开/@exit>
+#ACT
+break
+#IF
+EQUAL $Task(33) 3
+#SAY
+可以完成的任务：\
+<热砂荒漠—深入险境/@_RW_fulfilztTaskDesp04>\\
+<离开/@exit>
+#ACT
+break
+#IF
+EQUAL $Task(34) 3
+#SAY
+可以完成的任务：\
+<热砂荒漠—消除祸根/@_RW_fulfilztTaskDesp05>\\
+<离开/@exit>
+#ACT
+break
+#IF
+EQUAL $Task(38) 1
+#SAY
+可以完成的任务：\
+<群蛇乱舞—蛇魔谷(35级)/@_RW_fulfilqsTaskDesp>\\
+<离开/@exit>
+#ACT
+break
+#IF
+EQUAL $Task(42) 3
+#SAY
+可以完成的任务：\
+<群蛇乱舞—灭蛇/@_RW_fulfilTaskDesp414>\\
+<离开/@exit>
+#ACT
+break
+#ELSESAY
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+[@_RW_fulfilTaskDesp414]
+   这么快就解决掉所有问题了啊，真是年轻有为啊\
+<将军过奖了/@_RW_fulfilTask414>                <关闭/@exit>
+
+[@_RW_fulfilTask414]
+#IF
+EQUAL $Task(42) 3
+#SAY
+  很感谢你的帮助。  你这段时间的优异表现，我已经向国\
+王奏明了。  回去面见国王吧，他会给你应得的赏赐。\
+<离开/@exit>  <返回/@main>
+#ACT
+EndTask 42
+BINDGOLD + 2000
+CHANGEEXP + 350000
+AddTask 43
+SENDMSG 5 你成功增加了2000绑定金币。
+break
+
+[@_RW_fulfilqsTaskDesp]
+   小伙子，真高兴又见到你。国王再把你派过来真是给了\
+我不小的帮助啊! \
+<我能做什么？/@_RW_fulfilqsTask>                <关闭/@exit>
+
+[@_RW_fulfilqsTask]
+#IF
+EQUAL $Task(38) 1
+#SAY
+  蛇魔谷中的怪物并不强大，但是其强大的繁殖能力给我们\
+带来不少的隐患。我们定期会清理一下蛇魔谷中的怪物保证\
+其不会造成对我们的威胁。   你先去蛇魔谷的入口找前锋\
+队长李虎报道，他会告诉你我们现在最需要做点什么.\
+<离开/@exit>  <返回/@main>
+#ACT
+EndTask 38
+BINDGOLD + 2000
+CHANGEEXP + 500000
+AddTask 39
+SENDMSG 5 你成功增加了2000绑定金币。
+break
+
+[@_RW_fulfilztTaskDesp02]
+  一直以来，我都在负责监视机关洞中的怪物，防止他们冲\
+出洞中危害人民。  但是最近洞中怪物骚动异常，让我很不\
+安心啊!\
+<我能做什么？/@_RW_fulfilztTask02>                <改天再说/@exit>
+
+[@_RW_fulfilztTask02]
+#IF
+EQUAL $Task(31) 1
+#SAY
+  我需要有人深入洞中调查此问题，不过我可不能让你冒然\
+深入险境，我可是个爱护士兵的好将军  你先去<color=green 机关支路一>\
+<color=green >中消灭<color=green 10个铜人>，我需要一些初步的信息来做判断！\
+<离开/@exit>  <返回/@main>
+#ACT
+EndTask 31
+CHANGEEXP + 200000
+BINDGOLD + 2000
+AddTask 32
+SetTaskValue 32 I0 = 10
+SENDMSG 5 你成功增加了2000绑定金币。
+break
+
+[@_RW_fulfilztTaskDesp03]
+    年轻人表现还不错嘛。不过从情况来看，似乎洞中正在\
+酝酿不小的危险啊！\
+<什么危险啊？/@_RW_fulfilztTask03>                <懒得搭理/@exit>
+
+[@_RW_fulfilztTask03]
+#IF
+EQUAL $Task(32) 3
+#SAY
+  这次，我需要你去消灭机关洞中的<color=green 青铜兽>15个。这些巨兽\
+可要比那些铜人更加的难对付。可要小心啊。\
+<离开/@exit>  <返回/@main>
+#ACT
+EndTask 32
+BINDGOLD + 2000
+CHANGEEXP + 300000
+AddTask 33
+SetTaskValue 33 I0 = 15
+SENDMSG 5 你成功增加了2000绑定金币。
+break
+
+[@_RW_fulfilztTaskDesp04]
+很好，有了这个我就可以验证我的猜测了！\
+<到底是发生了什么情况啊？/@_RW_fulfilztTask04>                <关闭/@exit>
+
+[@_RW_fulfilztTask04]
+#IF
+EQUAL $Task(33) 3
+#SAY
+  这次，我需要你去机关洞深处的<color=green 神工堂>，去干掉<color=green 10个任意>\
+<color=green 的怪物>，我要看看他们是不是被魔族给蛊惑了。\
+<离开/@exit>  <返回/@main>
+#ACT
+EndTask 33
+BINDGOLD + 2000
+CHANGEEXP + 350000
+AddTask 34
+SetTaskValue 34 I0 = 10
+SENDMSG 5 你成功增加了2000绑定金币。
+break
+
+[@_RW_fulfilztTaskDesp05]
+  这些机关巨兽们果然受到了某种影响，那些铜人也一样 \
+ 我会在此严加防范，同时我需要你去回报国王 \
+<我立刻去向国王回报/@_RW_fulfilztTask05>                <关闭/@exit>
+
+[@_RW_fulfilztTask05]
+#IF
+EQUAL $Task(34) 3
+#ACT
+EndTask 34
+BINDGOLD + 2000
+CHANGEEXP + 400000
+AddTask 35
+SENDMSG 5 你成功增加了2000绑定金币。
+close
+break

@@ -1,0 +1,31 @@
+[@全局变量]
+{
+#IF
+RANDOM 1
+#ACT
+VAR String GLOBAL 男战士
+VAR String GLOBAL 女战士
+VAR String GLOBAL 男法师
+VAR String GLOBAL 女法师
+VAR String GLOBAL 男道士
+VAR String GLOBAL 女道士
+VAR String GLOBAL 城主名
+VAR String GLOBAL 城主职
+VAR Integer GLOBAL 城主级
+VAR String GLOBAL 江湖01
+VAR String GLOBAL 江湖02
+LOADVAR GLOBAL 男战士 ..\QuestDiary\数据文件\全局变量\全局变量.txt
+LOADVAR GLOBAL 女战士 ..\QuestDiary\数据文件\全局变量\全局变量.txt
+LOADVAR GLOBAL 男法师 ..\QuestDiary\数据文件\全局变量\全局变量.txt
+LOADVAR GLOBAL 女法师 ..\QuestDiary\数据文件\全局变量\全局变量.txt
+LOADVAR GLOBAL 男道士 ..\QuestDiary\数据文件\全局变量\全局变量.txt
+LOADVAR GLOBAL 女道士 ..\QuestDiary\数据文件\全局变量\全局变量.txt
+LOADVAR GLOBAL 江湖01 ..\QuestDiary\数据文件\全局变量\全局变量.txt
+LOADVAR GLOBAL 江湖02 ..\QuestDiary\数据文件\全局变量\全局变量.txt
+LOADVAR GLOBAL 城主名 ..\QuestDiary\数据文件\全局变量\全局变量.txt
+LOADVAR GLOBAL 城主职 ..\QuestDiary\数据文件\全局变量\全局变量.txt
+LOADVAR GLOBAL 城主级 ..\QuestDiary\数据文件\全局变量\全局变量.txt
+break
+
+
+}

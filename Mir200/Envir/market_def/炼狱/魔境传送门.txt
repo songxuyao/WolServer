@@ -1,0 +1,67 @@
+[@main]
+#IF
+CHECKMAPNAME NL001
+#SAY
+你准备返回起点吗？\\
+<是的/@gomap&MH001>\
+<不/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME NL002
+#SAY
+你准备返回起点吗？\\
+<是的/@gomap&MH001>\
+<不/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME NL003
+#SAY
+你准备返回起点吗？\\
+<是的/@gomap&MH001>\
+<不/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME NL004
+#SAY
+你准备返回起点吗？\\
+<是的/@gomap&MH001>\
+<不/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME NL005
+#SAY
+你准备返回起点吗？\\
+<是的/@gomap&MH001>\
+<不/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME NL006
+#SAY
+你准备返回起点吗？\\
+<我要返回海岛/@gomap&MH001>\
+<不/@exit>
+#ACT
+break
+#IF
+CHECKMAPNAME NL007
+#SAY
+　　神秘的空间之门为你开启，请问你要回到炼狱魔境\
+六层呢还是想去桃园仙境？\\
+　　<我想回炼狱魔境六层/@gomap&NL006>\
+　　<太惊喜了，送我去桃园仙境吧/@gomap&MH054>\
+　　<离开/@exit>
+
+[@gomap]
+#IF
+CheckUserGap < 3
+#ACT
+MAP $SCRIPTPARAM(1)
+#ELSEACT
+SENDMSG 5 (*)你距离入口太远了。。。。
+close
+break

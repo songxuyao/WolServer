@@ -1,0 +1,143 @@
+[@礼物发放]
+{
+
+#IF
+EQUAL $Table(SG_Pritime).Tim21 $DATE
+#ACT
+break
+#IF
+LARGE $TABLE(SG_PRIVITE).Hum04 7
+#ACT
+break
+#IF
+SMALL $TABLE(SG_PRIVITE).Hum04 1
+#ACT
+TABLE SG_PRIVITE Hum04 = 1
+#IF
+EQUAL $TABLE(SG_PRIVITE).Hum04 1
+#SAY
+欢迎您来到中州大陆!\\
+5分钟后，您将收到第1份礼物：<Color=green 天山雪莲、深海灵礁>各1个。\
+来自中州国王的馈赠，会使您的新手之旅更加顺利。\
+请您不要离开游戏。\\
+<color=green (领取前，请保持包裹里至少有2个空位)>\\
+<好的，谢谢/@exit>
+#ACT
+DelayGift 300 @getgift1 您将获得第<$TABLE(SG_PRIVITE).Hum04>份礼物，请等待%s
+break
+#IF
+EQUAL $TABLE(SG_PRIVITE).Hum04 2
+#ACT
+DelayGift 900 @getgift2 您将获得第<$TABLE(SG_PRIVITE).Hum04>份礼物，请等待%s
+break
+#IF
+EQUAL $TABLE(SG_PRIVITE).Hum04 3
+#ACT
+DelayGift 1800 @getgift3 您将获得第<$TABLE(SG_PRIVITE).Hum04>份礼物，请等待%s
+break
+#IF
+LARGE $TABLE(SG_PRIVITE).Hum04 3
+#ACT
+MOV P30 $TABLE(SG_PRIVITE).Hum04
+MULT P30 5
+INC P30 20
+MULT P30 60
+DelayGift $STR(P30) @getgift4 您将获得第<$TABLE(SG_PRIVITE).Hum04>份礼物，请等待%s
+break
+
+[@getgift1]
+#IF
+CHECKBAGSIZE 2
+#SAY
+恭喜您获得了：<Color=green 天山雪莲、深海灵礁>各1个。得知您的修炼\
+进展十分顺利，举国上下，万分欣喜。\
+10分钟后，您将收到第2份礼物：<Color=green 月光宝盒(小)、治疗神水>各1个。\
+国王期望着您的成长，请继续努力。\
+请您不要离开游戏。\\
+<color=green (领取前，请保持包裹里至少有2个空位)>\\
+<好的，谢谢/@exit>
+#ACT
+GIVE 天山雪莲 1 1
+GIVE 天山雪莲 1 1
+TABLE SG_PRIVITE Hum04 + 1
+DelayGift 900 @getgift2 您将获得第<$TABLE(SG_PRIVITE).Hum04>份礼物，请等待%s
+break
+#ELSESAY
+<color=green 由于您的包裹空间不足，未能领取到本次奖励>\
+<color=green 请保持包裹里至少有2个空位，小退后重试>\\
+<好的，谢谢/@exit>
+#ELSEACT
+break
+
+[@getgift2]
+#IF
+CHECKBAGSIZE 2
+#SAY
+恭喜您获得了：<Color=green 月光宝盒(小)、治疗神水>各1个。\
+漫漫的群英之路，您又前进了一步。\
+15分钟后，您将收到第3份礼物：<Color=green 天山雪莲、治疗神水>各1个。\
+友情提示：结交好友，会让您的成长之路更多乐趣。\
+请您不要离开游戏。\\
+<color=green (领取前，请保持包裹里至少有2个空位)>\\
+<好的，谢谢/@exit>
+#ACT
+GIVE 月光宝盒(小) 1 1
+GIVE 治疗神水 1 1
+TABLE SG_PRIVITE Hum04 + 1
+DelayGift 1800 @getgift3 您将获得第<$TABLE(SG_PRIVITE).Hum04>份礼物，请等待%s
+break
+#ELSESAY
+<color=green 由于您的包裹空间不足，未能领取到本次奖励>\
+<color=green 请保持包裹里至少有2个空位，小退后重试>\\
+<好的，谢谢/@exit>
+#ELSEACT
+break
+
+[@getgift3]
+#IF
+CHECKBAGSIZE 2
+#SAY
+恭喜您获得了：<Color=green 天山雪莲、治疗神水>各1个。\
+为了帮助勇士们加快历练的脚步，如果您在<color=green 明天>再次上\
+线的话，还可以获得以下奖励中的<color=green 随机1个>：\\
+<color=green 超级天山雪莲>（10分钟内持续回血的灵药）；\
+<color=green 深海灵礁>（10分钟内持续回蓝的灵药）；\
+<color=green 回城神石>（双击可快速回到城内）\
+<下一页/@Giftxiayiye> 
+#ACT
+GIVE 天山雪莲 1 1
+GIVE 治疗神水 1 1
+TABLE SG_PRIVITE Hum04 + 1
+break
+#ELSESAY
+<color=green 由于您的包裹空间不足，未能领取到本次奖励>\
+<color=green 请保持包裹里至少有2个空位，小退后重试>\\
+<好的，谢谢/@exit>
+#ELSEACT
+break
+
+[@Giftxiayiye]
+<color=green 月光宝盒（小）>（将你获得的经验额外储存一份）；\
+<color=green 双倍经验白天卡（周）>（使用后，接下来一周的白天时\
+间段，你都将处于双倍时间内）\\
+为变强而战斗、为国王而战斗、为人类而战斗。\<谢谢/@exit>
+
+[@getgift4]
+#IF
+CHECKBAGSIZE 1
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\礼包装备奖励.txt S10 6
+SPLIT $STR(S10) | S11
+RANDOMVAR S11 15 S17
+GIVE $STR(S17) 1
+TABLE SG_PRIVITE Hum04 + 1
+Table SG_Pritime Tim21 = $DATE
+break
+#ELSESAY
+<color=green 由于您的包裹空间不足，未能领取到本次奖励>\
+<color=green 请保持包裹里至少有2个空位，小退后重试>\\
+<好的，谢谢/@exit>
+#ELSEACT
+break
+
+}

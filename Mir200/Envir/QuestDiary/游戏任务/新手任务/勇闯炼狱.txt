@@ -1,0 +1,54 @@
+[@炼狱_老兵]
+{
+
+    我是老兵，你有事找我吗？我可以帮助别人传送到传世\
+的各个角落，甚至可以进入炼狱。刚才史官已经飞鸽传书告\
+诉我有个年轻人要来找我。怎么还没来呢？\\
+<我就是那个年轻人，前来见你/@_RW_fulfilTask60_60>                <离开/@exit>
+
+
+[@_RW_fulfilTask60_60]
+#IF
+EQUAL $Task(27) 1
+#SAY
+
+    你可以双击包裹中的炼狱体验卡到海岛，再从那里的传\
+送门进入炼狱魔境。\
+    快去炼狱魔境一层消灭5只任意怪物回来找我。\
+    <离开/@exit>
+#ACT
+UpdateTask 27 2
+BINDGOLD + 7500
+CHANGEEXP + 400000
+give 炼狱体验卡 1
+SetTaskValue 27 I0 = 5
+SENDMSG 5 你成功增加了7500绑定金币。
+break
+
+[@勇闯_炼狱]
+    你杀光它们了么？\
+    <已经消灭它们了/@_RW_fulfilTask61_61>                <离开/@exit>\
+
+[@_RW_fulfilTask61_61]
+#IF
+EQUAL $Task(27) 4
+#SAY
+    勇敢的英雄，你目前已经可以承担起维护传世大陆的责\
+任了。不过需要不断提升自己，最大助力去中州皇宫找<color=green 国王>\
+吧，他有任务交给你。\
+    <好的/@exit>  <返回/@main>
+#ACT
+EndTask 27
+BINDGOLD + 7500
+CHANGEEXP + 400000
+AddTask 28
+AddTask 29
+AddTask 30
+SENDMSG 5 你成功增加了7500绑定金币。
+break
+#ELSESAY
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+
+}

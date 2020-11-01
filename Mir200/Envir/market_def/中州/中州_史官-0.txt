@@ -1,0 +1,169 @@
+[@main]
+国王有令：为天下最强的勇士们在中州大道树立雕像，彰显\
+他们名号。天下群豪尽可以到我这里来登记在案，看看到底\
+谁是群雄中的最强者。如果来登记的勇士中你是最强的一位，\
+你从此以后就可以名扬天下了。\
+    <可接任务/@_RW_entry>\
+　　<我是天下第一/@imsuperman>\
+　　<天下第一有谁/@aboutsuperman>\
+　　<离开/@exit>
+
+[@_RW_entry]
+#CALL [\游戏任务\新手任务\史官的愤怒.txt] @中州_史官
+
+[@imsuperman]
+#IF
+CHECKLEVELEX < 46
+#SAY
+须知人外有人，天外有天。现在的天下至强者还不是你\
+能超越的。不过假以时日，江山代有强豪出，指点天下\
+的强者也自会有努力者一席之地的。\
+<返回/@main>
+#ACT
+BREAK
+#IF
+CHECKLEVELEX < 72
+#ACT
+MOV S1 $GENDER
+INC S1 $JOB
+MOV S2 $LEVEL
+INC S2 级
+MOV P1 $LEVEL
+FormatStr S3 %s|%s|%s|%s|%s|%s|%s|%s <$STR(S1)>|<$USERNAME>|<$GUILDNAME>|<$USERNAME>|<$DATE>|<$USERNAME>|<$STR(S2)>|<$USERNAME>
+#IF
+gender man
+CHECKJOB WARR
+LARGE P1 $STR(G11)
+#ACT
+MOV G11 $STR(P1)
+FormatStr A1 天下第一%s：{Color=green#32%s}\所属行会：{Color=green#32%s}\\纷扰乱世群雄逐鹿，{Color=green#32%s}在烽烟四起的传奇世界中修炼\成为天下第一，从{Color=green#32%s}至今还没有人可以超越。\{Color=green#32%s}的等级为{Color=green#32%s}。\今天的天下第一是{Color=green#32%s}，明天的天下第一会是谁？\\申请天下第一名号，请到中州475，150处找史官　　<离开/@exit> <$STR(S3)>
+CALCVAR GLOBAL 男战士 = $USERNAME
+SAVEVAR GLOBAL 男战士 ..\QuestDiary\数据文件\全局变量\全局变量.txt
+MOV S4 天下第一男战士\
+INC S4 $USERNAME
+INC S4 \
+SETNPCNAME 1 $STR(S4)
+SENDMSG 0 <$USERNAME>以<$STR(S2)>在我这里证实了他才是天下第一男战士，申请天下第一请到中州史官出进行。
+SENDMSG 10 <$USERNAME>以<$STR(S2)>在我这里证实了他才是天下第一男战士，申请天下第一请到中州史官出进行。
+goto @shuaxindiaoxiang
+break
+#IF
+gender man
+CHECKJOB WIZARD
+LARGE P1 $STR(G12)
+#ACT
+MOV G12 $STR(P1)
+FormatStr A2 天下第一%s：{Color=green#32%s}\所属行会：{Color=green#32%s}\\纷扰乱世群雄逐鹿，{Color=green#32%s}在烽烟四起的传奇世界中修炼\成为天下第一，从{Color=green#32%s}至今还没有人可以超越。\{Color=green#32%s}的等级为{Color=green#32%s}。\今天的天下第一是{Color=green#32%s}，明天的天下第一会是谁？\\申请天下第一名号，请到中州475，150处找史官　　<离开/@exit> <$STR(S3)>
+CALCVAR GLOBAL 男法师 = $USERNAME
+SAVEVAR GLOBAL 男法师 ..\QuestDiary\数据文件\全局变量\全局变量.txt
+MOV S4 天下第一男法师\
+INC S4 $USERNAME
+INC S4 \
+SETNPCNAME 2 $STR(S4)
+SENDMSG 0 <$USERNAME>以<$STR(S2)>在我这里证实了他才是天下第一男法师，申请天下第一请到中州史官出进行。
+SENDMSG 10 <$USERNAME>以<$STR(S2)>在我这里证实了他才是天下第一男法师，申请天下第一请到中州史官出进行。
+goto @shuaxindiaoxiang
+break
+#IF
+gender man
+CHECKJOB TAOS
+LARGE P1 $STR(G13)
+#ACT
+MOV G13 $STR(P1)
+FormatStr A3 天下第一%s：{Color=green#32%s}\所属行会：{Color=green#32%s}\\纷扰乱世群雄逐鹿，{Color=green#32%s}在烽烟四起的传奇世界中修炼\成为天下第一，从{Color=green#32%s}至今还没有人可以超越。\{Color=green#32%s}的等级为{Color=green#32%s}。\今天的天下第一是{Color=green#32%s}，明天的天下第一会是谁？\\申请天下第一名号，请到中州475，150处找史官　　<离开/@exit> <$STR(S3)>
+CALCVAR GLOBAL 男道士 = $USERNAME
+SAVEVAR GLOBAL 男道士 ..\QuestDiary\数据文件\全局变量\全局变量.txt
+MOV S4 天下第一男道士\
+INC S4 $USERNAME
+INC S4 \
+SETNPCNAME 3 $STR(S4)
+CREDITPOINT + 10
+SENDMSG 0 <$USERNAME>以<$STR(S2)>在我这里证实了他才是天下第一男道士，申请天下第一请到中州史官出进行。
+SENDMSG 10 <$USERNAME>以<$STR(S2)>在我这里证实了他才是天下第一男道士，申请天下第一请到中州史官出进行。
+goto @shuaxindiaoxiang
+break
+#IF
+gender woman
+CHECKJOB WARR
+LARGE P1 $STR(G14)
+#ACT
+MOV G14 $STR(P1)
+FormatStr A4 天下第一%s：{Color=green#32%s}\所属行会：{Color=green#32%s}\\纷扰乱世群雄逐鹿，{Color=green#32%s}在烽烟四起的传奇世界中修炼\成为天下第一，从{Color=green#32%s}至今还没有人可以超越。\{Color=green#32%s}的等级为{Color=green#32%s}。\今天的天下第一是{Color=green#32%s}，明天的天下第一会是谁？\\申请天下第一名号，请到中州475，150处找史官　　<离开/@exit> <$STR(S3)>
+CALCVAR GLOBAL 女战士 = $USERNAME
+SAVEVAR GLOBAL 女战士 ..\QuestDiary\数据文件\全局变量\全局变量.txt
+MOV S4 天下第一女战士\
+INC S4 $USERNAME
+INC S4 \
+SETNPCNAME 4 $STR(S4)
+SENDMSG 0 <$USERNAME>以<$STR(S2)>在我这里证实了他才是天下第一女战士，申请天下第一请到中州史官出进行。
+SENDMSG 10 <$USERNAME>以<$STR(S2)>在我这里证实了他才是天下第一女战士，申请天下第一请到中州史官出进行。
+goto @shuaxindiaoxiang
+break
+#IF
+gender woman
+CHECKJOB WIZARD
+LARGE P1 $STR(G15)
+#ACT
+MOV G15 $STR(P1)
+FormatStr A5 天下第一%s：{Color=green#32%s}\所属行会：{Color=green#32%s}\\纷扰乱世群雄逐鹿，{Color=green#32%s}在烽烟四起的传奇世界中修炼\成为天下第一，从{Color=green#32%s}至今还没有人可以超越。\{Color=green#32%s}的等级为{Color=green#32%s}。\今天的天下第一是{Color=green#32%s}，明天的天下第一会是谁？\\申请天下第一名号，请到中州475，150处找史官　　<离开/@exit> <$STR(S3)>
+CALCVAR GLOBAL 女法师 = $USERNAME
+SAVEVAR GLOBAL 女法师 ..\QuestDiary\数据文件\全局变量\全局变量.txt
+MOV S4 天下第一女法师\
+INC S4 $USERNAME
+INC S4 \
+SETNPCNAME 5 $STR(S4)
+SENDMSG 0 <$USERNAME>以<$STR(S2)>在我这里证实了他才是天下第一女法师，申请天下第一请到中州史官出进行。
+SENDMSG 10 <$USERNAME>以<$STR(S2)>在我这里证实了他才是天下第一女法师，申请天下第一请到中州史官出进行。
+goto @shuaxindiaoxiang
+break
+#IF
+gender woman
+CHECKJOB TAOS
+LARGE P1 $STR(G16)
+#ACT
+MOV G16 $STR(P1)
+FormatStr A6 天下第一%s：{Color=green#32%s}\所属行会：{Color=green#32%s}\\纷扰乱世群雄逐鹿，{Color=green#32%s}在烽烟四起的传奇世界中修炼\成为天下第一，从{Color=green#32%s}至今还没有人可以超越。\{Color=green#32%s}的等级为{Color=green#32%s}。\今天的天下第一是{Color=green#32%s}，明天的天下第一会是谁？\\申请天下第一名号，请到中州475，150处找史官　　<离开/@exit> <$STR(S3)>
+CALCVAR GLOBAL 女道士 = $USERNAME
+SAVEVAR GLOBAL 女道士 ..\QuestDiary\数据文件\全局变量\全局变量.txt
+MOV S4 天下第一女道士\
+INC S4 $USERNAME
+INC S4 \
+SETNPCNAME 6 $STR(S4)
+SENDMSG 0 <$USERNAME>以<$STR(S2)>在我这里证实了他才是天下第一女道士，申请天下第一请到中州史官出进行。
+SENDMSG 10 <$USERNAME>以<$STR(S2)>在我这里证实了他才是天下第一女道士，申请天下第一请到中州史官出进行。
+goto @shuaxindiaoxiang
+break
+#ELSESAY
+你当前的等级还不能更新记录。\\
+<返回/@main>
+
+[@shuaxindiaoxiang]
+恭喜恭喜！看来你的确是实至名归，你的大名已经和石\
+像一起树立于中州大道，接受众人的景仰。\
+<确认/@exit>
+
+[@aboutsuperman]
+<天下第一男战士/@worrmale>\
+<天下第一女战士/@worrfemale>\
+<天下第一男道士/@taomale>\
+<天下第一女道士/@taofemale>\
+<天下第一男法师/@wizmale>\
+<天下第一女法师/@wizfemale>\
+
+[@worrmale]
+<$STR(A1)>
+
+[@worrfemale]
+<$STR(A4)>
+
+[@taomale]
+<$STR(A3)>
+
+[@taofemale]
+<$STR(A6)>
+
+[@wizmale]
+<$STR(A2)>
+
+[@wizfemale]
+<$STR(A5)>

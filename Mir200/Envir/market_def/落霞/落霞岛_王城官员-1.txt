@@ -1,0 +1,125 @@
+[@main]
+    中州频遭魔王的进攻，国王为了让勇士们学习抵抗魔王\
+的技巧，特举办王城答题。\
+    每日<Color=green 00：00--24：00>将开放免费答题。每位英雄都可以\
+参加，连续回答正确三道题目，将有丰厚奖励。<Color=green 如果今天你>\
+<Color=green 已通过炼狱海岛赏金猎人的强者之路考验，将获得更多奖励。>\
+    其他时间，每一位玩家还可以通过<Color=green 传世宝典>使用赤金钥\
+匙打开智慧大门。传世宝典可以到太史令处领取获得。\
+    <参加知识问答考题/@answerquestion>    \
+
+[@answerquestion]
+#IF
+!EQUAL $Table(SG_Pritime).Tim02 $DATE
+#SAY
+　　你必须连续答对三道题目，你才能获得相应的经验值奖\
+励。如果中间有任何一题答错，必须重新回答才能领奖。\\\
+　　<开始吧，我准备好了/@startanswer>\
+#ACT
+MOV P3 0
+break
+#ELSESAY
+    知识问答每天每人只有一次机会，大侠请明天再来吧。\\\
+    <离开/@exit>
+
+[@startanswer]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOVR P0 4
+MOVR P1 4
+MOVR P2 4
+#SAY
+<$QUESTION(44/394)>
+#IF
+EQUAL P0 0
+#SAY
+　　{<$ANSWERTEXT(1)>/@answer&1}\
+#IF
+EQUAL P1 0
+#SAY
+　　{<$ANSWERTEXT(2)>/@answer&2}\
+#IF
+EQUAL P2 0
+#SAY
+　　{<$ANSWERTEXT(3)>/@answer&3}\
+#IF
+EQUAL P0 1
+#SAY
+　　{<$ANSWERTEXT(1)>/@answer&1}\
+#IF
+EQUAL P1 1
+#SAY
+　　{<$ANSWERTEXT(2)>/@answer&2}\
+#IF
+EQUAL P2 1
+#SAY
+　　{<$ANSWERTEXT(3)>/@answer&3}\
+#IF
+EQUAL P0 2
+#SAY
+　　{<$ANSWERTEXT(1)>/@answer&1}\
+#IF
+EQUAL P1 2
+#SAY
+　　{<$ANSWERTEXT(2)>/@answer&2}\
+#IF
+EQUAL P2 2
+#SAY
+　　{<$ANSWERTEXT(3)>/@answer&3}\
+#IF
+EQUAL P0 3
+#SAY
+　　{<$ANSWERTEXT(1)>/@answer&1}\
+#IF
+EQUAL P1 3
+#SAY
+　　{<$ANSWERTEXT(2)>/@answer&2}\
+#IF
+EQUAL P2 3
+#SAY
+　　{<$ANSWERTEXT(3)>/@answer&3}\
+#IF
+EQUAL P0 4
+#SAY
+　　{<$ANSWERTEXT(1)>/@answer&1}\
+#IF
+EQUAL P1 4
+#SAY
+　　{<$ANSWERTEXT(2)>/@answer&2}\
+#IF
+EQUAL P2 4
+#SAY
+　　{<$ANSWERTEXT(3)>/@answer&3}\
+
+[@answer]
+#IF
+!EQUAL $ANSWER $SCRIPTPARAM(1)
+#SAY
+　　很遗憾，你没有连续答对3道题。不要气馁哦，从头再\
+试试吧！\\\
+　　<呵呵,我要再试一次/@startanswer>\
+　　<离开/@exit>
+#ACT
+MOV P3 0
+break
+#IF
+LARGE P3 1
+#SAY
+　　你的智慧超出了我的想象!恭喜你顺利通过这次考验!你\
+已经获得经验。\\\
+　　<谢谢/@exit>
+#ACT
+MOVR P5 4
+INC P5 2
+MULT P5 10000
+GetExp $STR(P5)
+Table SG_Pritime Tim02 = $DATE
+break
+#ELSESAY
+　　不错,这题答得很正确！那么继续答下一题吧。\\\
+　　<好,请告诉我下一题/@startanswer>\
+　　<离开/@exit>
+#ELSEACT
+INC P3 1
+break

@@ -1,0 +1,1128 @@
+[@main]
+#IF
+CHECKLEVELEX < 40
+#SAY
+    热砂荒漠由于勇士们奋勇作战，换来了一段平静祥和的\
+日子。但是目前各大魔窟妖穴中的妖魔贼心不死，又开始蠢蠢\
+欲动。勇士开始发布<赏金任务/@viewPrize>，紧急战备起来！\
+    <color=red 本活动限40级以上玩家参加>\
+#ACT
+break
+#IF
+HasTask 50 61
+#SAY
+    热砂荒漠由于勇士们奋勇作战，换来了一段平静祥和的\
+日子。但是目前各大魔窟妖穴中的妖魔贼心不死，又开始蠢蠢\
+欲动。勇士开始发布<赏金任务/@viewPrize>，紧急战备起来！\
+    <color=red 本活动限40级以上玩家参加>\
+    <发布任务/@fireMissionMenu&3>                     <完成任务/@toFinishTaskMenu>\
+    <限时悬赏任务/@faburenwu>        <color=red 限时悬赏任务只有周六周日能参加>\
+;    <灵兽进阶/@@petjinjie>\
+    <悬赏令消耗榜（限时开放）/@showXSXSMenu>     \
+#ELSESAY
+    热砂荒漠由于勇士们奋勇作战，换来了一段平静祥和的\
+日子。但是目前各大魔窟妖穴中的妖魔贼心不死，又开始蠢蠢\
+欲动。勇士开始发布<赏金任务/@viewPrize>，紧急战备起来！\
+    <color=red 本活动限40级以上玩家参加>\
+    <发布任务/@fireMissionMenu&3>                     <接受任务/@toAcceptTaskMenu>\
+    <限时悬赏任务/@faburenwu>        <color=red 限时悬赏任务只有周六周日能参加>\
+;    <灵兽进阶/@@petjinjie>\
+    <悬赏令消耗榜（限时开放）/@showXSXSMenu>     \
+
+[@shangjtq]
+#IF
+CHECKVARLIST $USERNAME ..\QuestDiary\数据文件\临时数据\允许赏金特权.txt
+#SAY
+    赏金特权：你将拥有召唤妖魔的特权，使用后将在中州\
+（362,337）附近30格范围内召唤出20个“赏金炎魔”，诛杀\
+一个赏金炎魔将获得300000经验！\
+    <color=red 注：每次召唤时间间隔为3分钟使用特权>\\\\\
+    <使用特权/@UsrTequan>
+#ACT
+break
+#ELSESAY
+    赏金特权：你将拥有召唤妖魔的特权，使用后将在中州\
+（362,337）附近30格范围内召唤出20个“赏金炎魔”，诛杀\
+一个赏金炎魔将获得300000经验！\
+    <color=red 注：每次召唤时间间隔为3分钟使用特权>\\\\\
+    <Color=gray 使用特权>
+#ELSEACT
+break
+
+[@UsrTequan]
+#IF
+CHECKVARLIST $USERNAME ..\QuestDiary\数据文件\临时数据\允许赏金特权.txt
+#SAY
+    赏金炎魔已经出现在中州（362,337）附近！\\
+    <离开/@exit>
+#ACT
+MONGENEX 0 362 337 赏金炎魔 30 20
+DELVARLIST $USERNAME ..\QuestDiary\数据文件\临时数据\允许赏金特权.txt
+break
+
+[@faburenwu]
+    近日魔患猖獗，部分妖魔已经潜入中州大陆。高额悬赏\
+限时开启，召集中州勇士，速速剿灭妖魔！限时悬赏任务每\
+位勇士每天可额外发布1次，完成1次。\\\\\\
+    <发布限时赏金任务/@fireMissionMenu3>    <赏金特权/@shangjtq>    <前往消灭妖魔/@gotomap>
+
+[@gotomap]
+#IF
+RANDOM 1
+#ACT
+MAPMOVE 0 362 337
+break
+
+[@fireMissionMenu3]
+#IF
+CHECKLEVELEX > 39
+#ACT
+MOV S17 |
+INC S17 $USERNAME
+INC S17 |
+MOV P19 0
+#ELSESAY
+  勇士，你的等级未达到40级，无法发布赏金任务！\
+  <离开/@exit>\
+#ELSEACT
+break
+#IF
+!EQUAL $Table(SG_Pritime).Tim15 $DATE
+#ACT
+TABLE SG_PRIVITE Hum15 = 1
+Table SG_Pritime Tim15 = $DATE
+#IF
+EQUAL $DATE.WEEK 6
+#ACT
+MOV P19 1
+#IF
+EQUAL $DATE.WEEK 7
+#ACT
+MOV P19 1
+#IF
+SMALL $TABLE(SG_PRIVITE).Hum15 1
+#SAY
+对不起，你今天已经发布了<color=green 1>次限时赏金任务\
+明天再来吧。\\
+<知道了/@exit>
+#ACT
+break
+#IF
+SMALL P19 1
+#SAY
+只有周六周日才能参加限时赏金任务！\\
+<知道了/@exit>
+#ACT
+break
+#IF
+CHECKVARLIST $USERNAME ..\QuestDiary\数据文件\临时数据\等待领取玩家.txt
+#SAY
+    恭喜你完成了这次的行动任务，下面是该领取你应得的\
+奖励了。\
+    <领取奖励/@doFinish>\\
+    <返回/@main>
+#ACT
+break
+#IF
+PosInList $STR(S17) ..\QuestDiary\数据文件\临时数据\开启限时任务.txt S18
+#ACT
+SPLIT $STR(S18) | S19
+break
+#SAY
+    您发布的限时赏金任务未完成！\
+<$STR(S25)>\
+    任务完成后，发布人的基础奖励：{color=orange <$STR(S22)>}\
+    根据任务的不同，您还可获得额外奖励选择：\
+    <color=orange 同时可获得额外奖励(装备、海量经验)>\
+    完成该任务的其他勇士获得奖励：{color=orange <$STR(S23)>}\
+    <返回/@main>
+#IF
+PosInList $STR(S17) ..\QuestDiary\数据文件\临时数据\开启赏金任务.txt S18
+#ACT
+SPLIT $STR(S18) | S19
+break
+#SAY
+    您发布的任务未完成！请完成后再发布！\
+<$STR(S25)>\
+    任务完成后，发布人的基础奖励：{color=orange <$STR(S22)>}\
+    任务完成后，发布人的额外奖励：{color=orange <$STR(S22)>}\
+    完成该任务的其他勇士获得奖励：{color=orange <$STR(S23)>}\\
+    <返回/@main>
+#IF
+PosInList $STR(S17) ..\QuestDiary\数据文件\临时数据\完成赏金任务.txt S18
+#ACT
+SPLIT $STR(S18) | S19
+break
+#SAY
+    您发布的任务已经完成！\
+<$STR(S25)>
+    <color=graygolden 任务目的：><$STR(S24)>\
+    任务完成后，发布人的基础奖励：{color=orange <$STR(S22)>}\
+    任务完成后，发布人的额外奖励：{color=orange <$STR(S22)>}\
+    完成该任务的其他勇士获得奖励：{color=orange <$STR(S23)>}\
+    <领取奖励/@getFirePrize>    <返回/@main>
+#IF
+PosInList $STR(S17) ..\QuestDiary\数据文件\临时数据\完成限时任务.txt S18
+#ACT
+SPLIT $STR(S18) | S19
+break
+#SAY
+    您发布的任务已经完成！\
+<$STR(S25)>
+    <color=graygolden 任务目的：><$STR(S24)>\
+    任务完成后，发布人的基础奖励：{color=orange <$STR(S22)>}\
+    任务完成后，您还可获得额外奖励选择：\
+    <color=orange 同时可获得额外奖励(装备、海量经验)>\
+    完成该任务的其他勇士获得奖励：{color=orange <$STR(S23)>}\
+    <领取奖励/@getFirePrize>    <返回/@main>
+#IF
+HasTask 50 55
+#SAY
+    对不起，您接受的任务还未完成！\\\\\\\\
+    <返回/@main>    <离开/@exit>
+#ACT
+break
+#IF
+LARGE P19 0
+#SAY
+    勇士你好，发布<color=yellow 限时赏金任务>需要<color=green 500个悬赏令>哦！\
+    您发布的任务完成后，可以获得基础奖励：<color=orange 145000000经验值>\
+    根据任务的不同，您还可获得额外奖励选择：\
+    <color=orange 同时可获得额外奖励(装备、海量经验)>\
+    完成您发布任务的勇士可获得：<color=orange 5000000经验值>\\
+    <确认发布限时赏金任务/@SendNewXianShi>    <返回/@fireMissionMenu>
+#ACT
+MOV D2 500
+MOV D3 145000000
+MOV D4 5000000
+MOV D5 3
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\赏金任务列表.txt S90
+SPLIT $STR(S90) | S91
+break
+#ELSEACT
+SENDMSG 5 系统错误...
+break
+
+[@SendNewXianShi]
+#IF
+CHECKITEM 悬赏令 $STR(D2)
+EQUAL $SCRIPTPARAM(2)
+#SAY
+<$STR(S92)>\
+    任务完成后，发布人的基础奖励：{color=orange <$STR(D3)>经验值}\
+    任务完成后，您还可获得额外奖励选择：\
+    <color=orange 同时可获得额外奖励(装备、海量经验)>\
+    完成该任务的其他勇士获得奖励：{color=orange <$STR(D4)>经验值}\
+    对于本次奖励不满意可以选择  <刷新/@SendNewXianShi&2&1>\
+    {确认发布/@doFireXianShi&<$STR(D5)>&<$STR(S91)>&<$STR(D3)>}
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(2) 1
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\赏金任务列表.txt S90
+SPLIT $STR(S90) | S91
+break
+#SAY
+<$STR(S92)>\
+    任务完成后，发布人的基础奖励：{color=orange <$STR(D3)>经验值}\
+    任务完成后，您还可获得额外奖励选择：\
+    <color=orange 同时可获得额外奖励(装备、海量经验)>\
+    完成该任务的其他勇士获得奖励：{color=orange <$STR(D4)>经验值}\
+    对于本次奖励不满意可以选择  <刷新/@SendNewXianShi&2&1>\
+    {确认发布/@doFireXianShi&<$STR(D5)>&<$STR(S91)>&<$STR(D3)>}
+#ELSESAY
+对不起,您的悬赏令不足\\\\\\\\
+<返回/@main>
+
+[@doFireXianShi]
+#IF
+PosInList $STR(S91) ..\QuestDiary\数据文件\文本数据\赏金任务编号.txt S10
+#ACT
+SPLIT $STR(S10) | S11
+MOV S14 TIME
+INC S14 $LONGDATE
+MOV S15 <
+INC S15 $STR(S12)
+FillText S15 31
+INC S15 发布人：
+INC S15 $USERNAME
+INC S15 /@doAcceptTask
+INC S15 &
+INC S15 $SCRIPTPARAM(1)
+INC S15 &
+INC S15 $STR(S11)
+INC S15 &
+INC S15 $STR(S14)
+INC S15 >
+MOV S16 |
+INC S16 $USERNAME
+INC S16 |
+INC S16 $STR(S14)
+INC S16 |
+INC S16 $SCRIPTPARAM(2)
+INC S16 |
+INC S16 $SCRIPTPARAM(3)
+INC S16 经验值|
+INC S16 $STR(D4)
+INC S16 经验值|
+INC S16 $STR(S13)
+INC S16 |
+INC S16 $STR(S92)
+take 悬赏令 $STR(D2)
+ADDVARLIST $STR(S16) ..\QuestDiary\数据文件\临时数据\开启限时任务.txt
+TABLE SG_PRIVITE Hum15 - 1
+#ELSEACT
+SENDMSG 5 系统错误...
+break
+#IF
+EQUAL D5 3
+#SAY
+    恭喜您成功发布了一个<color=yellow 限时赏金任务>！\\
+    <返回/@main>
+#ACT
+ADDVARLIST $STR(S15) ..\QuestDiary\数据文件\临时数据\限时赏金任务.txt
+break
+
+[@toFinishTaskMenu]
+    今天已经完成{color=green <$TABLE(SG_PRIVITE).Hum08>次}赏金任务\\
+    <我已经完成本次赏金任务，领取奖励！/@doFinishMenu&1>\
+    <放弃本次任务，重新接取。/@doFinishMenu>\\
+    <返回/@main>
+
+[@doFinishMenu]
+#IF
+EQUAL $SCRIPTPARAM(1)
+#SAY
+    很遗憾您放弃了本次任务！\\
+    <返回/@main>
+#ACT
+DelTask 50 61
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 1
+#ACT
+#ELSESAY
+    对不起，系统正忙，请稍后再试！\\
+    <离开/@exit>
+#ELSEACT
+break
+#IF
+PosInList $Table(SG_PRICHAR).CHR01 ..\QuestDiary\数据文件\临时数据\开启赏金任务.txt S18
+#ACT
+SPLIT $STR(S18) | S19
+Table SG_PRICHAR CHR04 = $STR(S19)
+goto @nextdoFinishMenu
+break
+#IF
+PosInList $Table(SG_PRICHAR).CHR01 ..\QuestDiary\数据文件\临时数据\开启限时任务.txt S18
+#ACT
+SPLIT $STR(S18) | S19
+Table SG_PRICHAR CHR04 = $STR(S19)
+goto @nextdoFinishMenu
+break
+#ELSESAY
+    很遗憾，已经有人完成了该赏金任务！\\
+    <放弃任务/@doFinishMenu>    <返回/@main>
+#ELSEACT
+break
+
+[@nextdoFinishMenu]
+#IF
+PosInList $Table(SG_PRICHAR).CHR01 ..\QuestDiary\数据文件\临时数据\<$Table(SG_PRICHAR).CHR02>.txt S26
+#ACT
+#ELSESAY
+    对不起，系统正忙，请稍后再试！\\
+    <离开/@exit>
+#ELSEACT
+break
+#IF
+EQUAL S21 50
+CHECKITEMDURE 猪肉 10000 10
+#ACT
+EndTask 50
+TABLE SG_PRIVITE Hum08 + 1
+TAKEDUREITEM 猪肉 10000 10
+DELVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\开启限时任务.txt
+DELVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\开启赏金任务.txt
+DELVARLIST $STR(S26) ..\QuestDiary\数据文件\临时数据\<$Table(SG_PRICHAR).CHR02>.txt
+ADDVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\完成赏金任务.txt
+ADDVARLIST $USERNAME ..\QuestDiary\数据文件\临时数据\等待领取玩家.txt
+GOTO @FinishMenu
+break
+#IF
+EQUAL S21 51
+CHECKITEMDURE 牛肉 10000 10
+#ACT
+EndTask 51
+TABLE SG_PRIVITE Hum08 + 1
+TAKEDUREITEM 牛肉 10000 10
+DELVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\开启限时任务.txt
+DELVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\开启赏金任务.txt
+DELVARLIST $STR(S26) ..\QuestDiary\数据文件\临时数据\<$Table(SG_PRICHAR).CHR02>.txt
+ADDVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\完成赏金任务.txt
+ADDVARLIST $USERNAME ..\QuestDiary\数据文件\临时数据\等待领取玩家.txt
+GOTO @FinishMenu
+break
+#IF
+EQUAL S21 52
+CHECKITEMDURE 鹿肉 10000 10
+#ACT
+EndTask 52
+TABLE SG_PRIVITE Hum08 + 1
+TAKEDUREITEM 鹿肉 10000 10
+DELVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\开启限时任务.txt
+DELVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\开启赏金任务.txt
+DELVARLIST $STR(S26) ..\QuestDiary\数据文件\临时数据\<$Table(SG_PRICHAR).CHR02>.txt
+ADDVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\完成赏金任务.txt
+ADDVARLIST $USERNAME ..\QuestDiary\数据文件\临时数据\等待领取玩家.txt
+GOTO @FinishMenu
+break
+#IF
+EQUAL S21 53
+CHECKITEMDURE 铜矿 10000 10
+#ACT
+EndTask 53
+TABLE SG_PRIVITE Hum08 + 1
+TAKEDUREITEM 铜矿 10000 10
+DELVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\开启限时任务.txt
+DELVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\开启赏金任务.txt
+DELVARLIST $STR(S26) ..\QuestDiary\数据文件\临时数据\<$Table(SG_PRICHAR).CHR02>.txt
+ADDVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\完成赏金任务.txt
+ADDVARLIST $USERNAME ..\QuestDiary\数据文件\临时数据\等待领取玩家.txt
+GOTO @FinishMenu
+break
+#IF
+EQUAL S21 54
+CHECKITEMDURE 银矿 10000 10
+#ACT
+EndTask 54
+TABLE SG_PRIVITE Hum08 + 1
+TAKEDUREITEM 银矿 10000 10
+DELVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\开启限时任务.txt
+DELVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\开启赏金任务.txt
+DELVARLIST $STR(S26) ..\QuestDiary\数据文件\临时数据\<$Table(SG_PRICHAR).CHR02>.txt
+ADDVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\完成赏金任务.txt
+ADDVARLIST $USERNAME ..\QuestDiary\数据文件\临时数据\等待领取玩家.txt
+GOTO @FinishMenu
+break
+#IF
+EQUAL S21 55
+CHECKITEMDURE 金矿 10000 10
+#ACT
+EndTask 55
+TABLE SG_PRIVITE Hum08 + 1
+TAKEDUREITEM 金矿 10000 10
+DELVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\开启限时任务.txt
+DELVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\开启赏金任务.txt
+DELVARLIST $STR(S26) ..\QuestDiary\数据文件\临时数据\<$Table(SG_PRICHAR).CHR02>.txt
+ADDVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\完成赏金任务.txt
+ADDVARLIST $USERNAME ..\QuestDiary\数据文件\临时数据\等待领取玩家.txt
+GOTO @FinishMenu
+break
+#IF
+EQUAL S21 56
+CHECKITEMDURE 木材 10000 10
+#ACT
+EndTask 56
+TABLE SG_PRIVITE Hum08 + 1
+TAKEDUREITEM 木材 10000 10
+DELVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\开启限时任务.txt
+DELVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\开启赏金任务.txt
+DELVARLIST $STR(S26) ..\QuestDiary\数据文件\临时数据\<$Table(SG_PRICHAR).CHR02>.txt
+ADDVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\完成赏金任务.txt
+ADDVARLIST $USERNAME ..\QuestDiary\数据文件\临时数据\等待领取玩家.txt
+GOTO @FinishMenu
+break
+#IF
+EQUAL S21 57
+CHECKITEM 果实 10
+#ACT
+EndTask 57
+TAKE 果实 10
+TABLE SG_PRIVITE Hum08 + 1
+DELVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\开启限时任务.txt
+DELVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\开启赏金任务.txt
+DELVARLIST $STR(S26) ..\QuestDiary\数据文件\临时数据\<$Table(SG_PRICHAR).CHR02>.txt
+ADDVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\完成赏金任务.txt
+ADDVARLIST $USERNAME ..\QuestDiary\数据文件\临时数据\等待领取玩家.txt
+GOTO @FinishMenu
+break
+#IF
+EQUAL S21 58
+EQUAL $Task(58) 3
+#ACT
+EndTask 58
+TABLE SG_PRIVITE Hum08 + 1
+DELVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\开启限时任务.txt
+DELVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\开启赏金任务.txt
+DELVARLIST $STR(S26) ..\QuestDiary\数据文件\临时数据\<$Table(SG_PRICHAR).CHR02>.txt
+ADDVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\完成赏金任务.txt
+ADDVARLIST $USERNAME ..\QuestDiary\数据文件\临时数据\等待领取玩家.txt
+GOTO @FinishMenu
+break
+#IF
+EQUAL S21 59
+EQUAL $Task(59) 3
+#ACT
+EndTask 59
+TABLE SG_PRIVITE Hum08 + 1
+DELVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\开启限时任务.txt
+DELVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\开启赏金任务.txt
+DELVARLIST $STR(S26) ..\QuestDiary\数据文件\临时数据\<$Table(SG_PRICHAR).CHR02>.txt
+ADDVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\完成赏金任务.txt
+ADDVARLIST $USERNAME ..\QuestDiary\数据文件\临时数据\等待领取玩家.txt
+GOTO @FinishMenu
+break
+#IF
+EQUAL S21 60
+EQUAL $Task(60) 3
+#ACT
+EndTask 60
+TABLE SG_PRIVITE Hum08 + 1
+DELVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\开启限时任务.txt
+DELVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\开启赏金任务.txt
+DELVARLIST $STR(S26) ..\QuestDiary\数据文件\临时数据\<$Table(SG_PRICHAR).CHR02>.txt
+ADDVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\完成赏金任务.txt
+ADDVARLIST $USERNAME ..\QuestDiary\数据文件\临时数据\等待领取玩家.txt
+GOTO @FinishMenu
+break
+#IF
+EQUAL S21 61
+EQUAL $Task(61) 3
+#ACT
+EndTask 61
+TABLE SG_PRIVITE Hum08 + 1
+DELVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\开启限时任务.txt
+DELVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\开启赏金任务.txt
+DELVARLIST $STR(S26) ..\QuestDiary\数据文件\临时数据\<$Table(SG_PRICHAR).CHR02>.txt
+ADDVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\完成赏金任务.txt
+ADDVARLIST $USERNAME ..\QuestDiary\数据文件\临时数据\等待领取玩家.txt
+
+GOTO @FinishMenu
+break
+#ELSESAY
+    对不起，您接受的任务还未完成！\\\\\\\\
+    <返回/@main>    <离开/@exit>
+
+[@FinishMenu]
+    恭喜你完成了这次的行动任务，下面是该领取你应得的\
+奖励了。\
+    <领取奖励/@doFinish>\\
+    <返回/@main>
+
+[@doFinish]
+#IF
+CHECKVARLIST $USERNAME ..\QuestDiary\数据文件\临时数据\等待领取玩家.txt
+#SAY
+    勇士，感谢你做出的贡献，期待我们下一次的见面！\\
+    <返回/@main>
+#ACT
+DELVARLIST $USERNAME ..\QuestDiary\数据文件\临时数据\等待领取玩家.txt
+#ELSESAY
+    勇士，貌似你的使命还没有完成，继续努力吧！\\
+    <离开/@exit>
+#ELSEACT
+break
+#IF
+EQUAL $Table(SG_PRICHAR).CHR03 0
+#ACT
+CHANGEEXP + 500000
+SENDMSG 14 恭喜%s完成了<$Table(SG_PRICHAR).CHR04>的赏金任务，获得50.0万经验奖励！
+break
+#IF
+EQUAL $Table(SG_PRICHAR).CHR03 1
+#ACT
+CHANGEEXP + 250000
+SENDMSG 14 恭喜%s完成了<$Table(SG_PRICHAR).CHR04>的赏金任务，获得25.0万经验奖励！
+break
+#IF
+EQUAL $Table(SG_PRICHAR).CHR03 2
+#ACT
+CHANGEEXP + 50000
+SENDMSG 14 恭喜%s完成了<$Table(SG_PRICHAR).CHR04>的赏金任务，获得5.0万经验奖励！
+break
+#IF
+EQUAL $Table(SG_PRICHAR).CHR03 3
+#ACT
+CHANGEEXP + 5000000
+SENDMSG 14 恭喜%s完成了<$Table(SG_PRICHAR).CHR04>的赏金任务，获得500.0万经验奖励！
+break
+
+[@doAcceptTask]
+#IF
+PosInList $SCRIPTPARAM(3) ..\QuestDiary\数据文件\临时数据\开启赏金任务.txt S18
+#ACT
+SPLIT $STR(S18) | S19
+GOTO @nextdoAcceptTask
+break
+#IF
+PosInList $SCRIPTPARAM(3) ..\QuestDiary\数据文件\临时数据\开启限时任务.txt S18
+#ACT
+SPLIT $STR(S18) | S19
+GOTO @nextdoAcceptTask
+break
+#ELSESAY
+    很遗憾，已经有人完成了该赏金任务！\\
+    <放弃任务/@doFinishMenu>    <返回/@main>
+#ELSEACT
+break
+
+[@nextdoAcceptTask]
+#IF
+EQUAL $SCRIPTPARAM(1) 0
+#ACT
+MOV S94 橙色赏金任务
+#IF
+EQUAL $SCRIPTPARAM(1) 1
+#ACT
+MOV S94 红色赏金任务
+#IF
+EQUAL $SCRIPTPARAM(1) 2
+#ACT
+MOV S94 白色赏金任务
+#IF
+EQUAL $SCRIPTPARAM(1) 3
+#ACT
+MOV S94 限时赏金任务
+#IF
+RANDOM 1
+#SAY
+    勇士，成功完成一个{color=yellow <$STR(S94)>}可以获得：\
+    {color=orange <$STR(S23)>}\
+    多位勇士接受同一个赏金任务时，只有首个完成任务的勇\
+士才可获得奖励哦!\
+<$STR(S25)>
+    \
+    {接受/@AgreeAcceptTask&<$SCRIPTPARAM(1)>&<$SCRIPTPARAM(2)>&<$SCRIPTPARAM(3)>&<$STR(S94)>}    <返回/@toAcceptTaskMenu>
+#ACT
+break
+
+[@AgreeAcceptTask]
+#IF
+PosInList $SCRIPTPARAM(3) ..\QuestDiary\数据文件\临时数据\开启赏金任务.txt S18
+#SAY
+    恭喜您成功接受了一个{color=yellow <$STR(S94)>}！\\
+    <返回/@main>
+#ACT
+AddTask $SCRIPTPARAM(2)
+SetTaskValue $SCRIPTPARAM(2) I0 = 10
+Table SG_PRICHAR CHR01 = $SCRIPTPARAM(3)
+Table SG_PRICHAR CHR02 = $SCRIPTPARAM(4)
+Table SG_PRICHAR CHR03 = $SCRIPTPARAM(1)
+break
+#IF
+PosInList $SCRIPTPARAM(3) ..\QuestDiary\数据文件\临时数据\开启限时任务.txt S18
+#SAY
+    恭喜您成功接受了一个{color=yellow <$STR(S94)>}！\\
+    <返回/@main>
+#ACT
+AddTask $SCRIPTPARAM(2)
+SetTaskValue $SCRIPTPARAM(2) I0 = 10
+Table SG_PRICHAR CHR01 = $SCRIPTPARAM(3)
+Table SG_PRICHAR CHR02 = $SCRIPTPARAM(4)
+Table SG_PRICHAR CHR03 = $SCRIPTPARAM(1)
+break
+#ELSESAY
+    很遗憾，已经有人完成了该赏金任务！\\
+    <放弃任务/@doFinishMenu>    <返回/@main>
+#ELSEACT
+break
+
+[@toAcceptTaskMenu]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV S17 |
+INC S17 $USERNAME
+INC S17 |
+#IF
+PosInList $STR(S17) ..\QuestDiary\数据文件\临时数据\开启赏金任务.txt S18
+#ACT
+SPLIT $STR(S18) | S19
+break
+#SAY
+    您发布的任务未完成！请完成后再发布！\
+<$STR(S25)>\
+    任务完成后，发布人的基础奖励：{color=orange <$STR(S22)>}\
+    任务完成后，发布人的额外奖励：{color=orange <$STR(S22)>}\
+    完成该任务的其他勇士获得奖励：{color=orange <$STR(S23)>}\\
+    <返回/@main>
+#IF
+PosInList $STR(S17) ..\QuestDiary\数据文件\临时数据\完成赏金任务.txt S18
+#ACT
+SPLIT $STR(S18) | S19
+break
+#SAY
+    您发布的任务已经完成！\
+<$STR(S25)>
+    <color=graygolden 任务目的：><$STR(S24)>\
+    任务完成后，发布人的基础奖励：{color=orange <$STR(S22)>}\
+    任务完成后，发布人的额外奖励：{color=orange <$STR(S22)>}\
+    完成该任务的其他勇士获得奖励：{color=orange <$STR(S23)>}\
+    <领取奖励/@getFirePrize>    <返回/@main>
+#IF
+!EQUAL $Table(SG_Pritime).Tim08 $DATE
+#ACT
+TABLE SG_PRIVITE Hum08 = 0
+Table SG_Pritime Tim08 = $DATE
+#IF
+LARGE $TABLE(SG_PRIVITE).Hum08 4
+#SAY
+    <color=green 每位勇士每天可以完成><color=yellow 5次><color=green 赏金任务；><color=green 已完成：>{color=red <$TABLE(SG_PRIVITE).Hum08>次}\
+    <color=green 赏金任务分为><color=orange 橙色><color=green 、><color=red 红色><color=green 、><color=white 白色><color=green 三种，对应不同的奖励；>\
+    <color=green 玩家同一时间只能接受一个任务；>\
+    <color=green 多位勇士接受同一个赏金任务时，第一个完成任务的玩家>\
+<color=green 获得奖励。>\
+    <color=gray 查看当前发布的橙色任务>\
+    <color=gray 查看当前发布的红色任务>\
+    <color=gray 查看当前发布的白色任务>\
+    <返回/@main>
+#ACT
+#IF
+EQUAL $DATE.WEEK 6
+#SAY
+    <color=green 每位勇士每天可以完成><color=yellow 5次><color=green 赏金任务；><color=green 已完成：>{color=red <$TABLE(SG_PRIVITE).Hum08>次}\
+    <color=green 赏金任务分为><color=orange 橙色><color=green 、><color=red 红色><color=green 、><color=white 白色><color=green 三种，对应不同的奖励；>\
+    <color=green 玩家同一时间只能接受一个任务；>\
+    <color=green 多位勇士接受同一个赏金任务时，第一个完成任务的玩家>\
+<color=green 获得奖励。>\
+    <查看当前发布的橙色任务/@viewTaskMenu&0&1>\
+    <查看当前发布的红色任务/@viewTaskMenu&1&1>\
+    <查看当前发布的白色任务/@viewTaskMenu&2&1>\
+    <查看当前发布的限时任务/@viewTaskMenu&3&1>\
+    <返回/@main>
+#ACT
+break
+#IF
+EQUAL $DATE.WEEK 7
+#SAY
+    <color=green 每位勇士每天可以完成><color=yellow 5次><color=green 赏金任务；><color=green 已完成：>{color=red <$TABLE(SG_PRIVITE).Hum08>次}\
+    <color=green 赏金任务分为><color=orange 橙色><color=green 、><color=red 红色><color=green 、><color=white 白色><color=green 三种，对应不同的奖励；>\
+    <color=green 玩家同一时间只能接受一个任务；>\
+    <color=green 多位勇士接受同一个赏金任务时，第一个完成任务的玩家>\
+<color=green 获得奖励。>\
+    <查看当前发布的橙色任务/@viewTaskMenu&0&1>\
+    <查看当前发布的红色任务/@viewTaskMenu&1&1>\
+    <查看当前发布的白色任务/@viewTaskMenu&2&1>\
+    <查看当前发布的限时任务/@viewTaskMenu&3&1>\
+    <返回/@main>
+#ACT
+break
+#IF
+RANDOM 1
+#SAY
+    <color=green 每位勇士每天可以完成><color=yellow 5次><color=green 赏金任务；><color=green 已完成：>{color=red <$TABLE(SG_PRIVITE).Hum08>次}\
+    <color=green 赏金任务分为><color=orange 橙色><color=green 、><color=red 红色><color=green 、><color=white 白色><color=green 三种，对应不同的奖励；>\
+    <color=green 玩家同一时间只能接受一个任务；>\
+    <color=green 多位勇士接受同一个赏金任务时，第一个完成任务的玩家>\
+<color=green 获得奖励。>\
+    <查看当前发布的橙色任务/@viewTaskMenu&0&1>\
+    <查看当前发布的红色任务/@viewTaskMenu&1&1>\
+    <查看当前发布的白色任务/@viewTaskMenu&2&1>\
+    <返回/@main>
+#ACT
+break
+
+[@viewTaskMenu]
+#IF
+EQUAL $SCRIPTPARAM(1) 0
+#ACT
+MOV P10 $TXTLINE(..\QuestDiary\数据文件\临时数据\橙色赏金任务.txt)
+MOV S10 橙色赏金任务
+MOV P18 $SCRIPTPARAM(1)
+#IF
+EQUAL $SCRIPTPARAM(1) 1
+#ACT
+MOV P10 $TXTLINE(..\QuestDiary\数据文件\临时数据\红色赏金任务.txt)
+MOV S10 红色赏金任务
+MOV P18 $SCRIPTPARAM(1)
+#IF
+EQUAL $SCRIPTPARAM(1) 2
+#ACT
+MOV P10 $TXTLINE(..\QuestDiary\数据文件\临时数据\白色赏金任务.txt)
+MOV S10 白色赏金任务
+MOV P18 $SCRIPTPARAM(1)
+#IF
+EQUAL $SCRIPTPARAM(1) 3
+#ACT
+MOV P10 $TXTLINE(..\QuestDiary\数据文件\临时数据\限时赏金任务.txt)
+MOV S10 限时赏金任务
+MOV P18 $SCRIPTPARAM(1)
+#IF
+SMALL P10 1
+#SAY
+    当前已发布{color=yellow <$STR(S10)>}的任务数量：{color=green <$STR(P10)>}\\\\\\\\
+    <color=gray 上一页>  <color=orange 1 ／1>  <color=gray 下一页>    <返回/@toAcceptTaskMenu>
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(2)
+#ACT
+break
+#IF
+RANDOM 1
+#ACT
+MOV P11 $SCRIPTPARAM(2)
+MULT P11 7
+DEC P11 7
+MOV P12 $STR(P11)
+INC P12 6
+MOV P13 $STR(P10)
+CEIL P13 7
+MOV P14 $SCRIPTPARAM(2)
+MOV P15 $STR(P14)
+INC P15 1
+MOV P16 $STR(P14)
+DEC P16 1
+MOV P17 $SCRIPTPARAM(2)
+MULT P17 7
+DEC P17 6
+MOV S11 
+#IF
+EQUAL P15 2
+EQUAL P14 $STR(P13)
+#ACT
+MOV S17 "    <color=gray 上一页>  {color=orange <$STR(P14)> ／<$STR(P13)>>  <color=gray 下一页>    <返回/@toAcceptTaskMenu>"
+GOTO @looklist
+break
+#IF
+SMALL P16 1
+#ACT
+MOV S17 "    <color=gray 上一页>  {color=orange <$STR(P14)> ／<$STR(P13)>>  {下一页/@viewTaskMenu&<$STR(P18)>&<$STR(P15)>}    <返回/@toAcceptTaskMenu>"
+GOTO @looklist
+break
+#IF
+EQUAL P14 $STR(P13)
+#ACT
+MOV S17 "    {上一页/@viewTaskMenu&<$STR(P18)>&<$STR(P16)>}  {color=orange <$STR(P14)> ／<$STR(P13)>>  <color=gray 下一页>    <返回/@toAcceptTaskMenu>"
+GOTO @looklist
+break
+#IF
+RANDOM 1
+#ACT
+MOV S17 "    {上一页/@viewTaskMenu&<$STR(P18)>&<$STR(P16)>}  {color=orange <$STR(P14)> ／<$STR(P13)>>  {下一页/@viewTaskMenu&<$STR(P18)>&<$STR(P15)>}    <返回/@toAcceptTaskMenu>"
+GOTO @looklist
+break
+
+[@looklist]
+#IF
+LARGE P11 $STR(P12)
+#SAY
+    当前已发布{color=yellow <$STR(S10)>}的任务数量：{color=green <$STR(P10)>}\
+<$STR(S11)>
+<$STR(S17)>
+#ACT
+break
+#IF
+RANDOM 1
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\临时数据\<$STR(S10)>.txt S12 $STR(P11)
+#IF
+!EQUAL S12
+#ACT
+MOV S13
+MOV S14 $STR(P17)
+MOV S15 $STR(S12)
+FORMATSTR S16 %3s%3s%2s%s <$STR(S13)>|<$STR(S14)>|<$STR(S13)>|<$STR(S15)>
+INC S11 $STR(S16)
+INC S11 \
+INC P11 1
+INC P17 1
+#ELSEACT
+INC S11 \
+INC P11 1
+INC P17 1
+#IF
+RANDOM 1
+#ACT
+GOTO @looklist
+break
+
+[@viewPrize]
+    <color=green 每位勇士每天可以免费发布10次赏金任务，完成5次赏金>\
+<color=green 任务；>\
+    <color=green 赏金任务分为><color=orange 橙色><color=green 、><color=red 红色><color=green 、><color=white 白色><color=green 三种，对应不同的奖励；>\
+    <color=green 玩家同一时间只能发布或接受一个任务；>\
+    <color=green 多位勇士接受同一个赏金任务时，第一个完成任务的玩家>\
+<color=green 获得奖励。>\\\
+    <color=gray 上一页>  <color=orange 1 ／1>  <color=gray 下一页>    <返回/@main>
+
+[@getFirePrize]
+#IF
+PosInList |<$USERNAME>| ..\QuestDiary\数据文件\临时数据\完成赏金任务.txt S18
+#ACT
+SPLIT $STR(S18) | S19
+MOV S26 $STR(S22)
+MOV S27 $STR(S22)
+ReplaceText S26 经验值
+ReplaceText S27 0000经验值
+CHANGEEXP + $STR(S26)
+CHANGEEXP + $STR(S26)
+DELVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\完成赏金任务.txt
+#ELSEACT
+SENDMSG 5 系统错误...
+break
+#IF
+RANDOM 1
+#SAY
+    恭喜您成功领取了{color=orange <$STR(S27)>.0万经验}的奖励！\
+    额外获得了{color=orange <$STR(S27)>.0万经验}的奖励！\\\\\\\
+    <返回/@main>
+#ACT
+SENDMSG 14 恭喜%s发布的赏金任务已完成，获得<$STR(S27)>.0万经验和<$STR(S27)>.0万经验的奖励!
+#IF
+EQUAL S26 145000000
+#ACT
+ADDVARLIST $USERNAME ..\QuestDiary\数据文件\临时数据\允许赏金特权.txt
+break
+
+[@fireMissionMenu]
+#IF
+CHECKLEVELEX > 39
+#ACT
+MOV S17 |
+INC S17 $USERNAME
+INC S17 |
+#ELSESAY
+  勇士，你的等级未达到40级，无法发布赏金任务！\
+  <离开/@exit>\
+#ELSEACT
+break
+#IF
+CHECKVARLIST $USERNAME ..\QuestDiary\数据文件\临时数据\等待领取玩家.txt
+#SAY
+    恭喜你完成了这次的行动任务，下面是该领取你应得的\
+奖励了。\
+    <领取奖励/@doFinish>\\
+    <返回/@main>
+#ACT
+break
+#IF
+PosInList $STR(S17) ..\QuestDiary\数据文件\临时数据\开启限时任务.txt S18
+#ACT
+SPLIT $STR(S18) | S19
+break
+#SAY
+    您发布的限时赏金任务未完成！\
+<$STR(S25)>\
+    任务完成后，发布人的基础奖励：{color=orange <$STR(S22)>}\
+    根据任务的不同，您还可获得额外奖励选择：\
+    <color=orange 同时可获得额外奖励(装备、海量经验)>\
+    完成该任务的其他勇士获得奖励：{color=orange <$STR(S23)>}\
+    <返回/@main>
+#IF
+PosInList $STR(S17) ..\QuestDiary\数据文件\临时数据\开启赏金任务.txt S18
+#ACT
+SPLIT $STR(S18) | S19
+break
+#SAY
+    您发布的任务未完成！请完成后再发布！\
+<$STR(S25)>\
+    任务完成后，发布人的基础奖励：{color=orange <$STR(S22)>}\
+    任务完成后，发布人的额外奖励：{color=orange <$STR(S22)>}\
+    完成该任务的其他勇士获得奖励：{color=orange <$STR(S23)>}\\
+    <返回/@main>
+#IF
+PosInList $STR(S17) ..\QuestDiary\数据文件\临时数据\完成赏金任务.txt S18
+#ACT
+SPLIT $STR(S18) | S19
+break
+#SAY
+    您发布的任务已经完成！\
+<$STR(S25)>
+    <color=graygolden 任务目的：><$STR(S24)>\
+    任务完成后，发布人的基础奖励：{color=orange <$STR(S22)>}\
+    任务完成后，发布人的额外奖励：{color=orange <$STR(S22)>}\
+    完成该任务的其他勇士获得奖励：{color=orange <$STR(S23)>}\
+    <领取奖励/@getFirePrize>    <返回/@main>
+#IF
+PosInList $STR(S17) ..\QuestDiary\数据文件\临时数据\完成限时任务.txt S18
+#ACT
+SPLIT $STR(S18) | S19
+break
+#SAY
+    您发布的任务已经完成！\
+<$STR(S25)>
+    <color=graygolden 任务目的：><$STR(S24)>\
+    任务完成后，发布人的基础奖励：{color=orange <$STR(S22)>}\
+    任务完成后，您还可获得额外奖励选择：\
+    <color=orange 同时可获得额外奖励(装备、海量经验)>\
+    完成该任务的其他勇士获得奖励：{color=orange <$STR(S23)>}\
+    <领取奖励/@getFirePrize>    <返回/@main>
+#IF
+HasTask 50 55
+#SAY
+    对不起，您接受的任务还未完成！\\\\\\\\
+    <返回/@main>    <离开/@exit>
+#ACT
+break
+#IF
+!EQUAL $Table(SG_Pritime).Tim07 $DATE
+#ACT
+TABLE SG_PRIVITE Hum07 = 10
+Table SG_Pritime Tim07 = $DATE
+#IF
+SMALL $TABLE(SG_PRIVITE).Hum07 1
+#SAY
+对不起，你今天已经发布了<color=green 10>次赏金任务\
+明天再来吧。\\
+<知道了/@exit>
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 0
+#SAY
+    勇士你好，发布<color=yellow 橙色赏金任务>需要<color=green 10个悬赏令>哦！\
+    您发布的任务完成后，可以获得基础奖励：<color=orange 1500000经验值>\
+    根据任务的不同，您还可获得额外奖励选择：\
+<color=orange     同时可获得额外奖励（装备、海量经验值）>\
+    完成您发布任务的勇士可获得：<color=orange 500000经验值>\\
+    <确认发布橙色赏金任务/@doFireMission&0>    <返回/@fireMissionMenu&3>
+#ACT
+MOV D2 10
+MOV D3 1500000
+MOV D4 500000
+MOV D5 0
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\赏金任务列表.txt S90
+SPLIT $STR(S90) | S91
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 1
+#SAY
+    勇士你好，发布<color=yellow 红色赏金任务>需要<color=green 5个悬赏令>哦！\
+    您发布的任务完成后，可以获得基础奖励：<color=orange 750000经验值>\
+    根据任务的不同，您还可获得额外奖励选择：\
+<color=orange     同时可获得额外奖励(装备、海量经验)>\
+    完成您发布任务的勇士可获得：<color=orange 250000经验值>\\
+    <确认发布红色赏金任务/@doFireMission&1>    <返回/@fireMissionMenu&3>
+#ACT
+MOV D2 5
+MOV D3 750000
+MOV D4 250000
+MOV D5 1
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\赏金任务列表.txt S90
+SPLIT $STR(S90) | S91
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 2
+#SAY
+    勇士你好，发布<color=yellow 白色赏金任务>需要<color=green 1个悬赏令>哦！\
+    您发布的任务完成后，可以获得基础奖励：<color=orange 150000经验值>\
+    根据任务的不同，您还可获得额外奖励选择：\
+<color=orange     150000经验值>\
+    完成您发布任务的勇士可获得：<color=orange 50000经验值>\\
+    <确认发布白色赏金任务/@doFireMission&2>    <返回/@fireMissionMenu&3>
+#ACT
+MOV D2 1
+MOV D3 150000
+MOV D4 50000
+MOV D5 2
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\赏金任务列表.txt S90
+SPLIT $STR(S90) | S91
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 3
+#SAY
+    勇士你好，你今天还可发布{color=green <$TABLE(SG_PRIVITE).Hum07>}次赏金任务。\
+            <发布橙色赏金任务/@fireMissionMenu&0>\
+            <发布红色赏金任务/@fireMissionMenu&1>\
+            <发布白色赏金任务/@fireMissionMenu&2>\\\\\
+    <返回/@main>
+#ACT
+break
+
+[@doFireMission]
+#IF
+CHECKITEM 悬赏令 $STR(D2)
+EQUAL $SCRIPTPARAM(2)
+#SAY
+<$STR(S92)>\
+    任务完成后，发布人的基础奖励：{color=orange <$STR(D3)>经验值}\
+    任务完成后，发布人的额外奖励：{color=orange <$STR(D3)>经验值}\
+    完成该任务的其他勇士获得奖励：{color=orange <$STR(D4)>经验值}\
+    对于本次奖励不满意可以选择  <刷新/@doFireMission&2&1>\\
+    {确认发布/@doFire&<$STR(D5)>&<$STR(S91)>&<$STR(D3)>}
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(2) 1
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\赏金任务列表.txt S90
+SPLIT $STR(S90) | S91
+break
+#SAY
+<$STR(S92)>\
+    任务完成后，发布人的基础奖励：{color=orange <$STR(D3)>经验值}\
+    任务完成后，发布人的额外奖励：{color=orange <$STR(D3)>经验值}\
+    完成该任务的其他勇士获得奖励：{color=orange <$STR(D4)>经验值}\
+    对于本次奖励不满意可以选择  <刷新/@doFireMission&2&1>\\
+    {确认发布/@doFire&<$STR(D5)>&<$STR(S91)>&<$STR(D3)>}
+#ELSESAY
+对不起,您的悬赏令不足\\\\\\\\
+<返回/@main>
+
+[@doFire]
+#IF
+PosInList $STR(S91) ..\QuestDiary\数据文件\文本数据\赏金任务编号.txt S10
+#ACT
+SPLIT $STR(S10) | S11
+MOV S14 TIMME
+INC S14 $LONGDATE
+MOV S15 <
+INC S15 $STR(S12)
+FillText S15 31
+INC S15 发布人：
+INC S15 $USERNAME
+INC S15 /@doAcceptTask
+INC S15 &
+INC S15 $SCRIPTPARAM(1)
+INC S15 &
+INC S15 $STR(S11)
+INC S15 &
+INC S15 $STR(S14)
+INC S15 >
+MOV S16 |
+INC S16 $USERNAME
+INC S16 |
+INC S16 $STR(S14)
+INC S16 |
+INC S16 $SCRIPTPARAM(2)
+INC S16 |
+INC S16 $SCRIPTPARAM(3)
+INC S16 经验值|
+INC S16 $STR(D4)
+INC S16 经验值|
+INC S16 $STR(S13)
+INC S16 |
+INC S16 $STR(S92)
+take 悬赏令 $STR(D2)
+ADDVARLIST $STR(S16) ..\QuestDiary\数据文件\临时数据\开启赏金任务.txt
+TABLE SG_PRIVITE Hum07 - 1
+#ELSEACT
+SENDMSG 5 系统错误...
+break
+#IF
+EQUAL D5 0
+#SAY
+    恭喜您成功发布了一个<color=yellow 橙色赏金任务>！\\
+    <返回/@main>
+#ACT
+ADDVARLIST $STR(S15) ..\QuestDiary\数据文件\临时数据\橙色赏金任务.txt
+break
+#IF
+EQUAL D5 1
+#SAY
+    恭喜您成功发布了一个<color=yellow 红色赏金任务>！\\
+    <返回/@main>
+#ACT
+ADDVARLIST $STR(S15) ..\QuestDiary\数据文件\临时数据\红色赏金任务.txt
+break
+#IF
+EQUAL D5 2
+#SAY
+    恭喜您成功发布了一个<color=yellow 白色赏金任务>！\\
+    <返回/@main>
+#ACT
+ADDVARLIST $STR(S15) ..\QuestDiary\数据文件\临时数据\白色赏金任务.txt
+break

@@ -1,0 +1,25 @@
+[@newlianyu]
+{
+
+－－－你确定要进入么？  <进入/@_LB_newenter>   <放弃/@exit>
+
+[@_LB_newenter]
+#IF
+LARGE $TABLE(SG_PRIVITE).Hum03 9
+#ACT
+MAPMOVE MH001
+break
+#IF
+CHECKGAMEGOLD > 0
+#ACT
+GAMEGOLD - 1
+TABLE SG_PRIVITE Hum03 + 3600
+SENDMSG 5 系统已经自动将1元宝为你转换成了1小时炼狱时间
+MAPMOVE MH001 113 89
+break
+#ELSESAY
+　　你的炼狱时间不足，且元宝转换炼狱时间失败，暂时无\
+法进入炼狱，请稍侯再试。\
+　　<离 开/@exit>
+
+}

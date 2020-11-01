@@ -1,0 +1,579 @@
+[@法师封号]
+{
+
+#IF
+checklevel 71
+#ACT
+MOV S6 天狂玄傲魔神
+MOV P0 75
+GOTO @绿色封号
+break
+#IF
+checklevel 70
+CHECKEXP > 1400000000
+#ACT
+MOV S6 天狂玄傲魔神
+MOV P0 74
+GOTO @绿色封号
+break
+#IF
+checklevel 70
+CHECKEXP > 700000000
+#ACT
+MOV S6 天狂玄傲魔神
+MOV P0 73
+GOTO @绿色封号
+break
+#IF
+checklevel 70
+#ACT
+MOV S6 天狂玄傲魔神
+MOV P0 72
+GOTO @绿色封号
+break
+#IF
+checklevel 69
+CHECKEXP > 1400000000
+#ACT
+MOV S6 天狂玄傲法神
+MOV P0 71
+GOTO @绿色封号
+break
+#IF
+checklevel 69
+CHECKEXP > 700000000
+#ACT
+MOV S6 天狂玄傲法神
+MOV P0 70
+GOTO @绿色封号
+break
+#IF
+checklevel 69
+#ACT
+MOV S6 天狂玄傲法神
+MOV P0 69
+GOTO @绿色封号
+break
+#IF
+checklevel 68
+CHECKEXP > 1200000000
+#ACT
+MOV S6 天狂玄傲法神
+MOV P0 68
+GOTO @绿色封号
+break
+#IF
+checklevel 68
+CHECKEXP > 600000000
+#ACT
+MOV S6 天狂玄傲法神
+MOV P0 67
+GOTO @绿色封号
+break
+#IF
+checklevel 68
+#ACT
+MOV S6 天狂玄傲法神
+MOV P0 66
+GOTO @绿色封号
+break
+#IF
+checklevel 67
+CHECKEXP > 1200000000
+#ACT
+MOV S6 天猖玄元法神
+MOV P0 65
+GOTO @绿色封号
+break
+#IF
+checklevel 67
+CHECKEXP > 600000000
+#ACT
+MOV S6 天猖玄元法神
+MOV P0 64
+GOTO @绿色封号
+break
+#IF
+checklevel 67
+#ACT
+MOV S6 天猖玄元法神
+MOV P0 63
+GOTO @绿色封号
+break
+#IF
+checklevel 66
+CHECKEXP > 1000000000
+#ACT
+MOV S6 天猖玄元法神
+MOV P0 62
+GOTO @绿色封号
+break
+#IF
+checklevel 66
+CHECKEXP > 500000000
+#ACT
+MOV S6 天猖玄元法神
+MOV P0 61
+GOTO @绿色封号
+break
+#IF
+checklevel 66
+#ACT
+MOV S6 天猖玄元法神
+MOV P0 60
+GOTO @绿色封号
+break
+#IF
+checklevel 65
+CHECKEXP > 800000000
+#ACT
+MOV S6 天暴玄宗法神
+MOV P0 59
+GOTO @绿色封号
+break
+#IF
+checklevel 65
+CHECKEXP > 400000000
+#ACT
+MOV S6 天暴玄宗法神
+MOV P0 58
+GOTO @绿色封号
+break
+#IF
+checklevel 65
+#ACT
+MOV S6 天暴玄宗法神
+MOV P0 57
+GOTO @绿色封号
+break
+#IF
+checklevel 64
+CHECKEXP > 640000000
+#ACT
+MOV S6 天暴玄宗法神
+MOV P0 56
+GOTO @绿色封号
+break
+#IF
+checklevel 64
+CHECKEXP > 320000000
+#ACT
+MOV S6 天暴玄宗法神
+MOV P0 55
+GOTO @绿色封号
+break
+#IF
+checklevel 64
+#ACT
+MOV S6 天暴玄宗法神
+MOV P0 54
+GOTO @绿色封号
+break
+#IF
+checklevel 63
+CHECKEXP > 560000000
+#ACT
+MOV S6 天魁玄灵法神
+MOV P0 53
+GOTO @绿色封号
+break
+#IF
+checklevel 63
+CHECKEXP > 280000000
+#ACT
+MOV S6 天魁玄灵法神
+MOV P0 52
+GOTO @绿色封号
+break
+#IF
+checklevel 63
+#ACT
+MOV S6 天魁玄灵法神
+MOV P0 51
+GOTO @绿色封号
+break
+#IF
+checklevel 62
+CHECKEXP > 400000000
+#ACT
+MOV S6 天魁玄灵法神
+MOV P0 50
+GOTO @绿色封号
+break
+#IF
+checklevel 62
+CHECKEXP > 200000000
+#ACT
+MOV S6 天魁玄灵法神
+MOV P0 49
+GOTO @绿色封号
+break
+#IF
+checklevel 62
+#ACT
+MOV S6 天魁玄灵法神
+MOV P0 48
+GOTO @绿色封号
+break
+#IF
+checklevel 61
+CHECKEXP > 240000000
+#ACT
+MOV S6 天异玄奥法神
+MOV P0 47
+GOTO @绿色封号
+break
+#IF
+checklevel 61
+CHECKEXP > 120000000
+#ACT
+MOV S6 天异玄奥法神
+MOV P0 46
+GOTO @绿色封号
+break
+#IF
+checklevel 61
+#ACT
+MOV S6 天异玄奥法神
+MOV P0 45
+GOTO @绿色封号
+break
+#IF
+checklevel 60
+CHECKEXP > 180000000
+#ACT
+MOV S6 天异玄奥法神
+MOV P0 44
+GOTO @绿色封号
+break
+#IF
+checklevel 60
+CHECKEXP > 90000000
+#ACT
+MOV S6 天异玄奥法神
+MOV P0 43
+GOTO @绿色封号
+break
+#IF
+checklevel 60
+#ACT
+MOV S6 天异玄奥法神
+MOV P0 42
+GOTO @绿色封号
+break
+#IF
+checklevel 59
+CHECKEXP > 94000000
+#ACT
+MOV S6 天地玄极法神
+MOV P0 41
+GOTO @绿色封号
+break
+#IF
+checklevel 59
+CHECKEXP > 54000000
+#ACT
+MOV S6 天地玄极法神
+MOV P0 40
+GOTO @绿色封号
+break
+#IF
+checklevel 59
+#ACT
+MOV S6 天地玄极法神
+MOV P0 39
+GOTO @绿色封号
+break
+#IF
+checklevel 58
+CHECKEXP > 64000000
+#ACT
+MOV S6 天地玄极法神
+MOV P0 38
+GOTO @绿色封号
+break
+#IF
+checklevel 58
+CHECKEXP > 32000000
+#ACT
+MOV S6 天地玄极法神
+MOV P0 37
+GOTO @绿色封号
+break
+#IF
+checklevel 58
+#ACT
+MOV S6 天地玄极法圣
+MOV P0 36
+GOTO @绿色封号
+break
+#IF
+checklevel 57
+CHECKEXP > 32000000
+#ACT
+MOV S6 天地玄极法王
+MOV P0 35
+GOTO @绿色封号
+break
+#IF
+checklevel 57
+CHECKEXP > 16000000
+#ACT
+MOV S6 天地玄极法宗
+MOV P0 34
+GOTO @绿色封号
+break
+#IF
+checklevel 57
+#ACT
+MOV S6 天地玄极法灵
+MOV P0 33
+GOTO @绿色封号
+break
+#IF
+checklevel 56
+CHECKEXP > 16000000
+#ACT
+MOV S6 天地玄极法魂
+MOV P0 32
+GOTO @绿色封号
+break
+#IF
+checklevel 56
+CHECKEXP > 8000000
+#ACT
+MOV S6 天地玄极法魂
+MOV P0 31
+GOTO @绿色封号
+break
+#IF
+checklevel 56
+#ACT
+MOV S6 天幻法神
+MOV P0 30
+GOTO @绿色封号
+break
+#IF
+checklevel 55
+CHECKEXP > 8000000
+#ACT
+MOV S6 天幻法圣
+MOV P0 29
+GOTO @绿色封号
+break
+#IF
+checklevel 55
+CHECKEXP > 4000000
+#ACT
+MOV S6 天幻法皇
+MOV P0 28
+GOTO @绿色封号
+break
+#IF
+checklevel 55
+#ACT
+MOV S6 天幻法王
+MOV P0 27
+GOTO @绿色封号
+break
+#IF
+checklevel 54
+CHECKEXP > 4000000
+#ACT
+MOV S6 天幻法宗
+MOV P0 26
+GOTO @绿色封号
+break
+#IF
+checklevel 54
+CHECKEXP > 2000000
+#ACT
+MOV S6 天幻法灵
+MOV P0 25
+GOTO @绿色封号
+break
+#IF
+checklevel 54
+#ACT
+MOV S6 天幻法魄
+MOV P0 24
+GOTO @绿色封号
+break
+#IF
+checklevel 53
+CHECKEXP > 2000000
+#ACT
+MOV S6 天幻法魂
+MOV P0 23
+GOTO @绿色封号
+break
+#IF
+checklevel 53
+CHECKEXP > 1000000
+#ACT
+MOV S6 幻神法神
+MOV P0 22
+GOTO @绿色封号
+break
+#IF
+checklevel 53
+#ACT
+MOV S6 幻神法圣
+MOV P0 21
+GOTO @绿色封号
+break
+#IF
+checklevel 52
+CHECKEXP > 800000
+#ACT
+MOV S6 幻神法皇
+MOV P0 20
+GOTO @绿色封号
+break
+#IF
+checklevel 52
+CHECKEXP > 400000
+#ACT
+MOV S6 幻神法王
+MOV P0 19
+GOTO @绿色封号
+break
+#IF
+checklevel 52
+#ACT
+MOV S6 幻神法宗
+MOV P0 18
+GOTO @绿色封号
+break
+#IF
+checklevel 51
+CHECKEXP > 400000
+#ACT
+MOV S6 幻神法灵
+MOV P0 17
+GOTO @绿色封号
+break
+#IF
+checklevel 51
+CHECKEXP > 200000
+#ACT
+MOV S6 幻神法魂
+MOV P0 16
+GOTO @绿色封号
+break
+#IF
+checklevel 51
+#ACT
+MOV S6 幻神法魂
+MOV P0 15
+GOTO @绿色封号
+break
+#IF
+checklevel 50
+CHECKEXP > 300000
+#ACT
+MOV S6 幻魔法神
+MOV P0 14
+GOTO @绿色封号
+break
+#IF
+checklevel 50
+CHECKEXP > 150000
+#ACT
+MOV S6 幻魔法圣
+MOV P0 13
+GOTO @绿色封号
+break
+#IF
+checklevel 50
+#ACT
+MOV S6 幻魔法皇
+MOV P0 12
+GOTO @绿色封号
+break
+#IF
+checklevel 49
+CHECKEXP > 180000
+#ACT
+MOV S6 幻魔法王
+MOV P0 11
+GOTO @绿色封号
+break
+#IF
+checklevel 49
+CHECKEXP > 90000
+#ACT
+MOV S6 幻魔法宗
+MOV P0 10
+GOTO @绿色封号
+break
+#IF
+checklevel 49
+#ACT
+MOV S6 幻魔法灵
+MOV P0 9
+GOTO @绿色封号
+break
+#IF
+checklevel 48
+CHECKEXP > 80000
+#ACT
+MOV S6 幻魔法魄
+MOV P0 8
+GOTO @绿色封号
+break
+#IF
+checklevel 48
+CHECKEXP > 40000
+#ACT
+MOV S6 幻魔法魂
+MOV P0 7
+GOTO @绿色封号
+break
+#IF
+checklevel 48
+#ACT
+MOV S6 法神
+MOV P0 6
+GOTO @绿色封号
+break
+#IF
+checklevel 47
+CHECKEXP > 60000
+#ACT
+MOV S6 法王
+MOV P0 5
+GOTO @绿色封号
+break
+#IF
+checklevel 47
+CHECKEXP > 30000
+#ACT
+MOV S6 法宗
+MOV P0 4
+GOTO @绿色封号
+break
+#IF
+checklevel 47
+#ACT
+MOV S6 法灵
+MOV P0 3
+GOTO @绿色封号
+break
+#IF
+checklevel 46
+CHECKEXP > 40000
+#ACT
+MOV S6 法魂
+MOV P0 2
+GOTO @绿色封号
+break
+#IF
+checklevel 46
+#ACT
+MOV S6 法魂
+MOV P0 1
+GOTO @绿色封号
+break
+
+}

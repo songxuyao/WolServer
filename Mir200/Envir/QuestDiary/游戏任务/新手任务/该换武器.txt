@@ -1,0 +1,65 @@
+[@中州_武器]
+{
+
+#IF
+EQUAL $Task(19) 1
+#SAY
+可以完成的任务：\
+<新手任务--该换武器/@_RW_fulwuTaskDesp40>\\
+<离开/@exit>
+#ACT
+break
+#ELSESAY
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+[@_RW_fulwuTaskDesp40]
+    这是我免费送给你最后一把武器了。\
+    以后如果想要更好的，就要自己去打魔兵爆了。\\
+    <谢谢/@_RW_fulwufilTask305>                <离开/@exit>
+
+[@_RW_fulwufilTask305]
+#IF
+EQUAL $Task(19) 1
+#SAY
+    当然，如果有人将一些好武器卖给我的话，我也会给你\
+留着的，不过别忘了带钱过来。\
+    去找书店掌柜吧，他会把你现在可以学的新技能书全部\
+送你的。\\
+    <离开/@exit>\
+#ACT
+#ELSEACT
+break
+#IF
+checkjob warrior
+#ACT
+EndTask 19
+BINDGOLD + 5000
+CHANGEEXP + 50000
+give 修罗战斧 1
+AddTask 20
+SENDMSG 5 你成功增加了5000绑定金币。
+break
+#IF
+checkjob wizard
+#ACT
+EndTask 19
+BINDGOLD + 5000
+CHANGEEXP + 50000
+give 狼牙棒 1
+AddTask 20
+SENDMSG 5 你成功增加了5000绑定金币。
+break
+#IF
+checkjob taoist
+#ACT
+EndTask 19
+BINDGOLD + 5000
+CHANGEEXP + 50000
+give 降魔剑 1
+AddTask 20
+SENDMSG 5 你成功增加了5000绑定金币。
+break
+
+
+}

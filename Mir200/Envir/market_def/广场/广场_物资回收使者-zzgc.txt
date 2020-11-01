@@ -1,0 +1,97 @@
+[@main]
+    战争越来越激烈了，前线需要更多的物资，我奉命在此\
+收购战争物资，希望勇士们踊跃参与，将有丰厚的奖励回报！\
+    <color=red 成功兑换绑定元宝后，可在商城内购买任意物品！>\\\\\\
+    <上交物资/@gohuishou>    <可回收物资列表/@wuqi&1>
+
+[@gohuishou]
+#IF
+RANDOM 1
+#SAY
+    请放入需要回收的物资:\
+#ACT
+ShowSpotDlg 6 请将你的物品放上来： @givewuzi
+break
+
+[@givewuzi]
+#IF
+RANDOM 1
+#ACT
+MOV S10 |
+INC S10 $PARAM(0)
+INC S10 |
+#IF
+PosInList $STR(S10) ..\QuestDiary\数据文件\文本数据\回收物资列表.txt S11
+#ACT
+GETVALIDSTR $STR(S11) | S12 S13
+#ELSESAY
+    您这件东西目前不是我需要的，您还是换一件吧！\\\\\\\\
+    <返回/@gohuishou>
+#ELSEACT
+break
+#IF
+CHECKITEMID $PARAM(1)
+#SAY
+恭喜您上交<$STR(S12)>获得<$STR(S13)>绑定元宝\\\\\\\\
+<继续上交/@gohuishou>    <返回/@main>\
+#ACT
+TAKEM $PARAM(1)
+BINDGAMEGOLD + $STR(S13)
+SENDMSG 5 您成功增加了<$STR(S13)>.00绑定元宝。
+break
+
+[@wuqi]
+#IF
+EQUAL $SCRIPTPARAM(1) 1
+#SAY
+<color=orange 目前回收的武器装备为:>\
+<color=red 1个绑定元宝区:>\
+<color=green 圣战头盔	 圣战项链  圣战手镯	 圣战戒指  圣战靴子  圣战腰带	>\
+<color=green 法神头盔	 法神项链  法神手镯	 法神戒指  法神靴子  法神腰带>\
+<color=green 天尊头盔	 天尊项链  天尊手镯	 天尊戒指  天尊道靴  天尊腰带>\
+<color=green 天魔战甲	 圣战战甲  法神披风	 法神羽衣  天尊道袍  天师道袍>\
+<color=red 3个绑定元宝区:>\
+<color=green 神武头盔	 神武项链  神武手镯	 神武戒指  神武战靴  神武腰带	>\
+       <color=gray 上一页>    <下一页/@wuqi&2>    <返回/@main>\
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 2
+#SAY
+<color=green 幻魔头盔  幻魔项链  幻魔手镯	 幻魔戒指  幻魔法靴  幻魔腰带>\
+<color=green 天玄头盔  天玄项链  天玄手镯	 天玄戒指  天玄道靴  天玄腰带>\
+<color=green 神武战甲  神武战袍  幻魔披风	 幻魔羽衣  天玄道袍  天玄道衣>\
+<color=red 10个绑定元宝区:>\
+<color=green 战神头盔	 战神项链  战神手镯	 战神戒指  战神靴子  战神腰带	>\
+<color=green 魔神头盔	 魔神项链  魔神手镯	 魔神戒指  魔神靴子  魔神腰带>\
+<color=green 道神头盔  道神项链  道神手镯	 道神戒指  道神靴子  道神腰带>\
+<color=green 裁决     骨玉    无极    龙纹    >\
+       <上一页/@wuqi&1>    <下一页/@wuqi&3>    <返回/@main>\
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 3
+#SAY
+<color=red 50个绑定元宝区:>\
+<color=green 血煞头盔	 血煞项链  血煞手镯  血煞戒指  血煞靴子	 血煞腰带	>\
+<color=green 魔雷头盔	 魔雷项链  魔雷手镯	 魔雷戒指  魔雷靴子  魔雷腰带>\
+<color=green 幽泉头盔	 幽泉项链  幽泉手镯	 幽泉戒指  幽泉靴子  幽泉腰带>\
+<color=green 雷霆怒斩	 龙牙利刃  逍遥无极扇	>\\
+<color=red 100个绑定元宝区:>\
+<color=green 蟠龙傲天头盔	 蟠龙傲天项链  蟠龙傲天手镯	 蟠龙傲天戒指	>\
+       <上一页/@wuqi&2>    <下一页/@wuqi&4>    <返回/@main>\
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 4
+#SAY
+<color=green 蟠龙傲天靴子	 蟠龙傲天腰带	>\
+<color=green 蟠龙幻天头盔	 蟠龙幻天项链  蟠龙幻天手镯  蟠龙幻天戒指	>\
+<color=green 蟠龙幻天靴子  蟠龙幻天腰带>\
+<color=green 蟠龙玄天头盔	 蟠龙玄天项链  蟠龙玄天手镯  蟠龙玄天戒指	>\
+<color=green 蟠龙玄天靴子  蟠龙玄天腰带>\\
+<color=red 15个绑定元宝区:>\
+<color=green 雷裂刀	血饮	霹雳法杖	道玄剑>\
+       <上一页/@wuqi&3>    <color=gray 下一页>    <返回/@main>\
+#ACT
+break

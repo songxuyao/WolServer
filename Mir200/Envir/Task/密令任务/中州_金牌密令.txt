@@ -1,0 +1,10 @@
+[setup]
+stepcount = 3
+title = 金牌密令任务
+ID = 46
+stepaim1 = 去<中州/@@goplace 0 356,331>杀10只刀犬 <color=green [传]/@@flyto 49 0 356 331>
+stepaim2 = 还要杀<$TASKVAL(46).I0>只<刀犬/@@goplace 0 356,331>
+stepaim3 = 任务完成！去找<赏金猎人/@@goto 0 赏金猎人 464,214> <color=green [传]/@@flyto 46 0 464 214>
+stepDESC1 = <color=0Xddaa55 任务奖励：>\　　<COLOR=GREEN 750万经验。>\<color=0Xddaa55 任务介绍：>\　　这次你要完成的任务是去中州消灭10只刀犬。\　　打败妖魔后，别忘记到我这里来完成任务并领取奖励。
+stepDESC2 = <color=0Xddaa55 任务奖励：>\　　<COLOR=GREEN 750万经验。>\<color=0Xddaa55 任务介绍：>\　　你还要消灭中州的<$TASKVAL(46).I0>只刀犬。
+stepDESC3 = <color=0Xddaa55 任务奖励：>\　　<COLOR=GREEN 750万经验。>\<color=0Xddaa55 任务介绍：>\　　你成功完成了金牌密令任务。请回中州<赏金猎人/@@goto 0 赏金猎人 464,214>交任务\吧。

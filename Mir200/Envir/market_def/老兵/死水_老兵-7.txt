@@ -1,0 +1,49 @@
+[@main]
+这差事真无聊，天天站在这里风吹雨淋，你找我有什么事？\\
+<想快速到达其他地区/@main1>    <记录回城点/@_LB_homePos>    <挑战炼狱/@_LB_newlianyu>\
+<充值游戏时间/@_LB_toplaytime>          <充值元宝/@_LB_throwmoney>\
+<可接任务/@_RW_entry>\
+
+[@_RW_entry]
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+[@main1]
+这是国王为了对抗邪恶力量而特别开辟的骑兵驿道，能够\
+以最快的速度帮助你往返于各个地区 。不过为此你必须付\
+出一些代价做为使用费用。你确定要使用这条驿道吗？\\
+<去中州王城附近/@gogo0>\
+
+[@gogo0]
+要去中州王城附近吗？\
+1500金币就可以了，没有的话就自己走着去吧。\\
+<付钱/@gogo0a>\
+<没钱/@exit>
+
+[@gogo0a]
+#IF
+CHECKBINDGOLD > 1499
+#ACT
+BINDGOLD - 1500
+MAPMOVE 0 560 314
+break
+#IF
+CHECKGOLD 1500
+#ACT
+TAKE 金币 1500
+MAPMOVE 0 560 314
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@_LB_homePos]
+#CALL [\商人\记录回城.txt] @homePos
+
+[@_LB_throwmoney]
+#CALL [\商人\充值元宝.txt] @throwmoney
+
+[@_LB_toplaytime]
+#CALL [\商人\充值元宝.txt] @oplaytime
+
+[@_LB_newlianyu]
+#CALL [\商人\挑战炼狱.txt] @newlianyu

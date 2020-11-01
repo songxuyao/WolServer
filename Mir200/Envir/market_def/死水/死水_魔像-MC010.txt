@@ -1,0 +1,73 @@
+[@main]
+#IF
+CHECKITEM 魔魂令牌 1
+EQUAL A11 $GUILDNAME
+#SAY
+大门将为奉还令牌者敞开。\\
+<进入魔殿/@entereviltemple>
+#ACT
+MOV G3 0
+MOV G4 2
+MOV I3 6
+MOV P1 $LONGDATE
+MOV P2 $STR(I2)
+DEC P1 $STR(P2)
+TAKE 魔魂令牌 1
+ADDGUILDLIST ..\QuestDiary\数据文件\临时数据\铁血魔城行会.txt
+SENDMSG 0 (*)<$GUILDNAME>行会的<$USERNAME>已经顺利将“魔魂令牌”交给魔像。<$USERNAME>为<$GUILDNAME>行会赢得了一天随意进入魔殿的权利，恭喜他们！
+SENDMSG 0 (*)今天的攻城战已结束，五分钟后魔城将恢复正常。
+GOTO @铁血排名
+break
+#ELSESAY
+持有令牌者，你是否选择进入魔殿？\
+<进入魔殿/@entereviltemple>\
+<离开这里/@flym010>\
+
+[@entereviltemple]
+#IF
+CHECKGUILDLIST ..\QuestDiary\数据文件\临时数据\铁血魔城行会.txt
+#ACT
+MAPMOVE MC009 23 112
+break
+#ELSESAY
+退开！你无权进入魔殿！\
+<离开/@exit>\
+
+[@flym010]
+#IF
+RANDOM 1
+#ACT
+MAPMOVE 7 61 38
+break
+
+[@铁血排名]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV P10 $STR(P1)
+MOV S10 |
+INC S10 $GUILDNAME
+INC S10 |
+#IF
+!PosInList $STR(S10) ..\QuestDiary\数据文件\临时数据\铁血魔城排名.txt S11
+#ACT
+INC S10 $GUILD.CHIEF
+INC S10 |
+INC S10 $STR(P10)
+ADDVARLIST $STR(S10) ..\QuestDiary\数据文件\临时数据\铁血魔城排名.txt
+break
+#ELSEACT
+#IF
+CHECKLEVELEX > 0
+#ACT
+DELVARLIST $STR(S11) ..\QuestDiary\数据文件\临时数据\铁血魔城排名.txt
+GETVALIDSTR $STR(S11) | S12 S13
+GETVALIDSTR $STR(S13) | S13 P11
+#IF
+SMALL P10 $STR(P11)
+#ACT
+INC S10 $GUILD.CHIEF
+INC S10 |
+INC S10 $STR(P10)
+ADDVARLIST $STR(S10) ..\QuestDiary\数据文件\临时数据\铁血魔城排名.txt
+break

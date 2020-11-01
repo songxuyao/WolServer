@@ -1,0 +1,69 @@
+[@main]
+#IF
+CheckUserGap > 2
+#ACT
+break
+#IF
+RANDOM 1
+#ACT
+MOVR P0 12
+#IF
+EQUAL P0 0
+#ACT
+MAP S016 
+break
+#IF
+EQUAL P0 1
+#ACT
+MAP J001
+break
+#IF
+EQUAL P0 2
+#ACT
+MAP J009
+break
+#IF
+EQUAL P0 3
+#ACT
+MAP H073
+break
+#IF
+EQUAL P0 4
+#ACT
+MAP M018
+break
+#IF
+EQUAL P0 5
+#ACT
+MAP M004
+break
+#IF
+EQUAL P0 6
+#ACT
+MAP M008
+break
+#IF
+EQUAL P0 7
+#ACT
+MAP M024
+break
+#IF
+EQUAL P0 8
+#ACT
+MAP S017
+break
+#IF
+EQUAL P0 9
+#ACT
+MAP S022
+break
+#IF
+EQUAL P0 10
+#ACT
+MAP S016 
+break
+#IF
+EQUAL P0 11
+#ACT
+MAP J006
+break

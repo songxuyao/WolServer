@@ -1,0 +1,79 @@
+[@中州_书店]
+{
+
+#IF
+EQUAL $Task(20) 1
+#SAY
+可以完成的任务：\
+<新手任务--学习最新的技能/@_RW_fulsdskilTaskDesp>\\
+<离开/@exit>
+#ACT
+break
+#ELSESAY
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+
+[@_RW_fulsdskilTaskDesp]
+    这是我免费送给你最后一次技能了。\
+    以后如果到了等级，可以学习新技能了，就要自己去打\
+魔兵爆技能书，或者是直接跟我买了。\\
+    <谢谢/@_RW_fulskfilTask305>                <离开/@exit>
+
+
+[@_RW_fulskfilTask305]
+#IF
+EQUAL $Task(20) 1
+#SAY
+    去找药店掌柜吧，跟他要一些回复效果更好的药品。\
+    你新的历练马上就要开始了，不做好准备怎么行呢。\
+    <离开/@exit>\
+#ACT
+#ELSESAY
+您当前没有可以接的任务。\\
+<离开/@exit>
+#ELSEACT
+break
+#IF
+checkjob warrior
+#ACT
+EndTask 20
+BINDGOLD + 5000
+CHANGEEXP + 50000
+GIVE 护身真气 1
+GIVE 刺杀剑术 1
+GIVE 抱月刀 1
+GIVE 半月弯刀 1
+SENDMSG 5 你成功增加了5000绑定金币。
+AddTask 21
+break
+#IF
+checkjob wizard
+#ACT
+EndTask 20
+BINDGOLD + 5000
+CHANGEEXP + 50000
+GIVE 雷电术 1
+GIVE 瞬间移动 1
+GIVE 火炎刀 1
+GIVE 风火轮 1
+GIVE 爆裂火焰 1
+SENDMSG 5 你成功增加了5000绑定金币。
+AddTask 21
+break
+#IF
+checkjob taoist
+#ACT
+EndTask 20
+BINDGOLD + 5000
+CHANGEEXP + 50000
+GIVE 灵魂道符 1
+GIVE 骷髅召唤术 1
+GIVE 赶尸 1
+GIVE 隐身术 1
+GIVE 替身法符 1
+SENDMSG 5 你成功增加了5000绑定金币。
+AddTask 21
+break
+
+}

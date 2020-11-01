@@ -1,0 +1,66 @@
+[@main]
+#IF
+CHECKPKPOINT 2
+#SAY
+红名是不是很麻烦？卫士不让你进城吧。\
+我可以帮你用声望清洗罪孽,不过需要花点钱，\
+10万金币应该就可以搞定了。\\
+<查看赎罪方法/@ask>\
+<不用/@exit>
+#ELSESAY
+我在这里帮助那些愿意赎罪的恶人，\
+洗脱罪名后就可以在城里自由进出。\
+记住——赎罪的前提是要有声望值。\\
+<关闭/@exit>
+
+[@ask]
+很简单，花费1点声望值扣除5点PK值。\
+<查看现在有多少PK值/@check>\
+<愿意用声望赎罪/@change>\
+<我再考虑考虑/@exit>
+
+[@change]
+好！那你准备花费多少声望来清洗罪孽？\
+别忘了还要10万金币。\\
+<1点/@g&1>\
+<2点/@g&2>\
+<5点/@g&5>\
+<10点/@g&10>\
+<算了/@exit>
+
+[@g] TRUE
+#IF
+random 1
+#ACT
+MOV P0 $SCRIPTPARAM(1)
+DEC P0 1
+#IF
+CHECKCREDITPOINT > $STR(P0)
+checkgold 100000
+#ACT
+INC P0 1
+CREDITPOINT - $STR(P0)
+take 金币 100000
+MULT P0 5
+CHANGEPKPOINT - $STR(P0)
+close
+#ELSESAY
+你的声望或者金币不够，等够了再来吧。\\
+<走了/@exit>
+
+[@check]
+给我5000金币就告诉你有多少PK值。\\
+<给钱/@talkpk>\
+<不给/@exit>
+
+[@talkpk]
+#IF
+checkgold 5000
+#ACT
+take 金币 5000
+#SAY
+你现在有<$PKPOINT>点PK值。\\
+<关闭/@exit>
+#ELSESAY
+你没钱啊，别耍我!\\
+<返回/@main>

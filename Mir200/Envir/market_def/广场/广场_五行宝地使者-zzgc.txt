@@ -1,0 +1,67 @@
+[@main]
+  <color=ggreen 五行宝地周六周日><color=green 12点-24点><color=ggreen 开放，凭借五行宝地凭证即可>\
+<color=ggreen 进入。每次进入可在五行宝地内停留><color=green 1小时。> \
+  <color=orange 五行宝地内的怪物会暴落大量奇珍异宝，><color=green 各种材料和高级技>\
+<color=green 能书、顶级装备。>\\\\\
+  <进入五行宝地/@goin>    <购买五行宝地凭证/@buypingzheng>     <离开/@exit>\
+
+[@goin]
+#IF
+CHECKLEVELEX > 59
+#ACT
+MOV P10 0
+#ELSESAY
+  你的等级未达到60级，无法进入此地图。\\\\\\\\
+  <离开/@exit>\
+#ELSEACT
+break
+#IF
+EQUAL $DATE.WEEK 5
+HOUR 12 23
+#ACT
+MOV P10 1
+#IF
+EQUAL $DATE.WEEK 5
+HOUR 12 23
+#ACT
+MOV P10 1
+#IF
+SMALL P10 1
+#SAY
+    五行宝地开放时间为周六及周日12点-24点。\
+    请在规定时间内再来。\\\\\\\
+    <好的/@main>\
+#ACT
+break
+#IF
+CHECKITEM 五行宝地凭证 1
+#ACT
+MAPMOVE WUXING 75 93
+TAKE 五行宝地凭证 1
+break
+#ELSESAY
+    对不起，您的五行宝地凭证不足。\
+    <返回/@main>\
+#ELSEACT
+break
+
+[@buypingzheng]
+  <color=ggreen 五行宝地凭证是进入五行宝地必需物品。每个五行宝地凭>\
+<color=ggreen 证仅可进入一次五行宝地。>\
+  <color=orange 购买1个五行宝地凭证需要消耗><color=green 2元宝。>\
+  <确认购买/@goumai>\
+  <返回/@main>\
+
+[@goumai]
+#IF
+CHECKGAMEGOLD > 1
+#SAY
+    您购买了<color=green 1个五行宝地凭证>！\
+    <返回/@main>
+#ACT
+GAMEGOLD - 2
+GIVE 五行宝地凭证 1
+break
+#ELSESAY
+    对不起，你的元宝不足2个。\
+    <谢谢提醒/@exit>

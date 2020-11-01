@@ -1,0 +1,73 @@
+[@main]
+这差事真无聊，天天站在这里风吹雨淋，你找我有什么事？\
+<可接任务/@_RW_entry>\
+<想快速到达其他地区/@main1>    <挑战炼狱/@_LB_newlianyu> \
+<充值游戏时间/@_LB_toplaytime>          <充值元宝/@_LB_throwmoney>\
+
+[@_RW_entry]
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+[@main1]
+这是国王为了对抗邪恶力量而特别开辟的骑兵驿道，能够\
+以最快的速度帮助你往返于各个地区 。不过为此你必须付\
+出一些代价做为使用费用。你确定要使用这条驿道吗？\
+<去将军坟东/@h081>\
+<去将军坟/@h071>\
+<关闭/@exit>\
+
+[@h081]
+要去将军坟东吗？\
+600金币就可以了，没有的话就自己走着去吧。\\
+<付钱/@h081a>\
+<没钱/@exit>
+
+[@h081a]
+#IF
+CHECKBINDGOLD > 599
+#ACT
+BINDGOLD - 600
+MAPMOVE 0 773 399
+break
+#IF
+CHECKGOLD 600
+#ACT
+TAKE 金币 600
+MAPMOVE 0 773 399
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@h071]
+要去将军坟吗？\
+800金币就可以了，没有的话就自己走着去吧。\\
+<付钱/@h071a>\
+<没钱/@exit>
+
+[@h071a]
+#IF
+CHECKBINDGOLD > 799
+#ACT
+BINDGOLD - 800
+MAPMOVE 0 33 352
+break
+#IF
+CHECKGOLD 800
+#ACT
+TAKE 金币 800
+MAPMOVE 0 33 352
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@_LB_baishou]
+#CALL [\商人\挑战百兽.txt] @baishou
+
+[@_LB_toplaytime]
+#CALL [\商人\充值元宝.txt] @oplaytime
+
+[@_LB_throwmoney]
+#CALL [\商人\充值元宝.txt] @throwmoney
+
+[@_LB_newlianyu]
+#CALL [\商人\挑战炼狱.txt] @newlianyu

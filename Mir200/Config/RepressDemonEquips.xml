@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="gb2312"?>
+<RepressDemonEquips maxLevel="15" desc="1、镇魔的目标是装备位，更换装备不会影响镇魔属性/2、镇魔失败有概率降低镇魔等级，加入护灵石可以保护镇魔等级不会降低/3、全身镇魔可以触发镇魔套装属性，最低的镇魔等级影响当前镇魔套装等级/4、身上穿戴的装备影响镇魔套装属性，穿戴装备等级提高可以额外提高镇魔套装的效果">
+  <equipment pos="0">
+  <!-- 衣服 增加血量上限-->
+    <level value="1" prop_value_0="50" prop_value_1="20" prop_value_2="30" material_num0="0" material_num1="5" needgold="100000" successrate="15" reducerate="7" addrate="30"/>
+    <level value="2" prop_value_0="100" prop_value_1="40" prop_value_2="60" material_num0="0" material_num1="10" needgold="200000" successrate="15" reducerate="7" addrate="30" />
+    <level value="3" prop_value_0="150" prop_value_1="60" prop_value_2="90" material_num0="0" material_num1="15" needgold="300000" successrate="15" reducerate="7" addrate="25" />
+    <level value="4" prop_value_0="200" prop_value_1="80" prop_value_2="120" material_num0="0" material_num1="20" needgold="400000" successrate="15" reducerate="6" addrate="25" />
+    <level value="5" prop_value_0="250" prop_value_1="100" prop_value_2="150" material_num0="25" material_num1="25" needgold="500000" successrate="10" reducerate="6" addrate="20" />
+    <level value="6" prop_value_0="300" prop_value_1="120" prop_value_2="180" material_num0="30" material_num1="30" needgold="600000" successrate="10" reducerate="6" addrate="20" />
+    <level value="7" prop_value_0="350" prop_value_1="140" prop_value_2="210" material_num0="35" material_num1="35" needgold="700000" successrate="10" reducerate="5" addrate="10" />
+    <level value="8" prop_value_0="400" prop_value_1="160" prop_value_2="240" material_num0="40" material_num1="40" needgold="800000" successrate="10" reducerate="5" addrate="10" />
+    <level value="9" prop_value_0="450" prop_value_1="180" prop_value_2="270" material_num0="45" material_num1="45" needgold="900000" successrate="10" reducerate="5" addrate="10" />
+    <level value="10" prop_value_0="500" prop_value_1="200" prop_value_2="300" material_num0="50" material_num1="50" needgold="1000000" successrate="10" reducerate="4" addrate="10" />
+    <level value="11" prop_value_0="550" prop_value_1="220" prop_value_2="330" material_num0="55" material_num1="55" needgold="1100000" successrate="10" reducerate="4" addrate="10" />
+    <level value="12" prop_value_0="600" prop_value_1="240" prop_value_2="360" material_num0="60" material_num1="60" needgold="1200000" successrate="10" reducerate="4" addrate="10" />
+    <level value="13" prop_value_0="650" prop_value_1="260" prop_value_2="390" material_num0="65" material_num1="65" needgold="1300000" successrate="10" reducerate="3" addrate="10" />
+    <level value="14" prop_value_0="700" prop_value_1="280" prop_value_2="420" material_num0="70" material_num1="70" needgold="1400000" successrate="10" reducerate="3" addrate="10" />
+    <level value="15" prop_value_0="750" prop_value_1="300" prop_value_2="450" material_num0="75" material_num1="75" needgold="1500000" successrate="10" reducerate="3" addrate="10" />
+  </equipment>
+  <equipment pos="1">
+  <!-- 武器 增加职业攻击-->
+    <level value="1" prop_value_0="0" prop_value_1="100" material_num0="0" material_num1="5" needgold="100000" successrate="25" reducerate="7" addrate="30" />
+    <level value="2" prop_value_0="0" prop_value_1="200" material_num0="0" material_num1="10" needgold="200000" successrate="20" reducerate="7" addrate="30" />
+    <level value="3" prop_value_0="1" prop_value_1="300" material_num0="0" material_num1="15" needgold="300000" successrate="15" reducerate="7" addrate="25" />
+    <level value="4" prop_value_0="1" prop_value_1="400" material_num0="0" material_num1="20" needgold="400000" successrate="15" reducerate="6" addrate="25" />
+    <level value="5" prop_value_0="2" prop_value_1="5" material_num0="25" material_num1="25" needgold="500000" successrate="10" reducerate="6" addrate="20" />
+    <level value="6" prop_value_0="2" prop_value_1="6" material_num0="30" material_num1="30" needgold="600000" successrate="10" reducerate="6" addrate="20" />
+    <level value="7" prop_value_0="3" prop_value_1="7" material_num0="35" material_num1="35" needgold="700000" successrate="10" reducerate="5" addrate="10" />
+    <level value="8" prop_value_0="3" prop_value_1="8" material_num0="40" material_num1="40" needgold="800000" successrate="10" reducerate="5" addrate="10" />
+    <level value="9" prop_value_0="4" prop_value_1="9" material_num0="45" material_num1="45" needgold="900000" successrate="10" reducerate="5" addrate="10" />
+    <level value="10" prop_value_0="4" prop_value_1="10" material_num0="50" material_num1="50" needgold="1000000" successrate="10" reducerate="4" addrate="10" />
+    <level value="11" prop_value_0="5" prop_value_1="11" material_num0="55" material_num1="55" needgold="1100000" successrate="10" reducerate="4" addrate="10" />
+    <level value="12" prop_value_0="5" prop_value_1="12" material_num0="60" material_num1="60" needgold="1200000" successrate="10" reducerate="4" addrate="10" />
+    <level value="13" prop_value_0="6" prop_value_1="13" material_num0="65" material_num1="65" needgold="1300000" successrate="10" reducerate="3" addrate="10" />
+    <level value="14" prop_value_0="6" prop_value_1="14" material_num0="70" material_num1="70" needgold="1400000" successrate="10" reducerate="3" addrate="10" />
+    <level value="15" prop_value_0="7" prop_value_1="15" material_num0="75" material_num1="75" needgold="1500000" successrate="10" reducerate="3" addrate="10" />
+  </equipment>
+  <equipment pos="3">
+  <!-- 项链 增加暴击等级-->
+    <level value="1" prop_value_0="8" prop_value_1="0" material_num0="0" material_num1="5" needgold="100000" successrate="25" reducerate="7" addrate="30" />
+    <level value="2" prop_value_0="16" prop_value_1="0" material_num0="0" material_num1="10" needgold="200000" successrate="20" reducerate="7" addrate="30" />
+    <level value="3" prop_value_0="24" prop_value_1="0" material_num0="0" material_num1="15" needgold="300000" successrate="15" reducerate="7" addrate="25" />
+    <level value="4" prop_value_0="32" prop_value_1="0" material_num0="0" material_num1="20" needgold="400000" successrate="15" reducerate="6" addrate="25" />
+    <level value="5" prop_value_0="40" prop_value_1="0" material_num0="25" material_num1="25" needgold="500000" successrate="10" reducerate="6" addrate="20" />
+    <level value="6" prop_value_0="48" prop_value_1="0" material_num0="30" material_num1="30" needgold="600000" successrate="10" reducerate="6" addrate="20" />
+    <level value="7" prop_value_0="56" prop_value_1="0" material_num0="35" material_num1="35" needgold="700000" successrate="10" reducerate="5" addrate="10" />
+    <level value="8" prop_value_0="64" prop_value_1="0" material_num0="40" material_num1="40" needgold="800000" successrate="10" reducerate="5" addrate="10" />
+    <level value="9" prop_value_0="72" prop_value_1="0" material_num0="45" material_num1="45" needgold="900000" successrate="10" reducerate="5" addrate="10" />
+    <level value="10" prop_value_0="80" prop_value_1="0" material_num0="50" material_num1="50" needgold="1000000" successrate="10" reducerate="4" addrate="10" />
+    <level value="11" prop_value_0="88" prop_value_1="0" material_num0="55" material_num1="55" needgold="1100000" successrate="10" reducerate="4" addrate="10" />
+    <level value="12" prop_value_0="96" prop_value_1="0" material_num0="60" material_num1="60" needgold="1200000" successrate="10" reducerate="4" addrate="10" />
+    <level value="13" prop_value_0="104" prop_value_1="0" material_num0="65" material_num1="65" needgold="1300000" successrate="10" reducerate="3" addrate="10" />
+    <level value="14" prop_value_0="112" prop_value_1="0" material_num0="70" material_num1="70" needgold="1400000" successrate="10" reducerate="3" addrate="10" />
+    <level value="15" prop_value_0="120" prop_value_1="0" material_num0="75" material_num1="75" needgold="1500000" successrate="10" reducerate="3" addrate="10" />
+  </equipment>
+  <equipment pos="4">
+  <!-- 头盔 增加血量上限-->
+    <level value="1" prop_value_0="50" prop_value_1="20" prop_value_2="30" material_num0="0" material_num1="5" needgold="100000" successrate="15" reducerate="7" addrate="30"/>
+    <level value="2" prop_value_0="100" prop_value_1="40" prop_value_2="60" material_num0="0" material_num1="10" needgold="200000" successrate="15" reducerate="7" addrate="30" />
+    <level value="3" prop_value_0="150" prop_value_1="60" prop_value_2="90" material_num0="0" material_num1="15" needgold="300000" successrate="15" reducerate="7" addrate="25" />
+    <level value="4" prop_value_0="200" prop_value_1="80" prop_value_2="120" material_num0="0" material_num1="20" needgold="400000" successrate="15" reducerate="6" addrate="25" />
+    <level value="5" prop_value_0="250" prop_value_1="100" prop_value_2="150" material_num0="25" material_num1="25" needgold="500000" successrate="10" reducerate="6" addrate="20" />
+    <level value="6" prop_value_0="300" prop_value_1="120" prop_value_2="180" material_num0="30" material_num1="30" needgold="600000" successrate="10" reducerate="6" addrate="20" />
+    <level value="7" prop_value_0="350" prop_value_1="140" prop_value_2="210" material_num0="35" material_num1="35" needgold="700000" successrate="10" reducerate="5" addrate="10" />
+    <level value="8" prop_value_0="400" prop_value_1="160" prop_value_2="240" material_num0="40" material_num1="40" needgold="800000" successrate="10" reducerate="5" addrate="10" />
+    <level value="9" prop_value_0="450" prop_value_1="180" prop_value_2="270" material_num0="45" material_num1="45" needgold="900000" successrate="10" reducerate="5" addrate="10" />
+    <level value="10" prop_value_0="500" prop_value_1="200" prop_value_2="300" material_num0="50" material_num1="50" needgold="1000000" successrate="10" reducerate="4" addrate="10" />
+    <level value="11" prop_value_0="550" prop_value_1="220" prop_value_2="330" material_num0="55" material_num1="55" needgold="1100000" successrate="10" reducerate="4" addrate="10" />
+    <level value="12" prop_value_0="600" prop_value_1="240" prop_value_2="360" material_num0="60" material_num1="60" needgold="1200000" successrate="10" reducerate="4" addrate="10" />
+    <level value="13" prop_value_0="650" prop_value_1="260" prop_value_2="390" material_num0="65" material_num1="65" needgold="1300000" successrate="10" reducerate="3" addrate="10" />
+    <level value="14" prop_value_0="700" prop_value_1="280" prop_value_2="420" material_num0="70" material_num1="70" needgold="1400000" successrate="10" reducerate="3" addrate="10" />
+    <level value="15" prop_value_0="750" prop_value_1="300" prop_value_2="450" material_num0="75" material_num1="75" needgold="1500000" successrate="10" reducerate="3" addrate="10" />
+  </equipment>
+  <equipment pos="5">
+  <!-- 左手镯 增加防御-->
+    <level value="1" prop_value_0="1" prop_value_1="1" material_num0="0" material_num1="5" needgold="100000" successrate="25" reducerate="7" addrate="30" />
+    <level value="2" prop_value_0="2" prop_value_1="2" material_num0="0" material_num1="10" needgold="200000" successrate="20" reducerate="7" addrate="30" />
+    <level value="3" prop_value_0="3" prop_value_1="3" material_num0="0" material_num1="15" needgold="300000" successrate="15" reducerate="7" addrate="25" />
+    <level value="4" prop_value_0="4" prop_value_1="4" material_num0="0" material_num1="20" needgold="400000" successrate="15" reducerate="6" addrate="25" />
+    <level value="5" prop_value_0="5" prop_value_1="5" material_num0="25" material_num1="25" needgold="500000" successrate="10" reducerate="6" addrate="20" />
+    <level value="6" prop_value_0="6" prop_value_1="6" material_num0="30" material_num1="30" needgold="600000" successrate="10" reducerate="6" addrate="20" />
+    <level value="7" prop_value_0="7" prop_value_1="7" material_num0="35" material_num1="35" needgold="700000" successrate="10" reducerate="5" addrate="10" />
+    <level value="8" prop_value_0="8" prop_value_1="8" material_num0="40" material_num1="40" needgold="800000" successrate="10" reducerate="5" addrate="10" />
+    <level value="9" prop_value_0="9" prop_value_1="9" material_num0="45" material_num1="45" needgold="900000" successrate="10" reducerate="5" addrate="10" />
+    <level value="10" prop_value_0="10" prop_value_1="10" material_num0="50" material_num1="50" needgold="1000000" successrate="10" reducerate="4" addrate="10" />
+    <level value="11" prop_value_0="11" prop_value_1="11" material_num0="55" material_num1="55" needgold="1100000" successrate="10" reducerate="4" addrate="10" />
+    <level value="12" prop_value_0="12" prop_value_1="12" material_num0="60" material_num1="60" needgold="1200000" successrate="10" reducerate="4" addrate="10" />
+    <level value="13" prop_value_0="13" prop_value_1="13" material_num0="65" material_num1="65" needgold="1300000" successrate="10" reducerate="3" addrate="10" />
+    <level value="14" prop_value_0="14" prop_value_1="14" material_num0="70" material_num1="70" needgold="1400000" successrate="10" reducerate="3" addrate="10" />
+    <level value="15" prop_value_0="15" prop_value_1="15" material_num0="75" material_num1="75" needgold="1500000" successrate="10" reducerate="3" addrate="10" />
+  </equipment>
+  <equipment pos="6">
+  <!-- 右手镯 增加魔法防御-->
+    <level value="1" prop_value_0="1" prop_value_1="1" material_num0="0" material_num1="5" needgold="100000" successrate="25" reducerate="7" addrate="30" />
+    <level value="2" prop_value_0="2" prop_value_1="2" material_num0="0" material_num1="10" needgold="200000" successrate="20" reducerate="7" addrate="30" />
+    <level value="3" prop_value_0="3" prop_value_1="3" material_num0="0" material_num1="15" needgold="300000" successrate="15" reducerate="7" addrate="25" />
+    <level value="4" prop_value_0="4" prop_value_1="4" material_num0="0" material_num1="20" needgold="400000" successrate="15" reducerate="6" addrate="25"  />
+    <level value="5" prop_value_0="5" prop_value_1="5" material_num0="25" material_num1="25" needgold="500000" successrate="10" reducerate="6" addrate="20" />
+    <level value="6" prop_value_0="6" prop_value_1="6" material_num0="30" material_num1="30" needgold="600000" successrate="10" reducerate="6" addrate="20" />
+    <level value="7" prop_value_0="7" prop_value_1="7" material_num0="35" material_num1="35" needgold="700000" successrate="10" reducerate="5" addrate="10" />
+    <level value="8" prop_value_0="8" prop_value_1="8" material_num0="40" material_num1="40" needgold="800000" successrate="10" reducerate="5" addrate="10" />
+    <level value="9" prop_value_0="9" prop_value_1="9" material_num0="45" material_num1="45" needgold="900000" successrate="10" reducerate="5" addrate="10" />
+    <level value="10" prop_value_0="10" prop_value_1="10" material_num0="50" material_num1="50" needgold="1000000" successrate="10" reducerate="4" addrate="10" />
+    <level value="11" prop_value_0="11" prop_value_1="11" material_num0="55" material_num1="55" needgold="1100000" successrate="10" reducerate="4" addrate="10" />
+    <level value="12" prop_value_0="12" prop_value_1="12" material_num0="60" material_num1="60" needgold="1200000" successrate="10" reducerate="4" addrate="10" />
+    <level value="13" prop_value_0="13" prop_value_1="13" material_num0="65" material_num1="65" needgold="1300000" successrate="10" reducerate="3" addrate="10" />
+    <level value="14" prop_value_0="14" prop_value_1="14" material_num0="70" material_num1="70" needgold="1400000" successrate="10" reducerate="3" addrate="10" />
+    <level value="15" prop_value_0="15" prop_value_1="15" material_num0="75" material_num1="75" needgold="1500000" successrate="10" reducerate="3" addrate="10" />
+  </equipment>
+  <equipment pos="7">
+  <!-- 左戒指 增加职业攻击-->
+    <level value="1" prop_value_0="0" prop_value_1="1" material_num0="0" material_num1="5" needgold="100000" successrate="25" reducerate="7" addrate="30" />
+    <level value="2" prop_value_0="0" prop_value_1="2" material_num0="0" material_num1="10" needgold="200000" successrate="20" reducerate="7" addrate="30" />
+    <level value="3" prop_value_0="1" prop_value_1="3" material_num0="0" material_num1="15" needgold="300000" successrate="15" reducerate="7" addrate="25" />
+    <level value="4" prop_value_0="1" prop_value_1="4" material_num0="0" material_num1="20" needgold="400000" successrate="15" reducerate="6" addrate="25" />
+    <level value="5" prop_value_0="2" prop_value_1="5" material_num0="25" material_num1="25" needgold="500000" successrate="10" reducerate="6" addrate="20" />
+    <level value="6" prop_value_0="2" prop_value_1="6" material_num0="30" material_num1="30" needgold="600000" successrate="10" reducerate="6" addrate="20" />
+    <level value="7" prop_value_0="3" prop_value_1="7" material_num0="35" material_num1="35" needgold="700000" successrate="10" reducerate="5" addrate="10" />
+    <level value="8" prop_value_0="3" prop_value_1="8" material_num0="40" material_num1="40" needgold="800000" successrate="10" reducerate="5" addrate="10" />
+    <level value="9" prop_value_0="4" prop_value_1="9" material_num0="45" material_num1="45" needgold="900000" successrate="10" reducerate="5" addrate="10" />
+    <level value="10" prop_value_0="4" prop_value_1="10" material_num0="50" material_num1="50" needgold="1000000" successrate="10" reducerate="4" addrate="10" />
+    <level value="11" prop_value_0="5" prop_value_1="11" material_num0="55" material_num1="55" needgold="1100000" successrate="10" reducerate="4" addrate="10" />
+    <level value="12" prop_value_0="5" prop_value_1="12" material_num0="60" material_num1="60" needgold="1200000" successrate="10" reducerate="4" addrate="10" />
+    <level value="13" prop_value_0="6" prop_value_1="13" material_num0="65" material_num1="65" needgold="1300000" successrate="10" reducerate="3" addrate="10" />
+    <level value="14" prop_value_0="6" prop_value_1="14" material_num0="70" material_num1="70" needgold="1400000" successrate="10" reducerate="3" addrate="10" />
+    <level value="15" prop_value_0="7" prop_value_1="15" material_num0="75" material_num1="75" needgold="1500000" successrate="10" reducerate="3" addrate="10" />
+  </equipment>
+  <equipment pos="8">
+  <!-- 右戒指 增加职业攻击-->
+    <level value="1" prop_value_0="0" prop_value_1="1" material_num0="0" material_num1="5" needgold="100000" successrate="25" reducerate="7" addrate="30" />
+    <level value="2" prop_value_0="0" prop_value_1="2" material_num0="0" material_num1="10" needgold="200000" successrate="20" reducerate="7" addrate="30" />
+    <level value="3" prop_value_0="1" prop_value_1="3" material_num0="0" material_num1="15" needgold="300000" successrate="15" reducerate="7" addrate="25" />
+    <level value="4" prop_value_0="1" prop_value_1="4" material_num0="0" material_num1="20" needgold="400000" successrate="15" reducerate="6" addrate="25" />
+    <level value="5" prop_value_0="2" prop_value_1="5" material_num0="25" material_num1="25" needgold="500000" successrate="10" reducerate="6" addrate="20" />
+    <level value="6" prop_value_0="2" prop_value_1="6" material_num0="30" material_num1="30" needgold="600000" successrate="10" reducerate="6" addrate="20" />
+    <level value="7" prop_value_0="3" prop_value_1="7" material_num0="35" material_num1="35" needgold="700000" successrate="10" reducerate="5" addrate="10" />
+    <level value="8" prop_value_0="3" prop_value_1="8" material_num0="40" material_num1="40" needgold="800000" successrate="10" reducerate="5" addrate="10" />
+    <level value="9" prop_value_0="4" prop_value_1="9" material_num0="45" material_num1="45" needgold="900000" successrate="10" reducerate="5" addrate="10" />
+    <level value="10" prop_value_0="4" prop_value_1="10" material_num0="50" material_num1="50" needgold="1000000" successrate="10" reducerate="4" addrate="10" />
+    <level value="11" prop_value_0="5" prop_value_1="11" material_num0="55" material_num1="55" needgold="1100000" successrate="10" reducerate="4" addrate="10" />
+    <level value="12" prop_value_0="5" prop_value_1="12" material_num0="60" material_num1="60" needgold="1200000" successrate="10" reducerate="4" addrate="10" />
+    <level value="13" prop_value_0="6" prop_value_1="13" material_num0="65" material_num1="65" needgold="1300000" successrate="10" reducerate="3" addrate="10" />
+    <level value="14" prop_value_0="6" prop_value_1="14" material_num0="70" material_num1="70" needgold="1400000" successrate="10" reducerate="3" addrate="10" />
+    <level value="15" prop_value_0="7" prop_value_1="15" material_num0="75" material_num1="75" needgold="1500000" successrate="10" reducerate="3" addrate="10" />
+  </equipment>
+  <equipment pos="9">
+  <!-- 鞋子 增加血量上限-->
+    <level value="1" prop_value_0="50" prop_value_1="20" prop_value_2="30" material_num0="0" material_num1="5" needgold="100000" successrate="15" reducerate="7" addrate="30"/>
+    <level value="2" prop_value_0="100" prop_value_1="40" prop_value_2="60" material_num0="0" material_num1="10" needgold="200000" successrate="15" reducerate="7" addrate="30" />
+    <level value="3" prop_value_0="150" prop_value_1="60" prop_value_2="90" material_num0="0" material_num1="15" needgold="300000" successrate="15" reducerate="7" addrate="25" />
+    <level value="4" prop_value_0="200" prop_value_1="80" prop_value_2="120" material_num0="0" material_num1="20" needgold="400000" successrate="15" reducerate="6" addrate="25" />
+    <level value="5" prop_value_0="250" prop_value_1="100" prop_value_2="150" material_num0="25" material_num1="25" needgold="500000" successrate="10" reducerate="6" addrate="20" />
+    <level value="6" prop_value_0="300" prop_value_1="120" prop_value_2="180" material_num0="30" material_num1="30" needgold="600000" successrate="10" reducerate="6" addrate="20" />
+    <level value="7" prop_value_0="350" prop_value_1="140" prop_value_2="210" material_num0="35" material_num1="35" needgold="700000" successrate="10" reducerate="5" addrate="10" />
+    <level value="8" prop_value_0="400" prop_value_1="160" prop_value_2="240" material_num0="40" material_num1="40" needgold="800000" successrate="10" reducerate="5" addrate="10" />
+    <level value="9" prop_value_0="450" prop_value_1="180" prop_value_2="270" material_num0="45" material_num1="45" needgold="900000" successrate="10" reducerate="5" addrate="10" />
+    <level value="10" prop_value_0="500" prop_value_1="200" prop_value_2="300" material_num0="50" material_num1="50" needgold="1000000" successrate="10" reducerate="4" addrate="10" />
+    <level value="11" prop_value_0="550" prop_value_1="220" prop_value_2="330" material_num0="55" material_num1="55" needgold="1100000" successrate="10" reducerate="4" addrate="10" />
+    <level value="12" prop_value_0="600" prop_value_1="240" prop_value_2="360" material_num0="60" material_num1="60" needgold="1200000" successrate="10" reducerate="4" addrate="10" />
+    <level value="13" prop_value_0="650" prop_value_1="260" prop_value_2="390" material_num0="65" material_num1="65" needgold="1300000" successrate="10" reducerate="3" addrate="10" />
+    <level value="14" prop_value_0="700" prop_value_1="280" prop_value_2="420" material_num0="70" material_num1="70" needgold="1400000" successrate="10" reducerate="3" addrate="10" />
+    <level value="15" prop_value_0="750" prop_value_1="300" prop_value_2="450" material_num0="75" material_num1="75" needgold="1500000" successrate="10" reducerate="3" addrate="10" />
+  </equipment>
+  <equipment pos="10">
+  <!-- 腰带 增加韧性-->
+    <level value="1" prop_value_0="8" prop_value_1="0" material_num0="0" material_num1="5" needgold="100000" successrate="25" reducerate="7" addrate="30" />
+    <level value="2" prop_value_0="16" prop_value_1="0" material_num0="0" material_num1="10" needgold="200000" successrate="20" reducerate="7" addrate="30" />
+    <level value="3" prop_value_0="24" prop_value_1="0" material_num0="0" material_num1="15" needgold="300000" successrate="15" reducerate="7" addrate="25" />
+    <level value="4" prop_value_0="32" prop_value_1="0" material_num0="0" material_num1="20" needgold="400000" successrate="15" reducerate="6" addrate="25" />
+    <level value="5" prop_value_0="40" prop_value_1="0" material_num0="25" material_num1="25" needgold="500000" successrate="10" reducerate="6" addrate="20" />
+    <level value="6" prop_value_0="48" prop_value_1="0" material_num0="30" material_num1="30" needgold="600000" successrate="10" reducerate="6" addrate="20" />
+    <level value="7" prop_value_0="56" prop_value_1="0" material_num0="35" material_num1="35" needgold="700000" successrate="10" reducerate="5" addrate="10" />
+    <level value="8" prop_value_0="64" prop_value_1="0" material_num0="40" material_num1="40" needgold="800000" successrate="10" reducerate="5" addrate="10" />
+    <level value="9" prop_value_0="72" prop_value_1="0" material_num0="45" material_num1="45" needgold="900000" successrate="10" reducerate="5" addrate="10" />
+    <level value="10" prop_value_0="80" prop_value_1="0" material_num0="50" material_num1="50" needgold="1000000" successrate="10" reducerate="4" addrate="10" />
+    <level value="11" prop_value_0="88" prop_value_1="0" material_num0="55" material_num1="55" needgold="1100000" successrate="10" reducerate="4" addrate="10" />
+    <level value="12" prop_value_0="96" prop_value_1="0" material_num0="60" material_num1="60" needgold="1200000" successrate="10" reducerate="4" addrate="10" />
+    <level value="13" prop_value_0="104" prop_value_1="0" material_num0="65" material_num1="65" needgold="1300000" successrate="10" reducerate="3" addrate="10" />
+    <level value="14" prop_value_0="112" prop_value_1="0" material_num0="70" material_num1="70" needgold="1400000" successrate="10" reducerate="3" addrate="10" />
+    <level value="15" prop_value_0="120" prop_value_1="0" material_num0="75" material_num1="75" needgold="1500000" successrate="10" reducerate="3" addrate="10" />
+  </equipment>
+<jobsuit job = "0">
+	<suitaddtion level = "1" desc="圣战级" value="30"/>
+	<suitaddtion level = "2" desc="神武级" value="40"/>
+	<suitaddtion level = "3" desc="战神级" value="50"/>
+	<suitaddtion level = "4" desc="血煞级" value="60"/>
+	<suitaddtion level = "5" desc="蟠龙级" value="70"/>
+	<suitaddtion level = "6" desc="圣天级" value="80"/>
+	<suitaddtion level = "7" desc="铁血裂天级" value="90"/>
+    <suit level = "1">
+	<prop name = "gj" value_0="0" value_1="1"/>
+    </suit>
+    <suit level = "2">
+	<prop name = "gj" value_0="1" value_1="2"/>
+	<prop name = "fy" value_0="1" value_1="2"/>
+	<prop name = "mffy" value_0="1" value_1="2"/>
+    </suit>
+    <suit level = "3">
+	<prop name = "gj" value_0="2" value_1="3"/>
+	<prop name = "fy" value_0="2" value_1="3"/>
+	<prop name = "mffy" value_0="2" value_1="3"/>
+    </suit>
+    <suit level = "4">
+	<prop name = "gj" value_0="3" value_1="4"/>
+	<prop name = "fy" value_0="3" value_1="4"/>
+	<prop name = "mffy" value_0="3" value_1="4"/>
+    </suit>
+    <suit level = "5">
+	<prop name = "gj" value_0="4" value_1="5"/>
+	<prop name = "fy" value_0="4" value_1="5"/>
+	<prop name = "mffy" value_0="4" value_1="5"/>
+    </suit>
+    <suit level = "6">
+    <prop name = "hp" value_0="30"/>
+	<prop name = "gj" value_0="5" value_1="6"/>
+	<prop name = "fy" value_0="5" value_1="6"/>
+	<prop name = "mffy" value_0="5" value_1="6"/>
+    </suit>	
+    <suit level = "7">
+	<prop name = "hp" value_0="60"/>
+	<prop name = "gj" value_0="6" value_1="7"/>
+	<prop name = "fy" value_0="6" value_1="7"/>
+	<prop name = "mffy" value_0="6" value_1="7"/>
+    </suit>	
+    <suit level = "8">
+	<prop name = "hp" value_0="90"/>
+	<prop name = "gj" value_0="7" value_1="8"/>
+	<prop name = "fy" value_0="7" value_1="8"/>
+	<prop name = "mffy" value_0="7" value_1="8"/>
+    </suit>
+    <suit level = "9">
+	<prop name = "hp" value_0="120"/>
+	<prop name = "gj" value_0="8" value_1="9"/>
+	<prop name = "fy" value_0="8" value_1="9"/>
+	<prop name = "mffy" value_0="8" value_1="9"/>
+    </suit>
+    <suit level = "10">
+	<prop name = "hp" value_0="150"/>
+	<prop name = "gj" value_0="9" value_1="10"/>
+	<prop name = "fy" value_0="9" value_1="10"/>
+	<prop name = "mffy" value_0="9" value_1="10"/>
+    </suit>
+    <suit level = "11">
+	<prop name = "hp" value_0="180"/>
+	<prop name = "gj" value_0="10" value_1="11"/>
+	<prop name = "fy" value_0="10" value_1="11"/>
+	<prop name = "mffy" value_0="10" value_1="11"/>
+    </suit>
+    <suit level = "12">
+	<prop name = "hp" value_0="210"/>
+	<prop name = "gj" value_0="11" value_1="12"/>
+	<prop name = "fy" value_0="11" value_1="12"/>
+	<prop name = "mffy" value_0="11" value_1="12"/>
+    </suit>
+    <suit level = "13">
+	<prop name = "hp" value_0="240"/>
+	<prop name = "gj" value_0="12" value_1="13"/>
+	<prop name = "fy" value_0="12" value_1="13"/>
+	<prop name = "mffy" value_0="12" value_1="13"/>
+    </suit>
+    <suit level = "14">
+	<prop name = "hp" value_0="270"/>
+	<prop name = "gj" value_0="14" value_1="15"/>
+	<prop name = "fy" value_0="14" value_1="15"/>
+	<prop name = "mffy" value_0="14" value_1="15"/>
+    </suit>
+    <suit level = "15">
+	<prop name = "hp" value_0="300"/>
+	<prop name = "gj" value_0="16" value_1="17"/>
+	<prop name = "fy" value_0="16" value_1="17"/>
+	<prop name = "mffy" value_0="16" value_1="17"/>
+    </suit>
+</jobsuit>
+<jobsuit job = "1">
+	<suitaddtion level = "1" desc="法神级" value="30"/>
+	<suitaddtion level = "2" desc="幻魔级" value="40"/>
+	<suitaddtion level = "3" desc="魔神级" value="50"/>
+	<suitaddtion level = "4" desc="魔雷级" value="60"/>
+	<suitaddtion level = "5" desc="蟠龙级" value="70"/>
+	<suitaddtion level = "6" desc="圣魔级" value="80"/>
+	<suitaddtion level = "7" desc="铁血撼天级" value="90"/>
+    <suit level = "1">
+	<prop name = "mfgj" value_0="0" value_1="1"/>
+    </suit>
+    <suit level = "2">
+	<prop name = "mfgj" value_0="1" value_1="2"/>
+	<prop name = "fy" value_0="1" value_1="2"/>
+	<prop name = "mffy" value_0="1" value_1="2"/>
+    </suit>
+    <suit level = "3">
+    <prop name = "mfgj" value_0="2" value_1="3"/>
+	<prop name = "fy" value_0="2" value_1="3"/>
+	<prop name = "mffy" value_0="2" value_1="3"/>
+    </suit>
+    <suit level = "4">
+	<prop name = "mfgj" value_0="3" value_1="4"/>
+	<prop name = "fy" value_0="3" value_1="4"/>
+	<prop name = "mffy" value_0="3" value_1="4"/>
+    </suit>
+    <suit level = "5">
+	<prop name = "mfgj" value_0="4" value_1="5"/>
+	<prop name = "fy" value_0="4" value_1="5"/>
+	<prop name = "mffy" value_0="4" value_1="5"/>
+    </suit>
+    <suit level = "6">
+	<prop name = "hp" value_0="10"/>
+	<prop name = "mfgj" value_0="5" value_1="6"/>
+	<prop name = "fy" value_0="5" value_1="6"/>
+	<prop name = "mffy" value_0="5" value_1="6"/>
+    </suit>	
+    <suit level = "7">
+	<prop name = "hp" value_0="20"/>
+	<prop name = "mfgj" value_0="6" value_1="7"/>
+	<prop name = "fy" value_0="6" value_1="7"/>
+	<prop name = "mffy" value_0="6" value_1="7"/>
+    </suit>	
+    <suit level = "8">
+	<prop name = "hp" value_0="30"/>
+	<prop name = "mfgj" value_0="7" value_1="8"/>
+	<prop name = "fy" value_0="7" value_1="8"/>
+	<prop name = "mffy" value_0="7" value_1="8"/>
+    </suit>
+    <suit level = "9">
+	<prop name = "hp" value_0="40"/>
+	<prop name = "mfgj" value_0="8" value_1="9"/>
+	<prop name = "fy" value_0="8" value_1="9"/>
+	<prop name = "mffy" value_0="8" value_1="9"/>
+    </suit>
+    <suit level = "10">
+	<prop name = "hp" value_0="50"/>
+	<prop name = "mfgj" value_0="9" value_1="10"/>
+	<prop name = "fy" value_0="9" value_1="10"/>
+	<prop name = "mffy" value_0="9" value_1="10"/>
+    </suit>
+    <suit level = "11">
+	<prop name = "hp" value_0="60"/>
+	<prop name = "mfgj" value_0="10" value_1="11"/>
+	<prop name = "fy" value_0="10" value_1="11"/>
+	<prop name = "mffy" value_0="10" value_1="11"/>
+    </suit>
+    <suit level = "12">
+	<prop name = "hp" value_0="70"/>
+	<prop name = "mfgj" value_0="11" value_1="12"/>
+	<prop name = "fy" value_0="11" value_1="12"/>
+	<prop name = "mffy" value_0="11" value_1="12"/>
+    </suit>
+    <suit level = "13">
+	<prop name = "hp" value_0="80"/>
+	<prop name = "mfgj" value_0="12" value_1="13"/>
+	<prop name = "fy" value_0="12" value_1="13"/>
+	<prop name = "mffy" value_0="12" value_1="13"/>
+    </suit>
+    <suit level = "14">
+	<prop name = "hp" value_0="90"/>
+	<prop name = "mfgj" value_0="14" value_1="15"/>
+	<prop name = "fy" value_0="14" value_1="15"/>
+	<prop name = "mffy" value_0="14" value_1="15"/>
+    </suit>
+    <suit level = "15">
+	<prop name = "hp" value_0="100"/>
+	<prop name = "mfgj" value_0="16" value_1="17"/>
+	<prop name = "fy" value_0="16" value_1="17"/>
+	<prop name = "mffy" value_0="16" value_1="17"/>
+    </suit>
+</jobsuit>
+<jobsuit job = "2">
+	<suitaddtion level = "1" desc="天尊级" value="30"/>
+	<suitaddtion level = "2" desc="天玄级" value="40"/>
+	<suitaddtion level = "3" desc="道神级" value="50"/>
+	<suitaddtion level = "4" desc="幽泉级" value="60"/>
+	<suitaddtion level = "5" desc="蟠龙级" value="70"/>
+	<suitaddtion level = "6" desc="圣道级" value="80"/>
+	<suitaddtion level = "7" desc="铁血逆天级" value="90"/>
+    <suit level = "1">
+	<prop name = "dsgj" value_0="0" value_1="1"/>
+    </suit>
+    <suit level = "2">
+	<prop name = "dsgj" value_0="1" value_1="2"/>
+	<prop name = "fy" value_0="1" value_1="2"/>
+	<prop name = "mffy" value_0="1" value_1="2"/>
+    </suit>
+    <suit level = "3">
+	<prop name = "dsgj" value_0="2" value_1="3"/>
+	<prop name = "fy" value_0="2" value_1="3"/>
+	<prop name = "mffy" value_0="2" value_1="3"/>
+    </suit>
+    <suit level = "4">
+	<prop name = "dsgj" value_0="3" value_1="4"/>
+	<prop name = "fy" value_0="3" value_1="4"/>
+	<prop name = "mffy" value_0="3" value_1="4"/>
+    </suit>
+    <suit level = "5">
+	<prop name = "dsgj" value_0="4" value_1="5"/>
+	<prop name = "fy" value_0="4" value_1="5"/>
+	<prop name = "mffy" value_0="4" value_1="5"/>
+    </suit>
+    <suit level = "6">
+	<prop name = "hp" value_0="20"/>
+	<prop name = "dsgj" value_0="5" value_1="6"/>
+	<prop name = "fy" value_0="5" value_1="6"/>
+	<prop name = "mffy" value_0="5" value_1="6"/>
+    </suit>	
+    <suit level = "7">
+	<prop name = "hp" value_0="40"/>
+	<prop name = "dsgj" value_0="6" value_1="7"/>
+	<prop name = "fy" value_0="6" value_1="7"/>
+	<prop name = "mffy" value_0="6" value_1="7"/>
+    </suit>	
+    <suit level = "8">
+    <prop name = "hp" value_0="60"/>
+    <prop name = "dsgj" value_0="7" value_1="8"/>
+	<prop name = "fy" value_0="7" value_1="8"/>
+	<prop name = "mffy" value_0="7" value_1="8"/>
+    </suit>
+    <suit level = "9">
+	<prop name = "hp" value_0="80"/>
+	<prop name = "dsgj" value_0="8" value_1="9"/>
+	<prop name = "fy" value_0="8" value_1="9"/>
+	<prop name = "mffy" value_0="8" value_1="9"/>
+    </suit>
+    <suit level = "10">
+	<prop name = "hp" value_0="100"/>
+	<prop name = "dsgj" value_0="9" value_1="10"/>
+	<prop name = "fy" value_0="9" value_1="10"/>
+	<prop name = "mffy" value_0="9" value_1="10"/>
+    </suit>
+    <suit level = "11">
+	<prop name = "hp" value_0="120"/>
+	<prop name = "dsgj" value_0="10" value_1="11"/>
+	<prop name = "fy" value_0="10" value_1="11"/>
+	<prop name = "mffy" value_0="10" value_1="11"/>
+    </suit>
+    <suit level = "12">
+	<prop name = "hp" value_0="140"/>
+	<prop name = "dsgj" value_0="11" value_1="12"/>
+	<prop name = "fy" value_0="11" value_1="12"/>
+	<prop name = "mffy" value_0="11" value_1="12"/>
+    </suit>
+    <suit level = "13">
+	<prop name = "hp" value_0="160"/>
+	<prop name = "dsgj" value_0="12" value_1="13"/>
+	<prop name = "fy" value_0="12" value_1="13"/>
+	<prop name = "mffy" value_0="12" value_1="13"/>
+    </suit>
+    <suit level = "14">
+ 	<prop name = "hp" value_0="180"/>
+	<prop name = "dsgj" value_0="14" value_1="15"/>
+	<prop name = "fy" value_0="14" value_1="15"/>
+	<prop name = "mffy" value_0="14" value_1="15"/>
+    </suit>
+    <suit level = "15">
+	<prop name = "hp" value_0="200"/>
+	<prop name = "dsgj" value_0="16" value_1="17"/>
+	<prop name = "fy" value_0="16" value_1="17"/>
+	<prop name = "mffy" value_0="16" value_1="17"/>
+    </suit>
+</jobsuit>
+</RepressDemonEquips>

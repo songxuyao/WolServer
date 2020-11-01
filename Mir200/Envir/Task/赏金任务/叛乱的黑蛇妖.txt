@@ -1,0 +1,10 @@
+[setup]
+stepcount = 3
+title = 叛乱的黑蛇妖
+ID = 60
+stepaim1 = 在五蛇殿内，击杀10只黑蛇妖
+stepaim2 = 还需击杀<$TASKVAL(60).I0>只黑蛇妖。
+stepaim3 = 恭喜你，任务完成！
+stepDESC1 = <color=graygolden 任务目的：>  在五蛇殿内，击杀10只黑蛇妖\<color=graygolden 任务介绍:>\  在五蛇殿内，击杀10只黑蛇妖
+stepDESC2 = color=graygolden 任务目的：>  在五蛇殿内，击杀10只黑蛇妖\<color=graygolden 任务介绍:>\  还需击杀<$TASKVAL(60).I0>只黑蛇妖
+stepDESC3 = color=graygolden 任务目的：>  在五蛇殿内，击杀10只黑蛇妖\<color=graygolden 任务介绍:>\  恭喜你，任务完成！

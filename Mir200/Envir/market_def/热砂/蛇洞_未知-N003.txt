@@ -1,0 +1,36 @@
+[@main]
+#IF
+RANDOM 2
+#SAY
+嗯.. 这里可是比较危险的啊？\
+我不知道你还能不能认识回去的路。\\
+<交谈/@Chat>\
+<关闭/@exit>
+#ELSESAY
+你好,这里的路很难走，小心别迷路了。\\
+<关闭./@exit>
+
+[@Chat]
+#IF
+LARGE $TIME.HOUR 11
+#SAY
+这附近有一个非常奇怪的洞穴，\
+那个地方和其它地方不一样，我很久以前到过一次。\
+但是大致的方向还记的，我可以给你指路。\\
+<询问方向/@Directions>\
+<关闭/@exit>
+#ELSESAY
+你知道从这里出去的路吗？\\
+<关闭/@exit>
+
+[@Directions]
+记住了吗？\
+在里面两个小时后会自动离开，自己保重。\\
+<再见/@bye>
+
+[@bye]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MAPMOVE L003
+break

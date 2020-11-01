@@ -1,0 +1,8 @@
+[@main]
+你准备返回炼狱魔境六层吗？\\
+<是的/@gomap>\
+<不/@exit>
+
+[@gomap]
+#ACT
+MAP NL006

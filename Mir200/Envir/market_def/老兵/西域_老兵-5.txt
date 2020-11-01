@@ -1,0 +1,104 @@
+[@main]
+这差事真无聊，天天站在这里风吹雨淋，你找我有什么事？\\
+<想快速到达其他地区/@main1>    <记录回城点/@_LB_homePos>    <挑战炼狱/@_LB_newlianyu>\
+<充值游戏时间/@_LB_toplaytime>          <充值元宝/@_LB_throwmoney>      <领取奖品/@get>\
+<可接任务/@_RW_entry>\
+
+[@_RW_entry]
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+[@main1]
+这是国王为了对抗邪恶力量而特别开辟的骑兵驿道，能够\
+以最快的速度帮助你往返于各个地区 。不过为此你必须付\
+出一些代价做为使用费用。你确定要使用这条驿道吗？\
+<去通天塔/@ttta>\
+<去中州/@capital>\
+<去关隘/@wpass>\
+<关闭/@exit>\
+
+[@ttta]
+送你去通天塔里的费用是2000金币。\
+那里的怪物相当厉害，你确定要去吗？\\
+<我要去/@ta>\
+<不去了/@main>
+
+[@ta]
+#IF
+CHECKBINDGOLD > 1999
+#ACT
+BINDGOLD - 2000
+MAPMOVE 5 140 107
+break
+#IF
+CHECKGOLD 2000
+#ACT
+TAKE 金币 2000
+MAPMOVE 5 140 107
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@capital]
+你是要去中州吗？由于路途遥远，\
+它将花费你的2000金币。\
+你确定要传送吗？\\
+<确定/@capital1>\
+<不去了/@exit>
+
+[@capital1]
+#IF
+CHECKBINDGOLD > 1999
+#ACT
+BINDGOLD - 2000
+MAPMOVE 0 470 225
+break
+#IF
+CHECKGOLD 2000
+#ACT
+TAKE 金币 2000
+MAPMOVE 0 470 225
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@wpass]
+要去关隘吗？500金币就可以了，没有\
+的话就自己走着去吧。\\
+<付钱/@wpass1>\
+<没钱/@wpass2>\
+
+[@wpass]
+#IF
+CHECKBINDGOLD > 499
+#ACT
+BINDGOLD - 500
+MAPMOVE 5 597 607
+break
+#IF
+CHECKGOLD 500
+#ACT
+TAKE 金币 500
+MAPMOVE 5 597 607
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@wpass2]
+那就自己到600，600附近去找吧。\\
+<返回/@main>
+
+[@get]
+#CALL [\游戏功能\领奖使者.txt] @get_jiangli
+
+[@_LB_homePos]
+#CALL [\商人\记录回城.txt] @homePos
+
+[@_LB_throwmoney]
+#CALL [\商人\充值元宝.txt] @throwmoney
+
+[@_LB_toplaytime]
+#CALL [\商人\充值元宝.txt] @oplaytime
+
+[@_LB_newlianyu]
+#CALL [\商人\挑战炼狱.txt] @newlianyu

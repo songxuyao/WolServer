@@ -1,0 +1,475 @@
+[@main]
+    <color=red 欢迎光临——盾牌升级中心>\
+    使用圣盾结晶即可提升盾牌品级，放入祝福石可提高成功率。\
+    使用觉醒灵石可以觉醒盾牌或提升觉醒属性。\
+    提升觉醒属性又可能会降低，祝勇士好运！\\
+    <盾牌强化/@@shieldSuper>      <盾牌觉醒/@@shieldAwake>      <强化材料获取/@getcailiao>\
+    <盾牌分解/@shengwangdunfenjie>      <合成主体圣王盾/@Hechengzhuti>\
+
+[@@shieldAwake]
+#IF
+EQUAL $PARAM(1) 1
+#ACT
+goto @Changeshield
+break
+#IF
+EQUAL $PARAM(1) 2
+#ACT
+goto @promoteshield
+break
+
+[@promoteshield]
+#IF
+EQUAL $ITEMINFO[$PARAM(0)].STDMODE 12
+#ACT
+#ELSEACT
+SENDMSG 5 请放入圣王盾
+break
+#IF
+LARGE $ITEMINFO[$PARAM(0)].ITEMEXT(224) 0
+#ACT
+MOV M18 $ITEMINFO[$PARAM(0)].ITEMEXT(235)
+MOV M19 $ITEMINFO[$PARAM(0)].ITEMEXT(236)
+#ELSEACT
+MESSAGEBOX 抱歉勇士，您的圣王盾尚未觉醒，无法强化觉醒
+break
+#IF
+CHECKGOLD $STR(M18)
+#ACT
+#ELSEACT
+MESSAGEBOX 您的金币不够,需要<$STR(M18)>金币
+break
+#IF
+CHECKITEM 觉醒灵石 $STR(M19)
+#ACT
+MOV M10 $ITEMINFO[$PARAM(0)].ITEMEXT(217)
+INC M10 1
+MOV M11 $MULT.$STR(M10).50
+MOV M12 $MULT.$STR(M10).3
+MOV M13 $ITEMINFO[$PARAM(0)].ITEMEXT(224)
+MOV M14 $ITEMINFO[$PARAM(0)].ITEMEXT(225)
+MOV M15 $STR(M12)
+MOV M16 1
+MOV M17 $INC.$STR(M14).2
+#ELSEACT
+MESSAGEBOX 您包裹中的觉醒灵石数量不足,需要<$STR(M19)>个觉醒灵石
+
+break
+#IF
+SMALL M13 3
+#ACT
+MOV M15 $STR(M11)
+MOV M16 5
+MOV M17 $INC.$STR(M14).5
+#IF
+EQUAL M13 3
+#ACT
+INC M15 1
+#IF
+LARGE M13 3
+SMALL M13 6
+#ACT
+INC M15 2
+#IF
+SMALL M14 $STR(M15)
+#ACT
+#ELSEACT
+MESSAGEBOX 您的圣王盾觉醒属性已经达到上限，无法强化觉醒
+break
+#IF
+RANDOM 30 100
+#ACT
+TAKE 金币 $STR(M18)
+TAKE 觉醒灵石 $STR(M19)
+UPGRADEUSERITEM $PARAM(0) 223 + $STR(M16)
+UPGRADEUSERITEM $PARAM(0) 225 + $STR(M16)
+UPGRADEUSERITEM $PARAM(0) 226 = $STR(M15)
+UPGRADEUSERITEM $PARAM(0) 235 + 1000000
+UPGRADEUSERITEM $PARAM(0) 236 + 10
+SMSWDSTRENGAWAKERESULT $PARAM(0) $PARAM(1)
+SENDMSG 5 恭喜你，觉醒成功，盾牌属性显著提升！
+break
+#IF
+RANDOM 1
+#ACT
+TAKE 金币 $STR(M18)
+TAKE 觉醒灵石 $STR(M19)
+SMSWDSTRENGAWAKERESULT $PARAM(0) $PARAM(1)
+SENDMSG 5 很遗憾，本次觉醒失败了，请再接再厉！
+break
+
+[@Changeshield]
+#IF
+EQUAL $ITEMINFO[$PARAM(0)].STDMODE 12
+#ACT
+#ELSEACT
+SENDMSG 5 请放入圣王盾
+break
+#IF
+CHECKITEM 觉醒灵石 10
+#ACT
+MOV M10 $ITEMINFO[$PARAM(0)].ITEMEXT(217)
+INC M10 1
+MOVR M11 9
+INC M11 1
+MOV M12 $MULT.$STR(M10).50
+MOV M13 $MULT.$STR(M10).3
+take 觉醒灵石 10
+UPGRADEUSERITEM $PARAM(0) 224 = $STR(M11)
+SMSWDSTRENGAWAKERESULT $PARAM(0) $PARAM(1)
+UPGRADEUSERITEM $PARAM(0) 235 = 1000000
+UPGRADEUSERITEM $PARAM(0) 236 = 10
+#ELSEACT
+MESSAGEBOX 您包裹中的觉醒灵石数量不足,需要10个觉醒灵石
+
+break
+#IF
+SMALL M11 3
+#ACT
+UPGRADEUSERITEM $PARAM(0) 223 = 15
+UPGRADEUSERITEM $PARAM(0) 225 = 10
+UPGRADEUSERITEM $PARAM(0) 226 = $STR(M12)
+break
+#IF
+EQUAL M11 3
+#ACT
+INC M13 1
+#IF
+LARGE M11 3
+SMALL M11 6
+#ACT
+INC M13 2
+#IF
+RANDOM 1
+#ACT
+UPGRADEUSERITEM $PARAM(0) 223 = 2
+UPGRADEUSERITEM $PARAM(0) 225 = 1
+UPGRADEUSERITEM $PARAM(0) 226 = $STR(M13)
+break
+
+[@@shieldSuper]
+#IF
+EQUAL $ITEMINFO[$PARAM(0)].STDMODE 12
+#ACT
+MOV M10 $ITEMINFO[$PARAM(0)].ITEMEXT(233)
+MOV M11 $ITEMINFO[$PARAM(0)].ITEMEXT(234)
+MOV M12 $ITEMINFO[$PARAM(0)].ITEMEXT(231)
+FormatStr S10 盾|%s|%s <$ITEMINFO[$PARAM(0)].ITEMEXT(217)>|<$ITEMINFO[$PARAM(0)].ITEMEXT(218)>
+#ELSEACT
+SENDMSG 5 请放入圣王盾
+break
+#IF
+CHECKGOLD $STR(M10)
+#ACT
+#ELSEACT
+MESSAGEBOX 抱歉，您的金币不足
+break
+#IF
+CHECKITEM 圣盾结晶 $STR(M11)
+#ACT
+#ELSEACT
+MESSAGEBOX 您包裹中的圣盾结晶数量不足
+break
+#IF
+EQUAL S10 盾|3|8
+#ACT
+SENDMSG 5 你当前圣王盾牌等级已达到上限！
+break
+#IF
+PosInList $STR(S10) ..\QuestDiary\数据文件\文本数据\圣王盾牌属性.txt S12
+#ACT
+SPLIT $STR(S12) | S13
+MOV M13 $STR(S18)
+FormatStr S11 盾|%s|%s <$STR(S16)>|<$STR(S17)>
+#ELSEACT
+SENDMSG 5 系统错误，请联系管理员...
+break
+#IF
+PosInList $STR(S11) ..\QuestDiary\数据文件\文本数据\圣王盾牌属性.txt S32
+#ACT
+SPLIT $STR(S32) | S33
+#ELSEACT
+SENDMSG 5 系统错误，请联系管理员...
+break
+#IF
+EQUAL $ITEMINFO[$PARAM(1)].STDNAME 普通祝福石
+#ACT
+MOV M13 5
+TAKEM $PARAM(1)
+#IF
+LARGE M12 9989
+#ACT
+UPGRADEUSERITEM $PARAM(0) 231 = 10
+goto @圣王盾职业
+break
+#IF
+RANDOM $STR(M13) 200
+#ACT
+goto @圣王盾职业
+break
+#IF
+RANDOM 1
+#ACT
+UPGRADEUSERITEM $PARAM(0) 231 + 10
+SENDMSG 5 圣王盾牌强化失败！
+break
+
+[@圣王盾职业]
+#IF
+RANDOM 1
+#ACT
+take 金币 $STR(M10)
+take 圣盾结晶 $STR(M11)
+UPGRADEUSERITEM $PARAM(0) 217 = $STR(S16)
+UPGRADEUSERITEM $PARAM(0) 218 = $STR(S17)
+UPGRADEUSERITEM $PARAM(0) 0 = $STR(S22)
+UPGRADEUSERITEM $PARAM(0) 2 = $STR(S23)
+UPGRADEUSERITEM $PARAM(0) 4 = $STR(S24)
+UPGRADEUSERITEM $PARAM(0) 221 = $STR(S42)
+UPGRADEUSERITEM $PARAM(0) 222 = $STR(S43)
+UPGRADEUSERITEM $PARAM(0) 220 = $STR(S44)
+UPGRADEUSERITEM $PARAM(0) 233 = $STR(S46)
+UPGRADEUSERITEM $PARAM(0) 234 = $STR(S45)
+SENDMSG 5 圣王盾牌强化成功！
+#IF
+EQUAL $ITEMINFO[$PARAM(0)].STDNAME 圣王盾1
+#ACT
+UPGRADEUSERITEM $PARAM(0) 216 = $STR(S19)
+UPGRADEUSERITEM $PARAM(0) 219 = $STR(S39)
+SMSWDSTRENGAWAKERESULT $PARAM(0) 0
+break
+#IF
+EQUAL $ITEMINFO[$PARAM(0)].STDNAME 圣王盾2
+#ACT
+UPGRADEUSERITEM $PARAM(0) 216 = $STR(S20)
+UPGRADEUSERITEM $PARAM(0) 219 = $STR(S40)
+SMSWDSTRENGAWAKERESULT $PARAM(0) 0
+break
+#IF
+EQUAL $ITEMINFO[$PARAM(0)].STDNAME 圣王盾3
+#ACT
+UPGRADEUSERITEM $PARAM(0) 216 = $STR(S21)
+UPGRADEUSERITEM $PARAM(0) 219 = $STR(S41)
+SMSWDSTRENGAWAKERESULT $PARAM(0) 0
+break
+
+[@Hechengzhuti]
+ 在这里您可以将<color=yellow 10个圣王盾牌碎片>合成一个主体<color=yellow 圣王盾>!\\\\\\\\
+ <立即合成/@GoHecheng> <返回/main>\\
+
+[@GoHecheng]
+#IF
+!CHECKITEM 圣王盾牌碎片 10
+#SAY
+    你没有10个圣王盾牌碎片，请检查你的包裹。\
+    <离开/@exit>\
+#ACT
+break
+#IF
+CHECKBAGSIZE 1
+#SAY
+    你使用<color=yellow 10个圣王盾牌碎片>合成出主体<color=yellow 圣王盾>!\\\\\\\\
+    <返回/@main>\
+#ACT
+TAKE 圣王盾牌碎片 10
+#ELSESAY
+    你的包裹快满了，请整理下再来。\\
+    <我明白了/@exit>
+#ELSEACT
+break
+#IF
+CHECKJOB warrior
+#ACT
+give 圣王盾1 1
+UPGRADEUSERITEM $PARAM(10) 0 + 1
+UPGRADEUSERITEM $PARAM(10) 2 + 1
+UPGRADEUSERITEM $PARAM(10) 4 + 1
+UPGRADEUSERITEM $PARAM(10) 216 = 30
+UPGRADEUSERITEM $PARAM(10) 219 = 60
+UPGRADEUSERITEM $PARAM(10) 220 = 1
+UPGRADEUSERITEM $PARAM(10) 221 = 2
+UPGRADEUSERITEM $PARAM(10) 222 = 2
+UPGRADEUSERITEM $PARAM(10) 231 = 10
+UPGRADEUSERITEM $PARAM(10) 232 = 10000
+UPGRADEUSERITEM $PARAM(10) 233 = 100000
+UPGRADEUSERITEM $PARAM(10) 234 = 1
+break
+#IF
+CHECKJOB wizard
+#ACT
+give 圣王盾2 1
+UPGRADEUSERITEM $PARAM(10) 0 + 1
+UPGRADEUSERITEM $PARAM(10) 2 + 1
+UPGRADEUSERITEM $PARAM(10) 4 + 1
+UPGRADEUSERITEM $PARAM(10) 216 = 10
+UPGRADEUSERITEM $PARAM(10) 218 = 1
+UPGRADEUSERITEM $PARAM(10) 219 = 20
+UPGRADEUSERITEM $PARAM(10) 220 = 1
+UPGRADEUSERITEM $PARAM(10) 221 = 2
+UPGRADEUSERITEM $PARAM(10) 222 = 2
+UPGRADEUSERITEM $PARAM(10) 231 = 10
+UPGRADEUSERITEM $PARAM(10) 232 = 10000
+UPGRADEUSERITEM $PARAM(10) 233 = 100000
+UPGRADEUSERITEM $PARAM(10) 234 = 1
+break
+#IF
+CHECKJOB taoist
+#ACT
+give 圣王盾3 1
+UPGRADEUSERITEM $PARAM(10) 0 + 1
+UPGRADEUSERITEM $PARAM(10) 2 + 1
+UPGRADEUSERITEM $PARAM(10) 4 + 1
+UPGRADEUSERITEM $PARAM(10) 216 = 20
+UPGRADEUSERITEM $PARAM(10) 218 = 1
+UPGRADEUSERITEM $PARAM(10) 219 = 40
+UPGRADEUSERITEM $PARAM(10) 220 = 1
+UPGRADEUSERITEM $PARAM(10) 221 = 2
+UPGRADEUSERITEM $PARAM(10) 222 = 2
+UPGRADEUSERITEM $PARAM(10) 231 = 10
+UPGRADEUSERITEM $PARAM(10) 232 = 10000
+UPGRADEUSERITEM $PARAM(10) 233 = 100000
+UPGRADEUSERITEM $PARAM(10) 234 = 1
+break
+
+[@shengwangdunfenjie]
+#IF
+RANDOM 1
+#SAY
+　　在这里您可以将<color=yellow 未强化>、<color=yellow 未觉醒>的圣王盾进行分解，分解\
+后可获得圣盾结晶和觉醒灵石各3个。<color=red (分解获得道具均为绑定)>\
+　　<返回/@main>\\
+#ACT
+ShowSpotDlg 6 请放入圣王盾 @givedunpai
+
+[@givedunpai]
+#IF
+!POS $PARAM(0) 圣王盾
+#SAY
+您放入的不是圣王盾。\\\
+#ACT
+break
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSESAY
+    你的包裹快满了，请整理下再来。\\
+    <我明白了/@exit>
+#ELSEACT
+break
+#IF
+LARGE $ITEMINFO[$PARAM(1)].ITEMEXT(218) 0
+#SAY
+您的圣王盾已经强化或觉醒过，无法分解。
+#ACT
+break
+#IF
+SMALL $ITEMINFO[$PARAM(1)].ITEMEXT(224) 1
+#SAY
+　　你获得3个<color=green 圣盾结晶>和3个<color=green 觉醒灵石>。\
+　　<返回/main>\
+#ACT
+TAKEM $PARAM(1)
+GIVE 圣盾结晶 1 1
+UPGRADEUSERITEM $PARAM(10) 20 = 3
+GIVE 觉醒灵石 1 1
+UPGRADEUSERITEM $PARAM(10) 20 = 3
+break
+
+[@getcailiao]
+#IF
+!EQUAL $Table(SG_Pritime).Tim11 $DATE
+#ACT
+TABLE SG_PRIVITE Hum11 = 0
+TABLE SG_PRIVITE Hum12 = 0
+Table SG_Pritime Tim11 = $DATE
+#IF
+RANDOM 1
+#SAY
+欢迎光临——升级材料商店\
+    在我这里可以购买圣盾结晶和觉醒灵石材料不多，每位勇\
+士限量购买哦，当然如果你愿意付出更多的代价的话；嘿嘿！\
+<圣盾结晶/@dobuy0>    <觉醒灵石/@dobuy1>
+
+[@dobuy0]
+#IF
+SMALL $TABLE(SG_PRIVITE).Hum11 6
+#ACT
+MOV P10 80
+#ELSEACT
+MOV P10 80
+MOV P11 $TABLE(SG_PRIVITE).Hum11
+DEC P11 5
+MULT P11 10
+INC P10 $STR(P11)
+#IF
+RANDOM 1
+#SAY
+欢迎光临——升级材料商店\
+圣盾结晶(10个)  消耗<$STR(P10)>个绑定元宝    {购买/@goumai0&<$STR(P10)>}\
+注：每位勇士当日在购买5次后，继续购买费用会持续增加哦！
+#ACT
+break
+
+[@goumai0]
+#IF
+CHECKGAMEGOLD < $SCRIPTPARAM(1)
+#SAY
+对不起，您好像没有足够的绑定元宝啊，请稍后再试。\
+   <返回/@main>\
+#ACT
+break
+#IF
+CHECKBAGSIZE 1
+#SAY
+    您购买了<color=green 10个圣盾结晶>！\
+    <color=red 注：系统可能存在延迟，未购买成功不会扣除元宝。>\\\\\\\
+    <返回/@doBuy>
+#ACT
+GAMEGOLD - $SCRIPTPARAM(1)
+GIVE 圣盾结晶 1
+UPGRADEUSERITEM $PARAM(10) 20 = 10
+break
+#ELSESAY
+    你的包裹快满了，请整理下再来。\\
+    <我明白了/@exit>
+
+[@dobuy1]
+#IF
+SMALL $TABLE(SG_PRIVITE).Hum12 6
+#ACT
+MOV P10 80
+#ELSEACT
+MOV P10 80
+MOV P11 $TABLE(SG_PRIVITE).Hum12
+DEC P11 5
+MULT P11 10
+INC P10 $STR(P11)
+#IF
+RANDOM 1
+#SAY
+欢迎光临——升级材料商店\
+觉醒灵石(10个)  消耗<$STR(P10)>个绑定元宝    {购买/@goumai1&<$STR(P10)>}\
+注：每位勇士当日在购买5次后，继续购买费用会持续增加哦！
+
+[@goumai1]
+#IF
+CHECKGAMEGOLD < $SCRIPTPARAM(1)
+#SAY
+对不起，您好像没有足够的绑定元宝啊，请稍后再试。\
+   <返回/@main>\
+#ACT
+break
+#IF
+CHECKBAGSIZE 1
+#SAY
+    您购买了<color=green 10个觉醒灵石>！\
+    <color=red 注：系统可能存在延迟，未购买成功不会扣除元宝。>\\\\\\\
+    <返回/@doBuy>
+#ACT
+GAMEGOLD - $SCRIPTPARAM(1)
+GIVE 觉醒灵石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 10
+break
+#ELSESAY
+    你的包裹快满了，请整理下再来。\\
+    <我明白了/@exit>

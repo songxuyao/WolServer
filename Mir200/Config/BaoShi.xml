@@ -1,0 +1,1000 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!-- magicID:技能ID，damageMin：伤害最小值，damageMax：伤害最大值，upgradeExp：当前宝石升级所需经验值-->
+<!-- Taozhuang宝石等级套装中LevelReq：总等级要求，damageValue：该级别加成伤害百分比, curOpenNum目前开放的宝石孔数-->
+<BaoShi>
+	<Type id="Green" curOpenNum="4">
+		<TaoZhuang>
+			<Taozhuang levelReq="10" damageValue="3"/>
+			<Taozhuang levelReq="18" damageValue="5"/>
+			<Taozhuang levelReq="26" damageValue="7"/>
+			<Taozhuang levelReq="34" damageValue="9"/>
+			<Taozhuang levelReq="42" damageValue="12"/>
+			<Taozhuang levelReq="50" damageValue="15"/>
+			<Taozhuang levelReq="58" damageValue="18"/>
+			<Taozhuang levelReq="66" damageValue="21"/>
+			<Taozhuang levelReq="74" damageValue="25"/>
+			<Taozhuang levelReq="80" damageValue="30"/>
+		</TaoZhuang>
+		<Level level="1" upgradeExp="20" upgradeMoney="500000" looks="9001">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="12" damageMax="38"/>
+			<BaoShi magicID="44" damageMin="10" damageMax="36"/>
+			<BaoShi magicID="71" damageMin="5" damageMax="15"/>
+			<BaoShi magicID="67" damageMin="4" damageMax="14"/>
+			<BaoShi magicID="177" damageMin="14" damageMax="40"/>
+			<BaoShi magicID="60" damageMin="6" damageMax="12"/>
+			<BaoShi magicID="59" damageMin="5" damageMax="15"/>
+			<BaoShi magicID="49" damageMin="6" damageMax="18"/>
+			<BaoShi magicID="11" damageMin="5" damageMax="21"/>
+			<BaoShi magicID="13" damageMin="5" damageMax="17"/>
+			<BaoShi magicID="174" damageMin="4" damageMax="12"/>
+			<BaoShi magicID="88" damageMin="12" damageMax="38"/>
+			<BaoShi magicID="23" damageMin="4" damageMax="14"/>
+			<BaoShi magicID="87" damageMin="8" damageMax="24"/>
+			<BaoShi magicID="33" damageMin="5" damageMax="11"/>
+			<BaoShi magicID="54" damageMin="4" damageMax="12"/>
+			<BaoShi magicID="89" damageMin="8" damageMax="24"/>
+			<BaoShi magicID="173" damageMin="10" damageMax="30"/>
+			<BaoShi magicID="171" damageMin="9" damageMax="27"/>
+		</Level>
+		<Level level="2" upgradeExp="64" upgradeMoney="500000" looks="9002">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="24" damageMax="76"/>
+			<BaoShi magicID="44" damageMin="20" damageMax="72"/>
+			<BaoShi magicID="71" damageMin="10" damageMax="30"/>
+			<BaoShi magicID="67" damageMin="8" damageMax="28"/>
+			<BaoShi magicID="177" damageMin="28" damageMax="80"/>
+			<BaoShi magicID="60" damageMin="12" damageMax="24"/>
+			<BaoShi magicID="59" damageMin="10" damageMax="30"/>
+			<BaoShi magicID="49" damageMin="12" damageMax="36"/>
+			<BaoShi magicID="11" damageMin="10" damageMax="42"/>
+			<BaoShi magicID="13" damageMin="10" damageMax="34"/>
+			<BaoShi magicID="174" damageMin="8" damageMax="24"/>
+			<BaoShi magicID="88" damageMin="24" damageMax="76"/>
+			<BaoShi magicID="23" damageMin="8" damageMax="28"/>
+			<BaoShi magicID="87" damageMin="16" damageMax="48"/>
+			<BaoShi magicID="33" damageMin="10" damageMax="22"/>
+			<BaoShi magicID="54" damageMin="8" damageMax="24"/>
+			<BaoShi magicID="89" damageMin="16" damageMax="48"/>
+			<BaoShi magicID="173" damageMin="20" damageMax="60"/>
+			<BaoShi magicID="171" damageMin="18" damageMax="54"/>
+		</Level>
+		<Level level="3" upgradeExp="192" upgradeMoney="500000" looks="9003">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="48" damageMax="152"/>
+			<BaoShi magicID="44" damageMin="40" damageMax="144"/>
+			<BaoShi magicID="71" damageMin="20" damageMax="60"/>
+			<BaoShi magicID="67" damageMin="16" damageMax="56"/>
+			<BaoShi magicID="177" damageMin="56" damageMax="160"/>
+			<BaoShi magicID="60" damageMin="24" damageMax="48"/>
+			<BaoShi magicID="59" damageMin="20" damageMax="60"/>
+			<BaoShi magicID="49" damageMin="24" damageMax="72"/>
+			<BaoShi magicID="11" damageMin="20" damageMax="84"/>
+			<BaoShi magicID="13" damageMin="20" damageMax="68"/>
+			<BaoShi magicID="174" damageMin="16" damageMax="48"/>
+			<BaoShi magicID="88" damageMin="48" damageMax="152"/>
+			<BaoShi magicID="23" damageMin="16" damageMax="56"/>
+			<BaoShi magicID="87" damageMin="32" damageMax="96"/>
+			<BaoShi magicID="33" damageMin="20" damageMax="44"/>
+			<BaoShi magicID="54" damageMin="16" damageMax="48"/>
+			<BaoShi magicID="89" damageMin="32" damageMax="96"/>
+			<BaoShi magicID="173" damageMin="40" damageMax="120"/>
+			<BaoShi magicID="171" damageMin="36" damageMax="108"/>
+		</Level>
+		<Level level="4" upgradeExp="768" upgradeMoney="500000" looks="9004">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="84" damageMax="266"/>
+			<BaoShi magicID="44" damageMin="70" damageMax="252"/>
+			<BaoShi magicID="71" damageMin="35" damageMax="105"/>
+			<BaoShi magicID="67" damageMin="28" damageMax="98"/>
+			<BaoShi magicID="177" damageMin="98" damageMax="280"/>
+			<BaoShi magicID="60" damageMin="42" damageMax="84"/>
+			<BaoShi magicID="59" damageMin="35" damageMax="105"/>
+			<BaoShi magicID="49" damageMin="42" damageMax="126"/>
+			<BaoShi magicID="11" damageMin="35" damageMax="147"/>
+			<BaoShi magicID="13" damageMin="35" damageMax="119"/>
+			<BaoShi magicID="174" damageMin="28" damageMax="84"/>
+			<BaoShi magicID="88" damageMin="84" damageMax="266"/>
+			<BaoShi magicID="23" damageMin="28" damageMax="98"/>
+			<BaoShi magicID="87" damageMin="56" damageMax="168"/>
+			<BaoShi magicID="33" damageMin="35" damageMax="77"/>
+			<BaoShi magicID="54" damageMin="28" damageMax="84"/>
+			<BaoShi magicID="89" damageMin="56" damageMax="168"/>
+			<BaoShi magicID="173" damageMin="70" damageMax="210"/>
+			<BaoShi magicID="171" damageMin="63" damageMax="189"/>
+		</Level>
+		<Level level="5" upgradeExp="3072" upgradeMoney="500000" looks="9005">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="132" damageMax="418"/>
+			<BaoShi magicID="44" damageMin="110" damageMax="396"/>
+			<BaoShi magicID="71" damageMin="55" damageMax="165"/>
+			<BaoShi magicID="67" damageMin="44" damageMax="154"/>
+			<BaoShi magicID="177" damageMin="154" damageMax="440"/>
+			<BaoShi magicID="60" damageMin="66" damageMax="132"/>
+			<BaoShi magicID="59" damageMin="55" damageMax="165"/>
+			<BaoShi magicID="49" damageMin="66" damageMax="198"/>
+			<BaoShi magicID="11" damageMin="55" damageMax="231"/>
+			<BaoShi magicID="13" damageMin="55" damageMax="187"/>
+			<BaoShi magicID="174" damageMin="44" damageMax="132"/>
+			<BaoShi magicID="88" damageMin="132" damageMax="418"/>
+			<BaoShi magicID="23" damageMin="44" damageMax="154"/>
+			<BaoShi magicID="87" damageMin="88" damageMax="264"/>
+			<BaoShi magicID="33" damageMin="55" damageMax="121"/>
+			<BaoShi magicID="54" damageMin="44" damageMax="132"/>
+			<BaoShi magicID="89" damageMin="88" damageMax="264"/>
+			<BaoShi magicID="173" damageMin="110" damageMax="330"/>
+			<BaoShi magicID="171" damageMin="99" damageMax="297"/>
+		</Level>
+		<Level level="6" upgradeExp="12288" upgradeMoney="500000" looks="9006">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="180" damageMax="570"/>
+			<BaoShi magicID="44" damageMin="150" damageMax="540"/>
+			<BaoShi magicID="71" damageMin="75" damageMax="225"/>
+			<BaoShi magicID="67" damageMin="60" damageMax="210"/>
+			<BaoShi magicID="177" damageMin="210" damageMax="600"/>
+			<BaoShi magicID="60" damageMin="90" damageMax="180"/>
+			<BaoShi magicID="59" damageMin="75" damageMax="225"/>
+			<BaoShi magicID="49" damageMin="90" damageMax="270"/>
+			<BaoShi magicID="11" damageMin="75" damageMax="315"/>
+			<BaoShi magicID="13" damageMin="75" damageMax="255"/>
+			<BaoShi magicID="174" damageMin="60" damageMax="180"/>
+			<BaoShi magicID="88" damageMin="180" damageMax="570"/>
+			<BaoShi magicID="23" damageMin="60" damageMax="210"/>
+			<BaoShi magicID="87" damageMin="120" damageMax="360"/>
+			<BaoShi magicID="33" damageMin="75" damageMax="165"/>
+			<BaoShi magicID="54" damageMin="60" damageMax="180"/>
+			<BaoShi magicID="89" damageMin="120" damageMax="360"/>
+			<BaoShi magicID="173" damageMin="150" damageMax="450"/>
+			<BaoShi magicID="171" damageMin="135" damageMax="405"/>
+		</Level>
+		<Level level="7" upgradeExp="49152" upgradeMoney="500000" looks="9007">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="252" damageMax="798"/>
+			<BaoShi magicID="44" damageMin="210" damageMax="756"/>
+			<BaoShi magicID="71" damageMin="105" damageMax="315"/>
+			<BaoShi magicID="67" damageMin="84" damageMax="294"/>
+			<BaoShi magicID="177" damageMin="294" damageMax="840"/>
+			<BaoShi magicID="60" damageMin="126" damageMax="252"/>
+			<BaoShi magicID="59" damageMin="105" damageMax="315"/>
+			<BaoShi magicID="49" damageMin="126" damageMax="378"/>
+			<BaoShi magicID="11" damageMin="105" damageMax="441"/>
+			<BaoShi magicID="13" damageMin="105" damageMax="357"/>
+			<BaoShi magicID="174" damageMin="84" damageMax="252"/>
+			<BaoShi magicID="88" damageMin="252" damageMax="798"/>
+			<BaoShi magicID="23" damageMin="84" damageMax="294"/>
+			<BaoShi magicID="87" damageMin="168" damageMax="504"/>
+			<BaoShi magicID="33" damageMin="105" damageMax="231"/>
+			<BaoShi magicID="54" damageMin="84" damageMax="252"/>
+			<BaoShi magicID="89" damageMin="168" damageMax="504"/>
+			<BaoShi magicID="173" damageMin="210" damageMax="630"/>
+			<BaoShi magicID="171" damageMin="189" damageMax="567"/>
+		</Level>
+		<Level level="8" upgradeExp="196608" upgradeMoney="500000" looks="9008">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="336" damageMax="1064"/>
+			<BaoShi magicID="44" damageMin="280" damageMax="1008"/>
+			<BaoShi magicID="71" damageMin="140" damageMax="420"/>
+			<BaoShi magicID="67" damageMin="112" damageMax="392"/>
+			<BaoShi magicID="177" damageMin="392" damageMax="1120"/>
+			<BaoShi magicID="60" damageMin="168" damageMax="336"/>
+			<BaoShi magicID="59" damageMin="140" damageMax="420"/>
+			<BaoShi magicID="49" damageMin="168" damageMax="504"/>
+			<BaoShi magicID="11" damageMin="140" damageMax="588"/>
+			<BaoShi magicID="13" damageMin="140" damageMax="476"/>
+			<BaoShi magicID="174" damageMin="112" damageMax="336"/>
+			<BaoShi magicID="88" damageMin="336" damageMax="1064"/>
+			<BaoShi magicID="23" damageMin="112" damageMax="392"/>
+			<BaoShi magicID="87" damageMin="224" damageMax="672"/>
+			<BaoShi magicID="33" damageMin="140" damageMax="308"/>
+			<BaoShi magicID="54" damageMin="112" damageMax="336"/>
+			<BaoShi magicID="89" damageMin="224" damageMax="672"/>
+			<BaoShi magicID="173" damageMin="280" damageMax="840"/>
+			<BaoShi magicID="171" damageMin="252" damageMax="756"/>
+		</Level>
+		<Level level="9" upgradeExp="786432" upgradeMoney="500000" looks="9009">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="432" damageMax="1368"/>
+			<BaoShi magicID="44" damageMin="360" damageMax="1296"/>
+			<BaoShi magicID="71" damageMin="180" damageMax="540"/>
+			<BaoShi magicID="67" damageMin="144" damageMax="504"/>
+			<BaoShi magicID="177" damageMin="504" damageMax="1440"/>
+			<BaoShi magicID="60" damageMin="216" damageMax="432"/>
+			<BaoShi magicID="59" damageMin="180" damageMax="540"/>
+			<BaoShi magicID="49" damageMin="216" damageMax="648"/>
+			<BaoShi magicID="11" damageMin="180" damageMax="756"/>
+			<BaoShi magicID="13" damageMin="180" damageMax="612"/>
+			<BaoShi magicID="174" damageMin="144" damageMax="432"/>
+			<BaoShi magicID="88" damageMin="432" damageMax="1368"/>
+			<BaoShi magicID="23" damageMin="144" damageMax="504"/>
+			<BaoShi magicID="87" damageMin="288" damageMax="864"/>
+			<BaoShi magicID="33" damageMin="180" damageMax="396"/>
+			<BaoShi magicID="54" damageMin="144" damageMax="432"/>
+			<BaoShi magicID="89" damageMin="288" damageMax="864"/>
+			<BaoShi magicID="173" damageMin="360" damageMax="1080"/>
+			<BaoShi magicID="171" damageMin="324" damageMax="972"/>
+		</Level>
+		<Level level="10" looks="9010">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="552" damageMax="1748"/>
+			<BaoShi magicID="44" damageMin="460" damageMax="1656"/>
+			<BaoShi magicID="71" damageMin="230" damageMax="690"/>
+			<BaoShi magicID="67" damageMin="184" damageMax="644"/>
+			<BaoShi magicID="177" damageMin="644" damageMax="1840"/>
+			<BaoShi magicID="60" damageMin="276" damageMax="552"/>
+			<BaoShi magicID="59" damageMin="230" damageMax="690"/>
+			<BaoShi magicID="49" damageMin="276" damageMax="828"/>
+			<BaoShi magicID="11" damageMin="230" damageMax="966"/>
+			<BaoShi magicID="13" damageMin="230" damageMax="782"/>
+			<BaoShi magicID="174" damageMin="184" damageMax="552"/>
+			<BaoShi magicID="88" damageMin="552" damageMax="1748"/>
+			<BaoShi magicID="23" damageMin="184" damageMax="644"/>
+			<BaoShi magicID="87" damageMin="368" damageMax="1104"/>
+			<BaoShi magicID="33" damageMin="230" damageMax="506"/>
+			<BaoShi magicID="54" damageMin="184" damageMax="552"/>
+			<BaoShi magicID="89" damageMin="368" damageMax="1104"/>
+			<BaoShi magicID="173" damageMin="460" damageMax="1380"/>
+			<BaoShi magicID="171" damageMin="414" damageMax="1242"/>
+		</Level>
+	</Type>
+	<Type id="Blue">
+		<TaoZhuang>
+			<Taozhuang levelReq="10" damageValue="3"/>
+			<Taozhuang levelReq="18" damageValue="5"/>
+			<Taozhuang levelReq="26" damageValue="7"/>
+			<Taozhuang levelReq="34" damageValue="9"/>
+			<Taozhuang levelReq="42" damageValue="12"/>
+			<Taozhuang levelReq="50" damageValue="15"/>
+			<Taozhuang levelReq="58" damageValue="18"/>
+			<Taozhuang levelReq="66" damageValue="21"/>
+			<Taozhuang levelReq="74" damageValue="25"/>
+			<Taozhuang levelReq="80" damageValue="30"/>
+		</TaoZhuang>
+		<Level level="1" upgradeExp="20" upgradeMoney="500000" looks="9011">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="14" damageMax="46"/>
+			<BaoShi magicID="44" damageMin="12" damageMax="43"/>
+			<BaoShi magicID="71" damageMin="6" damageMax="18"/>
+			<BaoShi magicID="67" damageMin="5" damageMax="17"/>
+			<BaoShi magicID="177" damageMin="17" damageMax="48"/>
+			<BaoShi magicID="60" damageMin="7" damageMax="14"/>
+			<BaoShi magicID="59" damageMin="6" damageMax="18"/>
+			<BaoShi magicID="49" damageMin="7" damageMax="22"/>
+			<BaoShi magicID="11" damageMin="6" damageMax="25"/>
+			<BaoShi magicID="13" damageMin="6" damageMax="20"/>
+			<BaoShi magicID="174" damageMin="5" damageMax="14"/>
+			<BaoShi magicID="88" damageMin="14" damageMax="46"/>
+			<BaoShi magicID="23" damageMin="5" damageMax="17"/>
+			<BaoShi magicID="87" damageMin="10" damageMax="29"/>
+			<BaoShi magicID="33" damageMin="6" damageMax="13"/>
+			<BaoShi magicID="54" damageMin="5" damageMax="14"/>
+			<BaoShi magicID="89" damageMin="10" damageMax="29"/>
+			<BaoShi magicID="173" damageMin="12" damageMax="36"/>
+			<BaoShi magicID="171" damageMin="11" damageMax="32"/>
+		</Level>
+		<Level level="2" upgradeExp="64" upgradeMoney="500000" looks="9012">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="29" damageMax="91"/>
+			<BaoShi magicID="44" damageMin="24" damageMax="86"/>
+			<BaoShi magicID="71" damageMin="12" damageMax="36"/>
+			<BaoShi magicID="67" damageMin="10" damageMax="34"/>
+			<BaoShi magicID="177" damageMin="34" damageMax="96"/>
+			<BaoShi magicID="60" damageMin="14" damageMax="29"/>
+			<BaoShi magicID="59" damageMin="12" damageMax="36"/>
+			<BaoShi magicID="49" damageMin="14" damageMax="43"/>
+			<BaoShi magicID="11" damageMin="12" damageMax="50"/>
+			<BaoShi magicID="13" damageMin="12" damageMax="41"/>
+			<BaoShi magicID="174" damageMin="10" damageMax="29"/>
+			<BaoShi magicID="88" damageMin="29" damageMax="91"/>
+			<BaoShi magicID="23" damageMin="10" damageMax="34"/>
+			<BaoShi magicID="87" damageMin="19" damageMax="58"/>
+			<BaoShi magicID="33" damageMin="12" damageMax="26"/>
+			<BaoShi magicID="54" damageMin="10" damageMax="29"/>
+			<BaoShi magicID="89" damageMin="19" damageMax="58"/>
+			<BaoShi magicID="173" damageMin="24" damageMax="72"/>
+			<BaoShi magicID="171" damageMin="22" damageMax="65"/>
+		</Level>
+		<Level level="3" upgradeExp="192" upgradeMoney="500000" looks="9013">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="58" damageMax="182"/>
+			<BaoShi magicID="44" damageMin="48" damageMax="173"/>
+			<BaoShi magicID="71" damageMin="24" damageMax="72"/>
+			<BaoShi magicID="67" damageMin="19" damageMax="67"/>
+			<BaoShi magicID="177" damageMin="67" damageMax="192"/>
+			<BaoShi magicID="60" damageMin="29" damageMax="58"/>
+			<BaoShi magicID="59" damageMin="24" damageMax="72"/>
+			<BaoShi magicID="49" damageMin="29" damageMax="86"/>
+			<BaoShi magicID="11" damageMin="24" damageMax="101"/>
+			<BaoShi magicID="13" damageMin="24" damageMax="82"/>
+			<BaoShi magicID="174" damageMin="19" damageMax="58"/>
+			<BaoShi magicID="88" damageMin="58" damageMax="182"/>
+			<BaoShi magicID="23" damageMin="19" damageMax="67"/>
+			<BaoShi magicID="87" damageMin="38" damageMax="115"/>
+			<BaoShi magicID="33" damageMin="24" damageMax="53"/>
+			<BaoShi magicID="54" damageMin="19" damageMax="58"/>
+			<BaoShi magicID="89" damageMin="38" damageMax="115"/>
+			<BaoShi magicID="173" damageMin="48" damageMax="144"/>
+			<BaoShi magicID="171" damageMin="43" damageMax="130"/>
+		</Level>
+		<Level level="4" upgradeExp="768" upgradeMoney="500000" looks="9014">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="101" damageMax="319"/>
+			<BaoShi magicID="44" damageMin="84" damageMax="302"/>
+			<BaoShi magicID="71" damageMin="42" damageMax="126"/>
+			<BaoShi magicID="67" damageMin="34" damageMax="118"/>
+			<BaoShi magicID="177" damageMin="118" damageMax="336"/>
+			<BaoShi magicID="60" damageMin="50" damageMax="101"/>
+			<BaoShi magicID="59" damageMin="42" damageMax="126"/>
+			<BaoShi magicID="49" damageMin="50" damageMax="151"/>
+			<BaoShi magicID="11" damageMin="42" damageMax="176"/>
+			<BaoShi magicID="13" damageMin="42" damageMax="143"/>
+			<BaoShi magicID="174" damageMin="34" damageMax="101"/>
+			<BaoShi magicID="88" damageMin="101" damageMax="319"/>
+			<BaoShi magicID="23" damageMin="34" damageMax="118"/>
+			<BaoShi magicID="87" damageMin="67" damageMax="202"/>
+			<BaoShi magicID="33" damageMin="42" damageMax="92"/>
+			<BaoShi magicID="54" damageMin="34" damageMax="101"/>
+			<BaoShi magicID="89" damageMin="67" damageMax="202"/>
+			<BaoShi magicID="173" damageMin="84" damageMax="252"/>
+			<BaoShi magicID="171" damageMin="76" damageMax="227"/>
+		</Level>
+		<Level level="5" upgradeExp="3072" upgradeMoney="500000" looks="9015">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="158" damageMax="502"/>
+			<BaoShi magicID="44" damageMin="132" damageMax="475"/>
+			<BaoShi magicID="71" damageMin="66" damageMax="198"/>
+			<BaoShi magicID="67" damageMin="53" damageMax="185"/>
+			<BaoShi magicID="177" damageMin="185" damageMax="528"/>
+			<BaoShi magicID="60" damageMin="79" damageMax="158"/>
+			<BaoShi magicID="59" damageMin="66" damageMax="198"/>
+			<BaoShi magicID="49" damageMin="79" damageMax="238"/>
+			<BaoShi magicID="11" damageMin="66" damageMax="277"/>
+			<BaoShi magicID="13" damageMin="66" damageMax="224"/>
+			<BaoShi magicID="174" damageMin="53" damageMax="158"/>
+			<BaoShi magicID="88" damageMin="158" damageMax="502"/>
+			<BaoShi magicID="23" damageMin="53" damageMax="185"/>
+			<BaoShi magicID="87" damageMin="106" damageMax="317"/>
+			<BaoShi magicID="33" damageMin="66" damageMax="145"/>
+			<BaoShi magicID="54" damageMin="53" damageMax="158"/>
+			<BaoShi magicID="89" damageMin="106" damageMax="317"/>
+			<BaoShi magicID="173" damageMin="132" damageMax="396"/>
+			<BaoShi magicID="171" damageMin="119" damageMax="356"/>
+		</Level>
+		<Level level="6" upgradeExp="12288" upgradeMoney="500000" looks="9016">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="216" damageMax="684"/>
+			<BaoShi magicID="44" damageMin="180" damageMax="648"/>
+			<BaoShi magicID="71" damageMin="90" damageMax="270"/>
+			<BaoShi magicID="67" damageMin="72" damageMax="252"/>
+			<BaoShi magicID="177" damageMin="252" damageMax="720"/>
+			<BaoShi magicID="60" damageMin="108" damageMax="216"/>
+			<BaoShi magicID="59" damageMin="90" damageMax="270"/>
+			<BaoShi magicID="49" damageMin="108" damageMax="324"/>
+			<BaoShi magicID="11" damageMin="90" damageMax="378"/>
+			<BaoShi magicID="13" damageMin="90" damageMax="306"/>
+			<BaoShi magicID="174" damageMin="72" damageMax="216"/>
+			<BaoShi magicID="88" damageMin="216" damageMax="684"/>
+			<BaoShi magicID="23" damageMin="72" damageMax="252"/>
+			<BaoShi magicID="87" damageMin="144" damageMax="432"/>
+			<BaoShi magicID="33" damageMin="90" damageMax="198"/>
+			<BaoShi magicID="54" damageMin="72" damageMax="216"/>
+			<BaoShi magicID="89" damageMin="144" damageMax="432"/>
+			<BaoShi magicID="173" damageMin="180" damageMax="540"/>
+			<BaoShi magicID="171" damageMin="162" damageMax="486"/>
+		</Level>
+		<Level level="7" upgradeExp="49152" upgradeMoney="500000" looks="9017">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="302" damageMax="958"/>
+			<BaoShi magicID="44" damageMin="252" damageMax="907"/>
+			<BaoShi magicID="71" damageMin="126" damageMax="378"/>
+			<BaoShi magicID="67" damageMin="101" damageMax="353"/>
+			<BaoShi magicID="177" damageMin="353" damageMax="1008"/>
+			<BaoShi magicID="60" damageMin="151" damageMax="302"/>
+			<BaoShi magicID="59" damageMin="126" damageMax="378"/>
+			<BaoShi magicID="49" damageMin="151" damageMax="454"/>
+			<BaoShi magicID="11" damageMin="126" damageMax="529"/>
+			<BaoShi magicID="13" damageMin="126" damageMax="428"/>
+			<BaoShi magicID="174" damageMin="101" damageMax="302"/>
+			<BaoShi magicID="88" damageMin="302" damageMax="958"/>
+			<BaoShi magicID="23" damageMin="101" damageMax="353"/>
+			<BaoShi magicID="87" damageMin="202" damageMax="605"/>
+			<BaoShi magicID="33" damageMin="126" damageMax="277"/>
+			<BaoShi magicID="54" damageMin="101" damageMax="302"/>
+			<BaoShi magicID="89" damageMin="202" damageMax="605"/>
+			<BaoShi magicID="173" damageMin="252" damageMax="756"/>
+			<BaoShi magicID="171" damageMin="227" damageMax="680"/>
+		</Level>
+		<Level level="8" upgradeExp="196608" upgradeMoney="500000" looks="9018">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="403" damageMax="1277"/>
+			<BaoShi magicID="44" damageMin="336" damageMax="1210"/>
+			<BaoShi magicID="71" damageMin="168" damageMax="504"/>
+			<BaoShi magicID="67" damageMin="134" damageMax="470"/>
+			<BaoShi magicID="177" damageMin="470" damageMax="1344"/>
+			<BaoShi magicID="60" damageMin="202" damageMax="403"/>
+			<BaoShi magicID="59" damageMin="168" damageMax="504"/>
+			<BaoShi magicID="49" damageMin="202" damageMax="605"/>
+			<BaoShi magicID="11" damageMin="168" damageMax="706"/>
+			<BaoShi magicID="13" damageMin="168" damageMax="571"/>
+			<BaoShi magicID="174" damageMin="134" damageMax="403"/>
+			<BaoShi magicID="88" damageMin="403" damageMax="1277"/>
+			<BaoShi magicID="23" damageMin="134" damageMax="470"/>
+			<BaoShi magicID="87" damageMin="269" damageMax="806"/>
+			<BaoShi magicID="33" damageMin="168" damageMax="370"/>
+			<BaoShi magicID="54" damageMin="134" damageMax="403"/>
+			<BaoShi magicID="89" damageMin="269" damageMax="806"/>
+			<BaoShi magicID="173" damageMin="336" damageMax="1008"/>
+			<BaoShi magicID="171" damageMin="302" damageMax="907"/>
+		</Level>
+		<Level level="9" upgradeExp="786432" upgradeMoney="500000" looks="9019">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="518" damageMax="1642"/>
+			<BaoShi magicID="44" damageMin="432" damageMax="1555"/>
+			<BaoShi magicID="71" damageMin="216" damageMax="648"/>
+			<BaoShi magicID="67" damageMin="173" damageMax="605"/>
+			<BaoShi magicID="177" damageMin="605" damageMax="1728"/>
+			<BaoShi magicID="60" damageMin="259" damageMax="518"/>
+			<BaoShi magicID="59" damageMin="216" damageMax="648"/>
+			<BaoShi magicID="49" damageMin="259" damageMax="778"/>
+			<BaoShi magicID="11" damageMin="216" damageMax="907"/>
+			<BaoShi magicID="13" damageMin="216" damageMax="734"/>
+			<BaoShi magicID="174" damageMin="173" damageMax="518"/>
+			<BaoShi magicID="88" damageMin="518" damageMax="1642"/>
+			<BaoShi magicID="23" damageMin="173" damageMax="605"/>
+			<BaoShi magicID="87" damageMin="346" damageMax="1037"/>
+			<BaoShi magicID="33" damageMin="216" damageMax="475"/>
+			<BaoShi magicID="54" damageMin="173" damageMax="518"/>
+			<BaoShi magicID="89" damageMin="346" damageMax="1037"/>
+			<BaoShi magicID="173" damageMin="432" damageMax="1296"/>
+			<BaoShi magicID="171" damageMin="389" damageMax="1166"/>
+		</Level>
+		<Level level="10" looks="9020">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="662" damageMax="2098"/>
+			<BaoShi magicID="44" damageMin="552" damageMax="1987"/>
+			<BaoShi magicID="71" damageMin="276" damageMax="828"/>
+			<BaoShi magicID="67" damageMin="221" damageMax="773"/>
+			<BaoShi magicID="177" damageMin="773" damageMax="2208"/>
+			<BaoShi magicID="60" damageMin="331" damageMax="662"/>
+			<BaoShi magicID="59" damageMin="276" damageMax="828"/>
+			<BaoShi magicID="49" damageMin="331" damageMax="994"/>
+			<BaoShi magicID="11" damageMin="276" damageMax="1159"/>
+			<BaoShi magicID="13" damageMin="276" damageMax="938"/>
+			<BaoShi magicID="174" damageMin="221" damageMax="662"/>
+			<BaoShi magicID="88" damageMin="662" damageMax="2098"/>
+			<BaoShi magicID="23" damageMin="221" damageMax="773"/>
+			<BaoShi magicID="87" damageMin="442" damageMax="1325"/>
+			<BaoShi magicID="33" damageMin="276" damageMax="607"/>
+			<BaoShi magicID="54" damageMin="221" damageMax="662"/>
+			<BaoShi magicID="89" damageMin="442" damageMax="1325"/>
+			<BaoShi magicID="173" damageMin="552" damageMax="1656"/>
+			<BaoShi magicID="171" damageMin="497" damageMax="1490"/>
+		</Level>
+	</Type>
+	<Type id="Purple">
+		<TaoZhuang>
+			<Taozhuang levelReq="10" damageValue="3"/>
+			<Taozhuang levelReq="18" damageValue="5"/>
+			<Taozhuang levelReq="26" damageValue="7"/>
+			<Taozhuang levelReq="34" damageValue="9"/>
+			<Taozhuang levelReq="42" damageValue="12"/>
+			<Taozhuang levelReq="50" damageValue="15"/>
+			<Taozhuang levelReq="58" damageValue="18"/>
+			<Taozhuang levelReq="66" damageValue="21"/>
+			<Taozhuang levelReq="74" damageValue="25"/>
+			<Taozhuang levelReq="80" damageValue="30"/>
+		</TaoZhuang>
+		<Level level="1" upgradeExp="20" upgradeMoney="500000" looks="9021">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="17" damageMax="55"/>
+			<BaoShi magicID="44" damageMin="14" damageMax="52"/>
+			<BaoShi magicID="71" damageMin="7" damageMax="22"/>
+			<BaoShi magicID="67" damageMin="6" damageMax="20"/>
+			<BaoShi magicID="177" damageMin="20" damageMax="58"/>
+			<BaoShi magicID="60" damageMin="9" damageMax="17"/>
+			<BaoShi magicID="59" damageMin="7" damageMax="22"/>
+			<BaoShi magicID="49" damageMin="9" damageMax="26"/>
+			<BaoShi magicID="11" damageMin="7" damageMax="30"/>
+			<BaoShi magicID="13" damageMin="7" damageMax="24"/>
+			<BaoShi magicID="174" damageMin="6" damageMax="17"/>
+			<BaoShi magicID="88" damageMin="17" damageMax="55"/>
+			<BaoShi magicID="23" damageMin="6" damageMax="20"/>
+			<BaoShi magicID="87" damageMin="12" damageMax="35"/>
+			<BaoShi magicID="33" damageMin="7" damageMax="16"/>
+			<BaoShi magicID="54" damageMin="6" damageMax="17"/>
+			<BaoShi magicID="89" damageMin="12" damageMax="35"/>
+			<BaoShi magicID="173" damageMin="14" damageMax="43"/>
+			<BaoShi magicID="171" damageMin="13" damageMax="39"/>
+		</Level>
+		<Level level="2" upgradeExp="64" upgradeMoney="500000" looks="9022">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="35" damageMax="109"/>
+			<BaoShi magicID="44" damageMin="29" damageMax="104"/>
+			<BaoShi magicID="71" damageMin="14" damageMax="43"/>
+			<BaoShi magicID="67" damageMin="12" damageMax="40"/>
+			<BaoShi magicID="177" damageMin="40" damageMax="115"/>
+			<BaoShi magicID="60" damageMin="17" damageMax="35"/>
+			<BaoShi magicID="59" damageMin="14" damageMax="43"/>
+			<BaoShi magicID="49" damageMin="17" damageMax="52"/>
+			<BaoShi magicID="11" damageMin="14" damageMax="60"/>
+			<BaoShi magicID="13" damageMin="14" damageMax="49"/>
+			<BaoShi magicID="174" damageMin="12" damageMax="35"/>
+			<BaoShi magicID="88" damageMin="35" damageMax="109"/>
+			<BaoShi magicID="23" damageMin="12" damageMax="40"/>
+			<BaoShi magicID="87" damageMin="23" damageMax="69"/>
+			<BaoShi magicID="33" damageMin="14" damageMax="32"/>
+			<BaoShi magicID="54" damageMin="12" damageMax="35"/>
+			<BaoShi magicID="89" damageMin="23" damageMax="69"/>
+			<BaoShi magicID="173" damageMin="29" damageMax="86"/>
+			<BaoShi magicID="171" damageMin="26" damageMax="78"/>
+		</Level>
+		<Level level="3" upgradeExp="192" upgradeMoney="500000" looks="9023">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="69" damageMax="219"/>
+			<BaoShi magicID="44" damageMin="58" damageMax="207"/>
+			<BaoShi magicID="71" damageMin="29" damageMax="86"/>
+			<BaoShi magicID="67" damageMin="23" damageMax="81"/>
+			<BaoShi magicID="177" damageMin="81" damageMax="230"/>
+			<BaoShi magicID="60" damageMin="35" damageMax="69"/>
+			<BaoShi magicID="59" damageMin="29" damageMax="86"/>
+			<BaoShi magicID="49" damageMin="35" damageMax="104"/>
+			<BaoShi magicID="11" damageMin="29" damageMax="121"/>
+			<BaoShi magicID="13" damageMin="29" damageMax="98"/>
+			<BaoShi magicID="174" damageMin="23" damageMax="69"/>
+			<BaoShi magicID="88" damageMin="69" damageMax="219"/>
+			<BaoShi magicID="23" damageMin="23" damageMax="81"/>
+			<BaoShi magicID="87" damageMin="46" damageMax="138"/>
+			<BaoShi magicID="33" damageMin="29" damageMax="63"/>
+			<BaoShi magicID="54" damageMin="23" damageMax="69"/>
+			<BaoShi magicID="89" damageMin="46" damageMax="138"/>
+			<BaoShi magicID="173" damageMin="58" damageMax="173"/>
+			<BaoShi magicID="171" damageMin="52" damageMax="156"/>
+		</Level>
+		<Level level="4" upgradeExp="768" upgradeMoney="500000" looks="9024">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="121" damageMax="383"/>
+			<BaoShi magicID="44" damageMin="101" damageMax="363"/>
+			<BaoShi magicID="71" damageMin="50" damageMax="151"/>
+			<BaoShi magicID="67" damageMin="40" damageMax="141"/>
+			<BaoShi magicID="177" damageMin="141" damageMax="403"/>
+			<BaoShi magicID="60" damageMin="60" damageMax="121"/>
+			<BaoShi magicID="59" damageMin="50" damageMax="151"/>
+			<BaoShi magicID="49" damageMin="60" damageMax="181"/>
+			<BaoShi magicID="11" damageMin="50" damageMax="212"/>
+			<BaoShi magicID="13" damageMin="50" damageMax="171"/>
+			<BaoShi magicID="174" damageMin="40" damageMax="121"/>
+			<BaoShi magicID="88" damageMin="121" damageMax="383"/>
+			<BaoShi magicID="23" damageMin="40" damageMax="141"/>
+			<BaoShi magicID="87" damageMin="81" damageMax="242"/>
+			<BaoShi magicID="33" damageMin="50" damageMax="111"/>
+			<BaoShi magicID="54" damageMin="40" damageMax="121"/>
+			<BaoShi magicID="89" damageMin="81" damageMax="242"/>
+			<BaoShi magicID="173" damageMin="101" damageMax="302"/>
+			<BaoShi magicID="171" damageMin="91" damageMax="272"/>
+		</Level>
+		<Level level="5" upgradeExp="3072" upgradeMoney="500000" looks="9025">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="190" damageMax="602"/>
+			<BaoShi magicID="44" damageMin="158" damageMax="570"/>
+			<BaoShi magicID="71" damageMin="79" damageMax="238"/>
+			<BaoShi magicID="67" damageMin="63" damageMax="222"/>
+			<BaoShi magicID="177" damageMin="222" damageMax="634"/>
+			<BaoShi magicID="60" damageMin="95" damageMax="190"/>
+			<BaoShi magicID="59" damageMin="79" damageMax="238"/>
+			<BaoShi magicID="49" damageMin="95" damageMax="285"/>
+			<BaoShi magicID="11" damageMin="79" damageMax="333"/>
+			<BaoShi magicID="13" damageMin="79" damageMax="269"/>
+			<BaoShi magicID="174" damageMin="63" damageMax="190"/>
+			<BaoShi magicID="88" damageMin="190" damageMax="602"/>
+			<BaoShi magicID="23" damageMin="63" damageMax="222"/>
+			<BaoShi magicID="87" damageMin="127" damageMax="380"/>
+			<BaoShi magicID="33" damageMin="79" damageMax="174"/>
+			<BaoShi magicID="54" damageMin="63" damageMax="190"/>
+			<BaoShi magicID="89" damageMin="127" damageMax="380"/>
+			<BaoShi magicID="173" damageMin="158" damageMax="475"/>
+			<BaoShi magicID="171" damageMin="143" damageMax="428"/>
+		</Level>
+		<Level level="6" upgradeExp="12288" upgradeMoney="500000" looks="9026">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="259" damageMax="821"/>
+			<BaoShi magicID="44" damageMin="216" damageMax="778"/>
+			<BaoShi magicID="71" damageMin="108" damageMax="324"/>
+			<BaoShi magicID="67" damageMin="86" damageMax="302"/>
+			<BaoShi magicID="177" damageMin="302" damageMax="864"/>
+			<BaoShi magicID="60" damageMin="130" damageMax="259"/>
+			<BaoShi magicID="59" damageMin="108" damageMax="324"/>
+			<BaoShi magicID="49" damageMin="130" damageMax="389"/>
+			<BaoShi magicID="11" damageMin="108" damageMax="454"/>
+			<BaoShi magicID="13" damageMin="108" damageMax="367"/>
+			<BaoShi magicID="174" damageMin="86" damageMax="259"/>
+			<BaoShi magicID="88" damageMin="259" damageMax="821"/>
+			<BaoShi magicID="23" damageMin="86" damageMax="302"/>
+			<BaoShi magicID="87" damageMin="173" damageMax="518"/>
+			<BaoShi magicID="33" damageMin="108" damageMax="238"/>
+			<BaoShi magicID="54" damageMin="86" damageMax="259"/>
+			<BaoShi magicID="89" damageMin="173" damageMax="518"/>
+			<BaoShi magicID="173" damageMin="216" damageMax="648"/>
+			<BaoShi magicID="171" damageMin="194" damageMax="583"/>
+		</Level>
+		<Level level="7" upgradeExp="49152" upgradeMoney="500000" looks="9027">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="363" damageMax="1149"/>
+			<BaoShi magicID="44" damageMin="302" damageMax="1089"/>
+			<BaoShi magicID="71" damageMin="151" damageMax="454"/>
+			<BaoShi magicID="67" damageMin="121" damageMax="423"/>
+			<BaoShi magicID="177" damageMin="423" damageMax="1210"/>
+			<BaoShi magicID="60" damageMin="181" damageMax="363"/>
+			<BaoShi magicID="59" damageMin="151" damageMax="454"/>
+			<BaoShi magicID="49" damageMin="181" damageMax="544"/>
+			<BaoShi magicID="11" damageMin="151" damageMax="635"/>
+			<BaoShi magicID="13" damageMin="151" damageMax="514"/>
+			<BaoShi magicID="174" damageMin="121" damageMax="363"/>
+			<BaoShi magicID="88" damageMin="363" damageMax="1149"/>
+			<BaoShi magicID="23" damageMin="121" damageMax="423"/>
+			<BaoShi magicID="87" damageMin="242" damageMax="726"/>
+			<BaoShi magicID="33" damageMin="151" damageMax="333"/>
+			<BaoShi magicID="54" damageMin="121" damageMax="363"/>
+			<BaoShi magicID="89" damageMin="242" damageMax="726"/>
+			<BaoShi magicID="173" damageMin="302" damageMax="907"/>
+			<BaoShi magicID="171" damageMin="272" damageMax="816"/>
+		</Level>
+		<Level level="8" upgradeExp="196608" upgradeMoney="500000" looks="9028">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="484" damageMax="1532"/>
+			<BaoShi magicID="44" damageMin="403" damageMax="1452"/>
+			<BaoShi magicID="71" damageMin="202" damageMax="605"/>
+			<BaoShi magicID="67" damageMin="161" damageMax="564"/>
+			<BaoShi magicID="177" damageMin="564" damageMax="1613"/>
+			<BaoShi magicID="60" damageMin="242" damageMax="484"/>
+			<BaoShi magicID="59" damageMin="202" damageMax="605"/>
+			<BaoShi magicID="49" damageMin="242" damageMax="726"/>
+			<BaoShi magicID="11" damageMin="202" damageMax="847"/>
+			<BaoShi magicID="13" damageMin="202" damageMax="685"/>
+			<BaoShi magicID="174" damageMin="161" damageMax="484"/>
+			<BaoShi magicID="88" damageMin="484" damageMax="1532"/>
+			<BaoShi magicID="23" damageMin="161" damageMax="564"/>
+			<BaoShi magicID="87" damageMin="323" damageMax="968"/>
+			<BaoShi magicID="33" damageMin="202" damageMax="444"/>
+			<BaoShi magicID="54" damageMin="161" damageMax="484"/>
+			<BaoShi magicID="89" damageMin="323" damageMax="968"/>
+			<BaoShi magicID="173" damageMin="403" damageMax="1210"/>
+			<BaoShi magicID="171" damageMin="363" damageMax="1089"/>
+		</Level>
+		<Level level="9" upgradeExp="786432" upgradeMoney="500000" looks="9029">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="622" damageMax="1970"/>
+			<BaoShi magicID="44" damageMin="518" damageMax="1866"/>
+			<BaoShi magicID="71" damageMin="259" damageMax="778"/>
+			<BaoShi magicID="67" damageMin="207" damageMax="726"/>
+			<BaoShi magicID="177" damageMin="726" damageMax="2074"/>
+			<BaoShi magicID="60" damageMin="311" damageMax="622"/>
+			<BaoShi magicID="59" damageMin="259" damageMax="778"/>
+			<BaoShi magicID="49" damageMin="311" damageMax="933"/>
+			<BaoShi magicID="11" damageMin="259" damageMax="1089"/>
+			<BaoShi magicID="13" damageMin="259" damageMax="881"/>
+			<BaoShi magicID="174" damageMin="207" damageMax="622"/>
+			<BaoShi magicID="88" damageMin="622" damageMax="1970"/>
+			<BaoShi magicID="23" damageMin="207" damageMax="726"/>
+			<BaoShi magicID="87" damageMin="415" damageMax="1244"/>
+			<BaoShi magicID="33" damageMin="259" damageMax="570"/>
+			<BaoShi magicID="54" damageMin="207" damageMax="622"/>
+			<BaoShi magicID="89" damageMin="415" damageMax="1244"/>
+			<BaoShi magicID="173" damageMin="518" damageMax="1555"/>
+			<BaoShi magicID="171" damageMin="467" damageMax="1400"/>
+		</Level>
+		<Level level="10" looks="9030">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="795" damageMax="2517"/>
+			<BaoShi magicID="44" damageMin="662" damageMax="2385"/>
+			<BaoShi magicID="71" damageMin="331" damageMax="994"/>
+			<BaoShi magicID="67" damageMin="265" damageMax="927"/>
+			<BaoShi magicID="177" damageMin="927" damageMax="2650"/>
+			<BaoShi magicID="60" damageMin="397" damageMax="795"/>
+			<BaoShi magicID="59" damageMin="331" damageMax="994"/>
+			<BaoShi magicID="49" damageMin="397" damageMax="1192"/>
+			<BaoShi magicID="11" damageMin="331" damageMax="1391"/>
+			<BaoShi magicID="13" damageMin="331" damageMax="1126"/>
+			<BaoShi magicID="174" damageMin="265" damageMax="795"/>
+			<BaoShi magicID="88" damageMin="795" damageMax="2517"/>
+			<BaoShi magicID="23" damageMin="265" damageMax="927"/>
+			<BaoShi magicID="87" damageMin="530" damageMax="1590"/>
+			<BaoShi magicID="33" damageMin="331" damageMax="729"/>
+			<BaoShi magicID="54" damageMin="265" damageMax="795"/>
+			<BaoShi magicID="89" damageMin="530" damageMax="1590"/>
+			<BaoShi magicID="173" damageMin="662" damageMax="1987"/>
+			<BaoShi magicID="171" damageMin="596" damageMax="1788"/>
+		</Level>
+	</Type>
+	<Type id="Yellow">
+		<TaoZhuang>
+			<Taozhuang levelReq="10" damageValue="3"/>
+			<Taozhuang levelReq="18" damageValue="5"/>
+			<Taozhuang levelReq="26" damageValue="7"/>
+			<Taozhuang levelReq="34" damageValue="9"/>
+			<Taozhuang levelReq="42" damageValue="12"/>
+			<Taozhuang levelReq="50" damageValue="15"/>
+			<Taozhuang levelReq="58" damageValue="18"/>
+			<Taozhuang levelReq="66" damageValue="21"/>
+			<Taozhuang levelReq="74" damageValue="25"/>
+			<Taozhuang levelReq="80" damageValue="30"/>
+		</TaoZhuang>
+		<Level level="1" upgradeExp="20" upgradeMoney="500000" looks="9031">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="21" damageMax="66"/>
+			<BaoShi magicID="44" damageMin="17" damageMax="62"/>
+			<BaoShi magicID="71" damageMin="9" damageMax="26"/>
+			<BaoShi magicID="67" damageMin="7" damageMax="24"/>
+			<BaoShi magicID="177" damageMin="24" damageMax="69"/>
+			<BaoShi magicID="60" damageMin="10" damageMax="21"/>
+			<BaoShi magicID="59" damageMin="9" damageMax="26"/>
+			<BaoShi magicID="49" damageMin="10" damageMax="31"/>
+			<BaoShi magicID="11" damageMin="9" damageMax="36"/>
+			<BaoShi magicID="13" damageMin="9" damageMax="29"/>
+			<BaoShi magicID="174" damageMin="7" damageMax="21"/>
+			<BaoShi magicID="88" damageMin="21" damageMax="66"/>
+			<BaoShi magicID="23" damageMin="7" damageMax="24"/>
+			<BaoShi magicID="87" damageMin="14" damageMax="41"/>
+			<BaoShi magicID="33" damageMin="9" damageMax="19"/>
+			<BaoShi magicID="54" damageMin="7" damageMax="21"/>
+			<BaoShi magicID="89" damageMin="14" damageMax="41"/>
+			<BaoShi magicID="173" damageMin="17" damageMax="52"/>
+			<BaoShi magicID="171" damageMin="16" damageMax="47"/>
+		</Level>
+		<Level level="2" upgradeExp="64" upgradeMoney="500000" looks="9032">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="41" damageMax="131"/>
+			<BaoShi magicID="44" damageMin="35" damageMax="124"/>
+			<BaoShi magicID="71" damageMin="17" damageMax="52"/>
+			<BaoShi magicID="67" damageMin="14" damageMax="48"/>
+			<BaoShi magicID="177" damageMin="48" damageMax="138"/>
+			<BaoShi magicID="60" damageMin="21" damageMax="41"/>
+			<BaoShi magicID="59" damageMin="17" damageMax="52"/>
+			<BaoShi magicID="49" damageMin="21" damageMax="62"/>
+			<BaoShi magicID="11" damageMin="17" damageMax="73"/>
+			<BaoShi magicID="13" damageMin="17" damageMax="59"/>
+			<BaoShi magicID="174" damageMin="14" damageMax="41"/>
+			<BaoShi magicID="88" damageMin="41" damageMax="131"/>
+			<BaoShi magicID="23" damageMin="14" damageMax="48"/>
+			<BaoShi magicID="87" damageMin="28" damageMax="83"/>
+			<BaoShi magicID="33" damageMin="17" damageMax="38"/>
+			<BaoShi magicID="54" damageMin="14" damageMax="41"/>
+			<BaoShi magicID="89" damageMin="28" damageMax="83"/>
+			<BaoShi magicID="173" damageMin="35" damageMax="104"/>
+			<BaoShi magicID="171" damageMin="31" damageMax="93"/>
+		</Level>
+		<Level level="3" upgradeExp="192" upgradeMoney="500000" looks="9033">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="83" damageMax="263"/>
+			<BaoShi magicID="44" damageMin="69" damageMax="249"/>
+			<BaoShi magicID="71" damageMin="35" damageMax="104"/>
+			<BaoShi magicID="67" damageMin="28" damageMax="97"/>
+			<BaoShi magicID="177" damageMin="97" damageMax="276"/>
+			<BaoShi magicID="60" damageMin="41" damageMax="83"/>
+			<BaoShi magicID="59" damageMin="35" damageMax="104"/>
+			<BaoShi magicID="49" damageMin="41" damageMax="124"/>
+			<BaoShi magicID="11" damageMin="35" damageMax="145"/>
+			<BaoShi magicID="13" damageMin="35" damageMax="118"/>
+			<BaoShi magicID="174" damageMin="28" damageMax="83"/>
+			<BaoShi magicID="88" damageMin="83" damageMax="263"/>
+			<BaoShi magicID="23" damageMin="28" damageMax="97"/>
+			<BaoShi magicID="87" damageMin="55" damageMax="166"/>
+			<BaoShi magicID="33" damageMin="35" damageMax="76"/>
+			<BaoShi magicID="54" damageMin="28" damageMax="83"/>
+			<BaoShi magicID="89" damageMin="55" damageMax="166"/>
+			<BaoShi magicID="173" damageMin="69" damageMax="207"/>
+			<BaoShi magicID="171" damageMin="62" damageMax="187"/>
+		</Level>
+		<Level level="4" upgradeExp="768" upgradeMoney="500000" looks="9034">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="145" damageMax="460"/>
+			<BaoShi magicID="44" damageMin="121" damageMax="435"/>
+			<BaoShi magicID="71" damageMin="60" damageMax="181"/>
+			<BaoShi magicID="67" damageMin="48" damageMax="169"/>
+			<BaoShi magicID="177" damageMin="169" damageMax="484"/>
+			<BaoShi magicID="60" damageMin="73" damageMax="145"/>
+			<BaoShi magicID="59" damageMin="60" damageMax="181"/>
+			<BaoShi magicID="49" damageMin="73" damageMax="218"/>
+			<BaoShi magicID="11" damageMin="60" damageMax="254"/>
+			<BaoShi magicID="13" damageMin="60" damageMax="206"/>
+			<BaoShi magicID="174" damageMin="48" damageMax="145"/>
+			<BaoShi magicID="88" damageMin="145" damageMax="460"/>
+			<BaoShi magicID="23" damageMin="48" damageMax="169"/>
+			<BaoShi magicID="87" damageMin="97" damageMax="290"/>
+			<BaoShi magicID="33" damageMin="60" damageMax="133"/>
+			<BaoShi magicID="54" damageMin="48" damageMax="145"/>
+			<BaoShi magicID="89" damageMin="97" damageMax="290"/>
+			<BaoShi magicID="173" damageMin="121" damageMax="363"/>
+			<BaoShi magicID="171" damageMin="109" damageMax="327"/>
+		</Level>
+		<Level level="5" upgradeExp="3072" upgradeMoney="500000" looks="9035">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="228" damageMax="722"/>
+			<BaoShi magicID="44" damageMin="190" damageMax="684"/>
+			<BaoShi magicID="71" damageMin="95" damageMax="285"/>
+			<BaoShi magicID="67" damageMin="76" damageMax="266"/>
+			<BaoShi magicID="177" damageMin="266" damageMax="760"/>
+			<BaoShi magicID="60" damageMin="114" damageMax="228"/>
+			<BaoShi magicID="59" damageMin="95" damageMax="285"/>
+			<BaoShi magicID="49" damageMin="114" damageMax="342"/>
+			<BaoShi magicID="11" damageMin="95" damageMax="399"/>
+			<BaoShi magicID="13" damageMin="95" damageMax="323"/>
+			<BaoShi magicID="174" damageMin="76" damageMax="228"/>
+			<BaoShi magicID="88" damageMin="228" damageMax="722"/>
+			<BaoShi magicID="23" damageMin="76" damageMax="266"/>
+			<BaoShi magicID="87" damageMin="152" damageMax="456"/>
+			<BaoShi magicID="33" damageMin="95" damageMax="209"/>
+			<BaoShi magicID="54" damageMin="76" damageMax="228"/>
+			<BaoShi magicID="89" damageMin="152" damageMax="456"/>
+			<BaoShi magicID="173" damageMin="190" damageMax="570"/>
+			<BaoShi magicID="171" damageMin="171" damageMax="513"/>
+		</Level>
+		<Level level="6" upgradeExp="12288" upgradeMoney="500000" looks="9036">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="311" damageMax="985"/>
+			<BaoShi magicID="44" damageMin="259" damageMax="933"/>
+			<BaoShi magicID="71" damageMin="130" damageMax="389"/>
+			<BaoShi magicID="67" damageMin="104" damageMax="363"/>
+			<BaoShi magicID="177" damageMin="363" damageMax="1037"/>
+			<BaoShi magicID="60" damageMin="156" damageMax="311"/>
+			<BaoShi magicID="59" damageMin="130" damageMax="389"/>
+			<BaoShi magicID="49" damageMin="156" damageMax="467"/>
+			<BaoShi magicID="11" damageMin="130" damageMax="544"/>
+			<BaoShi magicID="13" damageMin="130" damageMax="441"/>
+			<BaoShi magicID="174" damageMin="104" damageMax="311"/>
+			<BaoShi magicID="88" damageMin="311" damageMax="985"/>
+			<BaoShi magicID="23" damageMin="104" damageMax="363"/>
+			<BaoShi magicID="87" damageMin="207" damageMax="622"/>
+			<BaoShi magicID="33" damageMin="130" damageMax="285"/>
+			<BaoShi magicID="54" damageMin="104" damageMax="311"/>
+			<BaoShi magicID="89" damageMin="207" damageMax="622"/>
+			<BaoShi magicID="173" damageMin="259" damageMax="778"/>
+			<BaoShi magicID="171" damageMin="233" damageMax="700"/>
+		</Level>
+		<Level level="7" upgradeExp="49152" upgradeMoney="500000" looks="9037">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="435" damageMax="1379"/>
+			<BaoShi magicID="44" damageMin="363" damageMax="1306"/>
+			<BaoShi magicID="71" damageMin="181" damageMax="544"/>
+			<BaoShi magicID="67" damageMin="145" damageMax="508"/>
+			<BaoShi magicID="177" damageMin="508" damageMax="1452"/>
+			<BaoShi magicID="60" damageMin="218" damageMax="435"/>
+			<BaoShi magicID="59" damageMin="181" damageMax="544"/>
+			<BaoShi magicID="49" damageMin="218" damageMax="653"/>
+			<BaoShi magicID="11" damageMin="181" damageMax="762"/>
+			<BaoShi magicID="13" damageMin="181" damageMax="617"/>
+			<BaoShi magicID="174" damageMin="145" damageMax="435"/>
+			<BaoShi magicID="88" damageMin="435" damageMax="1379"/>
+			<BaoShi magicID="23" damageMin="145" damageMax="508"/>
+			<BaoShi magicID="87" damageMin="290" damageMax="871"/>
+			<BaoShi magicID="33" damageMin="181" damageMax="399"/>
+			<BaoShi magicID="54" damageMin="145" damageMax="435"/>
+			<BaoShi magicID="89" damageMin="290" damageMax="871"/>
+			<BaoShi magicID="173" damageMin="363" damageMax="1089"/>
+			<BaoShi magicID="171" damageMin="327" damageMax="980"/>
+		</Level>
+		<Level level="8" upgradeExp="196608" upgradeMoney="500000" looks="9038">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="581" damageMax="1839"/>
+			<BaoShi magicID="44" damageMin="484" damageMax="1742"/>
+			<BaoShi magicID="71" damageMin="242" damageMax="726"/>
+			<BaoShi magicID="67" damageMin="194" damageMax="677"/>
+			<BaoShi magicID="177" damageMin="677" damageMax="1935"/>
+			<BaoShi magicID="60" damageMin="290" damageMax="581"/>
+			<BaoShi magicID="59" damageMin="242" damageMax="726"/>
+			<BaoShi magicID="49" damageMin="290" damageMax="871"/>
+			<BaoShi magicID="11" damageMin="242" damageMax="1016"/>
+			<BaoShi magicID="13" damageMin="242" damageMax="823"/>
+			<BaoShi magicID="174" damageMin="194" damageMax="581"/>
+			<BaoShi magicID="88" damageMin="581" damageMax="1839"/>
+			<BaoShi magicID="23" damageMin="194" damageMax="677"/>
+			<BaoShi magicID="87" damageMin="387" damageMax="1161"/>
+			<BaoShi magicID="33" damageMin="242" damageMax="532"/>
+			<BaoShi magicID="54" damageMin="194" damageMax="581"/>
+			<BaoShi magicID="89" damageMin="387" damageMax="1161"/>
+			<BaoShi magicID="173" damageMin="484" damageMax="1452"/>
+			<BaoShi magicID="171" damageMin="435" damageMax="1306"/>
+		</Level>
+		<Level level="9" upgradeExp="786432" upgradeMoney="500000" looks="9039">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="746" damageMax="2364"/>
+			<BaoShi magicID="44" damageMin="622" damageMax="2239"/>
+			<BaoShi magicID="71" damageMin="311" damageMax="933"/>
+			<BaoShi magicID="67" damageMin="249" damageMax="871"/>
+			<BaoShi magicID="177" damageMin="871" damageMax="2488"/>
+			<BaoShi magicID="60" damageMin="373" damageMax="746"/>
+			<BaoShi magicID="59" damageMin="311" damageMax="933"/>
+			<BaoShi magicID="49" damageMin="373" damageMax="1120"/>
+			<BaoShi magicID="11" damageMin="311" damageMax="1306"/>
+			<BaoShi magicID="13" damageMin="311" damageMax="1058"/>
+			<BaoShi magicID="174" damageMin="249" damageMax="746"/>
+			<BaoShi magicID="88" damageMin="746" damageMax="2364"/>
+			<BaoShi magicID="23" damageMin="249" damageMax="871"/>
+			<BaoShi magicID="87" damageMin="498" damageMax="1493"/>
+			<BaoShi magicID="33" damageMin="311" damageMax="684"/>
+			<BaoShi magicID="54" damageMin="249" damageMax="746"/>
+			<BaoShi magicID="89" damageMin="498" damageMax="1493"/>
+			<BaoShi magicID="173" damageMin="622" damageMax="1866"/>
+			<BaoShi magicID="171" damageMin="560" damageMax="1680"/>
+		</Level>
+		<Level level="10" looks="9040">
+			<BaoShi magicID="0" damageMin="0" damageMax="0"/>
+			<BaoShi magicID="26" damageMin="954" damageMax="3021"/>
+			<BaoShi magicID="44" damageMin="795" damageMax="2862"/>
+			<BaoShi magicID="71" damageMin="397" damageMax="1192"/>
+			<BaoShi magicID="67" damageMin="318" damageMax="1113"/>
+			<BaoShi magicID="177" damageMin="1113" damageMax="3180"/>
+			<BaoShi magicID="60" damageMin="477" damageMax="954"/>
+			<BaoShi magicID="59" damageMin="397" damageMax="1192"/>
+			<BaoShi magicID="49" damageMin="477" damageMax="1431"/>
+			<BaoShi magicID="11" damageMin="397" damageMax="1669"/>
+			<BaoShi magicID="13" damageMin="397" damageMax="1351"/>
+			<BaoShi magicID="174" damageMin="318" damageMax="954"/>
+			<BaoShi magicID="88" damageMin="954" damageMax="3021"/>
+			<BaoShi magicID="23" damageMin="318" damageMax="1113"/>
+			<BaoShi magicID="87" damageMin="636" damageMax="1908"/>
+			<BaoShi magicID="33" damageMin="397" damageMax="874"/>
+			<BaoShi magicID="54" damageMin="318" damageMax="954"/>
+			<BaoShi magicID="89" damageMin="636" damageMax="1908"/>
+			<BaoShi magicID="173" damageMin="795" damageMax="2385"/>
+			<BaoShi magicID="171" damageMin="715" damageMax="2146"/>
+		</Level>
+	</Type>
+	<Type id="Red">
+		<TaoZhuang>
+			<Taozhuang levelReq="10" damageValue="1"/>
+			<Taozhuang levelReq="20" damageValue="5"/>
+			<Taozhuang levelReq="30" damageValue="8"/>
+			<Taozhuang levelReq="50" damageValue="10"/>
+			<Taozhuang levelReq="80" damageValue="20"/>
+		</TaoZhuang>
+		<Level level="1">
+			<BaoShi magicID="0" damageMin="0" damageMax="0" upgradeExp="0" looks="9041"/>
+			<BaoShi magicID="2" damageMin="100" damageMax="200" upgradeExp="20" looks="9041"/>
+			<BaoShi magicID="3" damageMin="102" damageMax="203" upgradeExp="20" looks="9041"/>
+		</Level>
+		<Level level="2">
+			<BaoShi magicID="0" damageMin="0" damageMax="0" upgradeExp="0" looks="9042"/>
+			<BaoShi magicID="2" damageMin="105" damageMax="205" upgradeExp="3000" looks="9042"/>
+			<BaoShi magicID="3" damageMin="108" damageMax="208" upgradeExp="3000" looks="9042"/>
+		</Level>
+		<Level level="3">
+			<BaoShi magicID="0" damageMin="0" damageMax="0" upgradeExp="0" looks="9043"/>
+			<BaoShi magicID="2" damageMin="105" damageMax="205" upgradeExp="3000" looks="9043"/>
+			<BaoShi magicID="3" damageMin="108" damageMax="208" upgradeExp="3000" looks="9043"/>
+		</Level>
+		<Level level="4">
+			<BaoShi magicID="0" damageMin="0" damageMax="0" upgradeExp="0" looks="9044"/>
+			<BaoShi magicID="2" damageMin="105" damageMax="205" upgradeExp="3000" looks="9044"/>
+			<BaoShi magicID="3" damageMin="108" damageMax="208" upgradeExp="3000" looks="9044"/>
+		</Level>
+		<Level level="5">
+			<BaoShi magicID="0" damageMin="0" damageMax="0" upgradeExp="0" looks="9045"/>
+			<BaoShi magicID="2" damageMin="105" damageMax="205" upgradeExp="3000" looks="9045"/>
+			<BaoShi magicID="3" damageMin="108" damageMax="208" upgradeExp="3000" looks="9045"/>
+		</Level>
+		<Level level="6">
+			<BaoShi magicID="0" damageMin="0" damageMax="0" upgradeExp="0" looks="9046"/>
+			<BaoShi magicID="2" damageMin="105" damageMax="205" upgradeExp="3000" looks="9046"/>
+			<BaoShi magicID="3" damageMin="108" damageMax="208" upgradeExp="3000" looks="9046"/>
+		</Level>
+		<Level level="7">
+			<BaoShi magicID="0" damageMin="0" damageMax="0" upgradeExp="0" looks="9047"/>
+			<BaoShi magicID="2" damageMin="105" damageMax="205" upgradeExp="3000" looks="9047"/>
+			<BaoShi magicID="3" damageMin="108" damageMax="208" upgradeExp="3000" looks="9047"/>
+		</Level>
+		<Level level="8">
+			<BaoShi magicID="0" damageMin="0" damageMax="0" upgradeExp="0" looks="9048"/>
+			<BaoShi magicID="2" damageMin="105" damageMax="205" upgradeExp="3000" looks="9048"/>
+			<BaoShi magicID="3" damageMin="108" damageMax="208" upgradeExp="3000" looks="9048"/>
+		</Level>
+		<Level level="9">
+			<BaoShi magicID="0" damageMin="0" damageMax="0" upgradeExp="0" looks="9049"/>
+			<BaoShi magicID="2" damageMin="105" damageMax="205" upgradeExp="3000" looks="9049"/>
+			<BaoShi magicID="3" damageMin="108" damageMax="208" upgradeExp="3000" looks="9049"/>
+		</Level>
+		<Level level="10">
+			<BaoShi magicID="0" damageMin="0" damageMax="0" upgradeExp="0" looks="9050"/>
+			<BaoShi magicID="2" damageMin="105" damageMax="205" upgradeExp="3000" looks="9050"/>
+			<BaoShi magicID="3" damageMin="108" damageMax="208" upgradeExp="3000" looks="9050"/>
+		</Level>
+	</Type>
+</BaoShi>

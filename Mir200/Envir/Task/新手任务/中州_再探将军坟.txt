@@ -1,0 +1,12 @@
+[setup]
+stepcount = 4
+title = 新手任务--再探将军坟
+ID = 24
+stepaim1 = 去找<王城太史令/@@goto 0 太史令 480,155>聊聊 <color=green [传]/@@flyto 28 0 480 155>
+stepaim2 = 去<将军坟东/@@goplace H081 207,321>杀10个尸卫 <color=green [传]/@@flyto 27 H081 207 321>
+stepaim3 = 还要杀<$TASKVAL(24).I0>个<尸卫/@@goplace H081 207,321> <color=green [传]/@@flyto 27 H081 207 321>
+stepaim4 = 任务完成！去找<王城太史令/@@goto 0 太史令 480,155> <color=green [传]/@@flyto 28 0 480 155>
+stepDESC1 = <color=graygolden 任务目的：>去找<王城太史令/@@goto 0 太史令 480,155>聊聊\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：400000\<color=graygolden 任务介绍:>\    将军坟的秘密我知道的也不是很多，如果你有兴趣的话\，你可以去<太史令/@@goto 0 太史令 480,155>那打听更多关于将军坟东的信息。或许他\有什么其它任务交给你呢！
+stepDESC2 = <color=graygolden 任务目的：>去<将军坟东/@@goplace H081 207,321>杀10个尸卫\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：400000\<color=graygolden 任务介绍:>\    蝎子和蝙蝠支持产生了变异的普通生物，将军坟内部的\不死生物才是真正强大的魔物。\    去消灭10个尸卫后回来找我。
+stepDESC3 = <color=graygolden 任务目的：>去<将军坟东/@@goplace H081 207,321>杀10个尸卫\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：400000\<color=graygolden 任务介绍:>\    蝎子和蝙蝠支持产生了变异的普通生物，将军坟内部的\不死生物才是真正强大的魔物。\    去消灭10个尸卫后回来找我。\    还要干掉<$TASKVAL(24).I0>只尸卫。
+stepDESC4 = <color=graygolden 任务目的：>去<将军坟东/@@goplace H081 207,321>杀10个尸卫\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：400000\<color=graygolden 任务介绍:>\    蝎子和蝙蝠支持产生了变异的普通生物，将军坟内部的\不死生物才是真正强大的魔物。\    去消灭10个尸卫后回来找我。\    恭喜，圆满完成任务！快用向王城太史令回报吧！

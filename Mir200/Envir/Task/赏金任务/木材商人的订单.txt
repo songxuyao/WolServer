@@ -1,0 +1,6 @@
+[setup]
+stepcount = 1
+title = 木材商人的订单
+ID = 56
+stepaim1 = 收集10块品质10的木材。
+stepDESC1 = <color=graygolden 任务目的：>  收集10块品质10的木材。\<color=graygolden 任务介绍:>\  勇士，木材商人在我这里下订单，需求10块品质10的木材\。如果你能帮我完成这份订单，我将给你丰厚的奖励。

@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Fabao>
+	<item id = "17412">
+		<jobprop>
+			<desp value="血量上限 : 200 "/>
+			<desp value="物理攻击 : 3 - 5"/>
+		</jobprop>
+		<jobprop>
+			<desp value="血量上限 : 100 "/>
+			<desp value="魔法攻击 : 3 - 5 "/>
+		</jobprop>
+		<jobprop>
+			<desp value="血量上限 : 150 "/>
+			<desp value="道术攻击 : 3 - 5 "/>
+		</jobprop>
+		<jobprop>
+			<desp value="血量上限 : 200 "/>
+			<desp value="妖力攻击 : 3 - 5 "/>
+		</jobprop>
+		<commonprop>
+			<desp value="物理防御 : 1 - 3"/>
+			<desp value="魔法防御 : 1 - 3 "/>
+			<desp value="触发概率 : +10%"/>
+			<desp value="法宝伤害 : 40 - 40 "/>
+		</commonprop>
+	</item>
+	<item id = "17413">
+		<jobprop>
+			<desp value="血量上限 : 320 "/>
+			<desp value="物理攻击 : 4 - 8"/>
+		</jobprop>
+		<jobprop>
+			<desp value="血量上限 : 160 "/>
+			<desp value="魔法攻击 : 4 - 8 "/>
+		</jobprop>
+		<jobprop>
+			<desp value="血量上限 : 240 "/>
+			<desp value="道术攻击 : 4 - 8 "/>
+		</jobprop>
+		<jobprop>
+			<desp value="血量上限 : 320 "/>
+			<desp value="妖力攻击 : 4 - 8"/>
+		</jobprop>
+		<commonprop>
+			<desp value="物理防御 : 2 - 4"/>
+			<desp value="魔法防御 : 2 - 4 "/>
+			<desp value="触发概率 : +18%"/>
+			<desp value="法宝伤害 : 80 - 80 "/>
+		</commonprop>
+	</item>
+	<item id = "18070">
+		<jobprop>
+			<desp value="血量上限 : 520 "/>
+			<desp value="物理攻击 : 6 - 13"/>
+		</jobprop>
+		<jobprop>
+			<desp value="血量上限 : 260 "/>
+			<desp value="魔法攻击 : 6 - 13 "/>
+		</jobprop>
+		<jobprop>
+			<desp value="血量上限 : 390 "/>
+			<desp value="道术攻击 : 6 - 13 "/>
+		</jobprop>
+		<jobprop>
+			<desp value="血量上限 : 520 "/>
+			<desp value="妖力攻击 : 6 - 13"/>
+		</jobprop>
+		<commonprop>
+			<desp value="物理防御 : 7 - 7"/>
+			<desp value="魔法防御 : 7 - 7 "/>
+			<desp value="触发概率 : +21%"/>
+			<desp value="法宝伤害 : 104 - 104 "/>
+		</commonprop>
+	</item>
+	<item id = "17415">
+		<jobprop>
+			<desp value="血量上限 : 800 "/>
+			<desp value="物理攻击 : 10 - 20"/>
+		</jobprop>
+		<jobprop>
+			<desp value="血量上限 : 400 "/>
+			<desp value="魔法攻击 : 10 - 20 "/>
+		</jobprop>
+		<jobprop>
+			<desp value="血量上限 : 600 "/>
+			<desp value="道术攻击 : 10 - 20 "/>
+		</jobprop>
+		<jobprop>
+			<desp value="血量上限 : 800 "/>
+			<desp value="妖力攻击 : 10 - 20 "/>
+		</jobprop>
+		<commonprop>
+			<desp value="物理防御 : 10 - 10"/>
+			<desp value="魔法防御 : 10 - 10 "/>
+			<desp value="触发概率 : +24%"/>
+			<desp value="法宝伤害 : 160 - 160 "/>
+			<desp value="法宝吸血 : 40 "/>
+		</commonprop>
+	</item>
+	<item id = "17416">
+		<jobprop>
+			<desp value="血量上限 : 1000 "/>
+			<desp value="物理攻击 : 13 - 27"/>
+		</jobprop>
+		<jobprop>
+			<desp value="血量上限 : 500 "/>
+			<desp value="魔法攻击 : 13 - 27 "/>
+		</jobprop>
+		<jobprop>
+			<desp value="血量上限 : 750 "/>
+			<desp value="道术攻击 : 13 - 27 "/>
+		</jobprop>
+		<jobprop>
+			<desp value="血量上限 : 1000 "/>
+			<desp value="妖力攻击 : 13 - 27"/>
+		</jobprop>
+		<commonprop>
+			<desp value="物理防御 : 13 - 13"/>
+			<desp value="魔法防御 : 13 - 13 "/>
+			<desp value="触发概率 : +27%"/>
+			<desp value="法宝伤害 : 220 - 220 "/>
+			<desp value="法宝吸血 : 70 "/>
+		</commonprop>
+	</item>
+	<item id = "17429">
+		<jobprop>
+			<desp value="战士血量 : 150 - 150"/>
+			<desp value="法师血量 : 40 - 40"/>
+			<desp value="道士血量 : 110 - 110"/>
+		</jobprop>
+	</item>
+	<item id = "17430">
+		<jobprop>
+			<desp value="战士血量 : 200 - 200"/>
+			<desp value="法师血量 : 60 - 60"/>
+			<desp value="道士血量 : 140 - 140"/>
+		</jobprop>
+	</item>
+	<item id = "17431">
+		<jobprop>
+			<desp value="战士血量 : 250 - 250"/>
+			<desp value="法师血量 : 80 - 80"/>
+			<desp value="道士血量 : 170 - 170"/>
+		</jobprop>
+	</item>
+	<item id = "17432">
+		<jobprop>
+			<desp value="战士血量 : 300 - 300"/>
+			<desp value="法师血量 : 100 - 100"/>
+			<desp value="道士血量 : 200 - 200"/>
+		</jobprop>
+	</item>
+	<item id = "17433">
+		<jobprop>
+			<desp value="战士血量 : 350 - 350"/>
+			<desp value="法师血量 : 120 - 120"/>
+			<desp value="道士血量 : 230 - 230"/>
+		</jobprop>
+	</item>
+	<item id = "17434">
+		<jobprop>
+			<desp value="战士血量 : 400 - 400"/>
+			<desp value="法师血量 : 140 - 140"/>
+			<desp value="道士血量 : 260 - 260"/>
+		</jobprop>
+	</item>
+	<item id = "17435">
+		<jobprop>
+			<desp value="战士血量 : 450 - 450"/>
+			<desp value="法师血量 : 160 - 160"/>
+			<desp value="道士血量 : 290 - 290"/>
+		</jobprop>
+	</item>
+	<item id = "17436">
+		<jobprop>
+			<desp value="战士血量 : 500 - 500"/>
+			<desp value="法师血量 : 180 - 180"/>
+			<desp value="道士血量 : 320 - 320"/>
+		</jobprop>
+	</item>
+	<item id = "17437">
+		<jobprop>
+			<desp value="战士血量 : 550 - 550"/>
+			<desp value="法师血量 : 200 - 200"/>
+			<desp value="道士血量 : 350 - 350"/>
+		</jobprop>
+	</item>
+	<item id = "17438">
+		<jobprop>
+			<desp value="战士血量 : 600 - 600"/>
+			<desp value="法师血量 : 220 - 220"/>
+			<desp value="道士血量 : 380 - 380"/>
+		</jobprop>
+	</item>
+	<item id = "17439">
+		<jobprop>
+			<desp value="攻击 : 0 - 4"/>
+		</jobprop>
+	</item>
+	<item id = "17440">
+		<jobprop>
+			<desp value="攻击 : 1 - 6"/>
+		</jobprop>
+	</item>
+	<item id = "17441">
+		<jobprop>
+			<desp value="攻击 : 2 - 8"/>
+		</jobprop>
+	</item>
+	<item id = "17442">
+		<jobprop>
+			<desp value="攻击 : 3 - 10"/>
+		</jobprop>
+	</item>
+	<item id = "17443">
+		<jobprop>
+			<desp value="攻击 : 5 - 14"/>
+		</jobprop>
+	</item>
+	<item id = "17444">
+		<jobprop>
+			<desp value="攻击 : 7 - 18"/>
+		</jobprop>
+	</item>
+	<item id = "17445">
+		<jobprop>
+			<desp value="攻击 : 9 - 22"/>
+		</jobprop>
+	</item>
+	<item id = "17446">
+		<jobprop>
+			<desp value="攻击 : 11 - 26"/>
+		</jobprop>
+	</item>
+	<item id = "17447">
+		<jobprop>
+			<desp value="攻击 : 13 - 30"/>
+		</jobprop>
+	</item>
+	<item id = "17448">
+		<jobprop>
+			<desp value="攻击 : 15 - 34"/>
+		</jobprop>
+	</item>
+	<item id = "17449">
+		<jobprop>
+			<desp value="道术攻击 : 0 - 4"/>
+		</jobprop>
+	</item>
+	<item id = "17450">
+		<jobprop>
+			<desp value="道术攻击 : 1 - 6"/>
+		</jobprop>
+	</item>
+	<item id = "17451">
+		<jobprop>
+			<desp value="道术攻击 : 2 - 8"/>
+		</jobprop>
+	</item>
+	<item id = "17452">
+		<jobprop>
+			<desp value="道术攻击 : 3 - 10"/>
+		</jobprop>
+	</item>
+	<item id = "17453">
+		<jobprop>
+			<desp value="道术攻击 : 5 - 14"/>
+		</jobprop>
+	</item>
+	<item id = "17454">
+		<jobprop>
+			<desp value="道术攻击 : 7 - 18"/>
+		</jobprop>
+	</item>
+	<item id = "17455">
+		<jobprop>
+			<desp value="道术攻击 : 9 - 22"/>
+		</jobprop>
+	</item>
+	<item id = "17456">
+		<jobprop>
+			<desp value="道术攻击 : 11 - 26"/>
+		</jobprop>
+	</item>
+	<item id = "17457">
+		<jobprop>
+			<desp value="道术攻击 : 13 - 30"/>
+		</jobprop>
+	</item>
+	<item id = "17458">
+		<jobprop>
+			<desp value="道术攻击 : 15 - 34"/>
+		</jobprop>
+	</item>
+	<item id = "17459">
+		<jobprop>
+			<desp value="魔法攻击 : 0 - 4"/>
+		</jobprop>
+	</item>
+	<item id = "17460">
+		<jobprop>
+			<desp value="魔法攻击 : 1 - 6"/>
+		</jobprop>
+	</item>
+	<item id = "17461">
+		<jobprop>
+			<desp value="魔法攻击 : 2 - 8"/>
+		</jobprop>
+	</item>
+	<item id = "17462">
+		<jobprop>
+			<desp value="魔法攻击 : 3 - 10"/>
+		</jobprop>
+	</item>
+	<item id = "17463">
+		<jobprop>
+			<desp value="魔法攻击 : 5 - 14"/>
+		</jobprop>
+	</item>
+	<item id = "17464">
+		<jobprop>
+			<desp value="魔法攻击 : 7 - 18"/>
+		</jobprop>
+	</item>
+	<item id = "17465">
+		<jobprop>
+			<desp value="魔法攻击 : 9 - 22"/>
+		</jobprop>
+	</item>
+	<item id = "17466">
+		<jobprop>
+			<desp value="魔法攻击 : 11 - 26"/>
+		</jobprop>
+	</item>
+	<item id = "17467">
+		<jobprop>
+			<desp value="魔法攻击 : 13 - 30"/>
+		</jobprop>
+	</item>
+	<item id = "17468">
+		<jobprop>
+			<desp value="魔法攻击 : 15 - 34"/>
+		</jobprop>
+	</item>
+	<item id = "17469">
+		<jobprop>
+			<desp value="防御 : 0 - 4"/>
+		</jobprop>
+	</item>
+	<item id = "17470">
+		<jobprop>
+			<desp value="防御 : 1 - 6"/>
+		</jobprop>
+	</item>
+	<item id = "17471">
+		<jobprop>
+			<desp value="防御 : 2 - 8"/>
+		</jobprop>
+	</item>
+	<item id = "17472">
+		<jobprop>
+			<desp value="防御 : 3 - 10"/>
+		</jobprop>
+	</item>
+	<item id = "17473">
+		<jobprop>
+			<desp value="防御 : 5 - 14"/>
+		</jobprop>
+	</item>
+	<item id = "17474">
+		<jobprop>
+			<desp value="防御 : 7 - 18"/>
+		</jobprop>
+	</item>
+	<item id = "17475">
+		<jobprop>
+			<desp value="防御 : 9 - 22"/>
+		</jobprop>
+	</item>
+	<item id = "17476">
+		<jobprop>
+			<desp value="防御 : 11 - 26"/>
+		</jobprop>
+	</item>
+	<item id = "17477">
+		<jobprop>
+			<desp value="防御 : 13 - 30"/>
+		</jobprop>
+	</item>
+	<item id = "17478">
+		<jobprop>
+			<desp value="防御 : 15 - 34"/>
+		</jobprop>
+	</item>
+	<item id = "17479">
+		<jobprop>
+			<desp value="魔法防御 : 0 - 4"/>
+		</jobprop>
+	</item>
+	<item id = "17480">
+		<jobprop>
+			<desp value="魔法防御 : 1 - 6"/>
+		</jobprop>
+	</item>
+	<item id = "17481">
+		<jobprop>
+			<desp value="魔法防御 : 2 - 8"/>
+		</jobprop>
+	</item>
+	<item id = "17482">
+		<jobprop>
+			<desp value="魔法防御 : 3 - 10"/>
+		</jobprop>
+	</item>
+	<item id = "17483">
+		<jobprop>
+			<desp value="魔法防御 : 5 - 14"/>
+		</jobprop>
+	</item>
+	<item id = "17484">
+		<jobprop>
+			<desp value="魔法防御 : 7 - 18"/>
+		</jobprop>
+	</item>
+	<item id = "17485">
+		<jobprop>
+			<desp value="魔法防御 : 9 - 22"/>
+		</jobprop>
+	</item>
+	<item id = "17486">
+		<jobprop>
+			<desp value="魔法防御 : 11 - 26"/>
+		</jobprop>
+	</item>
+	<item id = "17487">
+		<jobprop>
+			<desp value="魔法防御 : 13 - 30"/>
+		</jobprop>
+	</item>
+	<item id = "17488">
+		<jobprop>
+			<desp value="魔法防御 : 15 - 34"/>
+		</jobprop>
+	</item>
+	<item id = "17489">
+		<jobprop>
+			<desp value="物理命中 : 1"/>
+			<desp value="魔法命中 : 4"/>
+		</jobprop>
+	</item>
+		<item id = "17490">
+		<jobprop>
+			<desp value="物理命中 : 2"/>
+			<desp value="魔法命中 : 6"/>
+		</jobprop>
+	</item>
+		<item id = "17491">
+		<jobprop>
+			<desp value="物理命中 : 3"/>
+			<desp value="魔法命中 : 8"/>
+		</jobprop>
+	</item>
+		<item id = "17492">
+		<jobprop>
+			<desp value="物理命中 : 5"/>
+			<desp value="魔法命中 : 10"/>
+		</jobprop>
+	</item>
+		<item id = "17493">
+		<jobprop>
+			<desp value="物理命中 : 7"/>
+			<desp value="魔法命中 : 14"/>
+		</jobprop>
+	</item>
+		<item id = "17494">
+		<jobprop>
+			<desp value="物理命中 : 9"/>
+			<desp value="魔法命中 : 18"/>
+		</jobprop>
+	</item>
+		<item id = "17495">
+		<jobprop>
+			<desp value="物理命中 : 11"/>
+			<desp value="魔法命中 : 22"/>
+		</jobprop>
+	</item>
+		<item id = "17496">
+		<jobprop>
+			<desp value="物理命中 : 13"/>
+			<desp value="魔法命中 : 26"/>
+		</jobprop>
+	</item>
+		<item id = "17497">
+		<jobprop>
+			<desp value="物理命中 : 15"/>
+			<desp value="魔法命中 : 30"/>
+		</jobprop>
+	</item>
+		<item id = "17498">
+		<jobprop>
+			<desp value="物理命中 : 17"/>
+			<desp value="魔法命中 : 34"/>
+		</jobprop>
+	</item>
+		<item id = "17499">
+		<jobprop>
+			<desp value="躲避 : 1"/>
+			<desp value="魔法躲避 : 4"/>
+		</jobprop>
+	</item>
+		<item id = "17500">
+		<jobprop>
+			<desp value="躲避 : 2"/>
+			<desp value="魔法躲避 : 6"/>
+		</jobprop>
+	</item>
+		<item id = "17501">
+		<jobprop>
+			<desp value="躲避 : 3"/>
+			<desp value="魔法躲避 : 8"/>
+		</jobprop>
+	</item>
+		<item id = "17502">
+		<jobprop>
+			<desp value="躲避 : 5"/>
+			<desp value="魔法躲避 : 10"/>
+		</jobprop>
+	</item>
+		<item id = "17503">
+		<jobprop>
+			<desp value="躲避 : 7"/>
+			<desp value="魔法躲避 : 14"/>
+		</jobprop>
+	</item>
+		<item id = "17504">
+		<jobprop>
+			<desp value="躲避 : 9"/>
+			<desp value="魔法躲避 : 18"/>
+		</jobprop>
+	</item>
+		<item id = "17505">
+		<jobprop>
+			<desp value="躲避 : 11"/>
+			<desp value="魔法躲避 : 22"/>
+		</jobprop>
+	</item>
+		<item id = "17506">
+		<jobprop>
+			<desp value="躲避 : 13"/>
+			<desp value="魔法躲避 : 26"/>
+		</jobprop>
+	</item>
+		<item id = "17507">
+		<jobprop>
+			<desp value="躲避 : 15"/>
+			<desp value="魔法躲避 : 30"/>
+		</jobprop>
+	</item>
+		<item id = "17508">
+		<jobprop>
+			<desp value="躲避 : 17"/>
+			<desp value="魔法躲避 : 34"/>
+		</jobprop>
+	</item>
+</Fabao>

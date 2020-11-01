@@ -1,0 +1,6 @@
+[setup]
+stepcount = 1
+title = 新手任务--该换武器
+ID = 19
+stepaim1 = 去找<铁匠/@@goto 0 铁匠 419,244>索要新武器 <color=green [传]/@@flyto 24 0 419 244>
+stepDESC1 = <color=graygolden 任务目的：>去找<铁匠/@@goto 0 铁匠 419,244>索要新武器\<color=graygolden 任务奖励：>\ </@@!PIC2 10,951>经验：50000\<color=graygolden 任务介绍:>\    当然，如果有人将一些好衣服卖给我的话，我也会给你\留着的，不过别忘了带钱过来。\    去找<铁匠/@@goto 0 铁匠 419,244>吧，他会送你最后一件新武器。

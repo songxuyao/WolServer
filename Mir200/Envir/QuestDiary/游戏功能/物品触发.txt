@@ -1,0 +1,2023 @@
+[@物品触发]
+{
+
+[@StdModeFunc1]
+#IF
+CHECKBAGSIZE 7
+#ACT
+GIVE 超级天山雪莲 3 1
+GIVE 超级深海灵礁 3 1
+GIVE 成长礼包(10级) 1 1
+break
+#ELSEACT
+ChangeEatItemDura + 1
+SENDMSG 5 您的包裹空间不足7格，请整理更多的包裹空间后再来。
+break
+
+[@StdModeFunc2]
+#IF
+CHECKLEVELEX < 10
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 只有等级达到10级时才能打开此礼包。
+break
+#IF
+CHECKBAGSIZE 3
+#ACT
+GIVE 超级冰泉圣水 1 1
+GIVE 回城神石 1 1
+GIVE 成长礼包(20级) 1 1
+break
+#ElSEACT
+ChangeEatItemDura + 1
+SENDMSG 5 您的包裹空间不足3格，请整理更多的包裹空间后再来。
+break
+
+[@StdModeFunc3]
+#IF
+CHECKLEVELEX < 20
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 只有等级达到20级时才能打开此礼包。
+break
+#IF
+CHECKBAGSIZE 3
+#ACT
+GIVE 超级技能项链 1 1
+GIVE 双倍经验包天卡 1 1
+GIVE 成长礼包(30级) 1 1
+break
+#ElSEACT
+ChangeEatItemDura + 1
+SENDMSG 5 您的包裹空间不足3格，请整理更多的包裹空间后再来。
+break
+
+[@StdModeFunc4]
+#IF
+CHECKLEVELEX < 30
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 只有等级达到30级时才能打开此礼包。
+break
+#IF
+CHECKBAGSIZE 4
+#ACT
+GIVE 强效太阳水药袋 1 1
+GIVE 超级冰泉圣水 1 1
+GIVE 随机神石 1 1
+GIVE 成长礼包(38级) 1 1
+break
+#ElSEACT
+ChangeEatItemDura + 1
+SENDMSG 5 您的包裹空间不足4格，请整理更多的包裹空间后再来。
+break
+
+[@StdModeFunc5]
+#IF
+CHECKLEVELEX < 38
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 只有等级达到38级时才能打开此礼包。
+break
+#IF
+CHECKBAGSIZE 2
+#ACT
+GIVE 月光宝盒(大) 1 1
+GIVE 成长礼包(46级) 1 1
+break
+#ElSEACT
+ChangeEatItemDura + 1
+SENDMSG 5 您的包裹空间不足2格，请整理更多的包裹空间后再来。
+break
+
+[@StdModeFunc6]
+#IF
+CHECKLEVELEX < 46
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 只有等级达到46级时才能打开此礼包。
+break
+#IF
+CHECKBAGSIZE 3
+#ACT
+GIVE 月光宝盒(特大) 1 1
+GIVE 成长礼包(50级) 1 1
+#ElSEACT
+ChangeEatItemDura + 1
+SENDMSG 5 您的包裹空间不足2格，请整理更多的包裹空间后再来。
+break
+#IF
+GENDER MAN
+#ACT
+give 金鹏宝甲(男) 1
+break
+#IF
+GENDER WOMAN
+#ACT
+give 金鹏宝甲(女) 1
+break
+
+
+[@StdModeFunc7]
+#IF
+CHECKLEVELEX < 50
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 只有等级达到50级时才能打开此礼包。
+break
+#IF
+CHECKBAGSIZE 1
+#ACT
+BINDGAMEGOLD + 100
+GIVE 成长礼包(54级) 1 1
+break
+#ElSEACT
+ChangeEatItemDura + 1
+SENDMSG 5 您的包裹空间不足1格，请整理更多的包裹空间后再来。
+break
+
+[@StdModeFunc8]
+#IF
+CHECKLEVELEX < 54
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 只有等级达到57级时才能打开此礼包。
+break
+#IF
+CHECKBAGSIZE 1
+#ACT
+BINDGAMEGOLD + 200
+GIVE 成长礼包(57级) 1 1
+break
+#ElSEACT
+ChangeEatItemDura + 1
+SENDMSG 5 您的包裹空间不足1格，请整理更多的包裹空间后再来。
+break
+
+[@StdModeFunc9]
+#IF
+CHECKLEVELEX < 57
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 只有等级达到57级时才能打开此礼包。
+break
+#IF
+CHECKBAGSIZE 1
+#ACT
+BINDGAMEGOLD + 300
+GIVE 成长礼包(60级) 1 1
+break
+#ElSEACT
+ChangeEatItemDura + 1
+SENDMSG 5 您的包裹空间不足1格，请整理更多的包裹空间后再来。
+break
+
+[@StdModeFunc10]
+#IF
+CHECKLEVELEX < 60
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 只有等级达到60级时才能打开此礼包。
+break
+#IF
+CHECKJOB warrior
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\礼包装备奖励.txt S10 0
+#IF
+CHECKJOB wizard
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\礼包装备奖励.txt S10 1
+#IF
+CHECKJOB taoist
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\礼包装备奖励.txt S10 2
+#IF
+CHECKBAGSIZE 2
+#ACT
+SPLIT $STR(S10) | S11
+RANDOMVAR S11 16 S17
+GIVE 成长礼包(64级) 1 1
+GIVE $STR(S17) 1
+break
+#ElSEACT
+ChangeEatItemDura + 1
+SENDMSG 5 您的包裹空间不足1格，请整理更多的包裹空间后再来。
+break
+
+[@StdModeFunc11]
+#IF
+CHECKLEVELEX < 64
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 只有等级达到64级时才能打开此礼包。
+break
+#IF
+CHECKJOB warrior
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\礼包装备奖励.txt S10 0
+#IF
+CHECKJOB wizard
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\礼包装备奖励.txt S10 1
+#IF
+CHECKJOB taoist
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\礼包装备奖励.txt S10 2
+#IF
+CHECKBAGSIZE 2
+#ACT
+SPLIT $STR(S10) | S11
+RANDOMVAR S11 16 S17
+GIVE 成长礼包(68级) 1 1
+GIVE $STR(S17) 1
+break
+#ElSEACT
+ChangeEatItemDura + 1
+SENDMSG 5 您的包裹空间不足1格，请整理更多的包裹空间后再来。
+break
+
+[@StdModeFunc12]
+#IF
+CHECKLEVELEX < 68
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 只有等级达到68级时才能打开此礼包。
+break
+#IF
+CHECKJOB warrior
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\礼包装备奖励.txt S10 0
+#IF
+CHECKJOB wizard
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\礼包装备奖励.txt S10 1
+#IF
+CHECKJOB taoist
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\礼包装备奖励.txt S10 2
+#IF
+CHECKBAGSIZE 2
+#ACT
+SPLIT $STR(S10) | S11
+RANDOMVAR S11 16 S17
+RANDOMVAR S11 16 S18
+GIVE 成长礼包(71级) 1 1
+GIVE $STR(S17) 1
+GIVE $STR(S18) 1
+break
+#ElSEACT
+ChangeEatItemDura + 1
+SENDMSG 5 您的包裹空间不足1格，请整理更多的包裹空间后再来。
+break
+
+[@StdModeFunc13]
+#IF
+CHECKLEVELEX < 71
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 只有等级达到71级时才能打开此礼包。
+break
+#IF
+CHECKJOB warrior
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\礼包装备奖励.txt S10 3
+#IF
+CHECKJOB wizard
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\礼包装备奖励.txt S10 4
+#IF
+CHECKJOB taoist
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\礼包装备奖励.txt S10 5
+#IF
+CHECKBAGSIZE 1
+#ACT
+SPLIT $STR(S10) | S11
+RANDOMVAR S11 16 S17
+GIVE $STR(S17) 1
+break
+#ElSEACT
+ChangeEatItemDura + 1
+SENDMSG 5 您的包裹空间不足1格，请整理更多的包裹空间后再来。
+break
+
+[@StdModeFunc14]
+#IF
+CHECKITEM 炼狱体验卡 1
+#ACT
+MAPMOVE MH001 127 91
+break
+
+[@StdModeFunc15]
+#IF
+CHECKITEMID $PARAM(0)
+#ACT
+CREDITPOINT + $ITEMINFO[$PARAM(0)].AC
+SENDMSG 5 声望值+<$ITEMINFO[$PARAM(0)].AC>点
+break
+
+[@StdModeFunc16]
+#IF
+CHECKITEMID $PARAM(0)
+#ACT
+CHANGEMODE 14 1
+DelayCall 15 @stealthsilkworm
+SENDMSG 5 隐身蚕甲的神效降临在你身上!
+break
+
+[@stealthsilkworm]
+#IF
+CHECKLEVELEX > 0
+#ACT
+CHANGEMODE 14 0
+SENDMSG 5 隐身蚕甲的神效离你而去!
+break
+
+[@StdModeFunc16]
+#IF
+CHECKITEMID $PARAM(0)
+#ACT
+CHANGEMODE 3 1
+DelayCall 5 @Danstealthsilkworm
+SENDMSG 5 隐形蚕丹的神效降临在你身上!
+break
+
+[@Danstealthsilkworm]
+#IF
+CHECKLEVELEX > 0
+#ACT
+CHANGEMODE 3 0
+SENDMSG 5 隐形蚕丹的神效离你而去!
+break
+
+[@StdModeFunc18]
+#IF
+CHECKITEMID $PARAM(0)
+#ACT
+FUSHEN 1 30
+break
+
+[@StdModeFunc19]
+#IF
+CHECKITEMID $PARAM(0)
+#ACT
+FUSHEN 2 40
+break
+
+[@StdModeFunc20]
+#IF
+CHECKITEMID $PARAM(0)
+#ACT
+FUSHEN 3 60
+break
+
+[@StdModeFunc21]
+#IF
+CHECKITEMID $PARAM(0)
+#ACT
+FUSHEN 4 60
+break
+
+[@StdModeFunc22]
+#IF
+LARGE $TOTEMCOUNT 0
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 同一时间内只能放置一个图腾。
+break
+#IF
+ISINSAFEZONE
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 安全区范围内不能放置图腾
+break
+#IF
+HAVEGUILD
+#ACT
+MOV S17 $GUILDNAME
+INC S17 \
+INC S17 $USERNAME
+INC S17 的仇恨图腾
+ReCallTotem 仇恨图腾 600 $STR(S17)
+SENDMSG 5 成功放置图腾。
+break
+#ELSEACT
+SENDMSG 5 只有加入行会才能释放图腾的效果
+break
+
+[@StdModeFunc23]
+#IF
+checkjob Taos
+#ELSEACT
+SENDMSG 5 此图腾只可以由道士放置。
+break
+#IF
+LARGE $TOTEMCOUNT 0
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 同一时间内只能放置一个图腾。
+break
+#IF
+ISINSAFEZONE
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 安全区范围内不能放置图腾
+break
+#IF
+HAVEGUILD
+#ACT
+MOV S17 $GUILDNAME
+INC S17 \
+INC S17 $USERNAME
+INC S17 的重力图腾
+ReCallTotem 重力图腾 600 $STR(S17)
+SENDMSG 5 成功放置图腾。
+break
+#ELSEACT
+SENDMSG 5 只有加入行会才能释放图腾的效果
+break
+
+[@StdModeFunc24]
+#IF
+checkjob Taos
+#ELSEACT
+SENDMSG 5 此图腾只可以由道士放置。
+break
+#IF
+LARGE $TOTEMCOUNT 0
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 同一时间内只能放置一个图腾。
+break
+#IF
+ISINSAFEZONE
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 安全区范围内不能放置图腾
+break
+#IF
+HAVEGUILD
+#ACT
+MOV S17 $GUILDNAME
+INC S17 \
+INC S17 $USERNAME
+INC S17 的诅咒图腾
+ReCallTotem 诅咒图腾 600 $STR(S17)
+SENDMSG 5 成功放置图腾。
+break
+#ELSEACT
+SENDMSG 5 只有加入行会才能释放图腾的效果
+break
+
+[@StdModeFunc25]
+#IF
+LARGE $TOTEMCOUNT 0
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 同一时间内只能放置一个图腾。
+break
+#IF
+ISINSAFEZONE
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 安全区范围内不能放置图腾
+break
+#IF
+HAVEGUILD
+#ACT
+MOV S17 $GUILDNAME
+INC S17 \
+INC S17 $USERNAME
+INC S17 的陷阱图腾
+ReCallTotem 陷阱图腾 600 $STR(S17)
+SENDMSG 5 成功放置图腾。
+break
+#ELSEACT
+SENDMSG 5 只有加入行会才能释放图腾的效果
+break
+
+[@StdModeFunc26]
+#IF
+checkjob Warr
+#ELSEACT
+SENDMSG 5 此图腾只可以由战士放置。
+break
+#IF
+LARGE $TOTEMCOUNT 0
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 同一时间内只能放置一个图腾。
+break
+#IF
+ISINSAFEZONE
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 安全区范围内不能放置图腾
+break
+#IF
+HAVEGUILD
+#ACT
+MOV S17 $GUILDNAME
+INC S17 \
+INC S17 $USERNAME
+INC S17 的反射图腾
+ReCallTotem 反射图腾 600 $STR(S17)
+SENDMSG 5 成功放置图腾。
+break
+#ELSEACT
+SENDMSG 5 只有加入行会才能释放图腾的效果
+break
+
+[@StdModeFunc27]
+#IF
+checkjob Warr
+#ELSEACT
+SENDMSG 5 此图腾只可以由战士放置。
+break
+#IF
+LARGE $TOTEMCOUNT 0
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 同一时间内只能放置一个图腾。
+break
+#IF
+ISINSAFEZONE
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 安全区范围内不能放置图腾
+break
+#IF
+HAVEGUILD
+#ACT
+MOV S17 $GUILDNAME
+INC S17 \
+INC S17 $USERNAME
+INC S17 的巫毒图腾
+ReCallTotem 巫毒图腾 600 $STR(S17)
+SENDMSG 5 成功放置图腾。
+break
+#ELSEACT
+SENDMSG 5 只有加入行会才能释放图腾的效果
+break
+
+[@StdModeFunc28]
+#IF
+checkjob Wizard
+#ELSEACT
+SENDMSG 5 此图腾只可以由法师放置。
+break
+#IF
+LARGE $TOTEMCOUNT 0
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 同一时间内只能放置一个图腾。
+break
+#IF
+ISINSAFEZONE
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 安全区范围内不能放置图腾
+break
+#IF
+HAVEGUILD
+#ACT
+MOV S17 $GUILDNAME
+INC S17 \
+INC S17 $USERNAME
+INC S17 的巫术图腾
+ReCallTotem 巫术图腾 600 $STR(S17)
+SENDMSG 5 成功放置图腾。
+break
+#ELSEACT
+SENDMSG 5 只有加入行会才能释放图腾的效果
+break
+
+[@StdModeFunc29]
+#IF
+checkjob Wizard
+#ELSEACT
+SENDMSG 5 此图腾只可以由法师放置。
+break
+#IF
+LARGE $TOTEMCOUNT 0
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 同一时间内只能放置一个图腾。
+break
+#IF
+ISINSAFEZONE
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 安全区范围内不能放置图腾
+break
+#IF
+HAVEGUILD
+#ACT
+MOV S17 $GUILDNAME
+INC S17 \
+INC S17 $USERNAME
+INC S17 的生命图腾
+ReCallTotem 生命图腾 600 $STR(S17)
+SENDMSG 5 成功放置图腾。
+break
+#ELSEACT
+SENDMSG 5 只有加入行会才能释放图腾的效果
+break
+
+[@StdModeFunc30]
+#IF
+checkjob Wizard
+#ELSEACT
+SENDMSG 5 此图腾只可以由法师放置。
+break
+#IF
+LARGE $TOTEMCOUNT 0
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 同一时间内只能放置一个图腾。
+break
+#IF
+ISINSAFEZONE
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 安全区范围内不能放置图腾
+break
+#IF
+HAVEGUILD
+#ACT
+MOV S17 $GUILDNAME
+INC S17 \
+INC S17 $USERNAME
+INC S17 的魔力图腾
+ReCallTotem 魔力图腾 600 $STR(S17)
+SENDMSG 5 成功放置图腾。
+break
+#ELSEACT
+SENDMSG 5 只有加入行会才能释放图腾的效果
+break
+
+[@StdModeFunc31]
+#IF
+LARGE $TOTEMCOUNT 0
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 同一时间内只能放置一个图腾。
+break
+#IF
+ISINSAFEZONE
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 安全区范围内不能放置图腾
+break
+#IF
+HAVEGUILD
+#ACT
+MOV S17 $GUILDNAME
+INC S17 \
+INC S17 $USERNAME
+INC S17 的箭塔图腾
+MOV S18 $GUILDNAME
+INC S18 \
+INC S18 箭塔
+ReCallTotem 箭塔图腾 600 $STR(S17) 箭塔 $STR(S18) 3
+SENDMSG 5 成功放置图腾。
+break
+#ELSEACT
+SENDMSG 5 只有加入行会才能释放图腾的效果
+break
+
+[@StdModeFunc32]
+#IF
+!EQUAL $PARAM(1)
+CHECKSKILL $PARAM(1) > 2
+#ACT
+SENDMSG 5 您的等级已满无需继续升级，丹药使用无效。
+
+break
+#IF
+!EQUAL $PARAM(1)
+CHECKVARLIST $PARAM(1) ..\QuestDiary\数据文件\文本数据\禁止升级技能.txt
+#ACT
+SENDMSG 5 此技能无法使用强化技能灵丹，丹药使用无效。
+
+break
+#IF
+!EQUAL $PARAM(1)
+#ACT
+CHANGESKILLEXP $PARAM(1) + $ITEMINFO[$PARAM(0)].MC
+TAKEM $PARAM(0)
+SENDMSG 5 恭喜你，技能的经验获得了增长。
+break
+#IF
+CHECKMAGIC 强化火球术
+CHECKSKILL 强化火球术 < 5
+#ACT
+CHANGESKILLEXP 强化火球术 + $ITEMINFO[$PARAM(0)].MC
+TAKEM $PARAM(0)
+SENDMSG 5 恭喜你，技能的经验获得了增长。
+break
+break
+#IF
+CHECKMAGIC 强化攻杀剑法
+CHECKSKILL 强化攻杀剑法 < 5
+#ACT
+CHANGESKILLEXP 强化攻杀剑法 + $ITEMINFO[$PARAM(0)].MC
+TAKEM $PARAM(0)
+SENDMSG 5 恭喜你，技能的经验获得了增长。
+break
+#IF
+CHECKMAGIC 强化施毒术
+CHECKSKILL 强化施毒术 < 5
+#ACT
+CHANGESKILLEXP 强化施毒术 + $ITEMINFO[$PARAM(0)].MC
+TAKEM $PARAM(0)
+SENDMSG 5 恭喜你，技能的经验获得了增长。
+break
+#IF
+CHECKMAGIC 强化诅咒术
+CHECKSKILL 强化诅咒术 < 5
+#ACT
+CHANGESKILLEXP 强化诅咒术 + $ITEMINFO[$PARAM(0)].MC
+TAKEM $PARAM(0)
+SENDMSG 5 恭喜你，技能的经验获得了增长。
+break
+#IF
+CHECKSKILL 强化火球术 = 5
+#ACT
+SENDMSG 5 您的等级已满无需继续升级，丹药使用无效。
+break
+#IF
+CHECKSKILL 强化攻杀剑法 = 5
+#ACT
+SENDMSG 5 您的等级已满无需继续升级，丹药使用无效。
+break
+#IF
+CHECKSKILL 强化施毒术 = 5
+#ACT
+SENDMSG 5 您的等级已满无需继续升级，丹药使用无效。
+break
+#IF
+CHECKSKILL 强化诅咒术 = 5
+#ACT
+SENDMSG 5 您的等级已满无需继续升级，丹药使用无效。
+break
+#IF
+RANDOM 1
+#ACT
+SENDMSG 5 你未学会强化技能无法提升经验。
+break
+
+[@StdModeFunc33]
+#IF
+CHECKPETFOLLOW
+#ACT
+ChangeEatItemDura + 1
+QUERYVAL 10 0 14 @ModeFunc59 请输入要给灵兽取的名字
+#ELSEACT
+ChangeEatItemDura + 1
+SENDMSG 5 请先将你的灵兽放出来
+
+[@ModeFunc33]
+#ACT
+SetPetName $STR(S10)
+take 兽名魔咒 1
+SENDMSG 5 灵兽改名成功!
+break
+
+[@StdModeFunc34]
+#IF
+EQUAL $KILLMONEXPRATE 2
+#ACT
+SENDMSG 5 您目前已经是双倍经验或者多倍经验，无法使用小时卡
+break
+#IF
+RANDOM 1
+#ACT
+KILLMONEXPRATE 200 100
+SENDMSG 5 双倍经验成功开启.持续时间：<$KILLMONEXPRATETIME>秒
+break
+
+[@NewStdModeFunc42]
+#IF
+EQUAL $KILLMONNAME
+#ACT
+SENDMSG 5 请在击败玩家或者BOSS后双击常胜玄兵进行记录。
+break
+#IF
+CHECKVARLIST $M ..\QuestDiary\数据文件\文本数据\常胜玄兵地图.txt
+#ACT
+QUERYMSG 你于[<$DATE>]斩杀[<$KILLMONNAME>]于[<$MAPNAME>]。\　\你确定要记录以上信息于常胜玄冰上吗？ @jiluxuanbing
+break
+#ELSEACT
+SENDMSG 5 常胜玄兵只有在中州、落霞、土城、禁地、西域、死水、海岛地图上才可使用
+break
+
+[@jiluxuanbing1]
+#IF
+RANDOM 1
+#ACT
+MOV D0 1
+MOV S17 传世英雄
+INC S17 $USERNAME
+INC S17 斩杀
+INC S17 $KILLMONNAME
+SENDMSG 5 你的信息已成功记录，请尽快选择合适的地点扔出，竖立常胜玄兵。
+break
+
+[@DropItem42]
+#IF
+!CHECKVARLIST $M ..\QuestDiary\数据文件\文本数据\常胜玄兵地图.txt
+#ACT
+give 常胜玄兵 1
+DELLASTDROPITEM
+SENDMSG 5 常胜玄兵只有在中州、落霞、土城、禁地、西域、死水、海岛地图上才可使用
+break
+#IF
+SMALL D0 1
+#ACT
+SENDMSG 5 常胜玄兵暂未记录信息。
+break
+#IF
+checkjob warrior
+#ACT
+PARAM1 $M
+PARAM2 $X
+PARAM3 $Y
+MonGen 常胜玄兵1 1 1 $STR(S17) 1
+DELLASTDROPITEM
+MOV S17 
+SENDMSG 5 你已顺利放置常胜玄兵，常胜玄兵会在3天后消失，如被玩家攻击则有可能毁坏，从而提前消失。
+break
+#IF
+checkjob wizard
+#ACT
+PARAM1 $M
+PARAM2 $X
+PARAM3 $Y
+MonGen 常胜玄兵2 1 1 $STR(S17) 1
+DELLASTDROPITEM
+MOV S17 
+SENDMSG 5 你已顺利放置常胜玄兵，常胜玄兵会在3天后消失，如被玩家攻击则有可能毁坏，从而提前消失。
+break
+#IF
+checkjob taoist
+#ACT
+PARAM1 $M
+PARAM2 $X
+PARAM3 $Y
+MonGen 常胜玄兵3 1 1 $STR(S17) 1
+DELLASTDROPITEM
+MOV S17 
+SENDMSG 5 你已顺利放置常胜玄兵，常胜玄兵会在3天后消失，如被玩家攻击则有可能毁坏，从而提前消失。
+break
+
+[@StdModeFunc43]
+#IF
+CHECKITEMID $PARAM(0)
+#ACT
+QUERYVAL 17 0 60 @CHUANYIN 请写下你要传音的内容：
+break
+
+[@CHUANYIN]
+#IF
+CHECKLEVELEX > 0
+#ACT
+SHOWHUMEFFECT 28
+SENDMSG 16 %S玩家说:<$STR(S17)> 255 69
+break
+
+[@StdModeFunc44]
+;易名心咒
+
+[@StdModeFunc45]
+#IF
+CHECKITEMID $PARAM(0)
+#ACT
+ChangeEatItemDura + 1
+QUERYVAL 17 0 14 @zhenshisj 请在下方输入框中输入对方的名字：
+break
+
+[@zhenshisj]
+#IF
+CheckOnline $STR(S17)
+#ACT
+ChangeEatItemDura - 1
+SENDMSG 7 <$STR(S17)>目前在<$HUMANINFO[$STR(S17)].$MAPNAME>地图，坐标为<$HUMANINFO[$STR(S17)].$X>，<$HUMANINFO[$STR(S17)].$Y>。
+#ELSEACT
+SendMsg 5 该角色目前不在线。
+break
+
+[@StdModeFunc46]
+#IF
+CHECKITEMID $PARAM(0)
+#ACT
+MOV P16 0
+MOV P17 0
+SHOWHUMEFFECT 45
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\BOSS怪物列表.txt S17 0
+GOTO @checkmonks
+break
+
+[@checkmonks]
+#IF
+EQUAL S17
+EQUAL P17 0
+#ACT
+SENDMSG 5 方圆百里之内暂时没有魔王的踪影。
+break
+#IF
+EQUAL S17
+#ACT
+break
+#IF
+CHECKMONPOS $STR(S17) $M
+#ACT
+INC P16 1
+MOV P17 1
+MOV P18 $PARAM(31)
+MOV P19 $PARAM(32)
+#ELSEACT
+INC P16 1
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\BOSS怪物列表.txt S17 $STR(P16)
+GOTO @checkmonks
+break
+#IF
+SMALL P18 $X
+EQUAL P19 $Y
+#ACT
+SENDMSG 5 发现魔王：<$STR(S17)>
+SENDMSG 5 方向：←
+SENDMSG 5 坐标：(<$PARAM(31)>,<$PARAM(32)>)
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\BOSS怪物列表.txt S17 $STR(P16)
+GOTO @checkmonks
+break
+#IF
+LARGE P18 $X
+EQUAL P19 $Y
+#ACT
+SENDMSG 5 发现魔王：<$STR(S17)>
+SENDMSG 5 方向：→
+SENDMSG 5 坐标：(<$PARAM(31)>,<$PARAM(32)>)
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\BOSS怪物列表.txt S17 $STR(P16)
+GOTO @checkmonks
+break
+#IF
+EQUAL P18 $X
+SMALL P19 $Y
+#ACT
+SENDMSG 5 发现魔王：<$STR(S17)>
+SENDMSG 5 方向：↑
+SENDMSG 5 坐标：(<$PARAM(31)>,<$PARAM(32)>)
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\BOSS怪物列表.txt S17 $STR(P16)
+GOTO @checkmonks
+break
+#IF
+EQUAL P18 $X
+LARGE P19 $Y
+#ACT
+SENDMSG 5 发现魔王：<$STR(S17)>
+SENDMSG 5 方向：↓
+SENDMSG 5 坐标：(<$PARAM(31)>,<$PARAM(32)>)
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\BOSS怪物列表.txt S17 $STR(P16)
+GOTO @checkmonks
+break
+#IF
+LARGE P18 $X
+SMALL P19 $Y
+#ACT
+SENDMSG 5 发现魔王：<$STR(S17)>
+SENDMSG 5 方向：↗
+SENDMSG 5 坐标：(<$PARAM(31)>,<$PARAM(32)>)
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\BOSS怪物列表.txt S17 $STR(P16)
+GOTO @checkmonks
+break
+#IF
+LARGE P18 $X
+LARGE P19 $Y
+#ACT
+SENDMSG 5 发现魔王：<$STR(S17)>
+SENDMSG 5 方向：↘
+SENDMSG 5 坐标：(<$PARAM(31)>,<$PARAM(32)>)
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\BOSS怪物列表.txt S17 $STR(P16)
+GOTO @checkmonks
+break
+#IF
+SMALL P18 $X
+SMALL P19 $Y
+#ACT
+SENDMSG 5 发现魔王：<$STR(S17)>
+SENDMSG 5 方向：↖
+SENDMSG 5 坐标：(<$PARAM(31)>,<$PARAM(32)>)
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\BOSS怪物列表.txt S17 $STR(P16)
+GOTO @checkmonks
+break
+#IF
+SMALL P18 $X
+LARGE P19 $Y
+#ACT
+SENDMSG 5 发现魔王：<$STR(S17)>
+SENDMSG 5 方向：↙
+SENDMSG 5 坐标：(<$PARAM(31)>,<$PARAM(32)>)
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\BOSS怪物列表.txt S17 $STR(P16)
+GOTO @checkmonks
+break
+#ELSEACT
+SENDMSG 5 发现魔王：<$STR(S17)>
+SENDMSG 5 坐标：(<$PARAM(31)>,<$PARAM(32)>)
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\BOSS怪物列表.txt S17 $STR(P16)
+GOTO @checkmonks
+break
+
+[@StdModeFunc47]
+#IF
+!CheckSignMap
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 当前还魂石还未记录坐标不能使用
+break
+#IF
+!CHECKVARLIST $SIGNMAP.M ..\QuestDiary\数据文件\文本数据\禁止还魂地图.txt
+#ACT
+GMEXECUTE SignMove
+SHOWHUMEFFECT 29
+SENDMSG 5 你成功使用还魂石返回到你上次死亡坐标地点
+break
+#ELSEACT
+SENDMSG 5 上次死亡地图不允许使用还魂石
+break
+
+[@StdModeFunc48]
+#IF
+CHECKITEMID $PARAM(0)
+#ACT
+NIMBUSPOINT + $ITEMINFO[$PARAM(0)].AC
+break
+
+[@StdModeFunc49]
+#IF
+EQUAL $ITEMINFO[$PARAM(1)].NAME
+!CHECKBAGSIZE 1
+#ACT
+SENDMSG 5 包裹空位不足！
+break
+#IF
+EQUAL $ITEMINFO[$PARAM(1)].NAME 
+LARGE $ITEMINFO[$PARAM(0)].DURA 0
+#ACT
+UPGRADEUSERITEM $PARAM(0) 20 - 1
+UPGRADEUSERITEM $PARAM(0) 21 - 1
+GIVE 祝福神油 1
+break
+#IF
+EQUAL $ITEMINFO[$PARAM(1)].NAME 
+SMALL $ITEMINFO[$PARAM(0)].DURA 1
+#ACT
+SENDMSG 5 祝福油灌中没有存放祝福神油！
+break
+#IF
+EQUAL $ITEMINFO[$PARAM(0)].NAME 祝福油罐
+EQUAL $ITEMINFO[$PARAM(1)].NAME 祝福神油
+EQUAL $ITEMINFO[$PARAM(0)].DURA $ITEMINFO[$PARAM(0)].DURAMAX
+#ACT
+SENDMSG 5 你的祝福油罐无法容纳更多祝福神油
+break
+#IF
+EQUAL $ITEMINFO[$PARAM(0)].NAME 祝福油罐
+EQUAL $ITEMINFO[$PARAM(1)].NAME 祝福神油
+SMALL $ITEMINFO[$PARAM(0)].DURA $ITEMINFO[$PARAM(0)].DURAMAX
+#ACT
+UPGRADEUSERITEM $PARAM(0) 20 + 1
+TAKEM $PARAM(1)
+break
+
+[@DropItem50]
+#IF
+CHECKLEVELEX > 0
+#ACT
+SHOWHUMEFFECT 39 300
+break
+
+[@DropItem51]
+#IF
+CHECKLEVELEX > 0
+#ACT
+GMexecute mobfireburn $M $X $Y 93 120
+OpenItemBox 盛宴蛋糕
+SENDMSG 0 <$USERNAME>：在%m(%x，%y)开启盛宴蛋糕进行节日庆祝，掉落大量的小蛋糕，想吃蛋糕的赶快哦。
+SENDMSG 15 [%S]在%m(%x，%y)开启盛宴蛋糕进行节日庆祝，掉落大量的小蛋糕，想吃蛋糕的赶快哦。
+SENDMSG 10 [%S]在%m(%x，%y)开启盛宴蛋糕进行节日庆祝，掉落大量的小蛋糕，想吃蛋糕的赶快哦。
+break
+
+[@DropItem52]
+#IF
+CHECKLEVELEX > 0
+#ACT
+DELLASTDROPITEM
+MOBFIREBURN $M $X $Y 20 8 30
+break
+
+[@StdModeFunc53]
+#IF
+CHECKITEMID $PARAM(0)
+#ACT
+Gmexecute 烟花 15
+break
+
+[@DropItem53]
+#IF
+CHECKLEVELEX > 0
+#ACT
+DELLASTDROPITEM
+Gmexecute 烟花 15
+break
+
+[@DropItem54]
+#IF
+CHECKLEVELEX > 0
+#ACT
+DELLASTDROPITEM
+GMEXECUTE mobfireburn $M $X $Y 7 300
+break
+
+[@DropItem55]
+#IF
+CHECKLEVELEX > 0
+#ACT
+DELLASTDROPITEM
+GMEXECUTE mobfireburn $M $X $Y 18 300
+break
+
+[@DropItem56]
+#IF
+CHECKLEVELEX > 0
+#ACT
+DELLASTDROPITEM
+GMEXECUTE mobfireburn $M $X $Y 19 300
+break
+
+[@StdModeFunc57]
+#IF
+EQUAL D1 0
+#ACT
+MOV D1 1
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\魔幻变身披风.txt S11
+GETVALIDSTR $STR(S11) | S11 S12
+CHANGEAPPR $STR(S11) $STR(S12)
+break
+#IF
+EQUAL D1 1
+#ACT
+MOV D1 0
+CHANGEAPPR 0 0
+ChangeEatItemDura + 1
+break
+
+[@StdModeFunc58]
+#IF
+EQUAL $PARAM(2) 圣灵精华
+EQUAL $ITEMINFO[$PARAM(1)].STDMODE 59
+#ACT
+goto @圣灵宝石
+break
+#IF
+SMALL $ITEMVALSUM(圣灵精华).DURA 10
+#ACT
+MessageBox 你的圣灵精华数量不足10，无法附加你的武器技能。
+break
+#IF
+EQUAL $ITEMINFO[$PARAM(1)].STDMODE 12
+#ACT
+MOV S11 13
+#ELSEACT
+MOV S11 1
+#IF
+CHECKLEVELEX > 0
+#ACT
+take 圣灵精华 10
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\圣灵反射技能.txt S12
+UPGRADEUSERITEM $STR(S11) 69 = $STR(S13)
+UPGRADEUSERITEM $STR(S11) 70 = 1
+UPGRADEUSERITEM $STR(S11) 59 = 2
+break
+
+[@StdModeFunc59]
+#IF
+CHECKMAPNAME TT009
+#ACT
+MOV S10 通天教主1
+MOV S11 通天教主
+MOV S12 TT009
+#IF
+CHECKMAPNAME MG001
+#ACT
+MOV S10 铁血魔王
+MOV S11 铁血魔王
+MOV S12 MG001
+#IF
+CHECKMAPNAME AS004
+#ACT
+MOV S10 阿修罗神1
+MOV S11 阿修罗神
+MOV S12 AS004
+#IF
+CHECKMONPOS $STR(S10) $STR(S12)
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 当前地图魔王没有死亡，无法召唤！
+break
+#IF
+CHECKMONPOS $STR(S11) $STR(S12)
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 当前地图魔王没有死亡，无法召唤！
+break
+#IF
+LARGE I4 1
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 当前已经有其他勇士正在使用魔王召唤令！
+break
+#IF
+CHECKMAPNAME TT009
+#ACT
+MOV I4 16
+MOV I5 155
+MOV I6 232
+MOV A12 TT009
+MOV A13 通天教主1
+MOV A14 $USERNAME
+MOV A15 九重云霄
+MOV A16 通天教主
+SENDMSG 7 召唤成功！魔王将在15分钟后重生！
+break
+#IF
+CHECKMAPNAME MG001
+#ACT
+MOV I4 16
+MOV I5 92
+MOV I6 75
+MOV A12 MG001
+MOV A13 铁血魔王
+MOV A14 $USERNAME
+MOV A15 铁血魔宫
+MOV A16 铁血魔王
+SENDMSG 7 召唤成功！魔王将在15分钟后重生！
+break
+#IF
+CHECKMAPNAME AS004
+#ACT
+MOV I4 16
+MOV I5 238
+MOV I6 57
+MOV A12 AS004
+MOV A13 阿修罗神1
+MOV A14 $USERNAME
+MOV A15 修罗神殿
+MOV A16 阿修罗神
+SENDMSG 7 召唤成功！魔王将在15分钟后重生！
+break
+
+[@StdModeFunc60]
+#IF
+CHECKITEMID $PARAM(0)
+#ACT
+Spirity + $ITEMINFO[$PARAM(0)].AC
+SENDMSG 5 精力值增加<$ITEMINFO[$PARAM(0)].AC>
+break
+
+[@StdModeFunc61]
+#IF
+!EQUAL $Table(SG_Pritime).Tim12 $DATE
+#ACT
+TABLE SG_PRIVITE Hum13 = 5
+Table SG_Pritime Tim12 = $DATE
+#IF
+SMALL $TABLE(SG_PRIVITE).Hum13 1
+#ACT
+ChangeEatItemDura + 1
+SENDMSG 5 勇士您今日可开启的宝箱次数已到5次，无法再次开启。
+break
+#IF
+EQUAL $PARAM(2) 青铜宝藏
+CHECKITEMID $PARAM(0)
+#ACT
+MOVR P20 16
+INC P20 20
+MULT P20 10000
+CHANGEEXP + $STR(P20)
+TABLE SG_PRIVITE Hum13 - 1
+;SENDMSG 5 今日第1次完成[藏宝图],增加活跃度积分4!
+SENDMSG 5 恭喜你成功开启宝藏，取得了宝藏中的宝物！
+break
+#IF
+EQUAL $PARAM(2) 白银宝藏
+CHECKITEMID $PARAM(0)
+#ACT
+MOVR P20 21
+INC P20 50
+MULT P20 10000
+CHANGEEXP + $STR(P20)
+TABLE SG_PRIVITE Hum13 - 1
+;SENDMSG 5 今日第1次完成[藏宝图],增加活跃度积分4!
+SENDMSG 5 恭喜你成功开启宝藏，取得了宝藏中的宝物！
+break
+#IF
+EQUAL $PARAM(2) 黄金宝藏
+CHECKITEMID $PARAM(0)
+#ACT
+MOVR P20 16
+INC P20 110
+MULT P20 10000
+CHANGEEXP + $STR(P20)
+TABLE SG_PRIVITE Hum13 - 1
+;SENDMSG 5 今日第1次完成[藏宝图],增加活跃度积分4!
+SENDMSG 5 恭喜你成功开启宝藏，取得了宝藏中的宝物！
+break
+#IF
+EQUAL $PARAM(2) 钻石宝藏
+CHECKITEMID $PARAM(0)
+#ACT
+MOVR P20 100
+INC P20 150
+MULT P20 10000
+CHANGEEXP + $STR(P20)
+TABLE SG_PRIVITE Hum13 - 1
+;SENDMSG 5 今日第1次完成[藏宝图],增加活跃度积分4!
+SENDMSG 5 恭喜你成功开启宝藏，取得了宝藏中的宝物！
+break
+
+[@StdModeFunc62]
+#IF
+CHECKITEMID $PARAM(0)
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\财神红包奖励.txt S10
+GIVE $STR(S10) 1 1
+ReplaceText S10 2
+SENDMSG 5 恭喜勇士，您获得了<$STR(S10)>奖励
+break
+
+[@StdModeFunc63]
+#IF
+CHECKITEMID $PARAM(0)
+#ACT
+Spirity + $ITEMINFO[$PARAM(0)].AC
+SENDMSG 5 修为值增加<$ITEMINFO[$PARAM(0)].AC>
+break
+
+[@StdModeFunc64]
+#IF
+CHECKITEMID $PARAM(0)
+#ACT
+MOVR P20 20
+INC P20 5
+MOV P21 $STR(P20)
+MULT P21 10000
+SENDMSG 5 恭喜您开启镖车物资(金币)获得了<$STR(P20)>万金币
+break
+
+[@StdModeFunc65]
+#IF
+CHECKITEMID $PARAM(0)
+#ACT
+MOVR P20 16
+INC P20 5
+MOV P21 $STR(P20)
+MULT P21 10000
+SENDMSG 5 恭喜您开启镖车物资(经验)获得了<$STR(P20)>万经验
+break
+
+[@StdModeFunc66]
+[@StdModeFunc67]
+[@StdModeFunc68]
+[@StdModeFunc69]
+[@StdModeFunc70]
+
+[@StdModeFunc71]
+#IF
+PosInList <$VIPLEVEL>| ..\QuestDiary\数据文件\文本数据\神秘灵匣次数.txt S10
+#ACT
+GETVALIDSTR $STR(S10) | S11 P11
+#ELSEACT
+SENDMSG 5 系统错误...
+break
+#IF
+!EQUAL $Table(SG_Pritime).Tim20 $DATE
+#ACT
+TABLE SG_PRIVITE Hum16 = $STR(P11)
+Table SG_Pritime Tim20 = $DATE
+#IF
+SMALL $TABLE(SG_PRIVITE).Hum16 1
+#ACT
+SENDMSG 5 勇士您今日可开启的神秘灵匣次数已到0次，无法再次开启。
+break
+#IF
+CHECKBAGSIZE 4
+#ACT
+MOV S30
+MOV S31
+MOV S32
+MOV D9 0
+#ELSEACT
+SENDMSG 5 你的包裹可能无法容纳灵匣内的宝藏，请整理包裹后再来开启灵匣吧。
+break
+#IF
+CHECKITEM 神秘钥匙 1
+#ACT
+take 神秘钥匙 1
+take 神秘灵匣 1
+#CALL [\游戏功能\神秘灵匣.txt] @神秘灵匣
+break
+#IF
+CHECKITEM 神秘钥匙串 1
+#ACT
+UPGRADEUSERITEM $ITEMMAKEINDEX[神秘钥匙串] 20 - 1
+take 神秘灵匣 1
+#CALL [\游戏功能\神秘灵匣.txt] @神秘灵匣
+break
+#ELSEACT
+SENDMSG 5 您的神秘钥匙已使用完毕，需要马上购买并使用神秘钥匙打开灵匣吗？(神秘钥匙商城定价：2元宝)
+break
+
+[@OpenBox]
+#IF
+CHECKITEM 神秘钥匙 1
+#ACT
+take 神秘钥匙 1
+take 神秘灵匣 1
+break
+#IF
+CHECKITEM 神秘钥匙串 1
+#ACT
+UPGRADEUSERITEM $ITEMMAKEINDEX[神秘钥匙串] 20 - 1
+take 神秘灵匣 1
+break
+
+[@UseStone72]
+#IF
+CHECKITEMID $PARAM(1)
+#ACT
+MOVR M20 23
+INC M20 1
+TAKEM $PARAM(1)
+UPGRADEUSERITEM $PARAM(0) 227 = 1
+UPGRADEUSERITEM $PARAM(0) 228 = $STR(M20)
+#ELSEACT
+break
+#IF
+EQUAL $PARAM(2) 圣王盾1
+EQUAL M20 1
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 60
+break
+#IF
+EQUAL $PARAM(2) 圣王盾2
+EQUAL M20 1
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 20
+break
+#IF
+EQUAL $PARAM(2) 圣王盾3
+EQUAL M20 1
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 40
+break
+#IF
+EQUAL M20 2
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 2
+UPGRADEUSERITEM $PARAM(0) 230 = 2
+break
+#IF
+LARGE M20 2
+SMALL M20 5
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 1
+UPGRADEUSERITEM $PARAM(0) 230 = 4
+break
+#IF
+EQUAL M20 5
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 1
+break
+#IF
+LARGE M20 5
+SMALL M20 9
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 2
+break
+#IF
+LARGE M20 8
+SMALL M20 11
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 10
+break
+#IF
+LARGE M20 10
+SMALL M20 16
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 8
+break
+#IF
+EQUAL M20 16
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 4
+break
+#IF
+LARGE M20 16
+SMALL M20 20
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 3
+break
+#IF
+EQUAL M20 20
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 4
+break
+#IF
+LARGE M20 20
+SMALL M20 24
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 5
+break
+
+[@UseStone73]
+#IF
+CHECKITEMID $PARAM(1)
+#ACT
+MOVR M20 23
+INC M20 1
+TAKEM $PARAM(1)
+UPGRADEUSERITEM $PARAM(0) 227 = 2
+UPGRADEUSERITEM $PARAM(0) 228 = $STR(M20)
+#ELSEACT
+break
+#IF
+EQUAL $PARAM(2) 圣王盾1
+EQUAL M20 1
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 150
+break
+#IF
+EQUAL $PARAM(2) 圣王盾2
+EQUAL M20 1
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 50
+break
+#IF
+EQUAL $PARAM(2) 圣王盾3
+EQUAL M20 1
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 100
+break
+#IF
+EQUAL M20 2
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 3
+UPGRADEUSERITEM $PARAM(0) 230 = 5
+break
+#IF
+LARGE M20 2
+SMALL M20 5
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 1
+UPGRADEUSERITEM $PARAM(0) 230 = 8
+break
+#IF
+EQUAL M20 5
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 2
+break
+#IF
+LARGE M20 5
+SMALL M20 9
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 4
+break
+#IF
+LARGE M20 8
+SMALL M20 11
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 20
+break
+#IF
+LARGE M20 10
+SMALL M20 16
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 16
+break
+#IF
+EQUAL M20 16
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 8
+break
+#IF
+LARGE M20 16
+SMALL M20 20
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 6
+break
+#IF
+EQUAL M20 20
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 8
+break
+#IF
+LARGE M20 20
+SMALL M20 24
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 10
+break
+
+[@UseStone74]
+#IF
+CHECKITEMID $PARAM(1)
+#ACT
+MOVR M20 23
+INC M20 1
+TAKEM $PARAM(1)
+UPGRADEUSERITEM $PARAM(0) 227 = 3
+UPGRADEUSERITEM $PARAM(0) 228 = $STR(M20)
+#ELSEACT
+break
+#IF
+EQUAL $PARAM(2) 圣王盾1
+EQUAL M20 1
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 360
+break
+#IF
+EQUAL $PARAM(2) 圣王盾2
+EQUAL M20 1
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 120
+break
+#IF
+EQUAL $PARAM(2) 圣王盾3
+EQUAL M20 1
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 240
+break
+#IF
+EQUAL M20 2
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 5
+UPGRADEUSERITEM $PARAM(0) 230 = 12
+break
+#IF
+LARGE M20 2
+SMALL M20 5
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 1
+UPGRADEUSERITEM $PARAM(0) 230 = 15
+break
+#IF
+EQUAL M20 5
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 4
+break
+#IF
+LARGE M20 5
+SMALL M20 9
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 8
+break
+#IF
+LARGE M20 8
+SMALL M20 11
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 40
+break
+#IF
+LARGE M20 10
+SMALL M20 16
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 32
+break
+#IF
+EQUAL M20 16
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 16
+break
+#IF
+LARGE M20 16
+SMALL M20 20
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 12
+break
+#IF
+EQUAL M20 20
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 16
+break
+#IF
+LARGE M20 20
+SMALL M20 24
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 20
+break
+
+[@UseStone75]
+#IF
+CHECKITEMID $PARAM(1)
+#ACT
+MOVR M20 23
+INC M20 1
+TAKEM $PARAM(1)
+UPGRADEUSERITEM $PARAM(0) 227 = 4
+UPGRADEUSERITEM $PARAM(0) 228 = $STR(M20)
+#ELSEACT
+break
+#IF
+EQUAL $PARAM(2) 圣王盾1
+EQUAL M20 1
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 600
+break
+#IF
+EQUAL $PARAM(2) 圣王盾2
+EQUAL M20 1
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 200
+break
+#IF
+EQUAL $PARAM(2) 圣王盾3
+EQUAL M20 1
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 400
+break
+#IF
+EQUAL M20 2
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 5
+UPGRADEUSERITEM $PARAM(0) 230 = 20
+break
+#IF
+LARGE M20 2
+SMALL M20 5
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 1
+UPGRADEUSERITEM $PARAM(0) 230 = 20
+break
+#IF
+EQUAL M20 5
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 8
+break
+#IF
+LARGE M20 5
+SMALL M20 9
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 16
+break
+#IF
+LARGE M20 8
+SMALL M20 11
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 80
+break
+#IF
+LARGE M20 10
+SMALL M20 16
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 64
+break
+#IF
+EQUAL M20 16
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 32
+break
+#IF
+LARGE M20 16
+SMALL M20 20
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 24
+break
+#IF
+EQUAL M20 20
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 32
+break
+#IF
+LARGE M20 20
+SMALL M20 24
+#ACT
+UPGRADEUSERITEM $PARAM(0) 229 = 40
+break
+
+[@UseStone76]
+#IF
+LARGE $ITEMINFO[$PARAM(0)].GOODITEMVALUE(1) 4
+#ACT
+SENDMSG 5 您的装备小极品已经进阶过属性,无法点化！
+break
+#IF
+LARGE $ITEMINFO[$PARAM(0)].GOODITEMVALUE(2) 4
+#ACT
+SENDMSG 5 您的装备小极品已经进阶过属性,无法点化！
+break
+#IF
+LARGE $ITEMINFO[$PARAM(0)].GOODITEMVALUE(3) 4
+#ACT
+SENDMSG 5 您的装备小极品已经进阶过属性,无法点化！
+break
+#IF
+RANDOM 1
+#ACT
+MOV M17 $ITEMINFO[$PARAM(0)].GOODITEMVALUE(1)
+INC M17 $ITEMINFO[$PARAM(0)].GOODITEMVALUE(2)
+INC M17 $ITEMINFO[$PARAM(0)].GOODITEMVALUE(3)
+#IF
+LARGE M17 0
+#ACT
+MOV S15 |
+INC S15 $ITEMINFO[$PARAM(0)].STDNAME
+INC S15 |
+#ELSEACT
+SENDMSG 5 装备必须有小极品属性才可以使用点石成金。
+break
+#IF
+PosInList $STR(S15) ..\QuestDiary\数据文件\文本数据\点金属性装备.txt S16
+#ACT
+GETVALIDSTR $STR(S16) | S17 M17
+#ELSEACT
+SENDMSG 5 该装备无法进行点石成金
+break
+#IF
+CHECKITEM 点金石 $STR(M17)
+#ACT
+take 点金石 $STR(M17)
+MOV S19 |
+INC S19 $ITEMINFO[$PARAM(0)].STDMODE
+INC S19 |
+MOV M19 $ITEMINFO[$PARAM(0)].GOODITEMTYPE(1)
+INC M19 170
+UPGRADEUSERITEM $PARAM(0) $STR(M19) = 0
+MOV M19 $ITEMINFO[$PARAM(0)].GOODITEMTYPE(2)
+INC M19 185
+UPGRADEUSERITEM $PARAM(0) $STR(M19) = 0
+MOV M19 $ITEMINFO[$PARAM(0)].GOODITEMTYPE(3)
+INC M19 200
+UPGRADEUSERITEM $PARAM(0) $STR(M19) = 0
+#ELSEACT
+SENDMSG 5 点金石不够,需要<$STR(M17)>个点金石
+
+break
+#IF
+POSINLIST $STR(S19) ..\QuestDiary\数据文件\文本数据\点金属性列表.txt S20
+#ACT
+ReplaceText S20 $STR(S19)
+SPLIT $STR(S20) | S21
+RANDOMVAR S21 30 S31
+DEC S31 4 9
+UPGRADEUSERITEM $PARAM(0) 100 = 4
+UPGRADEUSERITEM $PARAM(0) $STR(S31) = 4
+#ELSEACT
+break
+#IF
+RANDOM 20 100
+#ACT
+MOV M20 $STR(S31)
+MOV M21 $INC.$STR(M20).15
+MOV M22 $INC.$STR(M21).15
+FormatStr S32 %s%s%s <$STR(M20)>|<$STR(M21)>|<$STR(M22)>
+ReplaceText S20 $STR(S32) 1
+SPLIT $STR(S20) | S21
+RANDOMVAR S21 29 S30
+DEC S30 1 3
+DEC S30 4 6
+UPGRADEUSERITEM $PARAM(0) $STR(S30) = 4
+#IF
+RANDOM 10 100
+#ACT
+MOV M20 $STR(S30)
+MOV M21 $INC.$STR(M20).15
+MOV M22 $DEC.$STR(M20).15
+FormatStr S31 %s%s%s <$STR(M22)>|<$STR(M20)>|<$STR(M21)>
+ReplaceText S20 $STR(S31) 1
+SPLIT $STR(S20) | S21
+RANDOMVAR S21 28 S29
+DEC S29 1 6
+UPGRADEUSERITEM $PARAM(0) $STR(S29) = 4
+break
+
+
+[@NewStdModeFunc1000]
+#IF
+ISRIDEON
+#ACT
+MOV M10 $ITEMINFO[$PARAM(0)].AC2
+MOV M11 $ITEMINFO[$PARAM(0)].NeedLevel
+MOV M12 $ITEMINFO[$PARAM(0)].DuraMax
+MOV M13 $ITEMINFO[$PETMAKEINDEX(2)].PET.LEVEL
+MOV S11 $PARAM(2)
+ReplaceText S11 (
+ReplaceText S11 )
+ReplaceText S11 初级
+ReplaceText S11 中级
+ReplaceText S11 高级
+ReplaceText S11 专家
+ReplaceText S11 大师
+ReplaceText S11 宗师
+ReplaceText S11 权威
+ReplaceText S11 王者
+#ELSEACT
+SENDMSG 5 必须骑乘灵兽进入骑战状态才能学习威力巨大的<$PARAM(2)>！
+break
+#IF
+EQUAL $ITEMINFO[$PARAM(0)].Shape 13
+#ACT
+MOV S10 战士
+#IF
+EQUAL $ITEMINFO[$PARAM(0)].Shape 14
+#ACT
+MOV S10 法师
+#IF
+EQUAL $ITEMINFO[$PARAM(0)].Shape 15
+#ACT
+MOV S10 道士
+#IF
+!EQUAL S10 $JOB
+#ACT
+MessageBox 你不适合学习这本书！
+break
+#IF
+CHECKLEVELEX < $STR(M11)
+#ACT
+SENDMSG 5 <$PARAM(2)>要求主体等级达到<$STR(M11)>！
+break
+#IF
+SMALL M13 $STR(M12)
+#ACT
+SENDMSG 5 领悟<$PARAM(2)>要求灵兽等级达到<$STR(M12)>级！
+break
+#IF
+CHECKSKILL $STR(S11) \ $STR(M10)
+#ACT
+SENDMSG 5 你已经学会了本等级的技能，无法再次练习此项技能。
+break
+#IF
+!CHECKMAGIC $STR(S11)
+POS $PARAM(2) 初级
+#ACT
+ADDSKILL $STR(S11)
+SKILLLEVEL $STR(S11) = $STR(M10)
+TAKEM $PARAM(0)
+SENDMSG 5 你已经掌握了威力巨大的<$PARAM(2)>!
+break
+#IF
+CHECKSKILL $STR(S11) = $ITEMINFO[$PARAM(0)].AC1
+#ACT
+SKILLLEVEL $STR(S11) = $STR(M10)
+TAKEM $PARAM(0)
+SENDMSG 5 你已经掌握了威力巨大的<$PARAM(2)>!
+break
+#ELSEACT
+SENDMSG 5 需要先学会上一等级的<$STR(S11)>，才能练习此项技能。
+break
+
+[@NewStdModeFunc1001]
+#IF
+CHECKLEVELEX < $ITEMINFO[$PARAM(0)].DuraMax
+#ACT
+MessageBox 你的等级不够，还不能学习这本书！
+break
+#ELSEACT
+#IF
+POS $PARAM(2) 攻杀
+#ACT
+MOV M10 $ITEMINFO[$PARAM(0)].AC1
+MOV S10 战士
+MOV S11 强化攻杀剑法
+#IF
+POS $PARAM(2) 施毒
+#ACT
+MOV M10 $ITEMINFO[$PARAM(0)].AC1
+MOV S10 道士
+MOV S11 强化施毒术
+#IF
+POS $PARAM(2) 火球
+#ACT
+MOV M10 $ITEMINFO[$PARAM(0)].AC1
+MOV S10 法师
+MOV S11 强化火球术
+#IF
+!EQUAL S10 $JOB
+#ACT
+MessageBox 你不适合学习这本书！
+break
+#IF
+CHECKSKILL $STR(S11) \ $STR(M10)
+#ACT
+MessageBox 你已经学会了本等级的技能，无法再次练习此项技能。
+break
+#ELSEACT
+#IF
+CHECKITEM $PARAM(2) 1
+#ACT
+TAKEM $PARAM(0)
+ADDSKILL $STR(S11)
+SKILLLEVEL $STR(S11) = $STR(M10)
+SENDMSG 5 你已经掌握了威力巨大的<$STR(M10)>重<$STR(S11)>!
+break
+
+}

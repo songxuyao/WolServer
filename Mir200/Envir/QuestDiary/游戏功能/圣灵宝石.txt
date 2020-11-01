@@ -1,0 +1,151 @@
+[@圣灵宝石]
+{
+
+#IF
+CHECKVARLIST <$ITEMINFO[$PARAM(1)].NAME>| ..\QuestDiary\数据文件\文本数据\圣灵宝石列表.txt S10
+#ACT
+GETVALIDSTR $STR(S10) | S11 P11
+#ELSEACT
+break
+#IF
+SMALL $ITEMVALSUM(圣灵精华).DURA $STR(P11)
+#ACT
+SENDMSG 5 您的圣灵精华数量不足<$STR(P11)>个，更多的圣灵精华才能激活宝石隐藏属性。
+break
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV S12 圣灵
+INC S12 $ITEMINFO[$PARAM(1)].NAME
+TAKEM $PARAM(1)
+TAKE 圣灵精华 $STR(P11)
+give $STR(S12) 1
+SENDMSG 5 恭喜您，您消耗了<$STR(P11))>个圣灵精华合成出了<$PARAM(11)>。它可以帮您提升武器上的技能属性。
+break
+
+[@圣灵宝石10]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV S10 战士
+GOTO @Gemeffect
+break
+
+[@圣灵宝石11]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV S10 法师
+GOTO @Gemeffect
+break
+
+[@圣灵宝石12]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV S10 道士
+GOTO @Gemeffect
+break
+
+[@圣灵宝石13]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV S10 战士
+GOTO @Gemeffect
+break
+
+[@圣灵宝石14]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV S10 道士
+GOTO @Gemeffect
+break
+
+[@圣灵宝石15]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV S10 战士
+GOTO @Gemeffect
+break
+
+[@圣灵宝石16]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV S10 法师
+GOTO @Gemeffect
+break
+
+[@圣灵宝石17]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV S10 所有
+GOTO @Gemeffect
+break
+
+[@Gemeffect]
+#IF
+CHECKUSEITEM 1
+#ACT
+MOV M15 0
+MOV M16 $ITEMINFO[$PARAM(0)].WEIGHT
+MOV M17 $ITEMINFO[$USEITEMMAKEINDEX(1)].ITEMEXT(69)
+MOV M18 $ITEMINFO[$USEITEMMAKEINDEX(1)].ITEMEXT(70)
+#ELSEACT
+MessageBox 你没有装备武器,无法使用圣灵宝石增强武器上附加技能的威力！
+break
+#IF
+EQUAL M17 0
+#ACT
+SENDMSG 5 对不起，您的武器还没附加武器技能，使用圣灵精华可以给武器附加技能！
+break
+#IF
+EQUAL S20 战士
+CHECKVARLIST $STR(M17)  ..\QuestDiary\数据文件\文本数据\圣灵战士技能.txt
+#ACT
+MOV M15 1
+#IF
+EQUAL S20 法师
+CHECKVARLIST $STR(M17)  ..\QuestDiary\数据文件\文本数据\圣灵法师技能.txt
+#ACT
+MOV M15 1
+#IF
+EQUAL S20 道士
+CHECKVARLIST $STR(M17)  ..\QuestDiary\数据文件\文本数据\圣灵道士技能.txt
+#ACT
+MOV M15 1
+#IF
+EQUAL M15 0
+!EQUAL S20 所有
+#ACT
+SENDMSG 5 <$ITEMINFO[$PARAM(0)].NAME>只能升级武器上的<$STR(S20)>类技能威力
+break
+#IF
+LARGE M18 14
+#ACT
+TAKEM $PARAM(0)
+SENDMSG 5 本次升级无效，您可以使用圣灵系列宝石再次尝试!
+break
+#IF
+RANDOM 5
+#ACT
+MULT M16 2
+#IF
+RANDOM $STR(M18)
+#ACT
+TAKEM $PARAM(0)
+UPGRADEUSERITEM 1 70 + $STR(M16)
+MULT M16 3
+SENDMSG 5 恭喜您，本次升级成功，增加技能效果<$STR(M16)>%，您可以使用圣灵系列宝石再次尝试!
+break
+#ELSEACT
+TAKEM $PARAM(0)
+SENDMSG 5 本次升级无效，您可以使用圣灵系列宝石再次尝试!
+break
+
+
+}

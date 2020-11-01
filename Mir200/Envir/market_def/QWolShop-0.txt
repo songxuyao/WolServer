@@ -1,0 +1,631 @@
+[@_商城_购买物品]
+#IF
+!EQUAL $Table(SG_Pritime).Tim14 $DATE
+#ACT
+CLEARCUSTOMVALUE 0 44
+Table SG_Pritime Tim14 = $DATE
+#IF
+SMALL $VIPLEVEL $PARAM(9)
+#ACT
+MESSAGEBOX 对不起，您的vip等级不足
+break
+#IF
+RANDOM 1
+#ACT
+MOV P26 $DEC.$PARAM(2).$CustomValue($PARAM(7))
+MOV P27 $MULT.$PARAM(1).$PARAM(6)
+#IF
+LARGE $PARAM(6) $STR(P26)
+#ACT
+MESSAGEBOX 对不起，您今天购买该物品的数量已达到上限。
+break
+#IF
+CHECKGAMEGOLD < $STR(P27)
+EQUAL $PARAM(8) 0
+#ACT
+SENDMSG 5 您的元宝不足!
+break
+#IF
+CHECKBINDGAMEGOLD < $STR(P27)
+EQUAL $PARAM(8) 1
+#ACT
+SENDMSG 5 您的绑定元宝账户余额不足!
+break
+#IF
+EQUAL $PARAM(8) 0
+#ACT
+GAMEGOLD - $STR(P27)
+ChangeCustomValue $PARAM(7) + $PARAM(6)
+GIVE $PARAM(0) $PARAM(6)
+MESSAGEBOX 购买成功！
+break
+#IF
+EQUAL $PARAM(8) 1
+#ACT
+BINDGAMEGOLD - $STR(P27)
+ChangeCustomValue $PARAM(7) + $PARAM(6)
+GIVE $PARAM(0) $PARAM(6) 1
+MESSAGEBOX 购买成功！
+break
+
+[@BuyShopItem1960]
+#IF
+RANDOM 1
+#ACT
+MOV P27 $MULT.$PARAM(1).$PARAM(6)
+MOV P28 $MULT.$PARAM(6).30
+#IF
+CHECKGAMEGOLD < $STR(P27)
+EQUAL $PARAM(8) 0
+#ACT
+SENDMSG 5 您的元宝不足!
+break
+#IF
+CHECKBINDGAMEGOLD < $STR(P27)
+EQUAL $PARAM(8) 1
+#ACT
+SENDMSG 5 您的绑定元宝账户余额不足!
+break
+#IF
+EQUAL $PARAM(8) 0
+#ACT
+GAMEGOLD - $STR(P27)
+DelayCall 1 @元宝祝福油罐 $PARAM(6) ms
+MESSAGEBOX 购买成功！
+break
+#IF
+EQUAL $PARAM(8) 1
+#ACT
+BINDGAMEGOLD - $STR(P27)
+DelayCall 1 @绑定祝福油罐 $PARAM(6) ms
+MESSAGEBOX 购买成功！
+break
+
+[@元宝祝福油罐]
+#IF
+CHECKLEVELEX > 0
+#ACT
+give 祝福油罐 1
+UPGRADEUSERITEM $PARAM(10) 20 = 0
+break
+
+[@绑定祝福油罐]
+#IF
+CHECKLEVELEX > 0
+#ACT
+give 祝福油罐 1 1
+UPGRADEUSERITEM $PARAM(10) 20 = 0
+break
+
+[@BuyShopItem11916]
+#IF
+RANDOM 1
+#ACT
+MOV P27 $MULT.$PARAM(1).$PARAM(6)
+MOV P28 $MULT.$PARAM(6).100
+#IF
+CHECKGAMEGOLD < $STR(P27)
+EQUAL $PARAM(8) 0
+#ACT
+SENDMSG 5 您的元宝不足!
+break
+#IF
+CHECKBINDGAMEGOLD < $STR(P27)
+EQUAL $PARAM(8) 1
+#ACT
+SENDMSG 5 您的绑定元宝账户余额不足!
+break
+#IF
+EQUAL $PARAM(8) 0
+#ACT
+GAMEGOLD - $STR(P27)
+GIVE 悬赏令 $STR(P28)
+MESSAGEBOX 购买成功！
+break
+#IF
+EQUAL $PARAM(8) 1
+#ACT
+BINDGAMEGOLD - $STR(P27)
+GIVE 悬赏令 $STR(P28) 1
+MESSAGEBOX 购买成功！
+break
+
+[@BuyShopItem11699]
+#IF
+RANDOM 1
+#ACT
+MOV P27 $MULT.$PARAM(1).$PARAM(6)
+MOV P28 $MULT.$PARAM(6).30
+#IF
+CHECKGAMEGOLD < $STR(P27)
+EQUAL $PARAM(8) 0
+#ACT
+SENDMSG 5 您的元宝不足!
+break
+#IF
+CHECKBINDGAMEGOLD < $STR(P27)
+EQUAL $PARAM(8) 1
+#ACT
+SENDMSG 5 您的绑定元宝账户余额不足!
+break
+#IF
+EQUAL $PARAM(8) 0
+#ACT
+GAMEGOLD - $STR(P27)
+GIVE 飞行靴 $STR(P28)
+MESSAGEBOX 购买成功！
+break
+#IF
+EQUAL $PARAM(8) 1
+#ACT
+BINDGAMEGOLD - $STR(P27)
+GIVE 飞行靴 $STR(P28) 1
+MESSAGEBOX 购买成功！
+break
+
+[@BuyShopItem11700]
+#IF
+RANDOM 1
+#ACT
+MOV P27 $MULT.$PARAM(1).$PARAM(6)
+MOV P28 $MULT.$PARAM(6).50
+#IF
+CHECKGAMEGOLD < $STR(P27)
+EQUAL $PARAM(8) 0
+#ACT
+SENDMSG 5 您的元宝不足!
+break
+#IF
+CHECKBINDGAMEGOLD < $STR(P27)
+EQUAL $PARAM(8) 1
+#ACT
+SENDMSG 5 您的绑定元宝账户余额不足!
+break
+#IF
+EQUAL $PARAM(8) 0
+#ACT
+GAMEGOLD - $STR(P27)
+GIVE 飞行靴 $STR(P28)
+MESSAGEBOX 购买成功！
+break
+#IF
+EQUAL $PARAM(8) 1
+#ACT
+BINDGAMEGOLD - $STR(P27)
+GIVE 飞行靴 $STR(P28) 1
+MESSAGEBOX 购买成功！
+break
+
+[@BuyShopItem1653]
+#IF
+RANDOM 1
+#ACT
+MOV P27 $MULT.$PARAM(1).$PARAM(6)
+#IF
+CHECKGAMEGOLD < $STR(P27)
+EQUAL $PARAM(8) 0
+#ACT
+SENDMSG 5 您的元宝不足!
+break
+#IF
+CHECKBINDGAMEGOLD < $STR(P27)
+EQUAL $PARAM(8) 1
+#ACT
+SENDMSG 5 您的绑定元宝账户余额不足!
+break
+#IF
+EQUAL $PARAM(8) 0
+#ACT
+GAMEGOLD - $STR(P27)
+GIVE 魔幻变身披风 $PARAM(6)
+MESSAGEBOX 购买成功！
+break
+#IF
+EQUAL $PARAM(8) 1
+#ACT
+BINDGAMEGOLD - $STR(P27)
+GIVE 魔幻变身披风 $PARAM(6) 1
+MESSAGEBOX 购买成功！
+break
+
+[@BuyShopItem5076]
+#IF
+!EQUAL $Table(SG_Pritime).Tim14 $DATE
+#ACT
+CLEARCUSTOMVALUE 0 44
+Table SG_Pritime Tim14 = $DATE
+#IF
+SMALL $VIPLEVEL $PARAM(9)
+#ACT
+MESSAGEBOX 对不起，您的vip等级不足
+break
+#IF
+RANDOM 1
+#ACT
+MOV P26 $DEC.$PARAM(2).$CustomValue($PARAM(7))
+MOV P27 $MULT.$PARAM(1).$PARAM(6)
+#IF
+LARGE $PARAM(6) $STR(P26)
+#ACT
+MESSAGEBOX 对不起，您今天购买该物品的数量已达到上限。
+break
+#IF
+CHECKGAMEGOLD < $STR(P27)
+EQUAL $PARAM(8) 0
+#ACT
+SENDMSG 5 您的元宝不足!
+break
+#IF
+CHECKBINDGAMEGOLD < $STR(P27)
+EQUAL $PARAM(8) 1
+#ACT
+SENDMSG 5 您的绑定元宝账户余额不足!
+break
+#IF
+EQUAL $PARAM(8) 0
+#ACT
+GAMEGOLD - $STR(P27)
+ChangeCustomValue $PARAM(7) + $PARAM(6)
+GIVE 强化技能灵丹3 $PARAM(6)
+MESSAGEBOX 购买成功！
+break
+#IF
+EQUAL $PARAM(8) 1
+#ACT
+BINDGAMEGOLD - $STR(P27)
+ChangeCustomValue $PARAM(7) + $PARAM(6)
+GIVE 强化技能灵丹3 $PARAM(6) 1
+MESSAGEBOX 购买成功！
+break
+
+[@BuyShopItem1581]
+#IF
+!EQUAL $Table(SG_Pritime).Tim14 $DATE
+#ACT
+CLEARCUSTOMVALUE 0 44
+Table SG_Pritime Tim14 = $DATE
+#IF
+SMALL $VIPLEVEL $PARAM(9)
+#ACT
+MESSAGEBOX 对不起，您的vip等级不足
+break
+#IF
+RANDOM 1
+#ACT
+MOV P26 $DEC.$PARAM(2).$CustomValue($PARAM(7))
+MOV P27 $MULT.$PARAM(1).$PARAM(6)
+#IF
+LARGE $PARAM(6) $STR(P26)
+#ACT
+MESSAGEBOX 对不起，您今天购买该物品的数量已达到上限。
+break
+#IF
+CHECKGAMEGOLD < $STR(P27)
+EQUAL $PARAM(8) 0
+#ACT
+SENDMSG 5 您的元宝不足!
+break
+#IF
+CHECKBINDGAMEGOLD < $STR(P27)
+EQUAL $PARAM(8) 1
+#ACT
+SENDMSG 5 您的绑定元宝账户余额不足!
+break
+#IF
+EQUAL $PARAM(8) 0
+#ACT
+GAMEGOLD - $STR(P27)
+ChangeCustomValue $PARAM(7) + $PARAM(6)
+GIVE 御兽天袍2 $PARAM(6)
+MESSAGEBOX 购买成功！
+break
+#IF
+EQUAL $PARAM(8) 1
+#ACT
+BINDGAMEGOLD - $STR(P27)
+ChangeCustomValue $PARAM(7) + $PARAM(6)
+GIVE 御兽天袍2 $PARAM(6) 1
+MESSAGEBOX 购买成功！
+break
+
+[@BuyShopItem1582]
+#IF
+!EQUAL $Table(SG_Pritime).Tim14 $DATE
+#ACT
+CLEARCUSTOMVALUE 0 44
+Table SG_Pritime Tim14 = $DATE
+#IF
+SMALL $VIPLEVEL $PARAM(9)
+#ACT
+MESSAGEBOX 对不起，您的vip等级不足
+break
+#IF
+RANDOM 1
+#ACT
+MOV P26 $DEC.$PARAM(2).$CustomValue($PARAM(7))
+MOV P27 $MULT.$PARAM(1).$PARAM(6)
+#IF
+LARGE $PARAM(6) $STR(P26)
+#ACT
+MESSAGEBOX 对不起，您今天购买该物品的数量已达到上限。
+break
+#IF
+CHECKGAMEGOLD < $STR(P27)
+EQUAL $PARAM(8) 0
+#ACT
+SENDMSG 5 您的元宝不足!
+break
+#IF
+CHECKBINDGAMEGOLD < $STR(P27)
+EQUAL $PARAM(8) 1
+#ACT
+SENDMSG 5 您的绑定元宝账户余额不足!
+break
+#IF
+EQUAL $PARAM(8) 0
+#ACT
+GAMEGOLD - $STR(P27)
+ChangeCustomValue $PARAM(7) + $PARAM(6)
+GIVE 御兽天衣2 $PARAM(6)
+MESSAGEBOX 购买成功！
+break
+#IF
+EQUAL $PARAM(8) 1
+#ACT
+BINDGAMEGOLD - $STR(P27)
+ChangeCustomValue $PARAM(7) + $PARAM(6)
+GIVE 御兽天衣2 $PARAM(6) 1
+MESSAGEBOX 购买成功！
+break
+
+[@BuyShopItem1423]
+#IF
+!EQUAL $Table(SG_Pritime).Tim14 $DATE
+#ACT
+CLEARCUSTOMVALUE 0 44
+Table SG_Pritime Tim14 = $DATE
+#IF
+SMALL $VIPLEVEL $PARAM(9)
+#ACT
+MESSAGEBOX 对不起，您的vip等级不足
+break
+#IF
+RANDOM 1
+#ACT
+MOV P26 $DEC.$PARAM(2).$CustomValue($PARAM(7))
+MOV P27 $MULT.$PARAM(1).$PARAM(6)
+#IF
+LARGE $PARAM(6) $STR(P26)
+#ACT
+MESSAGEBOX 对不起，您今天购买该物品的数量已达到上限。
+break
+#IF
+CHECKGAMEGOLD < $STR(P27)
+EQUAL $PARAM(8) 0
+#ACT
+SENDMSG 5 您的元宝不足!
+break
+#IF
+CHECKBINDGAMEGOLD < $STR(P27)
+EQUAL $PARAM(8) 1
+#ACT
+SENDMSG 5 您的绑定元宝账户余额不足!
+break
+#IF
+EQUAL $PARAM(8) 0
+#ACT
+GAMEGOLD - $STR(P27)
+ChangeCustomValue $PARAM(7) + $PARAM(6)
+GIVE 御兽天袍1 $PARAM(6)
+MESSAGEBOX 购买成功！
+break
+#IF
+EQUAL $PARAM(8) 1
+#ACT
+BINDGAMEGOLD - $STR(P27)
+ChangeCustomValue $PARAM(7) + $PARAM(6)
+GIVE 御兽天袍1 $PARAM(6) 1
+MESSAGEBOX 购买成功！
+break
+
+[@BuyShopItem1424]
+#IF
+!EQUAL $Table(SG_Pritime).Tim14 $DATE
+#ACT
+CLEARCUSTOMVALUE 0 44
+Table SG_Pritime Tim14 = $DATE
+#IF
+SMALL $VIPLEVEL $PARAM(9)
+#ACT
+MESSAGEBOX 对不起，您的vip等级不足
+break
+#IF
+RANDOM 1
+#ACT
+MOV P26 $DEC.$PARAM(2).$CustomValue($PARAM(7))
+MOV P27 $MULT.$PARAM(1).$PARAM(6)
+#IF
+LARGE $PARAM(6) $STR(P26)
+#ACT
+MESSAGEBOX 对不起，您今天购买该物品的数量已达到上限。
+break
+#IF
+CHECKGAMEGOLD < $STR(P27)
+EQUAL $PARAM(8) 0
+#ACT
+SENDMSG 5 您的元宝不足!
+break
+#IF
+CHECKBINDGAMEGOLD < $STR(P27)
+EQUAL $PARAM(8) 1
+#ACT
+SENDMSG 5 您的绑定元宝账户余额不足!
+break
+#IF
+EQUAL $PARAM(8) 0
+#ACT
+GAMEGOLD - $STR(P27)
+ChangeCustomValue $PARAM(7) + $PARAM(6)
+GIVE 御兽天衣1 $PARAM(6)
+MESSAGEBOX 购买成功！
+break
+#IF
+EQUAL $PARAM(8) 1
+#ACT
+BINDGAMEGOLD - $STR(P27)
+ChangeCustomValue $PARAM(7) + $PARAM(6)
+GIVE 御兽天衣1 $PARAM(6) 1
+MESSAGEBOX 购买成功！
+break
+
+
+[@BuyShopItem11697]
+#IF
+!EQUAL $Table(SG_Pritime).Tim14 $DATE
+#ACT
+CLEARCUSTOMVALUE 0 44
+Table SG_Pritime Tim14 = $DATE
+#IF
+SMALL $VIPLEVEL $PARAM(9)
+#ACT
+MESSAGEBOX 对不起，您的vip等级不足
+break
+#IF
+RANDOM 1
+#ACT
+MOV P26 $DEC.$PARAM(2).$CustomValue($PARAM(7))
+MOV P27 $MULT.$PARAM(1).$PARAM(6)
+#IF
+LARGE $PARAM(6) $STR(P26)
+#ACT
+MESSAGEBOX 对不起，您今天购买该物品的数量已达到上限。
+break
+#IF
+CHECKGAMEGOLD < $STR(P27)
+EQUAL $PARAM(8) 0
+#ACT
+SENDMSG 5 您的元宝不足!
+break
+#IF
+CHECKBINDGAMEGOLD < $STR(P27)
+EQUAL $PARAM(8) 1
+#ACT
+SENDMSG 5 您的绑定元宝账户余额不足!
+break
+#IF
+EQUAL $PARAM(8) 0
+#ACT
+GAMEGOLD - $STR(P27)
+ChangeCustomValue $PARAM(7) + $PARAM(6)
+GIVE 超级技能项链1 $PARAM(6)
+MESSAGEBOX 购买成功！
+break
+#IF
+EQUAL $PARAM(8) 1
+#ACT
+BINDGAMEGOLD - $STR(P27)
+ChangeCustomValue $PARAM(7) + $PARAM(6)
+GIVE 超级技能项链1 $PARAM(6) 1
+MESSAGEBOX 购买成功！
+break
+
+[@BuyShopItem1273]
+#IF
+!EQUAL $Table(SG_Pritime).Tim14 $DATE
+#ACT
+CLEARCUSTOMVALUE 0 44
+Table SG_Pritime Tim14 = $DATE
+#IF
+SMALL $VIPLEVEL $PARAM(9)
+#ACT
+MESSAGEBOX 对不起，您的vip等级不足
+break
+#IF
+RANDOM 1
+#ACT
+MOV P26 $DEC.$PARAM(2).$CustomValue($PARAM(7))
+MOV P27 $MULT.$PARAM(1).$PARAM(6)
+#IF
+LARGE $PARAM(6) $STR(P26)
+#ACT
+MESSAGEBOX 对不起，您今天购买该物品的数量已达到上限。
+break
+#IF
+CHECKGAMEGOLD < $STR(P27)
+EQUAL $PARAM(8) 0
+#ACT
+SENDMSG 5 您的元宝不足!
+break
+#IF
+CHECKBINDGAMEGOLD < $STR(P27)
+EQUAL $PARAM(8) 1
+#ACT
+SENDMSG 5 您的绑定元宝账户余额不足!
+break
+#IF
+EQUAL $PARAM(8) 0
+#ACT
+GAMEGOLD - $STR(P27)
+ChangeCustomValue $PARAM(7) + $PARAM(6)
+GIVE 超级技能项链 $PARAM(6)
+MESSAGEBOX 购买成功！
+break
+#IF
+EQUAL $PARAM(8) 1
+#ACT
+BINDGAMEGOLD - $STR(P27)
+ChangeCustomValue $PARAM(7) + $PARAM(6)
+GIVE 超级技能项链 $PARAM(6) 1
+MESSAGEBOX 购买成功！
+break
+
+[@BuyShopItem11696]
+#IF
+!EQUAL $Table(SG_Pritime).Tim14 $DATE
+#ACT
+CLEARCUSTOMVALUE 0 44
+Table SG_Pritime Tim14 = $DATE
+#IF
+SMALL $VIPLEVEL $PARAM(9)
+#ACT
+MESSAGEBOX 对不起，您的vip等级不足
+break
+#IF
+RANDOM 1
+#ACT
+MOV P26 $DEC.$PARAM(2).$CustomValue($PARAM(7))
+MOV P27 $MULT.$PARAM(1).$PARAM(6)
+MOV P28 $MULT.$PARAM(6).100
+#IF
+LARGE $PARAM(6) $STR(P26)
+#ACT
+MESSAGEBOX 对不起，您今天购买该物品的数量已达到上限。
+break
+#IF
+CHECKGAMEGOLD < $STR(P27)
+EQUAL $PARAM(8) 0
+#ACT
+SENDMSG 5 您的元宝不足!
+break
+#IF
+CHECKBINDGAMEGOLD < $STR(P27)
+EQUAL $PARAM(8) 1
+#ACT
+SENDMSG 5 您的绑定元宝账户余额不足!
+break
+#IF
+EQUAL $PARAM(8) 0
+#ACT
+GAMEGOLD - $STR(P27)
+ChangeCustomValue $PARAM(7) + $PARAM(6)
+GIVE 神龙之魂碎片 $STR(P28)
+MESSAGEBOX 购买成功！
+break
+#IF
+EQUAL $PARAM(8) 1
+#ACT
+BINDGAMEGOLD - $STR(P27)
+ChangeCustomValue $PARAM(7) + $PARAM(6)
+GIVE 神龙之魂碎片 $STR(P28) 1
+MESSAGEBOX 购买成功！
+break

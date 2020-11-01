@@ -1,0 +1,45 @@
+(@Storage @getback @FastStorge)
+%100
+[@main]
+我是落霞村的村长，可以替你保管很多东西，目前还不收保\
+管费，有什么可以先放我这里。为方便大家搜集红、绿、蓝\
+三种颜色的宝石以兑换小宝石，推出“宝石仓库”的服务。\
+<可接任务/@_RW_entry>\
+<存放物品/@storage>    <宝石仓库/@_CK_goldsave>\
+<取出物品/@getback>    <捆扎物品/@_CK_mbind>    <快捷存取/@FastStorge>\
+<打听消息/@mission>\
+<关闭选单/@exit>
+
+[@_RW_entry]
+#IF
+EQUAL $Task(12) 4
+#ACT
+#CALL [\游戏任务\新手任务\求婚的勇气.txt] @落霞岛_仓库
+break
+#IF
+EQUAL $Task(12) 5
+#ACT
+#CALL [\游戏任务\新手任务\求婚的勇气.txt] @落霞岛_仓库1
+break
+#ELSESAY
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+[@_CK_mbind]
+#CALL [\商人\仓库.txt] @捆扎物品
+
+[@_CK_goldsave]
+#CALL [\商人\仓库.txt] @宝石仓库
+
+[@storage]
+#CALL [\商人\仓库.txt] @保管物品
+
+[@getback]
+#CALL [\商人\仓库.txt] @取出物品
+
+[@FastStorge]
+#CALL [\商人\仓库.txt] @快捷存取
+
+[@mission]
+我要盖一座新房，现在准备得差不多了。\\
+<离开/@exit>

@@ -1,0 +1,12 @@
+[setup]
+stepcount = 4
+title = 新手任务--勇闯炼狱
+ID = 27
+stepaim1 = 去找<中州老兵/@@goto 0 老兵 468,226>打听炼狱 <color=green [传]/@@flyto 19 0 468 226>
+stepaim2 = 双击包裹中的<color=green 炼狱体验卡>进入\<炼狱魔境一层/@@goplace MH001 127,91>杀5个任意怪物
+stepaim3 = 还要杀<$TASKVAL(27).I0>个<任意怪物/@@goplace NL001 99,81>
+stepaim4 = 任务完成！去找<中州老兵/@@goto 0 老兵 468,226> <color=green [传]/@@flyto 19 0 468 226>
+stepDESC1 = <color=graygolden 任务目的：>去找<中州老兵/@@goto 0 老兵 468,226>打听炼狱\<color=graygolden 任务奖励：>\</@@!PIC 炼狱体验卡>		</@@!PIC2 10,951>经验：400000\<color=graygolden 任务介绍:>\    恩，你的实力以远远超过了我的预期，也许你就是那个\有缘人，是时候了。传世大陆上还有一个世界被称为“炼狱”，\那里几乎拥有这个世界中所有的地形和怪物，同时也拥有无\穷的财宝。至于这个世界是怎么形成的，也许只有创世神才\知道，你愿意前往这个传说中的世界吗？
+stepDESC2 = <color=graygolden 任务目的：>去炼狱魔境一层消灭5只任意怪物\<color=graygolden 任务奖励：>\</@@!PIC2 10,951>经验：400000 \<color=graygolden 任务介绍:>\    你可以双击包裹中的炼狱体验卡到海岛，再从那里的传\送门进入炼狱魔境。\    快去炼狱魔境一层消灭5只任意怪物回来找我。
+stepDESC3 = <color=graygolden 任务目的：>去炼狱魔境一层消灭5只任意怪物\<color=graygolden 任务奖励：>\</@@!PIC2 10,951>经验：400000 \<color=graygolden 任务介绍:>\    你可以双击包裹中的炼狱体验卡到海岛，再从那里的传\送门进入炼狱魔境。\    还要干掉<$TASKVAL(27).I0>只任意怪物。
+stepDESC4 = <color=graygolden 任务目的：>去炼狱魔境一层消灭5只任意怪物\<color=graygolden 任务奖励：>\</@@!PIC2 10,951>经验：400000 \<color=graygolden 任务介绍:>\    你可以双击包裹中的炼狱体验卡到海岛，再从那里的传\送门进入炼狱魔境。\    恭喜，圆满完成任务！快用向中州老兵回报吧！

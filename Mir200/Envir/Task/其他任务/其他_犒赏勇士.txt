@@ -1,0 +1,6 @@
+[setup]
+stepcount = 1
+title = 通知史官—犒赏勇士
+ID = 36
+stepaim1 = 去中州皇宫找<史官/@@goto sh000 史官 22,39> <color=green [传]/@@flyto 38 sh000 22 39>
+stepDESC1 = <color=graygolden 任务目的：>去<中州皇宫/@@goto 0 中州皇宫 482,144>里找<color=green 史官，他就在国王旁边>\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：400000\<color=graygolden 任务介绍:>\  任务完成得不错嘛。这第一次的任务就算你通过了!让我\想想应该再给你点什么赏赐呢？这样吧，现在你就去史官那\吧，他会给你奖励的!

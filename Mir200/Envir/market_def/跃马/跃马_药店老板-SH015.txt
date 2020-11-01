@@ -1,0 +1,27 @@
+(@bindbuy @fastbuy @sell @buy)
+%100
+[@main]
+欢迎光临，这里的药很全。\
+有什么事情需要我帮忙吗？\
+根据城堡主人<$LORD>的命令\
+对<$OWNERGUILD>的成员提供30%折扣\
+<可接任务/@_RW_entry>\
+<快捷交易/@fastbuy>   <购入药品/@buy>\
+<出售药品/@sell>\
+<绑定金币购买物品/@bindbuy>\
+
+[@_RW_entry]
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+[@fastbuy]
+#CALL [\商人\药店.txt] @快捷交易
+
+[@buy]
+#CALL [\商人\药店.txt] @购入药品
+
+[@sell]
+#CALL [\商人\药店.txt] @出售药品
+
+[@bindbuy]
+#CALL [\商人\药店.txt] @绑定购买

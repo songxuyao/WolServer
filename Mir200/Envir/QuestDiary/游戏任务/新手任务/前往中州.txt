@@ -1,0 +1,76 @@
+[@中州_老兵]
+{
+
+#IF
+EQUAL $Task(16) 1
+#SAY
+可以完成的任务：\
+<新手任务--前往中州/@_RW_fulqwTaskDesp50>\
+#ACT
+break
+#IF
+EQUAL $Task(26) 1
+#SAY
+可以完成的任务：\
+<新手任务--将军坟试炼/@_RW_fuljjTaskDesp50>\
+#ACT
+break
+#IF
+EQUAL $Task(26) 4
+#SAY
+可以完成的任务：\
+<新手任务--将军坟试炼/@_RW_fuljjTaskDesp51>\
+#ACT
+break
+#IF
+EQUAL $Task(27) 1
+#SAY
+可以完成的任务：\
+<新手任务--勇闯炼狱/@_RW_fullyTaskDesp50>\
+#ACT
+break
+#IF
+EQUAL $Task(27) 4
+#SAY
+可以完成的任务：\
+<新手任务--勇闯炼狱/@_RW_fullyTaskDesp51>\
+#ACT
+break
+#ELSESAY
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+[@_RW_fullyTaskDesp50]
+#CALL [\游戏任务\新手任务\勇闯炼狱.txt] @炼狱_老兵
+
+[@_RW_fullyTaskDesp51]
+#CALL [\游戏任务\新手任务\勇闯炼狱.txt] @勇闯_炼狱
+
+[@_RW_fuljjTaskDesp50]
+#CALL [\游戏任务\新手任务\将军坟试炼.txt] @将军_老兵
+
+[@_RW_fuljjTaskDesp51]
+#CALL [\游戏任务\新手任务\将军坟试炼.txt] @老兵_将军
+
+
+[@_RW_fulqwTaskDesp50]
+    欢迎来到中州城！如果说你的历练是从落霞岛开始的话，\
+那么你在中州城，将回成长为一个真正的勇士。\
+    <完成任务/@_RW_fulqwfilTask305>                <离开/@exit>
+
+
+[@_RW_fulqwfilTask305]
+#IF
+EQUAL $Task(16) 1
+#SAY
+    首先，去找在合理的首饰店掌柜吧，她会给你看到更多、\
+更全、更好的商品的。\
+    <离开/@exit>  <返回/@main>\
+#ACT
+EndTask 16
+give 回城神石 1
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+AddTask 17
+break
+
+}

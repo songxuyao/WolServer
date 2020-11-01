@@ -1,0 +1,68 @@
+[@main]
+\
+    <color=yellow 财神祈福，财神庙开启！所有乐善好施的勇士，都将>\
+  <color=yellow 得到财神的赐福，并且获得功德。>\
+  <color=green 前三名>且功德值达到<color=green 50000>可获得道具<color=green 财神面具凭证一个>\
+  可兑换<color=~战：攻0-5，防御0-2，魔防0-2，血量：90#0xff00ff00$法：攻0-5，防御0-2，魔防0-2，血量：60#0xff00ff00$道：攻0-5，防御0-2，魔防0-2，血量：30#0xff00ff00$ 财神面具>\
+  <进香祈福/@maintypeInof&1>、<上贡/@maintypeInof&2>、<许愿池许愿/@maintypeInof&3>、<点燃鞭炮/@maintypeInof&4>均会获得功德。\
+  <color=yellow 活动时间:每周五，周六！>\
+  <查看今日榜/@@todaygongdebang>     <领取昨日榜奖励/@_mammon_GetYesterDayGDPrize>  <凭证兑换/@duihuan>   <离开/@exit>\
+
+[@_mammon_GetYesterDayGDPrize]
+勇士，请先查看昨日榜单 <返回/@_mammongdb_main>
+
+
+[@duihuan]
+使用一个财神面具凭证可兑换一个财神面具\
+请选择要兑换的面具\
+    <财神面具(战)/@duihuan&财神面具(战)>  <财神面具(法)/@duihuan&财神面具(法)>  <财神面具(道)/@duihuan&财神面具(道)>
+
+[@duihuan]
+    对不起您的凭证不足\
+
+
+
+[@maintypeInof]
+#IF
+EQUAL $SCRIPTPARAM(1) 1
+#SAY
+\
+  <color=yellow 财神进香：>\
+  进<color=red 招财进宝香>可获得<color=yellow 180>功德；\
+  进<color=red 财源茂盛香>可获得<color=yellow 580>功德；\
+  进<color=red 金玉满堂香>可获得<color=yellow 1180>功德；\
+  进<color=red 财运亨通香>可获得<color=yellow 18880>功德；\\\
+<color=gray 上一页>  <color=orange 1 ／4>   <下一页/@maintypeInof&2>    <返回/@main>
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 2
+#SAY
+\
+  <color=yellow 财神上贡：>\
+  <color=red 上贡>可获得<color=yellow 20>功德；\\\\\\
+<上一页/@maintypeInof&1>  <color=orange 2 ／4>   <下一页/@maintypeInof&3>    <返回/@main>
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 3
+#SAY
+\
+  <color=yellow 许愿池许愿：>\
+  <color=red 许愿池许愿>可获得<color=yellow 50>功德。\\\\\\
+<上一页/@maintypeInof&2>  <color=orange 3 ／4>   <下一页/@maintypeInof&4>    <返回/@main>
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 4
+#SAY
+\
+  <color=yellow 点燃财神鞭炮：>\
+  点燃<color=red 财神鞭炮>可获得<color=yellow 20>功德；\\\\\\
+<上一页/@maintypeInof&3>  <color=orange 4 ／4>   <color=gray 下一页>    <返回/@main>
+#ACT
+break
+
+
+
+

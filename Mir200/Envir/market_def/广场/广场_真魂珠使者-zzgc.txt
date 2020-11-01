@@ -1,0 +1,155 @@
+[@main]
+\<真魂珠仅可以通过获得经验进行升级，当真魂珠带在装备>\
+<栏里时，人物经验不增加，转化为真魂珠经验。>\
+<真魂珠达到10级满经验，可以消耗20个仙魂珠碎片进行进>\
+<阶，可进阶为仙魂珠。>\
+<color=red 当真魂珠无法吸收经验，使用月光宝盒等将直接消失。>\
+<合成真魂珠/@getZHZ>    <进阶为仙魂珠/@getXHZ>\
+<真魂珠碎片换取经验/@ItemMExp>    <仙魂珠碎片换取经验/@ItemMExp2>\
+<仙魂珠碎片兑换/@XianHunZhuDuiHuanMenu>    <离开/@exit1>\
+
+[@XianHunZhuDuiHuanMenu]
+  可消耗10真魂珠碎片合成一个仙魂珠碎片！\\\\\\\\
+  <确认合成/@XianHunZhuDuiHuanDone>        <离开/@exit>
+
+[@XianHunZhuDuiHuanDone]
+#IF
+!CHECKITEM 真魂珠碎片 10
+#SAY
+你包裹里的真魂珠碎片不足10个。 <返回/@main>
+#ACT
+break
+#IF
+CHECKBAGSIZE 1
+#SAY
+恭喜您获得：\
+    <color=green 仙魂珠碎片 * 1>\\\\\\\
+    <离开/@exit>
+#ACT
+take 真魂珠碎片 10
+GIVE 仙魂珠碎片 1
+break
+#ELSESAY
+    你的包裹快满了，请整理下再来。\\\\\\\\
+    <我明白了/@exit>
+
+[@ItemMExp2]
+#IF
+RANDOM 1
+#ACT
+ShowSpotDlg 6 请放入仙魂珠碎片： @ItemMHumExp2
+break
+
+[@ItemMHumExp2]
+#IF
+EQUAL $PARAM(0) 仙魂珠碎片
+#ACT
+MOV P3 $ITEMINFO[$PARAM(1)].Dura
+MOV P4 $MULT.$STR(P3).50
+MULT P3 500000
+#ELSESAY
+抱歉，您放入的不是仙魂珠碎片 <返回/@main>
+#ELSEACT
+break
+#IF
+CHECKUSEITEM 14
+#SAY
+增加成功,共获得<$STR(P4)>万经验<返回/@main>
+#ACT
+UPGRADEUSERITEM $USEITEMMAKEINDEX(14) 75 + $STR(P3)
+TAKEM $PARAM(1)
+break
+#ELSESAY
+请佩戴好真魂珠或仙魂珠<返回/@main>
+#ELSEACT
+break
+
+[@ItemMExp]
+#IF
+RANDOM 1
+#ACT
+ShowSpotDlg 6 请放入真魂珠碎片： @ItemMHumExp
+break
+
+[@ItemMHumExp]
+#IF
+EQUAL $PARAM(0) 真魂珠碎片
+#ACT
+MOV P3 $ITEMINFO[$PARAM(1)].Dura
+MOV P4 $MULT.$STR(P3).10
+MULT P3 100000
+#ELSESAY
+抱歉，您放入的不是真魂珠碎片 <返回/@main>
+#ELSEACT
+break
+#IF
+CHECKUSEITEM 14
+#SAY
+增加成功,共获得<$STR(P4)>万经验<返回/@main>
+#ACT
+UPGRADEUSERITEM $USEITEMMAKEINDEX(14) 75 + $STR(P3)
+TAKEM $PARAM(1)
+break
+#ELSESAY
+请佩戴好真魂珠或仙魂珠<返回/@main>
+#ELSEACT
+break
+
+[@getXHZ]
+#IF
+RANDOM 1
+#ACT
+ShowSpotDlg 6 请放入真魂珠： @checkXHZ
+break
+
+[@checkXHZ]
+#IF
+!EQUAL $PARAM(0) 真魂珠
+#SAY
+抱歉，您放入的不是真魂珠 <返回/@main>
+#ACT
+break
+#IF
+!CHECKITEM 仙魂珠碎片 20
+#SAY
+仙魂珠碎片不足 <返回/@main>
+#ACT
+break
+#IF
+SMALL $ITEMINFO[$PARAM(1)].SOULBEADLEVEL 9
+#SAY
+真魂珠等级不足 <返回/@main>
+#ACT
+break
+#IF
+EQUAL $ITEMINFO[$PARAM(1)].SOULBEADCUREXP $ITEMINFO[$PARAM(1)].SOULBEADMAXEXP
+#SAY
+恭喜您获得：\
+    <color=green 仙魂珠 * 1>\\\\\\\
+    <离开/@exit>
+#ACT
+take 仙魂珠碎片 20
+TAKEM $PARAM(1)
+GIVE 仙魂珠 1
+break
+
+[@getZHZ]
+#IF
+!CHECKITEM 真魂珠碎片 10
+#SAY
+你包裹里的真魂珠碎片不足10个。 <返回/@main>
+#ACT
+break
+#IF
+CHECKBAGSIZE 1
+#SAY
+恭喜您获得：\
+    <color=green 真魂珠 * 1>\\\\\\\
+    <离开/@exit>
+#ACT
+take 真魂珠碎片 10
+GIVE 真魂珠 1
+break
+#ELSESAY
+    你的包裹快满了，请整理下再来。\\\\\\\\
+    <我明白了/@exit>

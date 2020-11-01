@@ -1,0 +1,10 @@
+[setup]
+stepcount = 3
+title = 热砂荒漠—深入险境
+ID = 33
+stepaim1 = 去<机关洞/@@goplace m005 68,111>杀15个青铜兽 <color=green [传]/@@flyto 36 m005 68 111>
+stepaim2 = 还要杀<$TASKVAL(33).I0>个<青铜兽/@@goplace m005 68,111> <color=green [传]/@@flyto 36 m005 68 111>
+stepaim3 = 任务完成！去找<李将军/@@goto 2 李将军 215,436> <color=green [传]/@@flyto 34 2 215 436>
+stepDESC1 = <color=graygolden 任务目的：>去<机关洞/@@goplace m005 68,111>杀15个青铜兽后找<李将军/@@goto 2 李将军 215,436>\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：350000\<color=graygolden 任务介绍:>\  这次，我需要你去消灭机关洞中的<color=green 青铜兽>15个。这些巨兽\可要比那些铜人更加的难对付。可要小心啊。
+stepDESC2 = <color=graygolden 任务目的：>去<机关洞/@@goplace m005 68,111>杀15个青铜兽后找<李将军/@@goto 2 李将军 215,436>\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：350000\<color=graygolden 任务介绍:>\还要杀<$TASKVAL(33).I0>个青铜兽
+stepDESC3 = <color=graygolden 任务目的：>去<机关洞/@@goplace m005 68,111>杀15个青铜兽后找<李将军/@@goto 2 李将军 215,436>\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：350000\<color=graygolden 任务介绍:>\恭喜，圆满完成任务！快用向李将军回报吧！

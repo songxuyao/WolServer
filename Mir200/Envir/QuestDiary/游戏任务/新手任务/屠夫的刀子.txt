@@ -1,0 +1,139 @@
+[@落霞岛_屠夫]
+{
+#IF
+EQUAL $Task(1) 1
+#SAY
+可以完成的任务：\
+<新手任务--屠夫的刀子/@_RW_fulfilTaskDesp1>\\
+<离开/@exit>
+#ACT
+break
+#IF
+EQUAL $Task(1) 3
+#SAY
+可以完成的任务：\
+<新手任务--屠夫的刀子/@_RW_fulfilTaskDesp3>\\
+<离开/@exit>
+#ACT
+break
+#IF
+EQUAL $Task(1) 4
+#SAY
+可以完成的任务：\
+<新手任务--屠夫的刀子/@_RW_fulfilTaskDesp4>\\
+<离开/@exit>
+#ACT
+break
+#ELSESAY
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+[@_RW_fulfilTaskDesp4]
+不错不错，这么快就找到了 1块高品质的鹿肉，你的进步蛮\
+快嘛！快把鹿肉给我吧，乡亲们等着我开张呢！\
+<交还鹿肉/@_RW_fulfilTask4_4>                <离开/@exit>
+
+[@_RW_fulfilTask4_4]
+#IF
+Checkitem 鹿肉 1
+#SAY
+太好了，今年过节乡亲们可都有口福了！今天上午村里的炼\
+药师到我这定购了一些猪肉，我一直没时间给他送过去，你\
+帮我送给他吧，他就在村子南门边的药铺（219：269）。\
+<离开/@exit>  <返回/@main>
+#ACT
+take 鹿肉 1
+EndTask 1
+give 幻彩戒指 2
+give 新鲜猪肉 1
+BINDGOLD + 100
+CHANGEEXP + 450
+AddTask 2
+SENDMSG 5 您成功增加了100绑定金币。
+break
+#ELSESAY
+你还没有完成任务！\
+<离开/@exit>
+
+[@_RW_fulfilTaskDesp1]
+是新手向导让你来的吧。这老小子人倒是好，带的新人桃李\
+满天下；就是贪吃了点，经常到我这里蹭饭。现在我碰到困\
+难，他还记得派人来帮我，算是有点良心。我有事情需要你\
+帮忙，你愿意吗？\
+<愿意接受/@_RW_fulfilTaskDesp1_1>                <我没空/@exit>
+
+[@_RW_fulfilTaskDesp1_1]
+#IF
+EQUAL $Task(1) 1
+#SAY
+近来生意兴隆，每天客户盈门，我都忙得没时间去铁匠铺打\
+磨杀鹿刀了。能否麻烦你帮我去找铁匠打磨一下刀子呢？我\
+会酬谢你的。他就在村子西门附近的铁匠铺（227：216）。\
+<离开/@exit>
+#ACT
+UpdateTask 1 2
+CHANGEEXP + 150
+BINDGOLD + 100
+give 磨损的刀子 1
+SENDMSG 5 您成功增加了100绑定金币。
+break
+
+[@落霞岛_铁匠]
+#IF
+EQUAL $Task(1) 2
+#SAY
+可以完成的任务：\
+<新手任务--屠夫的刀子/@_RW_fulfilTaskDesp2>\\
+<离开/@exit>
+#ELSESAY
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+[@_RW_fulfilTaskDesp2]
+这是屠夫阿三的杀鹿刀吧，阿三这家伙天生神力，应该去从\
+军报国啊，做个屠夫真是埋没了他！阿三虽然杀鹿技艺精湛\
+无比，但是没有我的磨刀功夫，他再厉害也是白搭，呵呵。\
+你把刀子交给我吧！\
+<麻烦你磨刀/@_RW_fulfilTask2_2>                <离开/@exit>
+
+[@_RW_fulfilTask2_2]
+#IF
+EQUAL $Task(1) 2
+#SAY
+刀子已经帮你磨好了，看你初来乍到，就照顾你，不收钱了\
+。快把磨好的刀子送还给屠夫吧，他等得着急呢！\
+<离开/@exit>
+#ACT
+UpdateTask 1 3
+CHANGEEXP + 300
+BINDGOLD + 100
+take 磨损的刀子 1
+give 锋利的刀子 1
+SENDMSG 5 您成功增加了100绑定金币。
+break
+
+[@_RW_fulfilTaskDesp3]
+呵呵，铁匠做事就是快，这村里我最佩服他了。别看他瘦瘦\
+的，但是一身气力，丝毫不输于我。你把刀子还给我吧，有\
+了锋利的刀，我向你展示一下“庖丁解鹿”的功夫，哈哈！\
+<刀磨好了，给你/@_RW_fulfilTask3_3>                <离开/@exit>
+
+[@_RW_fulfilTask3_3]
+#IF
+EQUAL $Task(1) 3
+#SAY
+谢谢你，年轻人，作为报酬就送你些零钱吧。落霞村里一年\
+一度的庆祝节日到了，鹿肉有些供不应求，能不能帮忙找些\
+品质高的鹿肉来，村子周围有很多鹿跑来跑去的。<color=green 你杀死鹿>\
+<color=green ><color=green 之后，将鼠标放在鹿的尸体上面，按住ALT+鼠标左键，就>\
+<color=green 可><color=green 以获得鹿肉了>。提示：需要任意品质的鹿肉1块。\
+<离开/@exit>  <返回/@main>
+#ACT
+UpdateTask 1 4
+CHANGEEXP + 300
+BINDGOLD + 100
+take 锋利的刀子 1
+SENDMSG 5 您成功增加了100绑定金币。
+break
+
+}

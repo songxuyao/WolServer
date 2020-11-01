@@ -1,0 +1,78 @@
+[@落霞岛_书店2]
+{
+
+#IF
+EQUAL $Task(13) 1
+#SAY
+可以完成的任务：\
+<新手任务--获赠技能书/@_RW_fulskilTaskDesp>\\
+<离开/@exit>
+#ACT
+break
+
+[@_RW_fulskilTaskDesp]
+非常感谢你帮我修复好了书橱。我送你一些技能作为报答。\
+虽然我这里书的种类不如中州书店齐全，但是满足你这种新兵\
+的需要还是没有问题的，这本书就给你吧。\
+记得，双击包裹内的接纳能够书就可以学会了。\
+<谢谢你的好意/@_RW_fulskilTask1_1>                <没事/@exit>
+
+[@_RW_fulskilTask1_1]
+#IF
+EQUAL $Task(13) 1
+#ACT
+#ELSESAY
+你还没有完成任务！\
+<离开/@exit>
+#ELSEACT
+break
+#IF
+checkjob WARR
+#SAY
+技能送给你了，在包裹中双击书籍，就可以学习了。\
+看来你的实力又得到了进一步的提升，不过能力越大的时候\
+，承担的责任也会越多。是时候去帮矿洞守卫官驱赶魔族了。\
+去那里看看吧！他就在村子矿坑入口附近（476:401）\
+<离开/@exit>
+#ACT
+EndTask 13
+give 血影刀法 1
+give 残影刀法 1
+give 攻杀剑法 1
+CHANGEEXP + 80000
+AddTask 14
+break
+#IF
+checkjob wizard
+#SAY
+技能送给你了，在包裹中双击书籍，就可以学习了。\
+看来你的实力又得到了进一步的提升，不过能力越大的时候\
+，承担的责任也会越多。是时候去帮矿洞守卫官驱赶魔族了。\
+去那里看看吧！他就在村子矿坑入口附近（476:401）\
+<离开/@exit>
+#ACT
+EndTask 13
+give 抗拒火环 1
+give 诱惑之光 1
+give 地狱火焰 1
+CHANGEEXP + 80000
+AddTask 14
+break
+#IF
+checkjob taoist
+#SAY
+技能送给你了，在包裹中双击书籍，就可以学习了。\
+看来你的实力又得到了进一步的提升，不过能力越大的时候\
+，承担的责任也会越多。是时候去帮矿洞守卫官驱赶魔族了。\
+去那里看看吧！他就在村子矿坑入口附近（476:401）\
+<离开/@exit>
+#ACT
+EndTask 13
+give 精神战法 1
+give 施毒术 1
+give 诅咒术 1
+CHANGEEXP + 80000
+AddTask 14
+break
+
+}

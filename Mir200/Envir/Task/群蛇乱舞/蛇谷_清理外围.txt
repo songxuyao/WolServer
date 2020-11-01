@@ -1,0 +1,10 @@
+[setup]
+stepcount = 3
+title = 群蛇乱舞—清理外围
+ID = 40
+stepaim1 = 在附近杀掉10条大土蛇 <color=green [传]/@@flyto 40 10 55 45>
+stepaim2 = 还要杀<$TASKVAL(40).I0>个<大土蛇/@@goplace 10 70,53> <color=green [传]/@@flyto 40 10 55 45>
+stepaim3 = 任务完成！向<李虎/@@goto 10 前锋队长李虎 79,58>复命 <color=green [传]/@@flyto 39 10 79 58>
+stepDESC1 = <color=graygolden 任务目的：>杀掉<color=green 10条大土蛇>后，前往蛇魔谷找<前锋队长李虎/@@goto 10 前锋队长李虎 79,58>\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：500000 </@@!PIC2 10,229>绑定金币：2000	\<color=graygolden 任务介绍:>\  自从将军从我们这抽调了一半的人手去增援机关洞后，我\们的人手真是太少了，兄弟们不停的杀蛇，可是这段时间以\来，蛇真的是越来越多了，别说是蛇洞里面了，连外面都开\始被蛇给覆盖了。你先帮忙在洞外杀掉10条大土蛇吧。不然\我怕我们很快连站着说话的地方都没有了.
+stepDESC2 = <color=graygolden 任务目的：>杀掉<color=green 10条大土蛇>后，前往蛇魔谷找<前锋队长李虎/@@goto 10 前锋队长李虎 79,58>\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：500000 </@@!PIC2 10,229>绑定金币：2000	\<color=graygolden 任务介绍:>\还要杀掉<$TASKVAL(40).I0>条大土蛇
+stepDESC3 = <color=graygolden 任务目的：>杀掉<color=green 10条大土蛇>后，前往蛇魔谷找<前锋队长李虎/@@goto 10 前锋队长李虎 79,58>\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：500000 </@@!PIC2 10,229>绑定金币：2000	\<color=graygolden 任务介绍:>\恭喜，圆满完成任务！快用向前锋哨兵回报吧！

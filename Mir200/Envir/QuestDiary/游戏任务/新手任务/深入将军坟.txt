@@ -1,0 +1,82 @@
+[@皇宫_史官]
+{
+
+#IF
+EQUAL $Task(25) 1
+#SAY
+可以完成的任务：\
+<新手任务--深入将军坟/@_RW_fultsTaskDesp>\\
+<离开/@exit>
+#ACT
+break
+#IF
+EQUAL $Task(25) 4
+#SAY
+可以完成的任务：\
+<新手任务--深入将军坟/@_RW_fultsTaskDesp04>\\
+<离开/@exit>
+#ACT
+break
+#IF
+EQUAL $Task(36) 1
+#SAY
+可以完成的任务：\
+<通知史官—犒赏勇士/@_RW_fulfilztTaskDesp408>\\
+<离开/@exit>
+#ACT
+break
+#ELSESAY
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+[@_RW_fulfilztTaskDesp408]
+#CALL [\\游戏任务\热砂荒漠\犒赏勇士.txt] @犒赏_史官
+
+[@_RW_fultsTaskDesp]
+    将军坟的BOSS尸霸，本来是一位战死沙场的将军。因为\
+放不了前世的爱恋，接受了魔王的力量化身尸霸继续守护自\
+己的爱人。\
+    却因魔性的侵蚀，而逐渐失去了理智，变成彻底的魔兵。\
+    <我想去见识一番/@_RW_fultsfilTask>                <离开/@exit>
+
+[@_RW_fultsfilTask]
+#IF
+EQUAL $Task(25) 1
+#SAY
+    痴情自古多遗恨，放不了的，最终也都要放下。\
+    一声叹息，十年爱人，生死两茫茫。奈何桥上，饮孟婆\
+汤前，你可记得，那曾经的爱恋，那来世的承诺。\
+    想要挑战尸霸，你就要证明你的能力。\
+    去将军坟东消灭10个尸卫勇士\
+    <离开/@exit>
+#ACT
+UpdateTask 25 2
+BINDGOLD + 7500
+CHANGEEXP + 400000
+SetTaskValue 25 I0 = 10
+SENDMSG 5 你成功增加了7500绑定金币。
+break
+
+[@_RW_fultsTaskDesp04]
+    你杀光它们了么？\
+    <已经消灭它们了/@_RW_fultsfilTask04>                <离开/@exit>
+
+[@_RW_fultsfilTask04]
+#IF
+EQUAL $Task(25) 4
+#SAY
+    年轻人，看来你是时候去寻找尸霸证明你能力了。\
+你去中州找老兵吧，前往将军殿的路他最熟悉了。\
+    <好的/@exit>  <返回/@main>
+#ACT
+EndTask 25
+BINDGOLD + 7500
+CHANGEEXP + 400000
+AddTask 26
+SENDMSG 5 你成功增加了7500绑定金币。
+break
+#ELSESAY
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+}

@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="gb2312"?>
+<RepressDemon>
+  <level value="1" nextlevelexp="1000">
+    <jobprop job="0" prop_name0="bj" prop_value_0_1="30" prop_value_0_2="30" prop_name1="gj" prop_value_1_1="0" prop_value_1_2="0" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="0" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="0"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="10" prop_value_0_2="10" prop_name1="mfgj" prop_value_1_1="0" prop_value_1_2="0" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="0" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="0"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="20" prop_value_0_2="20" prop_name1="dsgj" prop_value_1_1="0" prop_value_1_2="0" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="0" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="0"/>
+  </level>
+  <level value="2" nextlevelexp="9000">
+    <jobprop job="0" prop_name0="bj" prop_value_0_1="60" prop_value_0_2="60" prop_name1="gj" prop_value_1_1="0" prop_value_1_2="1" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="0" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="0"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="20" prop_value_0_2="20" prop_name1="mfgj" prop_value_1_1="0" prop_value_1_2="1" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="0" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="0"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="40" prop_value_0_2="40" prop_name1="dsgj" prop_value_1_1="0" prop_value_1_2="1" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="0" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="0"/>
+  </level>
+  <level value="3" nextlevelexp="20000">
+    <jobprop job="0" prop_name0="bj" prop_value_0_1="90" prop_value_0_2="90" prop_name1="gj" prop_value_1_1="0" prop_value_1_2="2" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="30" prop_value_0_2="30" prop_name1="mfgj" prop_value_1_1="0" prop_value_1_2="2" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="60" prop_value_0_2="60" prop_name1="dsgj" prop_value_1_1="0" prop_value_1_2="2" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+  </level>
+  <level value="4" nextlevelexp="80000">
+    <jobprop job="0" prop_name0="bj" prop_value_0_1="120" prop_value_0_2="120" prop_name1="gj" prop_value_1_1="0" prop_value_1_2="2" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="40" prop_value_0_2="40" prop_name1="mfgj" prop_value_1_1="0" prop_value_1_2="2" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="80" prop_value_0_2="80" prop_name1="dsgj" prop_value_1_1="0" prop_value_1_2="2" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+  </level>
+  <level value="5" nextlevelexp="100000">
+    <jobprop job="0" prop_name0="bj" prop_value_0_1="150" prop_value_0_2="150" prop_name1="gj" prop_value_1_1="1" prop_value_1_2="3" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="50" prop_value_0_2="50" prop_name1="mfgj" prop_value_1_1="1" prop_value_1_2="3" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="100" prop_value_0_2="100" prop_name1="dsgj" prop_value_1_1="1" prop_value_1_2="3" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+  </level>
+  <level value="6" nextlevelexp="200000">
+    <jobprop job="0" prop_name0="bj" prop_value_0_1="180" prop_value_0_2="180" prop_name1="gj" prop_value_1_1="1" prop_value_1_2="3" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="60" prop_value_0_2="60" prop_name1="mfgj" prop_value_1_1="1" prop_value_1_2="3" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="120" prop_value_0_2="120" prop_name1="dsgj" prop_value_1_1="1" prop_value_1_2="3" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+  </level>
+  <level value="7" nextlevelexp="400000">
+    <jobprop job="0" prop_name0="bj" prop_value_0_1="210" prop_value_0_2="210" prop_name1="gj" prop_value_1_1="1" prop_value_1_2="4" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="2"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="70" prop_value_0_2="70" prop_name1="mfgj" prop_value_1_1="1" prop_value_1_2="4" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="2"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="140" prop_value_0_2="140" prop_name1="dsgj" prop_value_1_1="1" prop_value_1_2="4" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="2"/>
+  </level>
+  <level value="8" nextlevelexp="800000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="240" prop_value_0_2="240" prop_name1="gj" prop_value_1_1="1" prop_value_1_2="4" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="2"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="80" prop_value_0_2="80" prop_name1="mfgj" prop_value_1_1="1" prop_value_1_2="4" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="2"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="160" prop_value_0_2="160" prop_name1="dsgj" prop_value_1_1="1" prop_value_1_2="4" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="2"/>
+  </level>
+  <level value="9" nextlevelexp="1000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="270" prop_value_0_2="270" prop_name1="gj" prop_value_1_1="2" prop_value_1_2="5" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="2"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="90" prop_value_0_2="90" prop_name1="mfgj" prop_value_1_1="2" prop_value_1_2="5" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="2"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="180" prop_value_0_2="180" prop_name1="dsgj" prop_value_1_1="2" prop_value_1_2="5" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="2"/>
+  </level>
+  <level value="10" nextlevelexp="1500000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="300" prop_value_0_2="300" prop_name1="gj" prop_value_1_1="2" prop_value_1_2="5" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="2"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="100" prop_value_0_2="100" prop_name1="mfgj" prop_value_1_1="2" prop_value_1_2="5" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="2"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="200" prop_value_0_2="200" prop_name1="dsgj" prop_value_1_1="2" prop_value_1_2="5" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="2"/>
+  </level>
+  <level value="11" nextlevelexp="2000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="330" prop_value_0_2="330" prop_name1="gj" prop_value_1_1="2" prop_value_1_2="6" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="3" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="3"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="110" prop_value_0_2="110" prop_name1="mfgj" prop_value_1_1="2" prop_value_1_2="6" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="3" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="3"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="220" prop_value_0_2="220" prop_name1="dsgj" prop_value_1_1="2" prop_value_1_2="6" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="3" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="3"/>
+  </level>
+  <level value="12" nextlevelexp="2500000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="360" prop_value_0_2="360" prop_name1="gj" prop_value_1_1="2" prop_value_1_2="6" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="3" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="3"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="120" prop_value_0_2="120" prop_name1="mfgj" prop_value_1_1="2" prop_value_1_2="6" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="3" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="3"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="240" prop_value_0_2="240" prop_name1="dsgj" prop_value_1_1="2" prop_value_1_2="6" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="3" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="3"/>
+  </level>
+  <level value="13" nextlevelexp="3600000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="390" prop_value_0_2="390" prop_name1="gj" prop_value_1_1="3" prop_value_1_2="7" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="3" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="3"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="130" prop_value_0_2="130" prop_name1="mfgj" prop_value_1_1="3" prop_value_1_2="7" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="3" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="3"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="260" prop_value_0_2="260" prop_name1="dsgj" prop_value_1_1="3" prop_value_1_2="7" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="3" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="3"/>
+  </level>
+  <level value="14" nextlevelexp="4900000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="420" prop_value_0_2="420" prop_name1="gj" prop_value_1_1="3" prop_value_1_2="7" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="3" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="3"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="140" prop_value_0_2="140" prop_name1="mfgj" prop_value_1_1="3" prop_value_1_2="7" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="3" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="3"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="280" prop_value_0_2="280" prop_name1="dsgj" prop_value_1_1="3" prop_value_1_2="7" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="3" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="3"/>
+  </level>
+  <level value="15" nextlevelexp="6400000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="450" prop_value_0_2="450" prop_name1="gj" prop_value_1_1="3" prop_value_1_2="8" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="4"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="150" prop_value_0_2="150" prop_name1="mfgj" prop_value_1_1="3" prop_value_1_2="8" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="4"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="300" prop_value_0_2="300" prop_name1="dsgj" prop_value_1_1="3" prop_value_1_2="8" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="4"/>
+  </level>
+  <level value="16" nextlevelexp="8100000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="480" prop_value_0_2="480" prop_name1="gj" prop_value_1_1="3" prop_value_1_2="8" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="4"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="160" prop_value_0_2="160" prop_name1="mfgj" prop_value_1_1="3" prop_value_1_2="8" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="4"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="320" prop_value_0_2="320" prop_name1="dsgj" prop_value_1_1="3" prop_value_1_2="8" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="4"/>
+  </level>
+  <level value="17" nextlevelexp="12000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="510" prop_value_0_2="510" prop_name1="gj" prop_value_1_1="4" prop_value_1_2="9" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="4"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="170" prop_value_0_2="170" prop_name1="mfgj" prop_value_1_1="4" prop_value_1_2="9" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="4"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="340" prop_value_0_2="340" prop_name1="dsgj" prop_value_1_1="4" prop_value_1_2="9" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="4"/>
+  </level>
+  <level value="18" nextlevelexp="16000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="540" prop_value_0_2="540" prop_name1="gj" prop_value_1_1="4" prop_value_1_2="9" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="4"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="180" prop_value_0_2="180" prop_name1="mfgj" prop_value_1_1="4" prop_value_1_2="9" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="4"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="360" prop_value_0_2="360" prop_name1="dsgj" prop_value_1_1="4" prop_value_1_2="9" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="4"/>
+  </level>
+  <level value="19" nextlevelexp="16900000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="570" prop_value_0_2="570" prop_name1="gj" prop_value_1_1="4" prop_value_1_2="10" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="5" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="5"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="190" prop_value_0_2="190" prop_name1="mfgj" prop_value_1_1="4" prop_value_1_2="10" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="5" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="5"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="380" prop_value_0_2="380" prop_name1="dsgj" prop_value_1_1="4" prop_value_1_2="10" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="5" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="5"/>
+  </level>
+  <level value="20" nextlevelexp="20000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="600" prop_value_0_2="600" prop_name1="gj" prop_value_1_1="4" prop_value_1_2="10" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="5" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="5"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="200" prop_value_0_2="200" prop_name1="mfgj" prop_value_1_1="4" prop_value_1_2="10" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="5" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="5"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="400" prop_value_0_2="400" prop_name1="dsgj" prop_value_1_1="4" prop_value_1_2="10" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="5" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="5"/>
+  </level>
+  <level value="21" nextlevelexp="25000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="630" prop_value_0_2="630" prop_name1="gj" prop_value_1_1="5" prop_value_1_2="11" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="5" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="5"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="210" prop_value_0_2="210" prop_name1="mfgj" prop_value_1_1="5" prop_value_1_2="11" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="5" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="5"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="420" prop_value_0_2="420" prop_name1="dsgj" prop_value_1_1="5" prop_value_1_2="11" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="5" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="5"/>
+  </level>
+    <level value="22" nextlevelexp="32800000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="660" prop_value_0_2="660" prop_name1="gj" prop_value_1_1="5" prop_value_1_2="11" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="5" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="5"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="220" prop_value_0_2="220" prop_name1="mfgj" prop_value_1_1="5" prop_value_1_2="11" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="5" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="5"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="440" prop_value_0_2="440" prop_name1="dsgj" prop_value_1_1="5" prop_value_1_2="11" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="5" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="5"/>
+  </level>
+    <level value="23" nextlevelexp="41200000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="690" prop_value_0_2="690" prop_name1="gj" prop_value_1_1="5" prop_value_1_2="12" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="6" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="6"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="230" prop_value_0_2="230" prop_name1="mfgj" prop_value_1_1="5" prop_value_1_2="12" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="6" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="6"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="460" prop_value_0_2="460" prop_name1="dsgj" prop_value_1_1="5" prop_value_1_2="12" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="6" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="6"/>
+  </level>
+    <level value="24" nextlevelexp="52000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="720" prop_value_0_2="720" prop_name1="gj" prop_value_1_1="5" prop_value_1_2="12" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="6" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="6"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="240" prop_value_0_2="240" prop_name1="mfgj" prop_value_1_1="5" prop_value_1_2="12" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="6" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="6"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="480" prop_value_0_2="480" prop_name1="dsgj" prop_value_1_1="5" prop_value_1_2="12" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="6" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="6"/>
+  </level>
+    <level value="25" nextlevelexp="63800000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="750" prop_value_0_2="750" prop_name1="gj" prop_value_1_1="6" prop_value_1_2="13" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="6" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="6"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="250" prop_value_0_2="250" prop_name1="mfgj" prop_value_1_1="6" prop_value_1_2="13" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="6" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="6"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="500" prop_value_0_2="500" prop_name1="dsgj" prop_value_1_1="6" prop_value_1_2="13" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="6" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="6"/>
+  </level>
+    <level value="26" nextlevelexp="70000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="780" prop_value_0_2="780" prop_name1="gj" prop_value_1_1="6" prop_value_1_2="13" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="6" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="6"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="260" prop_value_0_2="260" prop_name1="mfgj" prop_value_1_1="6" prop_value_1_2="13" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="6" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="6"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="520" prop_value_0_2="520" prop_name1="dsgj" prop_value_1_1="6" prop_value_1_2="13" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="6" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="6"/>
+  </level>
+    <level value="27" nextlevelexp="83000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="810" prop_value_0_2="810" prop_name1="gj" prop_value_1_1="6" prop_value_1_2="14" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="7" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="7"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="270" prop_value_0_2="270" prop_name1="mfgj" prop_value_1_1="6" prop_value_1_2="14" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="7" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="7"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="540" prop_value_0_2="540" prop_name1="dsgj" prop_value_1_1="6" prop_value_1_2="14" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="7" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="7"/>
+  </level>
+    <level value="28" nextlevelexp="95600000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="840" prop_value_0_2="840" prop_name1="gj" prop_value_1_1="6" prop_value_1_2="14" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="7" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="7"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="280" prop_value_0_2="280" prop_name1="mfgj" prop_value_1_1="6" prop_value_1_2="14" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="7" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="7"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="560" prop_value_0_2="560" prop_name1="dsgj" prop_value_1_1="6" prop_value_1_2="14" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="7" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="7"/>
+  </level>
+    <level value="29" nextlevelexp="105000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="870" prop_value_0_2="870" prop_name1="gj" prop_value_1_1="7" prop_value_1_2="15" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="7" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="7"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="290" prop_value_0_2="290" prop_name1="mfgj" prop_value_1_1="7" prop_value_1_2="15" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="7" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="7"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="580" prop_value_0_2="580" prop_name1="dsgj" prop_value_1_1="7" prop_value_1_2="15" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="7" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="7"/>
+  </level>
+    <level value="30" nextlevelexp="118000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="900" prop_value_0_2="900" prop_name1="gj" prop_value_1_1="7" prop_value_1_2="15" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="7" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="7"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="300" prop_value_0_2="300" prop_name1="mfgj" prop_value_1_1="7" prop_value_1_2="15" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="7" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="7"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="600" prop_value_0_2="600" prop_name1="dsgj" prop_value_1_1="7" prop_value_1_2="15" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="7" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="7"/>
+  </level>
+    <level value="31" nextlevelexp="127000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="930" prop_value_0_2="930" prop_name1="gj" prop_value_1_1="7" prop_value_1_2="16" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="8" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="8"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="310" prop_value_0_2="310" prop_name1="mfgj" prop_value_1_1="7" prop_value_1_2="16" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="8" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="8"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="620" prop_value_0_2="620" prop_name1="dsgj" prop_value_1_1="7" prop_value_1_2="16" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="8" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="8"/>
+  </level>
+    <level value="32" nextlevelexp="1340000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="960" prop_value_0_2="960" prop_name1="gj" prop_value_1_1="7" prop_value_1_2="16" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="8" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="8"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="320" prop_value_0_2="320" prop_name1="mfgj" prop_value_1_1="7" prop_value_1_2="16" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="8" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="8"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="640" prop_value_0_2="640" prop_name1="dsgj" prop_value_1_1="7" prop_value_1_2="16" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="8" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="8"/>
+  </level>
+    <level value="33" nextlevelexp="142000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="990" prop_value_0_2="990" prop_name1="gj" prop_value_1_1="8" prop_value_1_2="17" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="8" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="8"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="330" prop_value_0_2="330" prop_name1="mfgj" prop_value_1_1="8" prop_value_1_2="17" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="8" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="8"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="660" prop_value_0_2="660" prop_name1="dsgj" prop_value_1_1="8" prop_value_1_2="17" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="8" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="8"/>
+  </level>
+    <level value="34" nextlevelexp="1580000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="1020" prop_value_0_2="1020" prop_name1="gj" prop_value_1_1="8" prop_value_1_2="17" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="8" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="8"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="340" prop_value_0_2="340" prop_name1="mfgj" prop_value_1_1="8" prop_value_1_2="17" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="8" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="8"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="680" prop_value_0_2="680" prop_name1="dsgj" prop_value_1_1="8" prop_value_1_2="17" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="8" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="8"/>
+  </level>
+    <level value="35" nextlevelexp="1640000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="1050" prop_value_0_2="1050" prop_name1="gj" prop_value_1_1="8" prop_value_1_2="18" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="9" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="9"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="350" prop_value_0_2="350" prop_name1="mfgj" prop_value_1_1="8" prop_value_1_2="18" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="9" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="9"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="700" prop_value_0_2="700" prop_name1="dsgj" prop_value_1_1="8" prop_value_1_2="18" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="9" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="9"/>
+  </level>
+    <level value="36" nextlevelexp="1730000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="1080" prop_value_0_2="1080" prop_name1="gj" prop_value_1_1="8" prop_value_1_2="18" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="9" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="9"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="360" prop_value_0_2="360" prop_name1="mfgj" prop_value_1_1="8" prop_value_1_2="18" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="9" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="9"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="720" prop_value_0_2="720" prop_name1="dsgj" prop_value_1_1="8" prop_value_1_2="18" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="9" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="9"/>
+  </level>
+    <level value="37" nextlevelexp="1870000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="1110" prop_value_0_2="1110" prop_name1="gj" prop_value_1_1="9" prop_value_1_2="19" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="9" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="9"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="370" prop_value_0_2="370" prop_name1="mfgj" prop_value_1_1="9" prop_value_1_2="19" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="9" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="9"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="740" prop_value_0_2="740" prop_name1="dsgj" prop_value_1_1="9" prop_value_1_2="19" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="9" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="9"/>
+  </level>
+    <level value="38" nextlevelexp="1930000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="1140" prop_value_0_2="1140" prop_name1="gj" prop_value_1_1="9" prop_value_1_2="19" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="9" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="9"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="380" prop_value_0_2="380" prop_name1="mfgj" prop_value_1_1="9" prop_value_1_2="19" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="9" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="9"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="760" prop_value_0_2="760" prop_name1="dsgj" prop_value_1_1="9" prop_value_1_2="19" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="9" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="9"/>
+  </level>
+    <level value="39" nextlevelexp="208000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="1170" prop_value_0_2="1170" prop_name1="gj" prop_value_1_1="9" prop_value_1_2="20" prop_name2="fy" prop_value_2_1="9" prop_value_2_2="10" prop_name3="mffy" prop_value_3_1="9" prop_value_3_2="10"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="390" prop_value_0_2="390" prop_name1="mfgj" prop_value_1_1="9" prop_value_1_2="20" prop_name2="fy" prop_value_2_1="9" prop_value_2_2="10" prop_name3="mffy" prop_value_3_1="9" prop_value_3_2="10"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="780" prop_value_0_2="780" prop_name1="dsgj" prop_value_1_1="9" prop_value_1_2="20" prop_name2="fy" prop_value_2_1="9" prop_value_2_2="10" prop_name3="mffy" prop_value_3_1="9" prop_value_3_2="10"/>
+  </level>
+    <level value="40" nextlevelexp="217000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="1200" prop_value_0_2="1200" prop_name1="gj" prop_value_1_1="9" prop_value_1_2="20" prop_name2="fy" prop_value_2_1="9" prop_value_2_2="10" prop_name3="mffy" prop_value_3_1="9" prop_value_3_2="10"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="400" prop_value_0_2="400" prop_name1="mfgj" prop_value_1_1="9" prop_value_1_2="20" prop_name2="fy" prop_value_2_1="9" prop_value_2_2="10" prop_name3="mffy" prop_value_3_1="9" prop_value_3_2="10"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="800" prop_value_0_2="800" prop_name1="dsgj" prop_value_1_1="9" prop_value_1_2="20" prop_name2="fy" prop_value_2_1="9" prop_value_2_2="10" prop_name3="mffy" prop_value_3_1="9" prop_value_3_2="10"/>
+  </level>
+    <level value="41" nextlevelexp="224000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="1230" prop_value_0_2="1230" prop_name1="gj" prop_value_1_1="10" prop_value_1_2="21" prop_name2="fy" prop_value_2_1="9" prop_value_2_2="10" prop_name3="mffy" prop_value_3_1="9" prop_value_3_2="10"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="410" prop_value_0_2="410" prop_name1="mfgj" prop_value_1_1="10" prop_value_1_2="21" prop_name2="fy" prop_value_2_1="9" prop_value_2_2="10" prop_name3="mffy" prop_value_3_1="9" prop_value_3_2="10"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="820" prop_value_0_2="820" prop_name1="dsgj" prop_value_1_1="10" prop_value_1_2="21" prop_name2="fy" prop_value_2_1="9" prop_value_2_2="10" prop_name3="mffy" prop_value_3_1="9" prop_value_3_2="10"/>
+  </level>
+    <level value="42" nextlevelexp="2390000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="1260" prop_value_0_2="1260" prop_name1="gj" prop_value_1_1="10" prop_value_1_2="21" prop_name2="fy" prop_value_2_1="9" prop_value_2_2="10" prop_name3="mffy" prop_value_3_1="9" prop_value_3_2="10"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="420" prop_value_0_2="420" prop_name1="mfgj" prop_value_1_1="10" prop_value_1_2="21" prop_name2="fy" prop_value_2_1="9" prop_value_2_2="10" prop_name3="mffy" prop_value_3_1="9" prop_value_3_2="10"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="840" prop_value_0_2="840" prop_name1="dsgj" prop_value_1_1="10" prop_value_1_2="21" prop_name2="fy" prop_value_2_1="9" prop_value_2_2="10" prop_name3="mffy" prop_value_3_1="9" prop_value_3_2="10"/>
+  </level>
+    <level value="43" nextlevelexp="247000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="1290" prop_value_0_2="1290" prop_name1="gj" prop_value_1_1="10" prop_value_1_2="22" prop_name2="fy" prop_value_2_1="10" prop_value_2_2="11" prop_name3="mffy" prop_value_3_1="10" prop_value_3_2="11"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="430" prop_value_0_2="430" prop_name1="mfgj" prop_value_1_1="10" prop_value_1_2="22" prop_name2="fy" prop_value_2_1="10" prop_value_2_2="11" prop_name3="mffy" prop_value_3_1="10" prop_value_3_2="11"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="860" prop_value_0_2="860" prop_name1="dsgj" prop_value_1_1="10" prop_value_1_2="22" prop_name2="fy" prop_value_2_1="10" prop_value_2_2="11" prop_name3="mffy" prop_value_3_1="10" prop_value_3_2="11"/>
+  </level>
+    <level value="44" nextlevelexp="253000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="1320" prop_value_0_2="1320" prop_name1="gj" prop_value_1_1="10" prop_value_1_2="22" prop_name2="fy" prop_value_2_1="10" prop_value_2_2="11" prop_name3="mffy" prop_value_3_1="10" prop_value_3_2="11"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="440" prop_value_0_2="440" prop_name1="mfgj" prop_value_1_1="10" prop_value_1_2="22" prop_name2="fy" prop_value_2_1="10" prop_value_2_2="11" prop_name3="mffy" prop_value_3_1="10" prop_value_3_2="11"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="880" prop_value_0_2="880" prop_name1="dsgj" prop_value_1_1="10" prop_value_1_2="22" prop_name2="fy" prop_value_2_1="10" prop_value_2_2="11" prop_name3="mffy" prop_value_3_1="10" prop_value_3_2="11"/>
+  </level>
+    <level value="45" nextlevelexp="26200000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="1350" prop_value_0_2="1350" prop_name1="gj" prop_value_1_1="11" prop_value_1_2="23" prop_name2="fy" prop_value_2_1="10" prop_value_2_2="11" prop_name3="mffy" prop_value_3_1="10" prop_value_3_2="11"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="450" prop_value_0_2="450" prop_name1="mfgj" prop_value_1_1="11" prop_value_1_2="23" prop_name2="fy" prop_value_2_1="10" prop_value_2_2="11" prop_name3="mffy" prop_value_3_1="10" prop_value_3_2="11"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="900" prop_value_0_2="900" prop_name1="dsgj" prop_value_1_1="11" prop_value_1_2="23" prop_name2="fy" prop_value_2_1="10" prop_value_2_2="11" prop_name3="mffy" prop_value_3_1="10" prop_value_3_2="11"/>
+  </level>
+    <level value="46" nextlevelexp="274000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="1380" prop_value_0_2="1380" prop_name1="gj" prop_value_1_1="11" prop_value_1_2="23" prop_name2="fy" prop_value_2_1="10" prop_value_2_2="11" prop_name3="mffy" prop_value_3_1="10" prop_value_3_2="11"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="460" prop_value_0_2="460" prop_name1="mfgj" prop_value_1_1="11" prop_value_1_2="23" prop_name2="fy" prop_value_2_1="10" prop_value_2_2="11" prop_name3="mffy" prop_value_3_1="10" prop_value_3_2="11"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="920" prop_value_0_2="920" prop_name1="dsgj" prop_value_1_1="11" prop_value_1_2="23" prop_name2="fy" prop_value_2_1="10" prop_value_2_2="11" prop_name3="mffy" prop_value_3_1="10" prop_value_3_2="11"/>
+  </level>
+    <level value="47" nextlevelexp="289000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="1410" prop_value_0_2="1410" prop_name1="gj" prop_value_1_1="11" prop_value_1_2="24" prop_name2="fy" prop_value_2_1="11" prop_value_2_2="12" prop_name3="mffy" prop_value_3_1="11" prop_value_3_2="12"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="470" prop_value_0_2="470" prop_name1="mfgj" prop_value_1_1="11" prop_value_1_2="24" prop_name2="fy" prop_value_2_1="11" prop_value_2_2="12" prop_name3="mffy" prop_value_3_1="11" prop_value_3_2="12"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="940" prop_value_0_2="940" prop_name1="dsgj" prop_value_1_1="11" prop_value_1_2="24" prop_name2="fy" prop_value_2_1="11" prop_value_2_2="12" prop_name3="mffy" prop_value_3_1="11" prop_value_3_2="12"/>
+  </level>
+    <level value="48" nextlevelexp="299000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="1440" prop_value_0_2="1440" prop_name1="gj" prop_value_1_1="11" prop_value_1_2="24" prop_name2="fy" prop_value_2_1="11" prop_value_2_2="12" prop_name3="mffy" prop_value_3_1="11" prop_value_3_2="12"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="480" prop_value_0_2="480" prop_name1="mfgj" prop_value_1_1="11" prop_value_1_2="24" prop_name2="fy" prop_value_2_1="11" prop_value_2_2="12" prop_name3="mffy" prop_value_3_1="11" prop_value_3_2="12"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="960" prop_value_0_2="960" prop_name1="dsgj" prop_value_1_1="11" prop_value_1_2="24" prop_name2="fy" prop_value_2_1="11" prop_value_2_2="12" prop_name3="mffy" prop_value_3_1="11" prop_value_3_2="12"/>
+  </level>
+    <level value="49" nextlevelexp="313000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="1470" prop_value_0_2="1470" prop_name1="gj" prop_value_1_1="12" prop_value_1_2="25" prop_name2="fy" prop_value_2_1="11" prop_value_2_2="12" prop_name3="mffy" prop_value_3_1="11" prop_value_3_2="12"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="490" prop_value_0_2="490" prop_name1="mfgj" prop_value_1_1="12" prop_value_1_2="25" prop_name2="fy" prop_value_2_1="11" prop_value_2_2="12" prop_name3="mffy" prop_value_3_1="11" prop_value_3_2="12"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="980" prop_value_0_2="980" prop_name1="dsgj" prop_value_1_1="12" prop_value_1_2="25" prop_name2="fy" prop_value_2_1="11" prop_value_2_2="12" prop_name3="mffy" prop_value_3_1="11" prop_value_3_2="12"/>
+  </level>
+    <level value="50" nextlevelexp="3260000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="1500" prop_value_0_2="1500" prop_name1="gj" prop_value_1_1="12" prop_value_1_2="25" prop_name2="fy" prop_value_2_1="11" prop_value_2_2="12" prop_name3="mffy" prop_value_3_1="11" prop_value_3_2="12"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="500" prop_value_0_2="500" prop_name1="mfgj" prop_value_1_1="12" prop_value_1_2="25" prop_name2="fy" prop_value_2_1="11" prop_value_2_2="12" prop_name3="mffy" prop_value_3_1="11" prop_value_3_2="12"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="1000" prop_value_0_2="1000" prop_name1="dsgj" prop_value_1_1="12" prop_value_1_2="25" prop_name2="fy" prop_value_2_1="11" prop_value_2_2="12" prop_name3="mffy" prop_value_3_1="11" prop_value_3_2="12"/>
+  </level>
+    <level value="51" nextlevelexp="339000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="1530" prop_value_0_2="1530" prop_name1="gj" prop_value_1_1="12" prop_value_1_2="26" prop_name2="fy" prop_value_2_1="12" prop_value_2_2="13" prop_name3="mffy" prop_value_3_1="12" prop_value_3_2="13"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="510" prop_value_0_2="510" prop_name1="mfgj" prop_value_1_1="12" prop_value_1_2="26" prop_name2="fy" prop_value_2_1="12" prop_value_2_2="13" prop_name3="mffy" prop_value_3_1="12" prop_value_3_2="13"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="1020" prop_value_0_2="1020" prop_name1="dsgj" prop_value_1_1="12" prop_value_1_2="26" prop_name2="fy" prop_value_2_1="12" prop_value_2_2="13" prop_name3="mffy" prop_value_3_1="12" prop_value_3_2="13"/>
+  </level>
+    <level value="52" nextlevelexp="346000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="1560" prop_value_0_2="1560" prop_name1="gj" prop_value_1_1="12" prop_value_1_2="26" prop_name2="fy" prop_value_2_1="12" prop_value_2_2="13" prop_name3="mffy" prop_value_3_1="12" prop_value_3_2="13"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="520" prop_value_0_2="520" prop_name1="mfgj" prop_value_1_1="12" prop_value_1_2="26" prop_name2="fy" prop_value_2_1="12" prop_value_2_2="13" prop_name3="mffy" prop_value_3_1="12" prop_value_3_2="13"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="1040" prop_value_0_2="1040" prop_name1="dsgj" prop_value_1_1="12" prop_value_1_2="26" prop_name2="fy" prop_value_2_1="12" prop_value_2_2="13" prop_name3="mffy" prop_value_3_1="12" prop_value_3_2="13"/>
+  </level>
+    <level value="53" nextlevelexp="358000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="1590" prop_value_0_2="1590" prop_name1="gj" prop_value_1_1="13" prop_value_1_2="27" prop_name2="fy" prop_value_2_1="13" prop_value_2_2="13" prop_name3="mffy" prop_value_3_1="12" prop_value_3_2="13"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="530" prop_value_0_2="530" prop_name1="mfgj" prop_value_1_1="13" prop_value_1_2="27" prop_name2="fy" prop_value_2_1="13" prop_value_2_2="13" prop_name3="mffy" prop_value_3_1="12" prop_value_3_2="13"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="1060" prop_value_0_2="1060" prop_name1="dsgj" prop_value_1_1="13" prop_value_1_2="27" prop_name2="fy" prop_value_2_1="13" prop_value_2_2="13" prop_name3="mffy" prop_value_3_1="12" prop_value_3_2="13"/>
+  </level>
+    <level value="54" nextlevelexp="364000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="1620" prop_value_0_2="1620" prop_name1="gj" prop_value_1_1="13" prop_value_1_2="27" prop_name2="fy" prop_value_2_1="13" prop_value_2_2="13" prop_name3="mffy" prop_value_3_1="12" prop_value_3_2="13"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="540" prop_value_0_2="540" prop_name1="mfgj" prop_value_1_1="13" prop_value_1_2="27" prop_name2="fy" prop_value_2_1="13" prop_value_2_2="13" prop_name3="mffy" prop_value_3_1="12" prop_value_3_2="13"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="1080" prop_value_0_2="1080" prop_name1="dsgj" prop_value_1_1="13" prop_value_1_2="27" prop_name2="fy" prop_value_2_1="13" prop_value_2_2="13" prop_name3="mffy" prop_value_3_1="12" prop_value_3_2="13"/>
+  </level>
+    <level value="55" nextlevelexp="379000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="1650" prop_value_0_2="1650" prop_name1="gj" prop_value_1_1="13" prop_value_1_2="28" prop_name2="fy" prop_value_2_1="13" prop_value_2_2="14" prop_name3="mffy" prop_value_3_1="13" prop_value_3_2="14"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="550" prop_value_0_2="550" prop_name1="mfgj" prop_value_1_1="13" prop_value_1_2="28" prop_name2="fy" prop_value_2_1="13" prop_value_2_2="14" prop_name3="mffy" prop_value_3_1="13" prop_value_3_2="14"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="1100" prop_value_0_2="1100" prop_name1="dsgj" prop_value_1_1="13" prop_value_1_2="28" prop_name2="fy" prop_value_2_1="13" prop_value_2_2="14" prop_name3="mffy" prop_value_3_1="13" prop_value_3_2="14"/>
+  </level>
+    <level value="56" nextlevelexp="385000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="1680" prop_value_0_2="1680" prop_name1="gj" prop_value_1_1="13" prop_value_1_2="28" prop_name2="fy" prop_value_2_1="13" prop_value_2_2="14" prop_name3="mffy" prop_value_3_1="13" prop_value_3_2="14"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="560" prop_value_0_2="560" prop_name1="mfgj" prop_value_1_1="13" prop_value_1_2="28" prop_name2="fy" prop_value_2_1="13" prop_value_2_2="14" prop_name3="mffy" prop_value_3_1="13" prop_value_3_2="14"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="1120" prop_value_0_2="1120" prop_name1="dsgj" prop_value_1_1="13" prop_value_1_2="28" prop_name2="fy" prop_value_2_1="13" prop_value_2_2="14" prop_name3="mffy" prop_value_3_1="13" prop_value_3_2="14"/>
+  </level>
+    <level value="57" nextlevelexp="396000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="1710" prop_value_0_2="1710" prop_name1="gj" prop_value_1_1="14" prop_value_1_2="29" prop_name2="fy" prop_value_2_1="13" prop_value_2_2="14" prop_name3="mffy" prop_value_3_1="13" prop_value_3_2="14"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="570" prop_value_0_2="570" prop_name1="mfgj" prop_value_1_1="14" prop_value_1_2="29" prop_name2="fy" prop_value_2_1="13" prop_value_2_2="14" prop_name3="mffy" prop_value_3_1="13" prop_value_3_2="14"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="1140" prop_value_0_2="1140" prop_name1="dsgj" prop_value_1_1="14" prop_value_1_2="29" prop_name2="fy" prop_value_2_1="13" prop_value_2_2="14" prop_name3="mffy" prop_value_3_1="13" prop_value_3_2="14"/>
+  </level>
+    <level value="58" nextlevelexp="417000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="1740" prop_value_0_2="1740" prop_name1="gj" prop_value_1_1="14" prop_value_1_2="29" prop_name2="fy" prop_value_2_1="13" prop_value_2_2="14" prop_name3="mffy" prop_value_3_1="13" prop_value_3_2="14"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="580" prop_value_0_2="580" prop_name1="mfgj" prop_value_1_1="14" prop_value_1_2="29" prop_name2="fy" prop_value_2_1="13" prop_value_2_2="14" prop_name3="mffy" prop_value_3_1="13" prop_value_3_2="14"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="1160" prop_value_0_2="1160" prop_name1="dsgj" prop_value_1_1="14" prop_value_1_2="29" prop_name2="fy" prop_value_2_1="13" prop_value_2_2="14" prop_name3="mffy" prop_value_3_1="13" prop_value_3_2="14"/>
+  </level>
+    <level value="59" nextlevelexp="435000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="1770" prop_value_0_2="1770" prop_name1="gj" prop_value_1_1="14" prop_value_1_2="30" prop_name2="fy" prop_value_2_1="14" prop_value_2_2="15" prop_name3="mffy" prop_value_3_1="14" prop_value_3_2="15"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="590" prop_value_0_2="590" prop_name1="mfgj" prop_value_1_1="14" prop_value_1_2="30" prop_name2="fy" prop_value_2_1="14" prop_value_2_2="15" prop_name3="mffy" prop_value_3_1="14" prop_value_3_2="15"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="1180" prop_value_0_2="1180" prop_name1="dsgj" prop_value_1_1="14" prop_value_1_2="30" prop_name2="fy" prop_value_2_1="14" prop_value_2_2="15" prop_name3="mffy" prop_value_3_1="14" prop_value_3_2="15"/>
+  </level>
+    <level value="60" nextlevelexp="456000000">
+    <jobprop job="0" prop_name0="hp" prop_value_0_1="1800" prop_value_0_2="1800" prop_name1="gj" prop_value_1_1="14" prop_value_1_2="30" prop_name2="fy" prop_value_2_1="14" prop_value_2_2="15" prop_name3="mffy" prop_value_3_1="14" prop_value_3_2="15"/>
+    <jobprop job="1" prop_name0="hp" prop_value_0_1="600" prop_value_0_2="600" prop_name1="mfgj" prop_value_1_1="14" prop_value_1_2="30" prop_name2="fy" prop_value_2_1="14" prop_value_2_2="15" prop_name3="mffy" prop_value_3_1="14" prop_value_3_2="15"/>
+    <jobprop job="2" prop_name0="hp" prop_value_0_1="1200" prop_value_0_2="1200" prop_name1="dsgj" prop_value_1_1="14" prop_value_1_2="30" prop_name2="fy" prop_value_2_1="14" prop_value_2_2="15" prop_name3="mffy" prop_value_3_1="14" prop_value_3_2="15"/>
+  </level>
+</RepressDemon>

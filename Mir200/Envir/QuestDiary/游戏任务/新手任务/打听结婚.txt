@@ -1,0 +1,47 @@
+[@落霞岛_衣服]
+{
+
+#IF
+EQUAL $Task(7) 1
+#SAY
+可以完成的任务：\
+<新手任务--打听结婚/@_RW_fulfilTaskDesp1>\\
+<离开/@exit>
+#ACT
+break
+#IF
+EQUAL $Task(12) 2
+#ACT
+#CALL [\游戏任务\新手任务\求婚的勇气.txt] @落霞岛_衣服1
+break
+#IF
+EQUAL $Task(15) 1
+#ACT
+#CALL [\游戏任务\新手任务\王都送信.txt] @落霞岛_衣服2
+break
+#ELSESAY
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+[@_RW_fulfilTaskDesp1]
+年轻人，是书店老板让你来的吧，他刚才还在我面前夸你能\
+干呢！你找我有什么事情吗？\
+<打听结婚/@_RW_fulfilTask1_1>                <没事/@exit>
+
+[@_RW_fulfilTask1_1]
+#IF
+EQUAL $Task(7) 1
+#SAY
+想结婚的话，要经历重重考验才行。\
+到机关洞中找到红娘，她会帮助你完成结婚任务的。\
+你现在去炼药师那里看看，他会教你如何交易的。\
+<离开/@exit>  <返回/@main>
+#ACT
+EndTask 7
+CHANGEEXP + 6200
+BINDGOLD + 1500
+AddTask 8
+SENDMSG 5 您成功增加了1500绑定金币。
+break
+
+}

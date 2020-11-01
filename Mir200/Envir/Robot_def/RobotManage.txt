@@ -1,0 +1,420 @@
+[@通灵塔维护]
+#IF
+RANDOM 1
+#ACT
+CLEARNAMELIST ..\QuestDiary\通灵塔\每日名单.txt
+GMEXECUTE 在线提问 @每日资源检测
+break
+
+[@_镖车掉血触发]
+#IF
+EQUAL $PARAM(0) 至尊镖车
+#ACT
+break
+#IF
+PosInList |<$PARAM(1)>|  ..\QuestDiary\数据文件\临时数据\运镖进行名单.txt S25
+#ACT
+SPLIT $STR(S25) | S26
+MOV P14 $STR(S32)
+MULT P14 $PARAM(5)
+DIV P14 100
+#IF
+SMALL $PARAM(5) 1
+#ACT
+DELVARLIST $STR(S25) ..\QuestDiary\数据文件\临时数据\运镖进行名单.txt
+#IF
+CheckOnLine $PARAM(1)
+SMALL $PARAM(5) 1
+#ACT
+$STR(S4).SENDMSG 5 <$PARAM(1)>护卫的<$STR(S26)>被击毁，位置(<$PARAM(3)>,<$PARAM(4)>)
+break
+#IF
+CheckOnLine $PARAM(1)
+#ACT
+$STR(S4).SENDMSG 5 您护卫的镖车剩余物资<$STR(P14)>(<$PARAM(5)>%)，位置(<$PARAM(3)>,<$PARAM(4)>)
+break
+
+[@_物品掉落触发]
+#IF
+!EQUAL $PARAM(6)
+#ACT
+SENDMSG 22 勇士<$PARAM(7)>在<$PARAM(1)>击杀<$PARAM(2)>获得了<$PARAM(4)>，让我们恭喜他吧！
+break
+
+[@刷出镖车]
+#IF
+SMALL $TXTLINE(..\QuestDiary\数据文件\临时数据\运镖列队名单.txt) 1
+#ACT
+break
+#IF
+RANDOM 1
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\临时数据\运镖列队名单.txt S1 0
+DELVARLIST $STR(S1) ..\QuestDiary\数据文件\临时数据\运镖列队名单.txt
+ADDVARLIST $STR(S1) ..\QuestDiary\数据文件\临时数据\运镖进行名单.txt
+SPLIT $STR(S1) | S2
+SETPARAM 0 416,268
+SETPARAM 1 400,284
+SETPARAM 2 400,291
+SETPARAM 3 396,295
+SETPARAM 4 396,298
+SETPARAM 5 375,319
+SETPARAM 6 375,323
+SETPARAM 7 374,324
+SETPARAM 8 380,330
+SETPARAM 9 380,363
+SETPARAM 10 389,372
+SETPARAM 11 388,373
+SETPARAM 12 443,428
+SETPARAM 13 442,428
+SETPARAM 14 442,454
+SETPARAM 15 441,454
+SETPARAM 16 441,516
+SETPARAM 17 434,523
+SETPARAM 18 432,523
+SETPARAM 19 416,539
+SETPARAM 20 416,540
+SETPARAM 21 413,543
+SETPARAM 22 413,544
+SETPARAM 23 392,565
+SETPARAM 24 392,583
+MISSION 0 391 584
+PARAM1 414
+PARAM2 268
+PARAM3 1
+PARAM4 0
+PARAM5 25
+MOBPLACE $STR(S6) $STR(S3) $STR(S4)
+#IF
+EQUAL S7 无
+#ACT
+MOV S7 
+#IF
+CheckOnLine $STR(S4)
+POS $STR(S2) 常规
+#ACT
+$STR(S4).SENDMSG 5 行会<$STR(S7)>
+$STR(S4).SENDMSG 5 勇士!您的镖车开始押运!!
+break
+#IF
+CheckOnLine $STR(S4)
+POS $STR(S2) 金币
+#ACT
+$STR(S4).SENDMSG 5 勇士!您的镖车开始押运!!
+break
+
+[@_镖车到达终点]
+#IF
+RANDOM 1
+#ACT
+FormatStr S9 |%s| <$PARAM(1)>
+#IF
+PosInList $STR(S9) ..\QuestDiary\数据文件\临时数据\运镖进行名单.txt S10
+#ACT
+SPLIT $STR(S10) | S11
+DELVARLIST $STR(S10) ..\QuestDiary\数据文件\临时数据\运镖进行名单.txt
+MOV P10 $STR(S14)
+MOV P11 $PARAM(3)
+MULT P10 $STR(P11)
+DIV P10 100
+MOV S18 $STR(S9)
+INC S18 $STR(S11)
+INC S18 |
+INC S18 $STR(P10)
+MOV P12 $STR(S17)
+MULT P12 $STR(P11)
+DIV P12 100
+ADDVARLIST $STR(S18) ..\QuestDiary\数据文件\临时数据\运镖领奖名单.txt
+#IF
+EQUAL S11 常规运镖
+#ACT
+GOTO @LAPIAOJIFEN
+SENDMSG 14 恭喜勇士<$PARAM(1)>护卫的经验镖车到达终点!
+#IF
+EQUAL S11 金币护镖
+#ACT
+SENDMSG 14 恭喜勇士<$PARAM(1)>护卫的金币护镖到达终点!
+#IF
+CHECKONLINE $PARAM(1)
+Pos $STR(S11) 经验
+#ACT
+$PARAM(1).SENDMSG 5 今日第<$HUMANINFO.$PARAM(1).$TABLE(SG_PRIVITE).Hum09>次完成[常规运镖]!
+break
+
+[@LAPIAOJIFEN]
+#IF
+!EQUAL S16 无
+#ACT
+MOV S19 |
+INC S19 $STR(S16)
+INC S19 |
+#ELSEACT
+break
+#IF
+PosInList $STR(S19) ..\QuestDiary\数据文件\临时数据\行会今日运镖.txt S20
+#ACT
+DELVARLIST $STR(S20) ..\QuestDiary\数据文件\临时数据\运镖进行名单.txt
+GETVALIDSTR $STR(S20) | S21 P13
+INC P12 $STR(P13)
+INC S19 $STR(P12)
+ADDVARLIST $STR(S19) ..\QuestDiary\数据文件\临时数据\行会今日运镖.txt
+break
+#ELSEACT
+INC S19 $STR(P12)
+ADDVARLIST $STR(S19) ..\QuestDiary\数据文件\临时数据\行会今日运镖.txt
+break
+
+[@开区时间记录]
+#IF
+EQUAL G0 0
+#ACT
+INC G1 1
+#IF
+LARGE G17 0
+EQUAL G18 $DATE.MONTH
+EQUAL G19 $DATE.DAY
+EQUAL G20 $TIME.HOUR
+EQUAL G21 $TIME.MIN
+#ACT
+MOV G17 2
+CLEARMAPMON DBDT2
+MONGENEX DBDT2 46 45 通天教主6 1 1
+SENDMSG 24 超级夺宝活动开始！ 253
+SENDMSG 24 请所有勇士从中州超级夺宝NPC进入超级夺宝地图！ 253
+SENDMSG 24 超级夺宝获得蟠龙精魄、技能残章、<$STR(A18)>奖励！ 253
+SENDMSG 26 超级夺宝活动开始,请所有勇士从中州超级夺宝NPC进入超级夺宝地图,新区超级夺宝获得蟠龙精魄、技能残章、<$STR(A18)>奖励！ 253
+#IF
+SMALL G1 120
+EQUAL G0 0
+#ACT
+MOV I9 120
+DEC I9 $STR(G1)
+SENDMSG 14 新区超级夺宝将在[<$STR(I9)>]分钟后开启！
+SENDMSG 14 新区超级夺宝获得蟠龙精魄、技能残章、10000元宝奖励！
+SENDMSG 26 新区超级夺宝将在[<$STR(I9)>]分钟后开启！新区超级夺宝获得蟠龙精魄、技能残章、10000元宝奖励！ 253
+#IF
+EQUAL G1 120
+#ACT
+MOV G17 2
+CLEARMAPMON DBDT2
+MONGENEX DBDT2 46 45 通天教主6 1 1
+SENDMSG 24 新区超级夺宝开始！ 253
+SENDMSG 24 请所有勇士从中州超级夺宝NPC进入超级夺宝地图！ 253
+SENDMSG 24 新区超级夺宝获得蟠龙精魄、技能残章、10000元宝奖励！ 253
+SENDMSG 26 新区超级夺宝开始,请所有勇士从中州超级夺宝NPC进入超级夺宝地图,新区超级夺宝获得蟠龙精魄、技能残章、10000元宝奖励！ 253
+#IF
+LARGE I3 1
+#ACT
+DEC I3 1
+#IF
+EQUAL I4 1
+#ACT
+MOV I4 0
+MONGENEX $STR(A12) $STR(I5) $STR(I6) $STR(A13) 1 1
+SENDMSG 14 勇士<$STR(A14)>在<$STR(A15)>内使用了魔王召唤令。<$STR(A16)>已经降临九重云霄。中州勇士们速速前去击杀。
+#IF
+LARGE I4 1
+#ACT
+DEC I4 1
+SENDMSG 14 勇士<$STR(A14)>在<$STR(A15)>内使用了魔王召唤令。<$STR(A16)>将在<$STR(I4)>分钟后被召唤降临。请中州勇士们速速准备前去击杀。
+#IF
+EQUAL I3 1
+#ACT
+DEC I3 1
+CLEARMAPMON MC010
+#IF
+EQUAL I1 1
+#ACT
+MOV I1 0
+MONGENEX F011 55 42 铁血魔王 1 1
+break
+
+[@每日数据恢复]
+#IF
+EQUAL G4 2
+#ACT
+DEC G4 1
+#IF
+EQUAL G4 1
+#ACT
+MOV G4 0
+CLEARNAMELIST ..\QuestDiary\数据文件\临时数据\铁血魔城行会.txt
+GMEXECUTE 在线提问 @飞出铁血魔城
+#IF
+LARGE $TXTLINE(..\QuestDiary\数据文件\临时数据\明日攻打行会.txt) 0
+#ACT
+FileCopy ..\QuestDiary\数据文件\临时数据\明日攻打行会.txt ..\QuestDiary\数据文件\临时数据\今日攻打行会.txt
+CLEARNAMELIST ..\QuestDiary\数据文件\临时数据\明日攻打行会.txt
+ReadRandomStr ..\QuestDiary\数据文件\临时数据\今日攻打行会.txt S5 0
+MOV G3 1
+MOV A11 $STR(S5)
+#IF
+RANDOM 1
+#ACT
+MOV G5 200
+MOV G6 20
+MOV G7 5
+INC G2 1
+FileCopy ..\QuestDiary\数据文件\临时数据\行会今日运镖.txt ..\QuestDiary\数据文件\临时数据\行会昨日运镖.txt
+CLEARNAMELIST ..\QuestDiary\数据文件\临时数据\行会今日运镖.txt
+break
+
+[@加载全服行会]
+#IF
+EQUAL G2 3
+#ACT
+MOV I7 2
+ADDCASTLEWARGUILD ALL 沙城 0
+SENDMSG 9 (*)新区攻城战将在10分过后开启
+break
+#IF
+LARGE G2 3
+#ACT
+MOV I7 1
+ADDCASTLEWARGUILD ALL 沙城 0
+SENDMSG 9 (*)合区攻城战将在10分过后开启
+break
+
+[@魔戒现身公告3]
+#ACT
+MOV I0 0
+MOV I1 0
+SENDMSG 14 “魔戒现身”活动提醒：护送黑暗之戒的藤妖大军将在30分钟后现身，请大家做好准备！只要在1小时内交一枚黑暗之戒给“戒灵”并且此戒指属于最早交到“戒灵”手上的前6枚，则此勇士将获得了进入魔王殿的资格。只要在1小时内集合所有人的力量找齐6枚黑暗之戒并交给“戒灵”即可完成夺戒任务藤妖大军将出现在禁地大地图；“戒灵”位置在禁地坐标305：260；祝大家夺戒成功！无论夺戒任务是否成功，找到并交给“戒灵”一枚黑暗之戒的英雄将额外获得声望值1点
+SENDMSG 14 注意：“戒灵”只收取前6枚黑暗之戒！
+
+[@魔戒现身公告2]
+#ACT
+SENDMSG 14 “魔戒现身”活动提醒：护送黑暗之戒的藤妖大军将在20分钟后现身，请大家做好准备！只要在1小时内交一枚黑暗之戒给“戒灵”并且此戒指属于最早交到“戒灵”手上的前6枚，则此勇士将获得了进入魔王殿的资格。只要在1小时内集合所有人的力量找齐6枚黑暗之戒并交给“戒灵”即可完成夺戒任务藤妖大军将出现在禁地大地图；“戒灵”位置在禁地坐标305：260；祝大家夺戒成功！无论夺戒任务是否成功，找到并交给“戒灵”一枚黑暗之戒的英雄将额外获得声望值1点
+SENDMSG 14 注意：“戒灵”只收取前6枚黑暗之戒！
+
+[@魔戒现身公告1]
+#ACT
+SENDMSG 14 “魔戒现身”活动提醒：护送黑暗之戒的藤妖大军将在10分钟后现身，请大家做好准备！只要在1小时内交一枚黑暗之戒给“戒灵”并且此戒指属于最早交到“戒灵”手上的前6枚，则此勇士将获得了进入魔王殿的资格。只要在1小时内集合所有人的力量找齐6枚黑暗之戒并交给“戒灵”即可完成夺戒任务藤妖大军将出现在禁地大地图；“戒灵”位置在禁地坐标305：260；祝大家夺戒成功！无论夺戒任务是否成功，找到并交给“戒灵”一枚黑暗之戒的英雄将额外获得声望值1点
+SENDMSG 14 注意：“戒灵”只收取前6枚黑暗之戒！
+
+[@魔戒现身开始]
+#IF
+RANDOM 1
+#ACT
+MONGENEX 4 190 320 藤妖 10 10
+MONGENEX 4 270 120 藤妖 10 10
+MONGENEX 4 440 100 藤妖 10 10
+MONGENEX 4 190 320 藤妖8 10 4
+MONGENEX 4 270 120 藤妖8 10 4
+MONGENEX 4 440 100 藤妖8 10 4
+SENDMSG 14 “魔戒现身”活动提醒：护送黑暗之戒的藤妖大军已经现身禁地大地图，我们出发吧！集合所有人的力量找齐6枚黑暗之戒并交给“戒灵”，完成夺戒任务！只要在1小时内交一枚黑暗之戒给“戒灵”并且此戒指属于最早交到“戒灵”手上的前6枚，则此勇士将获得了进入魔王殿的资格。打败魔王将得到魔王身上的宝物。“戒灵”位置在禁地坐标305：260；祝大家夺戒成功！无论夺戒任务是否成功，找到并交给“戒灵”一枚黑暗之戒的英雄将额外获得声望值1点
+SENDMSG 14 注意：“戒灵”只收取前6枚黑暗之戒！
+break
+
+[@魔戒现身结束]
+#IF
+RANDOM 1
+#ACT
+Gmexecute ClearMon 4 藤妖8 0
+CLEARNAMELIST ..\QuestDiary\数据文件\临时数据\进魔王殿资格.txt
+#IF
+SMALL I0 6
+#ACT
+SENDMSG 14 虽然经历了1个小时的努力，但是很可惜，我们的英雄们并没有找齐6枚黑暗之戒……
+SENDMSG 14 今天的“夺戒任务”行动失败！没关系，明天下午1点，任务还将进行。
+break
+
+[@铁血魔城预备]
+#IF
+EQUAL G3 1
+#ACT
+MONGENEX MC010 220 226 地火兽弓箭手 15 15
+MONGENEX MC010 224 260 地火兽投矛手 10 40
+MONGENEX MC010 134 115 地火兽弓箭手 20 20
+MONGENEX MC010 138 183 地火兽弓箭手 20 40
+MONGENEX MC010 221 215 地火兽弓箭手 20 40
+MONGENEX MC010 170 170 地火兽弓箭手 20 150
+MONGENEX MC010 123 112 地火兽弓箭手 10 35
+MONGENEX MC010 166 148 地火兽弓箭手 10 40
+MONGENEX MC010 265 149 地火兽弓箭手 20 40
+MONGENEX MC010 265 149 猛魔统领 20 40
+MONGENEX MC010 226 157 地火兽弓箭手 20 40
+MONGENEX MC010 265 157 地火兽骑将 20 40
+MONGENEX MC010 201 142 地火兽弓箭手 20 40
+MONGENEX MC010 201 141 地火兽骑将 20 40
+MONGENEX MC010 150 189 地火兽骑将 10 50
+MONGENEX MC010 170 170 猛魔统领 120 200
+MONGENEX MC010 170 170 地火兽骑将 20 200
+MONGENEX MC010 126 113 地火兽投矛手 10 120
+MONGENEX MC010 221 215 地火兽投矛手 10 40
+MONGENEX MC010 213 267 地火兽投矛手 10 10
+MONGENEX MC010 170 170 地火兽投矛手 20 100
+MONGENEX MC010 138 183 猛魔统领 20 40
+MONGENEX MC010 94 156 猛魔头目 20 15
+MONGENEX MC010 238 248 炎魔 4 10
+MONGENEX MC010 87 80 炎魔 10 20
+MONGENEX MC010 166 148 炎魔 30 100
+MONGENEX MC010 170 170 炎魔 30 200
+MONGENEX MC010 170 170 幽魂 30 100
+GMEXECUTE 在线提问 @飞出铁血魔城
+break
+
+[@开启铁血魔城]
+#IF
+RANDOM 1
+#ACT
+MONGENEX LXXD 78 64 迅天雷豹0 20 10
+#IF
+RANDOM 10
+#ACT
+MONGENEX LXXD 78 64 撼天灵虎0 10 1
+#IF
+EQUAL G3 1
+#ACT
+MOV I2 $LONGDATE
+MONGENEX MC010 82 65 投石巨魔 0 1
+MONGENEX MC010 88 59 投石巨魔 0 1
+MONGENEX MC010 63 84 投石巨魔 0 1
+MONGENEX MC010 69 78 投石巨魔 0 1
+SENDMSG 14 铁血魔城攻城战开始
+SENDMSG 0 (*)铁血魔城攻城战开始　今日攻城行会是：<$STR(A11)>
+break
+
+[@检测铁血魔城]
+#IF
+SMALL G3 1
+#ACT
+break
+#IF
+CheckMapMonNameCount MC010 77 73 20 投石巨魔 0
+#ACT
+break
+#ELSEACT
+MOV G3 0
+MOV A11 目前无行会
+CLEARMAPMON MC010
+CLEARNAMELIST ..\QuestDiary\数据文件\临时数据\今日攻打行会.txt
+SENDMSG 0 (*)行会<$STR(A11)>攻打铁血魔城失败
+SENDMSG 14 (*)行会<$STR(A11)>攻打铁血魔城失败
+GMEXECUTE 在线提问 @飞出铁血魔城
+break
+
+[@结束铁血魔城]
+#IF
+RANDOM 1
+#ACT
+CLEARNAMELIST ..\QuestDiary\数据文件\临时数据\今日攻打行会.txt
+#IF
+EQUAL G3 1
+#ACT
+MOV G3 0
+MOV A11 目前无行会
+CLEARMAPMON MC010
+SENDMSG 0 (*)行会<$STR(A11)>攻打铁血魔城失败
+SENDMSG 14 (*)行会<$STR(A11)>攻打铁血魔城失败
+GMEXECUTE 在线提问 @飞出铁血魔城
+break
+
+[@开启落霞夺宝]
+#IF
+RANDOM 1
+#ACT
+MOV I8 1
+CLEARMAPMON DBDT
+MONGENEX DBDT 46 45 通天教主5 1 1
+break

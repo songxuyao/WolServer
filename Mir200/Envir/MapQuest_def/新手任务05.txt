@@ -1,0 +1,49 @@
+[@main]
+#IF
+HasTask 44
+#ACT
+goto @rcrwswys
+break
+#IF
+EQUAL $Task(25) 3
+SMALL $TASKVAL(25).I0 2
+#ACT
+UpdateTask 25 4
+break
+#IF
+EQUAL $Task(25) 2
+EQUAL $TASKVAL(25).I0 10
+#ACT
+SetTaskValue 25 I0 - 1
+UpdateTask 25 3
+break
+#IF
+EQUAL $Task(25) 3
+#ACT
+SetTaskValue 25 I0 - 1
+RefreshTask 25 3
+break
+
+[@rcrwswys]
+#IF
+POS $PARAM(2) $TASKVAL(44).S0
+#ACT
+#ELSEACT
+break
+#IF
+EQUAL $Task(44) 2
+#ACT
+SetTaskValue 44 I1 - 1
+SetTaskValue 44 I2 + 1
+UpdateTask 44 2
+#IF
+EQUAL $Task(44) 1
+#ACT
+SetTaskValue 44 I1 - 1
+SetTaskValue 44 I2 + 1
+UpdateTask 44 2
+#IF
+EQUAL $TASKVAL(44).I0 $TASKVAL(44).I2
+#ACT
+RefreshTask 44 3
+break

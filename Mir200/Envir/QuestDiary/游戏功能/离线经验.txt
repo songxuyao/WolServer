@@ -1,0 +1,122 @@
+[@领取离线]
+{
+
+#IF
+LARGE $Table(SG_PRIVITE).Hum01 1
+#ACT
+MOV M1 $LONGDATE
+MOV M2 $Table(SG_PRIVITE).Hum01
+DEC M1 $STR(M2)
+DIV M1 60
+Table SG_PRIVITE Hum02 + $STR(M1)
+#ELSEACT
+break
+#IF
+SMALL $Table(SG_PRIVITE).Hum02 1
+#ACT
+break
+#IF
+RANDOM 1
+#ACT
+MOV M3 $Table(SG_PRIVITE).Hum02
+MULT M3 500
+MOV M4 $Table(SG_PRIVITE).Hum02
+MULT M4 1000
+MOV M5 $Table(SG_PRIVITE).Hum02
+MULT M5 1500
+#SAY
+    尊敬的玩家，很高兴您能回到游戏，祝您游戏愉快！\
+　　您当前累计离线时间：<color=red [>{color=green <$Table(SG_PRIVITE).Hum02>}<color=red ]>分钟\
+　　选择<color=orange 免费找回>可领取：<color=red [>{color=green <$STR(M3)>}<color=red ]>游戏经验值！\
+　　选择<color=orange 双倍找回>可领取：<color=red [>{color=green <$STR(M4)>}<color=red ]>游戏经验值！\
+　　选择<color=orange 三倍找回>可领取：<color=red [>{color=green <$STR(M5)>}<color=red ]>游戏经验值！\
+　　<免费找回/@offlineExp01>  <color=purple 会员每日福利可领取离线经验丹>\
+　　<双倍找回/@offlineExp02>  <color=purple 需要2个离线经验丹>\
+　　<三倍找回/@offlineExp03>  <color=purple 需要5个离线经验丹>\
+　　<color=red 关闭此界面也可在江湖百晓生处领取离线经验！>\
+#ACT
+break
+
+[@江湖领取离线]
+#IF
+RANDOM 1
+#ACT
+MOV M3 $Table(SG_PRIVITE).Hum02
+MULT M3 1000
+MOV M4 $Table(SG_PRIVITE).Hum02
+MULT M4 2000
+MOV M5 $Table(SG_PRIVITE).Hum02
+MULT M5 3000
+#SAY
+    尊敬的玩家，很高兴您能回到游戏，祝您游戏愉快！\
+　　您当前累计离线时间：<color=red [>{color=green <$Table(SG_PRIVITE).Hum02>}<color=red ]>分钟\
+　　选择<color=orange 免费找回>可领取：<color=red [>{color=green <$STR(M3)>}<color=red ]>游戏经验值！\
+　　选择<color=orange 双倍找回>可领取：<color=red [>{color=green <$STR(M4)>}<color=red ]>游戏经验值！\
+　　选择<color=orange 三倍找回>可领取：<color=red [>{color=green <$STR(M5)>}<color=red ]>游戏经验值！\
+　　<免费找回/@offlineExp01>\
+　　<双倍找回/@offlineExp02>  <color=purple 需要2个离线经验丹>\
+　　<三倍找回/@offlineExp03>  <color=purple 需要5个离线经验丹>\
+    <离开/@exit>\
+#ACT
+break
+
+[@offlineExp01]
+#IF
+SMALL $Table(SG_PRIVITE).Hum02 1
+#ACT
+SENDMSG 5 离线时间为0，无法领取！
+close
+break
+#IF
+LARGE $Table(SG_PRIVITE).Hum02 0
+#ACT
+CHANGEEXP + $STR(M3)
+Table SG_PRIVITE Hum02 = 0
+SENDMSG 7 恭喜您免费找回离线经验：<$STR(M3)>
+SENDMSG 10 恭喜玩家%s领取到<$ITEMINFO[$PARAM(1)].OVERLAP>的离线经验！赶快前往中州江湖百晓生处领取吧。
+close
+break
+
+[@offlineExp02]
+#IF
+SMALL $Table(SG_PRIVITE).Hum02 1
+#ACT
+SENDMSG 5 离线时间为0，无法领取！
+close
+break
+#IF
+CHECKITEM 离线经验丹 2
+#ACT
+take 离线经验丹 2
+CHANGEEXP + $STR(M4)
+Table SG_PRIVITE Hum02 = 0
+SENDMSG 7 恭喜您使用离线经验丹双倍找回离线经验：<$STR(M4)>
+SENDMSG 10 恭喜玩家%s使用离线经验丹领取到<$ITEMINFO[$PARAM(1)].OVERLAP>的离线经验！赶快前往中州江湖百晓生处领取吧。
+close
+break
+#ELSEACT
+SENDMSG 5 你包裹没有2个离线经验丹
+break
+
+[@offlineExp03]
+#IF
+SMALL $Table(SG_PRIVITE).Hum02 1
+#ACT
+SENDMSG 5 离线时间为0，无法领取！
+close
+break
+#IF
+CHECKITEM 离线经验丹 5
+#ACT
+take 离线经验丹 5
+CHANGEEXP + $STR(M5)
+Table SG_PRIVITE Hum02 = 0
+SENDMSG 7 恭喜您使用离线经验丹三倍找回离线经验：<$STR(M5)>
+SENDMSG 10 恭喜玩家%s使用离线经验丹领取到<$ITEMINFO[$PARAM(1)].OVERLAP>的离线经验！赶快前往中州江湖百晓生处领取吧。
+close
+break
+#ELSEACT
+SENDMSG 5 你包裹没有5个离线经验丹
+break
+
+}

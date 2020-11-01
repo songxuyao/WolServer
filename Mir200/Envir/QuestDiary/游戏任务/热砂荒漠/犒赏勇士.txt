@@ -1,0 +1,25 @@
+[@犒赏_史官]
+{
+
+  勇士，干得漂亮，没想到你这么轻松就完成了。\
+<我要奖励/@_RW_fulztfilTask08>                <关闭/@exit>
+
+
+[@_RW_fulztfilTask08]
+#IF
+EQUAL $Task(36) 1
+#SAY
+  等你到35级时，再去找国王吧，他还有任务交给你去完成\
+。你可以试着去做做<color=green 日常任务>了，去中州广场找<color=green 日常任务仙>\
+<color=green 子>就可以接到任务了。\
+<离开/@exit>  <返回/@main>
+#ACT
+EndTask 36
+BINDGOLD + 2000
+CHANGEEXP + 400000
+AddTask 37
+SENDMSG 5 你成功增加了2000绑定金币。
+break
+
+
+}

@@ -1,0 +1,29 @@
+(@bindbuy @fastbuy @buy @sell )
+%100
++0
++31
++106
+[@main]
+欢迎光临，这里有各种药品。\
+有什么事情需要我帮忙吗？\\
+<可接任务/@_RW_entry>\
+<快捷交易/@fastbuy>\
+<购入药品/@buy>\
+<绑定金币购买物品/@bindbuy>\
+<出售药品/@sell>\
+<关闭选单/@exit>
+
+[@_RW_entry]
+#CALL [\游戏任务\新手任务\充足药品.txt] @中州_药店
+
+[@fastbuy]
+#CALL [\商人\药店.txt] @快捷交易
+
+[@buy]
+#CALL [\商人\药店.txt] @购入药品
+
+[@sell]
+#CALL [\商人\药店.txt] @出售药品
+
+[@bindbuy]
+#CALL [\商人\药店.txt] @绑定购买

@@ -1,0 +1,142 @@
+(@callboard)
+[@mainright]
+             <color=blue 每日活动公告>\
+    这里有最详细的活动信息，关注我吧！\\
+    <幽影阁门人/@mainright_xsrw>    <凡人宝地/@mainright_frbd>    <探宝老人/@mainright_cbt>\
+    <日常任务仙子/@mainright_rcrw>  <物资回收使者/@mainright_wzhs>   \
+    <碎片合成大师/@mainright_sphcds>  <装备淬炼师/@mainright_zzcls>\
+    <灵兽幻化使者/@mainright_lshhsz>  \\\\\\
+    <离开/@exit>
+
+[@mainright_lshhsz]
+               <color=blue 灵兽幻化使者>\
+开放时间：全天\
+功能：灵兽幻化\\\
+    <灵兽幻化使者/@gotowhhsz>\
+
+[@gotowhhsz]
+#IF
+RANDOM 1
+#ACT
+MAPMOVE zzgc 90 71
+break
+
+[@mainright_zzcls]
+               <color=blue 装备淬炼师>\
+开放时间：全天\
+功能：提升装备\\\
+    <寻找装备淬炼师/@gotowcls>\
+
+[@gotowcls]
+#IF
+RANDOM 1
+#ACT
+MAPMOVE zzgc 74 91
+break
+
+[@mainright_sphcds]
+               <color=blue 碎片合成大师>\
+开放时间：全天\
+参与条件：无\
+获得奖励：合成神武级以上首饰\\\
+    <寻找碎片合成大师/@gotosphcds>\
+
+[@gotosphcds]
+#IF
+RANDOM 1
+#ACT
+MAPMOVE zzgc 78 82
+break
+
+[@mainright_wzhs]
+               <color=blue 物资回收使者>\
+开放时间：全天\
+功能：装备回收\\\
+    <寻找物资回收使者/@gotowzhs>\
+
+[@gotowzhs]
+#IF
+RANDOM 1
+#ACT
+MAPMOVE zzgc 88 88
+break
+
+[@mainright_rcrw]
+               <color=blue 日常任务仙子>\
+开放时间：全天\
+参与条件：30级以上\
+获得奖励：大量经验\\\
+    <寻找日常任务仙子/@gotorcrw>\
+
+[@gotorcrw]
+#IF
+RANDOM 1
+#ACT
+MAPMOVE zzgc 104 78
+break
+
+[@mainright_cbt]
+               <color=blue 探宝老人>\
+开放时间：全天\
+参与条件：30级以上\
+获得奖励：青铜藏宝图、白银藏宝图、黄\
+        金藏宝图。\\
+    <寻找探宝老人/@gotocbt>\
+
+[@gotocbt]
+#IF
+RANDOM 1
+#ACT
+MAPMOVE zzgc 90 90
+break
+
+[@mainright_xsrw]
+               <color=blue 幽影阁门人>\
+开放时间：全天\
+参与条件：30级以上\
+获得奖励：圣战级以上装备、大量经验。\\\
+    <寻找幽影阁门人/@gotoxsrw>\
+
+[@gotoxsrw]
+#IF
+RANDOM 1
+#ACT
+MAPMOVE zzgc 80 83
+break
+
+[@mainright_frbd]
+               <color=blue 凡人宝地>\
+开放时间：每天12点-24点\
+进入条件：30级以上\
+获得奖励：圣战级以上装备、高级技能书、\
+          各类商城活动道具等。\\
+    <寻找凡人宝地传送门进入凡人宝地/@gotofrbd>\
+
+[@gotofrbd]
+#IF
+RANDOM 1
+#ACT
+MAPMOVE zzgc 108 94
+break
+
+[@mainleft]
+           <color=red 时光倒流、经典重现>\
+<color=blue 经验>\
+  每天可以通过参与日常任务仙子、运镖、\
+闯关、幽影阁门人、赏金猎人来获取大量经验\
+  开启藏宝图宝藏、神秘灵匣也可以获得经\
+验奖励。\
+<color=blue 技能>\
+  凡人宝地、野外Boss均会产出各级别的技\
+能书。\
+  此外，落霞夺宝可以获得融合技能、骑战\
+技能的技能书碎片。\
+<color=blue 装备>\
+  凡人宝地、野外怪物、野外Boss均会产出\
+各级别装备。\
+<color=blue 装备强化>\
+  在中州广场熔炼炉处可以对圣战级别以上\
+的装备进行强化，提升装备属性。\
+<color=blue 其他>\
+  还有攻打铁血魔城、行会NPC争夺等玩法\
+等待你的参与。\

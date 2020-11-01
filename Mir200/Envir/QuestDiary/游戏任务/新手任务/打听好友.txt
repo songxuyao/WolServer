@@ -1,0 +1,54 @@
+[@落霞岛_杂货]
+{
+
+#IF
+EQUAL $Task(5) 1
+#SAY
+可以完成的任务：\
+<新手任务--打听加好友/@_RW_fulfilTaskDesp1>\\
+<离开/@exit>
+#ACT
+break
+#IF
+EQUAL $Task(12) 1
+#ACT
+#CALL [\游戏任务\新手任务\求婚的勇气.txt] @落霞岛_杂货1
+break
+#IF
+EQUAL $Task(12) 3
+#ACT
+#CALL [\游戏任务\新手任务\求婚的勇气.txt] @落霞岛_杂货2
+break
+#IF
+EQUAL $Task(12) 6
+#ACT
+#CALL [\游戏任务\新手任务\求婚的勇气.txt] @落霞岛_杂货3
+break
+#ELSESAY
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+[@_RW_fulfilTaskDesp1]
+年轻人，是元铁匠让你来的吧，他刚才还在我面前夸你能干\
+呢！你找我有什么事情吗？\
+<打听加好友/@_RW_fulfilTask1_1>                <没事/@exit>
+
+[@_RW_fulfilTask1_1]
+#IF
+EQUAL $Task(5) 1
+#SAY
+你可以点右下界面中的社交界面（CTRL+I），里面有加好友\
+的选项，输入你要加的人的名字点确定就可以啦。如果你的\
+朋友在你身边的话，可以直接右键点他的头像进行操作。\
+你现在去书店老板那里看看，他会教你如何拜师的。\
+<离开/@exit>
+#ACT
+EndTask 5
+CHANGEEXP + 3200
+BINDGOLD + 1200
+give 鹤嘴锄 1
+AddTask 6
+SENDMSG 5 您成功增加了1200绑定金币。
+break
+
+}

@@ -1,0 +1,1022 @@
+(@conscribeHeros)
+[@main] FLASH(54)
+#IF
+RANDOM 1
+#ACT
+GOTO @_guildrecruit_viewall
+break
+
+[@_teachrecruit_request] FLASH(50)
+#IF
+CHECKLEVELEX < 35
+#ACT
+MessageBox 你的等级太低，不能招募徒弟。只有达到35级以上的人才能招收徒弟。
+break
+#IF
+SMALL $PRENTICECOUNT 3
+#ACT
+MOV S10 &
+INC S10 $USERNAME
+INC S10 >
+#ELSEACT
+MessageBox 你目前已经招了3个徒弟，不能再招募新的徒弟了。\
+break
+#IF
+PosInList $STR(S10) ..\QuestDiary\数据文件\英雄招募\徒弟列表.txt
+#ACT
+MessageBox 你已经发布了招募信息，当有人申请拜师后，你可在“收徒”页签\中选择合适的人收为徒弟\
+break
+#IF
+LARGE $AMBITKIND 6
+#ACT
+FORMATSTR S11 上仙%s重 $NUMTOCHR($AMBITLEVEL)
+#IF
+LARGE $AMBITKIND 4
+SMALL $AMBITKIND 7
+#ACT
+FORMATSTR S11 天仙%s重 $NUMTOCHR($AMBITLEVEL)
+#IF
+LARGE $AMBITKIND 2
+SMALL $AMBITKIND 5
+#ACT
+FORMATSTR S11 天人%s重 $NUMTOCHR($AMBITLEVEL)
+#IF
+SMALL $AMBITKIND 2
+#ACT
+MOV S11 　
+#IF
+HaveClan
+#ACT
+MOV S12 $CLAN.NAME
+#ELSEACT
+MOV S12 　
+#IF
+HAVEGUILD
+#ACT
+MOV S13 $GUILDNAME
+#ELSEACT
+MOV S13 　
+#IF
+RANDOM 1
+#ACT
+MOV S14 $DATE.MONTH
+INC S14 -
+INC S14 $DATE.DAY
+FORMATSTR S15 <Color=Green#32%-14s>%4s%16s%15s%16s%8s%s <$USERNAME>|<$LEVEL>|<$STR(S11)>|<$STR(S12)>|<$STR(S13)>|<$STR(S14)>|{/@_teachrecruit_addrecruit&<$USERNAME>}
+INSERTVARLIST 0 $STR(S15) ..\QuestDiary\数据文件\英雄招募\徒弟列表.txt
+MessageBox 你已经成功发布了招募信息，当有人申请拜师后，你可在“收徒”页签\中选择合适的人收为徒弟\
+GOTO @_teachrecruit_viewall
+break
+
+[@_teachrecruit_viewall] FLASH(50)
+#IF
+RANDOM 1
+#ACT
+MOV P10 $TXTLINE(..\QuestDiary\数据文件\英雄招募\徒弟列表.txt)
+#IF
+SMALL P10 1
+#SAY
+</@_teachrecruit_viewall></@_teachrecruit_recruitchoice></@_clanrecruit_viewall></@_clanrecruit_recruitchoice></@_guildrecruit_viewall></@_guildrecruit_recruitchoice></@_teachrecruit_request>
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1)
+#ACT
+MOV P11 1
+#ELSEACT
+MOV P11 $SCRIPTPARAM(1)
+#IF
+RANDOM 1
+#ACT
+MOV P12 $STR(P11)
+MULT P12 7
+DEC P12 7
+MOV P13 $STR(P12)
+INC P13 6
+MOV P14 $STR(P10)
+CEIL P14 7
+MOV P15 $STR(P11)
+MOV P16 $STR(P15)
+INC P16 1
+MOV P17 $STR(P15)
+DEC P17 1
+MOV S11 
+#IF
+EQUAL P16 2
+EQUAL P15 $STR(P14)
+#ACT
+MOV S17 </@></@>\</@>
+GOTO @_Seeteacher
+break
+#IF
+SMALL P17 1
+#ACT
+MOV S17 </@>{/@_teachrecruit_viewall&<$STR(P16)>}\</@>
+GOTO @_Seeteacher
+break
+#IF
+EQUAL P15 $STR(P14)
+#ACT
+MOV S17 {/@_teachrecruit_viewall&<$STR(P17)>}</@>\</@>
+GOTO @_Seeteacher
+break
+#IF
+RANDOM 1
+#ACT
+MOV S17 {/@_teachrecruit_viewall&<$STR(P17)>}{/@_teachrecruit_viewall&<$STR(P16)>}\</@>
+GOTO @_Seeteacher
+break
+
+[@_Seeteacher]FLASH(50)
+#IF
+LARGE P12 $STR(P13)
+#SAY
+<$STR(S11)>
+<$STR(S17)>
+</@_teachrecruit_viewall></@_teachrecruit_recruitchoice></@_clanrecruit_viewall></@_clanrecruit_recruitchoice></@_guildrecruit_viewall></@_guildrecruit_recruitchoice></@_teachrecruit_request>
+#ACT
+break
+#IF
+RANDOM 1
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\英雄招募\徒弟列表.txt S12 $STR(P12)
+#IF
+!EQUAL S12
+#ACT
+INC S11 $STR(S12)
+INC S11 \
+INC P12 1
+#ELSEACT
+INC P12 1
+#IF
+RANDOM 1
+#ACT
+GOTO @_Seeteacher
+break
+
+[@_teachrecruit_addrecruit] FLASH(50)
+#IF
+CHECKLEVELEX < 35
+#ACT
+MOV S10 &
+INC S10 $USERNAME
+INC S10 >
+#ELSEACT
+MessageBox 你的等级已经超过了35级，已经不能拜师。
+break
+#IF
+CHECKMASTER
+#ACT
+SENDMSG 5 你已经有师傅了，不能同时间当多人的徒弟。
+break
+#IF
+CHECKISMASTER
+#ACT
+MessageBox 已经成为别人的师傅了，已经不能拜师。
+break
+#IF
+HaveClan
+#ACT
+MOV S12 $CLAN.NAME
+#ELSEACT
+MOV S12 　
+#IF
+HAVEGUILD
+#ACT
+MOV S13 $GUILDNAME
+#ELSEACT
+MOV S13 　
+#IF
+RANDOM 1
+#ACT
+MOV S14 $DATE.MONTH
+INC S14 -
+INC S14 $DATE.DAY
+#IF
+!PosInList $STR(S10) ..\QuestDiary\数据文件\英雄招募\师徒\<$SCRIPTPARAM(1)>.txt
+#ACT
+FORMATSTR S15 <Color=Green#32%-14s>%8s%20s%18s%10s%s <$USERNAME>|<$LEVEL>|<$STR(S12)>|<$STR(S13)>|<$STR(S14)>|{/@_teachrecruit_recruit&<$USERNAME>}
+INSERTVARLIST 0 $STR(S15) ..\QuestDiary\数据文件\英雄招募\师徒\<$SCRIPTPARAM(1)>.txt
+MessageBox 你成功申请了拜师，师傅将会择优录取。
+Break
+#ELSEACT
+MessageBox 你已经申请过拜此人为师。
+break
+
+[@_teachrecruit_recruitchoice] FLASH(51)
+#IF
+CHECKTXT ..\QuestDiary\数据文件\英雄招募\师徒\<$USERNAME>.txt
+#ELSESAY
+目前没有任何人申请做你的徒弟！
+</@_teachrecruit_viewall></@_teachrecruit_recruitchoice></@_clanrecruit_viewall></@_clanrecruit_recruitchoice></@_guildrecruit_viewall></@_guildrecruit_recruitchoice>
+#ELSEACT
+break
+#IF
+RANDOM 1
+#ACT
+MOV P10 $TXTLINE(..\QuestDiary\数据文件\英雄招募\师徒\<$USERNAME>.txt)
+#IF
+SMALL P10 1
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1)
+#ACT
+MOV P11 1
+#ELSEACT
+MOV P11 $SCRIPTPARAM(1)
+#IF
+RANDOM 1
+#ACT
+MOV P12 $STR(P11)
+MULT P12 7
+DEC P12 7
+MOV P13 $STR(P12)
+INC P13 6
+MOV P14 $STR(P10)
+CEIL P14 7
+MOV P15 $STR(P11)
+MOV P16 $STR(P15)
+INC P16 1
+MOV P17 $STR(P15)
+DEC P17 1
+MOV S11 
+#IF
+EQUAL P16 2
+EQUAL P15 $STR(P14)
+#ACT
+MOV S17 </@></@>\</@>
+GOTO @_Seeteacher_recruitchoice
+break
+#IF
+SMALL P17 1
+#ACT
+MOV S17 </@>{/@_teachrecruit_recruitchoice&<$STR(P16)>}\</@>
+GOTO @_Seeteacher_recruitchoice
+break
+#IF
+EQUAL P15 $STR(P14)
+#ACT
+MOV S17 {/@_teachrecruit_recruitchoice&<$STR(P17)>}</@>\</@>
+GOTO @_Seeteacher_recruitchoice
+break
+#IF
+RANDOM 1
+#ACT
+MOV S17 {/@_teachrecruit_recruitchoice&<$STR(P17)>}{/@_teachrecruit_recruitchoice&<$STR(P16)>}\</@>
+GOTO @_Seeteacher_recruitchoice
+break
+
+[@_Seeteacher_recruitchoice]FLASH(51)
+#IF
+LARGE P12 $STR(P13)
+#SAY
+<$STR(S11)>
+<$STR(S17)>
+</@_teachrecruit_viewall></@_teachrecruit_recruitchoice></@_clanrecruit_viewall></@_clanrecruit_recruitchoice></@_guildrecruit_viewall></@_guildrecruit_recruitchoice></@_teachrecruit_request>
+#ACT
+break
+#IF
+RANDOM 1
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\英雄招募\师徒\<$USERNAME>.txt S12 $STR(P12)
+#IF
+!EQUAL S12
+#ACT
+INC S11 $STR(S12)
+INC S11 \
+INC P12 1
+#ELSEACT
+INC P12 1
+#IF
+RANDOM 1
+#ACT
+GOTO @_Seeteacher_recruitchoice
+break
+
+[@_teachrecruit_recruit] FLASH(51)
+#IF
+LARGE $PRENTICECOUNT 2
+#ACT
+MessageBox 你目前已经招了3个徒弟，不能再招募新的徒弟了。
+GOTO @_teachrecruit_recruitchoice
+break
+#IF
+CHECKONLINE $SCRIPTPARAM(1)
+#ACT
+MOV S18 &
+INC S18 $SCRIPTPARAM(1)
+INC S18 >
+#ELSEACT
+MessageBox <$SCRIPTPARAM(1)>当前不在线，招募失败。
+GOTO @_teachrecruit_recruitchoice
+break
+#IF
+$SCRIPTPARAM(1).CHECKMASTER
+PosInList $STR(S18) ..\QuestDiary\数据文件\英雄招募\师徒\<$USERNAME>.txt S19
+#ACT
+DELVARLIST $STR(S19) ..\QuestDiary\数据文件\英雄招募\师徒\<$USERNAME>.txt
+GOTO @_teachrecruit_recruitchoice
+MessageBox <$SCRIPTPARAM(1)>已经有师傅了，招募失败。
+break
+#IF
+$SCRIPTPARAM(1).CHECKISMASTER
+PosInList $STR(S18) ..\QuestDiary\数据文件\英雄招募\师徒\<$USERNAME>.txt S19
+#ACT
+DELVARLIST $STR(S19) ..\QuestDiary\数据文件\英雄招募\师徒\<$USERNAME>.txt
+GOTO @_teachrecruit_recruitchoice
+MessageBox <$SCRIPTPARAM(1)>已经成为别人的师傅了，招募失败。
+break
+#IF
+$SCRIPTPARAM(1).CHECKLEVELEX > 35
+PosInList $STR(S18) ..\QuestDiary\数据文件\英雄招募\师徒\<$USERNAME>.txt S19
+#ACT
+DELVARLIST $STR(S19) ..\QuestDiary\数据文件\英雄招募\师徒\<$USERNAME>.txt
+GOTO @_teachrecruit_recruitchoice
+MessageBox <$SCRIPTPARAM(1)>已超过拜师等级，招募失败。
+break
+#IF
+PosInList $STR(S18) ..\QuestDiary\数据文件\英雄招募\师徒\<$USERNAME>.txt S19
+#ACT
+AddPrentice $SCRIPTPARAM(1)
+DELVARLIST $STR(S19) ..\QuestDiary\数据文件\英雄招募\师徒\<$USERNAME>.txt
+GOTO @_teachrecruit_recruitchoice
+MessageBox 成功招募了徒弟<$SCRIPTPARAM(1)>
+break
+
+;----------------师徒结束----====================================================================================================================================================----------
+
+[@_guildrecruit_request] FLASH(54)
+#IF
+!HAVEGUILD
+#ACT
+MessageBox 你不是行会会长，不能招募行会成员，前往皇宫找寻国王可创建行会。
+break
+#IF
+!ISGUILDMASTER
+#ACT
+MessageBox 你不是行会会长，不能招募行会成员，前往皇宫找寻国王可创建行会。
+break
+#IF
+RANDOM 1
+#ACT
+MOV S10 &
+INC S10 $GUILDNAME
+INC S10 >
+#IF
+PosInList $STR(S10) ..\QuestDiary\数据文件\英雄招募\行会列表.txt
+#ACT
+MessageBox 你的行会已经发布过招募会员，不能重复操作。
+break
+#IF
+LARGE $AMBITKIND 6
+#ACT
+FORMATSTR S11 上仙%s重 $NUMTOCHR($AMBITLEVEL)
+#IF
+LARGE $AMBITKIND 4
+SMALL $AMBITKIND 7
+#ACT
+FORMATSTR S11 天仙%s重 $NUMTOCHR($AMBITLEVEL)
+#IF
+LARGE $AMBITKIND 2
+SMALL $AMBITKIND 5
+#ACT
+FORMATSTR S11 天人%s重 $NUMTOCHR($AMBITLEVEL)
+#IF
+SMALL $AMBITKIND 2
+#ACT
+MOV S11 　
+#IF
+CheckGuildTowerGrade SELF > 0
+#ACT
+MOV S12 $GUILD.TOWERGRADE
+INC S12 级
+#ELSEACT
+MOV S12 无
+#IF
+RANDOM 1
+#ACT
+MOV S14 $DATE.MONTH
+INC S14 -
+INC S14 $DATE.DAY
+FORMATSTR S15 <Color=Green#32%-16s>#32%-15s%-4s%-16s%-12s%-2s%s <$GUILDNAME>|<$USERNAME>|<$LEVEL>|<$STR(S11)>|<$STR(S12)>|<$STR(S14)>|{/@_guildrecruit_addrecruit&<$GUILDNAME>}
+INSERTVARLIST 0 $STR(S15) ..\QuestDiary\数据文件\英雄招募\行会列表.txt
+goto @_guildrecruit_viewall
+MessageBox 申请招募成功！
+break
+
+[@_guildrecruit_viewall] FLASH(54)
+#IF
+RANDOM 1
+#ACT
+MOV P10 $TXTLINE(..\QuestDiary\数据文件\英雄招募\行会列表.txt)
+#IF
+SMALL P10 1
+#SAY
+</@_teachrecruit_viewall></@_teachrecruit_recruitchoice></@_clanrecruit_viewall></@_clanrecruit_recruitchoice></@_guildrecruit_viewall></@_guildrecruit_recruitchoice></@_guildrecruit_request>
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1)
+#ACT
+MOV P11 1
+#ELSEACT
+MOV P11 $SCRIPTPARAM(1)
+#IF
+RANDOM 1
+#ACT
+MOV P12 $STR(P11)
+MULT P12 7
+DEC P12 7
+MOV P13 $STR(P12)
+INC P13 6
+MOV P14 $STR(P10)
+CEIL P14 7
+MOV P15 $STR(P11)
+MOV P16 $STR(P15)
+INC P16 1
+MOV P17 $STR(P15)
+DEC P17 1
+MOV S11 
+#IF
+EQUAL P16 2
+EQUAL P15 $STR(P14)
+#ACT
+MOV S17 </@></@>\</@>
+GOTO @_Seeguildrecruit
+break
+#IF
+SMALL P17 1
+#ACT
+MOV S17 </@>{/@_guildrecruit_viewall&<$STR(P16)>}\</@>
+GOTO @_Seeguildrecruit
+break
+#IF
+EQUAL P15 $STR(P14)
+#ACT
+MOV S17 {/@_guildrecruit_viewall&<$STR(P17)>}</@>\</@>
+GOTO @_Seeguildrecruit
+break
+#IF
+RANDOM 1
+#ACT
+MOV S17 {/@_guildrecruit_viewall&<$STR(P17)>}{/@_guildrecruit_viewall&<$STR(P16)>}\</@>
+GOTO @_Seeguildrecruit
+break
+
+[@_Seeguildrecruit]FLASH(54)
+#IF
+LARGE P12 $STR(P13)
+#SAY
+<$STR(S11)>
+<$STR(S17)>
+</@_teachrecruit_viewall></@_teachrecruit_recruitchoice></@_clanrecruit_viewall></@_clanrecruit_recruitchoice></@_guildrecruit_viewall></@_guildrecruit_recruitchoice></@_guildrecruit_request>
+#ACT
+break
+#IF
+RANDOM 1
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\英雄招募\行会列表.txt S12 $STR(P12)
+#IF
+!EQUAL S12
+#ACT
+INC S11 $STR(S12)
+INC S11 \
+INC P12 1
+#ELSEACT
+INC P12 1
+#IF
+RANDOM 1
+#ACT
+GOTO @_Seeguildrecruit
+break
+
+[@_guildrecruit_addrecruit] FLASH(54)
+#IF
+CHECKLEVELEX < 10
+#ACT
+MessageBox 你的等级还未超过10级，能力还不够，无法报名应征行会。
+break
+#IF
+!HAVEGUILD
+#ACT
+MOV S10 &
+INC S10 $USERNAME
+INC S10 >
+#ELSEACT
+MessageBox 你已经加入了行会，不可重复加入其他行会。\
+break
+#IF
+LARGE $AMBITKIND 6
+#ACT
+FORMATSTR S11 上仙%s重 $NUMTOCHR($AMBITLEVEL)
+#IF
+LARGE $AMBITKIND 4
+SMALL $AMBITKIND 7
+#ACT
+FORMATSTR S11 天仙%s重 $NUMTOCHR($AMBITLEVEL)
+#IF
+LARGE $AMBITKIND 2
+SMALL $AMBITKIND 5
+#ACT
+FORMATSTR S11 天人%s重 $NUMTOCHR($AMBITLEVEL)
+#IF
+SMALL $AMBITKIND 2
+#ACT
+MOV S11 　
+#IF
+HaveClan
+#ACT
+MOV S12 $CLAN.NAME
+#ELSEACT
+MOV S12 　
+#IF
+RANDOM 1
+#ACT
+MOV S14 $DATE.MONTH
+INC S14 -
+INC S14 $DATE.DAY
+#IF
+!PosInList $STR(S10) ..\QuestDiary\数据文件\英雄招募\行会\<$SCRIPTPARAM(1)>.txt
+#ACT
+FORMATSTR S15 <Color=Green#32%-14s>%8s%20s%18s%10s%s <$USERNAME>|<$LEVEL>|<$STR(S11)>|<$STR(S12)>|<$STR(S14)>|{/@_guildrecruit_recruit&<$USERNAME>}
+INSERTVARLIST 0 $STR(S15) ..\QuestDiary\数据文件\英雄招募\行会\<$SCRIPTPARAM(1)>.txt
+MessageBox 你成功申请了加入行会，会长将会择优录取。
+break
+#ELSEACT
+MessageBox 你已经申请过该行会了，请耐心等候。
+break
+
+[@_guildrecruit_recruitchoice] FLASH(55)
+#IF
+!HAVEGUILD
+#ACT
+MessageBox 你还没有加入任何行会，不能招募会员。
+break
+#IF
+!ISGUILDMASTER
+#ACT
+MessageBox 你不是行会会长，不能招募行会成员，前往皇宫找寻国王可创建行会。
+Break
+#IF
+CHECKTXT ..\QuestDiary\数据文件\英雄招募\行会\<$GUILDNAME>.txt
+#ELSESAY
+</@_teachrecruit_viewall></@_teachrecruit_recruitchoice></@_clanrecruit_viewall></@_clanrecruit_recruitchoice></@_guildrecruit_viewall></@_guildrecruit_recruitchoice>
+#ELSEACT
+MessageBox 你的行会没有发布过招募会员，不能查看招募列表。
+break
+#IF
+RANDOM 1
+#ACT
+MOV P10 $TXTLINE(..\QuestDiary\数据文件\英雄招募\行会\<$GUILDNAME>.txt)
+#IF
+SMALL P10 1
+#SAY
+</@_teachrecruit_viewall></@_teachrecruit_recruitchoice></@_clanrecruit_viewall></@_clanrecruit_recruitchoice></@_guildrecruit_viewall></@_guildrecruit_recruitchoice>
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1)
+#ACT
+MOV P11 1
+#ELSEACT
+MOV P11 $SCRIPTPARAM(1)
+#IF
+RANDOM 1
+#ACT
+MOV P12 $STR(P11)
+MULT P12 7
+DEC P12 7
+MOV P13 $STR(P12)
+INC P13 6
+MOV P14 $STR(P10)
+CEIL P14 7
+MOV P15 $STR(P11)
+MOV P16 $STR(P15)
+INC P16 1
+MOV P17 $STR(P15)
+DEC P17 1
+MOV S11 
+#IF
+EQUAL P16 2
+EQUAL P15 $STR(P14)
+#ACT
+MOV S17 </@></@>\</@>
+GOTO @_Seeguild_recruitchoice
+break
+#IF
+SMALL P17 1
+#ACT
+MOV S17 </@>{/@_guildrecruit_recruitchoice&<$STR(P16)>}\</@>
+GOTO @_Seeguild_recruitchoice
+break
+#IF
+EQUAL P15 $STR(P14)
+#ACT
+MOV S17 {/@_guildrecruit_recruitchoice&<$STR(P17)>}</@>\</@>
+GOTO @_Seeguild_recruitchoice
+break
+#IF
+RANDOM 1
+#ACT
+MOV S17 {/@_guildrecruit_recruitchoice&<$STR(P17)>}{/@_guildrecruit_recruitchoice&<$STR(P16)>}\</@>
+GOTO @_Seeguild_recruitchoice
+break
+
+[@_Seeguild_recruitchoice]FLASH(55)
+#IF
+LARGE P12 $STR(P13)
+#SAY
+<$STR(S11)>
+<$STR(S17)>
+</@_teachrecruit_viewall></@_teachrecruit_recruitchoice></@_clanrecruit_viewall></@_clanrecruit_recruitchoice></@_guildrecruit_viewall></@_guildrecruit_recruitchoice></@_guildrecruit_request>
+#ACT
+break
+#IF
+RANDOM 1
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\英雄招募\行会\<$GUILDNAME>.txt S12 $STR(P12)
+#IF
+!EQUAL S12
+#ACT
+INC S11 $STR(S12)
+INC S11 \
+INC P12 1
+#ELSEACT
+INC P12 1
+#IF
+RANDOM 1
+#ACT
+GOTO @_Seeguild_recruitchoice
+break
+
+[@_guildrecruit_recruit] FLASH(55)
+#IF
+!HAVEGUILD
+#ACT
+MessageBox 你不是行会会长，不能招募行会成员，前往皇宫找寻国王可创建行会。
+break
+#IF
+!ISGUILDMASTER
+#ACT
+MessageBox 你不是行会会长，不能招募行会成员，前往皇宫找寻国王可创建行会。
+break
+#IF
+SMALL $GUILD.MEMBERCOUNT $GUILD.MAXMEMBER
+#ACT
+MOV S18 &
+INC S18 $SCRIPTPARAM(1)
+INC S18 >
+#ELSEACT
+MessageBox 你当前行会成员已经达到上限，前往皇宫找寻国王可提高上限成员。
+break
+#IF
+CHECKONLINE $SCRIPTPARAM(1)
+#ACT
+#ELSEACT
+GOTO @_guildrecruit_recruitchoice
+MessageBox <$SCRIPTPARAM(1)>当前不在线，招募失败。
+break
+#IF
+$SCRIPTPARAM(1).HAVEGUILD
+PosInList $STR(S18) ..\QuestDiary\数据文件\英雄招募\行会\<$GUILDNAME>.txt S19
+#ACT
+DELVARLIST $STR(S19) ..\QuestDiary\数据文件\英雄招募\行会\<$GUILDNAME>.txt
+GOTO @_guildrecruit_recruitchoice
+MessageBox <$SCRIPTPARAM(1)>已经加入行会了，招募失败。
+break
+#IF
+PosInList $STR(S18) ..\QuestDiary\数据文件\英雄招募\行会\<$GUILDNAME>.txt S19
+#ACT
+ADDGUILDMEMBER $GUILD.NAME $SCRIPTPARAM(1)
+DELVARLIST $STR(S19) ..\QuestDiary\数据文件\英雄招募\行会\<$GUILDNAME>.txt
+GOTO @_guildrecruit_recruitchoice
+MessageBox 成功招募了行会成员<$SCRIPTPARAM(1)>
+break
+
+[@_clanrecruit_viewall] FLASH(52)
+#IF
+RANDOM 1
+#ACT
+MOV P10 $TXTLINE(..\QuestDiary\数据文件\英雄招募\宗族列表.txt)
+#IF
+SMALL P10 1
+#SAY
+</@_teachrecruit_viewall></@_teachrecruit_recruitchoice></@_clanrecruit_viewall></@_clanrecruit_recruitchoice></@_guildrecruit_viewall></@_guildrecruit_recruitchoice></@_clanrecruit_request>
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1)
+#ACT
+MOV P11 1
+#ELSEACT
+MOV P11 $SCRIPTPARAM(1)
+#IF
+RANDOM 1
+#ACT
+MOV P12 $STR(P11)
+MULT P12 7
+DEC P12 7
+MOV P13 $STR(P12)
+INC P13 6
+MOV P14 $STR(P10)
+CEIL P14 7
+MOV P15 $STR(P11)
+MOV P16 $STR(P15)
+INC P16 1
+MOV P17 $STR(P15)
+DEC P17 1
+MOV S11 
+#IF
+EQUAL P16 2
+EQUAL P15 $STR(P14)
+#ACT
+MOV S17 </@></@>\</@>
+GOTO @_Seeclanrecruit
+break
+#IF
+SMALL P17 1
+#ACT
+MOV S17 </@>{/@_clanrecruit_viewall&<$STR(P16)>}\</@>
+GOTO @_Seeclanrecruit
+break
+#IF
+EQUAL P15 $STR(P14)
+#ACT
+MOV S17 {/@_clanrecruit_viewall&<$STR(P17)>}</@>\</@>
+GOTO @_Seeclanrecruit
+break
+#IF
+RANDOM 1
+#ACT
+MOV S17 {/@_clanrecruit_viewall&<$STR(P17)>}{/@_clanrecruit_viewall&<$STR(P16)>}\</@>
+GOTO @_Seeclanrecruit
+break
+
+[@_Seeclanrecruit] FLASH(52)
+#IF
+LARGE P12 $STR(P13)
+#SAY
+<$STR(S11)>
+<$STR(S17)>
+</@_teachrecruit_viewall></@_teachrecruit_recruitchoice></@_clanrecruit_viewall></@_clanrecruit_recruitchoice></@_guildrecruit_viewall></@_guildrecruit_recruitchoice></@_clanrecruit_request>
+#ACT
+break
+#IF
+RANDOM 1
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\英雄招募\宗族列表.txt S12 $STR(P12)
+#IF
+!EQUAL S12
+#ACT
+INC S11 $STR(S12)
+INC S11 \
+INC P12 1
+#ELSEACT
+INC P12 1
+#IF
+RANDOM 1
+#ACT
+GOTO @_Seeclanrecruit
+break
+
+[@_clanrecruit_request] FLASH(52)
+#IF
+HaveClan
+#ACT
+#ELSEACT
+MessageBox 你不是宗族族长，不能招募宗族成员进入宗族。
+break
+#IF
+CheckIsClanChief
+#ACT
+#ELSEACT
+MessageBox 你不是宗族族长，不能招募宗族成员进入宗族。
+break
+#IF
+RANDOM 1
+#ACT
+MOV S10 &
+INC S10 $CLAN.NAME
+INC S10 >
+#IF
+PosInList $STR(S10) ..\QuestDiary\数据文件\英雄招募\宗族列表.txt
+#ACT
+MessageBox 你的宗族经发布过招募会员，不能重复操作。
+break
+#IF
+LARGE $AMBITKIND 6
+#ACT
+FORMATSTR S11 上仙%s重 $NUMTOCHR($AMBITLEVEL)
+#IF
+LARGE $AMBITKIND 4
+SMALL $AMBITKIND 7
+#ACT
+FORMATSTR S11 天仙%s重 $NUMTOCHR($AMBITLEVEL)
+#IF
+LARGE $AMBITKIND 2
+SMALL $AMBITKIND 5
+#ACT
+FORMATSTR S11 天人%s重 $NUMTOCHR($AMBITLEVEL)
+#IF
+SMALL $AMBITKIND 2
+#ACT
+MOV S11 天人九十九重
+#IF
+HAVEGUILD
+#ACT
+MOV S13 $GUILDNAME
+#ELSEACT
+MOV S13 一二三四五六气
+#IF
+RANDOM 1
+#ACT
+MOV S14 $DATE.MONTH
+INC S14 -
+INC S14 $DATE.DAY
+FORMATSTR S15 <Color=Green#32%-15s>%-15s%-4s%-13s%-17s%-2s%s <$CLAN.NAME>|<$USERNAME>|<$LEVEL>|<$STR(S11)>|<$STR(S13)>|<$STR(S14)>|{/@_clanrecruit_addrecruit&<$CLAN.NAME>}
+INSERTVARLIST 0 $STR(S15) ..\QuestDiary\数据文件\英雄招募\宗族列表.txt
+goto @_clanrecruit_viewall
+MessageBox 申请招募成功！
+break
+
+[@_clanrecruit_addrecruit] FLASH(52)
+#IF
+!HaveClan
+#ACT
+MOV S10 &
+INC S10 $USERNAME
+INC S10 >
+#ELSEACT
+MessageBox 你已经加入了宗族，不可重复加入其他宗族。\
+break
+#IF
+LARGE $AMBITKIND 6
+#ACT
+FORMATSTR S11 上仙%s重 $NUMTOCHR($AMBITLEVEL)
+#IF
+LARGE $AMBITKIND 4
+SMALL $AMBITKIND 7
+#ACT
+FORMATSTR S11 天仙%s重 $NUMTOCHR($AMBITLEVEL)
+#IF
+LARGE $AMBITKIND 2
+SMALL $AMBITKIND 5
+#ACT
+FORMATSTR S11 天人%s重 $NUMTOCHR($AMBITLEVEL)
+#IF
+SMALL $AMBITKIND 2
+#ACT
+MOV S11 　
+#IF
+HAVEGUILD
+#ACT
+MOV S12 $GUILDNAME
+#ELSEACT
+MOV S12 　
+#IF
+RANDOM 1
+#ACT
+MOV S14 $DATE.MONTH
+INC S14 -
+INC S14 $DATE.DAY
+#IF
+!PosInList $STR(S10) ..\QuestDiary\数据文件\英雄招募\宗族\<$SCRIPTPARAM(1)>.txt
+#ACT
+FORMATSTR S15 <Color=Green#32%-14s>%8s%20s%18s%10s%s <$USERNAME>|<$LEVEL>|<$STR(S11)>|<$STR(S12)>|<$STR(S14)>|{/@_clanrecruit_recruit&<$USERNAME>}
+INSERTVARLIST 0 $STR(S15) ..\QuestDiary\数据文件\英雄招募\宗族\<$SCRIPTPARAM(1)>.txt
+MessageBox 你成功申请了加入宗族，族长将会择优录取。
+break
+#ELSEACT
+MessageBox 你已经申请过该宗族了，请耐心等候。
+break
+
+[@_clanrecruit_recruitchoice] FLASH(53)
+#IF
+CHECKTXT ..\QuestDiary\数据文件\英雄招募\宗族\<$CLAN.NAME>.txt
+#ELSESAY
+目前没有任何人申请加入你的宗族
+</@_teachrecruit_viewall></@_teachrecruit_recruitchoice></@_clanrecruit_viewall></@_clanrecruit_recruitchoice></@_guildrecruit_viewall></@_guildrecruit_recruitchoice>
+#ELSEACT
+break
+#IF
+RANDOM 1
+#ACT
+MOV P10 $TXTLINE(..\QuestDiary\数据文件\英雄招募\宗族\<$CLAN.NAME>.txt)
+#IF
+SMALL P10 1
+#SAY
+</@_teachrecruit_viewall></@_teachrecruit_recruitchoice></@_clanrecruit_viewall></@_clanrecruit_recruitchoice></@_guildrecruit_viewall></@_guildrecruit_recruitchoice>
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1)
+#ACT
+MOV P11 1
+#ELSEACT
+MOV P11 $SCRIPTPARAM(1)
+#IF
+RANDOM 1
+#ACT
+MOV P12 $STR(P11)
+MULT P12 7
+DEC P12 7
+MOV P13 $STR(P12)
+INC P13 6
+MOV P14 $STR(P10)
+CEIL P14 7
+MOV P15 $STR(P11)
+MOV P16 $STR(P15)
+INC P16 1
+MOV P17 $STR(P15)
+DEC P17 1
+MOV S11 
+#IF
+EQUAL P16 2
+EQUAL P15 $STR(P14)
+#ACT
+MOV S17 </@></@>\</@>
+GOTO @_Seeclanrecruit_recruitchoice
+break
+#IF
+SMALL P17 1
+#ACT
+MOV S17 </@>{/@_clanrecruit_recruitchoice&<$STR(P16)>}\</@>
+GOTO @_Seeclanrecruit_recruitchoice
+break
+#IF
+EQUAL P15 $STR(P14)
+#ACT
+MOV S17 {/@_clanrecruit_recruitchoice&<$STR(P17)>}</@>\</@>
+GOTO @_Seeclanrecruit_recruitchoice
+break
+#IF
+RANDOM 1
+#ACT
+MOV S17 {/@_clanrecruit_recruitchoice&<$STR(P17)>}{/@_clanrecruit_recruitchoice&<$STR(P16)>}\</@>
+GOTO @_Seeclanrecruit_recruitchoice
+break
+
+[@_Seeclanrecruit_recruitchoice]FLASH(53)
+#IF
+LARGE P12 $STR(P13)
+#SAY
+<$STR(S11)>
+<$STR(S17)>
+</@_teachrecruit_viewall></@_teachrecruit_recruitchoice></@_clanrecruit_viewall></@_clanrecruit_recruitchoice></@_guildrecruit_viewall></@_guildrecruit_recruitchoice></@_guildrecruit_request>
+#ACT
+break
+#IF
+RANDOM 1
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\英雄招募\宗族\<$CLAN.NAME>.txt S12 $STR(P12)
+#IF
+!EQUAL S12
+#ACT
+INC S11 $STR(S12)
+INC S11 \
+INC P12 1
+#ELSEACT
+INC P12 1
+#IF
+RANDOM 1
+#ACT
+GOTO @_Seeclanrecruit_recruitchoice
+break
+
+[@_clanrecruit_recruit] FLASH(52)
+#IF
+HaveClan
+#ACT
+#ELSEACT
+MessageBox 你不是宗族族长，不能招募宗族成员进入宗族。
+break
+#IF
+CheckIsClanChief
+#ACT
+#ELSEACT
+MessageBox 你不是宗族族长，不能招募宗族成员进入宗族。
+break
+#IF
+CHECKONLINE $SCRIPTPARAM(1)
+#ACT
+#ELSEACT
+GOTO @_guildrecruit_recruitchoice
+MessageBox <$SCRIPTPARAM(1)>当前不在线，招募失败。
+break
+#IF
+$SCRIPTPARAM(1).HaveClan
+PosInList $STR(S18) ..\QuestDiary\数据文件\英雄招募\宗族\<$GUILDNAME>.txt S19
+#ACT
+DELVARLIST $STR(S19) ..\QuestDiary\数据文件\英雄招募\宗族\<$GUILDNAME>.txt
+GOTO @_guildrecruit_recruitchoice
+MessageBox <$SCRIPTPARAM(1)>已经加入宗族了，招募失败。
+break
+#IF
+PosInList $STR(S18) ..\QuestDiary\数据文件\英雄招募\宗族\<$GUILDNAME>.txt S19
+#ACT
+JoinClan $SCRIPTPARAM(1) $CLAN.NAME
+DELVARLIST $STR(S19) ..\QuestDiary\数据文件\英雄招募\宗族\<$GUILDNAME>.txt
+GOTO @_clanrecruit_recruitchoice
+MessageBox 成功招募了宗族成员<$SCRIPTPARAM(1)>
+break

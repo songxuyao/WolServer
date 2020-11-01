@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="gb2312"?>
+<RepressDemonWings material0="幻翎之羽" material0_value="10"  material1="仙翎之羽" material1_value="100">
+    	<Wing id="1" Name="幻翎之炎" desc="  创世之初，古人揭鳞为甲，化翎为羽，将上古神力注入仙翼之中，如今，仙翼再现，但神力不在，幻翎之羽可激发羽翼潜力，使神力再次现世。/  幻翎之炎可以使用幻翎之羽升级激发潜能并进阶为蓝冰之焱">
+		<Look id = "1" min_lv = "1" max_lv="3"/>
+		<Look id = "2" min_lv = "4" max_lv="6"/>
+		<Look id = "3" min_lv = "7" max_lv="50"/>
+    	</Wing>
+    	<Wing id="2" Name="蓝冰之焱" desc="  创世之初，古人揭鳞为甲，化翎为羽，将上古神力注入仙翼之中，如今，仙翼再现，但神力不在，幻翎之羽可激发羽翼潜力，使神力再次现世。/  蓝冰之焱可以使用幻翎之羽升级激发潜能并进阶为灰岩之焱">
+		<Look id = "4" min_lv = "11" max_lv="13"/>
+		<Look id = "5" min_lv = "14" max_lv="16"/>
+		<Look id = "6" min_lv = "17" max_lv="50"/>
+    	</Wing>
+    	<Wing id="3" Name="灰岩之焱" desc="  创世之初，古人揭鳞为甲，化翎为羽，将上古神力注入仙翼之中，如今，仙翼再现，但神力不在，幻翎之羽可激发羽翼潜力，使神力再次现世。/  灰岩之焱可以使用幻翎之羽升级激发潜能并进阶为炙火之焱">
+		<Look id = "7" min_lv = "21" max_lv="23"/>
+		<Look id = "8" min_lv = "24" max_lv="26"/>
+		<Look id = "9" min_lv = "27" max_lv="50"/>
+    	</Wing>
+    	<Wing id="4" Name="炙火之焱" desc="  创世之初，古人揭鳞为甲，化翎为羽，将上古神力注入仙翼之中，如今，仙翼再现，但神力不在，幻翎之羽可激发羽翼潜力，使神力再次现世。/  炙火之焱可以使用幻翎之羽升级激发潜能并进阶为死亡之焱">
+    		<Look id = "10" min_lv = "31" max_lv="33"/>
+		<Look id = "11" min_lv = "34" max_lv="36"/>
+		<Look id = "12" min_lv = "37" max_lv="50"/>
+    	</Wing>
+    	<Wing id="5" Name="死亡之焱" desc="  创世之初，古人揭鳞为甲，化翎为羽，将上古神力注入仙翼之中，如今，仙翼再现，但神力不在，幻翎之羽可激发羽翼潜力，使神力再次现世。/  死亡之焱可以使用幻翎之羽升级激发更大的潜能">
+		<Look id = "13" min_lv = "41" max_lv="43"/>
+		<Look id = "14" min_lv = "44" max_lv="46"/>
+		<Look id = "15" min_lv = "47" max_lv="50"/>
+    	</Wing>
+	<Wing id="100" Name="暗黑幽影魔焱" desc="  上古便纯在的魔翼，通体黑色的翎羽无不透露着气黑暗的魔性，足以让每一个面对他的人胆寒" special = "1" condition="充值vip8可以获得">
+    		<jobprop job="0" name0="gj" value_0_0="2" value_0_1="6" />
+    		<jobprop job="1" name0="mfgj" value_0_0="2" value_0_1="6" />
+    		<jobprop job="2" name0="dsgj" value_0_0="2" value_0_1="6" />
+	</Wing>
+  	<Wing id="101" Name="无尽恶念魔焱" desc="  上古便纯在的魔翼，通体黑色的翎羽无不透露着气黑暗的魔性，足以让每一个面对他的人胆寒" special = "1" condition="充值vip9可以获得">
+    		<jobprop job="0" name0="hp" value_0_0="2000" value_0_1="200" name1="gj" value_1_0="0" value_1_1="1" name2="fy" value_2_0="0" value_2_1="1" name3="mffy" value_3_0="0" value_3_1="1" name4="ms" value_4_0="0" value_4_1="0" />
+    		<jobprop job="1" name0="hp" value_0_0="10" value_0_1="10" name1="mfgj" value_1_0="0" value_1_1="1" name2="fy" value_2_0="0" value_2_1="1" name3="mffy" value_3_0="0" value_3_1="1" name4="ms" value_4_0="0" value_4_1="0" />
+    		<jobprop job="2" name0="hp" value_0_0="20" value_0_1="20" name1="dsgj" value_1_0="0" value_1_1="1" name2="fy" value_2_0="0" value_2_1="1" name3="mffy" value_3_0="0" value_3_1="1" name4="ms" value_4_0="0" value_4_1="0" />
+	</Wing>
+  	<Wing id="102" Name="焚天诛仙魔焱" desc="  上古便纯在的魔翼，通体黑色的翎羽无不透露着气黑暗的魔性，足以让每一个面对他的人胆寒" special = "1" condition="充值vip10可以获得">
+    		<jobprop job="0" name0="hp" value_0_0="3000" value_0_1="300" name1="gj" value_1_0="0" value_1_1="1" name2="fy" value_2_0="0" value_2_1="1" name3="mffy" value_3_0="0" value_3_1="1" name4="ms" value_4_0="0" value_4_1="0" />
+    		<jobprop job="1" name0="hp" value_0_0="10" value_0_1="10" name1="mfgj" value_1_0="0" value_1_1="1" name2="fy" value_2_0="0" value_2_1="1" name3="mffy" value_3_0="0" value_3_1="1" name4="ms" value_4_0="0" value_4_1="0" />
+    		<jobprop job="2" name0="hp" value_0_0="20" value_0_1="20" name1="dsgj" value_1_0="0" value_1_1="1" name2="fy" value_2_0="0" value_2_1="1" name3="mffy" value_3_0="0" value_3_1="1" name4="ms" value_4_0="0" value_4_1="0" />
+	</Wing>
+	<Wing id="103" Name="比翼双飞" desc="  上古神鸟留给有情人的神翼，传说它能给人带来爱情和幸运。特殊羽翼的属性可以叠加" special = "1" condition="节日活动专属">
+    		<jobprop job="0" name0="hp" value_0_0="150" value_0_1="150" name1="gj" value_1_0="1" value_1_1="2" />
+    		<jobprop job="1" name0="hp" value_0_0="50" value_0_1="20" name1="mfgj" value_1_0="1" value_1_1="2" />
+    		<jobprop job="2" name0="hp" value_0_0="100" value_0_1="100" name1="dsgj" value_1_0="1" value_1_1="2" />
+	</Wing>
+	<Wing id="104" Name="红莲之歌" desc="  佳节赐福，受神祝福的羽翼给拥有者带来驱散异常的能力！特殊羽翼的属性可以叠加" special = "1" condition="节日活动专属">
+    		<jobprop job="0" name0="hp" value_0_0="90" value_0_1="90" name1="gj" value_1_0="1" value_1_1="3" name2="fy" value_2_0="1" value_2_1="1" name3="mffy" value_3_0="1" value_3_1="1" />
+    		<jobprop job="1" name0="hp" value_0_0="30" value_0_1="30" name1="mfgj" value_1_0="1" value_1_1="3" name2="fy" value_2_0="1" value_2_1="1" name3="mffy" value_3_0="1" value_3_1="1" />
+    		<jobprop job="2" name0="hp" value_0_0="60" value_0_1="60" name1="dsgj" value_1_0="1" value_1_1="3" name2="fy" value_2_0="1" value_2_1="1" name3="mffy" value_3_0="1" value_3_1="1" />
+	</Wing>
+	<Wing id="105" Name="神魔之主" desc="  个人试炼塔专属羽翼，爬塔排行榜每周可以获得羽翼碎片。特殊羽翼的属性可以叠加" special = "1" condition="试炼塔专属">
+    		<jobprop job="0" name0="gj" value_0_0="2" value_0_1="4" name1="fy" value_1_0="2" value_1_1="2" name2="mffy" value_2_0="2" value_2_1="2" />
+    		<jobprop job="1" name0="mfgj" value_0_0="2" value_0_1="4" name1="fy" value_1_0="2" value_1_1="2" name2="mffy" value_2_0="2" value_2_1="2" />
+    		<jobprop job="2" name0="dsgj" value_0_0="2" value_0_1="4" name1="fy" value_1_0="2" value_1_1="2" name2="mffy" value_2_0="2" value_2_1="2" />
+	</Wing>
+	<Wing id="106" Name="巅峰王者" desc="  跨服天梯赛奖励，领取跨服5v5天梯赛排名奖可获得羽翼碎片。特殊羽翼的属性可以叠加" special = "1" condition="竞技场专属">
+    		<jobprop job="0" name0="hp" value_0_0="210" value_0_1="210" name1="gj" value_1_0="2" value_1_1="2" />
+    		<jobprop job="1" name0="hp" value_0_0="70" value_0_1="70" name1="mfgj" value_1_0="2" value_1_1="2" />
+    		<jobprop job="2" name0="hp" value_0_0="140" value_0_1="140" name1="dsgj" value_1_0="2" value_1_1="2" />
+	</Wing>
+    <LevelData>
+	<Level value="1" nextlevelexp="500" autolevelup="1" active_wing_id="1" wing_look="1" cur_wing_lv="1">
+		<jobprop job="0" name0="hp" value_0_0="30" value_0_1="30" name1="gj" value_1_0="0" value_1_1="1" name2="fy" value_2_0="0" value_2_1="1" name3="mffy" value_3_0="0" value_3_1="1" name4="ms" value_4_0="0" value_4_1="0" />
+		<jobprop job="1" name0="hp" value_0_0="10" value_0_1="10" name1="mfgj" value_1_0="0" value_1_1="1" name2="fy" value_2_0="0" value_2_1="1" name3="mffy" value_3_0="0" value_3_1="1" name4="ms" value_4_0="0" value_4_1="0" />
+		<jobprop job="2" name0="hp" value_0_0="20" value_0_1="20" name1="dsgj" value_1_0="0" value_1_1="1" name2="fy" value_2_0="0" value_2_1="1" name3="mffy" value_3_0="0" value_3_1="1" name4="ms" value_4_0="0" value_4_1="0" />
+	</Level>
+	<Level value="2" nextlevelexp="1000" autolevelup="1" active_wing_id="1" wing_look="1" cur_wing_lv="2">
+		<jobprop job="0" name0="hp" value_0_0="60" value_0_1="60" name1="gj" value_1_0="0" value_1_1="2" name2="fy" value_2_0="0" value_2_1="1" name3="mffy" value_3_0="0" value_3_1="1" name4="ms" value_4_0="0" value_4_1="0" />
+		<jobprop job="1" name0="hp" value_0_0="20" value_0_1="20" name1="mfgj" value_1_0="0" value_1_1="2" name2="fy" value_2_0="0" value_2_1="1" name3="mffy" value_3_0="0" value_3_1="1" name4="ms" value_4_0="0" value_4_1="0" />
+		<jobprop job="2" name0="hp" value_0_0="40" value_0_1="40" name1="dsgj" value_1_0="0" value_1_1="2" name2="fy" value_2_0="0" value_2_1="1" name3="mffy" value_3_0="0" value_3_1="1" name4="ms" value_4_0="0" value_4_1="0" />
+	</Level>
+	<Level value="3" nextlevelexp="1500" autolevelup="1" active_wing_id="1" wing_look="1" cur_wing_lv="3">
+		<jobprop job="0" name0="hp" value_0_0="90" value_0_1="90" name1="gj" value_1_0="0" value_1_1="3" name2="fy" value_2_0="0" value_2_1="2" name3="mffy" value_3_0="0" value_3_1="2" name4="ms" value_4_0="0" value_4_1="0" />
+		<jobprop job="1" name0="hp" value_0_0="30" value_0_1="30" name1="mfgj" value_1_0="0" value_1_1="3" name2="fy" value_2_0="0" value_2_1="2" name3="mffy" value_3_0="0" value_3_1="2" name4="ms" value_4_0="0" value_4_1="0" />
+		<jobprop job="2" name0="hp" value_0_0="60" value_0_1="60" name1="dsgj" value_1_0="0" value_1_1="3" name2="fy" value_2_0="0" value_2_1="2" name3="mffy" value_3_0="0" value_3_1="2" name4="ms" value_4_0="0" value_4_1="0" />
+	</Level>
+	<Level value="4" nextlevelexp="2000" autolevelup="1" active_wing_id="1" wing_look="2" cur_wing_lv="4">
+		<jobprop job="0" name0="hp" value_0_0="120" value_0_1="120" name1="gj" value_1_0="0" value_1_1="4" name2="fy" value_2_0="0" value_2_1="2" name3="mffy" value_3_0="1" value_3_1="2" name4="ms" value_4_0="0" value_4_1="0" />
+		<jobprop job="1" name0="hp" value_0_0="40" value_0_1="40" name1="mfgj" value_1_0="0" value_1_1="4" name2="fy" value_2_0="0" value_2_1="2" name3="mffy" value_3_0="1" value_3_1="2" name4="ms" value_4_0="0" value_4_1="0" />
+		<jobprop job="2" name0="hp" value_0_0="80" value_0_1="80" name1="dsgj" value_1_0="0" value_1_1="4" name2="fy" value_2_0="0" value_2_1="2" name3="mffy" value_3_0="1" value_3_1="2" name4="ms" value_4_0="0" value_4_1="0" />
+	</Level>
+	<Level value="5" nextlevelexp="2500" autolevelup="1" active_wing_id="1" wing_look="2" cur_wing_lv="5">
+		<jobprop job="0" name0="hp" value_0_0="150" value_0_1="150" name1="gj" value_1_0="0" value_1_1="5" name2="fy" value_2_0="1" value_2_1="3" name3="mffy" value_3_0="1" value_3_1="3" name4="ms" value_4_0="1" value_4_1="1" />
+		<jobprop job="1" name0="hp" value_0_0="50" value_0_1="50" name1="mfgj" value_1_0="0" value_1_1="5" name2="fy" value_2_0="1" value_2_1="3" name3="mffy" value_3_0="1" value_3_1="3" name4="ms" value_4_0="1" value_4_1="1" />
+		<jobprop job="2" name0="hp" value_0_0="100" value_0_1="100" name1="dsgj" value_1_0="0" value_1_1="5" name2="fy" value_2_0="1" value_2_1="3" name3="mffy" value_3_0="1" value_3_1="3" name4="ms" value_4_0="1" value_4_1="1" />
+	</Level>
+	<Level value="6" nextlevelexp="3000" autolevelup="1" active_wing_id="1" wing_look="2" cur_wing_lv="6">
+		<jobprop job="0" name0="hp" value_0_0="180" value_0_1="180" name1="gj" value_1_0="0" value_1_1="6" name2="fy" value_2_0="1" value_2_1="3" name3="mffy" value_3_0="1" value_3_1="3" name4="ms" value_4_0="1" value_4_1="1" />
+		<jobprop job="1" name0="hp" value_0_0="60" value_0_1="60" name1="mfgj" value_1_0="0" value_1_1="6" name2="fy" value_2_0="1" value_2_1="3" name3="mffy" value_3_0="1" value_3_1="3" name4="ms" value_4_0="1" value_4_1="1" />
+		<jobprop job="2" name0="hp" value_0_0="120" value_0_1="120" name1="dsgj" value_1_0="0" value_1_1="6" name2="fy" value_2_0="1" value_2_1="3" name3="mffy" value_3_0="1" value_3_1="3" name4="ms" value_4_0="1" value_4_1="1" />
+	</Level>
+	<Level value="7" nextlevelexp="3500" autolevelup="1" active_wing_id="1" wing_look="3" cur_wing_lv="7">
+		<jobprop job="0" name0="hp" value_0_0="210" value_0_1="210" name1="gj" value_1_0="1" value_1_1="7" name2="fy" value_2_0="1" value_2_1="4" name3="mffy" value_3_0="1" value_3_1="4" name4="ms" value_4_0="1" value_4_1="1" />
+		<jobprop job="1" name0="hp" value_0_0="70" value_0_1="70" name1="mfgj" value_1_0="1" value_1_1="7" name2="fy" value_2_0="1" value_2_1="4" name3="mffy" value_3_0="1" value_3_1="4" name4="ms" value_4_0="1" value_4_1="1" />
+		<jobprop job="2" name0="hp" value_0_0="140" value_0_1="140" name1="dsgj" value_1_0="1" value_1_1="7" name2="fy" value_2_0="1" value_2_1="4" name3="mffy" value_3_0="1" value_3_1="4" name4="ms" value_4_0="1" value_4_1="1" />
+	</Level>
+	<Level value="8" nextlevelexp="4000" autolevelup="1" active_wing_id="1" wing_look="3" cur_wing_lv="8">
+		<jobprop job="0" name0="hp" value_0_0="240" value_0_1="240" name1="gj" value_1_0="1" value_1_1="8" name2="fy" value_2_0="1" value_2_1="4" name3="mffy" value_3_0="2" value_3_1="4" name4="ms" value_4_0="1" value_4_1="1" />
+		<jobprop job="1" name0="hp" value_0_0="80" value_0_1="80" name1="mfgj" value_1_0="1" value_1_1="8" name2="fy" value_2_0="1" value_2_1="4" name3="mffy" value_3_0="2" value_3_1="4" name4="ms" value_4_0="1" value_4_1="1" />
+		<jobprop job="2" name0="hp" value_0_0="160" value_0_1="160" name1="dsgj" value_1_0="1" value_1_1="8" name2="fy" value_2_0="1" value_2_1="4" name3="mffy" value_3_0="2" value_3_1="4" name4="ms" value_4_0="1" value_4_1="1" />
+	</Level>
+	<Level value="9" nextlevelexp="4500" autolevelup="1" active_wing_id="1" wing_look="3" cur_wing_lv="9">
+		<jobprop job="0" name0="hp" value_0_0="270" value_0_1="270" name1="gj" value_1_0="1" value_1_1="9" name2="fy" value_2_0="2" value_2_1="5" name3="mffy" value_3_0="2" value_3_1="5" name4="ms" value_4_0="2" value_4_1="2" />
+		<jobprop job="1" name0="hp" value_0_0="90" value_0_1="90" name1="mfgj" value_1_0="1" value_1_1="9" name2="fy" value_2_0="2" value_2_1="5" name3="mffy" value_3_0="2" value_3_1="5" name4="ms" value_4_0="2" value_4_1="2" />
+		<jobprop job="2" name0="hp" value_0_0="180" value_0_1="180" name1="dsgj" value_1_0="1" value_1_1="9" name2="fy" value_2_0="2" value_2_1="5" name3="mffy" value_3_0="2" value_3_1="5" name4="ms" value_4_0="2" value_4_1="2" />
+	</Level>
+	<Level value="10" nextlevelexp="5000" autolevelup="0" active_wing_id="1" wing_look="3" material="仙翼升阶银丹" material_num ="2" cur_wing_lv="10">
+		<jobprop job="0" name0="hp" value_0_0="300" value_0_1="300" name1="gj" value_1_0="1" value_1_1="10" name2="fy" value_2_0="2" value_2_1="5" name3="mffy" value_3_0="2" value_3_1="5" name4="ms" value_4_0="2" value_4_1="2" />
+		<jobprop job="1" name0="hp" value_0_0="100" value_0_1="100" name1="mfgj" value_1_0="1" value_1_1="10" name2="fy" value_2_0="2" value_2_1="5" name3="mffy" value_3_0="2" value_3_1="5" name4="ms" value_4_0="2" value_4_1="2" />
+		<jobprop job="2" name0="hp" value_0_0="200" value_0_1="200" name1="dsgj" value_1_0="1" value_1_1="10" name2="fy" value_2_0="2" value_2_1="5" name3="mffy" value_3_0="2" value_3_1="5" name4="ms" value_4_0="2" value_4_1="2" />
+	</Level>
+	<Level value="11" nextlevelexp="8000" autolevelup="1" active_wing_id="2" wing_look="4" cur_wing_lv="1">
+		<jobprop job="0" name0="hp" value_0_0="330" value_0_1="330" name1="gj" value_1_0="1" value_1_1="11" name2="fy" value_2_0="2" value_2_1="6" name3="mffy" value_3_0="2" value_3_1="6" name4="ms" value_4_0="2" value_4_1="2" />
+		<jobprop job="1" name0="hp" value_0_0="110" value_0_1="110" name1="mfgj" value_1_0="1" value_1_1="11" name2="fy" value_2_0="2" value_2_1="6" name3="mffy" value_3_0="2" value_3_1="6" name4="ms" value_4_0="2" value_4_1="2" />
+		<jobprop job="2" name0="hp" value_0_0="220" value_0_1="220" name1="dsgj" value_1_0="1" value_1_1="11" name2="fy" value_2_0="2" value_2_1="6" name3="mffy" value_3_0="2" value_3_1="6" name4="ms" value_4_0="2" value_4_1="2" />
+	</Level>
+	<Level value="12" nextlevelexp="11000" autolevelup="1" active_wing_id="2" wing_look="4" cur_wing_lv="2">
+		<jobprop job="0" name0="hp" value_0_0="360" value_0_1="360" name1="gj" value_1_0="1" value_1_1="12" name2="fy" value_2_0="2" value_2_1="6" name3="mffy" value_3_0="2" value_3_1="6" name4="ms" value_4_0="2" value_4_1="2" />
+		<jobprop job="1" name0="hp" value_0_0="120" value_0_1="120" name1="mfgj" value_1_0="1" value_1_1="12" name2="fy" value_2_0="2" value_2_1="6" name3="mffy" value_3_0="2" value_3_1="6" name4="ms" value_4_0="2" value_4_1="2" />
+		<jobprop job="2" name0="hp" value_0_0="240" value_0_1="240" name1="dsgj" value_1_0="1" value_1_1="12" name2="fy" value_2_0="2" value_2_1="6" name3="mffy" value_3_0="2" value_3_1="6" name4="ms" value_4_0="2" value_4_1="2" />
+	</Level>
+	<Level value="13" nextlevelexp="14000" autolevelup="1" active_wing_id="2" wing_look="4" cur_wing_lv="3">
+		<jobprop job="0" name0="hp" value_0_0="390" value_0_1="390" name1="gj" value_1_0="2" value_1_1="13" name2="fy" value_2_0="3" value_2_1="7" name3="mffy" value_3_0="3" value_3_1="7" name4="ms" value_4_0="3" value_4_1="3" />
+		<jobprop job="1" name0="hp" value_0_0="130" value_0_1="130" name1="mfgj" value_1_0="2" value_1_1="13" name2="fy" value_2_0="3" value_2_1="7" name3="mffy" value_3_0="3" value_3_1="7" name4="ms" value_4_0="3" value_4_1="3" />
+		<jobprop job="2" name0="hp" value_0_0="260" value_0_1="260" name1="dsgj" value_1_0="2" value_1_1="13" name2="fy" value_2_0="3" value_2_1="7" name3="mffy" value_3_0="3" value_3_1="7" name4="ms" value_4_0="3" value_4_1="3" />
+	</Level>
+	<Level value="14" nextlevelexp="17000" autolevelup="1" active_wing_id="2" wing_look="5" cur_wing_lv="4">
+		<jobprop job="0" name0="hp" value_0_0="420" value_0_1="420" name1="gj" value_1_0="2" value_1_1="14" name2="fy" value_2_0="3" value_2_1="7" name3="mffy" value_3_0="3" value_3_1="7" name4="ms" value_4_0="3" value_4_1="3" />
+		<jobprop job="1" name0="hp" value_0_0="140" value_0_1="140" name1="mfgj" value_1_0="2" value_1_1="14" name2="fy" value_2_0="3" value_2_1="7" name3="mffy" value_3_0="3" value_3_1="7" name4="ms" value_4_0="3" value_4_1="3" />
+		<jobprop job="2" name0="hp" value_0_0="280" value_0_1="280" name1="dsgj" value_1_0="2" value_1_1="14" name2="fy" value_2_0="3" value_2_1="7" name3="mffy" value_3_0="3" value_3_1="7" name4="ms" value_4_0="3" value_4_1="3" />
+	</Level>
+	<Level value="15" nextlevelexp="20000" autolevelup="1" active_wing_id="2" wing_look="5" cur_wing_lv="5">
+		<jobprop job="0" name0="hp" value_0_0="450" value_0_1="450" name1="gj" value_1_0="2" value_1_1="15" name2="fy" value_2_0="3" value_2_1="8" name3="mffy" value_3_0="3" value_3_1="8" name4="ms" value_4_0="3" value_4_1="3" />
+		<jobprop job="1" name0="hp" value_0_0="150" value_0_1="150" name1="mfgj" value_1_0="2" value_1_1="15" name2="fy" value_2_0="3" value_2_1="8" name3="mffy" value_3_0="3" value_3_1="8" name4="ms" value_4_0="3" value_4_1="3" />
+		<jobprop job="2" name0="hp" value_0_0="300" value_0_1="300" name1="dsgj" value_1_0="2" value_1_1="15" name2="fy" value_2_0="3" value_2_1="8" name3="mffy" value_3_0="3" value_3_1="8" name4="ms" value_4_0="3" value_4_1="3" />
+	</Level>
+	<Level value="16" nextlevelexp="23000" autolevelup="1" active_wing_id="2" wing_look="5" cur_wing_lv="6">
+		<jobprop job="0" name0="hp" value_0_0="480" value_0_1="480" name1="gj" value_1_0="2" value_1_1="16" name2="fy" value_2_0="3" value_2_1="8" name3="mffy" value_3_0="3" value_3_1="8" name4="ms" value_4_0="3" value_4_1="3" />
+		<jobprop job="1" name0="hp" value_0_0="160" value_0_1="160" name1="mfgj" value_1_0="2" value_1_1="16" name2="fy" value_2_0="3" value_2_1="8" name3="mffy" value_3_0="3" value_3_1="8" name4="ms" value_4_0="3" value_4_1="3" />
+		<jobprop job="2" name0="hp" value_0_0="320" value_0_1="320" name1="dsgj" value_1_0="2" value_1_1="16" name2="fy" value_2_0="3" value_2_1="8" name3="mffy" value_3_0="3" value_3_1="8" name4="ms" value_4_0="3" value_4_1="3" />
+	</Level>
+	<Level value="17" nextlevelexp="26000" autolevelup="1" active_wing_id="2" wing_look="6" cur_wing_lv="7">
+		<jobprop job="0" name0="hp" value_0_0="510" value_0_1="510" name1="gj" value_1_0="2" value_1_1="17" name2="fy" value_2_0="4" value_2_1="9" name3="mffy" value_3_0="3" value_3_1="9" name4="ms" value_4_0="4" value_4_1="4" />
+		<jobprop job="1" name0="hp" value_0_0="170" value_0_1="170" name1="mfgj" value_1_0="2" value_1_1="17" name2="fy" value_2_0="4" value_2_1="9" name3="mffy" value_3_0="3" value_3_1="9" name4="ms" value_4_0="4" value_4_1="4" />
+		<jobprop job="2" name0="hp" value_0_0="340" value_0_1="340" name1="dsgj" value_1_0="2" value_1_1="17" name2="fy" value_2_0="4" value_2_1="9" name3="mffy" value_3_0="3" value_3_1="9" name3="ms" value_3_0="4 value_3_1="4" />
+	</Level>
+	<Level value="18" nextlevelexp="29000" autolevelup="1" active_wing_id="2" wing_look="6" cur_wing_lv="8">
+		<jobprop job="0" name0="hp" value_0_0="540" value_0_1="540" name1="gj" value_1_0="2" value_1_1="18" name2="fy" value_2_0="4" value_2_1="9" name3="mffy" value_3_0="3" value_3_1="9" name4="ms" value_4_0="4" value_4_1="4" />
+		<jobprop job="1" name0="hp" value_0_0="180" value_0_1="180" name1="mfgj" value_1_0="2" value_1_1="18" name2="fy" value_2_0="4" value_2_1="9" name3="mffy" value_3_0="3" value_3_1="9" name4="ms" value_4_0="4" value_4_1="4" />
+		<jobprop job="2" name0="hp" value_0_0="360" value_0_1="360" name1="dsgj" value_1_0="2" value_1_1="18" name2="fy" value_2_0="4" value_2_1="9" name3="mffy" value_3_0="3" value_3_1="9" name4="ms" value_4_0="4" value_4_1="4" />
+	</Level>
+	<Level value="19" nextlevelexp="32000" autolevelup="1" active_wing_id="2" wing_look="6" cur_wing_lv="9">
+		<jobprop job="0" name0="hp" value_0_0="570" value_0_1="570" name1="gj" value_1_0="3" value_1_1="19" name2="fy" value_2_0="4" value_2_1="10" name3="mffy" value_3_0="4" value_3_1="10" name4="ms" value_4_0="4" value_4_1="4" />
+		<jobprop job="1" name0="hp" value_0_0="190" value_0_1="190" name1="mfgj" value_1_0="3" value_1_1="19" name2="fy" value_2_0="4" value_2_1="10" name3="mffy" value_3_0="4" value_3_1="10" name4="ms" value_4_0="4" value_4_1="4" />
+		<jobprop job="2" name0="hp" value_0_0="380" value_0_1="380" name1="dsgj" value_1_0="3" value_1_1="19" name2="fy" value_2_0="4" value_2_1="10" name3="mffy" value_3_0="4" value_3_1="10" name4="ms" value_4_0="4" value_4_1="4" />
+	</Level>
+	<Level value="20" nextlevelexp="35000" autolevelup="0" active_wing_id="2" wing_look="6" material="仙翼升阶金丹" material_num ="2" cur_wing_lv="10">
+		<jobprop job="0" name0="hp" value_0_0="600" value_0_1="600" name1="gj" value_1_0="3" value_1_1="20" name2="fy" value_2_0="4" value_2_1="10" name3="mffy" value_3_0="4" value_3_1="10" name4="ms" value_4_0="4" value_4_1="4" />
+		<jobprop job="1" name0="hp" value_0_0="200" value_0_1="200" name1="mfgj" value_1_0="3" value_1_1="20" name2="fy" value_2_0="4" value_2_1="10" name3="mffy" value_3_0="4" value_3_1="10" name4="ms" value_4_0="4" value_4_1="4" />
+		<jobprop job="2" name0="hp" value_0_0="400" value_0_1="400" name1="dsgj" value_1_0="3" value_1_1="20" name2="fy" value_2_0="4" value_2_1="10" name3="mffy" value_3_0="4" value_3_1="10" name4="ms" value_4_0="4" value_4_1="4" />
+	</Level>
+	<Level value="21" nextlevelexp="41000" autolevelup="1" active_wing_id="3" wing_look="7" cur_wing_lv="1">
+		<jobprop job="0" name0="hp" value_0_0="630" value_0_1="630" name1="gj" value_1_0="3" value_1_1="21" name2="fy" value_2_0="5" value_2_1="11" name3="mffy" value_3_0="4" value_3_1="11" name4="ms" value_4_0="5" value_4_1="5" />
+		<jobprop job="1" name0="hp" value_0_0="210" value_0_1="210" name1="mfgj" value_1_0="3" value_1_1="21" name2="fy" value_2_0="5" value_2_1="11" name3="mffy" value_3_0="4" value_3_1="11" name4="ms" value_4_0="5" value_4_1="5" />
+		<jobprop job="2" name0="hp" value_0_0="420" value_0_1="420" name1="dsgj" value_1_0="3" value_1_1="21" name2="fy" value_2_0="5" value_2_1="11" name3="mffy" value_3_0="4" value_3_1="11" name4="ms" value_4_0="5" value_4_1="5" />
+	</Level>
+	<Level value="22" nextlevelexp="47000" autolevelup="1" active_wing_id="3" wing_look="7" cur_wing_lv="2">
+		<jobprop job="0" name0="hp" value_0_0="660" value_0_1="660" name1="gj" value_1_0="3" value_1_1="22" name2="fy" value_2_0="5" value_2_1="11" name3="mffy" value_3_0="4" value_3_1="11" name4="ms" value_4_0="5" value_4_1="5" />
+		<jobprop job="1" name0="hp" value_0_0="220" value_0_1="220" name1="mfgj" value_1_0="3" value_1_1="22" name2="fy" value_2_0="5" value_2_1="11" name3="mffy" value_3_0="4" value_3_1="11" name4="ms" value_4_0="5" value_4_1="5" />
+		<jobprop job="2" name0="hp" value_0_0="440" value_0_1="440" name1="dsgj" value_1_0="3" value_1_1="22" name2="fy" value_2_0="5" value_2_1="11" name3="mffy" value_3_0="4" value_3_1="11" name4="ms" value_4_0="5" value_4_1="5" />
+	</Level>
+	<Level value="23" nextlevelexp="53000" autolevelup="1" active_wing_id="3" wing_look="7" cur_wing_lv="3">
+		<jobprop job="0" name0="hp" value_0_0="690" value_0_1="690" name1="gj" value_1_0="3" value_1_1="23" name2="fy" value_2_0="5" value_2_1="12" name3="mffy" value_3_0="4" value_3_1="12" name4="ms" value_4_0="5" value_4_1="5" />
+		<jobprop job="1" name0="hp" value_0_0="230" value_0_1="230" name1="mfgj" value_1_0="3" value_1_1="23" name2="fy" value_2_0="5" value_2_1="12" name3="mffy" value_3_0="4" value_3_1="12" name4="ms" value_4_0="5" value_4_1="5" />
+		<jobprop job="2" name0="hp" value_0_0="460" value_0_1="460" name1="dsgj" value_1_0="3" value_1_1="23" name2="fy" value_2_0="5" value_2_1="12" name3="mffy" value_3_0="4" value_3_1="12" name4="ms" value_4_0="5" value_4_1="5" />
+	</Level>
+	<Level value="24" nextlevelexp="59000" autolevelup="1" active_wing_id="3" wing_look="8" cur_wing_lv="4">
+		<jobprop job="0" name0="hp" value_0_0="720" value_0_1="720" name1="gj" value_1_0="3" value_1_1="24" name2="fy" value_2_0="5" value_2_1="12" name3="mffy" value_3_0="4" value_3_1="12" name4="ms" value_4_0="5" value_4_1="5" />
+		<jobprop job="1" name0="hp" value_0_0="240" value_0_1="240" name1="mfgj" value_1_0="3" value_1_1="24" name2="fy" value_2_0="5" value_2_1="12" name3="mffy" value_3_0="4" value_3_1="12" name4="ms" value_4_0="5" value_4_1="5" />
+		<jobprop job="2" name0="hp" value_0_0="480" value_0_1="480" name1="dsgj" value_1_0="3" value_1_1="24" name2="fy" value_2_0="5" value_2_1="12" name3="mffy" value_3_0="4" value_3_1="12" name4="ms" value_4_0="5" value_4_1="5" />
+	</Level>
+	<Level value="25" nextlevelexp="65000" autolevelup="1" active_wing_id="3" wing_look="8" cur_wing_lv="5">>
+		<jobprop job="0" name0="hp" value_0_0="750" value_0_1="750" name1="gj" value_1_0="4" value_1_1="25" name2="fy" value_2_0="6" value_2_1="13" name3="mffy" value_3_0="4" value_3_1="13" name4="ms" value_4_0="6" value_4_1="6" />
+		<jobprop job="1" name0="hp" value_0_0="250" value_0_1="250" name1="mfgj" value_1_0="4" value_1_1="25" name2="fy" value_2_0="6" value_2_1="13" name3="mffy" value_3_0="4" value_3_1="13" name4="ms" value_4_0="6" value_4_1="6" />
+		<jobprop job="2" name0="hp" value_0_0="500" value_0_1="500" name1="dsgj" value_1_0="4" value_1_1="25" name2="fy" value_2_0="6" value_2_1="13" name3="mffy" value_3_0="4" value_3_1="13" name4="ms" value_4_0="6" value_4_1="6" />
+	</Level>
+	<Level value="26" nextlevelexp="71000" autolevelup="1" active_wing_id="3" wing_look="8" cur_wing_lv="6">
+		<jobprop job="0" name0="hp" value_0_0="780" value_0_1="780" name1="gj" value_1_0="4" value_1_1="26" name2="fy" value_2_0="6" value_2_1="13" name3="mffy" value_3_0="5" value_3_1="13" name4="ms" value_4_0="6" value_4_1="6" />
+		<jobprop job="1" name0="hp" value_0_0="260" value_0_1="260" name1="mfgj" value_1_0="4" value_1_1="26" name2="fy" value_2_0="6" value_2_1="13" name3="mffy" value_3_0="5" value_3_1="13" name4="ms" value_4_0="6" value_4_1="6" />
+		<jobprop job="2" name0="hp" value_0_0="520" value_0_1="520" name1="dsgj" value_1_0="4" value_1_1="26" name2="fy" value_2_0="6" value_2_1="13" name3="mffy" value_3_0="5" value_3_1="13" name4="ms" value_4_0="6" value_4_1="6" />
+	</Level>
+	<Level value="27" nextlevelexp="77000" autolevelup="1" active_wing_id="3" wing_look="9" cur_wing_lv="7">
+		<jobprop job="0" name0="hp" value_0_0="810" value_0_1="810" name1="gj" value_1_0="4" value_1_1="27" name2="fy" value_2_0="6" value_2_1="14" name3="mffy" value_3_0="5" value_3_1="14" name4="ms" value_4_0="6" value_4_1="6" />
+		<jobprop job="1" name0="hp" value_0_0="270" value_0_1="270" name1="mfgj" value_1_0="4" value_1_1="27" name2="fy" value_2_0="6" value_2_1="14" name3="mffy" value_3_0="5" value_3_1="14" name4="ms" value_4_0="6" value_4_1="6" />
+		<jobprop job="2" name0="hp" value_0_0="540" value_0_1="540" name1="dsgj" value_1_0="4" value_1_1="27" name2="fy" value_2_0="6" value_2_1="14" name3="mffy" value_3_0="5" value_3_1="14" name4="ms" value_4_0="6" value_4_1="6" />
+	</Level>
+	<Level value="28" nextlevelexp="83000" autolevelup="1" active_wing_id="3" wing_look="9" cur_wing_lv="8">
+		<jobprop job="0" name0="hp" value_0_0="840" value_0_1="840" name1="gj" value_1_0="4" value_1_1="28" name2="fy" value_2_0="6" value_2_1="14" name3="mffy" value_3_0="5" value_3_1="14" name4="ms" value_4_0="6" value_4_1="6" />
+		<jobprop job="1" name0="hp" value_0_0="280" value_0_1="280" name1="mfgj" value_1_0="4" value_1_1="28" name2="fy" value_2_0="6" value_2_1="14" name3="mffy" value_3_0="5" value_3_1="14" name4="ms" value_4_0="6" value_4_1="6" />
+		<jobprop job="2" name0="hp" value_0_0="560" value_0_1="560" name1="dsgj" value_1_0="4" value_1_1="28" name2="fy" value_2_0="6" value_2_1="14" name3="mffy" value_3_0="5" value_3_1="14" name4="ms" value_4_0="6" value_4_1="6" />
+	</Level>
+	<Level value="29" nextlevelexp="89000" autolevelup="1" active_wing_id="3" wing_look="9" cur_wing_lv="9">
+		<jobprop job="0" name0="hp" value_0_0="870" value_0_1="870" name1="gj" value_1_0="4" value_1_1="29" name2="fy" value_2_0="7" value_2_1="15" name3="mffy" value_3_0="5" value_3_1="15" name4="ms" value_4_0="7" value_4_1="7" />
+		<jobprop job="1" name0="hp" value_0_0="290" value_0_1="290" name1="mfgj" value_1_0="4" value_1_1="29" name2="fy" value_2_0="7" value_2_1="15" name3="mffy" value_3_0="5" value_3_1="15" name4="ms" value_4_0="7" value_4_1="7" />
+		<jobprop job="2" name0="hp" value_0_0="580" value_0_1="580" name1="dsgj" value_1_0="4" value_1_1="29" name2="fy" value_2_0="7" value_2_1="15" name3="mffy" value_3_0="5" value_3_1="15" name4="ms" value_4_0="7" value_4_1="7" />
+	</Level>
+	<Level value="30" nextlevelexp="95000" autolevelup="0" active_wing_id="3" wing_look="9" material="仙翼升阶神丹" material_num ="2" cur_wing_lv="10">
+		<jobprop job="0" name0="hp" value_0_0="900" value_0_1="900" name1="gj" value_1_0="4" value_1_1="30" name2="fy" value_2_0="7" value_2_1="15" name3="mffy" value_3_0="5" value_3_1="15" name4="ms" value_4_0="7" value_4_1="7" />
+		<jobprop job="1" name0="hp" value_0_0="300" value_0_1="300" name1="mfgj" value_1_0="4" value_1_1="30" name2="fy" value_2_0="7" value_2_1="15" name3="mffy" value_3_0="5" value_3_1="15" name4="ms" value_4_0="7" value_4_1="7" />
+		<jobprop job="2" name0="hp" value_0_0="600" value_0_1="600" name1="dsgj" value_1_0="4" value_1_1="30" name2="fy" value_2_0="7" value_2_1="15" name3="mffy" value_3_0="5" value_3_1="15" name4="ms" value_4_0="7" value_4_1="7" />
+	</Level>
+	<Level value="31" nextlevelexp="107000" autolevelup="1" active_wing_id="4" wing_look="10" cur_wing_lv="1">
+		<jobprop job="0" name0="hp" value_0_0="930" value_0_1="930" name1="gj" value_1_0="5" value_1_1="31" name2="fy" value_2_0="7" value_2_1="16" name3="mffy" value_3_0="5" value_3_1="16" name4="ms" value_4_0="7" value_4_1="7" />
+		<jobprop job="1" name0="hp" value_0_0="310" value_0_1="310" name1="mfgj" value_1_0="5" value_1_1="31" name2="fy" value_2_0="7" value_2_1="16" name3="mffy" value_3_0="5" value_3_1="16" name4="ms" value_4_0="7" value_4_1="7" />
+		<jobprop job="2" name0="hp" value_0_0="620" value_0_1="620" name1="dsgj" value_1_0="5" value_1_1="31" name2="fy" value_2_0="7" value_2_1="16" name3="mffy" value_3_0="5" value_3_1="16" name4="ms" value_4_0="7" value_4_1="7" />
+	</Level>
+	<Level value="32" nextlevelexp="119000" autolevelup="1" active_wing_id="4" wing_look="10" cur_wing_lv="2">
+		<jobprop job="0" name0="hp" value_0_0="960" value_0_1="960" name1="gj" value_1_0="5" value_1_1="32" name2="fy" value_2_0="7" value_2_1="16" name3="mffy" value_3_0="5" value_3_1="16" name4="ms" value_4_0="7" value_4_1="7" />
+		<jobprop job="1" name0="hp" value_0_0="320" value_0_1="320" name1="mfgj" value_1_0="5" value_1_1="32" name2="fy" value_2_0="7" value_2_1="16" name3="mffy" value_3_0="5" value_3_1="16" name4="ms" value_4_0="7" value_4_1="7" />
+		<jobprop job="2" name0="hp" value_0_0="640" value_0_1="640" name1="dsgj" value_1_0="5" value_1_1="32" name2="fy" value_2_0="7" value_2_1="16" name3="mffy" value_3_0="5" value_3_1="16" name4="ms" value_4_0="7" value_4_1="7" />
+	</Level>
+	<Level value="33" nextlevelexp="131000" autolevelup="1" active_wing_id="4" wing_look="10" cur_wing_lv="3">
+		<jobprop job="0" name0="hp" value_0_0="990" value_0_1="990" name1="gj" value_1_0="5" value_1_1="33" name2="fy" value_2_0="8" value_2_1="17" name3="mffy" value_3_0="5" value_3_1="17" name4="ms" value_4_0="8" value_4_1="8" />
+		<jobprop job="1" name0="hp" value_0_0="330" value_0_1="330" name1="mfgj" value_1_0="5" value_1_1="33" name2="fy" value_2_0="8" value_2_1="17" name3="mffy" value_3_0="5" value_3_1="17" name4="ms" value_4_0="8" value_4_1="8" />
+		<jobprop job="2" name0="hp" value_0_0="660" value_0_1="660" name1="dsgj" value_1_0="5" value_1_1="33" name2="fy" value_2_0="8" value_2_1="17" name3="mffy" value_3_0="5" value_3_1="17" name4="ms" value_4_0="8" value_4_1="8" />
+	</Level>
+	<Level value="34" nextlevelexp="143000" autolevelup="1" active_wing_id="4" wing_look="11" cur_wing_lv="4">
+		<jobprop job="0" name0="hp" value_0_0="1020" value_0_1="1020" name1="gj" value_1_0="5" value_1_1="34" name2="fy" value_2_0="8" value_2_1="17" name3="mffy" value_3_0="6" value_3_1="17" name4="ms" value_4_0="8" value_4_1="8" />
+		<jobprop job="1" name0="hp" value_0_0="340" value_0_1="340" name1="mfgj" value_1_0="5" value_1_1="34" name2="fy" value_2_0="8" value_2_1="17" name3="mffy" value_3_0="6" value_3_1="17" name4="ms" value_4_0="8" value_4_1="8" />
+		<jobprop job="2" name0="hp" value_0_0="680" value_0_1="680" name1="dsgj" value_1_0="5" value_1_1="34" name2="fy" value_2_0="8" value_2_1="17" name3="mffy" value_3_0="6" value_3_1="17" name4="ms" value_4_0="8" value_4_1="8" />
+	</Level>
+	<Level value="35" nextlevelexp="155000" autolevelup="1" active_wing_id="4" wing_look="11" cur_wing_lv="5">
+		<jobprop job="0" name0="hp" value_0_0="1050" value_0_1="1050" name1="gj" value_1_0="5" value_1_1="35" name2="fy" value_2_0="8" value_2_1="18" name3="mffy" value_3_0="6" value_3_1="18" name4="ms" value_4_0="8" value_4_1="8" />
+		<jobprop job="1" name0="hp" value_0_0="350" value_0_1="350" name1="mfgj" value_1_0="5" value_1_1="35" name2="fy" value_2_0="8" value_2_1="18" name3="mffy" value_3_0="6" value_3_1="18" name4="ms" value_4_0="8" value_4_1="8" />
+		<jobprop job="2" name0="hp" value_0_0="700" value_0_1="700" name1="dsgj" value_1_0="5" value_1_1="35" name2="fy" value_2_0="8" value_2_1="18" name3="mffy" value_3_0="6" value_3_1="18" name4="ms" value_4_0="8" value_4_1="8" />
+	</Level>
+	<Level value="36" nextlevelexp="167000" autolevelup="1" active_wing_id="4" wing_look="11" cur_wing_lv="6">
+		<jobprop job="0" name0="hp" value_0_0="1080" value_0_1="1080" name1="gj" value_1_0="5" value_1_1="36" name2="fy" value_2_0="8" value_2_1="18" name3="mffy" value_3_0="6" value_3_1="18" name4="ms" value_4_0="8" value_4_1="8" />
+		<jobprop job="1" name0="hp" value_0_0="360" value_0_1="360" name1="mfgj" value_1_0="5" value_1_1="36" name2="fy" value_2_0="8" value_2_1="18" name3="mffy" value_3_0="6" value_3_1="18" name4="ms" value_4_0="8" value_4_1="8" />
+		<jobprop job="2" name0="hp" value_0_0="720" value_0_1="720" name1="dsgj" value_1_0="5" value_1_1="36" name2="fy" value_2_0="8" value_2_1="18" name3="mffy" value_3_0="6" value_3_1="18" name4="ms" value_4_0="8" value_4_1="8" />
+	</Level>
+	<Level value="37" nextlevelexp="179000" autolevelup="1" active_wing_id="4" wing_look="12" cur_wing_lv="7">
+		<jobprop job="0" name0="hp" value_0_0="11100" value_0_1="1110" name1="gj" value_1_0="6" value_1_1="37" name2="fy" value_2_0="9" value_2_1="19" name3="mffy" value_3_0="6" value_3_1="19" name4="ms" value_4_0="9" value_4_1="9" />
+		<jobprop job="1" name0="hp" value_0_0="370" value_0_1="370" name1="mfgj" value_1_0="6" value_1_1="37" name2="fy" value_2_0="9" value_2_1="19" name3="mffy" value_3_0="6" value_3_1="19" name4="ms" value_4_0="9" value_4_1="9" />
+		<jobprop job="2" name0="hp" value_0_0="740" value_0_1="740" name1="dsgj" value_1_0="6" value_1_1="37" name2="fy" value_2_0="9" value_2_1="19" name3="mffy" value_3_0="6" value_3_1="19" name4="ms" value_4_0="9" value_4_1="9" />
+	</Level>
+	<Level value="38" nextlevelexp="191000" autolevelup="1" active_wing_id="4" wing_look="12" cur_wing_lv="8">
+		<jobprop job="0" name0="hp" value_0_0="1140" value_0_1="1140" name1="gj" value_1_0="6" value_1_1="38" name2="fy" value_2_0="9" value_2_1="19" name3="mffy" value_3_0="6" value_3_1="19" name4="ms" value_4_0="9" value_4_1="9" />
+		<jobprop job="1" name0="hp" value_0_0="380" value_0_1="380" name1="mfgj" value_1_0="6" value_1_1="38" name2="fy" value_2_0="9" value_2_1="19" name3="mffy" value_3_0="6" value_3_1="19" name4="ms" value_4_0="9" value_4_1="9" />
+		<jobprop job="2" name0="hp" value_0_0="760" value_0_1="760" name1="dsgj" value_1_0="6" value_1_1="38" name2="fy" value_2_0="9" value_2_1="19" name3="mffy" value_3_0="6" value_3_1="19" name4="ms" value_4_0="9" value_4_1="9" />
+	</Level>
+	<Level value="39" nextlevelexp="203000" autolevelup="1" active_wing_id="4" wing_look="12" cur_wing_lv="9">
+		<jobprop job="0" name0="hp" value_0_0="1170" value_0_1="1170" name1="gj" value_1_0="6" value_1_1="39" name2="fy" value_2_0="9" value_2_1="20" name3="mffy" value_3_0="6" value_3_1="20" name4="ms" value_4_0="9" value_4_1="9" />
+		<jobprop job="1" name0="hp" value_0_0="390" value_0_1="390" name1="mfgj" value_1_0="6" value_1_1="39" name2="fy" value_2_0="9" value_2_1="20" name3="mffy" value_3_0="6" value_3_1="20" name4="ms" value_4_0="9" value_4_1="9" />
+		<jobprop job="2" name0="hp" value_0_0="780" value_0_1="780" name1="dsgj" value_1_0="6" value_1_1="39" name2="fy" value_2_0="9" value_2_1="20" name3="mffy" value_3_0="6" value_3_1="20" name4="ms" value_4_0="9" value_4_1="9" />
+	</Level>
+	<Level value="40" nextlevelexp="227000" autolevelup="0" active_wing_id="4" wing_look="12" material="仙翼升阶仙丹" material_num ="5" cur_wing_lv="10">
+		<jobprop job="0" name0="hp" value_0_0="1200" value_0_1="1200" name1="gj" value_1_0="6" value_1_1="40" name2="fy" value_2_0="9" value_2_1="20" name3="mffy" value_3_0="6" value_3_1="20" name4="ms" value_4_0="9" value_4_1="9" />
+		<jobprop job="1" name0="hp" value_0_0="400" value_0_1="400" name1="mfgj" value_1_0="6" value_1_1="40" name2="fy" value_2_0="9" value_2_1="20" name3="mffy" value_3_0="6" value_3_1="20" name4="ms" value_4_0="9" value_4_1="9" />
+		<jobprop job="2" name0="hp" value_0_0="800" value_0_1="800" name1="dsgj" value_1_0="6" value_1_1="40" name2="fy" value_2_0="9" value_2_1="20" name3="mffy" value_3_0="6" value_3_1="20" name4="ms" value_4_0="9" value_4_1="9" />
+	</Level>
+	<Level value="41" nextlevelexp="251000" autolevelup="1" active_wing_id="5" wing_look="13" cur_wing_lv="1">
+		<jobprop job="0" name0="hp" value_0_0="1230" value_0_1="1230" name1="gj" value_1_0="6" value_1_1="41" name2="fy" value_2_0="10" value_2_1="21" name3="mffy" value_3_0="6" value_3_1="21" name4="ms" value_4_0="10" value_4_1="10" />
+		<jobprop job="1" name0="hp" value_0_0="410" value_0_1="410" name1="mfgj" value_1_0="6" value_1_1="41" name2="fy" value_2_0="10" value_2_1="21" name3="mffy" value_3_0="6" value_3_1="21" name4="ms" value_4_0="10" value_4_1="10" />
+		<jobprop job="2" name0="hp" value_0_0="820" value_0_1="820" name1="dsgj" value_1_0="6" value_1_1="41" name2="fy" value_2_0="10" value_2_1="21" name3="mffy" value_3_0="6" value_3_1="21" name4="ms" value_4_0="10" value_4_1="10" />
+	</Level>
+	<Level value="42" nextlevelexp="275000" autolevelup="1" active_wing_id="5" wing_look="13" cur_wing_lv="2">
+    		<jobprop job="0" name0="hp" value_0_0="1260" value_0_1="1260" name1="gj" value_1_0="6" value_1_1="42" name2="fy" value_2_0="10" value_2_1="21" name3="mffy" value_3_0="6" value_3_1="21" name4="ms" value_4_0="10" value_4_1="10" />
+		<jobprop job="1" name0="hp" value_0_0="420" value_0_1="420" name1="mfgj" value_1_0="6" value_1_1="42" name2="fy" value_2_0="10" value_2_1="21" name3="mffy" value_3_0="6" value_3_1="21" name4="ms" value_4_0="10" value_4_1="10" />
+		<jobprop job="2" name0="hp" value_0_0="840" value_0_1="840" name1="dsgj" value_1_0="6" value_1_1="42" name2="fy" value_2_0="10" value_2_1="21" name3="mffy" value_3_0="6" value_3_1="21" name4="ms" value_4_0="10" value_4_1="10" />
+	</Level>
+	<Level value="43" nextlevelexp="299000" autolevelup="1" active_wing_id="5" wing_look="13" cur_wing_lv="3">
+		<jobprop job="0" name0="hp" value_0_0="1290" value_0_1="1290" name1="gj" value_1_0="7" value_1_1="43" name2="fy" value_2_0="10" value_2_1="22" name3="mffy" value_3_0="7" value_3_1="22" name4="ms" value_4_0="10" value_4_1="10" />
+		<jobprop job="1" name0="hp" value_0_0="430" value_0_1="430" name1="mfgj" value_1_0="7" value_1_1="43" name2="fy" value_2_0="10" value_2_1="22" name3="mffy" value_3_0="7" value_3_1="22" name4="ms" value_4_0="10" value_4_1="10" />
+		<jobprop job="2" name0="hp" value_0_0="860" value_0_1="860" name1="dsgj" value_1_0="7" value_1_1="43" name2="fy" value_2_0="10" value_2_1="22" name3="mffy" value_3_0="7" value_3_1="22" name4="ms" value_4_0="10" value_4_1="10" />
+	</Level>
+	<Level value="44" nextlevelexp="323000" autolevelup="1" active_wing_id="5" wing_look="14" cur_wing_lv="4">
+		<jobprop job="0" name0="hp" value_0_0="1320" value_0_1="1320" name1="gj" value_1_0="7" value_1_1="44" name2="fy" value_2_0="10" value_2_1="22" name3="mffy" value_3_0="7" value_3_1="22" name4="ms" value_4_0="10" value_4_1="10" />
+		<jobprop job="1" name0="hp" value_0_0="440" value_0_1="440" name1="mfgj" value_1_0="7" value_1_1="44" name2="fy" value_2_0="10" value_2_1="22" name3="mffy" value_3_0="7" value_3_1="22" name4="ms" value_4_0="10" value_4_1="10" />
+		<jobprop job="2" name0="hp" value_0_0="880" value_0_1="880" name1="dsgj" value_1_0="7" value_1_1="44" name2="fy" value_2_0="10" value_2_1="22" name3="mffy" value_3_0="7" value_3_1="22" name4="ms" value_4_0="10" value_4_1="10" />
+	</Level>
+	<Level value="45" nextlevelexp="347000" autolevelup="1" active_wing_id="5" wing_look="14" cur_wing_lv="5">
+		<jobprop job="0" name0="hp" value_0_0="1350" value_0_1="1350" name1="gj" value_1_0="7" value_1_1="45" name2="fy" value_2_0="11" value_2_1="23" name3="mffy" value_3_0="7" value_3_1="23" name4="ms" value_4_0="11" value_4_1="11" />
+		<jobprop job="1" name0="hp" value_0_0="450" value_0_1="450" name1="mfgj" value_1_0="7" value_1_1="45" name2="fy" value_2_0="11" value_2_1="23" name3="mffy" value_3_0="7" value_3_1="23" name4="ms" value_4_0="11" value_4_1="11" />
+		<jobprop job="2" name0="hp" value_0_0="900" value_0_1="900" name1="dsgj" value_1_0="7" value_1_1="45" name2="fy" value_2_0="11" value_2_1="23" name3="mffy" value_3_0="7" value_3_1="23" name4="ms" value_4_0="11" value_4_1="11" />
+	</Level>
+	<Level value="46" nextlevelexp="371000" autolevelup="1" active_wing_id="5" wing_look="14" cur_wing_lv="6">
+		<jobprop job="0" name0="hp" value_0_0="1380" value_0_1="1380" name1="gj" value_1_0="7" value_1_1="46" name2="fy" value_2_0="11" value_2_1="23" name3="mffy" value_3_0="7" value_3_1="23" name4="ms" value_4_0="11" value_4_1="11" />
+		<jobprop job="1" name0="hp" value_0_0="460" value_0_1="460" name1="mfgj" value_1_0="7" value_1_1="46" name2="fy" value_2_0="11" value_2_1="23" name3="mffy" value_3_0="7" value_3_1="23" name4="ms" value_4_0="11" value_4_1="11" />
+		<jobprop job="2" name0="hp" value_0_0="920" value_0_1="920" name1="dsgj" value_1_0="7" value_1_1="46" name2="fy" value_2_0="11" value_2_1="23" name3="mffy" value_3_0="7" value_3_1="23" name4="ms" value_4_0="11" value_4_1="11" />
+	</Level>
+	<Level value="47" nextlevelexp="395000" autolevelup="1" active_wing_id="5" wing_look="15" cur_wing_lv="7">
+		<jobprop job="0" name0="hp" value_0_0="1410" value_0_1="1410" name1="gj" value_1_0="7" value_1_1="47" name2="fy" value_2_0="11" value_2_1="24" name3="mffy" value_3_0="7" value_3_1="24" name4="ms" value_4_0="11" value_4_1="11" />
+		<jobprop job="1" name0="hp" value_0_0="470" value_0_1="470" name1="mfgj" value_1_0="7" value_1_1="47" name2="fy" value_2_0="11" value_2_1="24" name3="mffy" value_3_0="7" value_3_1="24" name4="ms" value_4_0="11" value_4_1="11" />
+		<jobprop job="2" name0="hp" value_0_0="940" value_0_1="940" name1="dsgj" value_1_0="7" value_1_1="47" name2="fy" value_2_0="11" value_2_1="24" name3="mffy" value_3_0="7" value_3_1="24" name4="ms" value_4_0="11" value_4_1="11" />
+	</Level>
+	<Level value="48" nextlevelexp="419000" autolevelup="1" active_wing_id="5" wing_look="15" cur_wing_lv="8">
+		<jobprop job="0" name0="hp" value_0_0="1440" value_0_1="1440" name1="gj" value_1_0="7" value_1_1="48" name2="fy" value_2_0="11" value_2_1="24" name3="mffy" value_3_0="7" value_3_1="24" name4="ms" value_4_0="11" value_4_1="11" />
+		<jobprop job="1" name0="hp" value_0_0="480" value_0_1="480" name1="mfgj" value_1_0="7" value_1_1="48" name2="fy" value_2_0="11" value_2_1="24" name3="mffy" value_3_0="7" value_3_1="24" name4="ms" value_4_0="11" value_4_1="11" />
+		<jobprop job="2" name0="hp" value_0_0="960" value_0_1="960" name1="dsgj" value_1_0="7" value_1_1="48" name2="fy" value_2_0="11" value_2_1="24" name3="mffy" value_3_0="7" value_3_1="24" name4="ms" value_4_0="11" value_4_1="11" />
+	</Level>
+	<Level value="49" nextlevelexp="443000" autolevelup="1" active_wing_id="5" wing_look="15" cur_wing_lv="9">
+		<jobprop job="0" name0="hp" value_0_0="1470" value_0_1="1470" name1="gj" value_1_0="8" value_1_1="49" name2="fy" value_2_0="12" value_2_1="25" name3="mffy" value_3_0="7" value_3_1="25" name4="ms" value_4_0="12" value_4_1="12" />
+		<jobprop job="1" name0="hp" value_0_0="490" value_0_1="490" name1="mfgj" value_1_0="8" value_1_1="49" name2="fy" value_2_0="12" value_2_1="25" name3="mffy" value_3_0="7" value_3_1="25" name4="ms" value_4_0="12" value_4_1="12" />
+		<jobprop job="2" name0="hp" value_0_0="980" value_0_1="980" name1="dsgj" value_1_0="8" value_1_1="49" name2="fy" value_2_0="12" value_2_1="25" name3="mffy" value_3_0="7" value_3_1="25" name4="ms" value_4_0="12" value_4_1="12" />
+	</Level>
+	<Level value="50" nextlevelexp="467000" aautolevelup="0" active_wing_id="5" wing_look="15" material="仙翼升阶仙丹" material_num ="10" cur_wing_lv="10">
+		<jobprop job="0" name0="hp" value_0_0="1500" value_0_1="1500" name1="gj" value_1_0="8" value_1_1="50" name2="fy" value_2_0="12" value_2_1="25" name3="mffy" value_3_0="7" value_3_1="25" name4="ms" value_4_0="12" value_4_1="12" />
+		<jobprop job="1" name0="hp" value_0_0="500" value_0_1="500" name1="mfgj" value_1_0="8" value_1_1="50" name2="fy" value_2_0="12" value_2_1="25" name3="mffy" value_3_0="7" value_3_1="25" name4="ms" value_4_0="12" value_4_1="12" />
+		<jobprop job="2" name0="hp" value_0_0="100" value_0_1="100" name1="dsgj" value_1_0="8" value_1_1="50" name2="fy" value_2_0="12" value_2_1="25" name3="mffy" value_3_0="7" value_3_1="25" name4="ms" value_4_0="12" value_4_1="12" />
+	</Level>
+    </LevelData>
+    <Skills>
+	<Skill name="铁甲" active_wing_lv="1" desc="获得上古神灵的庇佑\血量上限+10\物防0-2\魔防0-2\">
+	    	<prop name="hp" value0="10" value1="10"/>
+	    	<prop name="fy" value0="0" value1="2"/>
+	    	<prop name="mffy" value0="0" value1="2"/>
+	</Skill>
+	<Skill name="偷袭" active_wing_lv="11" desc="获得上古神灵的庇佑\5%的概率无视防御和魔法防御">
+	    	<prop name="wsfy" value0="5" value1="0"/>
+	    	<prop name="wsmffy" value0="5" value1="0"/>
+	</Skill>
+	<Skill name="固本" active_wing_lv="21" desc="获得上古神灵的庇佑\受到攻击时有10%概率减免50%受到的伤害">
+	    	<prop name="glms" value0="50" value1="10"/>
+	</Skill>
+	<Skill name="致命" active_wing_lv="31" desc="获得上古神灵的庇佑\暴击概率+10">
+	    	<prop name="bj" value0="10" value1="0"/>
+	</Skill>
+	<Skill name="神佑" active_wing_lv="41" desc="获得上古神灵的庇佑\幸运值+1">
+	    	<prop name="xy" value0="1" value1="0"/>
+	</Skill>
+    </Skills>
+</RepressDemonWings>

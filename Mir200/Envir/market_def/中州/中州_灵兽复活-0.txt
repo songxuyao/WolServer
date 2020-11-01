@@ -1,0 +1,34 @@
+[@main]
+    即日起，所有勇士可以到我这里免费复活灵兽。(复活\
+后，将保留灵兽的经验)\
+    勇士们，抓住机会，赶快行动吧！\\
+    <免费复活灵兽/@reli>\
+    <离开/@exit>\
+
+[@reli]
+#ACT
+ShowSpotDlg 6 请放入灵兽石 @reli1
+#SAY
+    所有死亡的灵兽，可以在我这里免费复活并保留经验。\
+每只灵兽只能恢复一次。\\
+    <离开/@exit>
+
+[@reli1]
+#IF
+!CHECKVARLIST $PARAM(0) ..\QuestDiary\数据文件\文本数据\灵兽宠物石头.txt
+#SAY
+    你似乎给错东西了，年轻人！\\
+    <给错东西了？我再找找/@main>\
+#ACT
+break
+#IF
+EQUAL $ITEMINFO[$PARAM(1)].PET.STATE 死亡
+#SAY
+    你的灵兽已经成功复活，以后请多爱护你的灵兽。\\
+    <离开/@exit>
+#ACT
+ReLivePet
+break
+#ELSESAY
+　　你的灵兽不是还活着吗？没必要复活！\\\
+　　<知道了/@exit>

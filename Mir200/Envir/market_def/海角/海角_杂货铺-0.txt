@@ -1,0 +1,32 @@
+(@bindbuy @fastbuy @buy @sell )
+%100
++31
++25
+[@main]
+哈哈，欢迎，想要买点什么？\
+<快捷交易/@fastbuy>\
+<购入物品/@buy>\
+<出售物品/@sell>\
+<绑定金币购买物品/@bindbuy>\
+<询问商品/@questionprize>\
+<打听消息/@mission>\
+<关闭选单/@exit>
+
+[@mission]
+运气真不好，现在猪肉制品滞销了。\\
+<离开/@exit>
+
+[@fastbuy]
+#CALL [\商人\杂货.txt] @快捷交易
+
+[@buy]
+#CALL [\商人\杂货.txt] @购入物品
+
+[@sell]
+#CALL [\商人\杂货.txt] @出售物品
+
+[@bindbuy]
+#CALL [\商人\杂货.txt] @绑定购买
+
+[@questionprize]
+#CALL [\商人\杂货.txt] @询问商品

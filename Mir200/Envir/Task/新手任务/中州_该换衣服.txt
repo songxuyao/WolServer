@@ -1,0 +1,6 @@
+[setup]
+stepcount = 1
+title = 新手任务--该换衣服
+ID = 18
+stepaim1 = 去找<服装店掌柜/@@goto SH008 服装店掌柜 11,12>索要新衣服 <color=green [传]/@@flyto 23 SH008 8 11>
+stepDESC1 = <color=graygolden 任务目的：>去找<服装店掌柜/@@goto SH008 服装店掌柜 11,12>索要新衣服\<color=graygolden 任务奖励：>\ </@@!PIC2 10,951>经验：50000\<color=graygolden 任务介绍:>\    当然，如果有人将一些好首饰卖给我的话，我也会给你\留着的，不过别忘了带钱过来。\    去找<服装店掌柜/@@goto SH008 服装店掌柜 11,12>吧，她会送你最后一件衣服。\

@@ -1,0 +1,20 @@
+#AutoRun NPC Min 1 @开区时间记录
+
+#AutoRun NPC SEC 10 @刷出镖车
+
+#AutoRun NPC RUNONDAY 0:00 @每日数据恢复
+
+#AutoRun NPC RUNONDAY 19:58 @加载全服行会
+
+#AutoRun NPC RUNONDAY 12:30 @魔戒现身公告3
+#AutoRun NPC RUNONDAY 12:40 @魔戒现身公告2
+#AutoRun NPC RUNONDAY 12:50 @魔戒现身公告1
+#AutoRun NPC RUNONDAY 13:00 @魔戒现身开始
+#AutoRun NPC RUNONDAY 14:00 @魔戒现身结束
+
+#AutoRun NPC RUNONDAY 19:59 @铁血魔城预备
+#AutoRun NPC RUNONDAY 20:00 @开启铁血魔城
+#AutoRun NPC RUNONDAY 21:00 @检测铁血魔城
+#AutoRun NPC RUNONDAY 22:00 @结束铁血魔城
+
+#AutoRun NPC RUNONDAY 20:00 @开启落霞夺宝

@@ -1,0 +1,53 @@
+[@main]
+\
+  向财神进香祈福获取财神福袋，打开福袋可随机获得奖励。\
+  <color=red 财神进香奖励介绍:>\
+  <招财进宝福袋奖励/@viewPrize&1>  消耗<color=green   招财进宝香*1>\
+  <财源茂盛福袋奖励/@viewPrize&2>  消耗<color=green   财源茂盛香*1>\
+  <金玉满堂福袋奖励/@viewPrize&3>  消耗<color=green   金玉满堂香*1>\
+  <财运亨通福袋奖励/@viewPrize&4>  消耗<color=green   财运亨通香*1>\
+  <开始进香祈福/@@scentedblessing>  <离开/@exit>\
+
+[@viewPrize]
+#IF
+EQUAL $SCRIPTPARAM(1) 1
+#SAY
+<color=yellow 招财进宝福袋随机奖励：>\\
+<color=green 月光宝盒（小）*3、圣灵精华*5、神秘钥匙*5、灵兽项圈*10、>\
+<color=green 超级天山雪莲*5、超级冰泉圣水*1、超级深海灵礁*5、传音号角>\
+<color=green 强化技能灵丹*10、极品兽粮*2、月光宝盒（大）、神武级首饰、>\
+<color=green 裁决级武器、强化石*2、淬炼石*10、600W经验、900W经验、圣>\
+<color=green 战级首饰、神武级勋章>\\
+<color=gray 上一页>  <color=orange 1 ／4>   <下一页/@viewPrize&2>    <返回/@main>
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 2
+#SAY
+<color=yellow 财源茂盛福袋随机奖励：>\\
+<color=green 圣灵精华*20、神秘钥匙*20、灵兽项圈*60、传音号角、极品兽>\
+<color=green 粮*10、月光宝盒（大）、神武级首饰、裁决级武器、强化石*10>\
+<color=green 淬炼石*50、1500W经验、3000W经验>\\\\
+<上一页/@viewPrize&1>  <color=orange 2 ／4>   <下一页/@viewPrize&3>    <返回/@main>
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 3
+#SAY
+<color=yellow 金玉满堂福袋随机奖励：>\\
+<color=green 月光宝盒（特大）、圣灵精华*50、神秘钥匙*40、灵兽项圈*100>\
+<color=green 传音号角*2、极品兽粮*20、月光宝盒（大）、神武级首饰、裁>\
+<color=green 决级武器、强化石*50、淬炼石*100、3000W经验、5000W经验>\\\\
+<上一页/@viewPrize&2>  <color=orange 3 ／4>   <下一页/@viewPrize&4>    <返回/@main>
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 4
+#SAY
+<color=yellow 财运亨通福袋随机奖励：>\\
+<color=green 月光宝盒（特大）*10、血煞级首饰、暴击腰带碎片*5、麻痹戒>\
+<color=green 指碎片*5、护体戒指碎片*5、战神级首饰、逍遥无极扇、血饮>\
+<color=green 、雷霆怒斩、3亿经验>\\\\
+<上一页/@viewPrize&3>  <color=orange 4 ／4>   <color=gray 下一页>    <返回/@main>
+#ACT
+break

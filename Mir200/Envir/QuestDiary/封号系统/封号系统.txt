@@ -1,0 +1,20 @@
+[@封号分类]
+{
+
+#IF
+checkjob WARR
+#ACT
+#CALL [\封号系统\战士封号.txt] @战士封号
+break
+#IF
+checkjob wizard
+#ACT
+#CALL [\封号系统\法师封号.txt] @法师封号
+break
+#IF
+checkjob taoist
+#ACT
+#CALL [\封号系统\道士封号.txt] @道士封号
+break
+
+}

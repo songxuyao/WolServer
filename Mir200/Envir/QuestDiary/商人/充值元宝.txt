@@ -1,0 +1,63 @@
+[@oplaytime]
+{
+
+你想用哪一种方式充值游戏时间？\
+<网站充值/@@urlpay.sdo.com>\
+<用元宝充值/@_LB_goyuanbao>\
+
+[@_LB_goyuanbao]
+欢迎您充值传奇世界。请您务必确认：\
+1、您确认已经阅读并同意了《传奇世界用户协议书》\
+2、充值后系统有15分钟的调整时间，请在十五分钟后查询\
+　 充值结果。\
+3、您只能充值当前角色所属的帐号。请您确认。\
+<我已确认并转换成秒卡时间/@_LB_goybsec>\
+<退出充值/@exit>\
+
+[@_LB_goybsec]
+请您填写用以充值的元宝数量，最小数额不能低于5。\
+<点击察看详细充值对应列表/@@urlhttp://www.woool.com>\
+<填写充值元宝数/@_LB_goybs>\
+<返回/@_LB_goyuanbao>\
+<离开/@exit>\
+
+[@_LB_goybs]
+#ACT
+QUERYVAL 0 1 15 @_LB_goypay 请输入您要转换的元宝数量(到秒卡)
+
+[@_LB_goypay]
+#IF
+CHECKGAMEGOLD < $STR(M0)
+#SAY
+您没以后这么多元宝数。\\
+<离开/@exit>\
+#ACT
+break
+#ELSEACT
+#IF
+LARGE M0 0
+#ACT
+MOV P0 $STR(M0)
+MULT P0 360
+GAMEGOLD - $STR(M0)
+TABLE SG_PRIVITE Hum03 + $STR(P0)
+MOV P1 $TABLE(SG_PRIVITE).Hum03
+MOV P2 $TABLE(SG_PRIVITE).Hum03
+DIV P1 3600
+MOV P3 3600
+MULT P3 $STR(P1)
+DEC P2 $STR(P3)
+SENDMSG 5 充值成功。"您帐号的剩余游戏时间为： <$STR(P1)>小时 <$STR(P2)>秒"
+close
+break
+#ELSESAY
+你输入的元宝数目不合充值要求,详情察看以下链接:>\
+<元宝充值FAQ/@@urlhttp://www.woool.com>\
+<离开/@exit>\
+
+[@throwmoney]
+您可以选择：\\
+<进入网站充值/@@urlhttp://www.woool.com>\
+<离开/@exit>
+
+}

@@ -1,0 +1,27 @@
+(@Storage @getback @FastStorge)
+%100
+[@main]
+这里是土城仓库，可以替你保管很多东西，目前还不收保管\
+费，有什么可以先放我这里。为方便大家搜集红、绿、蓝三\
+种颜色的宝石以兑换小宝石，隆重推出“宝石仓库”的服务，\
+三种颜色的宝石都可以在我这儿存放，服务还是免费的哦。\
+<快捷存取/@Faststorget>\
+<存放物品/@storage>  <宝石仓库/@_CK_goldsave>\
+<取出物品/@getback>\
+<捆扎物品/@_CK_mbind>\
+<关闭选单/@exit>
+
+[@_CK_mbind]
+#CALL [\商人\仓库.txt] @捆扎物品
+
+[@_CK_goldsave]
+#CALL [\商人\仓库.txt] @宝石仓库
+
+[@storage]
+#CALL [\商人\仓库.txt] @保管物品
+
+[@getback]
+#CALL [\商人\仓库.txt] @取出物品
+
+[@FastStorge]
+#CALL [\商人\仓库.txt] @快捷存取

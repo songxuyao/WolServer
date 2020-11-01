@@ -1,0 +1,237 @@
+[@彩虹引擎]
+#CALL [\游戏功能\物品触发.txt] @物品触发
+#CALL [\游戏功能\圣灵宝石.txt] @圣灵宝石
+
+[@UserCMD4]
+#ACT
+#CALL [\游戏功能\管理后台.txt] @amemater
+
+[@使用飞行靴]
+#IF
+RANDOM 1
+#ACT
+FormatStr S0 IDX%s|%s|%s|%s <$PARAM(0)>|<$PARAM(3)>|<$PARAM(1)>|<$PARAM(2)>
+#IF
+PosInList $STR(S0) ..\QuestDiary\数据文件\文本数据\飞行靴坐标点.txt S1
+#ACT
+SPLIT $STR(S1) | S1
+#ELSEACT
+SENDMSG 5 系统错误！
+break
+#IF
+CHECKITEM 飞行靴 1
+#ACT
+MAPMOVE $STR(S2) $STR(S3) $STR(S4)
+UPGRADEUSERITEM $ITEMMAKEINDEX[飞行靴] 20 - 1
+break
+
+[@升级触发]
+#IF
+LARGE $RankList.1.1.1 $LEVEL
+#ACT
+MOV M6 $RankList.1.1.1
+DEC M6 $LEVEL
+MOV M7 $STR(M6)
+MULT M7 10
+MOV M8 $STR(M7)
+INC M7 100
+KILLMONEXPRATEEX $STR(M7)
+SENDMSG 7 当前全服最高等级为：<$RankList.1.1.1>级!您的等级为:<$LEVEL>级，比世界等级低<$STR(M6)>级!打怪可享受<$STR(M8)>%经验加成，祝您更快赶上高等级玩家!
+#IF
+SMALL $EXP $MAXEXP
+#ELSEACT
+CHANGEEXP + 1
+#ECALL [\封号系统\封号系统.txt] @封号分类
+
+[@捕捉灵兽]
+#IF
+POS $PARAM(0) 迅天雷豹
+#ACT
+give 豹魔石 1
+MOVR P10 3
+INC P10 1
+UPGRADEUSERITEM $PARAM(10) 8 = 1
+UPGRADEUSERITEM $PARAM(10) 9 = 2
+UPGRADEUSERITEM $PARAM(10) 12 = $STR(P10) 
+SETPETATTRIBUTE $PARAM(10) 2 = 0
+break
+#IF
+POS $PARAM(0) 撼天灵虎
+#ACT
+give 虎魔石 1
+MOVR P10 3
+INC P10 1
+UPGRADEUSERITEM $PARAM(10) 8 = 1
+UPGRADEUSERITEM $PARAM(10) 9 = 2
+UPGRADEUSERITEM $PARAM(10) 12 = $STR(P10) 
+SETPETATTRIBUTE $PARAM(10) 2 = 0
+break
+
+[@使用回城石]
+#ACT
+SHOWHUMEFFECT 29
+break
+
+[@挖藏宝图]
+#IF
+CHECKTREASUREMAP 青铜宝图 $M $X $Y
+#ACT
+TAKEM $PARAM(13)
+give 青铜宝藏 1
+SHOWHUMEFFECT 72
+break
+#IF
+CHECKTREASUREMAP 白银宝图 $M $X $Y
+#ACT
+TAKEM $PARAM(13)
+give 白银宝藏 1
+SHOWHUMEFFECT 72
+break
+#IF
+CHECKTREASUREMAP 黄金宝图 $M $X $Y
+#ACT
+TAKEM $PARAM(13)
+give 黄金宝藏 1
+SHOWHUMEFFECT 72
+break
+#IF
+CHECKTREASUREMAP 钻石宝图 $M $X $Y
+#ACT
+TAKEM $PARAM(13)
+give 钻石宝藏 1
+SHOWHUMEFFECT 72
+break
+
+[@8_SuiteOn]
+#IF
+RANDOM 1
+#ACT
+SETBONENAME 龙骨骷髅 9
+break
+
+[@8_SuiteOff]
+#IF
+RANDOM 1
+#ACT
+SETBONENAME 强化骷髅
+break
+
+[@11_SuiteOn]
+#IF
+RANDOM 1
+#ACT
+SETBONENAME 龙骨骷髅 9
+break
+
+[@11_SuiteOff]
+#IF
+RANDOM 1
+#ACT
+SETBONENAME 强化骷髅
+break
+
+[@pickupitem200]
+#IF
+!CHECKMAPNAME DBDT
+#ACT
+take 宝盒 60
+break
+#IF
+CHECKITEM 宝盒 2
+#ACT
+take 宝盒 1
+break
+#IF
+CHECKITEM 宝盒 1
+#ACT
+SENDMSG 14 宝盒在%m(%x，%y)被%s检起
+SENDMSG 14 宝盒目前在<$USERNAME>身上，他的位置在夺宝奇兵地图坐标%x:%y处，<$USERNAME>是当前的宝盒携带者，打倒他可以抢到宝盒哦。
+SetArrow 30 @Openthebox 宝盒 3 @Intervaltrigger
+break
+
+[@Openthebox]
+#IF
+CHECKMAPNAME DBDT
+#ACT
+MOV I8 0
+ClearArrow
+take 宝盒 10
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\夺宝奇兵奖励.txt S10
+GIVE $STR(S10) 1
+SENDMSG 14 恭喜<$USERNAME>夺宝成功，获得<$STR(S10)>
+break
+#ELSEACT
+ClearArrow
+take 宝盒 10
+SENDMSG 5 只有在夺宝地图才能进行开宝
+break
+
+[@dropitem200]
+#IF
+CHECKMAPNAME DBDT
+#ACT
+ClearArrow
+SENDMSG 14 宝盒目前无人保管，正掉落在%m地图%x，%y位置
+break
+
+[@Intervaltrigger]
+#IF
+RANDOM 1
+#ACT
+SENDMSG 14 宝盒目前在<$USERNAME>身上，他的位置在夺宝奇兵地图坐标%x:%y处，<$USERNAME>是当前的宝盒携带者，打倒他可以抢到宝盒哦。
+break
+
+;==============================================================================超级夺宝
+
+[@pickupitem201]
+#IF
+!CHECKMAPNAME DBDT2
+#ACT
+take 宝盒5 60
+break
+#IF
+CHECKITEM 宝盒5 2
+#ACT
+take 宝盒5 1
+break
+#IF
+CHECKITEM 宝盒5 1
+#ACT
+SENDMSG 14 宝盒在%m(%x，%y)被%s检起
+SENDMSG 14 宝盒目前在<$USERNAME>身上，他的位置在超级夺宝地图坐标%x:%y处，<$USERNAME>是当前的宝盒携带者，打倒他可以抢到宝盒哦。
+SetArrow 30 @Openthebox5 宝盒5 3 @Intervaltrigger5
+break
+
+[@Openthebox5]
+#IF
+CHECKMAPNAME DBDT2
+#ACT
+ClearArrow
+take 宝盒5 10
+MOV G17 3
+MOV A19 $USERNAME
+MOV A20 <领取超级夺宝奖励/@getboxitem>
+SENDMSG 24 恭喜<$USERNAME>超级夺宝成功 253
+SENDMSG 24 夺宝奖励需要前往超级夺宝NPC处进行领取 253
+MESSAGEBOX 恭喜您，夺宝成功！\\夺宝奖励需要前往超级夺宝NPC处进行领取！
+break
+#ELSEACT
+ClearArrow
+take 宝盒5 10
+SENDMSG 5 只有在夺宝地图才能进行开宝
+break
+
+[@Intervaltrigger5]
+#IF
+RANDOM 1
+#ACT
+SENDMSG 14 宝盒目前在<$USERNAME>身上，他的位置在超级夺宝地图坐标%x:%y处，<$USERNAME>是当前的宝盒携带者，打倒他可以抢到宝盒哦。
+break
+
+[@dropitem201]
+#IF
+CHECKMAPNAME DBDT2
+#ACT
+ClearArrow
+SENDMSG 14 超级宝盒目前无人保管，正掉落在%m地图%x，%y位置
+break

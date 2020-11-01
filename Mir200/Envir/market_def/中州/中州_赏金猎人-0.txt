@@ -1,0 +1,683 @@
+[@main]
+    你是否已经带着赏金令牌或者魔域令牌归来，让\
+你的英勇事迹在传世大陆上流传？国王已经为你们备\
+好了丰厚的奖励。\
+    <密令任务/@miling>\
+    <元宝购买密令/@buymiling>    <绑定元宝购买密令/@buymilingBD>\
+    <交还赏金令牌/@givepai>\
+    <打听有关赏金令牌/@knowpai>\
+    <路过，路过/@exit>\
+
+[@miling]
+    请选择你要接受的密令任务，每种密令任务每天只能完\
+成一次，接受任务时需要提供相应的密令令牌。\
+    <color=green 完成任务后需要先向我汇报下，然后再领取任务奖励>\
+    <金牌密令任务/@jinpairw>    <领取金牌密令奖励/@jinpailj>\
+    <银牌密令任务/@yinpairw>    <领取银牌密令奖励/@yinpailj>\
+    <铜牌密令任务/@tongpairw>    <领取铜牌密令奖励/@tongpailj>\
+    <勇士密令任务/@yongshirw>    <领取勇士密令奖励/@yongshilj>\
+    <离开/@exit>\
+
+[@jinpairw]
+#IF
+EQUAL $Table(SG_Pritime).Tim19 $DATE
+#SAY
+    你已经领取过今天的任务奖励，请明天再来接受新任务\\
+   <知道了/@exit>
+#ACT
+break
+#IF
+CHECK [6] 1
+#SAY
+    您的任务奖励还没有领取，请先领取奖励后，再来接受\
+新任务。\\
+    <知道了，多谢！/@exit>\
+#ACT
+break
+#IF
+LARGE $Task(46) 2
+#SAY
+　　恭喜你完成任务，赶快去领取奖励吧。\\
+　　<离开/@exit>
+#ACT
+SET [6] 1
+EndTask 46
+break
+#IF
+LARGE $Task(46) 0
+SMALL $Task(46) 3
+#SAY
+　　任务还没有完成呢，勇士还需要努力啊。\\
+   <知道了/@exit>
+#ACT
+break
+#IF
+CHECKITEM 金牌密令 1
+#SAY
+<金牌密令任务/@_RW_taskDesp3366>\\
+<离开/@exit>
+#ACT
+break
+#ELSESAY
+    很抱歉，您身上没有金牌密令，无法领取本次任务。请\
+在赏金猎人处购买！\\
+    <知道了，多谢！/@exit>\
+
+[@_RW_taskDesp3366]
+    妖魔聚众作乱，为祸人类。你替我打败他们，也算是替\
+天行道了。\
+    打败妖魔后，别忘记到我这里来完成任务并领取奖励。\
+<接受任务/@_RW_accept3366>                <离开/@exit>
+
+[@_RW_accept3366]
+#IF
+checkitem 金牌密令 1
+#SAY
+    这次你要完成的任务是去中州消灭10只刀犬。\
+    打败妖魔后，别忘记到我这里来完成任务并领取奖励。\
+    <离开/@exit>
+#ACT
+take 金牌密令 1
+AddTask 46
+SetTaskValue 46 I0 = 10
+break
+#ELSESAY
+    很抱歉，您身上没有金牌密令，无法领取本次任务。请\
+在赏金猎人处购买！\\
+    <知道了，多谢！/@exit>\
+
+[@jinpailj]
+#IF
+Check [6] 1
+#SAY
+    恭喜你获得了<color=green 7500000经验的奖励>。\\
+    <谢谢/@exit>\
+#ACT
+SET [6] 0
+CHANGEEXP + 7500000
+Table SG_Pritime Tim19 = $DATE
+break
+#ELSESAY
+　　你没有新的任务奖励可以领取\\
+　　<离开/@exit>
+
+[@yinpairw]
+#IF
+EQUAL $Table(SG_Pritime).Tim18 $DATE
+#SAY
+    你已经领取过今天的任务奖励，请明天再来接受新任务\\
+   <知道了/@exit>
+#ACT
+break
+#IF
+CHECK [5] 1
+#SAY
+    您的任务奖励还没有领取，请先领取奖励后，再来接受\
+新任务。\\
+    <知道了，多谢！/@exit>\
+#ACT
+break
+#IF
+LARGE $Task(47) 2
+#SAY
+　　恭喜你完成任务，赶快去领取奖励吧。\\
+　　<离开/@exit>
+#ACT
+SET [5] 1
+EndTask 47
+break
+#IF
+LARGE $Task(47) 0
+SMALL $Task(47) 3
+#SAY
+　　任务还没有完成呢，勇士还需要努力啊。\\
+   <知道了/@exit>
+#ACT
+break
+#IF
+CHECKITEM 银牌密令 1
+#SAY
+<银牌密令任务/@_RW_taskDesp3365>\\
+<离开/@exit>
+#ACT
+break
+#ELSESAY
+    很抱歉，您身上没有银牌密令，无法领取本次任务。请\
+在赏金猎人处购买！\\
+    <知道了，多谢！/@exit>\
+
+[@_RW_taskDesp3365]
+    妖魔聚众作乱，为祸人类。你替我打败他们，也算是替\
+天行道了。\
+    打败妖魔后，别忘记到我这里来完成任务并领取奖励。\
+<接受任务/@_RW_accept3365>                <离开/@exit>
+
+[@_RW_accept3365]
+#IF
+checkitem 银牌密令 1
+#SAY
+    这次你要完成的任务是去中州消灭10只毒蜘蛛。\
+    打败妖魔后，别忘记到我这里来完成任务并领取奖励。\
+    <离开/@exit>
+#ACT
+take 银牌密令 1
+AddTask 47
+SetTaskValue 47 I0 = 10
+break
+#ELSESAY
+    很抱歉，您身上没有银牌密令，无法领取本次任务。请\
+在赏金猎人处购买！\\
+    <知道了，多谢！/@exit>\
+
+[@yinpailj]
+#IF
+Check [5] 1
+#SAY
+    恭喜你获得了<color=green 3000000经验的奖励>。\\
+    <谢谢/@exit>\
+#ACT
+SET [5] 0
+CHANGEEXP + 3000000
+Table SG_Pritime Tim18 = $DATE
+break
+#ELSESAY
+　　你没有新的任务奖励可以领取\\
+　　<离开/@exit>
+
+[@tongpairw]
+#IF
+EQUAL $Table(SG_Pritime).Tim17 $DATE
+#SAY
+    你已经领取过今天的任务奖励，请明天再来接受新任务\\
+   <知道了/@exit>
+#ACT
+break
+#IF
+CHECK [4] 1
+#SAY
+    您的任务奖励还没有领取，请先领取奖励后，再来接受\
+新任务。\\
+    <知道了，多谢！/@exit>\
+#ACT
+break
+#IF
+LARGE $Task(48) 2
+#SAY
+　　恭喜你完成任务，赶快去领取奖励吧。\\
+　　<离开/@exit>
+#ACT
+SET [4] 1
+EndTask 48
+break
+#IF
+LARGE $Task(48) 0
+SMALL $Task(48) 3
+#SAY
+　　任务还没有完成呢，勇士还需要努力啊。\\
+   <知道了/@exit>
+#ACT
+break
+#IF
+CHECKITEM 铜牌密令 1
+#SAY
+<铜牌密令任务/@_RW_taskDesp3364>\\
+<离开/@exit>
+#ACT
+break
+#ELSESAY
+    很抱歉，您身上没有铜牌密令，无法领取本次任务。请\
+在赏金猎人处购买！\\
+    <知道了，多谢！/@exit>\
+
+[@_RW_taskDesp3364]
+    妖魔聚众作乱，为祸人类。你替我打败他们，也算是替\
+天行道了。\
+    打败妖魔后，别忘记到我这里来完成任务并领取奖励。\
+<接受任务/@_RW_accept3364>                <离开/@exit>
+
+[@_RW_accept3364]
+#IF
+checkitem 铜牌密令 1
+#SAY
+    这次你要完成的任务是去中州消灭10只蟒。\
+    打败妖魔后，别忘记到我这里来完成任务并领取奖励。\
+    <离开/@exit>
+#ACT
+take 铜牌密令 1
+AddTask 48
+SetTaskValue 48 I0 = 10
+break
+#ELSESAY
+    很抱歉，您身上没有铜牌密令，无法领取本次任务。请\
+在赏金猎人处购买！\\
+    <知道了，多谢！/@exit>\
+
+[@tongpailj]
+#IF
+Check [4] 1
+#SAY
+    恭喜你获得了<color=green 1500000经验的奖励>。\\
+    <谢谢/@exit>\
+#ACT
+SET [4] 0
+CHANGEEXP + 1500000
+Table SG_Pritime Tim17 = $DATE
+break
+#ELSESAY
+　　你没有新的任务奖励可以领取\\
+　　<离开/@exit>
+
+[@yongshirw]
+#IF
+EQUAL $Table(SG_Pritime).Tim16 $DATE
+#SAY
+    你已经领取过今天的任务奖励，请明天再来接受新任务\\
+   <知道了/@exit>
+#ACT
+break
+#IF
+CHECK [3] 1
+#SAY
+    您的任务奖励还没有领取，请先领取奖励后，再来接受\
+新任务。\\
+    <知道了，多谢！/@exit>\
+#ACT
+break
+#IF
+LARGE $Task(49) 2
+#SAY
+　　恭喜你完成任务，赶快去领取奖励吧。\\
+　　<离开/@exit>
+#ACT
+SET [3] 1
+EndTask 49
+break
+#IF
+LARGE $Task(49) 0
+SMALL $Task(49) 3
+#SAY
+　　任务还没有完成呢，勇士还需要努力啊。\\
+   <知道了/@exit>
+#ACT
+break
+#IF
+CHECKITEM 勇士密令 1
+#SAY
+<勇士密令任务/@_RW_taskDesp3363>\\
+<离开/@exit>
+#ACT
+break
+#ELSESAY
+    很抱歉，您身上没有勇士密令，无法领取本次任务。请\
+在赏金猎人处购买！\\
+    <知道了，多谢！/@exit>\
+
+[@_RW_taskDesp3363]
+    妖魔聚众作乱，为祸人类。你替我打败他们，也算是替\
+天行道了。\
+    打败妖魔后，别忘记到我这里来完成任务并领取奖励。\
+<接受任务/@_RW_accept3363>                <离开/@exit>
+
+[@_RW_accept3363]
+#IF
+checkitem 勇士密令 1
+#SAY
+    这次你要完成的任务是去落霞消灭5只兔。\
+    打败妖魔后，别忘记到我这里来完成任务并领取奖励。\
+    <离开/@exit>
+#ACT
+take 勇士密令 1
+AddTask 49
+SetTaskValue 49 I0 = 5
+break
+#ELSESAY
+    很抱歉，您身上没有勇士密令，无法领取本次任务。请\
+在赏金猎人处购买！\\
+    <知道了，多谢！/@exit>\
+
+[@yongshilj]
+#IF
+Check [3] 1
+#SAY
+    恭喜你获得了<color=green 300000经验的奖励>。\\
+    <谢谢/@exit>\
+#ACT
+SET [3] 0
+CHANGEEXP + 300000
+Table SG_Pritime Tim16 = $DATE
+break
+#ELSESAY
+　　你没有新的任务奖励可以领取\\
+　　<离开/@exit>
+
+[@buymilingBD]
+    本店共有四款赏金密令供你选择，<color=green 不同的密令可在中州>\
+<color=green 赏金猎人处领取不同的密令任务>，完成任务可获丰厚奖励。\
+<color=orange 金牌密令>：<color=green 750万经验。>\
+<color=orange 银牌密令>：<color=green 300万经验。>\
+<color=orange 铜牌密令>：<color=green 150万经验。>\
+<color=orange 勇士密令>：<color=green 30万经验。>\
+<color=green 每一种密令任务每天只能完成一次，赏金密令为绑定道具>\
+    <金牌密令25绑定元宝/@jinpaiBD>    <银牌密令10绑定元宝/@yinpaiBD>\
+    <铜牌密令5绑定元宝/@tongpaiBD>    <勇士密令1绑定元宝/@yongshiBD>\
+
+[@yongshiBD]
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSESAY
+    你的包裹快满了，请整理下再来。\
+    <我明白了/@exit>
+#ELSEACT
+break
+#IF
+CHECKBINDGAMEGOLD > 0
+#SAY
+  恭喜你， 成功购买了一个勇士密令！\
+  <返回/@main>
+#ACT
+BINDGAMEGOLD - 1
+GIVE 勇士密令 1 1
+break
+#ELSEACT
+SENDMSG 5 绑定元宝余额不足，购买失败
+
+close
+break
+
+[@tongpaiBD]
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSESAY
+  你的包裹快满了，请整理下再来。\
+  <返回/@main>
+#ELSEACT
+break
+#IF
+CHECKBINDGAMEGOLD > 4
+#SAY
+  恭喜你， 成功购买了一个铜牌密令！\
+  <返回/@main>\
+#ACT
+BINDGAMEGOLD - 5
+GIVE 铜牌密令 1 1
+break
+#ELSEACT
+SENDMSG 5 绑定元宝余额不足，购买失败
+
+close
+break
+
+[@yinpaiBD]
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSESAY
+  你的包裹快满了，请整理下再来。\
+  <返回/@main>
+#ELSEACT
+break
+#IF
+CHECKBINDGAMEGOLD > 9
+#SAY
+  恭喜你， 成功购买了一个勇士密令！\
+  <返回/@main>\
+#ACT
+BINDGAMEGOLD - 10
+GIVE 银牌密令 1 1
+break
+#ELSEACT
+SENDMSG 5 绑定元宝余额不足，购买失败
+
+close
+break
+
+[@jinpaiBD]
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSESAY
+  你的包裹快满了，请整理下再来。\
+  <返回/@main>
+#ELSEACT
+break
+#IF
+CHECKBINDGAMEGOLD > 24
+#SAY
+  恭喜你， 成功购买了一个金牌密令！\
+  <返回/@main>\
+#ACT
+BINDGAMEGOLD - 25
+GIVE 金牌密令 1 1
+break
+#ELSEACT
+SENDMSG 5 绑定元宝余额不足，购买失败
+
+close
+break
+
+[@buymiling]
+    本店共有四款赏金密令供你选择，<color=green 不同的密令可在中州>\
+<color=green 赏金猎人处领取不同的密令任务>，完成任务可获丰厚奖励。\
+<color=orange 金牌密令>：<color=green 750万经验。>\
+<color=orange 银牌密令>：<color=green 300万经验。>\
+<color=orange 铜牌密令>：<color=green 150万经验。>\
+<color=orange 勇士密令>：<color=green 30万经验。>\
+<color=green 每一种密令任务每天只能完成一次，赏金密令为绑定道具>\
+    <金牌密令25元宝/@jinpai>    <银牌密令10元宝/@yinpai>\
+    <铜牌密令5元宝/@tongpai>    <勇士密令1元宝/@yongshi>\
+
+[@yongshi]
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSESAY
+    你的包裹快满了，请整理下再来。\
+    <我明白了/@exit>
+#ELSEACT
+break
+#IF
+CHECKGAMEGOLD > 0
+#SAY
+  恭喜你， 成功购买了一个勇士密令！\
+  <返回/@main>
+#ACT
+GAMEGOLD - 1
+GIVE 勇士密令 1 1
+break
+#ELSEACT
+SENDMSG 5 元宝余额不足，购买失败
+
+close
+break
+
+[@tongpai]
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSESAY
+  你的包裹快满了，请整理下再来。\
+  <返回/@main>
+#ELSEACT
+break
+#IF
+CHECKGAMEGOLD > 4
+#SAY
+  恭喜你， 成功购买了一个铜牌密令！\
+  <返回/@main>\
+#ACT
+GAMEGOLD - 5
+GIVE 铜牌密令 1 1
+break
+#ELSEACT
+SENDMSG 5 元宝余额不足，购买失败
+
+close
+break
+
+[@yinpai]
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSESAY
+  你的包裹快满了，请整理下再来。\
+  <返回/@main>
+#ELSEACT
+break
+#IF
+CHECKGAMEGOLD > 9
+#SAY
+  恭喜你， 成功购买了一个勇士密令！\
+  <返回/@main>\
+#ACT
+GAMEGOLD - 10
+GIVE 银牌密令 1 1
+break
+#ELSEACT
+SENDMSG 5 元宝余额不足，购买失败
+
+close
+break
+
+[@jinpai]
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSESAY
+  你的包裹快满了，请整理下再来。\
+  <返回/@main>
+#ELSEACT
+break
+#IF
+CHECKGAMEGOLD > 24
+#SAY
+  恭喜你， 成功购买了一个金牌密令！\
+  <返回/@main>\
+#ACT
+GAMEGOLD - 25
+GIVE 金牌密令 1 1
+break
+#ELSEACT
+SENDMSG 5 元宝余额不足，购买失败
+
+close
+break
+
+[@knowpai]
+在不知名的邪恶力量的影响下，妖魔日益肆虐，为害人间，\
+国王甚为忧虑，颁下赏金令牌，重金悬赏勇士斩妖除魔，还中\
+州一个朗朗乾坤清平世界。数以万计的财富元宝、丰厚的经验\
+，一切只为和你的赫赫威名相称。\
+<返回/@main>\
+
+[@givepai]
+#IF
+!CHECKITEM 赏金令牌 1
+#SAY
+很抱歉，你没有令牌\
+<离开/@exit>\
+#ACT
+break
+#IF
+RANDOM 100
+#SAY
+恭喜你，勇士，你获得了10元宝的奖励，你的\
+威名必将流芳百世。\
+<继续交还赏金令牌/@main>\
+<离开/@exit>\
+#ACT
+take 赏金令牌 1
+GAMEGOLD + 10
+SENDMSG 0 %s获得了赏金猎人10元宝的奖励，要参加赏金猎人任务请到各大城市处寻找赏金猎人参加活动
+break
+#IF
+RANDOM 90
+#SAY
+恭喜你，勇士，你获得了1000000经验的奖励，你的\
+威名必将流芳百世。\
+<继续交还赏金令牌/@main>\
+<离开/@exit>\
+#ACT
+take 赏金令牌 1
+CHANGEEXP + 1000000
+SENDMSG 0 %s获得了赏金猎人1000000经验的奖励，要参加赏金猎人任务请到各大城市处寻找赏金猎人参加活动
+break
+#IF
+RANDOM 80
+#SAY
+恭喜你，勇士，你获得了200000金币的奖励，你的\
+威名必将流芳百世。\
+<继续交还赏金令牌/@main>\
+<离开/@exit>\
+#ACT
+take 赏金令牌 1
+give 金币 200000
+SENDMSG 0 %s获得了赏金猎人200000金币的奖励，要参加赏金猎人任务请到各大城市处寻找赏金猎人参加活动
+break
+#IF
+RANDOM 6
+#SAY
+恭喜你，勇士，你获得了100000金币的奖励，你的\
+威名必将流芳百世。\
+<继续交还赏金令牌/@main>\
+<离开/@exit>\
+#ACT
+take 赏金令牌 1
+give 金币 100000
+break
+#IF
+RANDOM 5
+#SAY
+恭喜你，勇士，你获得了100000经验的奖励，你的\
+威名必将流芳百世。\
+<继续交还赏金令牌/@main>\
+<离开/@exit>\
+#ACT
+take 赏金令牌 1
+CHANGEEXP + 100000
+break
+#IF
+RANDOM 4
+#SAY
+恭喜你，勇士，你获得了50000金币的奖励，你的\
+威名必将流芳百世。\
+<继续交还赏金令牌/@main>\
+<离开/@exit>\
+#ACT
+take 赏金令牌 1
+give 金币 50000
+break
+#IF
+RANDOM 3
+#SAY
+恭喜你，勇士，你获得了50000经验的奖励，你的\
+威名必将流芳百世。\
+<继续交还赏金令牌/@main>\
+<离开/@exit>\
+#ACT
+take 赏金令牌 1
+CHANGEEXP + 50000
+break
+#IF
+RANDOM 2
+#SAY
+恭喜你，勇士，你获得了10000金币的奖励，你的\
+威名必将流芳百世。\
+<继续交还赏金令牌/@main>\
+<离开/@exit>\
+#ACT
+take 赏金令牌 1
+give 金币 10000
+break
+#IF
+RANDOM 1
+#SAY
+恭喜你，勇士，你获得了10000经验的奖励，你的\
+威名必将流芳百世。\
+<继续交还赏金令牌/@main>\
+<离开/@exit>\
+#ACT
+take 赏金令牌 1
+CHANGEEXP + 10000
+break

@@ -1,0 +1,26 @@
+(@Storage @getback @FastStorge)
+%100
+[@main]
+我这里可以替你保管很多东西，目前还不收保管费，有什么\
+可以先放我这里。为方便大家搜集红、绿、蓝三种颜色的宝\
+石以兑换小宝石，隆重推出“宝石仓库”的服务，三种颜色\
+的宝石都可以在我这儿存放，服务还是免费的哦。\
+<存放物品/@storage>    <快捷存取/@Faststorge>\
+<取出物品/@getback>    <宝石仓库/@_CK_goldsave>\
+<捆扎物品/@_CK_mbind>\
+<关闭选单/@exit>
+
+[@_CK_mbind]
+#CALL [\商人\仓库.txt] @捆扎物品
+
+[@_CK_goldsave]
+#CALL [\商人\仓库.txt] @宝石仓库
+
+[@storage]
+#CALL [\商人\仓库.txt] @保管物品
+
+[@getback]
+#CALL [\商人\仓库.txt] @取出物品
+
+[@FastStorge]
+#CALL [\商人\仓库.txt] @快捷存取

@@ -1,0 +1,20 @@
+[@main]
+#IF
+EQUAL $Task(49) 2
+SMALL $TASKVAL(49).I0 2
+#ACT
+UpdateTask 49 3
+break
+#IF
+EQUAL $Task(49) 1
+EQUAL $TASKVAL(49).I0 5
+#ACT
+SetTaskValue 49 I0 - 1
+UpdateTask 49 2
+break
+#IF
+EQUAL $Task(49) 2
+#ACT
+SetTaskValue 49 I0 - 1
+RefreshTask 49 2
+break

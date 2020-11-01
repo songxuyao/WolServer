@@ -1,0 +1,12 @@
+[setup]
+stepcount = 4
+title = 新手任务--莽撞的新兵
+ID = 14
+stepaim1 = 去找<落霞村老兵/@@goto 1 老兵 253,248>传送到矿坑帮助\<矿洞守卫官/@@goto 1 矿洞守卫官 476,401> <color=green [传]/@@flyto 15 1 476 401>
+stepaim2 = 前往<矿区入口/@@goplace 1 477,395>消灭3只僵尸 <color=green [传]/@@flyto 16 T011 55 59>
+stepaim3 = 还要杀<$TASKVAL(14).I0>只僵尸 <color=green [传]/@@flyto 16 T011 55 59>
+stepaim4 = 任务完成！去找<矿洞守卫官/@@goto 1 矿洞守卫官 476,401> <color=green [传]/@@flyto 15 1 476 401>
+stepDESC1 = <color=graygolden 任务目的：>去找<落霞村老兵/@@goto 1 老兵 253,248>传送到矿坑帮助<矿洞守卫官/@@goto 1 矿洞守卫官 476,401>\<color=graygolden 任务奖励：>\</@@!PIC2 10,951>经验：150000　　　</@@!PIC2 10,951>轻盔:1件\<color=graygolden 任务介绍:>\    技能送给你了，在包裹中双击书籍，就可以学习了。\看来你的实力又得到了进一步的提升，不过能力越大的时候\，承担的责任也会越多。是时候去帮矿洞守卫官驱赶魔族了。\去那里看看吧！他就在村子矿坑入口附近（476:401）。
+stepDESC2 = <color=graygolden 任务目的：>前往<矿区入口/@@goplace 1 477,395>消灭3只僵尸\<color=graygolden 任务奖励：>\</@@!PIC2 10,951>经验：180000\<color=graygolden 任务介绍:>\年轻人！作为对抗魔族的一份子，我把这件装备赏赐给你。\快去<矿区入口/@@goplace 1 477,395>消灭3只僵尸吧，之后再来找我。
+stepDESC3 = <color=graygolden 任务目的：>前往<矿区入口/@@goplace 1 477,395>消灭3只僵尸\<color=graygolden 任务奖励：>\</@@!PIC2 10,951>经验：180000\<color=graygolden 任务介绍:>\年轻人！作为对抗魔族的一份子，我把这件装备赏赐给你。\还要在<矿区入口/@@goplace T011 55,59>消灭<$TASKVAL(14).I0>只僵尸
+stepDESC4 = <color=graygolden 任务目的：>前往<矿区入口/@@goplace 1 477,395>消灭3只僵尸\<color=graygolden 任务奖励：>\</@@!PIC2 10,951>经验：180000\<color=graygolden 任务介绍:>\恭喜，圆满完成任务！把消息告诉<矿洞守卫官/@@goto 1 矿洞守卫官 476,401>。

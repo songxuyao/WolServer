@@ -1,0 +1,542 @@
+[@main]
+    老朽年事已高，早已看尽这繁华中州，王朝更替，起起\
+伏伏。如今的天下，该是让你们年轻人崭露头角了。我已两\
+袖空空，唯有些须学识，可传授于你们，尔等可愿倾听？\\
+　　<可接任务/@_RW_entry>\
+　　<熔炼宝石/@baoshi>    <天之玄兵/@meltSky>\
+    <圣灵精华/@jinghua>    <鉴定物品/@JDing>    <其他事情/@zashi>\
+
+
+[@baoshi]
+#CALL [\商人\熔炼宝石.txt] @熔炼宝石
+
+[@zashi]
+　　你尽管说，找我到底有什么事情？以我老道的本领，没\
+有什么不能帮你的。\\
+    <我有五色补天石，请您指点下这石头有什么用？/@wuse>\
+    <麻烦您帮我把隐身蚕甲捆起来。/@changecandan>\
+    <离开/@exit>\
+
+[@wuse]
+五色补天石是我的远古师祖玄天道尊流传下来的宝物，具有\
+奇妙无比的效果，它能够弥补你在武、道、魔修炼过程中的\
+先天不足。你觉得你在升级的过程中错过了什么吗？你曾经\
+留下遗憾吗？让我来帮你，只要你把五色补天石交给我，凭\
+借玄天道尊流传下来的神秘精神力量，我可以帮你试试看能\
+否弥补遗憾。不过，能否成功，一切看上天的眷顾。\
+<那谢谢了/@butian>\
+<不相信你/@exit>\
+
+[@butian]
+#IF
+checkitem 五色补天石 1
+#SAY
+飞来横福能给您带来意想不到的惊喜，它能让幸运之光笼罩\
+在您身上，幸运之神的眷顾会让您的梦想成为现实。借助它\
+的神奇力量，你的人生很有可能将会从此与众不同。\
+<那谢谢了/@feilaihengfu>\
+<不相信你/@exit>
+#ELSESAY
+年轻人，欺骗是不对的，你应该对你的一言一行负责！只有\
+这样才能在未来的生活中赢得尊重。\\
+<好惭愧/@exit>
+
+[@feilaihengfu]
+#IF
+checkitem 五色补天石 1
+#SAY
+您无缘上天的眷顾，请下次再来！\
+<离开/@exit>
+#ACT
+take 五色补天石 1
+break
+#ELSESAY
+年轻人，欺骗是不对的，你应该对你的一言一行负责！只有\
+这样才能在未来的生活中赢得尊重。\\
+<好惭愧/@exit>
+
+[@changecandan]
+五个隐身蚕甲可以换一个隐形蚕丹，要交换吗？\\
+<交换/@changecandanNow>    <不交换/@exit>
+
+[@changecandanNow]
+#IF
+checkitem 隐身蚕甲 5
+#SAY
+已经交换好了\
+以后还需要的话，就来找我吧..\\
+<谢 谢/@exit>
+#ACT
+take 隐身蚕甲 5
+give 隐形蚕丹 1
+break
+#ELSESAY
+你都没有足够的蚕甲交换啊....\
+准备好再来吧，年轻人。\\
+<再 见/@exit>
+
+[@JDing]
+    洞察玄机，鉴定天地。关于鉴定的问题，你找我玄玄老\
+道绝对错不了。不知道你是想鉴定物品呢，是想学习有关鉴\
+定的知识，还是要我购买鉴定卷轴，哈哈！\\
+    <鉴定物品/@authenticate>\
+    <了解有关鉴定的知识/@knowledge2>\
+    <购入鉴定卷轴/@salereel5>\
+    <离开/@exit>\
+
+[@authenticate]
+#ACT
+Showspotdlg 6 鉴定: @authenticate1
+#SAY
+我玄玄老人可不是吹的！快拿你的宝贝来鉴定吧！\\
+<谢谢！/@exit>\
+
+[@authenticate1]
+#IF
+CHECKgold 10000 
+#ACT
+#ELSEACT
+MessageBox 鉴定这个物品需要10000金币。
+break
+#IF
+EQUAL $PARAM(0) 腰带(未鉴定)
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\鉴定腰带物品.txt S2
+take 金币 10000
+take 腰带(未鉴定) 1
+GIVE $STR(S2) 1
+break
+#SAY
+您的腰带(未鉴定)已经鉴定好了。\
+<返回/@main>
+#IF
+EQUAL $PARAM(0) 靴子(未鉴定)
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\鉴定靴子物品.txt S2
+take 金币 10000
+take 靴子(未鉴定) 1
+GIVE $STR(S2) 1
+break
+#SAY
+您的腰带(未鉴定)已经鉴定好了。\
+<返回/@main>
+#ELSEACT
+MessageBox 你不能鉴定这个物品。
+break
+
+[@knowledge2]
+在上一场正邪之战中，牺牲的英雄们留下了一些神奇的宝\
+物（战靴和腰带）。怪物们由于惧怕宝物正义的力量，用\
+妖力将它们封印，使它们看起来与普通的物品一样。所以，\
+这些战靴和腰带必须经过“鉴定”才会显露出它们强大的\
+力量！除了回城让我来鉴定之外，你也可以随身备一些鉴\
+定卷轴，这样就可以随时一睹上古宝物的真容了。\\
+<离开/@exit>
+
+[@salereel5]
+哈！看来你的运气还真不错，我随身带了不少鉴定卷轴。\
+你可以从我这里轻松的获得，当然这些鉴定卷轴的价格\
+不菲需要花费你20000金币。不然枉费我从大老远带来了！\\
+<购入鉴定卷轴/@salereel1a>\
+<离开/@exit>
+
+[@salereel1a]
+#IF
+checkgold 20000
+#ACT
+take 金币 20000
+give 鉴定卷轴 1
+#ELSESAY
+金币不足，购买失败！\\
+<关闭/@exit>
+
+[@jinghua]
+    圣灵精华集合了天地的灵气，能激活并提升武器上隐藏\
+的技能属性威力。拆分圣灵精华需要花费一万金币。\
+    请问你要做什么：\\
+    <拆分圣灵精华/@chaifenjinghua>     <打听一下圣灵精华/@datingjinghua>\
+    <返回/@main>     \
+
+[@chaifenjinghua]
+#ACT
+ShowSpotDlg 255 2 @拆分圣灵
+
+[@拆分圣灵]
+#IF
+checkgold 10000
+#ACT
+take 金币 10000
+UPGRADEUSERITEM $PARAM(0) 20 - $PARAM(2)
+give 圣灵精华 1
+UPGRADEUSERITEM $PARAM(10) 20 = $PARAM(2)
+SENDMSG 5 成功拆分圣灵精华！
+#ELSEACT
+SENDMSG 5 金币不足10000，无法拆分！
+break
+
+[@datingjinghua]
+    圣灵精华集合了天地的灵气，能激活并提升武器上隐藏\
+的技能属性威力。圣灵精华的相关知识都在下面：\\
+<如何获得圣灵精华/@ruhehuode>     <圣灵精华能做什么/@nengzuoshenme>\
+<如何获得圣灵宝石/@huodebaoshi>     <圣灵宝石能做什么/@baoshinengzuoshenme>\
+<怎样才能发挥武器上的技能威力/@fahuijinengweili>    \
+<返回/@jinghua>   \
+
+[@ruhehuode]
+    圣灵精华原本封存在恶魔城中一间封闭的密室，用来镇\
+压魔王的邪气：同时圣灵精华也可以激活武器的隐藏属性。\
+因此邪恶的心魔破除了结界冲入密室抢走了部分圣灵精华。\
+    如果你成功营救公主，证明自己是王城勇士；国王就可\
+能会派你去帮助守护圣灵精华，将你传入密室，在密室中击\
+败心魔就能得到大量圣灵精华。当然你也可以直接去天魔宝\
+藏里杀死夺宝心魔，从心魔尸体上直接挖出圣灵精华。\\
+<返回/@jinghua>   \
+
+[@nengzuoshenme]
+    圣灵精华可以激活并提升武器的隐藏属性。在包裹栏中\
+双击圣灵精华就能激活你手中武器的隐藏的技能属性。\
+    同时圣灵精华还能将宝石升级为圣灵宝石，在包裹栏中\
+将圣灵精华拖动到各种宝石上就能把宝石合成为圣灵宝石。\\
+<返回/@jinghua>   \
+
+[@huodebaoshi]
+    将包裹栏中将圣灵精华拖动到各种宝石上就能把宝石合\
+成为圣灵宝石。火晶，冰月，水云，紫心，青木，圣魔，金\
+刚这七种宝石可以升级为圣灵宝石。四品质的宝石（小），\
+（中），（大），(完美)都可以升级成圣灵宝石，但不同品\
+质的宝石消耗的圣灵精华也不同。\
+<返回/@jinghua>   \
+
+[@baoshinengzuoshenme]
+    圣灵宝石可以提升武器上技能属性的威力，在包裹栏中\
+双击圣灵宝石，就能提升手中所拿武器上的技能威力。不同\
+的宝石类型可以提升不同类型的技能威力；宝石的品质越高，\
+提升的成功率也会越高。\
+    另外，圣灵宝石也拥有宝石的其它部分基本功能。\
+<返回/@jinghua>   \
+
+[@fahuijinengweili]
+    武器上的技能隐藏属性，只有在被圣灵精华激活后才能\
+使用；但由于恶魔城密室中的圣灵守护者被心魔打伤，一部\
+分能力已被封印，所以现在你必须已经学会这个技能，才能\
+发挥武器上技能属性威力。但听说国王已经在招募王城勇士\
+们到密室去帮助圣灵守护者，也许不久之后，无论是什么样\
+职业或你是否学会的技能，都能发挥武器上的技能威力了。\
+    另外，经过圣灵宝石升级后，武器上技能威力会更强大。\
+<返回/@jinghua>   \
+
+[@meltSky]
+　　你得到了这传说中的天之玄兵？这些神兵埋藏日久，大\
+半都失去了锋锐的属性，有些虽然仍然可以使用，但是本身\
+的杀气太盛，难以驯服，一有机会便会破空飞去。只有用神\
+奇的<color=green 天之神铁>淬炼，才能彻底炼化它们，如果运气好还能炼\
+出威力更大的极品。\
+   不过不同的神兵需要的<color=green 天之神铁>多少不同，你还是尽量\
+多找一些吧，我会把你身上的神铁全都收走的。\
+    <请帮我炼化天之玄兵/@meltN>    <我的天之玄兵是生锈的，怎么办啊？/@xuanbin>\
+    <返回/@oldmain>\
+
+[@meltN]
+#ACT
+Showspotdlg 6 请放上你的天之玄兵 @炼化检测
+#SAY
+　　待我好好看看你要炼化的天之玄兵，这不同的玄兵炼化\
+需要的材料火候全不相同，实在是马虎不得啊。\
+　　不过你一定要准备好足够的<color=green 天之神铁>，待会儿需要多少\
+我会告诉你的。\\
+　　<算了/@exit>
+
+[@炼化检测]
+#IF
+EQUAL $PARAM(0) 天之裁决
+#ACT
+MOV S0 $PARAM(0)
+MOV S1 2
+MOV S2 99
+break
+#SAY
+　　这件天之玄兵用<color=green 两块天之神铁>就可以炼化了，不过你\
+要有<color=green 加倍的神铁>，我自信可以帮你炼出威力更大的极品，\
+现在就开始吗？\\
+　　<开始炼化/@meltNowN>\
+　　<容我想想/@exit>\
+#IF
+EQUAL $PARAM(0) 天之骨玉
+#ACT
+MOV S0 $PARAM(0)
+MOV S1 2
+MOV S2 99
+break
+#SAY
+　　这件天之玄兵用<color=green 两块天之神铁>就可以炼化了，不过你\
+要有<color=green 加倍的神铁>，我自信可以帮你炼出威力更大的极品，\
+现在就开始吗？\\
+　　<开始炼化/@meltNowN>\
+　　<容我想想/@exit>\
+#IF
+EQUAL $PARAM(0) 天之龙纹
+#ACT
+MOV S0 $PARAM(0)
+MOV S1 2
+MOV S2 99
+break
+#SAY
+　　这件天之玄兵用<color=green 两块天之神铁>就可以炼化了，不过你\
+要有<color=green 加倍的神铁>，我自信可以帮你炼出威力更大的极品，\
+现在就开始吗？\\
+　　<开始炼化/@meltNowN>\
+　　<容我想想/@exit>\
+#IF
+EQUAL $ITEMINFO[$PARAM(1)].SOURCE 2
+EQUAL $ITEMINFO[$PARAM(1)].RESERVED 99
+#ACT
+MOV S0 $PARAM(0)
+MOV S1 2
+MOV S2 99
+break
+#SAY
+　　这件天之玄兵用<color=green 两块天之神铁>就可以炼化了，不过你\
+要有<color=green 加倍的神铁>，我自信可以帮你炼出威力更大的极品，\
+现在就开始吗？\\
+　　<开始炼化/@meltNowN>\
+　　<容我想想/@exit>\
+#IF
+EQUAL $ITEMINFO[$PARAM(1)].SOURCE 4
+EQUAL $ITEMINFO[$PARAM(1)].RESERVED 99
+#ACT
+MOV S0 $PARAM(0)
+MOV S1 4
+MOV S2 99
+break
+#SAY
+　　这件天之玄兵用<color=green 四块天之神铁>就可以炼化了，不过你\
+要有<color=green 加倍的神铁>，我自信可以帮你炼出威力更大的极品，\
+现在就开始吗？\\
+　　<开始炼化/@meltNowN>\
+　　<容我想想/@exit>\
+#IF
+EQUAL $ITEMINFO[$PARAM(1)].SOURCE 4
+EQUAL $ITEMINFO[$PARAM(1)].RESERVED 100
+#ACT
+MOV S0 $PARAM(0)
+MOV S1 4
+MOV S2 100
+break
+#SAY
+　　这件天之玄兵用<color=green 四块天之神铁>就可以炼化了，\
+现在就开始吗？\\
+　　<开始炼化/@meltNowN>\
+　　<容我想想/@exit>\
+
+#IF
+EQUAL $ITEMINFO[$PARAM(1)].SOURCE 12
+EQUAL $ITEMINFO[$PARAM(1)].RESERVED 100
+#ACT
+MOV S0 $PARAM(0)
+MOV S1 12
+MOV S2 100
+#SAY
+　　这件天之玄兵用<color=green 十二块天之神铁>就可以炼化了，\
+现在就开始吗？\\
+　　<开始炼化/@meltNowN>\
+　　<容我想想/@exit>\
+#ELSESAY
+恐怕这不是天之玄兵吧。 \\\
+<我再找找/@exit>
+
+[@meltNowN]
+#ACT
+Showspotdlg 6 请放上你的天之玄兵 @炼化天之
+#SAY
+　　把你要炼化的天之玄兵放上去吧\\
+　　<算了/@exit>
+
+[@炼化天之]
+#IF
+!EQUAL S0 $PARAM(0)
+#ACT
+break
+#SAY
+恐怕这不是刚才你给我的那件天之玄兵吧。 \\\
+<我再找找/@exit>
+#IF
+!CHECKITEM 天之神铁 $STR(S1)
+#ACT
+break
+#SAY
+　　我不是跟你开玩笑，就你带来的这些材料，只怕还没有\
+开始炼，就先把天之玄兵毁了。你还是好好的去找找天之神\
+铁吧。\\
+　　<返回/@meltSky>
+#IF
+random 1
+#ACT
+take $PARAM(0) 1
+DEC S0 1 4
+give $STR(S0) 1
+#IF
+EQUAL S1 2
+#ACT
+take 天之神铁 4
+#IF
+EQUAL S1 4
+EQUAL S2 99
+#ACT
+take 天之神铁 8
+#IF
+EQUAL S1 4
+EQUAL S2 100
+#ACT
+take 天之神铁 4
+#IF
+EQUAL S1 12
+#ACT
+take 天之神铁 12
+#IF
+SMALL $PARAM(12) 4
+EQUAL S2 99
+#ACT
+break
+#SAY
+　　终于成功了啊，现在这件神兵已经完全被炼化。不过可\
+惜没有更多的材料，不然我一定可以炼出来威力更大的极品\
+神兵。\\
+　　<返回/@exit>
+#IF
+EQUAL S2 100
+#SAY
+　　终于成功了啊，现在这件神兵已经完全被炼化。\\
+　　<返回/@exit>
+#ACT
+break
+#IF
+EQUAL S2 99
+#SAY
+　　终于成功了啊，现在这件神兵已经完全被炼化。\
+看上去还是一件极品。\\
+　　<返回/@exit>
+#IF
+LARGE $ITEMINFO[$PARAM(10)].STDMODE 4
+SMALL $ITEMINFO[$PARAM(10)].STDMODE 7
+LARGE $ITEMINFO[$PARAM(10)].DC2 0
+#ACT
+UPGRADEUSERITEM $PARAM(10) 0 + 1
+break
+#IF
+LARGE $ITEMINFO[$PARAM(10)].STDMODE 4
+SMALL $ITEMINFO[$PARAM(10)].STDMODE 7
+LARGE $ITEMINFO[$PARAM(10)].MC2 0
+#ACT
+UPGRADEUSERITEM $PARAM(10) 2 + 1
+break
+#IF
+LARGE $ITEMINFO[$PARAM(10)].STDMODE 4
+SMALL $ITEMINFO[$PARAM(10)].STDMODE 7
+LARGE $ITEMINFO[$PARAM(10)].SC2 0
+#ACT
+UPGRADEUSERITEM $PARAM(10) 4 + 1
+break
+#IF
+LARGE $ITEMINFO[$PARAM(10)].DC2 0
+#ACT
+UPGRADEUSERITEM $PARAM(10) 0 + 1
+break
+#IF
+LARGE $ITEMINFO[$PARAM(10)].MC2 0
+#ACT
+UPGRADEUSERITEM $PARAM(10) 2 + 1
+break
+#IF
+LARGE $ITEMINFO[$PARAM(10)].SC2 0
+#ACT
+UPGRADEUSERITEM $PARAM(10) 4 + 1
+break
+
+[@xuanbin]
+    哦，这种天之玄兵深埋地下历万年，已经锈迹斑斑，得\
+设法将锈迹炼去，这样才能恢复天之玄兵的锋锐。你找到<color=green 3块>\
+<color=green 纯度都在10以上的黑铁矿石>，我可以帮你炼出真正的天之玄\
+兵。我很忙的，你自己配好矿石，我直接一包裹都拿去炼。\
+    其实这么炼出的天之玄兵戾气太重，很难掌控，一不留\
+神就会自行飞走，真正炼化成为得心应手的神器还需要依靠\
+<color=green 天之神铁>的力量。不多说了，开始吧！\
+<熔炼天之裁决/@ronlianA>  <熔炼天之骨玉/@ronlianB>  <熔炼天之龙纹/@ronlianC>\
+<返回/@meltSky>\
+
+[@ronlianA]
+#IF
+!checkitem 生锈的天之裁决 1
+#SAY
+年轻人，欺骗是不对的，你没有生锈的天之裁决！你应该对\
+你的一言一行负责，才能在未来的生活中赢得尊重。\\
+<好惭愧/@exit>
+#ACT
+break
+#IF
+checkitem 生锈的天之裁决 1
+CHECKITEMDURE 黑铁矿石 10000 3
+#SAY
+恭喜您的天之裁决威力得到完全释放！\\
+<谢谢/@exit>
+#ACT
+take 生锈的天之裁决 1
+TAKEDUREITEM 黑铁矿石 10000 3
+give 天之裁决 1
+break
+#ELSESAY
+你仔细看看，可能你没有3块黑铁矿石或者黑铁矿石的纯度\
+没有达到10以上。这样会毁了天之玄兵的，你符合要求了\
+再来吧。\\
+<多谢指点/@exit>
+
+[@ronlianB]
+#IF
+!checkitem 生锈的天之骨玉 1
+#SAY
+年轻人，欺骗是不对的，你没有生锈的天之骨玉！你应该对\
+你的一言一行负责，才能在未来的生活中赢得尊重。\\
+<好惭愧/@exit>
+#ACT
+break
+#IF
+checkitem 生锈的天之骨玉 1
+CHECKITEMDURE 黑铁矿石 10000 3
+#SAY
+恭喜您的天之骨玉威力得到完全释放！\\
+<谢谢/@exit>
+#ACT
+take 生锈的天之骨玉 1
+TAKEDUREITEM 黑铁矿石 10000 3
+give 天之骨玉 1
+break
+#ELSESAY
+你仔细看看，可能你没有3块黑铁矿石或者黑铁矿石的纯度\
+没有达到10以上。这样会毁了天之玄兵的，你符合要求了\
+再来吧。\\
+<多谢指点/@exit>
+
+[@ronlianC]
+#IF
+!checkitem 生锈的天之龙纹 1
+#SAY
+年轻人，欺骗是不对的，你没有生锈的天之龙纹！你应该对\
+你的一言一行负责，才能在未来的生活中赢得尊重。\\
+<好惭愧/@exit>
+#ACT
+break
+#IF
+checkitem 生锈的天之龙纹 1
+CHECKITEMDURE 黑铁矿石 10000 3
+#SAY
+恭喜您的天之龙纹威力得到完全释放！\\
+<谢谢/@exit>
+#ACT
+take 生锈的天之龙纹 1
+TAKEDUREITEM 黑铁矿石 10000 3
+give 天之龙纹 1
+break
+#ELSESAY
+你仔细看看，可能你没有3块黑铁矿石或者黑铁矿石的纯度\
+没有达到10以上。这样会毁了天之玄兵的，你符合要求了\
+再来吧。\\
+<多谢指点/@exit>

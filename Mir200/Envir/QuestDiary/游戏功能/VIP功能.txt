@@ -1,0 +1,1343 @@
+[@VIP触发]
+{
+
+[@_VIP_打开界面]
+#IF
+RANDOM 1
+#ACT
+SENDMSG 5 您正在查看VIP系统！
+break
+
+[@_VIP_充值]
+#IF
+CHECKGAMEGOLD < $PARAM(0)
+#ACT
+SENDMSG 5 您的元宝不足
+break
+#IF
+RANDOM 1
+#ACT
+GAMEGOLD - $PARAM(0)
+CHANGEVIPEXP + $PARAM(0)
+BINDGAMEGOLD + $PARAM(0)
+SENDMSG 5 充值新区VIP成功!，您当前是vip#32<$VIPLEVEL>,充值vip元宝数为:<$VIPEXP>,剩余元宝数#32<$GAMEGOLD>
+#IF
+LARGE $VIPLEVEL 8
+#ACT
+CHANGENAMECOLOR 253
+break
+
+[@_VIP_扩展包裹]
+#IF
+SMALL $BAGSIZE 66
+#ACT
+MESSAGEBOX 大侠，请先将主体包裹扩充完再来
+break
+#IF
+SMALL $VIPLEVEL 1
+#ACT
+MESSAGEBOX 您不是VIP
+break
+#IF
+CHECKITEM 包裹扩充符 1
+#ACT
+MOV P8 $BAGSIZE
+INC P8 1
+TAKE 包裹扩充符 1
+BAGSIZE $STR(P8)
+SENDMSG 5 恭喜你的VIP包裹扩充成功。
+
+break
+#ELSEACT
+MESSAGEBOX 大侠，你没有包裹扩充符
+break
+
+[@_VIP_扩展仓库]
+#IF
+SMALL $VIPLEVEL 1
+#ACT
+MESSAGEBOX 您不是VIP
+break
+#IF
+CHECKITEM 仓库扩充符 1
+#ACT
+TAKE 仓库扩充符 1
+StorageSize + 1
+SENDMSG 5 恭喜你的VIP仓库扩充成功。
+
+break
+#ELSEACT
+MESSAGEBOX 大侠，你没有仓库扩充符
+break
+
+[@_VIP_升级礼包]
+#IF
+SMALL $VIPLEVEL 1
+#ACT
+MESSAGEBOX 您不是VIP无法领取奖励!
+break
+#IF
+EQUAL $TABLE(SG_PRIVITE).Hum14 $VIPLEVEL
+#ACT
+MESSAGEBOX 您已经领取过奖励!
+break
+#IF
+CHECKBAGSIZE 7
+#ACT
+#ELSEACT
+MESSAGEBOX 请腾出更多包裹!
+break
+#IF
+EQUAL $TABLE(SG_PRIVITE).Hum14 0
+#ACT
+give 飞行靴 1
+UPGRADEUSERITEM $PARAM(10) 20 = 50
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 强化石 1
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 淬炼石 1
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+TABLE SG_PRIVITE Hum14 = 1
+MESSAGEBOX 你成功领取了VIP1升级礼包！
+break
+#IF
+EQUAL $TABLE(SG_PRIVITE).Hum14 1
+#ACT
+give 仓库扩充符 1
+UPGRADEUSERITEM $PARAM(10) 20 = 5
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 包裹扩充符 1
+UPGRADEUSERITEM $PARAM(10) 20 = 5
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 飞行靴 1
+UPGRADEUSERITEM $PARAM(10) 20 = 50
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 强化石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 2
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 淬炼石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 2
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+TABLE SG_PRIVITE Hum14 = 2
+MESSAGEBOX 你成功领取了VIP2升级礼包！
+break
+#IF
+EQUAL $TABLE(SG_PRIVITE).Hum14 2
+#ACT
+give 仓库扩充符 1
+UPGRADEUSERITEM $PARAM(10) 20 = 5
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 包裹扩充符 1
+UPGRADEUSERITEM $PARAM(10) 20 = 5
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 飞行靴 1
+UPGRADEUSERITEM $PARAM(10) 20 = 100
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 强化石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 4
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 淬炼石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 4
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+TABLE SG_PRIVITE Hum14 = 3
+MESSAGEBOX 你成功领取了VIP3升级礼包！
+break
+#IF
+EQUAL $TABLE(SG_PRIVITE).Hum14 3
+#ACT
+give 仓库扩充符 1
+UPGRADEUSERITEM $PARAM(10) 20 = 5
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 包裹扩充符 1
+UPGRADEUSERITEM $PARAM(10) 20 = 5
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 飞行靴 1
+UPGRADEUSERITEM $PARAM(10) 20 = 100
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 强化石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 6
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 淬炼石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 6
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+TABLE SG_PRIVITE Hum14 = 4
+MESSAGEBOX 你成功领取了VIP4升级礼包！
+break
+#IF
+EQUAL $TABLE(SG_PRIVITE).Hum14 4
+#ACT
+give 仓库扩充符 1
+UPGRADEUSERITEM $PARAM(10) 20 = 5
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 包裹扩充符 1
+UPGRADEUSERITEM $PARAM(10) 20 = 5
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 飞行靴 1
+UPGRADEUSERITEM $PARAM(10) 20 = 100
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 强化石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 8
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 淬炼石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 8
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+TABLE SG_PRIVITE Hum14 = 5
+goto @VIP主体神龙之魂
+MESSAGEBOX 你成功领取了VIP5升级礼包！
+break
+#IF
+EQUAL $TABLE(SG_PRIVITE).Hum14 5
+#ACT
+give 仓库扩充符 1
+UPGRADEUSERITEM $PARAM(10) 20 = 5
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 包裹扩充符 1
+UPGRADEUSERITEM $PARAM(10) 20 = 5
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 飞行靴 1
+UPGRADEUSERITEM $PARAM(10) 20 = 100
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 神龙之魂碎片 1
+UPGRADEUSERITEM $PARAM(10) 20 = 50
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 强化石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 10
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 淬炼石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 10
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+TABLE SG_PRIVITE Hum14 = 6
+MESSAGEBOX 你成功领取了VIP6升级礼包！
+break
+#IF
+EQUAL $TABLE(SG_PRIVITE).Hum14 6
+#ACT
+give 仓库扩充符 1
+UPGRADEUSERITEM $PARAM(10) 20 = 5
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 包裹扩充符 1
+UPGRADEUSERITEM $PARAM(10) 20 = 5
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 飞行靴 1
+UPGRADEUSERITEM $PARAM(10) 20 = 100
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 神龙之魂碎片 1
+UPGRADEUSERITEM $PARAM(10) 20 = 50
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 强化石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 20
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 淬炼石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 20
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+TABLE SG_PRIVITE Hum14 = 7
+MESSAGEBOX 你成功领取了VIP7升级礼包！
+break
+#IF
+EQUAL $TABLE(SG_PRIVITE).Hum14 7
+#ACT
+give 仓库扩充符 1
+UPGRADEUSERITEM $PARAM(10) 20 = 10
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 包裹扩充符 1
+UPGRADEUSERITEM $PARAM(10) 20 = 10
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 飞行靴 1
+UPGRADEUSERITEM $PARAM(10) 20 = 200
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 神龙之魂碎片 1
+UPGRADEUSERITEM $PARAM(10) 20 = 50
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 强化石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 30
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 淬炼石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 30
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+TABLE SG_PRIVITE Hum14 = 8
+MESSAGEBOX 你成功领取了VIP8升级礼包！
+break
+#IF
+EQUAL $TABLE(SG_PRIVITE).Hum14 8
+#ACT
+give 仓库扩充符 1
+UPGRADEUSERITEM $PARAM(10) 20 = 10
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 包裹扩充符 1
+UPGRADEUSERITEM $PARAM(10) 20 = 10
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 飞行靴 1
+UPGRADEUSERITEM $PARAM(10) 20 = 200
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 神龙之魂碎片 1
+UPGRADEUSERITEM $PARAM(10) 20 = 100
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 强化石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 50
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 淬炼石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 50
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+TABLE SG_PRIVITE Hum14 = 9
+MESSAGEBOX 你成功领取了VIP9升级礼包！
+break
+#IF
+EQUAL $TABLE(SG_PRIVITE).Hum14 9
+#ACT
+give 仓库扩充符 1
+UPGRADEUSERITEM $PARAM(10) 20 = 10
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 包裹扩充符 1
+UPGRADEUSERITEM $PARAM(10) 20 = 10
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 飞行靴 1
+UPGRADEUSERITEM $PARAM(10) 20 = 200
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 神龙之魂碎片 1
+UPGRADEUSERITEM $PARAM(10) 20 = 100
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 强化石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 100
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 淬炼石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 100
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+TABLE SG_PRIVITE Hum14 = 10
+MESSAGEBOX 你成功领取了VIP10升级礼包！
+break
+#IF
+EQUAL $TABLE(SG_PRIVITE).Hum14 10
+#ACT
+give 飞行靴 1
+UPGRADEUSERITEM $PARAM(10) 20 = 200
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 神龙之魂碎片 1
+UPGRADEUSERITEM $PARAM(10) 20 = 200
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 强化石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 100
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 淬炼石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 100
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+TABLE SG_PRIVITE Hum14 = 11
+MESSAGEBOX 你成功领取了VIP11升级礼包！
+break
+#IF
+EQUAL $TABLE(SG_PRIVITE).Hum14 11
+#ACT
+give 飞行靴 1
+UPGRADEUSERITEM $PARAM(10) 20 = 200
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 神龙之魂碎片 1
+UPGRADEUSERITEM $PARAM(10) 20 = 300
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 强化石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 100
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 淬炼石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 100
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+TABLE SG_PRIVITE Hum14 = 12
+MESSAGEBOX 你成功领取了VIP12升级礼包！
+break
+#IF
+EQUAL $TABLE(SG_PRIVITE).Hum14 12
+#ACT
+give 飞行靴 1
+UPGRADEUSERITEM $PARAM(10) 20 = 200
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 神龙之魂碎片 1
+UPGRADEUSERITEM $PARAM(10) 20 = 400
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 强化石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 100
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 淬炼石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 100
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+TABLE SG_PRIVITE Hum14 = 13
+MESSAGEBOX 你成功领取了VIP13升级礼包！
+break
+#IF
+EQUAL $TABLE(SG_PRIVITE).Hum14 13
+#ACT
+give 飞行靴 1
+UPGRADEUSERITEM $PARAM(10) 20 = 200
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 神龙之魂碎片 1
+UPGRADEUSERITEM $PARAM(10) 20 = 500
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 强化石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 100
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 淬炼石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 100
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+TABLE SG_PRIVITE Hum14 = 14
+MESSAGEBOX 你成功领取了VIP14升级礼包！
+break
+#IF
+EQUAL $TABLE(SG_PRIVITE).Hum14 14
+#ACT
+give 飞行靴 1
+UPGRADEUSERITEM $PARAM(10) 20 = 200
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 神龙之魂碎片 1
+UPGRADEUSERITEM $PARAM(10) 20 = 600
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 强化石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 100
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+give 淬炼石 1
+UPGRADEUSERITEM $PARAM(10) 20 = 100
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+TABLE SG_PRIVITE Hum14 = 15
+MESSAGEBOX 你成功领取了VIP15升级礼包！
+break
+
+[@VIP主体神龙之魂]
+#IF
+checkjob warrior
+#ACT
+give 神龙之魂1 1
+break
+#IF
+checkjob wizard
+#ACT
+give 神龙之魂2 1
+break
+#IF
+checkjob taoist
+#ACT
+give 神龙之魂3 1
+break
+
+[@_VIP_每日福利] VIP
+                    每日福利特权\
+        只有VIP才可以领取每日福利。\\\\
+        <领取福利/@handleVIPPrize> <离开/@exit><返回/@main>
+
+[@handleVIPPrize] VIP
+#IF
+SMALL $VIPLEVEL 1
+#SAY
+您不是vip玩家  <离开/@exit>
+#ACT
+break
+#IF
+EQUAL $Table(SG_Pritime).Tim13 $DATE
+#SAY
+您已经领取过今日福利 <离开/@exit>
+#ACT
+break
+#IF
+CHECKBAGSIZE 2
+#ACT
+MOV S10 VIP
+INC S10 $VIPLEVEL
+INC S10 |
+#ELSEACT
+MESSAGEBOX 请腾出更多包裹!
+break
+#IF
+PosInList $STR(S10) ..\QuestDiary\数据文件\文本数据\vip每日福利.txt S13
+#SAY
+领取福利成功!  <返回/@exit>
+#ACT
+SPLIT $STR(S13) | S14
+BINDGAMEGOLD + $STR(S15)
+give 飞行靴 1 1
+UPGRADEUSERITEM $PARAM(10) 20 = $STR(S16)
+give 离线经验丹 1 1
+Table SG_Pritime Tim13 = $DATE
+break
+#ELSEACT
+SENDMSG 5 系统错误，请重新领取...
+break
+
+[@_VIP_神行千里] VIP
+                    <color=red 神行千里> \
+        VIP1-2可以使用初级传送功能 \
+        VIP3-5可以使用中级传送功能 \
+        VIP6以上可以使用高级传送功能 \
+        每次传送需要消耗1个飞行靴。 \\
+        <传送地点说明/@ToFly> \
+        <使用初级传送/@PutongChuansong> \
+        <使用中级传送/@ZhongjiChuansong> \
+        <使用高级传送/@GaojiChuansong> \\
+        <离开/@exit>
+
+[@ToFly] VIP
+<color=orange 初级传送地点：>\
+    落霞岛、中州魔法祭祀、中州铁匠铺、中州书店、\
+中州药店、中州首饰店、中州仓库、比武准备场。\
+<color=orange 中级传送地点：>\
+    将军坟一层入口、将军坟东一层入口、尸王殿、\
+机关洞、蛇魔谷、逆魔古刹、通天塔、禁地、地下魔域。\
+<color=orange 高级传送地点：>\
+    将军殿、中枢大殿、盘蛇道、八仙纵横、尸上行、\
+逆魔古刹四层、苍茫大厅。\
+    <返回/@_VIP_神行千里>\
+
+[@GaojiChuansong] VIP
+#IF
+SMALL $VIPLEVEL 1
+#SAY
+您不是vip\
+<返回/@_VIP_神行千里>
+#ACT
+break
+#IF
+LARGE $VIPLEVEL 5
+#SAY
+  VIP6级以上可使用以下传送功能\
+    <将军殿入口/@SendTo&H073&140&153>        <中枢大殿入口/@SendTo&M004&24&127>\
+    <盘蛇道/@SendTo&N004&208&477>            <八仙纵横/@SendTo&TT008&166&211>\
+    <逆魔古刹四层/@SendTo&S018&152&285>      <苍茫大厅/@SendTo&AS002&24&118>\
+    <尸上行入口/@SendTo&J006&45&13>       \
+  传送功能使用有风险，请谨慎使用！\
+    <返回/@_VIP_神行千里>
+#ACT
+break
+#ELSESAY
+\\您不是vip6级以上玩家,无法使用高级传送功能  <返回/@main>
+#ELSEACT
+break
+
+[@ZhongjiChuansong] VIP
+#IF
+SMALL $VIPLEVEL 1
+#SAY
+您不是vip\
+<返回/@_VIP_神行千里>
+#ACT
+break
+#IF
+LARGE $VIPLEVEL 2
+#SAY
+  VIP3-5可使用以下传送功能\
+    <将军坟一层入口/@SendTo&0&51&181>            <逆魔古刹/@SendTo&3&368&716>\
+    <将军坟东一层入口/@SendTo&0&775&401>          <通天塔/@SendTo&5&141&111>\
+    <尸王殿/@SendTo&T015&63&134>                    <禁地之门/@SendTo&4&53&187>\
+    <机关洞/@SendTo&2&218&440>                    <地下魔域/@SendTo&7&383&54>\
+    <蛇魔谷/@SendTo&10&60&44>\
+  传送功能使用有风险，请谨慎使用！\
+    <返回/@_VIP_神行千里>
+#ACT
+break
+#ELSESAY
+\\您不是vip3级以上玩家,无法使用高级传送功能  <返回/@main>
+#ELSEACT
+break
+
+[@PutongChuansong] VIP
+#IF
+SMALL $VIPLEVEL 1
+#SAY
+您不是vip\
+<返回/@_VIP_神行千里>
+#ACT
+break
+#IF
+LARGE $VIPLEVEL 0
+#SAY
+  VIP1-2级可使用以下传送功能\
+    <落霞岛/@SendTo&1&246&243>         <中州药店/@SendTo&0&494&274>\
+    <中州魔法祭祀/@SendTo&0&426&179>   <中州首饰店/@SendTo&0&471&252>\
+    <中州铁匠铺/@SendTo&0&420&248>     <中州仓库/@SendTo&0&374&214>\
+    <中州书店/@SendTo&SH010&7&13>       <比武准备场/@SendTo&SH003&15&28>\
+  传送功能使用有风险，请谨慎使用！\
+    <返回/@_VIP_神行千里>
+#ACT
+break
+
+[@SendTo]
+#IF
+CHECKITEM 飞行靴 1
+#ACT
+MAPMOVE $SCRIPTPARAM(1) $SCRIPTPARAM(2) $SCRIPTPARAM(3)
+UPGRADEUSERITEM $ITEMMAKEINDEX[飞行靴] 20 - 1
+break
+#ELSEACT
+SENDMSG 缺少传送道具“飞行靴”，无法使用传送功能，请到商城购买。
+
+break
+
+[@_VIP_神龙之魂] VIP
+    <color=red  在此处可以升级你的神龙之魂>\
+    随着等级提高，神龙之魂的外观将发生变化！\
+    VIP12以上勇士可以将神龙之魂<color=red  提升为神龙之翼>！\
+    <color=orange 升级主体神龙之魂/@ZhutiSLZH1>   \
+    <color=orange 查看神龙之魂属性/@specialGiftProp9ZS&0>   <color=orange 合成神龙之魂/@HechengSLZH>\
+    <color=orange 查看神龙之翼属性/@specialGiftProp9ZS2&0>   \
+    <离开/@exit>
+;<color=orange 升级元神神龙之魂/@YuanshenSLZH>
+;<color=orange 合成元神神龙之魂/@HechengYSSLZH>
+
+
+[@HechengSLZH] VIP
+\\    使用100个神魂残片即可合成<color=red 1级主体神龙之魂>\
+是否立即合成?\
+    神魂残片可以在每日活跃宝箱中获得\
+      <确认/@confirmHecheng>    <返回/@_VIP_神龙之魂>
+
+[@confirmHecheng] VIP
+#IF
+EQUAL $ITEMINFO[18].NAME 神龙之魂
+#SAY
+勇士，您已经穿戴了神龙之魂 <返回/@_VIP_神龙之魂>
+#ACT
+break
+#IF
+EQUAL $ITEMINFO[18].NAME 神龙之翼
+#SAY
+勇士，您已经穿戴了神龙之翼 <返回/@_VIP_神龙之魂>
+#ACT
+break
+#IF
+CHECKITEM 神龙之魂1 1
+#SAY
+勇士，您已经拥有神龙之魂 <返回/@_VIP_神龙之魂>
+#ACT
+break
+#IF
+CHECKITEM 神龙之魂2 1
+#SAY
+勇士，您已经拥有神龙之魂 <返回/@_VIP_神龙之魂>
+#ACT
+break
+#IF
+CHECKITEM 神龙之魂3 1
+#SAY
+勇士，您已经拥有神龙之魂 <返回/@_VIP_神龙之魂>
+#ACT
+break
+#IF
+CHECKITEM 神龙之翼1 1
+#SAY
+勇士，您已经拥有神龙之翼 <返回/@_VIP_神龙之魂>
+#ACT
+break
+#IF
+CHECKITEM 神龙之翼2 1
+#SAY
+勇士，您已经拥有神龙之翼 <返回/@_VIP_神龙之魂>
+#ACT
+break
+#IF
+CHECKITEM 神龙之翼3 1
+#SAY
+勇士，您已经拥有神龙之翼 <返回/@_VIP_神龙之魂>
+#ACT
+break
+#IF
+CHECKITEM 神魂残片 100
+#SAY
+勇士，恭喜您获得神龙之魂 <返回/@_VIP_神龙之魂>
+#ACT
+#ELSESAY
+你包裹中的神魂残片不足，暂无法合成 <返回/@_VIP_神龙之魂>
+#ELSEACT
+break
+#IF
+SMALL $VIPLEVEL 1
+#SAY
+您不是vip\
+<返回/@_VIP_神龙之魂>
+#ACT
+break
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSEACT
+MESSAGEBOX 请腾出更多包裹!
+break
+#IF
+CHECKJOB warrior
+#ACT
+take 神魂残片 100
+give 神龙之魂1 1 1
+break
+#IF
+CHECKJOB wizard
+#ACT
+take 神魂残片 100
+give 神龙之魂2 1 1
+break
+#IF
+CHECKJOB taoist
+#ACT
+take 神魂残片 100
+give 神龙之魂3 1 1
+break
+
+[@ZhutiSLZH1] VIP
+      主体神龙之魂升级：\
+升级第 <color=orange 1> 级需<color=red 100>个神龙之魂碎片  成功率：<color=red 100>% 需要<color=red 40>级 \
+升级第 <color=orange 2> 级需<color=red 200>个神龙之魂碎片  成功率：<color=red 100>% 需要<color=red 43>级 \
+升级第 <color=orange 3> 级需<color=red 300>个神龙之魂碎片  成功率：<color=red 80>% 需要<color=red 45>级 \
+升级第 <color=orange 4> 级需<color=red 400>个神龙之魂碎片  成功率：<color=red 80>% 需要<color=red 47>级 \
+升级第 <color=orange 5> 级需<color=red 500>个神龙之魂碎片  成功率：<color=red 60>% 需要<color=red 48>级 \
+升级第 <color=orange 6> 级需<color=red 800>个神龙之魂碎片  成功率：<color=red 60>% 需要<color=red 49>级 \
+升级第 <color=orange 7> 级需<color=red 1000>个神龙之魂碎片  成功率：<color=red 30>% 需要<color=red 50>级 \
+升级第 <color=orange 8> 级需<color=red 1250>个神龙之魂碎片  成功率：<color=red 30>% 需要<color=red 51>级 \
+升级第 <color=orange 9> 级需<color=red 1500>个神龙之魂碎片  成功率：<color=red 25>% 需要<color=red 52>级 \
+升级第 <color=orange 10> 级需<color=red 2000>个神龙之魂碎片  成功率：<color=red 25>% 需要<color=red 53>级 \
+升级第 <color=orange 11> 级需<color=red 2500>个神龙之魂碎片  成功率：<color=red 20>% 需要<color=red 54>级 \
+      <[立即升级]/@updateSLZH>  <下一页/@ZhutiSLZH2>   <返回/@_VIP_神龙之魂>
+
+[@ZhutiSLZH2] VIP
+<color=red 主体神龙之翼升级>：11级神龙之魂可升级为1级神龙之翼。\
+升级第 <color=orange 1> 级需<color=red 3000>个神龙之魂碎片 成功率：<color=red 15>% 需要<color=red 55>级 VIP<color=red 12>\
+升级第 <color=orange 2> 级需<color=red 4000>个神龙之魂碎片 成功率：<color=red 15>% 需要<color=red 56>级 VIP<color=red 13>\
+升级第 <color=orange 3> 级需<color=red 5000>个神龙之魂碎片 成功率：<color=red 10>% 需要<color=red 57>级 VIP<color=red 13>\
+      升级失败后神龙之魂不会消失\
+      <[立即升级]/@updateSLZH>  <上一页/@ZhutiSLZH1>   <返回/@_VIP_神龙之魂>
+
+[@updateSLZYitem] VIP
+#IF
+CHECKJOB warrior
+#ACT
+MOV S20 神龙之翼1
+MOV P20 $ITEMINFO[$ITEMMAKEINDEX($STR(S20))].ITEMEXT(61)
+#IF
+CHECKJOB wizard
+#ACT
+MOV S20 神龙之翼2
+MOV P20 $ITEMINFO[$ITEMMAKEINDEX($STR(S20))].ITEMEXT(61)
+#IF
+CHECKJOB taoist
+#ACT
+MOV S20 神龙之翼3
+MOV P20 $ITEMINFO[$ITEMMAKEINDEX($STR(S20))].ITEMEXT(61)
+#IF
+CHECKITEM $STR(S20) 1
+#ACT
+MOV S21 $STR(S20)
+INC S21 |
+INC S21 $STR(P20)
+#ELSESAY
+您包裹中没有主体神龙之翼     <返回/@ZhutiSLZH1>
+#ELSEACT
+break
+#IF
+LARGE P20 2
+#SAY
+当前您的神龙之翼无法再继续升级     <返回/@ZhutiSLZH1>
+#ACT
+break
+#IF
+PosInList $STR(S21) ..\QuestDiary\数据文件\文本数据\神龙之魂属性.txt S30
+#ACT
+SPLIT $STR(S30) | S31
+#IF
+RANDOM 1
+#SAY
+普通升级:\
+第{color=orange <$STR(S33)>}级需要{color=red <$STR(S41)>}个神龙之魂碎片\
+成功率：{color=red <$STR(S39)>}% 需{color=red <$STR(S43)>}级 <升级/@updateSLZY1> \\
+完美升级:\
+第{color=orange <$STR(S33)>}级需要{color=red <$STR(S42)>}个神龙之魂碎片\
+成功率：{color=red <$STR(S40)>}% 需{color=red <$STR(S43)>}级 <升级/@updateSLZY2> \\\
+<返回/@_VIP_神龙之魂>
+
+[@updateSLZY1] VIP
+#IF
+CHECKJOB warrior
+#ACT
+MOV S20 神龙之翼1
+MOV P20 $ITEMINFO[$ITEMMAKEINDEX($STR(S20))].ITEMEXT(61)
+#IF
+CHECKJOB wizard
+#ACT
+MOV S20 神龙之翼2
+MOV P20 $ITEMINFO[$ITEMMAKEINDEX($STR(S20))].ITEMEXT(61)
+#IF
+CHECKJOB taoist
+#ACT
+MOV S20 神龙之翼3
+MOV P20 $ITEMINFO[$ITEMMAKEINDEX($STR(S20))].ITEMEXT(61)
+#IF
+CHECKITEM $STR(S20) 1
+#ACT
+MOV S21 $STR(S20)
+INC S21 |
+INC S21 $STR(P20)
+MOV P21 $STR(P20)
+#ELSESAY
+您包裹中没有主体神龙之翼     <返回/@ZhutiSLZH1>
+#ELSEACT
+break
+#IF
+PosInList $STR(S21) ..\QuestDiary\数据文件\文本数据\神龙之魂属性.txt S30
+#ACT
+SPLIT $STR(S30) | S31
+MOV P22 $STR(S44)
+#IF
+SMALL $VIPLEVEL $STR(P22)
+#SAY
+您当前VIP等级不足，无法升级     <返回/@ZhutiSLZH1>
+#ACT
+break
+#IF
+CHECKLEVELEX < $STR(S43)
+#SAY
+您当前等级不足，无法升级     <返回/@ZhutiSLZH1>
+#ACT
+break
+#IF
+CHECKITEM 神龙之魂碎片 $STR(S41)
+#ACT
+#ELSESAY
+你包裹中的神龙之魂碎片不足，需要<$STR(S41)>个,暂无法升级  <返回/@main>
+#ELSEACT
+break
+#IF
+RANDOM $STR(S39) 100
+#SAY
+恭喜您，升级神龙之翼成功！  <返回/@ZhutiSLZH1>
+#ACT
+TAKE 神龙之魂碎片 $STR(S41)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 0 + $STR(S35)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 1 + $STR(S36)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 2 + $STR(S35)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 3 + $STR(S36)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 4 + $STR(S37)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 5 + $STR(S38)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 21 + $STR(S34)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 61 + 1
+break
+#IF
+RANDOM 1
+#SAY
+很遗憾，本机升级失败了！  <返回/@ZhutiSLZH1>
+#ACT
+TAKE 神龙之魂碎片 $STR(S41)
+break
+
+[@updateSLZY2] VIP
+#IF
+CHECKJOB warrior
+#ACT
+MOV S20 神龙之翼1
+MOV P20 $ITEMINFO[$ITEMMAKEINDEX($STR(S20))].ITEMEXT(61)
+#IF
+CHECKJOB wizard
+#ACT
+MOV S20 神龙之翼2
+MOV P20 $ITEMINFO[$ITEMMAKEINDEX($STR(S20))].ITEMEXT(61)
+#IF
+CHECKJOB taoist
+#ACT
+MOV S20 神龙之翼3
+MOV P20 $ITEMINFO[$ITEMMAKEINDEX($STR(S20))].ITEMEXT(61)
+#IF
+CHECKITEM $STR(S20) 1
+#ACT
+MOV S21 $STR(S20)
+INC S21 |
+INC S21 $STR(P20)
+MOV P21 $STR(P20)
+#ELSESAY
+您包裹中没有主体神龙之翼     <返回/@ZhutiSLZH1>
+#ELSEACT
+break
+#IF
+PosInList $STR(S21) ..\QuestDiary\数据文件\文本数据\神龙之魂属性.txt S30
+#ACT
+SPLIT $STR(S30) | S31
+MOV P22 $STR(S44)
+#IF
+SMALL $VIPLEVEL $STR(P22)
+#SAY
+您当前VIP等级不足，无法升级     <返回/@ZhutiSLZH1>
+#ACT
+break
+#IF
+CHECKLEVELEX < $STR(S43)
+#SAY
+您当前等级不足，无法升级     <返回/@ZhutiSLZH1>
+#ACT
+break
+#IF
+CHECKITEM 神龙之魂碎片 $STR(S41)
+#ACT
+#ELSESAY
+你包裹中的神龙之魂碎片不足，需要<$STR(S41)>个,暂无法升级  <返回/@main>
+#ELSEACT
+break
+#IF
+RANDOM $STR(S40) 100
+#SAY
+恭喜您，升级神龙之翼成功！  <返回/@ZhutiSLZH1>
+#ACT
+TAKE 神龙之魂碎片 $STR(S41)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 0 + $STR(S35)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 1 + $STR(S36)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 2 + $STR(S35)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 3 + $STR(S36)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 4 + $STR(S37)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 5 + $STR(S38)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 21 + $STR(S34)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 61 + 1
+break
+#IF
+RANDOM 1
+#SAY
+很遗憾，本机升级失败了！  <返回/@ZhutiSLZH1>
+#ACT
+TAKE 神龙之魂碎片 $STR(S41)
+break
+
+[@updateSLZH] VIP
+#IF
+CHECK [7] 1
+#ACT
+goto @updateSLZYitem
+break
+#IF
+CHECKJOB warrior
+#ACT
+MOV S20 神龙之魂1
+MOV P20 $ITEMINFO[$ITEMMAKEINDEX($STR(S20))].ITEMEXT(61)
+#IF
+CHECKJOB wizard
+#ACT
+MOV S20 神龙之魂2
+MOV P20 $ITEMINFO[$ITEMMAKEINDEX($STR(S20))].ITEMEXT(61)
+#IF
+CHECKJOB taoist
+#ACT
+MOV S20 神龙之魂3
+MOV P20 $ITEMINFO[$ITEMMAKEINDEX($STR(S20))].ITEMEXT(61)
+#IF
+CHECKITEM $STR(S20) 1
+#ACT
+MOV S21 $STR(S20)
+INC S21 |
+INC S21 $STR(P20)
+MOV P21 $STR(P20)
+#ELSESAY
+您包裹中没有主体神龙之魂     <返回/@ZhutiSLZH1>
+#ELSEACT
+break
+#IF
+EQUAL P20 11
+POS $STR(S20) 神龙之魂
+#ACT
+GOTO @updateSLZY
+break
+#IF
+PosInList $STR(S21) ..\QuestDiary\数据文件\文本数据\神龙之魂属性.txt S30
+#ACT
+SPLIT $STR(S30) | S31
+#IF
+RANDOM 1
+#SAY
+普通升级:\
+第{color=orange <$STR(S33)>}级需要{color=red <$STR(S41)>}个神龙之魂碎片\
+成功率：{color=red <$STR(S39)>}% 需{color=red <$STR(S43)>}级 <升级/@updateSLZH1> \\
+完美升级:\
+第{color=orange <$STR(S33)>}级需要{color=red <$STR(S42)>}个神龙之魂碎片\
+成功率：{color=red <$STR(S40)>}% 需{color=red <$STR(S43)>}级 <升级/@updateSLZH2> \\\
+<返回/@_VIP_神龙之魂>
+
+[@updateSLZY] VIP
+普通升级神龙之翼:\
+第{color=orange 1}级需要{color=red 3000}个神龙之魂碎片\
+成功率：{color=red 15}% 需{color=red 55}级  VIP{color=red 12}级 <升级/@updateSLZHTSLZY1> \\
+完美升级神龙之翼:\
+第{color=orange 1}级需要{color=red 6000}个神龙之魂碎片\
+成功率：{color=red 100}% 需{color=red 55}级 VIP{color=red 12}级 <升级/@updateSLZHTSLZY2> \\\
+<返回/@_VIP_神龙之魂>
+
+[@updateSLZHTSLZY1] VIP
+#IF
+CHECKJOB warrior
+#ACT
+MOV S20 神龙之魂1
+MOV P20 $ITEMINFO[$ITEMMAKEINDEX($STR(S20))].ITEMEXT(61)
+#IF
+CHECKJOB wizard
+#ACT
+MOV S20 神龙之魂2
+MOV P20 $ITEMINFO[$ITEMMAKEINDEX($STR(S20))].ITEMEXT(61)
+#IF
+CHECKJOB taoist
+#ACT
+MOV S20 神龙之魂3
+MOV P20 $ITEMINFO[$ITEMMAKEINDEX($STR(S20))].ITEMEXT(61)
+#IF
+CHECKITEM $STR(S20) 1
+#ACT
+MOV S21 $STR(S20)
+INC S21 |
+INC S21 $STR(P20)
+MOV P21 $STR(P20)
+#ELSESAY
+您包裹中没有主体神龙之魂     <返回/@ZhutiSLZH1>
+#ELSEACT
+break
+#IF
+SMALL $VIPLEVEL 12
+#SAY
+您当前VIP等级不足，无法升级     <返回/@ZhutiSLZH1>
+#ACT
+break
+#IF
+CHECKLEVELEX < 55
+#SAY
+您当前等级不足，无法升级     <返回/@ZhutiSLZH1>
+#ACT
+break
+#IF
+CHECKITEM 神龙之魂碎片 3000
+#ACT
+#ELSESAY
+你包裹中的神龙之魂碎片不足，需要3000个,暂无法升级  <返回/@main>
+#ELSEACT
+break
+#IF
+RANDOM 15 100
+#SAY
+恭喜您，升级神龙之翼成功！  <返回/@ZhutiSLZH1>
+#ACT
+SET [7] 1
+TAKE 神龙之魂碎片 3000
+TAKEM $ITEMMAKEINDEX[$STR(S20)]
+ReplaceText S20 魂 翼
+GIVE $STR(S20) 1 1
+break
+#IF
+RANDOM 1
+#SAY
+很遗憾，本机升级失败了！  <返回/@ZhutiSLZH1>
+#ACT
+TAKE 神龙之魂碎片 3000
+break
+
+[@updateSLZHTSLZY2] VIP
+#IF
+CHECKJOB warrior
+#ACT
+MOV S20 神龙之魂1
+MOV P20 $ITEMINFO[$ITEMMAKEINDEX($STR(S20))].ITEMEXT(61)
+#IF
+CHECKJOB wizard
+#ACT
+MOV S20 神龙之魂2
+MOV P20 $ITEMINFO[$ITEMMAKEINDEX($STR(S20))].ITEMEXT(61)
+#IF
+CHECKJOB taoist
+#ACT
+MOV S20 神龙之魂3
+MOV P20 $ITEMINFO[$ITEMMAKEINDEX($STR(S20))].ITEMEXT(61)
+#IF
+CHECKITEM $STR(S20) 1
+#ACT
+MOV S21 $STR(S20)
+INC S21 |
+INC S21 $STR(P20)
+MOV P21 $STR(P20)
+#ELSESAY
+您包裹中没有主体神龙之魂     <返回/@ZhutiSLZH1>
+#ELSEACT
+break
+#IF
+SMALL $VIPLEVEL 12
+#SAY
+您当前VIP等级不足，无法升级     <返回/@ZhutiSLZH1>
+#ACT
+break
+#IF
+CHECKLEVELEX < 55
+#SAY
+您当前等级不足，无法升级     <返回/@ZhutiSLZH1>
+#ACT
+break
+#IF
+CHECKITEM 神龙之魂碎片 6000
+#ACT
+#ELSESAY
+你包裹中的神龙之魂碎片不足，需要6000个,暂无法升级  <返回/@main>
+#ELSEACT
+break
+#IF
+RANDOM 100 100
+#SAY
+恭喜您，升级神龙之翼成功！  <返回/@ZhutiSLZH1>
+#ACT
+SET [7] 1
+TAKE 神龙之魂碎片 6000
+TAKEM $ITEMMAKEINDEX[$STR(S20)]
+ReplaceText S20 魂 翼
+GIVE $STR(S20) 1 1
+break
+#IF
+RANDOM 1
+#SAY
+很遗憾，本机升级失败了！  <返回/@ZhutiSLZH1>
+#ACT
+TAKE 神龙之魂碎片 6000
+break
+
+[@updateSLZH1] VIP
+#IF
+CHECKJOB warrior
+#ACT
+MOV S20 神龙之魂1
+MOV P20 $ITEMINFO[$ITEMMAKEINDEX($STR(S20))].ITEMEXT(61)
+#IF
+CHECKJOB wizard
+#ACT
+MOV S20 神龙之魂2
+MOV P20 $ITEMINFO[$ITEMMAKEINDEX($STR(S20))].ITEMEXT(61)
+#IF
+CHECKJOB taoist
+#ACT
+MOV S20 神龙之魂3
+MOV P20 $ITEMINFO[$ITEMMAKEINDEX($STR(S20))].ITEMEXT(61)
+#IF
+CHECKITEM $STR(S20) 1
+#ACT
+MOV S21 $STR(S20)
+INC S21 |
+INC S21 $STR(P20)
+MOV P21 $STR(P20)
+#ELSESAY
+您包裹中没有主体神龙之魂     <返回/@ZhutiSLZH1>
+#ELSEACT
+break
+#IF
+PosInList $STR(S21) ..\QuestDiary\数据文件\文本数据\神龙之魂属性.txt S30
+#ACT
+SPLIT $STR(S30) | S31
+#IF
+SMALL $VIPLEVEL 1
+#SAY
+您当前VIP等级不足，无法升级     <返回/@ZhutiSLZH1>
+#ACT
+break
+#IF
+CHECKLEVELEX < $STR(S43)
+#SAY
+您当前等级不足，无法升级     <返回/@ZhutiSLZH1>
+#ACT
+break
+#IF
+CHECKITEM 神龙之魂碎片 $STR(S41)
+#ACT
+#ELSESAY
+你包裹中的神龙之魂碎片不足，需要<$STR(S41)>个,暂无法升级  <返回/@main>
+#ELSEACT
+break
+#IF
+RANDOM $STR(S39) 100
+#SAY
+恭喜您，升级神龙之魂成功！  <返回/@ZhutiSLZH1>
+#ACT
+TAKE 神龙之魂碎片 $STR(S41)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 0 + $STR(S35)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 1 + $STR(S36)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 2 + $STR(S35)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 3 + $STR(S36)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 4 + $STR(S37)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 5 + $STR(S38)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 21 + $STR(S34)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 61 + 1
+break
+#IF
+RANDOM 1
+#SAY
+很遗憾，本机升级失败了！  <返回/@ZhutiSLZH1>
+#ACT
+TAKE 神龙之魂碎片 $STR(S41)
+break
+
+[@updateSLZH2] VIP
+#IF
+CHECKJOB warrior
+#ACT
+MOV S20 神龙之魂1
+MOV P20 $ITEMINFO[$ITEMMAKEINDEX($STR(S20))].ITEMEXT(61)
+#IF
+CHECKJOB wizard
+#ACT
+MOV S20 神龙之魂2
+MOV P20 $ITEMINFO[$ITEMMAKEINDEX($STR(S20))].ITEMEXT(61)
+#IF
+CHECKJOB taoist
+#ACT
+MOV S20 神龙之魂3
+MOV P20 $ITEMINFO[$ITEMMAKEINDEX($STR(S20))].ITEMEXT(61)
+#IF
+CHECKITEM $STR(S20) 1
+#ACT
+MOV S21 $STR(S20)
+INC S21 |
+INC S21 $STR(P20)
+MOV P21 $STR(P20)
+#ELSESAY
+您包裹中没有主体神龙之魂     <返回/@ZhutiSLZH1>
+#ELSEACT
+break
+#IF
+PosInList $STR(S21) ..\QuestDiary\数据文件\文本数据\神龙之魂属性.txt S30
+#ACT
+SPLIT $STR(S30) | S31
+#IF
+SMALL $VIPLEVEL 1
+#SAY
+您当前VIP等级不足，无法升级     <返回/@ZhutiSLZH1>
+#ACT
+break
+#IF
+CHECKLEVELEX < $STR(S43)
+#SAY
+您当前等级不足，无法升级     <返回/@ZhutiSLZH1>
+#ACT
+break
+#IF
+CHECKITEM 神龙之魂碎片 $STR(S41)
+#ACT
+#ELSESAY
+你包裹中的神龙之魂碎片不足，需要<$STR(S41)>个,暂无法升级  <返回/@main>
+#ELSEACT
+break
+#IF
+RANDOM $STR(S40) 100
+#SAY
+恭喜您，升级神龙之魂成功！  <返回/@ZhutiSLZH1>
+#ACT
+TAKE 神龙之魂碎片 $STR(S41)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 0 + $STR(S35)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 1 + $STR(S36)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 2 + $STR(S35)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 3 + $STR(S36)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 4 + $STR(S37)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 5 + $STR(S38)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 21 + $STR(S34)
+UPGRADEUSERITEM $ITEMMAKEINDEX[$STR(S20)] 61 + 1
+break
+#IF
+RANDOM 1
+#SAY
+很遗憾，本机升级失败了！  <返回/@ZhutiSLZH1>
+#ACT
+TAKE 神龙之魂碎片 $STR(S41)
+break
+
+[@specialGiftProp9ZS2] VIP
+#IF
+EQUAL $SCRIPTPARAM(1) 0
+#SAY
+1级神龙之翼：\
+战士：血量810 物防/魔防3-29 攻击3-29\
+法师：血量300 物防/魔防3-29 魔法3-29\
+道士：血量405 物防/魔防3-29 道术3-29\
+2级神龙之翼：\
+战士：血量960 物防/魔防3-34 攻击3-34\
+法师：血量360 物防/魔防3-34 魔法3-34\
+道士：血量480 物防/魔防3-34 道术3-34\
+   <color=gray 上一页>    <下一页/@specialGiftProp9ZS2&1>    <返回/@_VIP_神龙之魂>\
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 1
+#SAY
+3级神龙之翼：\
+战士：血量1140 物防/魔防3-40 攻击3-40\
+法师：血量432 物防/魔防3-40 魔法3-40\
+道士：血量570 物防/魔防3-40 道术3-40\
+4级神龙之翼：\
+战士：血量1440 物防/魔防4-50 攻击4-50\
+法师：血量552 物防/魔防4-50 魔法4-50\
+道士：血量720 物防/魔防4-50 道术4-50\
+   <上一页/@specialGiftProp9ZS2&0>    <color=gray 下一页>     <返回/@main>\
+#ACT
+break
+
+[@specialGiftProp9ZS] VIP
+#IF
+EQUAL $SCRIPTPARAM(1) 0
+#SAY
+1级神龙之魂：\
+战士：血量300 物防/魔防1-10 攻击1-10\
+法师：血量120 物防/魔防1-10 魔法1-10\
+道士：血量150 物防/魔防1-10 道术1-10\
+2级神龙之魂：\
+战士：血量330 物防/魔防1-11 攻击1-11\
+法师：血量132 物防/魔防1-11 魔法1-11\
+道士：血量165 物防/魔防1-11 道术1-11\
+   <color=gray 上一页>    <下一页/@specialGiftProp9ZS&1>    <返回/@_VIP_神龙之魂>\
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 1
+#SAY
+3级神龙之魂：\
+战士：血量360 物防/魔防1-12 攻击1-12\
+法师：血量144 物防/魔防1-12 魔法1-12\
+道士：血量180 物防/魔防1-12 道术1-12\
+4级神龙之魂：\
+战士：血量390 物防/魔防1-13 攻击1-13\
+法师：血量156 物防/魔防1-13 魔法1-13\
+道士：血量195 物防/魔防1-13 道术1-13\
+   <上一页/@specialGiftProp9ZS&0>    <下一页/@specialGiftProp9ZS&2>    <返回/@_VIP_神龙之魂>\
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 2
+#SAY
+5级神龙之魂：\
+战士：血量420 物防/魔防1-14 攻击1-14\
+法师：血量168 物防/魔防1-14 魔法1-14\
+道士：血量210 物防/魔防1-14 道术1-14\
+6级神龙之魂：\
+战士：血量450 物防/魔防1-16 攻击1-16\
+法师：血量180 物防/魔防1-16 魔法1-16\
+道士：血量225 物防/魔防1-16 道术1-16\
+   <上一页/@specialGiftProp9ZS&1>    <下一页/@specialGiftProp9ZS&3>    <返回/@_VIP_神龙之魂>\
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 3
+#SAY
+7级神龙之魂：\
+战士：血量480 物防/魔防1-18 攻击1-18\
+法师：血量192 物防/魔防1-18 魔法1-18\
+道士：血量240 物防/魔防1-18 道术1-18\
+8级神龙之魂：\
+战士：血量540 物防/魔防2-20 攻击2-20\
+法师：血量210 物防/魔防2-20 魔法2-20\
+道士：血量270 物防/魔防2-20 道术2-20\
+   <上一页/@specialGiftProp9ZS&2>    <下一页/@specialGiftProp9ZS&4>    <返回/@_VIP_神龙之魂>\
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 4
+#SAY
+9级神龙之魂：\
+战士：血量600 物防/魔防2-22 攻击2-22\
+法师：血量228 物防/魔防2-22 魔法2-22\
+道士：血量300 物防/魔防2-22 道术2-22\
+10级神龙之魂：\
+战士：血量660 物防/魔防2-24 攻击2-24\
+法师：血量246 物防/魔防2-24 魔法2-24\
+道士：血量330 物防/魔防2-24 道术2-24\
+   <上一页/@specialGiftProp9ZS&3>    <下一页/@specialGiftProp9ZS&5>    <返回/@_VIP_神龙之魂>\
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 5
+#SAY
+11级神龙之魂：\
+战士：血量720 物防/魔防2-26 攻击2-26\
+法师：血量264 物防/魔防2-26 魔法2-26\
+道士：血量360 物防/魔防2-26 道术2-26\
+   <上一页/@specialGiftProp9ZS&4>    <color=gray 下一页>    <返回/@_VIP_神龙之魂>\
+#ACT
+break
+
+}

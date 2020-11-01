@@ -1,0 +1,359 @@
+[@main]
+#IF
+EQUAL G0 1
+#SAY
+  <color=ggreen 新区超级夺宝>活动中<color=ggreen 通天教主>将出现在此。进入后请小心\
+戒备！新区超级宝盒奖励为<color=green 蟠龙精魄、技能残章、10000元宝>。\
+  <color=purple 新区夺宝在><color=red [><color=green 120><color=red ]><color=purple 分钟自动开启，当前已运行><color=red [>{color=green <$STR(G1)>}<color=red ]><color=purple 分钟！>\
+  <color=red 注意：开启超级夺宝宝盒的夺宝人将在NPC处领取夺宝奖励！>\
+  夺宝奖励：<color=red [>{color=green 蟠龙精魄、技能残章、10000元宝}<color=red ]>\\
+      <color=gray 当前游戏为测试模式，开区时间分钟不增加！>\\
+  <合成蟠龙顶级首饰/@panlong>    <合成高级技能书/@skill>    <合成高级面具/@Mask>
+#ACT
+break
+#IF
+SMALL G1 120
+EQUAL G2 10
+#SAY
+  <color=ggreen 新区超级夺宝>活动中<color=ggreen 通天教主>将出现在此。进入后请小心\
+戒备！新区超级宝盒奖励为<color=green 蟠龙精魄、技能残章、10000元宝>。\
+  <color=purple 新区夺宝在><color=red [><color=green 120><color=red ]><color=purple 分钟自动开启，当前已运行><color=red [>{color=green <$STR(G1)>}<color=red ]><color=purple 分钟！>\
+  <color=red 注意：开启超级夺宝宝盒的夺宝人将在NPC处领取夺宝奖励！>\
+  夺宝奖励：<color=red [>{color=green 蟠龙精魄、技能残章、10000元宝}<color=red ]>\\\\
+  <合成蟠龙顶级首饰/@panlong>    <合成高级技能书/@skill>    <合成高级面具/@Mask>
+#ACT
+break
+#IF
+EQUAL G17 2
+EQUAL G2 1
+#SAY
+  <color=ggreen 新区超级夺宝>活动中<color=ggreen 通天教主>将出现在此。进入后请小心\
+戒备！新区超级宝盒奖励为<color=green 蟠龙精魄、技能残章、10000元宝>。\
+  <color=purple 新区夺宝在><color=red [><color=green 120><color=red ]><color=purple 分钟自动开启，当前已运行><color=red [>{color=green <$STR(G1)>}<color=red ]><color=purple 分钟！>\
+  <color=red 注意：开启超级夺宝宝盒的夺宝人将在NPC处领取夺宝奖励！>\
+  夺宝奖励：<color=red [>{color=green 蟠龙精魄、技能残章、10000元宝}<color=red ]>\\
+  <进入超级夺宝地图/@gotoyxslc>\\
+  <合成蟠龙顶级首饰/@panlong>    <合成高级技能书/@skill>    <合成高级面具/@Mask>
+#ACT
+break
+#IF
+LARGE G17 2
+EQUAL G2 1
+#SAY
+  <color=ggreen 新区超级夺宝>活动中<color=ggreen 通天教主>将出现在此。进入后请小心\
+戒备！新区超级宝盒奖励为<color=green 蟠龙精魄、技能残章、10000元宝>。\
+  <color=purple 新区夺宝在><color=red [><color=green 120><color=red ]><color=purple 分钟自动开启，当前已运行><color=red [>{color=green <$STR(G1)>}<color=red ]><color=purple 分钟！>\
+  <color=red 注意：开启超级夺宝宝盒的夺宝人将在NPC处领取夺宝奖励！>\
+  夺宝玩家：<color=red [>{color=green <$STR(A19)>}<color=red ]>  \
+  夺宝奖励：<color=red [>{color=green 蟠龙精魄、技能残章、10000元宝}<color=red ]>\
+  奖励状态：<color=red [><$STR(A20)><color=red ]>\\
+  <合成蟠龙顶级首饰/@panlong>    <合成高级技能书/@skill>    <合成高级面具/@Mask>
+#ACT
+break
+#IF
+SMALL G17 2
+#SAY
+  <color=ggreen 超级夺宝>活动中<color=ggreen 通天教主>将出现在此。进入后请小心戒备！\
+超级宝盒奖励为{color=green 蟠龙精魄、技能残章、<$STR(A18)>}。\
+  <color=red 注意：开启超级夺宝宝盒的夺宝人将在NPC处领取夺宝奖励！>\
+  夺宝时间：<color=red [>{color=yellow <$STR(G18)>月<$STR(G19)>日  <$STR(G20)>点<$STR(G21)>分}<color=red ]>\
+  夺宝奖励：<color=red [>{color=green 蟠龙精魄、技能残章、<$STR(A18)>}<color=red ]>\\\\
+  <合成蟠龙顶级首饰/@panlong>    <合成高级技能书/@skill>    <合成高级面具/@Mask>
+#ACT
+break
+#IF
+EQUAL G17 2
+#SAY
+  <color=ggreen 超级夺宝>活动中<color=ggreen 通天教主>将出现在此。进入后请小心戒备！\
+超级宝盒奖励为{color=green 蟠龙精魄、技能残章、<$STR(A18)>}。\
+  <color=red 注意：开启超级夺宝宝盒的夺宝人将在NPC处领取夺宝奖励！>\
+  夺宝时间：<color=red [>{color=yellow <$STR(G18)>月<$STR(G19)>日  <$STR(G20)>点<$STR(G21)>分}<color=red ]>\
+  夺宝奖励：<color=red [>{color=green 蟠龙精魄、技能残章、<$STR(A18)>}<color=red ]>\\
+  <进入超级夺宝地图/@gotoyxslc>\\
+  <合成蟠龙顶级首饰/@panlong>    <合成高级技能书/@skill>    <合成高级面具/@Mask>
+#ACT
+break
+#IF
+LARGE G17 2
+#SAY
+  <color=ggreen 超级夺宝>活动中<color=ggreen 通天教主>将出现在此。进入后请小心戒备！\
+超级宝盒奖励为{color=green 蟠龙精魄、技能残章、<$STR(A18)>}。\
+  <color=red 注意：开启超级夺宝宝盒的夺宝人将在NPC处领取夺宝奖励！>\
+  夺宝时间：<color=red [>{color=yellow <$STR(G18)>月<$STR(G19)>日  <$STR(G20)>点<$STR(G21)>分}<color=red ]>\
+  夺宝玩家：<color=red [>{color=green <$STR(A19)>}<color=red ]>  \
+  夺宝奖励：<color=red [>{color=green 蟠龙精魄、技能残章、<$STR(A18)>}<color=red ]>\
+  奖励状态：<color=red [><$STR(A20)><color=red ]>\\
+  <合成蟠龙顶级首饰/@panlong>    <合成高级技能书/@skill>    <合成高级面具/@Mask>
+#ACT
+break
+
+[@getboxitem]
+#IF
+!EQUAL A19 $USERNAME
+#ACT
+MESSAGEBOX 你不是开启超级宝盒玩家，无法领取奖励！
+break
+#IF
+!EQUAL G17 3
+#ACT
+MOV A20 "<color=gray 已领取>"
+MESSAGEBOX 你已经领取了夺宝奖励！
+break
+#IF
+CHECKBAGSIZE 5
+#ACT
+#ELSEACT
+MESSAGEBOX 请腾出更多包裹!
+break
+#IF
+EQUAL G2 1
+#SAY
+    恭喜您夺宝成功！获得了超级夺宝奖励！\\
+    <谢谢/@exit>
+#ACT
+MOV G17 4
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\超级夺宝残章.txt S10
+GIVE 蟠龙精魄 1
+GAMEGOLD + 10000
+GIVE $STR(S10) 1
+SENDMSG 24 恭喜<$USERNAME>领取了超级夺宝奖励！ 253
+SENDMSG 24 获得蟠龙精魄、<$STR(S10)>、10000元宝奖励！ 253
+break
+#IF
+EQUAL A18 财神面具
+#SAY
+    恭喜您夺宝成功！获得了超级夺宝奖励！\\
+    <谢谢/@exit>
+#ACT
+MOV G17 4
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\超级夺宝残章.txt S10
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\超级夺宝面具.txt S11
+GIVE 蟠龙精魄 1
+GIVE $STR(S10) 1
+GIVE $STR(S11) 1
+SENDMSG 24 恭喜<$USERNAME>领取了超级夺宝奖励！ 253
+SENDMSG 24 获得蟠龙精魄、<$STR(S10)>、<$STR(S11)>奖励！ 253
+break
+#IF
+EQUAL G17 3
+!EQUAL A18 财神面具
+#SAY
+    恭喜您夺宝成功！获得了超级夺宝奖励！\\
+    <谢谢/@exit>
+#ACT
+MOV G17 4
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\超级夺宝残章.txt S10
+GIVE 蟠龙精魄 1
+GIVE $STR(S10) 1
+GIVE $STR(A18) 1
+SENDMSG 24 恭喜<$USERNAME>领取了超级夺宝奖励！ 253
+SENDMSG 24 获得蟠龙精魄、<$STR(S10)>、<$STR(A18)>奖励！ 253
+break
+
+[@Mask]
+  请选择你要合成的面具类型：\\
+  <color=gray 双11面具 = 财神面具x3 + 蟠龙精魄x1 + 10000元宝>\
+  <color=gray 金猴面具 = 双11面具x3 + 蟠龙精魄x1 + 20000元宝>\\
+  <双11面具(战)/@dhmask&财神面具(战)&双11面具(战)&150&10000>      <双11面具(法)/@dhmask&财神面具(法)&双11面具(法)&50&10000>      <双11面具(道)/@dhmask&财神面具(道)&双11面具(道)&60&10000>\\
+  <金猴面具(战)/@dhmask&双11面具(战)&金猴面具(战)&150&20000>      <金猴面具(法)/@dhmask&双11面具(法)&金猴面具(法)&50&20000>      <金猴面具(道)/@dhmask&双11面具(道)&金猴面具(道)&60&20000>
+
+[@dhmask]
+#IF
+CHECKITEM $SCRIPTPARAM(1) 3
+#ACT
+#ELSESAY
+  你身上的<$SCRIPTPARAM(1)>不足3件，无法兑换。\
+  <返回/@clothes>\
+#ELSEACT
+break
+#IF
+CHECKGAMEGOLD < $SCRIPTPARAM(4)
+#SAY
+  你身上的元宝不足<$SCRIPTPARAM(4)>个，无法兑换。\
+  <返回/@clothes>\
+#ACT
+break
+#IF
+CHECKITEM 蟠龙精魄 1
+#SAY
+  你成功兑换一件{color=green <$SCRIPTPARAM(2)>}。\
+  <返回/@clothes>\
+#ACT
+TAKE 蟠龙精魄 1
+TAKE $SCRIPTPARAM(1) 3
+GAMEGOLD - $SCRIPTPARAM(4)
+GIVE $SCRIPTPARAM(2) 1
+UPGRADEUSERITEM $PARAM(10) 20 = $SCRIPTPARAM(3)
+break
+#ELSESAY
+  你身上的蟠龙精魄不足1个，无法兑换。\
+  <返回/@clothes>\
+#ELSEACT
+break
+
+[@skill]
+  请选择你要合成的技能书：\
+  注：残章绑定合成的技能书绑定，残章不绑定合成不绑定。\\
+  <翱风斩/@choiceSkill&翱风斩>          <纵雷诀/@choiceSkill&纵雷诀>            <毒凌波/@choiceSkill&毒凌波>\
+  <龙啸九天/@choiceSkill&龙啸九天>        <奔雷诀/@choiceSkill&奔雷诀>            <魔舞吞噬/@choiceSkill&魔舞吞噬>\
+  <强化攻杀一重/@choiceSkill&本体强化攻杀1>    <强化火球一重/@choiceSkill&本体强化火球1>      <强化施毒一重/@choiceSkill&本体强化施毒1>\
+
+[@choiceSkill]
+#IF
+POS $SCRIPTPARAM(1) 本体
+#ACT
+MOV S10 $SCRIPTPARAM(1)
+ReplaceText S10 本体
+ReplaceText S10 1 残章
+MOV S11 6
+MOV S12 1
+#ELSEACT
+MOV S10 $SCRIPTPARAM(1)
+INC S10 残章
+MOV S11 3
+MOV S12 1
+#IF
+EQUAL $SCRIPTPARAM(1) 翱风斩
+#ACT
+MOV S11 3
+MOV S12 2
+MOV S13 $SCRIPTPARAM(1)
+INC S13 (初级)
+MOV S14 $SCRIPTPARAM(1)
+INC S14 (中级)
+MOV S15 $SCRIPTPARAM(1)
+INC S15 (高级)
+MOV S16 $SCRIPTPARAM(1)
+INC S16 (专家级)
+#IF
+EQUAL $SCRIPTPARAM(1) 纵雷诀
+#ACT
+MOV S11 3
+MOV S12 2
+MOV S13 $SCRIPTPARAM(1)
+INC S13 (初级)
+MOV S14 $SCRIPTPARAM(1)
+INC S14 (中级)
+MOV S15 $SCRIPTPARAM(1)
+INC S15 (高级)
+MOV S16 $SCRIPTPARAM(1)
+INC S16 (专家级)
+#IF
+EQUAL $SCRIPTPARAM(1) 毒凌波
+#ACT
+MOV S11 3
+MOV S12 2
+MOV S13 $SCRIPTPARAM(1)
+INC S13 (初级)
+MOV S14 $SCRIPTPARAM(1)
+INC S14 (中级)
+MOV S15 $SCRIPTPARAM(1)
+INC S15 (高级)
+MOV S16 $SCRIPTPARAM(1)
+INC S16 (专家级)
+#IF
+EQUAL S12 1
+#SAY
+  请选择你要合成的技能书级别：\
+  消耗{color=orange <$STR(S11)>} 个{color=green <$STR(S10)>}合成一本{color=green <$SCRIPTPARAM(1)>}         {合成/@getSkill&<$STR(S11)>&<$STR(S10)>&<$SCRIPTPARAM(1)>}\
+  <返回/@skill>\
+#ACT
+break
+#IF
+EQUAL S12 2
+#SAY
+  请选择你要合成的技能书级别：\
+  消耗<color=orange 3 >个{color=green <$STR(S10)>}合成一本{color=green <$STR(S13)>}     {合成/@getSkill&3&<$STR(S10)>&<$STR(S13)>}\
+  消耗<color=orange 6 >个{color=green <$STR(S10)>}合成一本{color=green <$STR(S14)>}     {合成/@getSkill&6&<$STR(S10)>&<$STR(S14)>}\
+  消耗<color=orange 9 >个{color=green <$STR(S10)>}合成一本{color=green <$STR(S15)>}     {合成/@getSkill&9&<$STR(S10)>&<$STR(S15)>}\
+  消耗<color=orange 12>个{color=green <$STR(S10)>}合成一本{color=green <$STR(S16)>}   {合成/@getSkill&12&<$STR(S10)>&<$STR(S16)>}\
+  <返回/@skill>\
+#ACT
+break
+
+[@getSkill]
+#IF
+CHECKITEM $SCRIPTPARAM(2) $SCRIPTPARAM(1)
+#SAY
+  你成功合成一本{color=green <$SCRIPTPARAM(3)>}。\
+  <返回/@skill>\
+#ACT
+#ELSESAY
+  你身上的<$SCRIPTPARAM(2)>不足<$SCRIPTPARAM(1)>个，无法兑换。\
+  <返回/@skill>\
+#ELSEACT
+break
+#IF
+EQUAL $ITEMINFO[$ITEMMAKEINDEX($STR(S10))].ITEMEXT(27) 1
+#ACT
+TAKE $SCRIPTPARAM(2) $SCRIPTPARAM(1)
+GIVE $SCRIPTPARAM(3) 1
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+break
+#ELSEACT
+TAKE $SCRIPTPARAM(2) $SCRIPTPARAM(1)
+GIVE $SCRIPTPARAM(3) 1
+break
+
+[@panlong]
+    天命的勇士，如果您已经获得了神奇的<color=yellow 蟠龙精魄>，我可以\
+帮您进行铸造，再加入一些必须的材料，就可以制造出威力巨\
+大的<color=red 蟠龙级装备>，助你称霸中州，纵横天下！\\\\
+<蟠龙精魄兑换蟠龙级装备/@jinpoExchange>
+
+[@jinpoExchange]
+兑换蟠龙级装备需要蟠龙精魄、100个强化石及10000个元宝。\
+    战士:  <蟠龙傲天头盔/@doExchangejinpo&蟠龙傲天头盔> <蟠龙傲天项链/@doExchangejinpo&蟠龙傲天项链> <蟠龙傲天手镯/@doExchangejinpo&蟠龙傲天手镯>\
+           <蟠龙傲天戒指/@doExchangejinpo&蟠龙傲天戒指> <蟠龙傲天靴子/@doExchangejinpo&蟠龙傲天靴子> <蟠龙傲天腰带/@doExchangejinpo&蟠龙傲天腰带>\\
+    法师:  <蟠龙幻天头盔/@doExchangejinpo&蟠龙幻天头盔> <蟠龙幻天项链/@doExchangejinpo&蟠龙幻天项链> <蟠龙幻天手镯/@doExchangejinpo&蟠龙幻天手镯>\
+           <蟠龙幻天戒指/@doExchangejinpo&蟠龙幻天戒指> <蟠龙幻天靴子/@doExchangejinpo&蟠龙幻天靴子> <蟠龙幻天腰带/@doExchangejinpo&蟠龙幻天腰带>\\
+    道士:  <蟠龙玄天头盔/@doExchangejinpo&蟠龙玄天头盔> <蟠龙玄天项链/@doExchangejinpo&蟠龙玄天项链> <蟠龙玄天手镯/@doExchangejinpo&蟠龙玄天手镯>\
+           <蟠龙玄天戒指/@doExchangejinpo&蟠龙玄天戒指> <蟠龙玄天靴子/@doExchangejinpo&蟠龙玄天靴子> <蟠龙玄天腰带/@doExchangejinpo&蟠龙玄天腰带>\
+
+[@doExchangejinpo]
+#IF
+RANDOM 1
+#SAY
+    兑换蟠龙级装备需要一个蟠龙精魄。\
+#ACT
+ShowSpotDlg 6 请放入蟠龙精魄： @givejingpo
+break
+
+[@givejingpo]
+#IF
+!EQUAL $PARAM(0) 蟠龙精魄
+#SAY
+    对不起，您给的不是蟠龙精魄。\
+#ACT
+break
+#IF
+!CHECKITEM 强化石 100
+#SAY
+    对不起，您的强化石不足。\
+#ACT
+break
+#IF
+CHECKGAMEGOLD > 9999
+#SAY
+    恭喜勇士兑换1个<$SCRIPTPARAM(1)>!\
+    <返回/@jinpoExchange>
+#ACT
+TAKEM $PARAM(1)
+TAKE 强化石 100
+GAMEGOLD - 10000
+GIVE $SCRIPTPARAM(1) 1
+break
+#ELSESAY
+    对不起，您的元宝不足。\
+#ELSEACT
+break
+
+[@gotoyxslc]
+#IF
+CHECKLEVELEX > 35
+#ACT
+MAP DBDT2
+break
+#ELSESAY
+  勇士，你的等级未达到36级，无法进入！\
+  <离开/@exit>\

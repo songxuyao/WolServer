@@ -1,0 +1,10 @@
+[setup]
+stepcount = 3
+title = 勇士密令任务
+ID = 49
+stepaim1 = 去<落霞岛/@@goplace 1 250,245>杀5个兔 <color=green [传]/@@flyto 45 1 250 245>
+stepaim2 = 还要杀<$TASKVAL(49).I0>个<兔/@@goplace 1 250,245>
+stepaim3 = 任务完成！去找<赏金猎人/@@goto 0 赏金猎人 464,214> <color=green [传]/@@flyto 46 0 464 214>
+stepDESC1 = <color=0Xddaa55 任务奖励：>\　　<COLOR=GREEN 30万经验。>\<color=0Xddaa55 任务介绍：>\    这次你要完成的任务是去落霞消灭5只兔。\    打败妖魔后，别忘记到我这里来完成任务并领取奖励。
+stepDESC2 = <color=0Xddaa55 任务奖励：>\　　<COLOR=GREEN 30万经验。>\<color=0Xddaa55 任务介绍：>\　　你还要杀死落霞的<$TASKVAL(49).I0>只兔。
+stepDESC3 = <color=0Xddaa55 任务奖励：>\　　<COLOR=GREEN 30万经验。>\<color=0Xddaa55 任务介绍：>\　　你成功完成了勇士密令任务。请回中州<赏金猎人/@@goto 0 赏金猎人 464,214>交任务\吧。

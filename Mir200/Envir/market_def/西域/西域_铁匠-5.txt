@@ -1,0 +1,29 @@
+(@fastbuy @buy @sell @repair @s_repair )
+%100
++5
++6
++43
+[@main]
+欢迎光临。请问有什么事情帮忙吗？\
+<快捷交易/@fastbuy>\
+<购入武器/@buy>\
+<出售武器/@sell>\
+<修理武器/@repair>\
+<特殊修理/@s_repair>\
+<询问武器/@qweapon>\
+<关闭选单/@exit>
+
+[@fastbuy]
+#CALL [\商人\武器.txt] @快捷交易
+
+[@buy]
+#CALL [\商人\武器.txt] @购入武器
+
+[@sell]
+#CALL [\商人\武器.txt] @出售武器
+
+[@repair]
+#CALL [\商人\武器.txt] @修理武器
+
+[@s_repair]
+#CALL [\商人\武器.txt] @特殊修理

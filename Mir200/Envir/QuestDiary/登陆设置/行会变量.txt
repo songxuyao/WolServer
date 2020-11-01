@@ -1,0 +1,14 @@
+[@行会变量]
+{
+
+#IF
+RANDOM 1
+#ACT
+VAR String GUILD 日01
+VAR String GUILD 日02
+VAR Integer GUILD 行会01
+LOADVAR GUILD 日01 ..\QuestDiary\数据文件\行会变量\<$GUILDNAME>.txt
+LOADVAR GUILD 日02 ..\QuestDiary\数据文件\行会变量\<$GUILDNAME>.txt
+LOADVAR GUILD 行会01 ..\QuestDiary\数据文件\行会变量\<$GUILDNAME>.txt
+
+}

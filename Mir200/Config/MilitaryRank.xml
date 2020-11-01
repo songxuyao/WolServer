@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="gb2312"?>
+<junxian>
+	<level value="1" name="一阶王城勇士" nextlevelexp="10000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="10" prop_value_0_2="10" prop_name1="gj" prop_value_1_1="0" prop_value_1_2="0" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="0" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="0"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="4" prop_value_0_2="4" prop_name1="mfgj" prop_value_1_1="0" prop_value_1_2="0" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="0" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="0"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="6" prop_value_0_2="6" prop_name1="dsgj" prop_value_1_1="0" prop_value_1_2="0" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="0" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="0"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="10" prop_value_0_2="10" prop_name1="ylgj" prop_value_1_1="0" prop_value_1_2="0" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="0" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="0"/>
+	</level>
+	<level value="2" name="二阶王城勇士" nextlevelexp="16000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="17" prop_value_0_2="17" prop_name1="gj" prop_value_1_1="0" prop_value_1_2="0" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="0" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="0"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="6" prop_value_0_2="6" prop_name1="mfgj" prop_value_1_1="0" prop_value_1_2="0" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="0" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="0"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="11" prop_value_0_2="11" prop_name1="dsgj" prop_value_1_1="0" prop_value_1_2="0" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="0" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="0"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="17" prop_value_0_2="17" prop_name1="ylgj" prop_value_1_1="0" prop_value_1_2="0" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="0" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="0"/>
+	</level>
+	<level value="3" name="三阶王城勇士" nextlevelexp="20000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="26" prop_value_0_2="26" prop_name1="gj" prop_value_1_1="0" prop_value_1_2="1" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="10" prop_value_0_2="10" prop_name1="mfgj" prop_value_1_1="0" prop_value_1_2="1" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="17" prop_value_0_2="17" prop_name1="dsgj" prop_value_1_1="0" prop_value_1_2="1" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="26" prop_value_0_2="26" prop_name1="ylgj" prop_value_1_1="0" prop_value_1_2="1" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+	</level>
+	<level value="4" name="四阶王城勇士" nextlevelexp="27000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="35" prop_value_0_2="35" prop_name1="gj" prop_value_1_1="0" prop_value_1_2="1" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="14" prop_value_0_2="14" prop_name1="mfgj" prop_value_1_1="0" prop_value_1_2="1" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="24" prop_value_0_2="24" prop_name1="dsgj" prop_value_1_1="0" prop_value_1_2="1" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="35" prop_value_0_2="35" prop_name1="ylgj" prop_value_1_1="0" prop_value_1_2="1" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+	</level>
+	<level value="5" name="五阶王城勇士" nextlevelexp="41000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="50" prop_value_0_2="50" prop_name1="gj" prop_value_1_1="0" prop_value_1_2="1" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="20" prop_value_0_2="20" prop_name1="mfgj" prop_value_1_1="0" prop_value_1_2="1" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="33" prop_value_0_2="33" prop_name1="dsgj" prop_value_1_1="0" prop_value_1_2="1" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="50" prop_value_0_2="50" prop_name1="ylgj" prop_value_1_1="0" prop_value_1_2="1" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+	</level>
+	<level value="6" name="六阶王城勇士" nextlevelexp="64000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="64" prop_value_0_2="64" prop_name1="gj" prop_value_1_1="0" prop_value_1_2="1" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="25" prop_value_0_2="25" prop_name1="mfgj" prop_value_1_1="0" prop_value_1_2="1" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="42" prop_value_0_2="42" prop_name1="dsgj" prop_value_1_1="0" prop_value_1_2="1" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="64" prop_value_0_2="64" prop_name1="ylgj" prop_value_1_1="0" prop_value_1_2="1" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+	</level>
+	<level value="7" name="七阶王城勇士" nextlevelexp="98000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="80" prop_value_0_2="80" prop_name1="gj" prop_value_1_1="0" prop_value_1_2="2" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="32" prop_value_0_2="32" prop_name1="mfgj" prop_value_1_1="0" prop_value_1_2="2" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="53" prop_value_0_2="53" prop_name1="dsgj" prop_value_1_1="0" prop_value_1_2="2" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="80" prop_value_0_2="80" prop_name1="ylgj" prop_value_1_1="0" prop_value_1_2="2" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+	</level>
+	<level value="8" name="八阶王城勇士" nextlevelexp="146000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="97" prop_value_0_2="97" prop_name1="gj" prop_value_1_1="0" prop_value_1_2="2" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="38" prop_value_0_2="38" prop_name1="mfgj" prop_value_1_1="0" prop_value_1_2="2" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="64" prop_value_0_2="64" prop_name1="dsgj" prop_value_1_1="0" prop_value_1_2="2" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="97" prop_value_0_2="97" prop_name1="ylgj" prop_value_1_1="0" prop_value_1_2="2" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+	</level>
+	<level value="9" name="九阶王城勇士" nextlevelexp="211000" autolevelup="0">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="115" prop_value_0_2="115" prop_name1="gj" prop_value_1_1="0" prop_value_1_2="2" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="46" prop_value_0_2="46" prop_name1="mfgj" prop_value_1_1="0" prop_value_1_2="2" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="76" prop_value_0_2="76" prop_name1="dsgj" prop_value_1_1="0" prop_value_1_2="2" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="115" prop_value_0_2="115" prop_name1="ylgj" prop_value_1_1="0" prop_value_1_2="2" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="1" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="1"/>
+	</level>
+	<level value="10" name="一阶抚夷校尉" nextlevelexp="297000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="134" prop_value_0_2="134" prop_name1="gj" prop_value_1_1="0" prop_value_1_2="3" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="2"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="53" prop_value_0_2="53" prop_name1="mfgj" prop_value_1_1="0" prop_value_1_2="3" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="2"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="89" prop_value_0_2="89" prop_name1="dsgj" prop_value_1_1="0" prop_value_1_2="3" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="2"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="134" prop_value_0_2="134" prop_name1="ylgj" prop_value_1_1="0" prop_value_1_2="3" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="2"/>
+	</level>
+	<level value="11" name="二阶抚夷校尉" nextlevelexp="407000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="155" prop_value_0_2="155" prop_name1="gj" prop_value_1_1="0" prop_value_1_2="3" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="2"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="62" prop_value_0_2="62" prop_name1="mfgj" prop_value_1_1="0" prop_value_1_2="3" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="2"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="103" prop_value_0_2="103" prop_name1="dsgj" prop_value_1_1="0" prop_value_1_2="3" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="2"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="155" prop_value_0_2="155" prop_name1="ylgj" prop_value_1_1="0" prop_value_1_2="3" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="2"/>
+	</level>
+	<level value="12" name="三阶抚夷校尉" nextlevelexp="544000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="177" prop_value_0_2="177" prop_name1="gj" prop_value_1_1="0" prop_value_1_2="4" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="2"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="70" prop_value_0_2="70" prop_name1="mfgj" prop_value_1_1="0" prop_value_1_2="4" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="2"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="118" prop_value_0_2="118" prop_name1="dsgj" prop_value_1_1="0" prop_value_1_2="4" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="2"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="177" prop_value_0_2="177" prop_name1="ylgj" prop_value_1_1="0" prop_value_1_2="4" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="2"/>
+	</level>
+	<level value="13" name="四阶抚夷校尉" nextlevelexp="712000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="200" prop_value_0_2="200" prop_name1="gj" prop_value_1_1="0" prop_value_1_2="4" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="2"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="80" prop_value_0_2="80" prop_name1="mfgj" prop_value_1_1="0" prop_value_1_2="4" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="2"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="133" prop_value_0_2="133" prop_name1="dsgj" prop_value_1_1="0" prop_value_1_2="4" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="2"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="200" prop_value_0_2="200" prop_name1="ylgj" prop_value_1_1="0" prop_value_1_2="4" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="2"/>
+	</level>
+	<level value="14" name="五阶抚夷校尉" nextlevelexp="915000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="224" prop_value_0_2="224" prop_name1="gj" prop_value_1_1="0" prop_value_1_2="4" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="2"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="89" prop_value_0_2="89" prop_name1="mfgj" prop_value_1_1="0" prop_value_1_2="4" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="2"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="149" prop_value_0_2="149" prop_name1="dsgj" prop_value_1_1="0" prop_value_1_2="4" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="2"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="224" prop_value_0_2="224" prop_name1="ylgj" prop_value_1_1="0" prop_value_1_2="4" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="2" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="2"/>
+	</level>
+	<level value="15" name="六阶抚夷校尉" nextlevelexp="1157000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="249" prop_value_0_2="249" prop_name1="gj" prop_value_1_1="1" prop_value_1_2="5" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="3" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="3"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="99" prop_value_0_2="99" prop_name1="mfgj" prop_value_1_1="1" prop_value_1_2="5" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="3" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="3"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="166" prop_value_0_2="166" prop_name1="dsgj" prop_value_1_1="1" prop_value_1_2="5" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="3" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="3"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="249" prop_value_0_2="249" prop_name1="ylgj" prop_value_1_1="1" prop_value_1_2="5" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="3" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="3"/>
+	</level>
+	<level value="16" name="七阶抚夷校尉" nextlevelexp="1442000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="275" prop_value_0_2="275" prop_name1="gj" prop_value_1_1="1" prop_value_1_2="6" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="3" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="3"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="110" prop_value_0_2="110" prop_name1="mfgj" prop_value_1_1="1" prop_value_1_2="6" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="3" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="3"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="183" prop_value_0_2="183" prop_name1="dsgj" prop_value_1_1="1" prop_value_1_2="6" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="3" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="3"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="275" prop_value_0_2="275" prop_name1="ylgj" prop_value_1_1="1" prop_value_1_2="6" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="3" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="3"/>
+	</level>
+	<level value="17" name="八阶抚夷校尉" nextlevelexp="1856000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="302" prop_value_0_2="302" prop_name1="gj" prop_value_1_1="1" prop_value_1_2="6" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="3" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="3"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="120" prop_value_0_2="120" prop_name1="mfgj" prop_value_1_1="1" prop_value_1_2="6" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="3" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="3"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="201" prop_value_0_2="201" prop_name1="dsgj" prop_value_1_1="1" prop_value_1_2="6" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="3" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="3"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="302" prop_value_0_2="302" prop_name1="ylgj" prop_value_1_1="1" prop_value_1_2="6" prop_name2="fy" prop_value_2_1="0" prop_value_2_2="3" prop_name3="mffy" prop_value_3_1="0" prop_value_3_2="3"/>
+	</level>
+	<level value="18" name="九阶抚夷校尉" nextlevelexp="2157000" autolevelup="0">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="330" prop_value_0_2="330" prop_name1="gj" prop_value_1_1="1" prop_value_1_2="7" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="4"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="132" prop_value_0_2="132" prop_name1="mfgj" prop_value_1_1="1" prop_value_1_2="7" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="4"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="220" prop_value_0_2="220" prop_name1="dsgj" prop_value_1_1="1" prop_value_1_2="7" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="4"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="330" prop_value_0_2="330" prop_name1="ylgj" prop_value_1_1="1" prop_value_1_2="7" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="4"/>
+	</level>
+	<level value="19" name="一阶远征先锋" nextlevelexp="2586000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="359" prop_value_0_2="359" prop_name1="gj" prop_value_1_1="1" prop_value_1_2="7" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="4"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="143" prop_value_0_2="143" prop_name1="mfgj" prop_value_1_1="1" prop_value_1_2="7" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="4"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="239" prop_value_0_2="239" prop_name1="dsgj" prop_value_1_1="1" prop_value_1_2="7" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="4"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="359" prop_value_0_2="359" prop_name1="ylgj" prop_value_1_1="1" prop_value_1_2="7" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="4"/>
+	</level>
+	<level value="20" name="二阶远征先锋" nextlevelexp="3096000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="389" prop_value_0_2="389" prop_name1="gj" prop_value_1_1="1" prop_value_1_2="8" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="4"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="155" prop_value_0_2="155" prop_name1="mfgj" prop_value_1_1="1" prop_value_1_2="8" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="4"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="259" prop_value_0_2="259" prop_name1="dsgj" prop_value_1_1="1" prop_value_1_2="8" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="4"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="389" prop_value_0_2="389" prop_name1="ylgj" prop_value_1_1="1" prop_value_1_2="8" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="4"/>
+	</level>
+	<level value="21" name="三阶远征先锋" nextlevelexp="3660000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="420" prop_value_0_2="420" prop_name1="gj" prop_value_1_1="1" prop_value_1_2="8" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="4"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="168" prop_value_0_2="168" prop_name1="mfgj" prop_value_1_1="1" prop_value_1_2="8" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="4"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="280" prop_value_0_2="280" prop_name1="dsgj" prop_value_1_1="1" prop_value_1_2="8" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="4"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="420" prop_value_0_2="420" prop_name1="ylgj" prop_value_1_1="1" prop_value_1_2="8" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="4" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="4"/>
+	</level>
+	<level value="22" name="四阶远征先锋" nextlevelexp="4295000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="451" prop_value_0_2="451" prop_name1="gj" prop_value_1_1="1" prop_value_1_2="9" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="5" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="5"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="180" prop_value_0_2="180" prop_name1="mfgj" prop_value_1_1="1" prop_value_1_2="9" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="5" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="5"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="300" prop_value_0_2="300" prop_name1="dsgj" prop_value_1_1="1" prop_value_1_2="9" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="5" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="5"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="451" prop_value_0_2="451" prop_name1="ylgj" prop_value_1_1="1" prop_value_1_2="9" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="5" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="5"/>
+	</level>
+	<level value="23" name="五阶远征先锋" nextlevelexp="5004000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="483" prop_value_0_2="483" prop_name1="gj" prop_value_1_1="2" prop_value_1_2="10" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="5" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="5"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="193" prop_value_0_2="193" prop_name1="mfgj" prop_value_1_1="2" prop_value_1_2="10" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="5" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="5"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="322" prop_value_0_2="322" prop_name1="dsgj" prop_value_1_1="2" prop_value_1_2="10" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="5" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="5"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="483" prop_value_0_2="483" prop_name1="ylgj" prop_value_1_1="2" prop_value_1_2="10" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="5" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="5"/>
+	</level>
+	<level value="24" name="六阶远征先锋" nextlevelexp="5793000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="516" prop_value_0_2="516" prop_name1="gj" prop_value_1_1="2" prop_value_1_2="10" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="5" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="5"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="206" prop_value_0_2="206" prop_name1="mfgj" prop_value_1_1="2" prop_value_1_2="10" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="5" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="5"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="344" prop_value_0_2="344" prop_name1="dsgj" prop_value_1_1="2" prop_value_1_2="10" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="5" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="5"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="516" prop_value_0_2="516" prop_name1="ylgj" prop_value_1_1="2" prop_value_1_2="10" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="5" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="5"/>
+	</level>
+	<level value="25" name="七阶远征先锋" nextlevelexp="6530000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="550" prop_value_0_2="550" prop_name1="gj" prop_value_1_1="2" prop_value_1_2="11" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="6" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="6"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="220" prop_value_0_2="220" prop_name1="mfgj" prop_value_1_1="2" prop_value_1_2="11" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="6" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="6"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="367" prop_value_0_2="367" prop_name1="dsgj" prop_value_1_1="2" prop_value_1_2="11" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="6" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="6"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="550" prop_value_0_2="550" prop_name1="ylgj" prop_value_1_1="2" prop_value_1_2="11" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="6" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="6"/>
+	</level>
+	<level value="26" name="八阶远征先锋" nextlevelexp="7630000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="585" prop_value_0_2="585" prop_name1="gj" prop_value_1_1="2" prop_value_1_2="12" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="6" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="6"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="234" prop_value_0_2="234" prop_name1="mfgj" prop_value_1_1="2" prop_value_1_2="12" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="6" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="6"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="390" prop_value_0_2="390" prop_name1="dsgj" prop_value_1_1="2" prop_value_1_2="12" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="6" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="6"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="585" prop_value_0_2="585" prop_name1="ylgj" prop_value_1_1="2" prop_value_1_2="12" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="6" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="6"/>
+	</level>
+	<level value="27" name="九阶远征先锋" nextlevelexp="8689000" autolevelup="0">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="621" prop_value_0_2="621" prop_name1="gj" prop_value_1_1="2" prop_value_1_2="12" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="6" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="6"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="248" prop_value_0_2="248" prop_name1="mfgj" prop_value_1_1="2" prop_value_1_2="12" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="6" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="6"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="414" prop_value_0_2="414" prop_name1="dsgj" prop_value_1_1="2" prop_value_1_2="12" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="6" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="6"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="621" prop_value_0_2="621" prop_name1="ylgj" prop_value_1_1="2" prop_value_1_2="12" prop_name2="fy" prop_value_2_1="1" prop_value_2_2="6" prop_name3="mffy" prop_value_3_1="1" prop_value_3_2="6"/>
+	</level>
+	<level value="28" name="一阶魔域护军" nextlevelexp="9860000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="657" prop_value_0_2="657" prop_name1="gj" prop_value_1_1="2" prop_value_1_2="13" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="7" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="7"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="262" prop_value_0_2="262" prop_name1="mfgj" prop_value_1_1="2" prop_value_1_2="13" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="7" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="7"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="438" prop_value_0_2="438" prop_name1="dsgj" prop_value_1_1="2" prop_value_1_2="13" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="7" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="7"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="657" prop_value_0_2="657" prop_name1="ylgj" prop_value_1_1="2" prop_value_1_2="13" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="7" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="7"/>
+	</level>
+	<level value="29" name="二阶魔域护军" nextlevelexp="11114000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="694" prop_value_0_2="694" prop_name1="gj" prop_value_1_1="2" prop_value_1_2="14" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="7" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="7"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="277" prop_value_0_2="277" prop_name1="mfgj" prop_value_1_1="2" prop_value_1_2="14" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="7" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="7"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="463" prop_value_0_2="463" prop_name1="dsgj" prop_value_1_1="2" prop_value_1_2="14" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="7" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="7"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="694" prop_value_0_2="694" prop_name1="ylgj" prop_value_1_1="2" prop_value_1_2="14" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="7" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="7"/>
+	</level>
+	<level value="30" name="三阶魔域护军" nextlevelexp="12491000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="732" prop_value_0_2="732" prop_name1="gj" prop_value_1_1="3" prop_value_1_2="15" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="8" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="8"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="292" prop_value_0_2="292" prop_name1="mfgj" prop_value_1_1="3" prop_value_1_2="15" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="8" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="8"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="488" prop_value_0_2="488" prop_name1="dsgj" prop_value_1_1="3" prop_value_1_2="15" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="8" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="8"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="732" prop_value_0_2="732" prop_name1="ylgj" prop_value_1_1="3" prop_value_1_2="15" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="8" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="8"/>
+	</level>
+	<level value="31" name="四阶魔域护军" nextlevelexp="14100000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="771" prop_value_0_2="771" prop_name1="gj" prop_value_1_1="3" prop_value_1_2="15" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="8" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="8"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="308" prop_value_0_2="308" prop_name1="mfgj" prop_value_1_1="3" prop_value_1_2="15" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="8" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="8"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="514" prop_value_0_2="514" prop_name1="dsgj" prop_value_1_1="3" prop_value_1_2="15" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="8" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="8"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="771" prop_value_0_2="771" prop_name1="ylgj" prop_value_1_1="3" prop_value_1_2="15" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="8" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="8"/>
+	</level>
+	<level value="32" name="五阶魔域护军" nextlevelexp="15603000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="811" prop_value_0_2="811" prop_name1="gj" prop_value_1_1="3" prop_value_1_2="16" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="8" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="8"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="324" prop_value_0_2="324" prop_name1="mfgj" prop_value_1_1="3" prop_value_1_2="16" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="8" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="8"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="540" prop_value_0_2="540" prop_name1="dsgj" prop_value_1_1="3" prop_value_1_2="16" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="8" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="8"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="811" prop_value_0_2="811" prop_name1="ylgj" prop_value_1_1="3" prop_value_1_2="16" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="8" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="8"/>
+	</level>
+	<level value="33" name="六阶魔域护军" nextlevelexp="17890000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="851" prop_value_0_2="851" prop_name1="gj" prop_value_1_1="3" prop_value_1_2="17" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="9" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="9"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="340" prop_value_0_2="340" prop_name1="mfgj" prop_value_1_1="3" prop_value_1_2="17" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="9" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="9"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="567" prop_value_0_2="567" prop_name1="dsgj" prop_value_1_1="3" prop_value_1_2="17" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="9" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="9"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="851" prop_value_0_2="851" prop_name1="ylgj" prop_value_1_1="3" prop_value_1_2="17" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="9" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="9"/>
+	</level>
+	<level value="34" name="七阶魔域护军" nextlevelexp="19229000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="892" prop_value_0_2="892" prop_name1="gj" prop_value_1_1="3" prop_value_1_2="18" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="9" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="9"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="356" prop_value_0_2="356" prop_name1="mfgj" prop_value_1_1="3" prop_value_1_2="18" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="9" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="9"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="594" prop_value_0_2="594" prop_name1="dsgj" prop_value_1_1="3" prop_value_1_2="18" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="9" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="9"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="892" prop_value_0_2="892" prop_name1="ylgj" prop_value_1_1="3" prop_value_1_2="18" prop_name2="fy" prop_value_2_1="2" prop_value_2_2="9" prop_name3="mffy" prop_value_3_1="2" prop_value_3_2="9"/>
+	</level>
+	<level value="35" name="八阶魔域护军" nextlevelexp="21561000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="934" prop_value_0_2="934" prop_name1="gj" prop_value_1_1="3" prop_value_1_2="19" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="10" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="10"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="373" prop_value_0_2="373" prop_name1="mfgj" prop_value_1_1="3" prop_value_1_2="19" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="10" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="10"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="622" prop_value_0_2="622" prop_name1="dsgj" prop_value_1_1="3" prop_value_1_2="19" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="10" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="10"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="934" prop_value_0_2="934" prop_name1="ylgj" prop_value_1_1="3" prop_value_1_2="19" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="10" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="10"/>
+	</level>
+	<level value="36" name="九阶魔域护军" nextlevelexp="23491000" autolevelup="0">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="976" prop_value_0_2="976" prop_name1="gj" prop_value_1_1="4" prop_value_1_2="20" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="10" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="10"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="390" prop_value_0_2="390" prop_name1="mfgj" prop_value_1_1="4" prop_value_1_2="20" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="10" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="10"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="650" prop_value_0_2="650" prop_name1="dsgj" prop_value_1_1="4" prop_value_1_2="20" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="10" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="10"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="976" prop_value_0_2="976" prop_name1="ylgj" prop_value_1_1="4" prop_value_1_2="20" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="10" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="10"/>
+	</level>
+	<level value="37" name="一阶铁血军侯" nextlevelexp="25737000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="1019" prop_value_0_2="1019" prop_name1="gj" prop_value_1_1="4" prop_value_1_2="20" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="10" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="10"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="407" prop_value_0_2="407" prop_name1="mfgj" prop_value_1_1="4" prop_value_1_2="20" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="10" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="10"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="679" prop_value_0_2="679" prop_name1="dsgj" prop_value_1_1="4" prop_value_1_2="20" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="10" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="10"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="1018" prop_value_0_2="1018" prop_name1="ylgj" prop_value_1_1="4" prop_value_1_2="20" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="10" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="10"/>
+	</level>
+	<level value="38" name="二阶铁血军侯" nextlevelexp="28214000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="1061" prop_value_0_2="1061" prop_name1="gj" prop_value_1_1="4" prop_value_1_2="22" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="11" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="11"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="425" prop_value_0_2="425" prop_name1="mfgj" prop_value_1_1="4" prop_value_1_2="22" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="11" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="11"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="708" prop_value_0_2="708" prop_name1="dsgj" prop_value_1_1="4" prop_value_1_2="22" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="11" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="11"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="1061" prop_value_0_2="1061" prop_name1="ylgj" prop_value_1_1="4" prop_value_1_2="22" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="11" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="11"/>
+	</level>
+	<level value="39" name="三阶铁血军侯" nextlevelexp="30470000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="1106" prop_value_0_2="1106" prop_name1="gj" prop_value_1_1="4" prop_value_1_2="23" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="12" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="12"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="443" prop_value_0_2="443" prop_name1="mfgj" prop_value_1_1="4" prop_value_1_2="23" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="12" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="12"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="738" prop_value_0_2="738" prop_name1="dsgj" prop_value_1_1="4" prop_value_1_2="23" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="12" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="12"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="1106" prop_value_0_2="1106" prop_name1="ylgj" prop_value_1_1="4" prop_value_1_2="23" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="12" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="12"/>
+	</level>
+	<level value="40" name="四阶铁血军侯" nextlevelexp="33675000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="1153" prop_value_0_2="1153" prop_name1="gj" prop_value_1_1="4" prop_value_1_2="23" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="12" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="12"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="461" prop_value_0_2="461" prop_name1="mfgj" prop_value_1_1="4" prop_value_1_2="23" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="12" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="12"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="768" prop_value_0_2="768" prop_name1="dsgj" prop_value_1_1="4" prop_value_1_2="23" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="12" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="12"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="1153" prop_value_0_2="1153" prop_name1="ylgj" prop_value_1_1="4" prop_value_1_2="23" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="12" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="12"/>
+	</level>
+	<level value="41" name="五阶铁血军侯" nextlevelexp="36668000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="1199" prop_value_0_2="1199" prop_name1="gj" prop_value_1_1="4" prop_value_1_2="24" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="12" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="12"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="479" prop_value_0_2="479" prop_name1="mfgj" prop_value_1_1="4" prop_value_1_2="24" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="12" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="12"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="799" prop_value_0_2="799" prop_name1="dsgj" prop_value_1_1="4" prop_value_1_2="24" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="12" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="12"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="1199" prop_value_0_2="1199" prop_name1="ylgj" prop_value_1_1="4" prop_value_1_2="24" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="12" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="12"/>
+	</level>
+	<level value="42" name="六阶铁血军侯" nextlevelexp="39872000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="1246" prop_value_0_2="1246" prop_name1="gj" prop_value_1_1="5" prop_value_1_2="25" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="13" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="13"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="498" prop_value_0_2="498" prop_name1="mfgj" prop_value_1_1="5" prop_value_1_2="25" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="13" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="13"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="830" prop_value_0_2="830" prop_name1="dsgj" prop_value_1_1="5" prop_value_1_2="25" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="13" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="13"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="1246" prop_value_0_2="1246" prop_name1="ylgj" prop_value_1_1="5" prop_value_1_2="25" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="13" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="13"/>
+	</level>
+	<level value="43" name="七阶铁血军侯" nextlevelexp="43214000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="1293" prop_value_0_2="1293" prop_name1="gj" prop_value_1_1="5" prop_value_1_2="26" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="13" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="13"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="517" prop_value_0_2="517" prop_name1="mfgj" prop_value_1_1="5" prop_value_1_2="26" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="13" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="13"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="862" prop_value_0_2="862" prop_name1="dsgj" prop_value_1_1="5" prop_value_1_2="26" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="13" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="13"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="1293" prop_value_0_2="1293" prop_name1="ylgj" prop_value_1_1="5" prop_value_1_2="26" prop_name2="fy" prop_value_2_1="3" prop_value_2_2="13" prop_name3="mffy" prop_value_3_1="3" prop_value_3_2="13"/>
+	</level>
+	<level value="44" name="八阶铁血军侯" nextlevelexp="47010000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="1341" prop_value_0_2="1341" prop_name1="gj" prop_value_1_1="5" prop_value_1_2="27" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="14" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="14"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="536" prop_value_0_2="536" prop_name1="mfgj" prop_value_1_1="5" prop_value_1_2="27" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="14" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="14"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="894" prop_value_0_2="894" prop_name1="dsgj" prop_value_1_1="5" prop_value_1_2="27" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="14" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="14"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="1341" prop_value_0_2="1341" prop_name1="ylgj" prop_value_1_1="5" prop_value_1_2="27" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="14" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="14"/>
+	</level>
+	<level value="45" name="九阶铁血军侯" nextlevelexp="52389000" autolevelup="0">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="1390" prop_value_0_2="1390" prop_name1="gj" prop_value_1_1="5" prop_value_1_2="28" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="14" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="14"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="556" prop_value_0_2="556" prop_name1="mfgj" prop_value_1_1="5" prop_value_1_2="28" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="14" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="14"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="927" prop_value_0_2="927" prop_name1="dsgj" prop_value_1_1="5" prop_value_1_2="28" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="14" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="14"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="1390" prop_value_0_2="1390" prop_name1="ylgj" prop_value_1_1="5" prop_value_1_2="28" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="14" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="14"/>
+	</level>
+	<level value="46" name="一阶破军都尉" nextlevelexp="56793000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="1440" prop_value_0_2="1440" prop_name1="gj" prop_value_1_1="5" prop_value_1_2="29" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="15" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="15"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="576" prop_value_0_2="576" prop_name1="mfgj" prop_value_1_1="5" prop_value_1_2="29" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="15" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="15"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="960" prop_value_0_2="960" prop_name1="dsgj" prop_value_1_1="5" prop_value_1_2="29" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="15" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="15"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="1440" prop_value_0_2="1440" prop_name1="ylgj" prop_value_1_1="5" prop_value_1_2="29" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="15" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="15"/>
+	</level>
+	<level value="47" name="二阶破军都尉" nextlevelexp="59721000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="1491" prop_value_0_2="1491" prop_name1="gj" prop_value_1_1="6" prop_value_1_2="30" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="15" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="15"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="596" prop_value_0_2="596" prop_name1="mfgj" prop_value_1_1="6" prop_value_1_2="30" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="15" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="15"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="994" prop_value_0_2="994" prop_name1="dsgj" prop_value_1_1="6" prop_value_1_2="30" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="15" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="15"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="1491" prop_value_0_2="1491" prop_name1="ylgj" prop_value_1_1="6" prop_value_1_2="30" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="15" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="15"/>
+	</level>
+	<level value="48" name="三阶破军都尉" nextlevelexp="63152000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="1543" prop_value_0_2="1543" prop_name1="gj" prop_value_1_1="6" prop_value_1_2="31" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="16" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="16"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="617" prop_value_0_2="617" prop_name1="mfgj" prop_value_1_1="6" prop_value_1_2="31" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="16" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="16"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="1028" prop_value_0_2="1028" prop_name1="dsgj" prop_value_1_1="6" prop_value_1_2="31" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="16" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="16"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="1543" prop_value_0_2="1543" prop_name1="ylgj" prop_value_1_1="6" prop_value_1_2="31" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="16" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="16"/>
+	</level>
+	<level value="49" name="四阶破军都尉" nextlevelexp="67098000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="1596" prop_value_0_2="1596" prop_name1="gj" prop_value_1_1="6" prop_value_1_2="32" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="16" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="16"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="638" prop_value_0_2="638" prop_name1="mfgj" prop_value_1_1="6" prop_value_1_2="32" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="16" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="16"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="1063" prop_value_0_2="1063" prop_name1="dsgj" prop_value_1_1="6" prop_value_1_2="32" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="16" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="16"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="1596" prop_value_0_2="1596" prop_name1="ylgj" prop_value_1_1="6" prop_value_1_2="32" prop_name2="fy" prop_value_2_1="4" prop_value_2_2="16" prop_name3="mffy" prop_value_3_1="4" prop_value_3_2="16"/>
+	</level>
+	<level value="50" name="五阶破军都尉" nextlevelexp="72701000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="1643" prop_value_0_2="1643" prop_name1="gj" prop_value_1_1="6" prop_value_1_2="33" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="17" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="17"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="659" prop_value_0_2="659" prop_name1="mfgj" prop_value_1_1="6" prop_value_1_2="33" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="17" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="17"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="1098" prop_value_0_2="1098" prop_name1="dsgj" prop_value_1_1="6" prop_value_1_2="33" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="17" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="17"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="1650" prop_value_0_2="1650" prop_name1="ylgj" prop_value_1_1="6" prop_value_1_2="33" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="17" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="17"/>
+	</level>
+	<level value="51" name="六阶破军都尉" nextlevelexp="77635000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="1705" prop_value_0_2="1705" prop_name1="gj" prop_value_1_1="6" prop_value_1_2="34" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="17" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="17"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="681" prop_value_0_2="681" prop_name1="mfgj" prop_value_1_1="6" prop_value_1_2="34" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="17" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="17"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="1134" prop_value_0_2="1134" prop_name1="dsgj" prop_value_1_1="6" prop_value_1_2="34" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="17" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="17"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="1705" prop_value_0_2="1705" prop_name1="ylgj" prop_value_1_1="6" prop_value_1_2="34" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="17" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="17"/>
+	</level>
+	<level value="52" name="七阶破军都尉" nextlevelexp="82035000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="1761" prop_value_0_2="1761" prop_name1="gj" prop_value_1_1="7" prop_value_1_2="35" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="18" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="18"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="703" prop_value_0_2="703" prop_name1="mfgj" prop_value_1_1="7" prop_value_1_2="35" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="18" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="18"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="1170" prop_value_0_2="1170" prop_name1="dsgj" prop_value_1_1="7" prop_value_1_2="35" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="18" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="18"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="1761" prop_value_0_2="1761" prop_name1="ylgj" prop_value_1_1="7" prop_value_1_2="35" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="18" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="18"/>
+	</level>
+	<level value="53" name="八阶破军都尉" nextlevelexp="88885000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="1818" prop_value_0_2="1818" prop_name1="gj" prop_value_1_1="7" prop_value_1_2="36" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="18" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="18"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="720" prop_value_0_2="720" prop_name1="mfgj" prop_value_1_1="7" prop_value_1_2="36" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="18" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="18"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="1207" prop_value_0_2="1207" prop_name1="dsgj" prop_value_1_1="7" prop_value_1_2="36" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="18" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="18"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="1818" prop_value_0_2="1818" prop_name1="ylgj" prop_value_1_1="7" prop_value_1_2="36" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="18" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="18"/>
+	</level>
+	<level value="54" name="九阶破军都尉" nextlevelexp="93684000" autolevelup="0">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="1876" prop_value_0_2="1876" prop_name1="gj" prop_value_1_1="7" prop_value_1_2="37" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="19" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="19"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="747" prop_value_0_2="747" prop_name1="mfgj" prop_value_1_1="7" prop_value_1_2="37" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="19" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="19"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="1244" prop_value_0_2="1244" prop_name1="dsgj" prop_value_1_1="7" prop_value_1_2="37" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="19" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="19"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="1876" prop_value_0_2="1876" prop_name1="ylgj" prop_value_1_1="7" prop_value_1_2="37" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="19" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="19"/>
+	</level>
+	<level value="55" name="一阶游骑将军" nextlevelexp="99764000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="1935" prop_value_0_2="1935" prop_name1="gj" prop_value_1_1="7" prop_value_1_2="38" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="19" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="19"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="770" prop_value_0_2="770" prop_name1="mfgj" prop_value_1_1="7" prop_value_1_2="38" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="19" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="19"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="1282" prop_value_0_2="1282" prop_name1="dsgj" prop_value_1_1="7" prop_value_1_2="38" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="19" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="19"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="1935" prop_value_0_2="1935" prop_name1="ylgj" prop_value_1_1="7" prop_value_1_2="38" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="19" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="19"/>
+	</level>
+	<level value="56" name="二阶游骑将军" nextlevelexp="105684000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="1995" prop_value_0_2="1995" prop_name1="gj" prop_value_1_1="7" prop_value_1_2="39" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="20" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="20"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="793" prop_value_0_2="793" prop_name1="mfgj" prop_value_1_1="7" prop_value_1_2="39" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="20" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="20"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="1320" prop_value_0_2="1320" prop_name1="dsgj" prop_value_1_1="7" prop_value_1_2="39" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="20" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="20"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="1995" prop_value_0_2="1995" prop_name1="ylgj" prop_value_1_1="7" prop_value_1_2="39" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="20" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="20"/>
+	</level>
+	<level value="57" name="三阶游骑将军" nextlevelexp="112649000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="2056" prop_value_0_2="2056" prop_name1="gj" prop_value_1_1="8" prop_value_1_2="40" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="20" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="20"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="816" prop_value_0_2="816" prop_name1="mfgj" prop_value_1_1="8" prop_value_1_2="40" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="20" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="20"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="1359" prop_value_0_2="1359" prop_name1="dsgj" prop_value_1_1="8" prop_value_1_2="40" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="20" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="20"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="2056" prop_value_0_2="2056" prop_name1="ylgj" prop_value_1_1="8" prop_value_1_2="40" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="20" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="20"/>
+	</level>
+	<level value="58" name="四阶游骑将军" nextlevelexp="119780000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="2108" prop_value_0_2="2108" prop_name1="gj" prop_value_1_1="8" prop_value_1_2="41" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="21" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="21"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="840" prop_value_0_2="840" prop_name1="mfgj" prop_value_1_1="8" prop_value_1_2="41" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="21" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="21"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="1398" prop_value_0_2="1398" prop_name1="dsgj" prop_value_1_1="8" prop_value_1_2="41" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="21" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="21"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="2108" prop_value_0_2="2108" prop_name1="ylgj" prop_value_1_1="8" prop_value_1_2="41" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="21" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="21"/>
+	</level>
+	<level value="59" name="五阶游骑将军" nextlevelexp="125890000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="2161" prop_value_0_2="2161" prop_name1="gj" prop_value_1_1="8" prop_value_1_2="42" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="21" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="21"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="864" prop_value_0_2="864" prop_name1="mfgj" prop_value_1_1="8" prop_value_1_2="42" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="21" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="21"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="1438" prop_value_0_2="1438" prop_name1="dsgj" prop_value_1_1="8" prop_value_1_2="42" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="21" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="21"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="2161" prop_value_0_2="2161" prop_name1="ylgj" prop_value_1_1="8" prop_value_1_2="42" prop_name2="fy" prop_value_2_1="5" prop_value_2_2="21" prop_name3="mffy" prop_value_3_1="5" prop_value_3_2="21"/>
+	</level>
+	<level value="60" name="六阶游骑将军" nextlevelexp="130280000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="2215" prop_value_0_2="2215" prop_name1="gj" prop_value_1_1="8" prop_value_1_2="43" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="22" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="22"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="888" prop_value_0_2="888" prop_name1="mfgj" prop_value_1_1="8" prop_value_1_2="43" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="22" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="22"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="1478" prop_value_0_2="1478" prop_name1="dsgj" prop_value_1_1="8" prop_value_1_2="43" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="22" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="22"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="2215" prop_value_0_2="2215" prop_name1="ylgj" prop_value_1_1="8" prop_value_1_2="43" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="22" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="22"/>
+	</level>
+	<level value="61" name="七阶游骑将军" nextlevelexp="136470000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="2271" prop_value_0_2="2271" prop_name1="gj" prop_value_1_1="8" prop_value_1_2="44" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="22" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="22"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="913" prop_value_0_2="913" prop_name1="mfgj" prop_value_1_1="8" prop_value_1_2="44" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="22" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="22"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="1519" prop_value_0_2="1519" prop_name1="dsgj" prop_value_1_1="8" prop_value_1_2="44" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="22" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="22"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="2271" prop_value_0_2="2271" prop_name1="ylgj" prop_value_1_1="8" prop_value_1_2="44" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="22" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="22"/>
+	</level>
+	<level value="62" name="八阶游骑将军" nextlevelexp="140953000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="2328" prop_value_0_2="2328" prop_name1="gj" prop_value_1_1="9" prop_value_1_2="45" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="23" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="23"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="938" prop_value_0_2="938" prop_name1="mfgj" prop_value_1_1="9" prop_value_1_2="45" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="23" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="23"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="1560" prop_value_0_2="1560" prop_name1="dsgj" prop_value_1_1="9" prop_value_1_2="45" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="23" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="23"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="2328" prop_value_0_2="2328" prop_name1="ylgj" prop_value_1_1="9" prop_value_1_2="45" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="23" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="23"/>
+	</level>
+	<level value="63" name="九阶游骑将军" nextlevelexp="146946000" autolevelup="0">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="2386" prop_value_0_2="2386" prop_name1="gj" prop_value_1_1="9" prop_value_1_2="46" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="23" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="23"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="963" prop_value_0_2="963" prop_name1="mfgj" prop_value_1_1="9" prop_value_1_2="46" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="23" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="23"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="1602" prop_value_0_2="1602" prop_name1="dsgj" prop_value_1_1="9" prop_value_1_2="46" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="23" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="23"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="2386" prop_value_0_2="2386" prop_name1="ylgj" prop_value_1_1="9" prop_value_1_2="46" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="23" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="23"/>
+	</level>
+	<level value="64" name="一阶镇军将军" nextlevelexp="151856000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="2445" prop_value_0_2="2445" prop_name1="gj" prop_value_1_1="9" prop_value_1_2="47" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="24" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="24"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="989" prop_value_0_2="989" prop_name1="mfgj" prop_value_1_1="9" prop_value_1_2="47" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="24" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="24"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="1644" prop_value_0_2="1644" prop_name1="dsgj" prop_value_1_1="9" prop_value_1_2="47" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="24" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="24"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="2445" prop_value_0_2="2445" prop_name1="ylgj" prop_value_1_1="9" prop_value_1_2="47" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="24" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="24"/>
+	</level>
+	<level value="65" name="二阶镇军将军" nextlevelexp="159783000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="2505" prop_value_0_2="2505" prop_name1="gj" prop_value_1_1="9" prop_value_1_2="48" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="24" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="24"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="1015" prop_value_0_2="1015" prop_name1="mfgj" prop_value_1_1="9" prop_value_1_2="48" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="24" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="24"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="1687" prop_value_0_2="1687" prop_name1="dsgj" prop_value_1_1="9" prop_value_1_2="48" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="24" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="24"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="2505" prop_value_0_2="2505" prop_name1="ylgj" prop_value_1_1="9" prop_value_1_2="48" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="24" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="24"/>
+	</level>
+	<level value="66" name="三阶镇军将军" nextlevelexp="166598000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="2566" prop_value_0_2="2566" prop_name1="gj" prop_value_1_1="9" prop_value_1_2="49" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="25" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="25"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="1041" prop_value_0_2="1041" prop_name1="mfgj" prop_value_1_1="9" prop_value_1_2="49" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="25" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="25"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="1730" prop_value_0_2="1730" prop_name1="dsgj" prop_value_1_1="9" prop_value_1_2="49" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="25" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="25"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="2566" prop_value_0_2="2566" prop_name1="ylgj" prop_value_1_1="9" prop_value_1_2="49" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="25" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="25"/>
+	</level>
+	<level value="67" name="四阶镇军将军" nextlevelexp="172423000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="2628" prop_value_0_2="2628" prop_name1="gj" prop_value_1_1="10" prop_value_1_2="50" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="25" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="25"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="1067" prop_value_0_2="1067" prop_name1="mfgj" prop_value_1_1="10" prop_value_1_2="50" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="25" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="25"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="1774" prop_value_0_2="1774" prop_name1="dsgj" prop_value_1_1="10" prop_value_1_2="50" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="25" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="25"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="2628" prop_value_0_2="2628" prop_name1="ylgj" prop_value_1_1="10" prop_value_1_2="50" prop_name2="fy" prop_value_2_1="6" prop_value_2_2="25" prop_name3="mffy" prop_value_3_1="6" prop_value_3_2="25"/>
+	</level>
+	<level value="68" name="五阶镇军将军" nextlevelexp="178639000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="2691" prop_value_0_2="2691" prop_name1="gj" prop_value_1_1="10" prop_value_1_2="51" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="26" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="26"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="1094" prop_value_0_2="1094" prop_name1="mfgj" prop_value_1_1="10" prop_value_1_2="51" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="26" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="26"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="1818" prop_value_0_2="1818" prop_name1="dsgj" prop_value_1_1="10" prop_value_1_2="51" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="26" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="26"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="2691" prop_value_0_2="2691" prop_name1="ylgj" prop_value_1_1="10" prop_value_1_2="51" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="26" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="26"/>
+	</level>
+	<level value="69" name="六阶镇军将军" nextlevelexp="183972000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="2755" prop_value_0_2="2755" prop_name1="gj" prop_value_1_1="10" prop_value_1_2="52" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="26" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="26"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="1121" prop_value_0_2="1121" prop_name1="mfgj" prop_value_1_1="10" prop_value_1_2="52" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="26" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="26"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="1863" prop_value_0_2="1863" prop_name1="dsgj" prop_value_1_1="10" prop_value_1_2="52" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="26" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="26"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="2755" prop_value_0_2="2755" prop_name1="ylgj" prop_value_1_1="10" prop_value_1_2="52" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="26" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="26"/>
+	</level>
+	<level value="70" name="七阶镇军将军" nextlevelexp="188649000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="2820" prop_value_0_2="2820" prop_name1="gj" prop_value_1_1="10" prop_value_1_2="53" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="27" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="27"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="1148" prop_value_0_2="1148" prop_name1="mfgj" prop_value_1_1="10" prop_value_1_2="53" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="27" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="27"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="1908" prop_value_0_2="1908" prop_name1="dsgj" prop_value_1_1="10" prop_value_1_2="53" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="27" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="27"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="2820" prop_value_0_2="2820" prop_name1="ylgj" prop_value_1_1="10" prop_value_1_2="53" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="27" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="27"/>
+	</level>
+	<level value="71" name="八阶镇军将军" nextlevelexp="194236000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="2886" prop_value_0_2="2886" prop_name1="gj" prop_value_1_1="10" prop_value_1_2="54" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="27" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="27"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="1176" prop_value_0_2="1176" prop_name1="mfgj" prop_value_1_1="10" prop_value_1_2="54" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="27" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="27"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="1954" prop_value_0_2="1954" prop_name1="dsgj" prop_value_1_1="10" prop_value_1_2="54" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="27" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="27"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="2886" prop_value_0_2="2886" prop_name1="ylgj" prop_value_1_1="10" prop_value_1_2="54" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="27" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="27"/>
+	</level>
+	<level value="72" name="九阶镇军将军" nextlevelexp="200500000" autolevelup="0">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="2953" prop_value_0_2="2953" prop_name1="gj" prop_value_1_1="11" prop_value_1_2="55" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="28" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="28"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="1204" prop_value_0_2="1204" prop_name1="mfgj" prop_value_1_1="11" prop_value_1_2="55" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="28" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="28"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="2000" prop_value_0_2="2000" prop_name1="dsgj" prop_value_1_1="11" prop_value_1_2="55" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="28" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="28"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="2953" prop_value_0_2="2953" prop_name1="ylgj" prop_value_1_1="11" prop_value_1_2="55" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="28" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="28"/>
+	</level>
+	<level value="73" name="一阶大元帅" nextlevelexp="207945000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="3021" prop_value_0_2="3021" prop_name1="gj" prop_value_1_1="11" prop_value_1_2="56" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="28" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="28"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="1232" prop_value_0_2="1232" prop_name1="mfgj" prop_value_1_1="11" prop_value_1_2="56" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="28" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="28"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="2047" prop_value_0_2="2047" prop_name1="dsgj" prop_value_1_1="11" prop_value_1_2="56" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="28" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="28"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="3021" prop_value_0_2="3021" prop_name1="ylgj" prop_value_1_1="11" prop_value_1_2="56" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="28" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="28"/>
+	</level>
+	<level value="74" name="二阶大元帅" nextlevelexp="214625000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="3090" prop_value_0_2="3090" prop_name1="gj" prop_value_1_1="11" prop_value_1_2="57" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="29" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="29"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="1261" prop_value_0_2="1261" prop_name1="mfgj" prop_value_1_1="11" prop_value_1_2="57" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="29" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="29"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="2094" prop_value_0_2="2094" prop_name1="dsgj" prop_value_1_1="11" prop_value_1_2="57" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="29" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="29"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="3090" prop_value_0_2="3090" prop_name1="ylgj" prop_value_1_1="11" prop_value_1_2="57" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="29" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="29"/>
+	</level>
+	<level value="75" name="三阶大元帅" nextlevelexp="220943000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="3160" prop_value_0_2="3160" prop_name1="gj" prop_value_1_1="11" prop_value_1_2="58" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="29" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="29"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="1290" prop_value_0_2="1290" prop_name1="mfgj" prop_value_1_1="11" prop_value_1_2="58" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="29" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="29"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="2142" prop_value_0_2="2142" prop_name1="dsgj" prop_value_1_1="11" prop_value_1_2="58" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="29" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="29"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="3160" prop_value_0_2="3160" prop_name1="ylgj" prop_value_1_1="11" prop_value_1_2="58" prop_name2="fy" prop_value_2_1="7" prop_value_2_2="29" prop_name3="mffy" prop_value_3_1="7" prop_value_3_2="29"/>
+	</level>
+	<level value="76" name="四阶大元帅" nextlevelexp="229653000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="3231" prop_value_0_2="3231" prop_name1="gj" prop_value_1_1="11" prop_value_1_2="59" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="30" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="30"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="1319" prop_value_0_2="1319" prop_name1="mfgj" prop_value_1_1="11" prop_value_1_2="59" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="30" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="30"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="2190" prop_value_0_2="2190" prop_name1="dsgj" prop_value_1_1="11" prop_value_1_2="59" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="30" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="30"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="3231" prop_value_0_2="3231" prop_name1="ylgj" prop_value_1_1="11" prop_value_1_2="59" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="30" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="30"/>
+	</level>
+	<level value="77" name="五阶大元帅" nextlevelexp="236984000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="3303" prop_value_0_2="3303" prop_name1="gj" prop_value_1_1="12" prop_value_1_2="60" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="30" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="30"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="1349" prop_value_0_2="1349" prop_name1="mfgj" prop_value_1_1="12" prop_value_1_2="60" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="30" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="30"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="2239" prop_value_0_2="2239" prop_name1="dsgj" prop_value_1_1="12" prop_value_1_2="60" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="30" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="30"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="3303" prop_value_0_2="3303" prop_name1="ylgj" prop_value_1_1="12" prop_value_1_2="60" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="30" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="30"/>
+	</level>
+	<level value="78" name="六阶大元帅" nextlevelexp="242361000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="3376" prop_value_0_2="3376" prop_name1="gj" prop_value_1_1="12" prop_value_1_2="61" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="31" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="31"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="1379" prop_value_0_2="1379" prop_name1="mfgj" prop_value_1_1="12" prop_value_1_2="61" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="31" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="31"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="2288" prop_value_0_2="2288" prop_name1="dsgj" prop_value_1_1="12" prop_value_1_2="61" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="31" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="31"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="3376" prop_value_0_2="3376" prop_name1="ylgj" prop_value_1_1="12" prop_value_1_2="61" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="31" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="31"/>
+	</level>
+	<level value="79" name="七阶大元帅" nextlevelexp="256894000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="3450" prop_value_0_2="3450" prop_name1="gj" prop_value_1_1="12" prop_value_1_2="62" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="31" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="31"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="1409" prop_value_0_2="1409" prop_name1="mfgj" prop_value_1_1="12" prop_value_1_2="62" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="31" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="31"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="2338" prop_value_0_2="2338" prop_name1="dsgj" prop_value_1_1="12" prop_value_1_2="62" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="31" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="31"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="3450" prop_value_0_2="3450" prop_name1="ylgj" prop_value_1_1="12" prop_value_1_2="62" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="31" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="31"/>
+	</level>
+	<level value="80" name="八阶大元帅" nextlevelexp="260496000" autolevelup="1">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="3525" prop_value_0_2="3525" prop_name1="gj" prop_value_1_1="12" prop_value_1_2="63" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="32" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="32"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="1439" prop_value_0_2="1439" prop_name1="mfgj" prop_value_1_1="12" prop_value_1_2="63" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="32" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="32"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="2388" prop_value_0_2="2388" prop_name1="dsgj" prop_value_1_1="12" prop_value_1_2="63" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="32" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="32"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="3525" prop_value_0_2="3525" prop_name1="ylgj" prop_value_1_1="12" prop_value_1_2="63" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="32" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="32"/>
+	</level>
+	<level value="81" name="九阶大元帅" nextlevelexp="269683000" autolevelup="0">
+		<jobprop job="0" prop_name0="hp" prop_value_0_1="3601" prop_value_0_2="3601" prop_name1="gj" prop_value_1_1="12" prop_value_1_2="64" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="32" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="32"/>
+		<jobprop job="1" prop_name0="hp" prop_value_0_1="1470" prop_value_0_2="1470" prop_name1="mfgj" prop_value_1_1="12" prop_value_1_2="64" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="32" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="32"/>
+		<jobprop job="2" prop_name0="hp" prop_value_0_1="2439" prop_value_0_2="2439" prop_name1="dsgj" prop_value_1_1="12" prop_value_1_2="64" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="32" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="32"/>
+		<jobprop job="3" prop_name0="hp" prop_value_0_1="3601" prop_value_0_2="3601" prop_name1="ylgj" prop_value_1_1="12" prop_value_1_2="64" prop_name2="fy" prop_value_2_1="8" prop_value_2_2="32" prop_name3="mffy" prop_value_3_1="8" prop_value_3_2="32"/>
+	</level>
+</junxian>

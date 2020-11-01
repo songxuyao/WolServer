@@ -1,0 +1,23 @@
+(@fastbuy @buy @sell )
+%100
++4
+[@main]
+    你需要什么书？\
+    <快捷交易/@fastbuy>\
+    <购入书籍/@buy>\
+    <出售书籍/@sell>\
+    <询问技能/@_SD_helpbooks>\
+    <关闭选单/@exit>
+
+[@fastbuy]
+#CALL [\商人\书店.txt] @快捷交易
+
+[@_SD_helpbooks]
+#CALL [\商人\书店.txt] @询问技能
+
+[@buy]
+#CALL [\商人\书店.txt] @购入书籍
+
+[@sell]
+#CALL [\商人\书店.txt] @出售书籍
+

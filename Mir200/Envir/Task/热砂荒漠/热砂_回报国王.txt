@@ -1,0 +1,10 @@
+[setup]
+stepcount = 1
+title = 热砂荒漠—回报国王
+ID = 35
+stepaim1 = 去中州皇宫找<国王/@@goto sh000 国王 30,34> <color=green [传]/@@flyto 33 sh000 30 34>
+stepDESC1 = <color=graygolden 任务目的：>去中州皇宫找<国王/@@goto sh000 国王 30,34>\<color=graygolden 任务奖励：>\ </@@!PIC2 10,951>经验\<color=graygolden 任务介绍:>\  这些机关巨兽们果然受到了某种影响，那些铜人也一样 \ 我会在此严加防范，同时我需要你去回报国王
+
+
+
+

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="Gb2312"?>
+<!-- prize:表示该成就的奖励，0表示没有额外奖励，1表示给主纹，2表示给精纹，3表示给底纹，4表示给边纹，5表示给纹佩精华-->
+<!-- prizeValue:表示给奖励的数量或类型，prize=1~4时表示给予的纹佩组件的编号，prize=5时表示纹佩精华数量--> 
+<achievements>
+	<Single>
+		<Type id="Level">
+		  <achievement index="24001" type="常规" name="初入江湖" desc="升级达到10级" require="10" prize="1" prizeValue="1"  remark="0"/>
+		  <achievement index="24002" type="常规" name="小有实力" desc="升级达到20级" require="20" prize="5" prizeValue="500"  remark="0"/>
+			<achievement index="0" type="常规" name="首个称号" desc="升级达到46级" require="46" prize="5" prizeValue="500"  remark="0"/>
+			<achievement index="1" type="常规" name="飞升天人" desc="升级达到天人阶段" require="72" prize="5" prizeValue="500"  remark="0"/>
+			<achievement index="2" type="常规" name="天人初段" desc="升级达到天人20重" require="91" prize="1" prizeValue="13"   remark="0"/>
+			<achievement index="3" type="常规" name="天人中段" desc="升级达到天人40重" require="111" prize="5" prizeValue="500" remark="0"/>
+			<achievement index="4" type="常规" name="天人高段" desc="升级达到天人60重" require="131" prize="5" prizeValue="500" remark="0"/>
+			<achievement index="5" type="常规" name="逼近天仙" desc="升级达到天人80重" require="151" prize="5" prizeValue="500" remark="0"/>
+			<achievement index="6" type="常规" name="飞升天仙" desc="升级达到天仙阶段" require="171" prize="1" prizeValue="3"   remark="0"/>
+			<achievement index="7" type="常规" name="天仙初段" desc="升级达到天仙20重" require="190" prize="5" prizeValue="1000" remark="0"/>
+			<achievement index="8" type="常规" name="天仙中段" desc="升级达到天仙40重" require="210" prize="5" prizeValue="1000" remark="0"/>
+			<achievement index="9" type="常规" name="天仙高段" desc="升级达到天仙60重" require="230" prize="5" prizeValue="1000" remark="0"/>
+			<achievement index="10" type="常规" name="逼近上仙" desc="升级达到天仙80重" require="250" prize="5" prizeValue="1500" remark="0"/>
+			<achievement index="11" type="常规" name="飞升上仙" desc="升级达到上仙阶段" require="270" prize="2" prizeValue="6" remark="0"/>
+		</Type>
+		<Type id="Magic">
+			<achievement index="20" type="常规" name="技能启蒙" desc="主体掌握1个技能" require="1" prize="2" prizeValue="4" remark="1"/>
+			<achievement index="21" type="常规" name="技能灵丹" desc="使用5次技能经验灵丹" require="5" prize="4" prizeValue="7" remark="1"/>
+			<!-- <achievement index="23" type="常规" name="强化技能" desc="学会1个强化技能" require="3" prize="4" prizeValue="7" remark="1"/>-->
+			<achievement index="22" type="常规" name="技能专家" desc="主体掌握10个以上的专家级技能" require="10" prize="4" prizeValue="31"  remark="1"/>  <!--希望修改机制-->
+			<achievement index="24" type="常规" name="技能大师" desc="主体掌握10个以上的大师级技能" require="10" prize="5" prizeValue="1000" remark="1"/>
+			<achievement index="25" type="常规" name="技能宗师" desc="主体掌握10个以上的宗师级技能" require="10" prize="5" prizeValue="1000" remark="1"/>
+			<achievement index="26" type="常规" name="技能权威" desc="主体掌握10个以上的权威级技能" require="10" prize="1" prizeValue="15" remark="1"/>
+			<achievement index="27" type="常规" name="技能王者" desc="主体掌握10个以上的王者级技能" require="10" prize="2" prizeValue="18" remark="1"/>
+		</Type>
+		<Type id="People">
+			<achievement index="30" type="常规" name="行会成员" desc="成为一个行会的成员" require="1" prize="1" prizeValue="37" remark="0"/>
+			<achievement index="31" type="常规" name="5级神塔" desc="自己所在的行会拥有1个5级行会塔" require="5" prize="5" prizeValue="500" remark="0"/>
+			<achievement index="32" type="常规" name="10级神塔" desc="自己所在的行会拥有1个10级行会塔" require="10" prize="5" prizeValue="1000" remark="0"/>
+			<achievement index="33" type="常规" name="身居官位" desc="在所在的行会担任一个职务或成为一名成员的亲信" require="1" prize="5" prizeValue="1000" remark="0"/>
+			<achievement index="34" type="常规" name="精英好友" desc="拥有1名天人以上好友" require="10" prize="4" prizeValue="20" remark="0"/>
+			<achievement index="35" type="常规" name="一窥极品阁" desc="从行会珍宝阁进入找到极品阁的入口并进入" require="1" prize="5" prizeValue="500" remark="0"/>
+			<achievement index="36" type="常规" name="宗族成员" desc="成为宗族的一员" require="1" prize="5" prizeValue="500" remark="0"/>
+		</Type>
+		<Type id="Pet">
+			<achievement index="40" type="常规" name="抓捕灵兽" desc="使用灵兽项圈抓捕到1只灵兽" require="1" prize="1" prizeValue="25" remark="0"/>
+			<achievement index="53" type="常规" name="独一无二的灵兽" desc="使用兽名魔咒为一只灵兽改名字" require="1" prize="1" prizeValue="49" remark="0"/>
+			<achievement index="120" type="常规" name="灵兽守摊" desc="尝试1次灵兽摆摊" require="6" prize="5" prizeValue="500" remark="0"/>	
+			<achievement index="41" type="常规" name="灵兽繁衍" desc="通过灵兽繁衍获得1只灵兽幼仔" require="1" prize="2" prizeValue="16" remark="0"/>
+			<achievement index="42" type="常规" name="魂佑灵兽" desc="获得1只魂佑灵兽" require="1" prize="2" prizeValue="40" remark="0"/>
+			<achievement index="43" type="常规" name="灵兽放生" desc="放生一只灵兽" require="6" prize="5" prizeValue="500" remark="0"/>
+			<achievement index="65" type="常规" name="骑战技能启蒙" desc="学会4个骑战技能" require="4" prize="2" prizeValue="28"           remark="1"/>   <!--希望修改机制-->
+		  <achievement index="66" type="常规" name="骑战技能专家" desc="学会4个专家级骑战技能" require="4" prize="3" prizeValue="12"     remark="1"/>
+		  <achievement index="67" type="常规" name="骑战技能大师" desc="学会4个大师级骑战技能" require="4" prize="4" prizeValue="20"     remark="1"/>
+		  <achievement index="62" type="常规" name="金丹的味道" desc="拥有一只吃过灵兽金丹的灵兽" require="1" prize="3" prizeValue="24" remark="0"/>
+		  <achievement index="63" type="常规" name="内丹的口感" desc="拥有一只吃过灵兽内丹的灵兽" require="1" prize="4" prizeValue="45" remark="0"/>
+		  <achievement index="121" type="常规" name="永生的灵兽" desc="拥有一只吃过不死神丹的灵兽" require="1" prize="5" prizeValue="1000" remark="0"/>
+			<achievement index="44" type="常规" name="红麒麟的主人" desc="拥有一只绑定的红麒麟" require="1" prize="5" prizeValue="1500" remark="0"/>
+			<achievement index="45" type="常规" name="炽天魔凤的主人" desc="拥有一只绑定的紫色的凤凰" require="1" prize="5" prizeValue="1500" remark="0"/>
+			<achievement index="46" type="常规" name="海神金鲨的主人" desc="拥有一只绑定的金色的海神战鲨" require="1" prize="5" prizeValue="1500" remark="0"/>
+			<achievement index="47" type="常规" name="初段灵兽的主人" desc="拥有一只10级以上的绑定灵兽" require="10" prize="5" prizeValue="500" remark="0"/>
+			<achievement index="48" type="常规" name="中段灵兽的主人" desc="拥有一只20级以上的绑定灵兽" require="20" prize="4" prizeValue="44" remark="0"/>
+			<achievement index="49" type="常规" name="高段灵兽的主人" desc="拥有一只35级以上的绑定灵兽" require="35" prize="5" prizeValue="500" remark="0"/>
+			<achievement index="50" type="常规" name="专家灵兽的主人" desc="拥有一只50级以上的绑定灵兽" require="50" prize="2" prizeValue="52" remark="0"/>
+			<achievement index="51" type="常规" name="大师灵兽的主人" desc="拥有一只80级以上的绑定灵兽" require="80" prize="5" prizeValue="1000" remark="0"/>
+			<achievement index="52" type="常规" name="宗师灵兽的主人" desc="拥有一只120级以上的绑定灵兽" require="120" prize="3" prizeValue="48" remark="0"/>
+			<achievement index="122" type="常规" name="权威灵兽的主人" desc="拥有一只150级以上的绑定灵兽" require="150" prize="5" prizeValue="1000" remark="0"/>	   							  
+			<achievement index="123" type="常规" name="王者灵兽的主人" desc="拥有一只180级以上的绑定灵兽" require="180" prize="5" prizeValue="1500" remark="0"/>	  
+			<achievement index="124" type="常规" name="三转灵兽的主人" desc="拥有一只经过3转的绑定灵兽" require="1" prize="5" prizeValue="2000" remark="0"/>	   
+			<achievement index="54" type="常规" name="强化1级灵兽" desc="拥有一只强化过的绑定灵兽" require="1" prize="5" prizeValue="500" remark="0"/>
+			<achievement index="55" type="常规" name="强化4级灵兽" desc="拥有一只强化4级的绑定灵兽" require="4" prize="4" prizeValue="57" remark="0"/>
+			<achievement index="56" type="常规" name="强化8级灵兽" desc="拥有一只强化8级的绑定灵兽" require="8" prize="5" prizeValue="1500" remark="0"/>
+			<achievement index="57" type="常规" name="初级魂佑技能护体" desc="拥有一只学到6个魂佑技能的魂佑灵兽" require="1" prize="3" prizeValue="60" remark="0"/>
+			<achievement index="58" type="常规" name="中级魂佑技能护体" desc="拥有一只学到6个中级以上魂佑技能的魂佑灵兽" require="1" prize="5" prizeValue="500" remark="0"/>
+			<achievement index="59" type="常规" name="高级魂佑技能护体" desc="拥有一只学到6个高级以上魂佑技能的魂佑灵兽" require="2" prize="4" prizeValue="33" remark="0"/>
+			<achievement index="60" type="常规" name="专家魂佑技能护体" desc="拥有一只学到6个专家级以上魂佑技能的魂佑灵兽" require="3" prize="5" prizeValue="1000" remark="0"/>
+		  <achievement index="61" type="常规" name="武装后的魂佑灵兽" desc="拥有一只穿戴4个魂佑装备的魂佑灵兽" require="4" prize="3" prizeValue="36" remark="0"/>
+		  <achievement index="64" type="常规" name="称霸水陆" desc="拥有一只开启了避水灵性的陆地灵兽" require="1" prize="5" prizeValue="1000" remark="0"/>
+		 </Type>
+		  <!--<achievement index="68" type="常规" name="灵兽收藏家" desc="收集狮子、老虎、豹子、麒麟、凤凰、战鲨各一只" require="6" prize="0" prizeValue="0" />-->
+		<Type id="Tiger"><!--只有战法道才有-->
+			<achievement index="125" type="常规" name="获得虎王" desc="拥有一个虎王盾并召唤出虎王" require="1" prize="4" prizeValue="55" remark="0"/>
+			<achievement index="126" type="常规" name="虎王进阶" desc="拥有一只10级虎王" require="10" prize="5" prizeValue="500" remark="0"/>
+			<achievement index="127" type="常规" name="虎王中段" desc="拥有一只20级虎王" require="20" prize="5" prizeValue="1000" remark="0"/>
+			<achievement index="128" type="常规" name="虎王高段" desc="拥有一只30级虎王" require="30" prize="5" prizeValue="1000" remark="0"/>
+			<achievement index="129" type="常规" name="龙王出世" desc="拥有一只龙王" require="1" prize="5" prizeValue="2000" remark="0"/>
+		</Type>
+		<Type id="Shadow"><!--只有战法道才有-->
+			<achievement index="70" type="常规" name="拥有元神" desc="至少拥有1个元神分身" require="1" prize="3" prizeValue="58" remark="0"/>
+			<achievement index="71" type="常规" name="拥有第二元神" desc="拥有第二元神分身" require="1" prize="3" prizeValue="10" remark="0"/>
+			<achievement index="72" type="常规" name="组合技能" desc="习得一个元神组合技能" require="1" prize="3" prizeValue="22" remark="0"/>
+			<achievement index="75" type="常规" name="元神钱包" desc="从元神的钱包中累积提取出5000金币来" require="5000" prize="5" prizeValue="500" remark="0"/>
+			<achievement index="87" type="常规" name="天人元神" desc="拥有1个天人级别的元神" require="1" prize="1" prizeValue="39" remark="0"/>
+			<achievement index="88" type="常规" name="双天人元神" desc="2个元神同时达到天人级别" require="1" prize="5" prizeValue="1000" remark="0"/>
+			<achievement index="89" type="常规" name="天仙元神" desc="拥有1个天仙级别的元神" require="1" prize="2" prizeValue="42" remark="0"/>
+			<achievement index="90" type="常规" name="双天仙元神" desc="2个元神同时达到天仙级别" require="1" prize="5" prizeValue="1000" remark="0"/>			
+			<achievement index="91" type="常规" name="上仙元神" desc="拥有1个上仙级别的元神" require="1" prize="1" prizeValue="51" remark="0"/>
+			<achievement index="92" type="常规" name="双上仙元神" desc="2个元神同时达到上仙级别" require="1" prize="5" prizeValue="1000" remark="0"/>	
+			<achievement index="77" type="常规" name="领悟天元心法" desc="开启天元心法" require="1" prize="5" prizeValue="500" remark="0"/>
+			<achievement index="78" type="常规" name="天元心法10重" desc="天元心法修炼到10重" require="10" prize="2" prizeValue="54" remark="1"/>
+			<achievement index="79" type="常规" name="天元心法20重" desc="天元心法修炼到20重" require="20" prize="5" prizeValue="1000" remark="1"/>
+			<achievement index="80" type="常规" name="天元心法30重" desc="天元心法修炼到30重" require="30" prize="5" prizeValue="1000" remark="1"/>
+			<achievement index="93" type="常规" name="天元心法40重" desc="天元心法修炼到40重" require="40" prize="5" prizeValue="1500" remark="1"/>
+			<achievement index="94" type="常规" name="天元心法50重" desc="天元心法修炼到50重" require="50" prize="5" prizeValue="1500" remark="1"/>
+			<achievement index="81" type="常规" name="掌握内外元神切换" desc="学会内外元神切换的能力" require="1" prize="1" prizeValue="27" remark="0"/>
+			<achievement index="82" type="常规" name="掌握主体元神的切换" desc="学会主体元神的切换" require="1" prize="5" prizeValue="500" remark="0"/>
+			<achievement index="95" type="常规" name="掌握神魂融合" desc="学会神魂融合技能" require="0" prize="5" prizeValue="1000" remark="0"/>	
+	  	<achievement index="96" type="常规" name="掌握灵魂锁链" desc="学会灵魂锁链技能" require="0" prize="5" prizeValue="1000" remark="0"/>	
+			<achievement index="83" type="常规" name="拥有融合元神" desc="拥有融合元神" require="1" prize="2" prizeValue="30" remark="0"/>
+  		<achievement index="97" type="常规" name="掌握神魂爆破" desc="掌握神魂爆破技能" require="0" prize="5" prizeValue="1000" remark="0"/>  
+			<achievement index="76" type="常规" name="元神技能启蒙" desc="元神掌握5个以上的技能" require="5" prize="5" prizeValue="500" remark="1"/>  <!--希望修改机制-->
+			<achievement index="84" type="常规" name="专家元神技能" desc="元神掌握5个专家级以上的技能" require="5" prize="4" prizeValue="9" remark="1"/>
+			<achievement index="85" type="常规" name="大师元神技能" desc="元神掌握5个大师级以上的技能" require="5" prize="5" prizeValue="1000" remark="1"/>
+			<achievement index="86" type="常规" name="宗师元神技能" desc="元神掌握5个宗师级以上的技能" require="5" prize="5" prizeValue="1500" remark="1"/>
+								
+		</Type>
+		<Type id="Collection">
+			<achievement index="100" type="挑战" name="收集幻彩套装" desc="收集幻彩项链、幻彩手镯、幻彩戒指各1个" require="5" prize="5" prizeValue="500" remark="0"/>
+			<achievement index="101" type="挑战" name="收集祈祷套装" desc="收集祈祷头盔、祈祷项链、祈祷手镯、祈祷戒指、祈祷之刃各1个" require="5" prize="5" prizeValue="500" remark="0"/>
+			<achievement index="102" type="挑战" name="收集神秘套装" desc="收集神秘戒指、神秘腰带、神秘头盔各1个" require="3" prize="5" prizeValue="500" remark="0"/>
+			<achievement index="103" type="挑战" name="收集幻影套装" desc="收集幻影头盔、幻影项链、幻影手镯、幻影戒指各1个" require="4" prize="1" prizeValue="26" remark="0"/>
+			<achievement index="104" type="挑战" name="收集龙象套装" desc="收集龙象项链、龙象手镯、龙象戒指各1个" require="3" prize="5" prizeValue="500" remark="0"/>
+			<achievement index="105" type="挑战" name="收集狂怒套装" desc="收集狂怒头盔、狂怒项链、狂怒手镯、狂怒戒指各1个" require="4" prize="5" prizeValue="500" remark="0"/>
+			<achievement index="106" type="挑战" name="收集神御套装" desc="收集神御头盔、神御项链、神御手镯、神御戒指各1个" require="4" prize="5" prizeValue="500" remark="0"/>
+			<achievement index="107" type="挑战" name="收集嗜血套装" desc="收集嗜血项链、嗜血戒指、嗜血手镯各1个" require="3" prize="5" prizeValue="500" remark="0"/>			
+			<achievement index="108" type="挑战" name="收集魔血套装" desc="收集魔血戒指、魔血手镯、魔血项链各1个" require="3" prize="5" prizeValue="500" remark="0"/>
+      <achievement index="109" type="挑战" name="收集不动明王套装" desc="收集不动明王头盔、不动明王项链、不动明王手镯、不动明王戒指各1个" require="4" prize="2" prizeValue="29" remark="0"/>									
+			<achievement index="110" type="挑战" name="收集记忆套装" desc="收集记忆戒指、记忆手镯、记忆头盔、记忆项链各1个" require="4" prize="5" prizeValue="1000" remark="0"/>									      
+			<achievement index="111" type="挑战" name="收集圣战套装" desc="收集圣战戒指、圣战手镯、圣战头盔、圣战项链各1个" require="4" prize="5" prizeValue="1000" remark="0"/>									      	
+			<achievement index="112" type="挑战" name="收集法神套装" desc="收集法神戒指、法神手镯、法神头盔、法神项链各1个" require="4" prize="5" prizeValue="1000" remark="0"/>									      	
+			<achievement index="113" type="挑战" name="收集天尊套装" desc="收集天尊戒指、天尊手镯、天尊头盔、天尊项链各1个" require="4" prize="5" prizeValue="1000" remark="0"/>									      		
+			<achievement index="114" type="挑战" name="收集神武套装" desc="收集神武头盔、神武项链、神武手镯、神武戒指各1个" require="4" prize="5" prizeValue="1000" remark="0"/>									      		
+			<achievement index="115" type="挑战" name="收集天玄套装" desc="收集天玄头盔、天玄项链、天玄手镯、天玄戒指各1个" require="4" prize="5" prizeValue="1000" remark="0"/>									      		
+			<achievement index="116" type="挑战" name="收集幻魔套装" desc="收集幻魔头盔、幻魔项链、幻魔手镯、幻魔戒指各1个" require="4" prize="5" prizeValue="1000" remark="0"/>									      		
+			<achievement index="117" type="挑战" name="收集战神套装" desc="收集战神头盔、战神项链、战神手镯、战神戒指各1个" require="4" prize="4" prizeValue="44" remark="0"/>									      		
+			<achievement index="118" type="挑战" name="收集道神套装" desc="收集道神头盔、道神项链、道神手镯、道神戒指各1个" require="4" prize="3" prizeValue="47" remark="0"/>
+			<achievement index="119" type="挑战" name="收集魔神套装" desc="收集魔神头盔、魔神项链、魔神手镯、魔神戒指各1个" require="4" prize="4" prizeValue="57" remark="0"/>
+			<achievement index="26002" type="活动" name="救世明王" desc="收集救世明王头盔、救世明王项链、救世明王手镯、救世明王戒指、救世明王腰带、救世明王靴子各1个" require="3" prize="3" prizeValue="64" remark="0"/>									      											      			
+		</Type>
+		<Type id="JiaGong">
+			<achievement index="11001" type="挑战" name="拆卸装备" desc="在中州铸造师处完成5次装备拆卸" require="5" prize="2" prizeValue="53"    remark="1"/>
+			<achievement index="11002" type="挑战" name="尝试宝石凝练" desc="在紫金神炉处完成5次宝石凝练" require="5" prize="5" prizeValue="500" remark="1"/>
+			<achievement index="11003" type="挑战" name="尝试宝石淬炼" desc="在紫金神炉处完成5次宝石淬炼" require="5" prize="5" prizeValue="500" remark="1"/>
+			<achievement index="11004" type="挑战" name="合成魂骨" desc="在紫金神炉处完成5次魂骨合成" require="5" prize="5" prizeValue="500"     remark="1"/>
+		</Type>
+		<Type id = "MagicBall">
+			<achievement index="13001" type="挑战" name="神奇一星珠" desc="在小宝龙处累积上交神奇一星珠18颗" require="18" prize="5" prizeValue="500"  remark="1"/>
+			<achievement index="13002" type="挑战" name="神奇二星珠" desc="在小宝龙处累积上交神奇二星珠18颗" require="18" prize="3" prizeValue="59"   remark="1"/>
+			<achievement index="13003" type="挑战" name="神奇三星珠" desc="在小宝龙处累积上交神奇三星珠18颗" require="18" prize="5" prizeValue="500"  remark="1"/>
+			<achievement index="13004" type="挑战" name="神奇四星珠" desc="在小宝龙处累积上交神奇四星珠18颗" require="18" prize="4" prizeValue="32"   remark="1"/>
+			<achievement index="13005" type="挑战" name="神奇五星珠" desc="在小宝龙处累积上交神奇五星珠18颗" require="18" prize="5" prizeValue="1000" remark="1"/>
+			<achievement index="13006" type="挑战" name="神奇六星珠" desc="在小宝龙处累积上交神奇六星珠18颗" require="18" prize="3" prizeValue="35"   remark="1"/>
+			<achievement index="13007" type="挑战" name="神奇七星珠" desc="在小宝龙处累积上交神奇七星珠18颗" require="18" prize="5" prizeValue="1000" remark="1"/>  			
+		</Type>
+		<Type id="Activity">
+			<achievement index="133" type="挑战" name="兑换圣灵精华" desc="在兽魂师处兑换5次圣灵精华" require="5" prize="3" prizeValue="47"   remark="1"/>
+			<achievement index="134" type="挑战" name="蟠龙密保阁" desc="在兽魂师处完成一次蟠龙密保阁" require="1" prize="3" prizeValue="34"  remark="1"/>	
+			
+			
+			<achievement index="10048" type="挑战" name="每日活动大师" desc="参加每日活动，单周累积积分达到1500分" require="1500" prize="5" prizeValue="1000" remark="1"/>
+			<achievement index="10049" type="挑战" name="王城诏令专家" desc="累积完成王城诏令达到100次" require="100" prize="1" prizeValue="2"    remark="1"/>
+			<achievement index="10050" type="挑战" name="王城诏令大师" desc="累积完成王城诏令达到300次" require="300" prize="5" prizeValue="1000" remark="1"/>
+			<achievement index="10051" type="挑战" name="王城诏令宗师" desc="累积完成王城诏令达到500次" require="500" prize="5" prizeValue="1500" remark="1"/>
+			
+			<achievement index="10052" type="挑战" name="沙城除魔专家" desc="累积完成沙城除魔达到30次" require="30" prize="2" prizeValue="5"      remark="1"/>
+			<achievement index="10053" type="挑战" name="沙城除魔大师" desc="累积完成沙城除魔达到90次" require="90" prize="5" prizeValue="500"    remark="1"/>
+			<achievement index="10054" type="挑战" name="沙城除魔宗师" desc="累积完成沙城除魔达到180次" require="180" prize="5" prizeValue="1000" remark="1"/>
+			
+			<achievement index="10055" type="挑战" name="沙城护送专家" desc="累积完成沙城护送达到50次" require="50" prize="1" prizeValue="14"    remark="1"/>
+			<achievement index="10056" type="挑战" name="沙城护送大师" desc="累积完成沙城护送达到100次" require="100" prize="5" prizeValue="1000" remark="1"/>
+			<achievement index="10057" type="挑战" name="沙城护送宗师" desc="累积完成沙城护送达到300次" require="300" prize="4" prizeValue="8" remark="1"/>
+
+      <achievement index="10058" type="挑战" name="警戒海岛巡查" desc="单日完成3个警戒海岛的防御任务" require="3" prize="2" prizeValue="17"       remark="1"/>
+			<achievement index="10059" type="挑战" name="警戒海岛专家" desc="单日在警戒海岛累积获得8000积分" require="8000" prize="5" prizeValue="500"    remark="1"/>
+			<achievement index="10060" type="挑战" name="警戒海岛大师" desc="单日在警戒海岛累积获得10000积分" require="10000" prize="5" prizeValue="500"  remark="1"/>
+			<achievement index="10061" type="挑战" name="警戒海岛宗师" desc="单日在警戒海岛累积获得12000积分" require="12000" prize="5" prizeValue="1000" remark="1"/>
+			<achievement index="10062" type="挑战" name="警戒海岛权威" desc="单日在警戒海岛累积获得14000积分" require="14000" prize="5" prizeValue="1500" remark="1"/>
+			
+			<achievement index="10063" type="挑战" name="龙威奖章专家" desc="累积消耗100个龙威奖章" require="100" prize="1" prizeValue="38"   remark="1"/>
+			<achievement index="10064" type="挑战" name="龙威奖章大师" desc="累积消耗300个龙威奖章" require="300" prize="5" prizeValue="1000" remark="1"/>
+			<achievement index="10065" type="挑战" name="龙威奖章宗师" desc="累积消耗500个龙威奖章" require="500" prize="3" prizeValue="11"   remark="1"/>
+
+      <achievement index="10066" type="挑战" name="绿色海魔之光" desc="累积蓄满绿色海魔值50次" require="50" prize="2" prizeValue="41"   remark="1"/>
+			<achievement index="10067" type="挑战" name="蓝色海魔之光" desc="累积蓄满绿色海魔值40次" require="40" prize="5" prizeValue="1000" remark="1"/>
+			<achievement index="10068" type="挑战" name="紫色海魔之光" desc="累积蓄满绿色海魔值30次" require="30" prize="4" prizeValue="20"   remark="1"/>
+			<achievement index="10069" type="挑战" name="橙色海魔之光" desc="累积蓄满绿色海魔值20次" require="20" prize="5" prizeValue="1500" remark="1"/>
+			
+			<achievement index="10070" type="挑战" name="天玉宝石专家" desc="在中州魔法祭坛投入30次天玉宝石" require="30" prize="1" prizeValue="50"   remark="1"/>
+			<achievement index="10071" type="挑战" name="天玉宝石大师" desc="在中州魔法祭坛投入60次天玉宝石" require="60" prize="5" prizeValue="1000" remark="1"/>
+			<achievement index="10072" type="挑战" name="天玉宝石宗师" desc="在中州魔法祭坛投入100次天玉宝石" require="100" prize="3" prizeValue="23" remark="1"/>
+			
+			<achievement index="20001" type="稀有" name="警戒海岛王者" desc="单日在警戒海岛累计获得16000积分" require="16000" prize="5" prizeValue="2000" remark="1"/>
+			<achievement index="20002" type="稀有" name="警戒海岛将领" desc="单周在警戒海岛上累积获得6万积分" require="60000" prize="5" prizeValue="2000"     remark="1"/>
+			<achievement index="20003" type="稀有" name="警戒海岛金榜题名" desc="单周总成绩最终位列前10名" require="1" prize="5" prizeValue="2500"        remark="1"/>
+			
+	<!--		<achievement index="21001" type="稀有" name="高大祈愿树" desc="将祈愿符投至祈愿树的高层100次" require="100" prize="5" prizeValue="500" />
+			<achievement index="21002" type="稀有" name="茂盛祈愿树" desc="将祈愿符投至祈愿树的中层100次" require="100" prize="5" prizeValue="500" />
+			<achievement index="21003" type="稀有" name="粗壮祈愿树" desc="将祈愿符投至祈愿树的低层100次" require="100" prize="5" prizeValue="500" /> -->
+			
+			<achievement index="22001" type="稀有" name="海底欢乐谷专家" desc="累积上交欢乐灵珠50个" require="50" prize="5" prizeValue="500"    remark="1"/>
+			<achievement index="22002" type="稀有" name="海底欢乐谷大师" desc="累积上交欢乐灵珠100个" require="100" prize="5" prizeValue="1000" remark="1"/>
+			<achievement index="22003" type="稀有" name="海底欢乐谷宗师" desc="累积上交欢乐灵珠300个" require="300" prize="5" prizeValue="1500" remark="1"/>
+			<achievement index="26001" type="活动" name="鸿运齐天" desc="上交100捆启运符" require="2000" prize="1" prizeValue="63" remark="1"/>
+			<achievement index="26003" type="活动" name="扭转乾坤" desc="上交10000个乾坤神石" require="10000" prize="2" prizeValue="61" remark="1"/>
+			<achievement index="26004" type="活动" name="重获新生" desc="上交一枚重生戒指。" require="1" prize="4" prizeValue="62" remark="1"/>
+			
+		</Type>
+		<Type id = "Blood">
+			
+		</Type>
+		<Type id = "TuiTU">
+			<achievement index="23001" type="稀有" name="落霞梦境完美通关" desc="在落霞岛梦境收集9星大满贯" require="9" prize="5" prizeValue="500"         remark="0"/>
+			<achievement index="23002" type="稀有" name="矿区梦境完美通关" desc="在矿区梦境收集12星大满贯" require="12" prize="5" prizeValue="500"         remark="0"/>
+			<achievement index="23003" type="稀有" name="中州梦境完美通关" desc="在中州梦境收集15星大满贯" require="15" prize="5" prizeValue="500"         remark="0"/>
+			<achievement index="23004" type="稀有" name="将军坟梦境完美通关" desc="在将军坟梦境收集6星大满贯" require="6" prize="5" prizeValue="500"       remark="0"/>
+			<achievement index="23005" type="稀有" name="将军坟东梦境完美通关" desc="在将军坟东梦境收集9星大满贯" require="9" prize="5" prizeValue="500"   remark="0"/>
+			<achievement index="23006" type="稀有" name="热砂梦境完美通关" desc="在热砂荒漠境收集15星大满贯" require="15" prize="5" prizeValue="500"       remark="0"/>
+			<achievement index="23007" type="稀有" name="蛇穴梦境完美通关" desc="在蛇穴梦境收集12星大满贯" require="12" prize="5" prizeValue="500"         remark="0"/>
+			<achievement index="23008" type="稀有" name="机关道梦境完美通关" desc="在机关道梦境收集27星大满贯" require="27" prize="5" prizeValue="500"     remark="0"/>
+			<achievement index="23009" type="稀有" name="跃马梦境完美通关" desc="在跃马平原梦境收集15星大满贯" require="15" prize="5" prizeValue="500"     remark="0"/>
+			<achievement index="23010" type="稀有" name="逆魔梦境完美通关" desc="在逆魔殿梦境收集24星大满贯" require="24" prize="5" prizeValue="500"       remark="0"/>
+			<achievement index="23011" type="稀有" name="禁地梦境完美通关" desc="在禁地梦境收集15星大满贯" require="15" prize="5" prizeValue="500"         remark="0"/>
+			<achievement index="23012" type="稀有" name="禁地魔穴梦境完美通关" desc="在禁地魔穴梦境收集15星大满贯" require="15" prize="5" prizeValue="500" remark="0"/>
+		</Type>
+		<Type id = "Star">
+			<achievement index="142" type="常规" name="开启星宿谱" desc="开启星宿谱" require="1" prize="4" prizeValue="55" remark="0"/>
+			<achievement index="143" type="常规" name="通达井星宿" desc="开启井星宿的全部子星" require="8" prize="1" prizeValue="27" remark="1"/>
+ <!-- <achievement index="144" type="常规" name="通达井星宿" desc="开启井星宿的全部子星" require="6" prize="0" prizeValue="0" />
+			<achievement index="145" type="常规" name="通达轸星宿" desc="开启轸星宿的全部子星" require="4" prize="0" prizeValue="0" />  -->
+			<achievement index="146" type="常规" name="掌握2个星宿技能" desc="掌握2个星宿技能" require="0" prize="2" prizeValue="30" remark="1"/>
+			<achievement index="147" type="常规" name="掌握2个满级星宿技能" desc="掌握2个满级星宿技能" require="7" prize="4" prizeValue="9" remark="1"/>
+		</Type>
+		<Type id="YaoDan"><!--只有妖士才有-->
+			<achievement index="135" type="常规"   name="开启妖丹"   desc="主体升级到28级开启妖丹" require="1" prize="3" prizeValue="58" remark="0"/>
+			<achievement index="25001" type="常规" name="妖丹进阶"   desc="升级妖丹达到37级" require="37" prize="3" prizeValue="10" remark="0"/>
+			<achievement index="25002" type="常规" name="妖丹高阶"   desc="升级妖丹达到60级" require="60" prize="3" prizeValue="22" remark="0"/>
+			<achievement index="25003" type="常规" name="开启妖王丹" desc="升级妖丹达到妖王丹1重" require="72" prize="5" prizeValue="500" remark="0"/>
+			<achievement index="25004" type="常规" name="妖王丹进阶" desc="升级妖丹达到妖王丹40重" require="111" prize="5" prizeValue="500" remark="0"/>
+			<achievement index="25005" type="常规" name="妖王丹高阶" desc="升级妖丹达到妖王丹80重" require="151" prize="5" prizeValue="500" remark="0"/>
+			<achievement index="25006" type="常规" name="开启妖仙丹" desc="升级妖丹达到妖仙丹1重" require="171" prize="5" prizeValue="1000" remark="0"/>
+			<achievement index="25007" type="常规" name="妖仙丹进阶" desc="升级妖丹达到妖仙丹40重" require="210" prize="5" prizeValue="1000" remark="0"/>
+			<achievement index="25008" type="常规" name="妖仙丹高阶" desc="升级妖丹达到妖仙丹80级" require="250" prize="5" prizeValue="1000" remark="0"/>
+      <achievement index="25009" type="常规" name="开启妖圣丹" desc="升级妖丹达到妖圣丹1重" require="270" prize="5" prizeValue="1500" remark="0"/>
+			<achievement index="25010" type="常规" name="妖圣丹进阶" desc="升级妖丹达到妖圣丹40重" require="309" prize="5" prizeValue="1500" remark="0"/>
+			<achievement index="25011" type="常规" name="妖圣丹高阶" desc="升级妖丹达到妖圣丹80级" require="349" prize="5" prizeValue="1500" remark="0"/>			
+<!--   	<achievement index="136" type="常规" name="妖丹达到71级" desc="妖丹达到指定等级" require="71" prize="3" prizeValue="10" remark="0"/>	-->
+<!--		<achievement index="148" type="常规" name="妖丹达到妖王境界" desc="妖丹达到指定等级" require="65" prize="5" prizeValue="1000" remark="0"/>	新增 65-->
+<!--		<achievement index="149" type="常规" name="妖丹达到妖仙境界" desc="妖丹达到指定等级" require="164" prize="5" prizeValue="1500" remark="0"/>-->	<!--新增 164-->
+<!--		<achievement index="137" type="常规" name="妖丹达到妖圣境界" desc="妖丹达到指定等级" require="263" prize="3" prizeValue="22" remark="0"/> -->  <!--修改 263-->
+			<achievement index="138" type="常规" name="初识妖丹技能" desc="掌握5个以上的妖丹技能" require="0" prize="1" prizeValue="39" remark="1"/>        <!--希望修改机制-->
+			<achievement index="139" type="常规" name="妖丹技能专家" desc="掌握5个以上的专家级妖丹技能" require="3" prize="2" prizeValue="42" remark="1"/>
+			<achievement index="140" type="常规" name="妖丹技能大师" desc="掌握5个以上的大师级妖丹技能" require="4" prize="1" prizeValue="51" remark="1"/>
+			<achievement index="141" type="常规" name="妖丹技能宗师" desc="掌握5个以上的宗师级妖丹技能" require="5" prize="2" prizeValue="54" remark="1"/>		
+		</Type>
+	</Single>
+	<Complex>
+	</Complex>
+</achievements>
+
+

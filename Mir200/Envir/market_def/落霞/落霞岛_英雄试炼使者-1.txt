@@ -1,0 +1,138 @@
+[@main]
+#IF
+HOUR 20 20
+EQUAL I8 1
+#SAY
+  <color=red 欢度五一，全民减负，每逢周一、周三、周五才会开启落>\
+<color=red 霞夺宝。奖励全面升级，开启宝盒可获得两份奖励！>\
+  <color=ggreen 夺宝奇兵>活动中<color=ggreen 通天教主>将出现在此。进入后请小心戒备！\
+  开启通天教主的宝盒将会随机获得<color=green 组合技能书碎片、骑战>\
+<color=green 技能书碎片或者元神强化技能书碎片随机两个的奖励。>\
+  <进入英雄试炼场/@gotoyxslc>\
+  <合成技能书/@skill>\
+  <离开/@exit>\
+#ELSESAY
+  <color=red 欢度五一，全民减负，每逢周一、周三、周五才会开启落>\
+<color=red 霞夺宝。奖励全面升级，开启宝盒可获得两份奖励！>\
+  <color=ggreen 夺宝奇兵>活动中<color=ggreen 通天教主>将出现在此。进入后请小心戒备！\
+  开启通天教主的宝盒将会随机获得<color=green 组合技能书碎片、骑战>\
+<color=green 技能书碎片或者元神强化技能书碎片随机两个的奖励。>\
+  每周一、三、五的<color=green 20:00-21:00>才可以进入。\
+  <合成技能书/@skill>\
+  <离开/@exit>\
+
+[@skill]
+  请选择你要合成的技能书：\
+  注：残章绑定合成的技能书绑定，残章不绑定合成不绑定。\
+  <怒斩天下/@choiceSkill&怒斩天下>    <迷光烈焰/@choiceSkill&迷光烈焰>    <火毒攻心剑/@choiceSkill&火毒攻心剑>\
+  <天怒惊雷/@choiceSkill&天怒惊雷>    <神之召唤/@choiceSkill&神之召唤>    <天女散花咒/@choiceSkill&天女散花咒>\
+  <翱风斩/@choiceSkill&翱风斩>      <纵雷诀/@choiceSkill&纵雷诀>      <毒凌波/@choiceSkill&毒凌波>\
+  <龙啸九天/@choiceSkill&龙啸九天>    <奔雷诀/@choiceSkill&奔雷诀>      <魔舞吞噬/@choiceSkill&魔舞吞噬>\
+  <强化攻杀一重/@choiceSkill&强化攻杀一重>    <强化火球一重/@choiceSkill&强化火球一重>      <强化施毒一重/@choiceSkill&强化施毒一重>\\
+  <返回/@main>\
+
+[@choiceSkill]
+#IF
+POS $SCRIPTPARAM(1) 一重
+#ACT
+MOV S10 $SCRIPTPARAM(1)
+ReplaceText S10 一重 残章
+MOV S11 6
+MOV S12 1
+#ELSEACT
+MOV S10 $SCRIPTPARAM(1)
+INC S10 残章
+MOV S11 3
+MOV S12 1
+#IF
+EQUAL $SCRIPTPARAM(1) 翱风斩
+#ACT
+MOV S11 3
+MOV S12 2
+MOV S13 $SCRIPTPARAM(1)
+INC S13 (初级)
+MOV S14 $SCRIPTPARAM(1)
+INC S14 (中级)
+MOV S15 $SCRIPTPARAM(1)
+INC S15 (高级)
+MOV S16 $SCRIPTPARAM(1)
+INC S16 (专家级)
+#IF
+EQUAL $SCRIPTPARAM(1) 纵雷诀
+#ACT
+MOV S11 3
+MOV S12 2
+MOV S13 $SCRIPTPARAM(1)
+INC S13 (初级)
+MOV S14 $SCRIPTPARAM(1)
+INC S14 (中级)
+MOV S15 $SCRIPTPARAM(1)
+INC S15 (高级)
+MOV S16 $SCRIPTPARAM(1)
+INC S16 (专家级)
+#IF
+EQUAL $SCRIPTPARAM(1) 毒凌波
+#ACT
+MOV S11 3
+MOV S12 2
+MOV S13 $SCRIPTPARAM(1)
+INC S13 (初级)
+MOV S14 $SCRIPTPARAM(1)
+INC S14 (中级)
+MOV S15 $SCRIPTPARAM(1)
+INC S15 (高级)
+MOV S16 $SCRIPTPARAM(1)
+INC S16 (专家级)
+#IF
+EQUAL S12 1
+#SAY
+  请选择你要合成的技能书级别：\
+  消耗{color=orange <$STR(S11)>} 个{color=green <$STR(S10)>}合成一本{color=green <$SCRIPTPARAM(1)>}         {合成/@getSkill&<$STR(S11)>&<$STR(S10)>&<$SCRIPTPARAM(1)>}\
+  <返回/@skill>\
+#ACT
+break
+#IF
+EQUAL S12 2
+#SAY
+  请选择你要合成的技能书级别：\
+  消耗<color=orange 3 >个{color=green <$STR(S10)>}合成一本{color=green <$STR(S13)>}     {合成/@getSkill&3&<$STR(S10)>&<$STR(S13)>}\
+  消耗<color=orange 6 >个{color=green <$STR(S10)>}合成一本{color=green <$STR(S14)>}     {合成/@getSkill&6&<$STR(S10)>&<$STR(S14)>}\
+  消耗<color=orange 9 >个{color=green <$STR(S10)>}合成一本{color=green <$STR(S15)>}     {合成/@getSkill&9&<$STR(S10)>&<$STR(S15)>}\
+  消耗<color=orange 12>个{color=green <$STR(S10)>}合成一本{color=green <$STR(S16)>}   {合成/@getSkill&12&<$STR(S10)>&<$STR(S16)>}\
+  <返回/@skill>\
+#ACT
+break
+
+[@getSkill]
+#IF
+CHECKITEM $SCRIPTPARAM(2) $SCRIPTPARAM(1)
+#SAY
+  你成功合成一本{color=green <$SCRIPTPARAM(3)>}。\
+  <返回/@skill>\
+#ACT
+#ELSESAY
+  你身上的怒斩天下残章不足3个，无法兑换。\
+  <返回/@skill>\
+#ELSEACT
+break
+#IF
+EQUAL $ITEMINFO[$ITEMMAKEINDEX($STR(S10))].ITEMEXT(27) 1
+#ACT
+TAKE $SCRIPTPARAM(2) $SCRIPTPARAM(1)
+GIVE $SCRIPTPARAM(3) 1
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+break
+#ELSEACT
+TAKE $SCRIPTPARAM(2) $SCRIPTPARAM(1)
+GIVE $SCRIPTPARAM(3) 1
+break
+
+[@gotoyxslc]
+#IF
+CHECKLEVELEX > 35
+#ACT
+MAP F004
+break
+#ELSESAY
+  勇士，你的等级未达到36级，无法进入！\
+  <离开/@exit>\

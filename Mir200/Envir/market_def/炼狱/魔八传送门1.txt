@@ -1,0 +1,4 @@
+[@main]
+#ACT
+MAPMOVE NL007 14 17
+break

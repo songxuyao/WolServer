@@ -1,0 +1,150 @@
+[@神秘灵匣]
+{
+
+#IF
+LARGE D9 10
+#ACT
+RANDOMGIVEITEMS 3 $STR(S30) @开启神秘箱子
+break
+#IF
+RANDOM 1
+#ACT
+INC D9 1
+#IF
+SMALL D9 5
+#ACT
+ReadRandomStr ..\QueStDiary\数据文件\文本数据\神秘灵匣初奖.txt S33
+INC S30 $STR(S33)
+INC S30 |
+INC S31 $STR(S33)
+INC S31 |
+goto @神秘灵匣
+break
+#IF
+SMALL D9 9
+#ACT
+ReadRandomStr ..\QueStDiary\数据文件\文本数据\神秘灵匣高奖.txt S33
+INC S30 $STR(S33)
+INC S30 |
+INC S31 $STR(S33)
+INC S31 |
+goto @神秘灵匣
+break
+#IF
+SMALL D9 11
+#ACT
+ReadRandomStr ..\QueStDiary\数据文件\文本数据\神秘灵匣特奖.txt S33
+INC S30 $STR(S33)
+INC S30 |
+INC S32 $STR(S33)
+INC S32 |
+goto @神秘灵匣
+break
+#IF
+EQUAL D9 11
+#ACT
+ReadRandomStr ..\QueStDiary\数据文件\文本数据\神秘灵匣特奖.txt S33
+INC S30 $STR(S33)
+INC S32 $STR(S33)
+goto @神秘灵匣
+break
+
+[@开启神秘箱子]
+#IF
+EQUAL $PARAM(0) 1
+EQUAL $PARAM(10) 0
+#ACT
+SPLIT $STR(S31) | S34
+SPLIT $STR(S32) | S42
+RANDOMVAR S34 41 S45
+ReplaceText S31 $STR(S45) $STR(S42) 1
+#IF
+EQUAL $PARAM(0) 2
+EQUAL $PARAM(10) 0
+#ACT
+SPLIT $STR(S31) | S34
+SPLIT $STR(S32) | S42
+RANDOMVAR S34 41 S45
+ReplaceText S31 $STR(S45) $STR(S43) 1
+#IF
+EQUAL $PARAM(0) 3
+EQUAL $PARAM(10) 0
+#ACT
+SPLIT $STR(S31) | S34
+SPLIT $STR(S32) | S42
+RANDOMVAR S34 41 S45
+ReplaceText S31 $STR(S45) $STR(S44) 1
+#IF
+EQUAL $PARAM(0) 4
+EQUAL $PARAM(10) 0
+#ACT
+SPLIT $STR(S31) | S34
+SPLIT $STR(S32) | S42
+RANDOMVAR S34 41 S45
+#IF
+EQUAL $PARAM(10) 2
+#ACT
+break
+#IF
+RANDOM 1
+#ACT
+MOV P17 1
+MOV S46 $STR(S45)
+ReplaceText S46 /1
+#IF
+EQUAL S46 经验
+#ACT
+MOVR P17 9
+INC P17 4
+MULT P17 100000
+#IF
+RANDOM 1
+#ACT
+RANDOMGIVE <$STR(S46)>|<$STR(P17)>
+#IF
+EQUAL $PARAM(10) 1
+#ACT
+goto @调整神秘属性
+break
+
+[@调整神秘属性]
+#IF
+RANDOM 1
+#ACT
+TABLE SG_PRIVITE Hum16 - 1
+#IF
+EQUAL S46 圣灵精华
+#ACT
+MOVR P17 10
+INC P17 1
+break
+#IF
+CHECKVARLIST $STR(S46) ..\QuestDiary\数据文件\文本数据\原石种类列表.txt
+#ACT
+MOVR P17 5
+INC P17 1
+UPGRADEUSERITEM $PARAM(1) 20 = $STR(P17)
+break
+#IF
+CHECKVARLIST $STR(S46) ..\QuestDiary\数据文件\文本数据\矿石材料列表.txt
+#ACT
+#ELSEACT
+break
+#IF
+RANDOM 5
+#ACT
+MOVR P17 30
+INC P17 30
+MULT P17 1000
+UPGRADEUSERITEM $PARAM(1) 20 = $STR(P17)
+break
+#IF
+RANDOM 1
+#ACT
+MOVR P17 20
+INC P17 30
+MULT P17 1000
+UPGRADEUSERITEM $PARAM(1) 20 = $STR(P17)
+break
+
+}

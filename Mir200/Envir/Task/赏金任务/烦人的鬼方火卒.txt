@@ -1,0 +1,10 @@
+[setup]
+stepcount = 3
+title = 烦人的鬼方火卒
+ID = 59
+stepaim1 = 击杀10只鬼方火卒
+stepaim2 = 还需击杀<$TASKVAL(59).I0>只鬼方火卒。
+stepaim3 = 恭喜你，任务完成！
+stepDESC1 = <color=graygolden 任务目的：>  击杀10只鬼方火卒\<color=graygolden 任务介绍:>\  击杀10只鬼方火卒
+stepDESC2 = color=graygolden 任务目的：>  击杀10只鬼方火卒\<color=graygolden 任务介绍:>\  还需击杀<$TASKVAL(59).I0>只鬼方火卒
+stepDESC3 = color=graygolden 任务目的：>  击杀10只鬼方火卒\<color=graygolden 任务介绍:>\  恭喜你，任务完成！

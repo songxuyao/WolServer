@@ -1,0 +1,87 @@
+[@main]
+\
+  <color=yellow 向财神上贡祭品可获得财神红包，每天一共可上贡><color=red 3次>。\\
+  财神红包打开可随机获得：\
+  <color=green 大量经验、月光宝盒、强化技能灵丹、悬赏令、超级太阳>\
+  <color=green 神水等。>\\\
+  <参与活动/@_mammon_shanggong>  <离开/@exit>\
+
+[@_mammon_shanggong]
+#IF
+!EQUAL $Table(SG_Pritime).Tim10 $DATE
+#ACT
+TABLE SG_PRIVITE Hum10 = 3
+Table SG_Pritime Tim10 = $DATE
+#IF
+RANDOM 1
+#SAY
+\
+  <color=green 给财神上贡品可获得红包,每天最多获得3个财神红包>\\\
+   <金币上贡:消耗30万金币/@_mammon_upGongpin1>\
+   <猪肉上贡:消耗10个猪肉/@_mammon_upGongpin2>\
+   <木材上贡:消耗20个木材/@_mammon_upGongpin3>\
+#ACT
+break
+
+[@_mammon_upGongpin1]
+#IF
+SMALL $TABLE(SG_PRIVITE).Hum10 1
+#SAY
+勇士，你今天上贡的次数已经达到上限\
+明天再来吧 <返回/@_mammonShanggong_main>
+#ACT
+break
+#IF
+CHECKGOLD 300000
+#SAY
+恭喜勇士获得1个财神红包!  <返回/@_mammon_shanggong>
+#ACT
+TAKE 金币 300000
+GIVE 财神红包 1 1
+TABLE SG_PRIVITE Hum10 - 1
+break
+#ELSEACT
+SENDMSG 5 抱歉，您的金币不足300000
+break
+
+[@_mammon_upGongpin2]
+#IF
+SMALL $TABLE(SG_PRIVITE).Hum10 1
+#SAY
+勇士，你今天上贡的次数已经达到上限\
+明天再来吧 <返回/@_mammonShanggong_main>
+#ACT
+break
+#IF
+CHECKITEM 猪肉 10
+#SAY
+恭喜勇士获得1个财神红包!  <返回/@_mammon_shanggong>
+#ACT
+TAKE 猪肉 10
+GIVE 财神红包 1 1
+TABLE SG_PRIVITE Hum10 - 1
+break
+#ELSEACT
+SENDMSG 5 您包裹中的猪肉数量不足10
+break
+
+[@_mammon_upGongpin3]
+#IF
+SMALL $TABLE(SG_PRIVITE).Hum10 1
+#SAY
+勇士，你今天上贡的次数已经达到上限\
+明天再来吧 <返回/@_mammonShanggong_main>
+#ACT
+break
+#IF
+CHECKITEM 木材 10
+#SAY
+恭喜勇士获得1个财神红包!  <返回/@_mammon_shanggong>
+#ACT
+TAKE 木材 10
+GIVE 财神红包 1 1
+TABLE SG_PRIVITE Hum10 - 1
+break
+#ELSEACT
+SENDMSG 5 您包裹中的木材数量不足20
+break

@@ -1,0 +1,196 @@
+[@amemater]
+{
+#IF
+CHECKACCOUNTLIST ..\Admin.txt
+#ACT
+QUERYVAL 0 1 10 @gomater 请输入游戏管理员后台管理密码
+break
+
+[@gomater]
+#IF
+EQUAL M0 $LEVEL
+#ACT
+ChangeMode 1 1
+ChangeMode 2 1
+ChangeMode 3 1
+ChangePermission 10
+GOTO @管理列表
+SENDMSG 6 你进入了隐身无敌模式...
+SENDMSG 5 你获得了管理10级权限...
+#ELSEACT
+SENDMSG 5 You#32is#32not#32a#32game#32administrator,you#32can#32not#32use#32this#32feature.
+break
+
+[@管理列表]
+#IF
+EQUAL G0 0
+#SAY
+　<color=orange 尊敬的游戏管理员：您好。><Color=ABAAAA ━━━━WWW.WOOOL.COM━━━>\
+<color=orange ━━时━光━倒━流━三━无━版━本━━━><Color=FF4E00 管><Color=FF7800 理><Color=FFA200 系><Color=FFCC00 统><Color=565555 -><Color=0E7FF7 V2.0>\
+<Color=ABAAAA ╔═> <Color=00FF04 游戏后台执行操作设置> <Color=ABAAAA ═╗><Color=004CFF ▂▃▃游戏参数显示▃▃▂>\
+<Color=ABAAAA ║><游戏模式更改/@游戏模式><Color=ABAAAA ║><初始天下第一/@天下第一><Color=ABAAAA ║><Color=00DBFF 游戏模式：><Color=GREEN 正式开区模式>\
+<Color=ABAAAA ║><游戏天数设置/@游戏天数><Color=ABAAAA ║><等待功能添加/@等待添加><Color=ABAAAA ║><Color=00C4FF 开区时间：>[<$STR(G2)>]天[<$STR(G1)>]分\
+<Color=ABAAAA ║><超级夺宝调整/@超级夺宝><Color=ABAAAA ║><等待功能添加/@等待添加><Color=ABAAAA ║><Color=00ADFF 超级夺宝：>[<$STR(G17)>]\
+<Color=ABAAAA ║><封杀玩家设置/@封杀玩家><Color=ABAAAA ║><等待功能添加/@等待添加><Color=ABAAAA ║><Color=0096FF 超宝时间：>[<$STR(G18)>]月[<$STR(G19)>]日\
+<Color=ABAAAA ║><管理在线喊话/@设置喊话><Color=ABAAAA ║><等待功能添加/@等待添加><Color=ABAAAA ║><Color=0096FF 超宝时间：>[<$STR(G20)>]时[<$STR(G21)>]分\
+<Color=ABAAAA ╚═════════════╝><Color=007FFF 超宝奖励：>[<$STR(A18)>]\
+#ACT
+break
+#IF
+EQUAL G0 1
+#SAY
+　<color=orange 尊敬的游戏管理员：您好。><Color=ABAAAA ━━━━WWW.WOOOL.COM━━━>\
+<color=orange ━━时━光━倒━流━三━无━版━本━━━><Color=FF4E00 管><Color=FF7800 理><Color=FFA200 系><Color=FFCC00 统><Color=565555 -><Color=0E7FF7 V2.0>\
+<Color=ABAAAA ╔═> <Color=00FF04 游戏后台执行操作设置> <Color=ABAAAA ═╗><Color=004CFF ▂▃▃游戏参数显示▃▃▂>\
+<Color=ABAAAA ║><游戏模式更改/@游戏模式><Color=ABAAAA ║><初始天下第一/@天下第一><Color=ABAAAA ║><Color=00DBFF 游戏模式：><Color=RED 测试游戏模式>\
+<Color=ABAAAA ║><游戏天数设置/@游戏天数><Color=ABAAAA ║><等待功能添加/@等待添加><Color=ABAAAA ║><Color=00C4FF 开区时间：>[<$STR(G2)>]天[<$STR(G1)>]分\
+<Color=ABAAAA ║><超级夺宝调整/@超级夺宝><Color=ABAAAA ║><等待功能添加/@等待添加><Color=ABAAAA ║><Color=00ADFF 超级夺宝：>[<$STR(G17)>]\
+<Color=ABAAAA ║><封杀玩家设置/@封杀玩家><Color=ABAAAA ║><等待功能添加/@等待添加><Color=ABAAAA ║><Color=0096FF 超宝时间：>[<$STR(G18)>]月[<$STR(G19)>]日\
+<Color=ABAAAA ║><管理在线喊话/@设置喊话><Color=ABAAAA ║><等待功能添加/@等待添加><Color=ABAAAA ║><Color=0096FF 超宝时间：>[<$STR(G20)>]时[<$STR(G21)>]分\
+<Color=ABAAAA ╚═════════════╝><Color=007FFF 超宝奖励：>[<$STR(A18)>]\
+#ACT
+break
+
+[@游戏模式]
+#ACT
+QUERYMSG 注意：你确定要更改[游戏模式]吗? @更改模式
+break
+
+[@更改模式1]
+#IF
+CHECKACCOUNTLIST ..\Admin.txt
+EQUAL G0 0
+#ACT
+mov G0 1
+goto @管理列表
+messagebox 服务器游戏模式修改成功\　\当前游戏模式：[测试阶段模式]
+break
+#IF
+CHECKACCOUNTLIST ..\Admin.txt
+LARGE G0 0
+#ACT
+mov G0 0
+goto @管理列表
+messagebox 服务器游戏模式修改成功\　\当前游戏模式：[正式开区模式]
+break
+
+[@游戏天数]
+#IF
+CHECKACCOUNTLIST ..\Admin.txt
+#ACT
+QUERYVAL 0 1 3 @shezhi011 请输入设置的开区天数。当前参数为[<$STR(G2)>]天;
+break
+
+[@shezhi011]
+#IF
+CHECKACCOUNTLIST ..\Admin.txt
+#ACT
+QUERYVAL 1 1 3 @shezhi012 请输入你所设置的开区分钟。当前参数为[<$STR(G1)>]分钟;
+
+[@shezhi012]
+#IF
+CHECKACCOUNTLIST ..\Admin.txt
+#ACT
+MOV G2 $STR(M0)
+MOV G1 $STR(M1)
+GOTO @管理列表
+SENDMSG 7 设置成功！你设置的开区天数是[<$STR(G2)>]天-[<$STR(G1)>]分钟。
+break
+
+[@超级夺宝]
+#IF
+CHECKACCOUNTLIST ..\Admin.txt
+#ACT
+QUERYVAL 1 0 28 @SZDBJP12 请输入超级夺宝开启时间：格式：[1-6-16-8-0-财神面具]
+break
+
+[@SZDBJP12]
+#IF
+CHECKACCOUNTLIST ..\Admin.txt
+#ACT
+SPLIT $STR(S1) - S2
+MOV G17 $STR(S2)
+MOV G18 $STR(S3)
+MOV G19 $STR(S4)
+MOV G20 $STR(S5)
+MOV G21 $STR(S6)
+MOV A18 $STR(S7)
+MOV A19 暂无
+MOV A20 "<color=gray 已领取>"
+SENDMSG 7 超级夺宝设置成功，将于<$STR(G18)>月<$STR(G19)>日-<$STR(G20)>:<$STR(G21)>，奖励为[<$STR(A18)>]
+GOTO @管理列表
+break
+
+[@封杀玩家]
+#IF
+CHECKACCOUNTLIST ..\Admin.txt
+#ACT
+QUERYVAL 1 0 16 @FSWJMZ 请输入你要封杀玩家的名字
+break
+
+[@FSWJMZ]
+#IF
+CHECKONLINE $STR(S1)
+#ACT
+$STR(S1).MAP 128
+ADDVARLIST $STR(S1) ..\QuestDiary\数据文件\管理数据\禁止登陆人物.txt
+ADDVARLIST $HUMANINFO.$STR(S1).$IPADDR ..\QuestDiary\数据文件\管理数据\禁止登陆IP.txt
+break
+#ELSEACT
+SENDMSG 5 <$STR(S1)>　现在不在线，或在其它服务器上，不能进行操作。
+break
+
+[@设置喊话]
+#IF
+CHECKACCOUNTLIST ..\Admin.txt
+#ACT
+QUERYVAL 1 0 255 @管理喊话 请输入您要发送的喊话内容...
+break
+
+[@管理喊话]
+#IF
+CHECKACCOUNTLIST ..\Admin.txt
+#ACT
+SENDMSG 24 [时光倒流]:<$STR(S1)> 253
+SENDMSG 26 [时光倒流]:<$STR(S1)> 253
+SENDMSG 6 提示:发送成功!
+break
+
+[@天下第一]
+#IF
+CHECKACCOUNTLIST ..\Admin.txt
+#ACT
+MOV G11 0
+MOV G12 0
+MOV G13 0
+MOV G14 0
+MOV G15 0
+MOV G16 0
+SETNPCNAME 1 天下第一男战士
+SETNPCNAME 2 天下第一男法师
+SETNPCNAME 3 天下第一男道士
+SETNPCNAME 4 天下第一女战士
+SETNPCNAME 5 天下第一女法师
+SETNPCNAME 6 天下第一女道士
+MOV A1 天下第一男战士\\申请天下第一名号，请到中州475，150处找史官　　<离开/@exit>
+MOV A1 天下第一男法师\\申请天下第一名号，请到中州475，150处找史官　　<离开/@exit>
+MOV A1 天下第一男道士\\申请天下第一名号，请到中州475，150处找史官　　<离开/@exit>
+MOV A1 天下第一女战士\\申请天下第一名号，请到中州475，150处找史官　　<离开/@exit>
+MOV A1 天下第一女法师\\申请天下第一名号，请到中州475，150处找史官　　<离开/@exit>
+MOV A1 天下第一女道士\\申请天下第一名号，请到中州475，150处找史官　　<离开/@exit>
+CALCVAR GLOBAL 男战士 = 暂无
+SAVEVAR GLOBAL 男战士 ..\QuestDiary\数据文件\全局变量\全局变量.txt
+CALCVAR GLOBAL 男法师 = 暂无
+SAVEVAR GLOBAL 男法师 ..\QuestDiary\数据文件\全局变量\全局变量.txt
+CALCVAR GLOBAL 男道士 = 暂无
+SAVEVAR GLOBAL 男道士 ..\QuestDiary\数据文件\全局变量\全局变量.txt
+CALCVAR GLOBAL 女战士 = 暂无
+SAVEVAR GLOBAL 女战士 ..\QuestDiary\数据文件\全局变量\全局变量.txt
+CALCVAR GLOBAL 女法师 = 暂无
+SAVEVAR GLOBAL 女法师 ..\QuestDiary\数据文件\全局变量\全局变量.txt
+CALCVAR GLOBAL 女道士 = 暂无
+SAVEVAR GLOBAL 女道士 ..\QuestDiary\数据文件\全局变量\全局变量.txt
+SENDMSG 7 初始化天下第一成功！
+break
+
+}

@@ -1,0 +1,47 @@
+[@落霞_首饰]
+{
+
+#IF
+EQUAL $Task(9) 1
+#SAY
+年轻人，是炼药师让你来的吧，他刚才还在我面前夸你能干\
+呢！你找我有什么事情吗？\
+<打听摆摊/@_RW_fulfilTask1>                <没事/@exit>
+#ACT
+break
+#IF
+EQUAL $Task(11) 1
+#ACT
+#CALL [\游戏任务\新手任务\消失的戒指.txt] @落霞岛_首饰1
+break
+#IF
+EQUAL $Task(11) 3
+#ACT
+#CALL [\游戏任务\新手任务\消失的戒指.txt] @落霞岛_首饰2
+break
+#IF
+EQUAL $Task(11) 5
+#ACT
+#CALL [\游戏任务\新手任务\消失的戒指.txt] @落霞岛_首饰3
+break
+#ELSESAY
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+[@_RW_fulfilTask1]
+#IF
+EQUAL $Task(9) 1
+#SAY
+想摆摊出售东西的话，只要点击界面右下方的摆摊按钮就可\
+以了，不过你要达到20级以上才可以摆摊哦。\
+你现在去老兵那里看看，他会声望的知识的。\
+<离开/@exit>  <返回/@main>
+#ACT
+EndTask 9
+CHANGEEXP + 8200
+BINDGOLD + 2000
+AddTask 10
+SENDMSG 5 您成功增加了2000绑定金币。
+break
+
+}

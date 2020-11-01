@@ -1,0 +1,30 @@
+(@bindbuy @fastbuy @buy @sell )
+%100
++0
++31
++106
+[@main]
+有些事情我就不多说了，我是个生意人只要\
+肯多给钱，我谁的生意都做。我这里东西不\
+算多，但我想这是谁都需要的东西。\\
+<快捷交易/@fastbuy>  \
+<购入药品/@buy>\
+<出售药品/@sell>\
+<绑定金币购买物品/@bindbuy>\
+<挑战炼狱/@_LB_newlianyu>\
+<关闭选单/@exit>
+
+[@_LB_newlianyu]
+#CALL [\商人\挑战炼狱.txt] @newlianyu
+
+[@fastbuy]
+#CALL [\商人\药店.txt] @快捷交易
+
+[@buy]
+#CALL [\商人\药店.txt] @购入药品
+
+[@sell]
+#CALL [\商人\药店.txt] @出售药品
+
+[@bindbuy]
+#CALL [\商人\药店.txt] @绑定购买

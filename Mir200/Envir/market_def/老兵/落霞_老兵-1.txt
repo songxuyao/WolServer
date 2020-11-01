@@ -1,0 +1,142 @@
+[@main]
+这差事真无聊，天天站在这里风吹雨淋，你找我有什么事？\
+<可接任务/@_RW_entry>\
+<快速到达其他地区/@main1>   <记录回城点/@_LB_homePos>      <挑战炼狱/@_LB_newlianyu>\
+<充值游戏时间/@_LB_toplaytime>       <充值元宝/@_LB_throwmoney>        <领取奖品/@get>\
+<离开/@exit>
+
+[@_RW_entry]
+#CALL [\游戏任务\新手任务\打听声望.txt] @落霞_老兵
+
+[@main1]
+这是国王为了对抗邪恶力量而特别开辟的骑兵驿道，能够\
+以最快的速度帮助你往返于各个地区 。不过为此你必须付\
+出一些代价做为使用费用。你确定要使用这条驿道吗？\
+<去将军坟东/@h081>   <去将军坟/@h071>\
+<去中州/@capital>       <矿坑/@kuangkeng>\
+<码头/@matou>         <返回/@main>\
+
+[@capital]
+要去中州吗？\
+1000金币就可以了，没有的话就自己走着去吧。\\
+<付钱/@capital1> \
+<没钱/@exit>
+
+[@capital1]
+#IF
+CHECKBINDGOLD > 999
+#ACT
+BINDGOLD - 1000
+mapmove 0 470 225
+break
+#IF
+checkgold 1000
+#ACT
+take 金币 1000
+mapmove 0 470 225
+#ELSESAY
+金币不足，我可不送你去。\\
+<离开/@exit>
+
+[@h081]
+要去将军坟东吗？\
+600金币就可以了，没有的话就自己走着去吧。\\
+<付钱/@h081a>\
+<没钱/@exit>
+
+[@h081a]
+#IF
+CHECKBINDGOLD > 599
+#ACT
+BINDGOLD - 600
+MAPMOVE 0 773 399
+break
+#IF
+CHECKGOLD 600
+#ACT
+TAKE 金币 600
+MAPMOVE 0 773 399
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@h071]
+要去将军坟吗？\
+800金币就可以了，没有的话就自己走着去吧。\\
+<付钱/@h071a>\
+<没钱/@exit>
+
+[@h071a]
+#IF
+CHECKBINDGOLD > 799
+#ACT
+BINDGOLD - 800
+MAPMOVE 0 33 352
+break
+#IF
+CHECKGOLD 800
+#ACT
+TAKE 金币 800
+MAPMOVE 0 33 352
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@kuangkeng]
+要去矿坑？挖矿挺赚的吧？\
+不介意的话，给500金币我送您过去？\\
+<好/@kk> \
+<不用了/@main>
+
+[@kk]
+#IF
+CHECKBINDGOLD > 499
+#ACT
+BINDGOLD - 500
+MAPMOVE 1 472 400
+break
+#IF
+CHECKGOLD 500
+#ACT
+TAKE 金币 500
+MAPMOVE 1 472 400
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@matou]
+要去码头？是要到外面旅行啊？\
+不介意的话，给500金币我送您过去？\\
+<好/@mt> \
+<不用了/@main>
+
+[@matou]
+#IF
+CHECKBINDGOLD > 499
+#ACT
+BINDGOLD - 500
+MAPMOVE 1 72 142
+break
+#IF
+CHECKGOLD 500
+#ACT
+TAKE 金币 500
+MAPMOVE 1 72 142
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@get]
+#CALL [\游戏功能\领奖使者.txt] @get_jiangli
+
+[@_LB_throwmoney]
+#CALL [\商人\充值元宝.txt] @throwmoney
+
+[@_LB_toplaytime]
+#CALL [\商人\充值元宝.txt] @oplaytime
+
+[@_LB_newlianyu]
+#CALL [\商人\挑战炼狱.txt] @newlianyu
+
+[@_LB_homePos]
+#CALL [\商人\记录回城.txt] @homePos

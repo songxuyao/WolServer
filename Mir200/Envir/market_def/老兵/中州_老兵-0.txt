@@ -1,0 +1,328 @@
+[@main]
+我是能干的老兵，我是快乐的老兵，哈哈，你找我有事吗？\
+<可接任务/@_RW_entry>\
+<快速到达其他地区/@main1>     <记录回城点/@_LB_homePos>         <挑战炼狱/@_LB_newlianyu>\
+<充值游戏时间/@_LB_toplaytime>         <充值元宝/@_LB_throwmoney>           <领取奖品/@get>\
+<我要去皇宫/@gosh000>           <跃马平原/@yuema>\
+<我要去百兽园/@gobsy>\
+
+[@_RW_entry]
+#CALL [\游戏任务\新手任务\前往中州.txt] @中州_老兵
+
+[@gosh000]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MAPMOVE SH000
+break
+
+[@yuema]
+你想到跃马平原去逛逛吗？\
+付1500金币，我可以带你过去，你准备好了吗？\\
+<准备好了，带我过去/@go>\
+<我不想去/@exit>
+
+[@go]
+#IF
+CHECKBINDGOLD > 1499
+#ACT
+BINDGOLD - 1500
+MAPMOVE 3 153 605
+break
+#IF
+CHECKGOLD 1500
+#ACT
+TAKE 金币 1500
+MAPMOVE 3 153 605
+break
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@main1]
+    这是国王为了对抗邪恶力量而特别开辟的骑兵驿道，能够\
+以最快的速度帮助你往返于各个地区。不过为此你必须付出一\
+些代价做为使用费用。\
+    你确定要使用这条驿道吗？\
+    <去将军坟附近/@lingmuall>    <去死水沼泽入口/@deadwater>\
+    <去西域奇境/@west>      <去其他地方/@othergo>\
+    <不去了/@exit>
+
+[@othergo]
+这是国王为了对抗邪恶力量而特别开辟的骑兵驿道，能够\
+以最快的速度帮助你往返于各个地区 。不过为此你必须付\
+出一些代价做为使用费用。你确定要使用这条驿道吗？\
+<海角村/@new> \
+<中州关隘/@ztown>\
+<落霞岛/@island>\
+<码头/@matou> \\
+<不去了/@exit>
+
+[@matou]
+中州矿坑塌方了，要挖矿只有坐船到别处去，\
+要去码头？\
+1000金币就可以了，没有的话就自己走着去吧。\\
+<付钱/@matou1> \
+<没钱/@matou2>
+
+[@matou1]
+#IF
+CHECKBINDGOLD > 499
+#ACT
+BINDGOLD - 500
+MAPMOVE 0 77 534
+break
+#IF
+CHECKGOLD 500
+#ACT
+TAKE 金币 500
+MAPMOVE 0 77 534
+break
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@matou2]
+那就自己到70，530附近去找吧。\\
+<返回/@main1>
+
+[@island]
+要去落霞岛？\
+1000金币就可以了，没有的话就自己走着去吧。\\
+<付钱/@island1>\
+<没钱/@island2>\
+
+[@island1]
+#IF
+CHECKBINDGOLD > 999
+#ACT
+BINDGOLD - 1000
+MAPMOVE 1 238 236
+break
+#IF
+CHECKGOLD 1000
+#ACT
+TAKE 金币 1000
+MAPMOVE 1 238 236
+break
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@island2]
+那就自己到200，200附近去找吧。\\
+<返回/@main1>
+
+[@ztown]
+要去中州关隘吗？\
+500金币就可以了，没有的话就自己走着去吧。\\
+<付钱/@pass1> \
+<没钱/@pass2>
+
+[@pass1]
+#IF
+CHECKBINDGOLD > 499
+#ACT
+BINDGOLD - 500
+MAPMOVE 0 727 43
+break
+#IF
+CHECKGOLD 500
+#ACT
+TAKE 金币 500
+MAPMOVE 0 727 43
+break
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@pass2]
+那就自己到730，40附近去找吧。\\
+<返回/@main1>
+
+[@new]
+要去海角村？\
+300块就可以了，没有的话就自己走着去吧。\\
+<付钱/@new1> \
+<没钱/@new2>
+
+[@new1]
+#IF
+CHECKBINDGOLD > 299
+#ACT
+BINDGOLD - 300
+MAPMOVE 0 397 593
+break
+#IF
+CHECKGOLD 300
+#ACT
+TAKE 金币 300
+MAPMOVE 0 397 593
+break
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@new2]
+那就自己到400，600附近去找吧。\\
+<返回/@main1>
+
+[@west]
+这是国王为了对抗邪恶力量而特别开辟的骑兵驿道，能够\
+以最快的速度帮助你往返于各个地区 。不过为此你必须付\
+出一些代价做为使用费用。你确定要使用这条驿道吗？\
+你是要去西域奇境吗？由于路途遥远，它将花费你2000金币\
+你确定要快速移动吗？\\
+<确定/@west1>\
+<没钱/@west2>\
+
+[@west1]
+#IF
+CHECKBINDGOLD > 1999
+#ACT
+BINDGOLD - 2000
+MAPMOVE 5 457 93
+break
+#IF
+CHECKGOLD 2000
+#ACT
+TAKE 金币 2000
+MAPMOVE 5 457 93
+break
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@west2]
+那你自己到西域的515,170附近去找吧。\\
+<返回/@main1>
+
+[@deadwater]
+去死水沼泽入口要500金币，你去么？\
+<去死水沼泽/@godeadwater>\
+<返回/@main1>\
+
+[@godeadwater]
+#IF
+CHECKBINDGOLD > 499
+#ACT
+BINDGOLD - 500
+MAPMOVE 0 776 524
+break
+#IF
+CHECKGOLD 500
+#ACT
+TAKE 金币 500
+MAPMOVE 0 776 524
+break
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@lingmuall]
+这是国王为了对抗邪恶力量而特别开辟的骑兵驿道，能够\
+以最快的速度帮助你往返于各个地区 。不过为此你必须付\
+出一些代价做为使用费用。你确定要使用这条驿道吗？\\
+<将军坟南入口/@lingmus> \
+<将军坟北入口/@lingmun> \
+<将军坟东入口/@lingmue> \\
+<不去了/@exit>
+
+[@lingmue]
+要去将军坟东入口？\
+500金币就可以了，没有的话就自己走着去吧。\\
+<付钱/@lme> \
+<没钱/@lme1>
+
+[@lme]
+#IF
+CHECKBINDGOLD > 499
+#ACT
+BINDGOLD - 500
+MAPMOVE 0 775 404
+break
+#IF
+CHECKGOLD 500
+#ACT
+TAKE 金币 500
+MAPMOVE 0 775 404
+break
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@lme1]
+那就自己到770，400附近去找吧。\\
+<返回/@main1>
+
+[@lingmun]
+要去将军坟北入口？\
+500金币就可以了，没有的话就自己走着去吧。\\
+<付钱/@lmn> \
+<没钱/@lmn1>
+
+[@lmn]
+#IF
+CHECKBINDGOLD > 499
+#ACT
+BINDGOLD - 500
+MAPMOVE 0 52 184
+break
+#IF
+CHECKGOLD 500
+#ACT
+TAKE 金币 500
+MAPMOVE 0 52 184
+break
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@lmn1]
+那就自己到50，180附近去找吧。\\
+<返回/@main1>
+
+[@lingmus]
+要去将军坟南入口？\
+500金币就可以了，没有的话就自己走着去吧。\\
+<付钱/@lms> \
+<没钱/@lms1>
+
+[@lms]
+#IF
+CHECKBINDGOLD > 499
+#ACT
+BINDGOLD - 500
+MAPMOVE 0 33 355
+break
+#IF
+CHECKGOLD 500
+#ACT
+TAKE 金币 500
+MAPMOVE 0 33 355
+break
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@lms1]
+那就自己到30，350附近去找吧。\\
+<返回/@main1>
+
+[@get]
+#CALL [\商人\领取奖品.txt] @领奖
+
+[@_LB_homePos]
+#CALL [\商人\记录回城.txt] @homePos
+
+[@_LB_throwmoney]
+#CALL [\商人\充值元宝.txt] @throwmoney
+
+[@_LB_toplaytime]
+#CALL [\商人\充值元宝.txt] @oplaytime
+
+[@_LB_newlianyu]
+#CALL [\商人\挑战炼狱.txt] @newlianyu
+
+[@gobsy]
+#CALL [\商人\挑战百兽.txt] @baishou

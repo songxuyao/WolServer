@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="gb2312"?>
+<duanti>
+ <level id="0" needval="18" material="元力精华·锻体" material_num="3" pneumalevel="42" rate="80">
+  <job id="0">
+   <prop id="1" has="True" val="120"/>
+   <prop id="2" has="True" val="1"/>
+   <prop id="3" has="True" val="4"/>
+   <prop id="4" has="True" val="1"/>
+   <prop id="5" has="True" val="1"/>
+   <prop id="6" has="True" val="1"/>
+   <prop id="7" has="True" val="1"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="False" val="0"/>
+  </job>
+  <job id="1">
+   <prop id="1" has="True" val="40"/>
+   <prop id="2" has="True" val="1"/>
+   <prop id="3" has="True" val="4"/>
+   <prop id="4" has="True" val="1"/>
+   <prop id="5" has="True" val="1"/>
+   <prop id="6" has="True" val="1"/>
+   <prop id="7" has="True" val="1"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="False" val="0"/>
+  </job>
+  <job id="2">
+   <prop id="1" has="True" val="80"/>
+   <prop id="2" has="True" val="1"/>
+   <prop id="3" has="True" val="4"/>
+   <prop id="4" has="True" val="1"/>
+   <prop id="5" has="True" val="1"/>
+   <prop id="6" has="True" val="1"/>
+   <prop id="7" has="True" val="1"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="False" val="0"/>
+  </job>
+ </level>
+ <level id="1" needval="27" material="元力精华·锻体" material_num="3" pneumalevel="45" rate="75">
+  <job id="0">
+   <prop id="1" has="True" val="150"/>
+   <prop id="2" has="True" val="2"/>
+   <prop id="3" has="True" val="5"/>
+   <prop id="4" has="True" val="1"/>
+   <prop id="5" has="True" val="2"/>
+   <prop id="6" has="True" val="1"/>
+   <prop id="7" has="True" val="2"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="False" val="0"/>
+  </job>
+  <job id="1">
+   <prop id="1" has="True" val="50"/>
+   <prop id="2" has="True" val="2"/>
+   <prop id="3" has="True" val="5"/>
+   <prop id="4" has="True" val="1"/>
+   <prop id="5" has="True" val="2"/>
+   <prop id="6" has="True" val="1"/>
+   <prop id="7" has="True" val="2"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="False" val="0"/>
+  </job>
+  <job id="2">
+   <prop id="1" has="True" val="100"/>
+   <prop id="2" has="True" val="2"/>
+   <prop id="3" has="True" val="5"/>
+   <prop id="4" has="True" val="1"/>
+   <prop id="5" has="True" val="2"/>
+   <prop id="6" has="True" val="1"/>
+   <prop id="7" has="True" val="2"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="False" val="0"/>
+  </job>
+ </level>
+ <level id="2" needval="45" material="元力精华·锻体" material_num="3" pneumalevel="48" rate="60">
+  <job id="0">
+   <prop id="1" has="True" val="180"/>
+   <prop id="2" has="True" val="2"/>
+   <prop id="3" has="True" val="6"/>
+   <prop id="4" has="True" val="2"/>
+   <prop id="5" has="True" val="2"/>
+   <prop id="6" has="True" val="2"/>
+   <prop id="7" has="True" val="2"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="False" val="0"/>
+  </job>
+  <job id="1">
+   <prop id="1" has="True" val="60"/>
+   <prop id="2" has="True" val="2"/>
+   <prop id="3" has="True" val="6"/>
+   <prop id="4" has="True" val="2"/>
+   <prop id="5" has="True" val="2"/>
+   <prop id="6" has="True" val="2"/>
+   <prop id="7" has="True" val="2"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="False" val="0"/>
+  </job>
+  <job id="2">
+   <prop id="1" has="True" val="120"/>
+   <prop id="2" has="True" val="2"/>
+   <prop id="3" has="True" val="6"/>
+   <prop id="4" has="True" val="2"/>
+   <prop id="5" has="True" val="2"/>
+   <prop id="6" has="True" val="2"/>
+   <prop id="7" has="True" val="2"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="False" val="0"/>
+  </job>
+ </level>
+ <level id="3" needval="72" material="元力精华·炼气" material_num="5" pneumalevel="50" rate="56">
+  <job id="0">
+   <prop id="1" has="True" val="210"/>
+   <prop id="2" has="True" val="2"/>
+   <prop id="3" has="True" val="7"/>
+   <prop id="4" has="True" val="2"/>
+   <prop id="5" has="True" val="3"/>
+   <prop id="6" has="True" val="2"/>
+   <prop id="7" has="True" val="3"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="False" val="0"/>
+  </job>
+  <job id="1">
+   <prop id="1" has="True" val="70"/>
+   <prop id="2" has="True" val="2"/>
+   <prop id="3" has="True" val="7"/>
+   <prop id="4" has="True" val="2"/>
+   <prop id="5" has="True" val="3"/>
+   <prop id="6" has="True" val="2"/>
+   <prop id="7" has="True" val="3"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="False" val="0"/>
+  </job>
+  <job id="2">
+   <prop id="1" has="True" val="140"/>
+   <prop id="2" has="True" val="2"/>
+   <prop id="3" has="True" val="7"/>
+   <prop id="4" has="True" val="2"/>
+   <prop id="5" has="True" val="3"/>
+   <prop id="6" has="True" val="2"/>
+   <prop id="7" has="True" val="3"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="False" val="0"/>
+  </job>
+ </level>
+ <level id="4" needval="99" material="元力精华·炼气" material_num="5" pneumalevel="53" rate="53">
+  <job id="0">
+   <prop id="1" has="True" val="240"/>
+   <prop id="2" has="True" val="2"/>
+   <prop id="3" has="True" val="8"/>
+   <prop id="4" has="True" val="3"/>
+   <prop id="5" has="True" val="3"/>
+   <prop id="6" has="True" val="3"/>
+   <prop id="7" has="True" val="3"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="False" val="0"/>
+  </job>
+  <job id="1">
+   <prop id="1" has="True" val="80"/>
+   <prop id="2" has="True" val="2"/>
+   <prop id="3" has="True" val="8"/>
+   <prop id="4" has="True" val="3"/>
+   <prop id="5" has="True" val="3"/>
+   <prop id="6" has="True" val="3"/>
+   <prop id="7" has="True" val="3"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="False" val="0"/>
+  </job>
+  <job id="2">
+   <prop id="1" has="True" val="160"/>
+   <prop id="2" has="True" val="2"/>
+   <prop id="3" has="True" val="8"/>
+   <prop id="4" has="True" val="3"/>
+   <prop id="5" has="True" val="3"/>
+   <prop id="6" has="True" val="3"/>
+   <prop id="7" has="True" val="3"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="False" val="0"/>
+  </job>
+ </level>
+ <level id="5" needval="135" material="元力精华·炼气" material_num="5" pneumalevel="56" rate="49">
+  <job id="0">
+   <prop id="1" has="True" val="270"/>
+   <prop id="2" has="True" val="3"/>
+   <prop id="3" has="True" val="9"/>
+   <prop id="4" has="True" val="3"/>
+   <prop id="5" has="True" val="4"/>
+   <prop id="6" has="True" val="3"/>
+   <prop id="7" has="True" val="4"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="False" val="0"/>
+  </job>
+  <job id="1">
+   <prop id="1" has="True" val="90"/>
+   <prop id="2" has="True" val="3"/>
+   <prop id="3" has="True" val="9"/>
+   <prop id="4" has="True" val="3"/>
+   <prop id="5" has="True" val="4"/>
+   <prop id="6" has="True" val="3"/>
+   <prop id="7" has="True" val="4"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="False" val="0"/>
+  </job>
+  <job id="2">
+   <prop id="1" has="True" val="180"/>
+   <prop id="2" has="True" val="3"/>
+   <prop id="3" has="True" val="9"/>
+   <prop id="4" has="True" val="3"/>
+   <prop id="5" has="True" val="4"/>
+   <prop id="6" has="True" val="3"/>
+   <prop id="7" has="True" val="4"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="False" val="0"/>
+  </job>
+ </level>
+ <level id="6" needval="189" material="元力精华·凝神" material_num="8" pneumalevel="58" rate="45">
+  <job id="0">
+   <prop id="1" has="True" val="330"/>
+   <prop id="2" has="True" val="3"/>
+   <prop id="3" has="True" val="11"/>
+   <prop id="4" has="True" val="4"/>
+   <prop id="5" has="True" val="4"/>
+   <prop id="6" has="True" val="4"/>
+   <prop id="7" has="True" val="4"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="True" val="1"/>
+  </job>
+  <job id="1">
+   <prop id="1" has="True" val="110"/>
+   <prop id="2" has="True" val="3"/>
+   <prop id="3" has="True" val="11"/>
+   <prop id="4" has="True" val="4"/>
+   <prop id="5" has="True" val="4"/>
+   <prop id="6" has="True" val="4"/>
+   <prop id="7" has="True" val="4"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="True" val="1"/>
+  </job>
+  <job id="2">
+   <prop id="1" has="True" val="220"/>
+   <prop id="2" has="True" val="3"/>
+   <prop id="3" has="True" val="11"/>
+   <prop id="4" has="True" val="4"/>
+   <prop id="5" has="True" val="4"/>
+   <prop id="6" has="True" val="4"/>
+   <prop id="7" has="True" val="4"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="True" val="1"/>
+  </job>
+ </level>
+ <level id="7" needval="261" material="元力精华·凝神" material_num="8" pneumalevel="60" rate="42">
+  <job id="0">
+   <prop id="1" has="True" val="390"/>
+   <prop id="2" has="True" val="4"/>
+   <prop id="3" has="True" val="13"/>
+   <prop id="4" has="True" val="4"/>
+   <prop id="5" has="True" val="5"/>
+   <prop id="6" has="True" val="4"/>
+   <prop id="7" has="True" val="5"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="True" val="2"/>
+  </job>
+  <job id="1">
+   <prop id="1" has="True" val="130"/>
+   <prop id="2" has="True" val="4"/>
+   <prop id="3" has="True" val="13"/>
+   <prop id="4" has="True" val="4"/>
+   <prop id="5" has="True" val="5"/>
+   <prop id="6" has="True" val="4"/>
+   <prop id="7" has="True" val="5"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="True" val="2"/>
+  </job>
+  <job id="2">
+   <prop id="1" has="True" val="260"/>
+   <prop id="2" has="True" val="4"/>
+   <prop id="3" has="True" val="13"/>
+   <prop id="4" has="True" val="4"/>
+   <prop id="5" has="True" val="5"/>
+   <prop id="6" has="True" val="4"/>
+   <prop id="7" has="True" val="5"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="True" val="2"/>
+  </job>
+ </level>
+ <level id="8" needval="369" material="元力精华·凝神" material_num="8" pneumalevel="63" rate="34">
+  <job id="0">
+   <prop id="1" has="True" val="450"/>
+   <prop id="2" has="True" val="5"/>
+   <prop id="3" has="True" val="15"/>
+   <prop id="4" has="True" val="5"/>
+   <prop id="5" has="True" val="5"/>
+   <prop id="6" has="True" val="5"/>
+   <prop id="7" has="True" val="5"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="True" val="3"/>
+  </job>
+  <job id="1">
+   <prop id="1" has="True" val="150"/>
+   <prop id="2" has="True" val="5"/>
+   <prop id="3" has="True" val="15"/>
+   <prop id="4" has="True" val="5"/>
+   <prop id="5" has="True" val="5"/>
+   <prop id="6" has="True" val="5"/>
+   <prop id="7" has="True" val="5"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="True" val="3"/>
+  </job>
+  <job id="2">
+   <prop id="1" has="True" val="300"/>
+   <prop id="2" has="True" val="5"/>
+   <prop id="3" has="True" val="15"/>
+   <prop id="4" has="True" val="5"/>
+   <prop id="5" has="True" val="5"/>
+   <prop id="6" has="True" val="5"/>
+   <prop id="7" has="True" val="5"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="True" val="3"/>
+  </job>
+ </level>
+ <level id="9" needval="513" material="元力精华·破虚" material_num="10" pneumalevel="65" rate="32">
+  <job id="0">
+   <prop id="1" has="True" val="510"/>
+   <prop id="2" has="True" val="5"/>
+   <prop id="3" has="True" val="17"/>
+   <prop id="4" has="True" val="5"/>
+   <prop id="5" has="True" val="6"/>
+   <prop id="6" has="True" val="5"/>
+   <prop id="7" has="True" val="6"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="True" val="4"/>
+  </job>
+  <job id="1">
+   <prop id="1" has="True" val="170"/>
+   <prop id="2" has="True" val="5"/>
+   <prop id="3" has="True" val="17"/>
+   <prop id="4" has="True" val="5"/>
+   <prop id="5" has="True" val="6"/>
+   <prop id="6" has="True" val="5"/>
+   <prop id="7" has="True" val="6"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="True" val="4"/>
+  </job>
+  <job id="2">
+   <prop id="1" has="True" val="340"/>
+   <prop id="2" has="True" val="5"/>
+   <prop id="3" has="True" val="17"/>
+   <prop id="4" has="True" val="5"/>
+   <prop id="5" has="True" val="6"/>
+   <prop id="6" has="True" val="5"/>
+   <prop id="7" has="True" val="6"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="True" val="4"/>
+  </job>
+ </level>
+ <level id="10" needval="720" material="元力精华·破虚" material_num="10" pneumalevel="68" rate="24">
+  <job id="0">
+   <prop id="1" has="True" val="570"/>
+   <prop id="2" has="True" val="6"/>
+   <prop id="3" has="True" val="19"/>
+   <prop id="4" has="True" val="6"/>
+   <prop id="5" has="True" val="6"/>
+   <prop id="6" has="True" val="6"/>
+   <prop id="7" has="True" val="6"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="True" val="5"/>
+  </job>
+  <job id="1">
+   <prop id="1" has="True" val="190"/>
+   <prop id="2" has="True" val="6"/>
+   <prop id="3" has="True" val="19"/>
+   <prop id="4" has="True" val="6"/>
+   <prop id="5" has="True" val="6"/>
+   <prop id="6" has="True" val="6"/>
+   <prop id="7" has="True" val="6"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="True" val="5"/>
+  </job>
+  <job id="2">
+   <prop id="1" has="True" val="380"/>
+   <prop id="2" has="True" val="6"/>
+   <prop id="3" has="True" val="19"/>
+   <prop id="4" has="True" val="6"/>
+   <prop id="5" has="True" val="6"/>
+   <prop id="6" has="True" val="6"/>
+   <prop id="7" has="True" val="6"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="True" val="5"/>
+  </job>
+ </level>
+ <level id="11" needval="1008" material="元力精华·破虚" material_num="10" pneumalevel="71" rate="18">
+  <job id="0">
+   <prop id="1" has="True" val="660"/>
+   <prop id="2" has="True" val="7"/>
+   <prop id="3" has="True" val="22"/>
+   <prop id="4" has="True" val="6"/>
+   <prop id="5" has="True" val="7"/>
+   <prop id="6" has="True" val="6"/>
+   <prop id="7" has="True" val="7"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="True" val="6"/>
+  </job>
+  <job id="1">
+   <prop id="1" has="True" val="220"/>
+   <prop id="2" has="True" val="7"/>
+   <prop id="3" has="True" val="22"/>
+   <prop id="4" has="True" val="6"/>
+   <prop id="5" has="True" val="7"/>
+   <prop id="6" has="True" val="6"/>
+   <prop id="7" has="True" val="7"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="True" val="6"/>
+  </job>
+  <job id="2">
+   <prop id="1" has="True" val="440"/>
+   <prop id="2" has="True" val="7"/>
+   <prop id="3" has="True" val="22"/>
+   <prop id="4" has="True" val="6"/>
+   <prop id="5" has="True" val="7"/>
+   <prop id="6" has="True" val="6"/>
+   <prop id="7" has="True" val="7"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="True" val="6"/>
+  </job>
+ </level>
+ <level id="12" needval="1413" material="元力精华·忘情" material_num="15" pneumalevel="74" rate="14">
+  <job id="0">
+   <prop id="1" has="True" val="780"/>
+   <prop id="2" has="True" val="8"/>
+   <prop id="3" has="True" val="26"/>
+   <prop id="4" has="True" val="7"/>
+   <prop id="5" has="True" val="7"/>
+   <prop id="6" has="True" val="7"/>
+   <prop id="7" has="True" val="7"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="True" val="7"/>
+  </job>
+  <job id="1">
+   <prop id="1" has="True" val="260"/>
+   <prop id="2" has="True" val="8"/>
+   <prop id="3" has="True" val="26"/>
+   <prop id="4" has="True" val="7"/>
+   <prop id="5" has="True" val="7"/>
+   <prop id="6" has="True" val="7"/>
+   <prop id="7" has="True" val="7"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="True" val="7"/>
+  </job>
+  <job id="2">
+   <prop id="1" has="True" val="520"/>
+   <prop id="2" has="True" val="8"/>
+   <prop id="3" has="True" val="26"/>
+   <prop id="4" has="True" val="7"/>
+   <prop id="5" has="True" val="7"/>
+   <prop id="6" has="True" val="7"/>
+   <prop id="7" has="True" val="7"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="True" val="7"/>
+  </job>
+ </level>
+ <level id="13" needval="1980" material="元力精华·忘情" material_num="15" pneumalevel="77" rate="11">
+  <job id="0">
+   <prop id="1" has="True" val="900"/>
+   <prop id="2" has="True" val="9"/>
+   <prop id="3" has="True" val="30"/>
+   <prop id="4" has="True" val="7"/>
+   <prop id="5" has="True" val="8"/>
+   <prop id="6" has="True" val="7"/>
+   <prop id="7" has="True" val="8"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="True" val="8"/>
+  </job>
+  <job id="1">
+   <prop id="1" has="True" val="300"/>
+   <prop id="2" has="True" val="9"/>
+   <prop id="3" has="True" val="30"/>
+   <prop id="4" has="True" val="7"/>
+   <prop id="5" has="True" val="8"/>
+   <prop id="6" has="True" val="7"/>
+   <prop id="7" has="True" val="8"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="True" val="8"/>
+  </job>
+  <job id="2">
+   <prop id="1" has="True" val="600"/>
+   <prop id="2" has="True" val="9"/>
+   <prop id="3" has="True" val="30"/>
+   <prop id="4" has="True" val="7"/>
+   <prop id="5" has="True" val="8"/>
+   <prop id="6" has="True" val="7"/>
+   <prop id="7" has="True" val="8"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="True" val="8"/>
+  </job>
+ </level>
+ <level id="14" needval="2272" material="元力精华·忘情" material_num="15" pneumalevel="80" rate="8">
+  <job id="0">
+   <prop id="1" has="True" val="1020"/>
+   <prop id="2" has="True" val="10"/>
+   <prop id="3" has="True" val="34"/>
+   <prop id="4" has="True" val="8"/>
+   <prop id="5" has="True" val="8"/>
+   <prop id="6" has="True" val="8"/>
+   <prop id="7" has="True" val="8"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="True" val="9"/>
+  </job>
+  <job id="1">
+   <prop id="1" has="True" val="340"/>
+   <prop id="2" has="True" val="10"/>
+   <prop id="3" has="True" val="34"/>
+   <prop id="4" has="True" val="8"/>
+   <prop id="5" has="True" val="8"/>
+   <prop id="6" has="True" val="8"/>
+   <prop id="7" has="True" val="8"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="True" val="9"/>
+  </job>
+  <job id="2">
+   <prop id="1" has="True" val="680"/>
+   <prop id="2" has="True" val="10"/>
+   <prop id="3" has="True" val="34"/>
+   <prop id="4" has="True" val="8"/>
+   <prop id="5" has="True" val="8"/>
+   <prop id="6" has="True" val="8"/>
+   <prop id="7" has="True" val="8"/>
+   <prop id="8" has="False" val="0"/>
+   <prop id="9" has="True" val="9"/>
+  </job>
+ </level>
+ <level id="15" needval="3321" material="元力精华·大乘" material_num="20" pneumalevel="83" rate="6">
+  <job id="0">
+   <prop id="1" has="True" val="1140"/>
+   <prop id="2" has="True" val="11"/>
+   <prop id="3" has="True" val="38"/>
+   <prop id="4" has="True" val="8"/>
+   <prop id="5" has="True" val="9"/>
+   <prop id="6" has="True" val="8"/>
+   <prop id="7" has="True" val="9"/>
+   <prop id="8" has="True" val="10"/>
+   <prop id="9" has="True" val="10"/>
+  </job>
+  <job id="1">
+   <prop id="1" has="True" val="380"/>
+   <prop id="2" has="True" val="11"/>
+   <prop id="3" has="True" val="38"/>
+   <prop id="4" has="True" val="8"/>
+   <prop id="5" has="True" val="9"/>
+   <prop id="6" has="True" val="8"/>
+   <prop id="7" has="True" val="9"/>
+   <prop id="8" has="True" val="10"/>
+   <prop id="9" has="True" val="10"/>
+  </job>
+  <job id="2">
+   <prop id="1" has="True" val="760"/>
+   <prop id="2" has="True" val="11"/>
+   <prop id="3" has="True" val="38"/>
+   <prop id="4" has="True" val="8"/>
+   <prop id="5" has="True" val="9"/>
+   <prop id="6" has="True" val="8"/>
+   <prop id="7" has="True" val="9"/>
+   <prop id="8" has="True" val="10"/>
+   <prop id="9" has="True" val="10"/>
+  </job>
+ </level>
+ <level id="16" needval="3987" material="元力精华·大乘" material_num="20" pneumalevel="86" rate="4">
+  <job id="0">
+   <prop id="1" has="True" val="1260"/>
+   <prop id="2" has="True" val="13"/>
+   <prop id="3" has="True" val="42"/>
+   <prop id="4" has="True" val="9"/>
+   <prop id="5" has="True" val="10"/>
+   <prop id="6" has="True" val="9"/>
+   <prop id="7" has="True" val="10"/>
+   <prop id="8" has="True" val="20"/>
+   <prop id="9" has="True" val="11"/>
+  </job>
+  <job id="1">
+   <prop id="1" has="True" val="420"/>
+   <prop id="2" has="True" val="13"/>
+   <prop id="3" has="True" val="42"/>
+   <prop id="4" has="True" val="9"/>
+   <prop id="5" has="True" val="10"/>
+   <prop id="6" has="True" val="9"/>
+   <prop id="7" has="True" val="10"/>
+   <prop id="8" has="True" val="20"/>
+   <prop id="9" has="True" val="11"/>
+  </job>
+  <job id="2">
+   <prop id="1" has="True" val="840"/>
+   <prop id="2" has="True" val="13"/>
+   <prop id="3" has="True" val="42"/>
+   <prop id="4" has="True" val="9"/>
+   <prop id="5" has="True" val="10"/>
+   <prop id="6" has="True" val="9"/>
+   <prop id="7" has="True" val="10"/>
+   <prop id="8" has="True" val="20"/>
+   <prop id="9" has="True" val="11"/>
+  </job>
+ </level>
+ <level id="17" needval="4779" material="元力精华·大乘" material_num="20" pneumalevel="89" rate="2">
+  <job id="0">
+   <prop id="1" has="True" val="1380"/>
+   <prop id="2" has="True" val="14"/>
+   <prop id="3" has="True" val="46"/>
+   <prop id="4" has="True" val="10"/>
+   <prop id="5" has="True" val="12"/>
+   <prop id="6" has="True" val="10"/>
+   <prop id="7" has="True" val="12"/>
+   <prop id="8" has="True" val="30"/>
+   <prop id="9" has="True" val="12"/>
+  </job>
+  <job id="1">
+   <prop id="1" has="True" val="460"/>
+   <prop id="2" has="True" val="14"/>
+   <prop id="3" has="True" val="46"/>
+   <prop id="4" has="True" val="10"/>
+   <prop id="5" has="True" val="12"/>
+   <prop id="6" has="True" val="10"/>
+   <prop id="7" has="True" val="12"/>
+   <prop id="8" has="True" val="30"/>
+   <prop id="9" has="True" val="12"/>
+  </job>
+  <job id="2">
+   <prop id="1" has="True" val="920"/>
+   <prop id="2" has="True" val="14"/>
+   <prop id="3" has="True" val="46"/>
+   <prop id="4" has="True" val="10"/>
+   <prop id="5" has="True" val="12"/>
+   <prop id="6" has="True" val="10"/>
+   <prop id="7" has="True" val="12"/>
+   <prop id="8" has="True" val="30"/>
+   <prop id="9" has="True" val="12"/>
+  </job>
+ </level>
+</duanti>

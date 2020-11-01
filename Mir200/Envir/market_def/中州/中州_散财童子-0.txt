@@ -1,0 +1,63 @@
+[@main]
+\  <幻色精金石/@stoneInfo>可以将裁决、嗜魂、倚天剑、雷霆怒斩、雷裂\
+  刀、屠龙刀、无赦、血饮、夺魄、龙牙利刃、逍遥无极扇、\
+  聚灵、霹雳法杖、怒狂降魔杵、幻龙风雷鞭、清心碧玉笛\
+  紫月圣君提升为<color=green 黄金武器>。\
+  上交<color=green 财神封号凭证>可获得<财神爷/@titleInfo>封号,<兑换/@duihuan>\
+  上交<color=green 装备兑换凭证>可换取装备,<兑换/@duizheng>。\
+  <战士黄金武器属性/@viewPrize&1>  <道士黄金武器属性/@viewPrize&2>  <法师黄金武器属性/@viewPrize&3>\
+  <打造黄金武器/@@stonetogold>      <残章兑换/@showCanZhangDuiHuan>  <合成祝福水晶/@toUpgradeCSHF>\
+  <离开/@exit>\
+
+[@showCanZhangDuiHuan]
+   <color=green 2个任意技能残章+斗转星移可选择兑换某一技能残章><color=green （怒>\
+<color=green 斩天下残章、天怒惊雷残章、天女散花残章、迷光烈焰残章、>\
+<color=green 火毒攻心剑残章、神之召唤残章）>\\\
+  <怒斩天下残章/@@chanzhangchange0>  <天怒惊雷残章  /@@chanzhangchange1>  <天女散花残章/@@chanzhangchange2>\
+  <迷光烈焰残章/@@chanzhangchange3>  <火毒攻心剑残章/@@chanzhangchange4>  <神之召唤残章/@@chanzhangchange5>\\
+
+
+[@viewPrize]
+#IF
+EQUAL $SCRIPTPARAM(1) 1
+#SAY
+<color=red 战士黄金武器：>\
+<color=yellow 黄金裁决：>攻击0-36\
+<color=yellow 黄金雷霆怒斩：>攻击12-33、命中3\
+<color=yellow 黄金雷裂刀：>攻击13-31\
+<color=yellow 黄金屠龙刀：>攻击5-43\
+<color=yellow 黄金无赦：>攻击12-41、命中2\
+<color=yellow 赤火降魔杵：>攻击20-57、命中3\\
+<color=gray 上一页>  <color=orange 1 ／3>   <下一页/@_mammondscj_viewPrize&2>    <返回/@main>
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 2
+#SAY
+<color=red 道士黄金武器：>\
+<color=yellow 黄金倚天剑：>攻击10-26、道术5-20、幸运3\
+<color=yellow 黄金逍遥扇：>攻击5-20、道术4-17、幸运1\
+<color=yellow 黄金聚灵：>攻击15-22、道术8-21、幸运4\
+<color=yellow 天音碧玉笛：>攻击15-25、道术13-37、幸运5\\\\
+<上一页/@_mammondscj_viewPrize&1>  <color=orange 2 ／3>   <下一页/@_mammondscj_viewPrize&3>    <返回/@main>
+#ACT
+break
+#IF
+EQUAL $SCRIPTPARAM(1) 3
+#SAY
+<color=red 法师黄金武器：>\
+<color=yellow 黄金嗜魂：>攻击6-21、魔法2-16\
+<color=yellow 黄金血饮：>攻击3-20、魔法3-11、命中5\
+<color=yellow 黄金夺魄：>攻击6-25、魔法6-18\
+<color=yellow 黄金龙牙利刃：>攻击10-25、魔法3-13、命中5\
+<color=yellow 黄金霹雳法杖：>攻击7-17、魔法3-12\
+<color=yellow 火龙风雷鞭：>攻击6-16、魔法13-34\
+<color=yellow 黄金紫月圣君：>攻击6-21、魔法3-16\
+<上一页/@_mammondscj_viewPrize&2>  <color=orange 3 ／3>   <color=gray 下一页>    <返回/@main>
+#ACT
+break
+
+[@stoneInfo]
+\
+  <color=yellow 幻色精金石:>\
+  <color=yellow 打造黄金武器的必备材料。>\

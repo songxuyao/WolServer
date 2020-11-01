@@ -1,0 +1,34 @@
+[@main]
+前方就是玄冰古道了，在它的最深处，隐藏着三个神秘的洞\
+窟。洞窟中居住着守卫上古宝藏的魔王，它们拥有让所有人\
+羡慕的财富。不过，每前进一步都要完成“玄冰使者”的挑\
+战，你准备好了么？记住，一定要抓紧时间，进入古道3 个\
+小时之后就会被送出去的。\
+<准备好了，送我进去吧/@goXuanBin>\
+<离开/@exit>
+
+[@goXuanBin]
+#IF
+!checkitem 随机卷轴 1
+!checkitem 随机卷轴包 1
+#ACT
+mapmove BT003 118 65
+DelayGoto 1800000 @fanhuizhongzhou1
+#ELSESAY
+对不起，你不能携带随机卷轴包进入玄冰古道。请检查包裹和\
+宠物包裹。\
+<离开/@exit>
+
+[@fanhuizhongzhou1]
+#IF
+POS $M BT00
+#ACT
+goto @fanhuizhongzhou
+#IF
+POS $M NB00
+#ACT
+goto @fanhuizhongzhou
+
+[@fanhuizhongzhou]
+#ACT
+MAPMOVE 0

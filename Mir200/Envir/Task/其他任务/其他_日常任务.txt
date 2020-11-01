@@ -1,0 +1,6 @@
+[setup]
+stepcount = 1
+title = 了解日常任务
+ID = 29
+stepaim1 = 去中州广场找<日常任务仙子/@@goto zzgc 日常任务仙子 104,78>聊聊 \<color=green [传]/@@flyto 32 zzgc 104 78>
+stepDESC1 = <color=graygolden 任务目的：>去中州广场找<日常任务仙子/@@goto zzgc 日常任务仙子 104,78>聊聊，她有任务交给\你。\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：100000\<color=graygolden 任务介绍:>\日常任务仙子那里每天都有一些任务免费领取，勇士如果可\以完成任务，将会获得巨额经验奖励。是不是很心动啊，赶\快去中州广场找日常任务仙子吧。

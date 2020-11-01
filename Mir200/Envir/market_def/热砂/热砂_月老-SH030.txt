@@ -1,0 +1,176 @@
+[@main]
+你想做什么？\
+<求婚/@marry>\
+<取消求婚/@wantcancel>\
+<离婚/@divorce>\
+<询问结婚时间/@asktime>\
+<打听消息/@ask>\
+<回城/@backcity>\
+<离开/@exit>\
+
+[@ask]
+前几天我不小心丢了一枚戒指，\
+你能帮我找回来吗？\\
+<确定/@exit>
+
+[@backcity]
+祝你好运年轻人，我送你出去。\\
+<走了/@out>\
+<等一会/@main>
+
+[@out]
+#ACT
+MAPMOVE 2 220 440
+
+[@wantcancel]
+你真的准备要取消求婚吗？\\
+<取消求婚/@取消求婚>\
+<继续求婚/@main>
+
+[@取消求婚]
+#ACT
+$STR(S0).close
+break
+#SAY
+你的求婚请求已经取消。\\
+<确定/@exit>
+
+[@divorce]
+#IF
+checkmarry
+#SAY
+想要离婚的话你必须支付一根金条，\
+你确定要离婚吗？\\
+<确定/@leave>\
+<不离/@exit>\
+<返回/@main>\
+#ELSESAY
+你现在没有婚姻关系，没法离婚。\
+<关闭/@exit>
+
+[@leave]
+#IF
+checkitem 金条 1
+#SAY
+你婚姻关系已经解除了。\
+<确定/@exit>
+#ACT
+take 金条 1
+SENDMSG 5 你已与<$DEARNAME>离婚
+unmarry requestunmarry force
+break
+#ELSESAY
+你没有金条，\
+我不能让你离婚。\
+<确定/@exit>
+
+[@asktime]
+#IF
+checkmarry
+#SAY
+你是在<$HUMAN(结婚)>结婚的。
+#ELSESAY
+你现在没有婚姻关系。\\
+<确定/@exit>
+
+[@marry]
+求婚者必须是男性且装备求婚戒指，声望值在5点以上\
+如果你的求婚失败，你的求婚戒指会保留下来。\
+求婚成功后，你的求婚戒指就会被收走。\
+每次求婚收取1000金币手续费，你准备好求婚了吗？\
+<准备好了/@agree>\
+<没有/@exit>，下次再来\
+<返回/@main>
+
+[@agree]
+#IF
+!gender man
+#SAY
+你不是男性，我不能让你求婚。\\
+<返回/@main>
+#ACT
+break
+#IF
+checkitemw 求婚戒指 1
+#SAY
+提交求婚申请需要1000金币的手续费。\
+请输入您求婚对象的名字。\
+<求婚/@d_marry>\
+#ELSESAY
+你没有求婚戒指，我不能让你求婚。\\
+<返回/@main>
+
+[@d_marry]
+#ACT
+QUERYVAL 0 0 15 @结婚检测 请输入:
+
+[@结婚检测]
+#IF
+!checkitemw 求婚戒指 1
+#ACT
+SENDMSG 5 您没有求婚戒指, 不能求婚
+break
+#IF
+CHECKCREDITPOINT < 5
+#ACT
+SENDMSG 5 您的声望不足
+break
+#IF
+!checkgold 1000
+#ACT
+SENDMSG 5 您的金币不足
+break
+#IF
+checkmarry
+#ACT
+SENDMSG 5 您已结婚
+break
+#IF
+!CheckOnline $STR(S0)
+#ACT
+SENDMSG 5 对方不在线
+break
+#IF
+$STR(S0).gender man
+#ACT
+SENDMSG 5 对方为男性
+break
+#IF
+$STR(S0).CHECKMAPNAME SH030
+#ACT
+MOV A19 $USERNAME
+$STR(S0).MOV S1 $STR(A19)
+$STR(S0).GOTO @结婚请求
+#ELSEACT
+SENDMSG 5 对方不在本地图
+break
+
+[@结婚请求]
+<$STR(S1)>向你求婚\\
+<同意/@同意>\
+<不同意/@不同意>
+
+[@同意]
+#IF
+$STR(S1).checkitemw 求婚戒指 1
+$STR(S1).checkgold 1000
+#ACT
+$STR(S1).take 金币 1000
+$STR(S1).takew 求婚戒指 1
+Gmexecute DearName $STR(S1) $USERNAME
+Gmexecute DearName $USERNAME $STR(S1)
+CALCVAR HUMAN 结婚 = $DATETIME
+SAVEVAR HUMAN 结婚 ..\QUESTDIARY\数据文件\个人变量\结婚.txt
+SaveExVar $DATETIME $STR(S1) 结婚 ..\QuestDiary\数据文件\个人变量\结婚.txt
+close
+#ELSEACT
+SENDMSG 5 对方条件不够！
+close
+
+[@不同意]
+#IF
+CHECKLEVELEX > 0
+#ACT
+$STR(S1).SENDMSG 5 对方拒绝您的求婚
+close
+break

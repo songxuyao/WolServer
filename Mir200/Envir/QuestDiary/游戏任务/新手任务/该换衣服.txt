@@ -1,0 +1,109 @@
+[@中州_衣服]
+{
+
+#IF
+EQUAL $Task(18) 1
+#SAY
+可以完成的任务：\
+<新手任务--该换衣服/@_RW_fulyiTaskDesp40>\\
+<离开/@exit>
+#ACT
+break
+#ELSESAY
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+[@_RW_fulyiTaskDesp40]
+    这是我免费送给你最后一件衣服了，这件衣服，也是\
+你的第1件与职业匹配的新衣服。\
+    以后如果想要更好的，就要自己去打魔兵爆了。\\
+    <谢谢/@_RW_fulyifilTask305>                <离开/@exit>
+
+[@_RW_fulyifilTask305]
+#IF
+EQUAL $Task(18) 1
+#SAY
+    当然，如果有人将一些好衣服卖给我的话，我也会给你\
+留着的，不过别忘了带钱过来。\
+    去找铁匠吧，他会送你最后一件新武器。\\
+    <离开/@exit>\
+#ACT
+#ELSESAY
+您当前没有可以接的任务。\\
+<离开/@exit
+#ELSEACT
+break
+#IF
+gender MAN
+checkjob warrior
+#ACT
+EndTask 18
+BINDGOLD + 5000
+CHANGEEXP + 50000
+give 重盔(男) 1
+give 道士头盔 1
+AddTask 19
+SENDMSG 5 你成功增加了5000绑定金币。
+break
+#IF
+gender WOMAN
+checkjob warrior
+#ACT
+EndTask 18
+BINDGOLD + 5000
+CHANGEEXP + 50000
+give 重盔(女) 1
+give 道士头盔 1
+AddTask 19
+SENDMSG 5 你成功增加了5000绑定金币。
+break
+#IF
+gender MAN
+checkjob wizard
+#ACT
+EndTask 18
+BINDGOLD + 5000
+CHANGEEXP + 50000
+give 魔袍(男) 1
+give 道士头盔 1
+AddTask 19
+SENDMSG 5 你成功增加了5000绑定金币。
+break
+#IF
+gender WOMAN
+checkjob wizard
+#ACT
+EndTask 18
+BINDGOLD + 5000
+CHANGEEXP + 50000
+give 魔袍(女) 1
+give 道士头盔 1
+AddTask 19
+SENDMSG 5 你成功增加了5000绑定金币。
+break
+#IF
+gender MAN
+checkjob taoist
+#ACT
+EndTask 18
+BINDGOLD + 5000
+CHANGEEXP + 50000
+give 灵魂战甲(男) 1
+give 道士头盔 1
+AddTask 19
+SENDMSG 5 你成功增加了5000绑定金币。
+break
+#IF
+gender WOMAN
+checkjob taoist
+#ACT
+EndTask 18
+BINDGOLD + 5000
+CHANGEEXP + 50000
+give 灵魂战甲(女) 1
+give 道士头盔 1
+AddTask 19
+SENDMSG 5 你成功增加了5000绑定金币。
+break
+
+}

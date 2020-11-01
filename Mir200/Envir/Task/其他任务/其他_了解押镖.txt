@@ -1,0 +1,6 @@
+[setup]
+stepcount = 1
+title = 了解押镖任务
+ID = 45
+stepaim1 = 去中州王城找<镖师/@@goto 0 镖师 414,268>聊聊 <color=green [传]/@@flyto 44 0 414 268>
+stepDESC1 = <color=graygolden 任务目的：>去中州王城找<镖师/@@goto 0 镖师 414,268>聊聊，她有任务交给\你。\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：100000\<color=graygolden 任务介绍:>\镖师那里每天都有一些物资需要勇士护送前往海角村。完成\押镖任务，将会获得巨额经验奖励。是不是很心动啊，赶\快去中州王城找镖师吧。

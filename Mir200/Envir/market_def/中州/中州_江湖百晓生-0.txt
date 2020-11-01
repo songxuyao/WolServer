@@ -1,0 +1,77 @@
+[@main]
+    行走江湖，没有我百晓生不知道的事情。\
+    我不但了解各行会的最新情况，还知道很多江湖奇闻。\
+    <月光宝盒/@_SpeBH_main>\
+　　<离线经验/@_SpeJY_main>\
+    <离开/@exit>\
+
+[@_SpeJY_main]
+#CALL [\游戏功能\离线经验.txt] @江湖领取离线
+
+[@_SpeBH_main]
+    <Color=green 月光宝盒>是一件神奇的物品，此宝物传说拥有穿越时空\
+的功能，最近我又得知其另外一个用途：<Color=green 在你自身成长获得>\
+<Color=green 经验的同时，月光宝盒可以吸收额外的经验，并且经过提炼>\
+<Color=green 之后就可以直接获得。>你可以把吸收过经验的月光宝盒交给\
+我，让我帮你释放宝盒累积的经验。\
+    <立即释放宝盒经验/@_SpeBH_shifang>    <检查是否过期/@_SpeBH_chestOutnew>\
+    <离开/@exit>\
+
+[@_SpeBH_shifang]
+    你的月光宝盒吸满经验了吗？拿来交给我吧，我会把里\
+面累积的经验立即释放出来。\
+    月光宝盒(小)可以吸收200万经验，月光宝盒(大)可以\
+吸收2500万经验。使用时间都为1个月。<color=red 请检查一下你的月>\
+<color=red 光宝盒是否已经累积满经验。>\
+    <立即释放经验/@_SpeBH_zhutiexp>\
+    <离开/@exit>\
+
+[@_SpeBH_zhutiexp]
+#ACT
+ShowSpotDlg 6 请放入月光宝盒 @_SpeBH_zhutiexp1
+#SAY
+    把吸收过经验的月光宝盒交给我，让我帮你释放宝盒中\
+累积的经验。<color=green 此次宝盒中释放的经验将按组队模式分配。>\
+    <color=red 注：月光宝盒释放经验后将消失，如果你的宝盒经验未>\
+<color=red 吸满，请累积满经验后再来吧！>\
+    <离开/@exit>\
+
+[@_SpeBH_zhutiexp1]
+#IF
+CHECKVARLIST $PARAM(0) ..\QuestDiary\数据文件\文本数据\月光宝盒类型.txt
+#ACT
+#ELSESAY
+    这个不是月光宝盒，无法提炼经验。\\
+　　<我知道了/@exit>
+#ELSEACT
+break
+#IF
+LARGE $ITEMINFO[$PARAM(1)].OVERLAP 0
+#SAY
+　　恭喜你！你成功获得了{Color=green <$ITEMINFO[$PARAM(1)].OVERLAP>}经验。\
+    <继续释放宝盒经验/@_SpeBH_shifang>\
+　　<离开/@exit>
+#ACT
+CHANGEEXP + $ITEMINFO[$PARAM(1)].OVERLAP
+SENDMSG 10 恭喜玩家%s使用月光宝盒领取到<$ITEMINFO[$PARAM(1)].OVERLAP>的经验！赶快前往中州江湖百晓生处上交宝盒提炼经验吧。
+takem $PARAM(1)
+break
+#ELSESAY
+    这个月光宝盒内没有任何经验。请拿回去吧。\\
+　　<我知道了/@exit>
+
+[@_SpeBH_chestOutnew]
+#ACT
+ShowSpotDlg 6 请放入月光宝盒 @_SpeBH_chestOutnew1
+#SAY
+  请放入你的月光宝盒。\
+
+[@_SpeBH_chestOutnew1]
+#IF
+POS $PARAM(0) 月光宝盒
+#SAY
+    你的宝盒有穿越时空的功能，不会有时间限制。可放心使用。\\\
+    <离开/@exit>\
+#ELSESAY
+    这个不是月光宝盒，无法提炼经验。\\
+　　<我知道了/@exit>

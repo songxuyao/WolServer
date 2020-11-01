@@ -1,0 +1,6 @@
+[setup]
+stepcount = 1
+title = 新手任务--补给药品
+ID = 21
+stepaim1 = 去找<药店掌柜/@@goto 0 药店掌柜 497,269>索要更多药品 <color=green [传]/@@flyto 25 0 497 269>
+stepDESC1 = <color=graygolden 任务目的：>去找<药店掌柜/@@goto 0 药店掌柜 497,269>索要更多药品\<color=graygolden 任务奖励：>\ </@@!PIC2 10,951>经验：50000\<color=graygolden 任务介绍:>\    去找<药店掌柜/@@goto 0 药店掌柜 497,269>吧，跟他要一些回复效果更好的药品。\    你新的历练马上就要开始了，不做好准备怎么行呢。

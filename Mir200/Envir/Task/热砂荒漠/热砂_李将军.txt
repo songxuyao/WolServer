@@ -1,0 +1,6 @@
+[setup]
+stepcount = 1
+title = 热砂荒漠—李将军
+ID = 31
+stepaim1 = 去土城找<李将军/@@goto 2 李将军 215,436>报道 <color=green [传]/@@flyto 34 2 215 436>
+stepDESC1 = <color=graygolden 任务目的：>去热砂荒漠的土城找<李将军/@@goto 2 李将军 215,436>报道。\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：200000 </@@!PIC2 10,229>绑定金币：2000\<color=graygolden 任务介绍:>\  近日，热砂荒漠机关洞中的怪物好像有些异常的举动，土\城的<color=green 李将军>多次要求我派出人员去调查该问题。  作为你踏\上修真之途的第一个考验，我就把这个任务交给你了，别让\我失望，小伙子。

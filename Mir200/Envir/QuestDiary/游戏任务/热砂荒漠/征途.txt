@@ -1,0 +1,116 @@
+[@皇宫_国王]
+{
+
+#IF
+EQUAL $Task(30) 1
+#SAY
+可以完成的任务：\
+<热砂荒漠—征途/@_RW_fulfilztTaskDesp01>\\
+<离开/@exit>
+#ACT
+break
+#IF
+EQUAL $Task(35) 1
+#SAY
+可以完成的任务：\
+<热砂荒漠—回报国王/@_RW_fulfilztTaskDesp07>\\
+<离开/@exit>
+#ACT
+break
+#IF
+EQUAL $Task(37) 1
+#SAY
+可以完成的任务：\
+<新的征程—蛇魔谷/@_RW_fulfilzzTaskDesp09>\
+#ACT
+break
+#IF
+EQUAL $Task(43) 1
+#SAY
+可以完成的任务：\
+<群蛇乱舞—回报国王/@_RW_fulfilTaskDesp415>\
+#ACT
+break
+#ELSESAY
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+[@_RW_fulfilTaskDesp415]
+   欢迎你回来，我的勇士。\
+<感谢国王/@_RW_fulfilTask415>                <关闭/@exit>
+
+[@_RW_fulfilTask415]
+#IF
+EQUAL $Task(43) 1
+#SAY
+   英雄，我果然没有看错啊，真是英雄出少年啊！你已经\
+通过了我的考验，修真之路才刚开始，更多的挑战和机遇在\
+等着你，老夫相信你一定能成功的！\
+<离开/@exit>  <返回/@main>
+#ACT
+EndTask 43
+BINDGOLD + 2000
+CHANGEEXP + 500000
+SENDMSG 5 你成功增加了2000绑定金币。
+break
+
+[@_RW_fulfilztTaskDesp01]
+  近日，热砂荒漠机关洞中的怪物好像有些异常的举动，土\
+城的<color=green 李将军>多次要求我派出人员去调查该问题。  作为你踏\
+上修真之途的第一个考验，我就把这个任务交给你了，别让\
+我失望，小伙子。\
+<我这就去找李将军/@_RW_fulfilztTask01>                <改天再说/@exit>
+
+[@_RW_fulfilztTask01]
+#IF
+EQUAL $Task(30) 1
+#SAY
+  近日，热砂荒漠机关洞中的怪物好像有些异常的举动，土\
+城的<color=green 李将军>多次要求我派出人员去调查该问题。  作为你踏\
+上修真之途的第一个考验，我就把这个任务交给你了，别让\
+我失望，小伙子。\
+<离开/@exit>  <返回/@main>
+#ACT
+EndTask 30
+CHANGEEXP + 200000
+AddTask 31
+break
+
+[@_RW_fulfilztTaskDesp07]
+  这么快就回来了，任务完成了嘛？\
+<任务完成了，国王/@_RW_fulfilztTask07>                <关闭/@exit>
+
+[@_RW_fulfilztTask07]
+#IF
+EQUAL $Task(35) 1
+#SAY
+  任务完成得不错嘛。这第一次的任务就算你通过了!让我\
+想想应该再给你点什么赏赐呢？这样吧，现在你就去史官那\
+吧，他会给你奖励的!\
+<离开/@exit>  <返回/@main>
+#ACT
+EndTask 35
+AddTask 36
+break
+
+[@_RW_fulfilzzTaskDesp09]
+#IF
+CHECKLEVELEX > 34
+#SAY
+  自从上次你在热砂荒漠机关洞中的调查后，李将军加强了\
+对机关洞的监视和防守。但是因此导致了对蛇魔谷方面的防\
+御力量有些薄弱了，李将军有些担心这方面的问题，   你\
+再去走一趟吧，问问李将军有什么需要帮助的？\
+<离开/@exit>  <返回/@main>
+#ACT
+EndTask 37
+BINDGOLD + 2000
+CHANGEEXP + 300000
+AddTask 38
+SENDMSG 5 你成功增加了2000绑定金币。
+break
+#ELSESAY
+  你的等级还不够，再去修炼吧！\
+<离开/@exit>
+
+}

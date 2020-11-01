@@ -1,0 +1,151 @@
+[@main]
+这差事真无聊，天天站在这里风吹雨淋，你找我有什么事？\\
+<想快速到达其他地区/@main1>    <记录回城点/@_LB_homePos>    <挑战炼狱/@_LB_newlianyu>\
+<充值游戏时间/@_LB_toplaytime>          <充值元宝/@_LB_throwmoney>\
+<可接任务/@_RW_entry>\
+
+[@_RW_entry]
+您当前没有可以接的任务。\\
+<离开/@exit>
+
+[@main1]
+这是国王为了对抗邪恶力量而特别开辟的骑兵驿道，能够\
+以最快的速度帮助你往返于各个地区 。不过为此你必须付\
+出一些代价做为使用费用。你确定要使用这条驿道吗？\
+<禁地妖魔洞穴/@prac>\
+<蛇谷/@jsnake>\
+<西域关隘/@epass>\
+<跃马平原/@yuema>\
+<中州关隘附近/@gogo0>\
+<关闭/@exit>
+
+[@prac]
+要去禁地妖魔洞穴的入口吗？\
+800金币就可以了，没有的话就自己走着去吧。\\
+<付钱/@prac1> \
+<没钱/@prac2>
+
+[@prac1]
+#IF
+CHECKBINDGOLD > 799
+#ACT
+BINDGOLD - 800
+MAPMOVE 4 52 184
+break
+#IF
+CHECKGOLD 800
+#ACT
+TAKE 金币 800
+MAPMOVE 4 52 184
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@prac2]
+那就自己到50，180附近去找吧。\\
+<返回/@main>
+
+[@jsnake]
+要去蛇谷吗？\
+500金币就可以了，没有的话就自己走着去吧。\\
+<付钱/@jsnake1> \
+<没钱/@main>
+
+[@jsnake1]
+#IF
+CHECKBINDGOLD > 499
+#ACT
+BINDGOLD - 500
+MAPMOVE 10 84 60
+break
+#IF
+CHECKGOLD 500
+#ACT
+TAKE 金币 500
+MAPMOVE 10 84 60
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@epass]
+要去关隘吗？\
+800金币就可以了，没有的话就自己走着去吧。\\
+<付钱/@epass1> \
+<没钱/@epass2>
+
+[@epass1]
+#IF
+CHECKBINDGOLD > 799
+#ACT
+BINDGOLD - 800
+MAPMOVE 4 16 67
+break
+#IF
+CHECKGOLD 800
+#ACT
+TAKE 金币 800
+MAPMOVE 4 16 67
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@epass2]
+那就自己到15，60附近去找吧。\\
+<返回/@main>
+
+[@yuema]
+你想到跃马平原去逛逛吗？\
+付1500金币，我可以带你过去，你准备好了吗？\\
+<准备好了，带我过去/@go>\
+<我不想去/@exit>
+
+[@go]
+#IF
+CHECKBINDGOLD > 1499
+#ACT
+BINDGOLD - 1500
+MAPMOVE 3 397 706
+break
+#IF
+CHECKGOLD 1500
+#ACT
+TAKE 金币 1500
+MAPMOVE 3 397 706
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+[@gogo0]
+要去中州关隘附近吗？这路可不太好走。\
+付2500金币我带你去，没有的话就自己走着去吧。\\
+<带我过去/@gogo0a>\
+<我不想去/@exit>
+
+[@gogo0a]
+#IF
+CHECKBINDGOLD > 2499
+#ACT
+BINDGOLD - 2500
+MAPMOVE 0 727 47
+break
+#IF
+CHECKGOLD 2500
+#ACT
+TAKE 金币 2500
+MAPMOVE 0 727 47
+#ELSESAY
+你的钱不够，我不送你去。\\
+<退出/@exit>
+
+
+[@_LB_homePos]
+#CALL [\商人\记录回城.txt] @homePos
+
+[@_LB_toplaytime]
+#CALL [\商人\充值元宝.txt] @oplaytime
+
+[@_LB_throwmoney]
+#CALL [\商人\充值元宝.txt] @throwmoney
+
+[@_LB_newlianyu]
+#CALL [\商人\挑战炼狱.txt] @newlianyu

@@ -1,0 +1,61 @@
+[@main]
+    灵兽，吸纳了众多天地之灵气而得以通灵。\
+    灵犀仙岛上成长了许多野生灵兽，其自幼被仙气笼罩，\
+充满了灵气，拥有不俗的战力。\\
+　　<灵兽介绍/@petinfo>\
+    <灵犀仙岛/@lxxd>\
+;    <兽魂炼狱/@shly>\
+
+[@shly]
+    兽魂炼狱分2层，进入兽魂炼狱需要消耗炼狱时间，第\
+一层消耗正常炼狱时间，第二层消耗双倍炼狱时间，兽魂\
+炼狱大量掉落灵兽神丹，圣战级别装备等宝物以及大量经\
+验，第二层比第一层更危险，同时宝物更丰富。\
+    <进入兽魂炼狱一层/@enterfirst>\
+    <进入兽魂炼狱二层/@entersecond>\
+
+[@enterfirst]
+   大侠，兽魂炼狱到处充满危机，请大侠等级到达50级或\
+以上再来冒险。\
+    <离开/@exit>
+
+
+
+[@petinfo]
+<color=ggreen      灵兽能够被驯化成为骑乘的坐骑，协助勇士战斗。能够>\
+<color=ggreen 极大的提升自己的战斗力。>\\
+<color=ggreen     人类能骑乘在灵兽上快速移动，或者借助灵兽释放强大>\
+<color=ggreen 战技。灵兽已经成为战场上不可或缺的一大助力。>\\
+    在释放出灵兽后，点击<color=orange Ctrl+R>进行骑战和骑乘的切换\
+    点击<color=orange Ctrl+L>查看更多灵兽相关信息\
+    <返回/@main>\
+
+[@lxxd]
+    灵犀仙岛上每天晚上20:00会有灵兽\
+出没，使用灵兽项圈方可驯服灵兽。\\
+    <color=green 灵兽项圈可以在商城内购买>\\
+    <进入灵犀仙岛/@golxxd>(需要50级,1000金币)\
+
+[@golxxd]
+#IF
+CHECKLEVELEX < 50
+#SAY
+等级不足
+#ACT
+break
+#IF
+CHECKBINDGOLD > 999
+#ACT
+BINDGOLD - 1000
+MAPMOVE Lxxd 73 64
+break
+#IF
+CHECKGOLD 1000
+#ACT
+take 金币 1000
+MAPMOVE Lxxd 73 64
+break
+#ELSESAY
+金币不足
+
+

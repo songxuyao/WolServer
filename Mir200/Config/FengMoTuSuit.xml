@@ -1,0 +1,81 @@
+<root>
+ <suit shape = "1">
+  <level value = "0" prop = "29" propval = "80"/>
+  <level value = "1" prop = "29" propval = "30"/>
+  <level value = "4" prop = "29" propval = "155"/>
+  <level value = "6" prop = "29" propval = "235"/>
+  <level value = "7" prop = "29" propval = "300"/>
+  <level value = "8" prop = "29" propval = "300"/>
+  <level value = "10" prop = "29" propval = "400"/>
+ </suit>
+ <suit shape = "2">
+  <level value = "0" prop = "29" propval = "1000"/>
+  <level value = "8" prop = "28" propval = "3"/>
+  <level value = "12" prop = "29" propval = "50"/>
+  <level value = "15" prop = "28" propval = "3"/>
+  <level value = "17" prop = "28" propval = "5"/>
+  <level value = "18" prop = "29" propval = "200"/>
+  <level value = "19" prop = "29" propval = "200"/>
+  <level value = "20" prop = "28" propval = "3"/>
+ </suit>
+ <suit shape = "3">
+  <level value = "0" prop = "29" propval = "1500"/>
+  <level value = "8" prop = "28" propval = "5"/>
+  <level value = "12" prop = "29" propval = "100"/>
+  <level value = "15" prop = "28" propval = "8"/>
+  <level value = "17" prop = "28" propval = "10"/>
+  <level value = "18" prop = "29" propval = "500"/>
+  <level value = "19" prop = "29" propval = "500"/>
+  <level value = "20" prop = "28" propval = "8"/>
+ </suit>
+ <suit shape = "4">
+  <level value = "0" prop = "29" propval = "1500"/>
+  <level value = "8" prop = "28" propval = "5"/>
+  <level value = "12" prop = "29" propval = "100"/>
+  <level value = "15" prop = "28" propval = "8"/>
+  <level value = "17" prop = "28" propval = "10"/>
+  <level value = "18" prop = "29" propval = "500"/>
+  <level value = "19" prop = "29" propval = "500"/>
+  <level value = "20" prop = "28" propval = "20"/>
+ </suit>
+ <suit shape = "5">
+  <level value = "0" prop = "29" propval = "2600"/>
+  <level value = "1" prop = "28" propval = "33"/>
+  <level value = "8" prop = "32" propval = "100"/>
+  <level value = "15" prop = "1" propval = "200"/>
+  <level value = "17" prop = "32" propval = "200"/>
+  <level value = "18" prop = "32" propval = "300"/>
+  <level value = "19" prop = "1" propval = "300"/>
+  <level value = "20" prop = "32" propval = "400"/>
+ </suit>
+ <suit shape = "6">
+  <level value = "0" prop = "29" propval = "2860"/>
+  <level value = "1" prop = "28" propval = "35"/>
+  <level value = "8" prop = "32" propval = "115"/>
+  <level value = "15" prop = "1" propval = "230"/>
+  <level value = "17" prop = "32" propval = "230"/>
+  <level value = "18" prop = "32" propval = "360"/>
+  <level value = "19" prop = "1" propval = "340"/>
+  <level value = "20" prop = "32" propval = "460"/>
+ </suit>
+ <suit shape = "7">
+  <level value = "0" prop = "29" propval = "3580"/>
+  <level value = "1" prop = "28" propval = "43"/>
+  <level value = "8" prop = "32" propval = "133"/>
+  <level value = "15" prop = "1" propval = "295"/>
+  <level value = "17" prop = "32" propval = "295"/>
+  <level value = "18" prop = "32" propval = "438"/>
+  <level value = "19" prop = "1" propval = "438"/>
+  <level value = "20" prop = "32" propval = "570"/>
+ </suit>
+ <suit shape = "8">
+  <level value = "0" prop = "29" propval = "4370"/>
+  <level value = "1" prop = "28" propval = "58"/>
+  <level value = "8" prop = "32" propval = "173"/>
+  <level value = "15" prop = "1" propval = "345"/>
+  <level value = "17" prop = "32" propval = "345"/>
+  <level value = "18" prop = "32" propval = "518"/>
+  <level value = "19" prop = "1" propval = "518"/>
+  <level value = "20" prop = "32" propval = "690"/>
+ </suit>
+</root>

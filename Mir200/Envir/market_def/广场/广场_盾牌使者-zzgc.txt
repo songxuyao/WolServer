@@ -1,0 +1,65 @@
+[@main]
+    灭世大战结束后，人类建立了自己的国家，国王为了减\
+少以后战斗中勇士的死亡，特派铸造大师制作了盾牌神石，\
+以加强盾牌。\\\\\\
+    <盾牌鉴定/@identifyShield>  <孟虎的馈赠/@gift>  <购买盾牌神石/@buyStone0>
+
+[@buyStone0]
+    请选择您要购买的种类：\
+    购买1个初级盾牌神石（<color=green 10元宝>）    <购买/@buyStone&初级盾牌神石&10>\
+    购买1个中级盾牌神石（<color=green 50元宝>）    <购买/@buyStone&中级盾牌神石&50>\
+    购买1个高级盾牌神石（<color=green 200元宝>）    <购买/@buyStone&高级盾牌神石&200>\
+    购买1个专家盾牌神石（<color=green 1000元宝>）    <购买/@buyStone&专家盾牌神石&1000>\\\\
+    <返回/@main>
+
+[@buyStone]
+#IF
+CHECKGAMEGOLD < $SCRIPTPARAM(2)
+#SAY
+    您目前好像没有足够的元宝哦。\\\\\\\\
+    <返回/@main>
+#ACT
+break
+#IF
+CHECKBAGSIZE 1
+#SAY
+恭喜您获得：\
+    {color=green <$SCRIPTPARAM(1)> * 1}\\\\\\\
+    <离开/@exit>
+#ACT
+GIVE $SCRIPTPARAM(1) 1
+GAMEGOLD - $SCRIPTPARAM(2)
+break
+#ELSESAY
+    你的包裹快满了，请整理下再来。\\
+    <我明白了/@exit>
+
+[@gift]
+#IF
+CHECK [1] 1
+#SAY
+    您已领过孟虎的馈赠，不可重复领取！\
+    <离开/@eixt>
+#ACT
+break
+#IF
+CHECKBAGSIZE 1
+#SAY
+恭喜您获得：\
+    <color=green 初级盾牌神石 * 1>\\\\\\\
+    <离开/@exit>
+#ACT
+SET [1] 1
+GIVE 初级盾牌神石 1
+UPGRADEUSERITEM $PARAM(10) 27 = 1
+break
+#ELSESAY
+    你的包裹快满了，请整理下再来。\\
+    <我明白了/@exit>
+
+[@identifyShield]
+    勇士可以使用盾牌神石，对自己的盾牌进行鉴定。品质\
+越高的盾牌神石鉴定出高品质属性的机会越大。当然，有些\
+强大的盾牌能鉴定出一些属性，令其他盾牌黯然失色。\\\\\\
+    <返回/@main>
+

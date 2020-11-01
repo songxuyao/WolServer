@@ -1,0 +1,156 @@
+[@main]
+#IF
+RANDOM 11250
+#ACT
+MOV S8 一千万
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\百兽园对话栏.txt S9 0 28
+FormatStr S10 <$STR(S9)> <$STR(S8)>
+give 金砖 2
+SENDMSG 10 财神降临，%s在百兽园获得了一千万金币的奖励！传奇世界，无限可能！
+break
+#SAY
+<$STR(S10)>\
+<去找其他幸运大使/@exit>\
+<离开房间/@leaveroom>\
+#IF
+RANDOM 1125
+#ACT
+MOV S8 一百万
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\百兽园对话栏.txt S9 0 28
+FormatStr S10 <$STR(S9)> <$STR(S8)>
+give 金条 1
+SENDMSG 10 财神降临，%s在百兽园获得了一百万金币的奖励！传奇世界，无限可能！
+break
+#SAY
+<$STR(S10)>\
+<去找其他幸运大使/@exit>\
+<离开房间/@leaveroom>\
+#IF
+RANDOM 675
+#ACT
+MOV S8 六十万
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\百兽园对话栏.txt S9 0 28
+FormatStr S10 <$STR(S9)> <$STR(S8)>
+give 金币 600000
+break
+#SAY
+<$STR(S10)>\
+<去找其他幸运大使/@exit>\
+<离开房间/@leaveroom>\
+#IF
+RANDOM 225
+#ACT
+MOV S8 二十万
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\百兽园对话栏.txt S9 0 28
+FormatStr S10 <$STR(S9)> <$STR(S8)>
+give 金币 200000
+break
+#SAY
+<$STR(S10)>\
+<去找其他幸运大使/@exit>\
+<离开房间/@leaveroom>\
+#IF
+RANDOM 90
+#ACT
+MOV S8 八万
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\百兽园对话栏.txt S9 0 28
+FormatStr S10 <$STR(S9)> <$STR(S8)>
+give 金币 80000
+break
+#SAY
+<$STR(S10)>\
+<去找其他幸运大使/@exit>\
+<离开房间/@leaveroom>\
+#IF
+RANDOM 43
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\百兽园对话栏.txt S11 29 59
+break
+#SAY
+<$STR(S11)>\
+<去找其他幸运大使/@exit>\
+<离开房间/@leaveroom>\
+#IF
+RANDOM 40
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\百兽园对话栏.txt S11 29 59
+break
+#SAY
+<$STR(S11)>\
+<去找其他幸运大使/@exit>\
+<离开房间/@leaveroom>\
+#IF
+RANDOM 31
+#ACT
+MOV S8 一百万
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\百兽园对话栏.txt S9 0 28
+FormatStr S10 <$STR(S9)> <$STR(S8)>
+give 金条 1
+SENDMSG 10 财神降临，%s在百兽园获得了一百万金币的奖励！传奇世界，无限可能！
+break
+#SAY
+<$STR(S10)>\
+<去找其他幸运大使/@exit>\
+<离开房间/@leaveroom>\
+#IF
+RANDOM 25
+#ACT
+MOV S8 三万
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\百兽园对话栏.txt S9 0 28
+FormatStr S10 <$STR(S9)> <$STR(S8)>
+give 金币 30000
+break
+#SAY
+<$STR(S10)>\
+<去找其他幸运大使/@exit>\
+<离开房间/@leaveroom>\
+#IF
+RANDOM 10
+#ACT
+MAPMOVE 0 477 222
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\百兽园对话栏.txt S11 60 88
+break
+#SAY
+<$STR(S11)>\
+<去找其他幸运大使/@exit>\
+<离开房间/@leaveroom>\
+#IF
+RANDOM 9
+#ACT
+MOV S8 一万
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\百兽园对话栏.txt S9 0 28
+FormatStr S10 <$STR(S9)> <$STR(S8)>
+give 金币 10000
+break
+#SAY
+<$STR(S10)>\
+<去找其他幸运大使/@exit>\
+<离开房间/@leaveroom>\
+#IF
+RANDOM 5
+#ACT
+MOV S8 五千
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\百兽园对话栏.txt S9 0 28
+FormatStr S10 <$STR(S9)> <$STR(S8)>
+give 金币 5000
+break
+#SAY
+<$STR(S10)>\
+<去找其他幸运大使/@exit>\
+<离开房间/@leaveroom>\
+#IF
+RANDOM 1
+#ACT
+ReadRandomStr ..\QuestDiary\数据文件\文本数据\百兽园对话栏.txt S11 29 59
+break
+#SAY
+<$STR(S11)>\
+<去找其他幸运大使/@exit>\
+<离开房间/@leaveroom>\
+
+[@leaveroom]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MAPMOVE 0 477 222
+break

@@ -1,0 +1,3225 @@
+[@main] FLASH(31)
+    行会通灵塔是一个行会的中心，其为行会的所有成员提\
+供了攻击、防御的属性加成。\
+
+[@XXXXXXXXXXX]
+#IF
+HAVEGUILD
+#ELSESAY
+    行会通灵塔是一个行会的中心，其为行会的所有成员提\
+供了攻击、防御的属性加成。\
+    <Color=orange 你目前还没有加入任何行会，>中州群雄崛起，各路英豪\
+叱咤风云，你可直接找寻中州皇宫内的国王申请创建属于你\
+自己的行会，并建造通灵塔。\\
+    <我想加入行会/@jiaruhanghui>\
+    <通灵塔有什么好处/@jieshao>\
+    <离开/@exit>\
+#ELSEACT
+break
+#IF
+LARGE $GUILD.TOWERGRADE 0
+#ACT
+GOTO @主灵塔
+break
+#ELSESAY
+　　<color=orange 你所在的行会还没有建造通灵塔。>\
+　　<color=orange 每个行会都可由会长来申请建造行会通灵踏。>沙城行会\
+还可以将通灵塔建造在跃马平原上。\
+　　通灵塔的等级越高，行会成员和元神的攻击力、防御力\
+加成也就越高。通灵塔的建造和每日维护需要消耗行会的资\
+源，所有成员都有可上交材料增加行会资源，获得行会银两。\\
+　　<申请建造通灵塔/@shenqing>\
+　　<通灵塔有什么好处/@jieshao>
+
+[@shenqing] FLASH(31)
+　　<color=green 每个行会只有会长可申请建造通灵塔。>\
+　　建造通灵塔需要以下材料：\
+　　<color=green 1个纯度50以上的矿石>\
+　　<color=green 1个中级宝石>即火晶石(中)这类宝石\
+　　<color=green 5块金砖>\
+　　<color=green 3个30点以上的七魄灵石>\
+　　请在包裹中准备好建造通灵塔的材料。\
+　　注意：通灵塔建造后，请重新编辑行会封号。\\
+　　<立刻建造/@立刻建造>\\
+　　<快速建造/@快速建造><color=red 需消耗200个元宝>
+
+[@快速建造] FLASH(31)
+#IF
+!ISGUILDMASTER
+#SAY
+　　你不是行会会长，只有会长才会拥有这至高无上的权利\
+　　<返回/@main>
+#ACT
+break
+#IF
+LARGE $GUILD.TOWERGRADE 0
+#ACT
+MessageBox 你的行会已经建造了通灵塔了，请不要重复操作！
+break
+#IF
+CHECKGAMEGOLD > 190
+#ACT
+GAMEGOLD - 200
+GuildTowerGrade SELF = 1
+CHANGEGuildFlag SELF = 0
+GuildTowerStatus SELF = 1
+GuildTowerRes SELF 5 = 50
+GuildTowerRes SELF 6 = 50
+GuildTowerRes SELF 7 = 30
+GuildTowerRes SELF 8 = 30
+GuildTowerRes SELF 9 = 30
+ADDGUILDLIST ..\QuestDiary\通灵塔\每日名单.txt
+SENDMSG 5 通灵塔建造成功！
+SENDMSG 0 (*)恭喜{<$USERNAME>}为{<$GUILDNAME>}行会成功建立了行会通灵塔，加入有通灵塔的行会将获得行会额外属性加成！
+SENDMSG 10 恭喜<$USERNAME>为<$GUILDNAME>行会成功建立了行会通灵塔，加入有通灵塔的行会将获得行会额外属性加成！
+GOTO @main
+break
+#ELSEACT
+MessageBox 你的元宝不足200个，无法使用通灵塔快速建造服务！
+break
+
+[@立刻建造] FLASH(31)
+#IF
+ISGUILDMASTER
+#ACT
+MOV P10 0
+MOV P11 0
+MOV P12 0
+MOV P13 0
+MOV P14 0
+MOV P15 0
+MOV P16 0
+MOV P17 0
+MOV P18 0
+MOV P19 0
+MOV P20 0
+MOV P21 0
+MOV P22 0
+MOV S10
+#ELSESAY
+　　你不是行会会长，只有会长才会拥有这至高无上的权利\
+　　<返回/@main>
+#ELSEACT
+break
+#IF
+LARGE $GUILD.TOWERGRADE 0
+#SAY
+你的行会已经建立了通灵塔了，不能再建立了！\\
+<离开/@exit>
+#ACT
+break
+#IF
+CHECKITEM 金砖 5
+#ACT
+MOV P10 $ITEMSUMCOUNT(金矿).DURA.49500
+MOV P11 $ITEMSUMCOUNT(银矿).DURA.49500
+MOV P12 $ITEMSUMCOUNT(铁矿).DURA.49500
+MOV P13 $ITEMSUMCOUNT(铜矿).DURA.49500
+MOV P14 $ITEMSUMCOUNT(黑铁矿石).DURA.49500
+MOV P15 $ITEMSUMCOUNT(天冲灵石).DURA.29500
+MOV P16 $ITEMSUMCOUNT(灵慧灵石).DURA.29500
+MOV P17 $ITEMSUMCOUNT(力魄灵石).DURA.29500
+MOV P18 $ITEMSUMCOUNT(山海精华).DURA.29500
+MOV P19 $ITEMSUMCOUNT(草木之灵).DURA.29500
+MOV P20 $ITEMSUMCOUNT(昆仑玄铁).DURA.29500
+MOV P21 $ITEMSUMCOUNT(中枢灵石).DURA.29500
+INC P22 $STR(P15)
+INC P22 $STR(P16)
+INC P22 $STR(P17)
+INC P22 $STR(P18)
+INC P22 $STR(P19)
+INC P22 $STR(P20)
+INC P22 $STR(P21)
+#ELSESAY
+　　你的建造条件不足，无法进行建造。\\
+　　建造通灵塔需要以下材料：\
+　　<color=green 1个纯度50以上的矿石>\
+　　<color=green 1个中级宝石>即火晶石(中)这类宝石\
+　　<color=green 5块金砖>\
+　　<color=green 3个30点以上的七魄灵石>\
+　　请在包裹中准备好建造通灵塔的材料。\\
+　　<返回/@main>
+#ELSEACT
+break
+#IF
+CHECKITEM 火晶石(中) 1
+#ACT
+MOV S10 火晶石(中)
+#IF
+CHECKITEM 冰月石(中) 1
+#ACT
+MOV S10 冰月石(中)
+#IF
+CHECKITEM 水云石(中) 1
+#ACT
+MOV S10 水云石(中)
+#IF
+CHECKITEM 金刚石(中) 1
+#ACT
+MOV S10 金刚石(中)
+#IF
+CHECKITEM 圣魔石(中) 1
+#ACT
+MOV S10 圣魔石(中)
+#IF
+CHECKITEM 青木石(中) 1
+#ACT
+MOV S10 青木石(中)
+#IF
+CHECKITEM 紫心石(中) 1
+#ACT
+MOV S10 紫心石(中)
+#IF
+CHECKITEM 天地石(中) 1
+#ACT
+MOV S10 天地石(中)
+#IF
+EQUAL S8
+#SAY
+　　你的建造条件不足，无法进行建造。\\
+　　建造通灵塔需要以下材料：\
+　　<color=green 1个纯度50以上的矿石>\
+　　<color=green 1个中级宝石>即火晶石(中)这类宝石\
+　　<color=green 5块金砖>\
+　　<color=green 3个30点以上的七魄灵石>\
+　　请在包裹中准备好建造通灵塔的材料。\\
+　　<返回/@main>
+#ACT
+break
+#IF
+EQUAL P10 0
+EQUAL P11 0
+EQUAL P12 0
+EQUAL P13 0
+EQUAL P14 0
+#SAY
+　　你的建造条件不足，无法进行建造。\\
+　　建造通灵塔需要以下材料：\
+　　<color=green 1个纯度50以上的矿石>\
+　　<color=green 1个中级宝石>即火晶石(中)这类宝石\
+　　<color=green 5块金砖>\
+　　<color=green 3个30点以上的七魄灵石>\
+　　请在包裹中准备好建造通灵塔的材料。\\
+　　<返回/@main>
+#ACT
+break
+#IF
+SMALL P22 3
+#SAY
+　　你的建造条件不足，无法进行建造。\\
+　　建造通灵塔需要以下材料：\
+　　<color=green 1个纯度50以上的矿石>\
+　　<color=green 1个中级宝石>即火晶石(中)这类宝石\
+　　<color=green 5块金砖>\
+　　<color=green 3个30点以上的七魄灵石>\
+　　请在包裹中准备好建造通灵塔的材料。\\
+　　<返回/@main>
+#ACT
+break
+#ELSEACT
+#IF
+CHECKLEVELEX > 0
+#ACT
+take 金砖 5
+take $STR(S10) 1
+take 天冲灵石 3
+take 灵慧灵石 3
+take 力魄灵石 3
+take 昆仑玄铁 3
+take 草木之灵 3
+take 山海精华 3
+take 中枢灵石 3
+GuildTowerGrade SELF = 1
+CHANGEGuildFlag SELF = 0
+GuildTowerStatus SELF = 1
+GuildTowerRes SELF 5 = 50
+GuildTowerRes SELF 6 = 50
+GuildTowerRes SELF 7 = 30
+GuildTowerRes SELF 8 = 30
+GuildTowerRes SELF 9 = 30
+ADDGUILDLIST ..\QuestDiary\通灵塔\每日名单.txt
+SENDMSG 5 通灵塔建造成功！
+SENDMSG 10 恭喜<$USERNAME>为<$GUILD.NAME>行会成功建立了行会通灵塔，加入有通灵塔的行会将获得行会额外属性加成！
+SENDMSG 0 (*)恭喜{<$USERNAME>}为{<$GUILDNAME>}行会成功建立了行会通灵塔，加入有通灵塔的行会将获得行会额外属性加成！
+GOTO @main
+#IF
+LARGE P10 0
+#ACT
+take 金矿 60
+break
+#IF
+LARGE P11 0
+#ACT
+take 银矿 60
+break
+#IF
+LARGE P12 0
+#ACT
+take 铁矿 60
+break
+#IF
+LARGE P13 0
+#ACT
+take 铜矿 60
+break
+#IF
+LARGE P14 0
+#ACT
+take 黑铁矿石 60
+break
+
+[@jiaruhanghui] FLASH(31)
+    加入行会后，如果行会建造了通灵塔。那么你本体和元\
+神的攻击力、防御力都会获得加成。在通灵塔中捐献了资源\
+还可获得行会银两，银两可开启珍宝阁，获得珍宝。\
+    <Color=orange 各大行会在中州城内、海角村、落霞岛那招募勇士加入行会。>\\
+    <离开/@exit>\
+
+[@jieshao] FLASH(31)
+    <Color=orange 珍宝阁：>每个成员都可使用行会银两开启珍宝阁。宝阁\
+中会产出可以一定范围内产生特殊效果的行会图腾、可以在\
+升级武器和盾牌时保证不碎的护宝符等，开启每阁珍宝阁都\
+需要消耗一定的行会银两(可以通过捐献资源获得行会银两)\\
+    <Color=orange 神工坊：>每个成员都可炼制行会装备，提升装备品质。\
+通灵盾牌的品级越高，盾牌上的属性就越好，并且减免伤害\
+的概率就越高。\\
+    <Color=orange 议事厅：>会长发布行会每日任务，每个成员都可去接取\
+任务，完成任务后可获得高纯度木材，捐献后可获得行会银\
+两。\\\
+    <返回/@main>\
+
+;========================================================================================================================
+
+[@主灵塔] FLASH(20)
+#IF
+SMALL $GUILD.TOWERSTATUS 1
+#SAY
+　　通灵塔行会的中心，给所有的行会成员提供强大的力量\
+层级越高，成员在行会中的职位越高，获得的攻击力、防御\
+力加成也就越高。<Color=orange 但作为行会成员，每天也必须对行会做出>\
+<Color=orange 贡献（如捐献资源）才能享受这些属性加成。>\
+　　目前通灵塔的层级为{Color=GREEN <$GUILD.TOWERGRADE>}级\
+　　<Color=orange 当前由于资源不足，通灵塔中珍宝阁和成员获得的攻击>\
+<Color=orange 力、防御力加成被封闭。捐献资源后，可立刻开始通灵踏。>
+</@HandIn></@OpenTask></@shengongfang></@RecTask></@FinishTask></@FinishTask_1></@FinishTask_2></@FinishTask_3></@OpenZBGrid></@guildlogo&1></@guildlogo&2></@guildlogo&3></@guildlogo&4></@ViewMaintain></@XianLingBei>
+#ELSESAY
+　　通灵塔行会的中心，给所有的行会成员提供强大的力量\
+层级越高，成员在行会中的职位越高，获得的攻击力、防御\
+力加成也就越高。<Color=orange 但作为行会成员，每天也必须对行会做出>\
+<Color=orange 贡献（如捐献资源）才能享受这些属性加成。>\
+　　通灵塔中共有3大建筑，分别是珍宝阁、神工坊和议事\
+厅。通灵塔每天需要资源进行维护，每个行会成员在捐献资\
+源后都可获得行会银两，银两可开启珍宝阁，获得珍品。\
+　　<Color=orange 当通灵塔中的资源达到了饱和时，捐献资源不能再增加>\
+<Color=orange 该资源值，并且只能获得一半的行会银两。>\
+　　目前通灵塔的层级为{Color=GREEN <$GUILD.TOWERGRADE>}级\
+<Color=orange 行会中当前职位：>\
+　　<Color=orange 副会长：><$GUILD.OFFICIALCOUNT(2)>名　　　　　　<Color=orange 长老：><$GUILD.OFFICIALCOUNT(4)>名\
+　　<Color=orange 护法　：><$GUILD.OFFICIALCOUNT(6)>名　　　　　　<Color=orange 堂主：><$GUILD.OFFICIALCOUNT(8)>名\
+　　<Color=orange 香主　：><$GUILD.OFFICIALCOUNT(10)>名　　　　　　<Color=orange 成员：><$GUILD.OFFICIALCOUNT(100)>名
+</@HandIn></@OpenTask></@shengongfang></@RecTask></@FinishTask></@FinishTask_1></@FinishTask_2></@FinishTask_3></@OpenZBGrid></@guildlogo&1></@guildlogo&2></@guildlogo&3></@guildlogo&4></@ViewMaintain></@XianLingBei>
+
+[@HandIn] FLASH(28)
+#IF
+ISGUILDMASTER
+#SAY
+　　行会会长　{Color=orange <$USERNAME>}，请为行会建设贡献自己的一份力量！\
+行会每天维护需要以下资源:\
+　　<Color=orange 高品质矿石>\
+　　<Color=orange 高品质木材>\
+　　<Color=orange 金砖、金条>\
+　　<Color=orange 宝石>\
+　　<Color=orange 七魄灵石>\
+　　每天会自动扣取资源用来维护通灵塔，资源一旦不足，\
+灵塔的所有功能都将被封闭。捐献资源后可获得行会银两，\
+银两可开启珍宝。退出行会后，行会银两将被清空。\
+　　<Color=orange 当通灵塔中的资源达到了饱和时，捐献资源不能再增加>\
+<Color=orange 该资源值，并且只能获得一半的行会银两。>\
+　　你目前拥有行会银两：{Color=orange <$GUILDGOLD>}两
+</@main></@shengongfang></@RecTask></@OpenTask></@OpenZBGrid></@ViewMaintain></@XianLingBei>
+#ELSESAY
+　　行会成员　{Color=orange <$USERNAME>}，请为行会建设贡献自己的一份力量！\
+行会每天维护需要以下资源:\
+　　<Color=orange 高品质矿石>\
+　　<Color=orange 高品质木材>\
+　　<Color=orange 金砖、金条>\
+　　<Color=orange 宝石>\
+　　<Color=orange 七魄灵石>\
+　　每天会自动扣取资源用来维护通灵塔，资源一旦不足，\
+灵塔的所有功能都将被封闭。捐献资源后可获得行会银两，\
+银两可开启珍宝。退出行会后，行会银两将被清空。\
+　　<Color=orange 当通灵塔中的资源达到了饱和时，捐献资源不能再增加>\
+<Color=orange 该资源值，并且只能获得一半的行会银两。>\
+　　你目前拥有行会银两：{Color=orange <$GUILDGOLD>}两
+</@main></@shengongfang></@RecTask></@OpenTask></@OpenZBGrid></@ViewMaintain></@XianLingBei>
+
+[@viewmaintain] FLASH(100)
+\\\\\\\\\
+　　矿石资源　 <$GUILD.OREMAX>点　　　　 木材资源 　<$GUILD.GEMMAX>点\
+　　宝石资源　 <$GUILD.WOODMAX>点　　　　 金币资源 　<$GUILD.BARMAX>点\
+　　灵石资源　 <$GUILD.ROCKMAX>点
+</@main></@shengongfang></@RecTask></@OpenTask></@OpenZBGrid></@XianLingBei>\
+
+;捐献=========================================================================================================================================
+
+[@Contribute]
+#IF
+HAVEGUILD
+#ACT
+MOV P2 0
+MOV P3 0
+MOV P4 0
+MOV S43 
+MOV S40 $ITEMINFO[$PARAM(0)].NAME
+MOV S41 $ITEMINFO[$PARAM(1)].NAME
+MOV S42 $ITEMINFO[$PARAM(2)].NAME
+MOV S44 $PARAM(0)
+MOV S45 $PARAM(1)
+MOV S46 $PARAM(2)
+#ELSEACT
+SENDMSG 5 你还没有行会，无法捐献，你想作弊不成？
+break
+#IF
+!EQUAL S40
+CHECKVARLIST $STR(S40) ..\QuestDiary\通灵塔\行会资源\行会资源.txt
+#ACT
+MOV P2 1
+#IF
+!EQUAL S40
+!CHECKVARLIST $STR(S40) ..\QuestDiary\通灵塔\行会资源\行会资源.txt
+#ACT
+INC S43 你所捐献的
+INC S43 $STR(S40)
+INC S43 不属于行会资源，无法捐献!
+#IF
+!EQUAL S41
+CHECKVARLIST $STR(S41) ..\QuestDiary\通灵塔\行会资源\行会资源.txt
+#ACT
+MOV P3 1
+#IF
+!EQUAL S41
+!CHECKVARLIST $STR(S41) ..\QuestDiary\通灵塔\行会资源\行会资源.txt
+#ACT
+INC S43 你所捐献的
+INC S43 $STR(S41)
+INC S43 不属于行会资源，无法捐献!
+#IF
+!EQUAL S42
+CHECKVARLIST $STR(S42) ..\QuestDiary\通灵塔\行会资源\行会资源.txt
+#ACT
+MOV P4 1
+#IF
+!EQUAL S42
+!CHECKVARLIST $STR(S42) ..\QuestDiary\通灵塔\行会资源\行会资源.txt
+#ACT
+INC S43 你所捐献的
+INC S43 $STR(S42)
+INC S43 不属于行会资源，无法捐献!
+#IF
+EQUAL P2 1
+CHECKVARLIST $STR(S40) ..\QuestDiary\通灵塔\行会资源\行会资源.txt
+#ACT
+GOTO @资源回收1
+#IF
+EQUAL P3 1
+CHECKVARLIST $STR(S41) ..\QuestDiary\通灵塔\行会资源\行会资源.txt
+#ACT
+GOTO @资源回收2
+#IF
+EQUAL P4 1
+CHECKVARLIST $STR(S42) ..\QuestDiary\通灵塔\行会资源\行会资源.txt
+#ACT
+GOTO @资源回收3
+#IF
+EQUAL P2 0
+EQUAL P3 0
+EQUAL P4 0
+#ACT
+SENDMSG 5 <$STR(S43)>
+break
+
+[@资源回收1]
+#IF
+EQUAL S40 行会资源包
+#ACT
+TAKEM $STR(S44)
+TAKETOWERITEM $STR(S44)
+GuildGold + 50
+SENDMSG 5 资源捐献成功，你获得了50行会银两！
+GuildTowerRes SELF 0 + 10
+GuildTowerRes SELF 1 + 10
+GuildTowerRes SELF 2 + 10
+GuildTowerRes SELF 3 + 10
+GuildTowerRes SELF 4 + 10
+MOV P44 50
+GOTO @检测每日维护
+break
+#IF
+EQUAL S40 行会资源包(小)
+#ACT
+TAKEM $STR(S44)
+TAKETOWERITEM $STR(S44)
+GuildGold + 5
+SENDMSG 5 资源捐献成功，你获得了5行会银两！
+GuildTowerRes SELF 0 + 1
+GuildTowerRes SELF 1 + 1
+GuildTowerRes SELF 2 + 1
+GuildTowerRes SELF 3 + 1
+GuildTowerRes SELF 4 + 1
+MOV P44 5
+GOTO @检测每日维护
+break
+#IF
+EQUAL S40 金条
+#ACT
+TAKEM $STR(S44)
+TAKETOWERITEM $STR(S44)
+GuildGold + 3
+SENDMSG 5 资源捐献成功，你获得了3行会银两！
+GuildTowerRes SELF 3 + 3
+MOV P44 3
+GOTO @检测每日维护
+break
+#IF
+EQUAL S40 金砖
+#ACT
+TAKEM $STR(S44)
+TAKETOWERITEM $STR(S44)
+GuildGold + 15
+SENDMSG 5 资源捐献成功，你获得了15行会银两！
+GuildTowerRes SELF 3 + 15
+MOV P44 15
+GOTO @检测每日维护
+break
+#IF
+EQUAL S40 木材
+#ACT
+MOV P50 $ITEMINFO[$PARAM(0)].DURA
+GOTO @检测木材纯度1
+break
+#IF
+CHECKVARLIST $STR(S40) ..\QuestDiary\通灵塔\行会资源\矿石资源.txt
+#ACT
+MOV P50 $ITEMINFO[$PARAM(0)].DURA
+GOTO @检测矿石纯度1
+break
+#IF
+CHECKVARLIST $STR(S40) ..\QuestDiary\通灵塔\行会资源\灵石资源.txt
+#ACT
+MOV P50 $ITEMINFO[$PARAM(0)].DURA
+GOTO @检测灵石纯度1
+break
+#IF
+CHECKVARLIST $STR(S40) ..\QuestDiary\通灵塔\行会资源\宝石资源.txt
+#ACT
+GOTO @检测宝石类型1
+break
+
+[@检测木材纯度1]
+#IF
+SMALL P50 30000
+#ACT
+SENDMSG 5 你所捐献的木材纯度不足30点，无法捐献!
+break
+#IF
+SMALL P50 40000
+#ACT
+TAKEM $STR(S44)
+TAKETOWERITEM $STR(S44)
+GuildGold + 1
+SENDMSG 5 资源捐献成功，你获得了1行会银两！
+GuildTowerRes SELF 1 + 1
+MOV P44 1
+GOTO @检测每日维护
+break
+#IF
+SMALL P50 50000
+#ACT
+TAKEM $STR(S44)
+TAKETOWERITEM $STR(S44)
+GuildGold + 10
+SENDMSG 5 资源捐献成功，你获得了10行会银两！
+GuildTowerRes SELF 1 + 10
+MOV P44 10
+GOTO @检测每日维护
+break
+#ELSEACT
+TAKEM $STR(S44)
+TAKETOWERITEM $STR(S44)
+GuildGold + 25
+SENDMSG 5 资源捐献成功，你获得了25行会银两！
+GuildTowerRes SELF 1 + 25
+MOV P44 25
+GOTO @检测每日维护
+break
+
+[@检测矿石纯度1]
+#IF
+EQUAL S40 矿石碎末
+#ACT
+MOV P50 $ITEMINFO[$PARAM(0)].DURAMAX
+GOTO @矿石碎末检查1
+break
+#IF
+SMALL P50 30000
+#ACT
+SENDMSG 5 你所捐献的矿石纯度不足30点，无法捐献!
+break
+#IF
+SMALL P50 40000
+#ACT
+TAKEM $STR(S44)
+TAKETOWERITEM $STR(S44)
+GuildGold + 1
+SENDMSG 5 资源捐献成功，你获得了1行会银两！
+GuildTowerRes SELF 0 + 1
+MOV P44 1
+GOTO @检测每日维护
+break
+#IF
+SMALL P50 50000
+#ACT
+TAKEM $STR(S44)
+TAKETOWERITEM $STR(S44)
+GuildGold + 10
+SENDMSG 5 资源捐献成功，你获得了10行会银两！
+GuildTowerRes SELF 0 + 10
+MOV P44 10
+GOTO @检测每日维护
+break
+#ELSEACT
+TAKEM $STR(S44)
+TAKETOWERITEM $STR(S44)
+GuildGold + 25
+SENDMSG 5 资源捐献成功，你获得了25行会银两！
+GuildTowerRes SELF 0 + 25
+MOV P44 25
+GOTO @检测每日维护
+break
+
+[@矿石碎末检查1]
+#IF
+SMALL P50 10
+#ACT
+SENDMSG 5 你所捐献的矿石碎末数量不足10个，无法捐献!
+break
+#ELSEACT
+MOV P2 $STR(P50)
+DIV P2 10
+TAKEM $STR(S44)
+TAKETOWERITEM $STR(S44)
+GuildGold + $STR(P2)
+SENDMSG 5 资源捐献成功，你获得了<$STR(P2)>行会银两！
+GuildTowerRes SELF 0 + $STR(P2)
+MOV P44 $STR(P2)
+GOTO @检测每日维护
+break
+
+[@检测灵石纯度1]
+#IF
+EQUAL S40 灵石碎末
+#ACT
+MOV P50 $ITEMINFO[$PARAM(0)].DURAMAX
+GOTO @灵石碎末检查1
+break
+#IF
+SMALL P50 1500
+#ACT
+SENDMSG 5 你所捐献的灵石灵力不足2点，无法捐献!
+break
+#ELSEACT
+MOV P2 $STR(P50)
+DIV P2 1000
+MOV P3 $STR(P2)
+DIV P3 2
+TAKEM $STR(S44)
+TAKETOWERITEM $STR(S44)
+GuildGold + $STR(P3)
+SENDMSG 5 资源捐献成功，你获得了<$STR(P3)>行会银两！
+GuildTowerRes SELF 4 + $STR(P2)
+MOV P44 $STR(P3)
+GOTO @检测每日维护
+break
+
+[@灵石碎末检查1]
+#IF
+SMALL P50 10
+#ACT
+SENDMSG 5 你所捐献的灵石碎末数量不足10个，无法捐献!
+break
+#ELSEACT
+MOV P2 $STR(P50)
+DIV P2 10
+TAKEM $STR(S44)
+TAKETOWERITEM $STR(S44)
+GuildGold + $STR(P2)
+SENDMSG 5 资源捐献成功，你获得了<$STR(P2)>行会银两！
+GuildTowerRes SELF 4 + $STR(P2)
+MOV P44 $STR(P2)
+GOTO @检测每日维护
+break
+
+[@检测宝石类型1]
+#IF
+EQUAL S40 宝石碎末
+#ACT
+MOV P50 $ITEMINFO[$PARAM(0)].DURAMAX
+#ELSEACT
+LoadExVar S15 宝石价格 $STR(S40) ..\QuestDiary\通灵塔\行会资源\宝石价格.txt
+MOV P1 $STR(S15)
+TAKEM $STR(S44)
+TAKETOWERITEM $STR(S44)
+GuildGold + $STR(P1)
+SENDMSG 5 资源捐献成功，你获得了<$STR(P1)>行会银两！
+GuildTowerRes SELF 2 + $STR(P1)
+MOV P44 $STR(P1)
+GOTO @检测每日维护
+break
+#IF
+SMALL P50 10
+#ACT
+SENDMSG 5 你所捐献的宝石碎末数量不足10个，无法捐献!
+break
+#ELSEACT
+MOV P2 $STR(P50)
+DIV P2 10
+TAKEM $STR(S44)
+TAKETOWERITEM $STR(S44)
+GuildGold + $STR(P2)
+SENDMSG 5 资源捐献成功，你获得了<$STR(P2)>行会银两！
+GuildTowerRes SELF 2 + $STR(P2)
+MOV P44 $STR(P2)
+GOTO @检测每日维护
+break
+
+;//=================================================================================================
+
+[@资源回收2]
+#IF
+EQUAL S41 行会资源包
+#ACT
+TAKEM $STR(S45)
+TAKETOWERITEM $STR(S45)
+GuildGold + 50
+SENDMSG 5 资源捐献成功，你获得了50行会银两！
+GuildTowerRes SELF 0 + 10
+GuildTowerRes SELF 1 + 10
+GuildTowerRes SELF 2 + 10
+GuildTowerRes SELF 3 + 10
+GuildTowerRes SELF 4 + 10
+MOV P44 50
+GOTO @检测每日维护
+break
+#IF
+EQUAL S41 行会资源包(小)
+#ACT
+TAKEM $STR(S45)
+TAKETOWERITEM $STR(S45)
+GuildGold + 5
+SENDMSG 5 资源捐献成功，你获得了5行会银两！
+GuildTowerRes SELF 0 + 1
+GuildTowerRes SELF 1 + 1
+GuildTowerRes SELF 2 + 1
+GuildTowerRes SELF 3 + 1
+GuildTowerRes SELF 4 + 1
+MOV P44 5
+GOTO @检测每日维护
+break
+#IF
+EQUAL S41 金条
+#ACT
+TAKEM $STR(S45)
+TAKETOWERITEM $STR(S45)
+GuildGold + 3
+SENDMSG 5 资源捐献成功，你获得了3行会银两！
+GuildTowerRes SELF 2 + 3
+MOV P44 3
+GOTO @检测每日维护
+break
+#IF
+EQUAL S41 金砖
+#ACT
+TAKEM $STR(S45)
+TAKETOWERITEM $STR(S45)
+GuildGold + 15
+SENDMSG 5 资源捐献成功，你获得了15行会银两！
+GuildTowerRes SELF 3 + 15
+MOV P44 15
+GOTO @检测每日维护
+break
+#IF
+EQUAL S41 木材
+#ACT
+MOV P50 $ITEMINFO[$PARAM(1)].DURA
+GOTO @检测木材纯度2
+break
+#IF
+CHECKVARLIST $STR(S41) ..\QuestDiary\通灵塔\行会资源\矿石资源.txt
+#ACT
+MOV P50 $ITEMINFO[$PARAM(1)].DURA
+GOTO @检测矿石纯度2
+break
+#IF
+CHECKVARLIST $STR(S41) ..\QuestDiary\通灵塔\行会资源\灵石资源.txt
+#ACT
+MOV P50 $ITEMINFO[$PARAM(1)].DURA
+GOTO @检测灵石纯度2
+break
+#IF
+CHECKVARLIST $STR(S41) ..\QuestDiary\通灵塔\行会资源\宝石资源.txt
+#ACT
+GOTO @检测宝石类型2
+break
+
+[@检测木材纯度2]
+#IF
+SMALL P50 30000
+#ACT
+SENDMSG 5 你所捐献的木材纯度不足30点，无法捐献!
+break
+#IF
+SMALL P50 40000
+#ACT
+TAKEM $STR(S45)
+TAKETOWERITEM $STR(S45)
+GuildGold + 1
+SENDMSG 5 资源捐献成功，你获得了1行会银两！
+GuildTowerRes SELF 1 + 1
+MOV P44 1
+GOTO @检测每日维护
+break
+#IF
+SMALL P50 50000
+#ACT
+TAKEM $STR(S45)
+TAKETOWERITEM $STR(S45)
+GuildGold + 10
+SENDMSG 5 资源捐献成功，你获得了10行会银两！
+GuildTowerRes SELF 1 + 10
+MOV P44 10
+GOTO @检测每日维护
+break
+#ELSEACT
+TAKEM $STR(S45)
+TAKETOWERITEM $STR(S45)
+GuildGold + 25
+SENDMSG 5 资源捐献成功，你获得了25行会银两！
+GuildTowerRes SELF 1 + 25
+MOV P44 25
+GOTO @检测每日维护
+break
+
+[@检测矿石纯度2]
+#IF
+EQUAL S41 矿石碎末
+#ACT
+MOV P50 $ITEMINFO[$PARAM(1)].DURAMAX
+GOTO @矿石碎末检查2
+break
+#IF
+SMALL P50 30000
+#ACT
+SENDMSG 5 你所捐献的矿石纯度不足30点，无法捐献!
+break
+#IF
+SMALL P50 40000
+#ACT
+TAKEM $STR(S45)
+TAKETOWERITEM $STR(S45)
+GuildGold + 1
+SENDMSG 5 资源捐献成功，你获得了1行会银两！
+GuildTowerRes SELF 0 + 1
+MOV P44 1
+GOTO @检测每日维护
+break
+#IF
+SMALL P50 50000
+#ACT
+TAKEM $STR(S45)
+TAKETOWERITEM $STR(S45)
+GuildGold + 10
+SENDMSG 5 资源捐献成功，你获得了10行会银两！
+GuildTowerRes SELF 0 + 10
+MOV P44 10
+GOTO @检测每日维护
+break
+#ELSEACT
+TAKEM $STR(S45)
+TAKETOWERITEM $STR(S45)
+GuildGold + 25
+SENDMSG 5 资源捐献成功，你获得了25行会银两！
+GuildTowerRes SELF 0 + 25
+MOV P44 25
+GOTO @检测每日维护
+break
+
+[@矿石碎末检查2]
+#IF
+SMALL P50 10
+#ACT
+SENDMSG 5 你所捐献的矿石碎末数量不足10个，无法捐献!
+break
+#ELSEACT
+MOV P2 $STR(P50)
+DIV P2 10
+TAKEM $STR(S45)
+TAKETOWERITEM $STR(S45)
+GuildGold + $STR(P2)
+SENDMSG 5 资源捐献成功，你获得了<$STR(P2)>行会银两！
+GuildTowerRes SELF 0 + $STR(P2)
+MOV P44 $STR(P2)
+GOTO @检测每日维护
+break
+
+[@检测灵石纯度2]
+#IF
+EQUAL S41 灵石碎末
+#ACT
+MOV P50 $ITEMINFO[$PARAM(1)].DURAMAX
+GOTO @灵石碎末检查2
+break
+#IF
+SMALL P50 1500
+#ACT
+SENDMSG 5 你所捐献的灵石灵力不足2点，无法捐献!
+break
+#ELSEACT
+MOV P2 $STR(P50)
+DIV P2 1000
+MOV P3 $STR(P2)
+DIV P3 2
+TAKEM $STR(S45)
+TAKETOWERITEM $STR(S45)
+GuildGold + $STR(P3)
+SENDMSG 5 资源捐献成功，你获得了<$STR(P3)>行会银两！
+GuildTowerRes SELF 4 + $STR(P2)
+MOV P44 $STR(P3)
+GOTO @检测每日维护
+break
+
+[@灵石碎末检查2]
+#IF
+SMALL P50 10
+#ACT
+SENDMSG 5 你所捐献的灵石碎末数量不足10个，无法捐献!
+break
+#ELSEACT
+MOV P2 $STR(P50)
+DIV P2 10
+TAKEM $STR(S45)
+TAKETOWERITEM $STR(S45)
+GuildGold + $STR(P2)
+SENDMSG 5 资源捐献成功，你获得了<$STR(P2)>行会银两！
+GuildTowerRes SELF 4 + $STR(P2)
+MOV P44 $STR(P2)
+GOTO @检测每日维护
+break
+
+[@检测宝石类型2]
+#IF
+EQUAL S41 宝石碎末
+#ACT
+MOV P50 $ITEMINFO[$PARAM(1)].DURAMAX
+#ELSEACT
+LoadExVar S15 宝石价格 $STR(S41) ..\QuestDiary\通灵塔\行会资源\宝石价格.txt
+MOV P1 $STR(S15)
+TAKEM $STR(S45)
+TAKETOWERITEM $STR(S45)
+GuildGold + $STR(P1)
+SENDMSG 5 资源捐献成功，你获得了<$STR(P1)>行会银两！
+GuildTowerRes SELF 2 + $STR(P1)
+MOV P44 $STR(P1)
+GOTO @检测每日维护
+break
+#IF
+SMALL P50 10
+#ACT
+SENDMSG 5 你所捐献的宝石碎末数量不足10个，无法捐献!
+break
+#ELSEACT
+MOV P2 $STR(P50)
+DIV P2 10
+TAKEM $STR(S45)
+TAKETOWERITEM $STR(S45)
+GuildGold + $STR(P2)
+SENDMSG 5 资源捐献成功，你获得了<$STR(P2)>行会银两！
+GuildTowerRes SELF 2 + $STR(P2)
+MOV P44 $STR(P2)
+GOTO @检测每日维护
+break
+
+;//==============================================================================================
+
+[@资源回收3]
+#IF
+HAVEGUILD
+#ACT
+#ELSEACT
+SENDMSG 5 你还没有行会，无法捐献资源
+break
+#IF
+EQUAL S42 行会资源包
+#ACT
+TAKEM $STR(S46)
+TAKETOWERITEM $STR(S46)
+GuildGold + 50
+SENDMSG 5 资源捐献成功，你获得了50行会银两！
+GuildTowerRes SELF 0 + 10
+GuildTowerRes SELF 1 + 10
+GuildTowerRes SELF 2 + 10
+GuildTowerRes SELF 3 + 10
+GuildTowerRes SELF 4 + 10
+MOV P44 50
+GOTO @检测每日维护
+break
+#IF
+EQUAL S42 行会资源包(小)
+#ACT
+TAKEM $STR(S46)
+TAKETOWERITEM $STR(S46)
+GuildGold + 5
+SENDMSG 5 资源捐献成功，你获得了5行会银两！
+GuildTowerRes SELF 0 + 1
+GuildTowerRes SELF 1 + 1
+GuildTowerRes SELF 2 + 1
+GuildTowerRes SELF 3 + 1
+GuildTowerRes SELF 4 + 1
+MOV P44 5
+GOTO @检测每日维护
+break
+#IF
+EQUAL S42 金条
+#ACT
+TAKEM $STR(S46)
+TAKETOWERITEM $STR(S46)
+GuildGold + 3
+SENDMSG 5 资源捐献成功，你获得了3行会银两！
+GuildTowerRes SELF 3 + 3
+MOV P44 3
+GOTO @检测每日维护
+break
+#IF
+EQUAL S42 金砖
+#ACT
+TAKEM $STR(S46)
+TAKETOWERITEM $STR(S46)
+GuildGold + 15
+SENDMSG 5 资源捐献成功，你获得了15行会银两！
+GuildTowerRes SELF 3 + 15
+MOV P44 15
+GOTO @检测每日维护
+break
+#IF
+EQUAL S42 木材
+#ACT
+MOV P50 $ITEMINFO[$PARAM(2)].DURA
+GOTO @检测木材纯度3
+break
+#IF
+CHECKVARLIST $STR(S42) ..\QuestDiary\通灵塔\行会资源\矿石资源.txt
+#ACT
+MOV P50 $ITEMINFO[$PARAM(2)].DURA
+GOTO @检测矿石纯度3
+break
+#IF
+CHECKVARLIST $STR(S42) ..\QuestDiary\通灵塔\行会资源\灵石资源.txt
+#ACT
+MOV P50 $ITEMINFO[$PARAM(2)].DURA
+GOTO @检测灵石纯度3
+break
+#IF
+CHECKVARLIST $STR(S42) ..\QuestDiary\通灵塔\行会资源\宝石资源.txt
+#ACT
+GOTO @检测宝石类型3
+break
+
+[@检测木材纯度3]
+#IF
+SMALL P50 30000
+#ACT
+SENDMSG 5 你所捐献的木材纯度不足30点，无法捐献!
+break
+#IF
+SMALL P50 40000
+#ACT
+TAKEM $STR(S46)
+TAKETOWERITEM $STR(S46)
+GuildGold + 1
+SENDMSG 5 资源捐献成功，你获得了1行会银两！
+GuildTowerRes SELF 1 + 1
+MOV P44 1
+GOTO @检测每日维护
+break
+#IF
+SMALL P50 50000
+#ACT
+TAKEM $STR(S46)
+TAKETOWERITEM $STR(S46)
+GuildGold + 10
+SENDMSG 5 资源捐献成功，你获得了10行会银两！
+GuildTowerRes SELF 1 + 10
+MOV P44 10
+GOTO @检测每日维护
+break
+#ELSEACT
+TAKEM $STR(S46)
+TAKETOWERITEM $STR(S46)
+GuildGold + 25
+SENDMSG 5 资源捐献成功，你获得了25行会银两！
+GuildTowerRes SELF 1 + 25
+MOV P44 25
+GOTO @检测每日维护
+break
+
+[@检测矿石纯度3]
+#IF
+EQUAL S42 矿石碎末
+#ACT
+MOV P50 $ITEMINFO[$PARAM(2)].DURAMAX
+GOTO @矿石碎末检查3
+break
+#IF
+SMALL P50 30000
+#ACT
+SENDMSG 5 你所捐献的矿石纯度不足30点，无法捐献!
+break
+#IF
+SMALL P50 40000
+#ACT
+TAKEM $STR(S46)
+TAKETOWERITEM $STR(S46)
+GuildGold + 1
+SENDMSG 5 资源捐献成功，你获得了1行会银两！
+GuildTowerRes SELF 0 + 1
+MOV P44 1
+GOTO @检测每日维护
+break
+#IF
+SMALL P50 50000
+#ACT
+TAKEM $STR(S46)
+TAKETOWERITEM $STR(S46)
+GuildGold + 10
+SENDMSG 5 资源捐献成功，你获得了10行会银两！
+GuildTowerRes SELF 0 + 10
+MOV P44 10
+GOTO @检测每日维护
+break
+#ELSEACT
+TAKEM $STR(S46)
+TAKETOWERITEM $STR(S46)
+GuildGold + 25
+SENDMSG 5 资源捐献成功，你获得了25行会银两！
+GuildTowerRes SELF 0 + 25
+MOV P44 25
+GOTO @检测每日维护
+break
+
+[@矿石碎末检查3]
+#IF
+SMALL P50 10
+#ACT
+SENDMSG 5 你所捐献的矿石碎末数量不足10个，无法捐献!
+break
+#ELSEACT
+MOV P2 $STR(P50)
+DIV P2 10
+TAKEM $STR(S46)
+TAKETOWERITEM $STR(S46)
+GuildGold + $STR(P2)
+SENDMSG 5 资源捐献成功，你获得了<$STR(P2)>行会银两！
+GuildTowerRes SELF 0 + $STR(P2)
+MOV P44 $STR(P2)
+GOTO @检测每日维护
+break
+
+[@检测灵石纯度3]
+#IF
+EQUAL S42 灵石碎末
+#ACT
+MOV P50 $ITEMINFO[$PARAM(2)].DURAMAX
+GOTO @灵石碎末检查3
+break
+#IF
+SMALL P50 1500
+#ACT
+SENDMSG 5 你所捐献的灵石灵力不足2点，无法捐献!
+break
+#ELSEACT
+MOV P2 $STR(P50)
+DIV P2 1000
+MOV P3 $STR(P2)
+DIV P3 2
+TAKEM $STR(S46)
+TAKETOWERITEM $STR(S46)
+GuildGold + $STR(P3)
+SENDMSG 5 资源捐献成功，你获得了<$STR(P3)>行会银两！
+GuildTowerRes SELF 4 + $STR(P2)
+MOV P44 $STR(P3)
+GOTO @检测每日维护
+break
+
+[@灵石碎末检查3]
+#IF
+SMALL P50 10
+#ACT
+SENDMSG 5 你所捐献的灵石碎末数量不足10个，无法捐献!
+break
+#ELSEACT
+MOV P2 $STR(P50)
+DIV P2 10
+TAKEM $STR(S46)
+TAKETOWERITEM $STR(S46)
+GuildGold + $STR(P2)
+SENDMSG 5 资源捐献成功，你获得了<$STR(P2)>行会银两！
+GuildTowerRes SELF 4 + $STR(P2)
+MOV P44 $STR(P2)
+GOTO @检测每日维护
+break
+
+[@检测宝石类型3]
+#IF
+EQUAL S42 宝石碎末
+#ACT
+MOV P50 $ITEMINFO[$PARAM(2)].DURAMAX
+#ELSEACT
+LoadExVar S15 宝石价格 $STR(S42) ..\QuestDiary\通灵塔\行会资源\宝石价格.txt
+MOV P1 $STR(S15)
+TAKEM $STR(S46)
+TAKETOWERITEM $STR(S46)
+GuildGold + $STR(P1)
+SENDMSG 5 资源捐献成功，你获得了<$STR(P1)>行会银两！
+GuildTowerRes SELF 2 + $STR(P1)
+MOV P44 $STR(P1)
+GOTO @检测每日维护
+break
+#IF
+SMALL P50 10
+#ACT
+SENDMSG 5 你所捐献的宝石碎末数量不足10个，无法捐献!
+break
+#ELSEACT
+MOV P2 $STR(P50)
+DIV P2 10
+TAKEM $STR(S46)
+TAKETOWERITEM $STR(S46)
+GuildGold + $STR(P2)
+SENDMSG 5 资源捐献成功，你获得了<$STR(P2)>行会银两！
+GuildTowerRes SELF 2 + $STR(P2)
+MOV P44 $STR(P2)
+GOTO @检测每日维护
+break
+
+;//==============================================================================================
+
+[@检测每日维护]
+#IF
+HAVEGUILD
+#ACT
+MULT P44 40000
+GetExp $STR(P44)
+#ELSEACT
+SENDMSG 5 你还没有行会，无法捐献资源
+break
+#IF
+EQUAL $PROFFER 0
+#ACT
+SetProffer = 1
+CALCVAR HUMAN 日46 = $DATE
+SAVEVAR HUMAN 日46 ..\QUESTDIARY\数据文件\个人变量\<$USERNAME>.txt
+SENDMSG 5 恭喜你今日为行会捐献资源做出贡献，你的通灵塔附加属性开启
+break
+#IF
+EQUAL P44 2000000
+#ACT
+SENDMSG 10 <$USERNAME>向<$GUILD.NAME>行会捐献资源，获得了2000000经验奖励。
+#IF
+LARGE $GUILD.TOWERSTATUS 0
+#ACT
+break
+#IF
+SMALL $GUILD.ORE $GUILD.OREMAX
+SMALL $GUILD.WOOD $GUILD.WOODMAX
+SMALL $GUILD.GEM $GUILD.GEMMAX
+SMALL $GUILD.BAR $GUILD.BARMAX
+SMALL $GUILD.ROCK $GUILD.ROCKMAX
+#ACT
+#ELSEACT
+GuildTowerRes SELF 0 - $GUILD.OREMAX
+GuildTowerRes SELF 1 - $GUILD.GEMMAX
+GuildTowerRes SELF 2 - $GUILD.WOODMAX
+GuildTowerRes SELF 3 - $GUILD.BARMAX
+GuildTowerRes SELF 4 - $GUILD.ROCKMAX
+GuildTowerStatus SELF = 1
+ADDGUILDLIST ..\QuestDiary\通灵塔\每日名单.txt
+SENDMSG 5 行会通灵塔恢复正常运作
+break
+
+;//升级通灵塔================================================================================================
+
+[@opentask] FLASH(31)
+#IF
+!ISGUILDMASTER
+#ACT
+messagebox 你不是会长不能升级建筑
+break
+#IF
+SMALL $GUILD.TOWERSTATUS 1
+#SAY
+　　当前通灵塔资源已不足以维持日常消耗，无法进行升级。\
+#ACT
+break
+#ELSEACT
+GOTO @opentask1
+break
+
+[@opentask1] FLASH(30)
+#IF
+!ISGUILDMASTER
+#ACT
+messagebox 你不是会长不能升级建筑
+break
+#IF
+EQUAL $GUILD.TOWERGRADE 10
+#ACT
+messagebox 当前通灵塔已经升级到最高等级10级，不能再升级了
+break
+#IF
+SMALL $GUILD.TOWERGRADE 2
+#ACT
+MOV P31 150
+MOV P32 150
+MOV P33 20
+#IF
+EQUAL $GUILD.TOWERGRADE 2
+#ACT
+MOV P31 200
+MOV P32 200
+MOV P33 30
+#IF
+EQUAL $GUILD.TOWERGRADE 3
+#ACT
+MOV P31 250
+MOV P32 250
+MOV P33 40
+#IF
+EQUAL $GUILD.TOWERGRADE 4
+#ACT
+MOV P31 300
+MOV P32 300
+MOV P33 50
+#IF
+EQUAL $GUILD.TOWERGRADE 5
+#ACT
+MOV P31 600
+MOV P32 600
+MOV P33 60
+#IF
+EQUAL $GUILD.TOWERGRADE 6
+#ACT
+MOV P31 900
+MOV P32 1000
+MOV P33 70
+#IF
+EQUAL $GUILD.TOWERGRADE 7
+#ACT
+MOV P31 1500
+MOV P32 1500
+MOV P33 80
+#IF
+EQUAL $GUILD.TOWERGRADE 8
+#ACT
+MOV P31 2000
+MOV P32 2000
+MOV P33 90
+#IF
+EQUAL $GUILD.TOWERGRADE 9
+#ACT
+MOV P31 3000
+MOV P32 3000
+MOV P33 100
+#IF
+CHECKLEVELEX > 0
+#ACT
+#ELSEACT
+break
+#IF
+ISGUILDMASTER
+#SAY
+　　行会通灵塔共可建造10个层级，层级越高，功能就越多，\
+并且行会成员可获得的攻击力和防御力加成。行会通灵塔当前\
+为{Color=GREEN <$GUILD.TOWERGRADE>}级。\
+<Color=orange 升级到下一层级需要消耗如下资源:>\
+　　矿石资源　 <$STR(P31)>点　　　木材资源　 <$STR(P32)>点\
+　　宝石资源　 <$STR(P33)>点　　　金币资源　 <$STR(P33)>点\
+　　灵石资源　 <$STR(P33)>点\
+<Color=orange 升级后可新增的利益:>\
+　　提高行会所有成员攻击、防御属性加成
+</@HandIn></@OpenTask></@shengongfang></@RecTask></@FinishTask></@FinishTask_1></@FinishTask_2></@FinishTask_3></@OpenZBGrid></@guildlogo&1></@guildlogo&2></@guildlogo&3></@guildlogo&4></@ViewMaintain></@XianLingBei></@starttask>
+
+[@starttask] FLASH(31)
+#IF
+ISGUILDMASTER
+#ACT
+MOV S5 
+#ELSEACT
+messagebox 你不是会长不能升级建筑
+break
+#IF
+LARGE $GUILD.TOWERGRADE 9
+#ACT
+messagebox 当前通灵塔已经升级到最高等级10级，不能再升级了
+break
+#IF
+SMALL $GUILD.TOWERGRADE 2
+#ACT
+MOV P31 150
+MOV P32 150
+MOV P33 20
+#IF
+EQUAL $GUILD.TOWERGRADE 2
+#ACT
+MOV P31 200
+MOV P32 200
+MOV P33 30
+#IF
+EQUAL $GUILD.TOWERGRADE 3
+#ACT
+MOV P31 250
+MOV P32 250
+MOV P33 40
+#IF
+EQUAL $GUILD.TOWERGRADE 4
+#ACT
+MOV P31 300
+MOV P32 300
+MOV P33 50
+#IF
+EQUAL $GUILD.TOWERGRADE 5
+#ACT
+MOV P31 600
+MOV P32 600
+MOV P33 60
+#IF
+EQUAL $GUILD.TOWERGRADE 6
+#ACT
+MOV P31 900
+MOV P32 1000
+MOV P33 70
+#IF
+EQUAL $GUILD.TOWERGRADE 7
+#ACT
+MOV P31 1500
+MOV P32 1500
+MOV P33 80
+#IF
+EQUAL $GUILD.TOWERGRADE 8
+#ACT
+MOV P31 2000
+MOV P32 2000
+MOV P33 90
+#IF
+EQUAL $GUILD.TOWERGRADE 9
+#ACT
+MOV P31 3000
+MOV P32 3000
+MOV P33 100
+#IF
+SMALL $GUILD.ORE $STR(P31)
+#ACT
+MOV P0 $STR(P31)
+DEC P0 $GUILD.ORE
+INC S5 $STR(P0)
+INC S5 点矿石资源
+#IF
+SMALL $GUILD.GEM $STR(P32)
+#ACT
+MOV P0 $STR(P32)
+DEC P0 $GUILD.GEM
+INC S5 、
+INC S5 $STR(P0)
+INC S5 点木材资源
+#IF
+SMALL $GUILD.WOOD $STR(P33)
+#ACT
+MOV P0 $STR(P33)
+DEC P0 $GUILD.WOOD
+INC S5 、
+INC S5 $STR(P0)
+INC S5 点宝石资源
+#IF
+SMALL $GUILD.BAR $STR(P33)
+#ACT
+MOV P0 $STR(P33)
+DEC P0 $GUILD.BAR
+INC S5 、
+INC S5 $STR(P0)
+INC S5 点金币资源
+#IF
+SMALL $GUILD.ROCK $STR(P33)
+#ACT
+MOV P0 $STR(P33)
+DEC P0 $GUILD.ROCK
+INC S5 、
+INC S5 $STR(P0)
+INC S5 点灵石资源
+#IF
+CHECKLEVELEX > 0
+#ACT
+#ELSEACT
+break
+#IF
+!SMALL $GUILD.ORE $STR(P31)
+!SMALL $GUILD.GEM $STR(P32)
+!SMALL $GUILD.WOOD $STR(P33)
+!SMALL $GUILD.BAR $STR(P33)
+!SMALL $GUILD.ROCK $STR(P33)
+#ACT
+GuildTowerRes SELF 0 - $STR(P31)
+GuildTowerRes SELF 1 - $STR(P32)
+GuildTowerRes SELF 2 - $STR(P33)
+GuildTowerRes SELF 3 - $STR(P33)
+GuildTowerRes SELF 4 - $STR(P33)
+GuildTowerGrade SELF + 1
+SENDMSG 5 通灵塔等级获得升级<$GUILD.TOWERGRADE>层！
+messagebox 通灵塔等级获得升级<$GUILD.TOWERGRADE>层！
+GOTO @opentask1
+#ELSEACT
+messagebox 通灵塔还需要<$STR(S5)>才能升级。
+break
+#ELSESAY
+　　行会通灵塔，神通御魔煞。至宝囊其中，灵光照天下。\
+　　升级行会通灵塔，所有行会会员都可以获得更多的属性\
+加成，同时行会珍宝阁、极品阁中所产出的宝物也会珍贵，\
+行会任务的奖励也会更丰厚。\
+　　只有整个行会会员共同的资源捐献，才能将行会通灵塔\
+铸造的更高大、更雄伟!\\
+　　<离开/@exit>
+#IF
+EQUAL $GUILD.TOWERGRADE 1
+#ACT
+GuildTowerRes SELF 5 = 50
+GuildTowerRes SELF 6 = 50
+GuildTowerRes SELF 7 = 30
+GuildTowerRes SELF 8 = 30
+GuildTowerRes SELF 9 = 30
+break
+#IF
+EQUAL $GUILD.TOWERGRADE 2
+#ACT
+GuildTowerRes SELF 5 = 100
+GuildTowerRes SELF 6 = 100
+GuildTowerRes SELF 7 = 50
+GuildTowerRes SELF 8 = 50
+GuildTowerRes SELF 9 = 50
+break
+#IF
+EQUAL $GUILD.TOWERGRADE 3
+#ACT
+GuildTowerRes SELF 5 = 150
+GuildTowerRes SELF 6 = 150
+GuildTowerRes SELF 7 = 80
+GuildTowerRes SELF 8 = 80
+GuildTowerRes SELF 9 = 80
+break
+#IF
+EQUAL $GUILD.TOWERGRADE 4
+#ACT
+GuildTowerRes SELF 5 = 250
+GuildTowerRes SELF 6 = 250
+GuildTowerRes SELF 7 = 100
+GuildTowerRes SELF 8 = 100
+GuildTowerRes SELF 9 = 100
+break
+#IF
+EQUAL $GUILD.TOWERGRADE 5
+#ACT
+GuildTowerRes SELF 5 = 300
+GuildTowerRes SELF 6 = 300
+GuildTowerRes SELF 7 = 150
+GuildTowerRes SELF 8 = 150
+GuildTowerRes SELF 9 = 150
+break
+#IF
+EQUAL $GUILD.TOWERGRADE 6
+#ACT
+GuildTowerRes SELF 5 = 350
+GuildTowerRes SELF 6 = 350
+GuildTowerRes SELF 7 = 200
+GuildTowerRes SELF 8 = 200
+GuildTowerRes SELF 9 = 200
+break
+#IF
+EQUAL $GUILD.TOWERGRADE 7
+#ACT
+GuildTowerRes SELF 5 = 400
+GuildTowerRes SELF 6 = 400
+GuildTowerRes SELF 7 = 200
+GuildTowerRes SELF 8 = 200
+GuildTowerRes SELF 9 = 200
+break
+#IF
+EQUAL $GUILD.TOWERGRADE 8
+#ACT
+GuildTowerRes SELF 5 = 450
+GuildTowerRes SELF 6 = 450
+GuildTowerRes SELF 7 = 250
+GuildTowerRes SELF 8 = 250
+GuildTowerRes SELF 9 = 250
+break
+#IF
+EQUAL $GUILD.TOWERGRADE 9
+#ACT
+GuildTowerRes SELF 5 = 500
+GuildTowerRes SELF 6 = 500
+GuildTowerRes SELF 7 = 250
+GuildTowerRes SELF 8 = 250
+GuildTowerRes SELF 9 = 250
+break
+#IF
+LARGE $GUILD.TOWERGRADE 9
+#ACT
+GuildTowerRes SELF 5 = 600
+GuildTowerRes SELF 6 = 600
+GuildTowerRes SELF 7 = 300
+GuildTowerRes SELF 8 = 300
+GuildTowerRes SELF 9 = 300
+break
+
+;//珍宝阁================================================================================================
+
+[@openzbgrid] FLASH(21)
+#IF
+LARGE $GUILD.TOWERGRADE 0
+#SAY
+    行会珍宝阁，每天20点扣除维护资源后开启。每次开启\
+每格珍宝阁都需要消耗<Color=orange 20两行会银两。>\
+<Color=orange 行会图腾：>在一定范围内可产生特殊效果。\
+<Color=orange 护宝符：>确保武器和盾牌在升级时不破碎。\
+<Color=orange 通灵盾牌：>佩戴后可获得属性加成，并有概率减免伤害。\
+    在开启珍宝阁时更有机会发现神秘的<Color=orange 极品阁>，消耗一个\
+<Color=orange 灵皓石>的灵力就可进入极品阁。进入后无需再花费任何行会\
+银两就有机会获得各种<Color=orange 天生带小极品属性的装备>，直到开到\
+恐怖的骷髅才会退出。\
+    珍宝阁每天都会产出一颗<Color=orange 通灵珠>，当通灵一星珠产出后，\
+第二天将会产出二星珠，以此类推，直至产出<Color=orange 七星珠>。集齐\
+七颗通灵珠，可找通灵塔使者换取奖励。\
+    <恢复珍宝阁奖励/@jieshaochong>\
+</@main></@shengongfang></@RecTask></@OpenTask></@OpenZBGrid></@XianLingBei>\
+
+[@jieshaochong] FLASH(21)
+    借灵皓石之灵力，引九天劫之涌动，使通灵宝塔神光大\
+盛，从而让珍宝阁的奖励重新恢复一次！但如此强劲的夺天\
+之法每天只能使用一次！不然必乱乾坤！（消耗一个灵皓石\
+恢复珍宝阁，并且奖励50点行会银两）\\
+    <使用灵皓石恢复珍宝阁/@refreshGrid>\
+</@main></@shengongfang></@RecTask></@OpenTask></@OpenZBGrid></@XianLingBei>\
+
+[@refreshGrid] FLASH(21)
+#IF
+CHECKITEM 灵皓石 1
+#ACT
+#ELSESAY
+    恢复珍宝阁需要借助一个灵皓石的灵力。
+#ELSEACT
+break
+#IF
+CHECKGUILDLIST ..\QuestDiary\通灵塔\行会珍宝阁.txt
+#ACT
+messagebox 每个行会每天只有一次使用灵皓石恢复珍宝阁的机会\　\你的行会今天已经使用过一次了，请明天再来吧！
+break
+#IF
+SMALL $GUILD.TOWERSTATUS 1
+#ACT
+MESSAGEBOX 　　　　　　　通灵塔资源不足被封闭，无法刷新珍宝阁
+break
+#ELSEACT
+#IF
+checkitem 灵皓石 1
+#ACT
+take 灵皓石 1
+CLEARPAVILION 1
+CLEARPAVILION 2
+ADDGUILDLIST ..\QuestDiary\通灵塔\行会珍宝阁.txt
+GuildGold + 50
+SENDMSG 5 珍宝阁已经刷新恢复，你获得了50行会银两
+break
+
+[@珍宝阁开宝]
+#IF
+SMALL $GUILD.TOWERSTATUS 1
+#ACT
+MESSAGEBOX 　　　　　　　通灵塔资源不足被封闭，无法刷新珍宝阁
+break
+#IF
+SMALL $GUILDGOLD 20
+#ACT
+MessageBox 20两行会银两才能开启一次珍宝阁，捐献资源可以获得行会银两。
+break
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSEACT
+MessageBox 对不起，您身上背包的位置不够，请清理出空位！
+break
+#IF
+RANDOM 10
+#ACT
+GuildGold - 20
+SETPAVILION 1 $PARAM(0) 3 $USERNAME 
+SENDMSG 5 恭喜你开启珍宝阁发现了一个极品阁!
+break
+#IF
+RANDOM 8
+#ACT
+GuildGold - 20
+ReadRandomStr ..\QuestDiary\通灵塔\珍宝阁\珍宝阁奖励3.txt S7
+SETPAVILION 1 $PARAM(0) 1 $USERNAME $STR(S7)
+GIVE $STR(S7) 1
+SENDMSG 5 恭喜你开启珍宝阁获得了<$STR(S7)>！
+SENDMSG 10 恭喜行会<$GUILDNAME>的玩家<$USERNAME>开启珍宝阁获得了<$STR(S7)>！
+break
+#IF
+RANDOM 5
+#ACT
+GuildGold - 20
+ReadRandomStr ..\QuestDiary\通灵塔\珍宝阁\珍宝阁奖励2.txt S7
+SETPAVILION 1 $PARAM(0)  1 $USERNAME $STR(S7)
+GIVE $STR(S7) 1
+SENDMSG 5 恭喜你开启珍宝阁获得了<$STR(S7)>！
+SENDMSG 10 恭喜行会<$GUILDNAME>的玩家<$USERNAME>开启珍宝阁获得了<$STR(S7)>！
+break
+#IF
+RANDOM 1
+#ACT
+GuildGold - 20
+ReadRandomStr ..\QuestDiary\通灵塔\珍宝阁\珍宝阁奖励1.txt S7
+SETPAVILION 1 $PARAM(0) 1 $USERNAME $STR(S7)
+#ELSEACT
+MessageBox 此格珍宝阁已经被其它人开启了，请选择其它格子！
+break
+#IF
+EQUAL S7 1000000经验值
+#ACT
+GIVE 经验 1000000
+SENDMSG 5 恭喜你开启珍宝阁获得了1000000经验值！
+break
+#IF
+EQUAL S7 2000000经验值
+#ACT
+GIVE 经验 2000000
+SENDMSG 5 恭喜你开启珍宝阁获得了2000000经验值！
+SENDMSG 10 恭喜行会<$GUILDNAME>的玩家<$USERNAME>开启珍宝阁获得了2000000经验
+break
+#IF
+EQUAL S7 3000000经验值
+#ACT
+GIVE 经验 3000000
+SENDMSG 5 恭喜你开启珍宝阁获得了3000000经验值！
+SENDMSG 10 恭喜行会<$GUILDNAME>的玩家<$USERNAME>开启珍宝阁获得了3000000经验
+break
+#ELSEACT
+GIVE $STR(S7) 1
+SENDMSG 5 恭喜你开启珍宝阁获得了<$STR(S7)>！
+SENDMSG 10 恭喜行会<$GUILDNAME>的玩家<$USERNAME>开启珍宝阁获得了<$STR(S7)>！
+
+[@进入极品阁]
+#ACT
+SENDMSG 5 恭喜你进入了一个极品阁!
+SENDMSG 10 恭喜<$USERNAME>在珍宝阁进入了一个极品阁，从现在开始，只要你在通灵塔中开启珍宝阁，即可有机会进入极品阁
+SETPAVILION 1 $PARAM(0) 4 $USERNAME
+MOV D30 1
+break
+
+[@极品阁开宝]
+#IF
+SMALL D30 1
+#ACT
+break
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSEACT
+MessageBox 对不起，您身上背包的位置不够，请清理出空位！
+break
+#IF
+LARGE D30 7
+#ACT
+MOV D30 0
+SETPAVILION 2 $PARAM(0) 2 $USERNAME 
+SENDMSG 5 哎呀，遇到骷髅了。
+break
+#IF
+RANDOM 4
+!SMALL D30 3
+#ACT
+MOV D30 0
+SETPAVILION 2 $PARAM(0) 2 $USERNAME
+SENDMSG 5 哎呀，遇到骷髅了。
+break
+#IF
+RANDOM 4
+#ACT
+INC D30 1
+ReadRandomStr ..\QuestDiary\通灵塔\珍宝阁\极品阁奖励.txt S7
+SETPAVILION 2 $PARAM(0) 1 $USERNAME $STR(S7)
+SENDMSG 10 恭喜行会<$GUILDNAME>的玩家<$USERNAME>开启极品阁获得了<$STR(S7)>
+GIVE $STR(S7) 1
+SENDMSG 5 恭喜你开启极品阁获得了<$STR(S7)>
+break
+#ELSEACT
+INC D30 1
+SETPAVILION 2 $PARAM(0) 1 $USERNAME 归元神丹(小)
+GIVE 归元神丹(小) 1
+SENDMSG 5 恭喜你开启极品阁获得了归元神丹(小)
+break
+
+;//神功放================================================================================================
+
+[@shengongfang] FLASH(43)
+    <Color=orange 神工坊，行会炼制盾牌，成员提升盾牌品质、提炼魂珠>\
+<Color=orange 的地方。>\
+    每个成员都可在神工坊中购买、炼制盾牌品级。品级越\
+高的盾牌，附加的攻击、防御属性就越好，同时，触发到减\
+免伤害的概率就越高。\
+    <Color=green 同时，神工坊内还可使用木材将真魂珠提炼为仙魂珠。>\
+<Color=green 木材的品质越高，成功概率就越高。如提炼失败真魂珠不会>\
+<Color=green 破碎。在中州客栈内的紫金神炉还可使用首饰来修炼魂珠。>\
+    <Color=green 圣王精魄可以将战神级、血煞级、蟠龙级首饰在神工坊>\
+<Color=green 中炼制成圣级首饰。炼制首饰本身的等级越高炼制出的圣级>\
+<Color=green 首饰的品质也越好！>\
+     </@RecTask> </@main></@shengongfang> </@OpenTask> </@OpenZBGrid></@XianLingBei></@oldshengongfang></@Catapult></@Ladder></@Shidan></@Huodan></@Bingdan>\
+
+[@oldshengongfang] FLASH(24)
+    <Color=orange 神工坊，行会炼制盾牌，成员提升盾牌品质、提炼魂珠>\
+<Color=orange 的地方。>\
+    每个成员都可在神工坊中购买、炼制盾牌品级。品级越\
+高的盾牌，附加的攻击、防御属性就越好，同时，触发到减\
+免伤害的概率就越高。\
+    <Color=green 同时，神工坊内还可使用木材将真魂珠提炼为仙魂珠。>\
+<Color=green 木材的品质越高，成功概率就越高。如提炼失败真魂珠不会>\
+<Color=green 破碎。在中州客栈内的紫金神炉还可使用首饰来修炼魂珠。>\
+    <Color=green 圣王精魄可以将战神级、血煞级、蟠龙级首饰在神工坊>\
+<Color=green 中炼制成圣级首饰。炼制首饰本身的等级越高炼制出的圣级>\
+<Color=green 首饰的品质也越好！>\
+    </@RecTask> </@main></@shengongfang> </@OpenTask> </@OpenZBGrid></@XianLingBei></@GetPropertyInfo></@GetPropertyRefineInfo>\
+
+[@GetPropertyInfo] FLASH(39)
+    每个成员都可在神工坊中花费一些行会银两购买盾牌，\
+品级越高的盾牌，附加的攻击、防御属性就越好，同时，触\
+发到减免伤害的概率就越高。\
+    </@GuildEquipInfo></@shengongfang> </@RecTask></@main></@OpenTask></@OpenZBGrid></@XianLingBei>\
+
+[@GuildEquipInfo] FLASH(25)
+    通灵盾牌，需要每个成员使用行会银两进行购买，初期\
+购买到的通灵盾牌品级都是1级，通过神工坊中的神工炉可\
+使用高纯度木材来提升盾牌的品级。\
+    <Color=green 盾牌共分3个职业，根据行会旗帜的颜色四周散发出不>\
+<Color=green 同的效果。佩带后，可直接获得盾牌上的属性，盾牌品级越>\
+<Color=green 高，属性就越好，触发减免伤害的概率就越高。>\
+    当成员退出行会时，盾牌上属性将不会消失。每个成员\
+都可使用行会银两来购买盾牌，每个盾牌需要行会银两2000两。    
+</@GetGuildEquip></@shengongfang> </@RecTask></@main></@OpenTask></@OpenZBGrid></@XianLingBei>\
+
+[@GetGuildEquip] FLASH(25)
+#IF
+SMALL $GUILDGOLD 2000
+#SAY
+　　你的行会银两不够，每个盾牌需要行会银两2000两
+#ACT
+break
+#ELSEACT
+GOTO @可以获得盾牌
+break
+
+[@可以获得盾牌] FLASH(31)
+#IF
+SMALL $GUILDGOLD 2000
+#SAY
+　　你的行会银两不够，每个盾牌需要行会银两2000两
+#ACT
+break
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSEACT
+MessageBox 对不起，您身上背包的位置不够，请清理出空位！
+break
+#IF
+checkjob Warr
+#SAY
+　　你成功获得了<Color=GREEN 通灵战盾>，你还可以在神工坊中提升\
+盾牌的品级，盾牌一共有10个品级，品级越高，盾牌的\
+属性越高，免除伤害的百分比就越高。\\
+　　<知道了/@exit>
+#ACT
+give 通灵战盾 1
+GuildGold - 2000
+SENDMSG 5 你成功获得了通灵战盾
+#break
+#IF
+checkjob Wizard
+#SAY
+　　你成功获得了<Color=GREEN 通灵法盾>，你还可以在神工坊中提升\
+盾牌的品级，盾牌一共有10个品级，品级越高，盾牌的\
+属性越高，免除伤害的百分比就越高。\\
+　　<知道了/@exit>
+#ACT
+give 通灵法盾 1
+GuildGold - 2000
+SENDMSG 5 你成功获得了通灵法盾
+break
+#IF
+checkjob Taos
+#SAY
+　　你成功获得了<Color=GREEN 通灵道盾>，你还可以在神工坊中提升\
+盾牌的品级，盾牌一共有10个品级，品级越高，盾牌的\
+属性越高，免除伤害的百分比就越高。\\
+　　<知道了/@exit>
+#ACT
+give 通灵道盾 1
+GuildGold - 2000
+SENDMSG 5 你成功获得了通灵道盾
+break
+
+[@GetPropertyRefineInfo] FLASH(40)
+　　<Color=GREEN 神工坊内还可使用木材将真魂珠提炼为仙魂珠。>\
+　　<Color=GREEN 木材的品质越高，成功概率就越高。如提炼失败真魂珠>\
+<Color=GREEN 不会破碎。>\
+　　<Color=GREEN 圣王精魄可以将战神级、血煞级、蟠龙级首饰在神工坊>\
+<Color=GREEN 中炼制成圣级首饰。炼制首饰本身的等级越高炼制出的圣级>\
+<Color=GREEN 首饰的品质也越好！>
+    </@shengongfang> </@RecTask></@main></@OpenTask></@OpenZBGrid></@XianLingBei>\
+
+[@RefineItem]
+#IF
+EQUAL $ITEMINFO[$PARAM(0)].NAME 真魂珠
+#ACT
+GOTO @DPDATAITEM
+break
+#IF
+POS $ITEMINFO[$PARAM(0)].NAME 盾
+#ACT
+GOTO @UPDATAITEM
+break
+#IF
+POS $ITEMINFO[$PARAM(0)].NAME 王者
+#ACT
+GOTO @BPDATAITEM
+break
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV S29 |
+INC S29 $ITEMINFO[$PARAM(0)].NAME
+INC S29 |
+#IF
+PosInList $STR(S29) ..\QuestDiary\通灵塔\盾牌升级\首饰名字.txt S30
+#ACT
+MOV P30 0
+GETVALIDSTR $STR(S30) | S31 S32
+#ELSEACT
+RefineItem 1
+messagebox 你所放入的升级物品，无法进行升级
+break
+#IF
+EQUAL $ITEMINFO[$PARAM(0)].NAME 圣王精魄
+#ACT
+MOVR P30 70
+#ELSEACT
+RefineItem 1
+messagebox 你并没有放上圣王精魄，无法进行升级
+break
+#IF
+EQUAL $ITEMINFO[$PARAM(2)].NAME 护宝符
+#ACT
+INC P30 30
+#IF
+POS $ITEMINFO[$PARAM(2)].NAME 幸运符
+#ACT
+INC P30 30
+MOV P31 $ITEMINFO[$PARAM(2)].DURA
+#IF
+LARGE P30 80
+#ACT
+RefineItem 0
+TAKEM $PARAM(0)
+TAKEM $PARAM(1)
+TAKEM $PARAM(2)
+GIVE $STR(S32) 1
+break
+#IF
+SMALL P30 80
+#ACT
+RefineItem 2
+#IF
+LARGE P31 1
+#ACT
+TAKEM $PARAM(1)
+UPGRADEUSERITEM $PARAM(2) 20 - 1
+break
+#IF
+SMALL P31 2
+#ACT
+TAKEM $PARAM(1)
+TAKEM $PARAM(2)
+break
+#IF
+POS $ITEMINFO[$PARAM(2)].NAME 护宝符
+#ACT
+TAKEM $PARAM(1)
+TAKEM $PARAM(2)
+break
+
+[@DPDATAITEM]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV P30 $ITEMINFO[$PARAM(0)].VALUE(12)
+#IF
+SMALL P30 10
+#ACT
+RefineItem 1
+messagebox 当前魂珠还没有达到最高品级10级，不能进行升级了！
+break
+#IF
+EQUAL $ITEMINFO[$PARAM(1)].NAME 木材
+#ACT
+MOV P31 0
+MOV P32 0
+MOV P33 0
+MOV P34 $ITEMINFO[$PARAM(1)].DURA
+#ELSEACT
+RefineItem 1
+messagebox 你所放入的不是木材，无法进行升级
+break
+#IF
+POS $ITEMINFO[$PARAM(2)].NAME 符
+#ELSEACT
+RefineItem 1
+messagebox 你并没有放上幸运符或护宝符，无法进行升级
+break
+#IF
+EQUAL $ITEMINFO[$PARAM(2)].NAME 护宝符
+#ACT
+MOV P31 1
+#IF
+POS $ITEMINFO[$PARAM(2)].NAME 幸运符
+#ACT
+MOV P31 2
+MOV P32 $ITEMINFO[$PARAM(2)].DURA
+#IF
+LARGE P34 30000
+SMALL P31 1
+#ACT
+TAKEM $PARAM(1)
+TAKEM $PARAM(2)
+RefineItem 2
+break
+#IF
+SMALL P34 30000
+SMALL P31 1
+#ACT
+TAKEM $PARAM(1)
+TAKEM $PARAM(2)
+RefineItem 2
+break
+#IF
+SMALL P34 30000
+EQUAL P31 2
+LARGE P32 1
+#ACT
+TAKEM $PARAM(1)
+UPGRADEUSERITEM $PARAM(2) 20 - 1
+RefineItem 2
+break
+#IF
+SMALL P34 30000
+EQUAL P31 2
+SMALL P32 2
+#ACT
+TAKEM $PARAM(1)
+TAKEM $PARAM(2)
+RefineItem 2	
+break
+#ELSEACT
+give 仙魂珠 1
+UPGRADEUSERITEM $PARAM(10) 12 = 1
+UPGRADEUSERITEM $PARAM(10) 15 = 6
+UPGRADEUSERITEM $PARAM(10) 72 = 0
+UPGRADEUSERITEM $PARAM(10) 0 = 4
+UPGRADEUSERITEM $PARAM(10) 1 = 4
+UPGRADEUSERITEM $PARAM(10) 2 = 4
+UPGRADEUSERITEM $PARAM(10) 3 = 4
+UPGRADEUSERITEM $PARAM(10) 4 = 1
+UPGRADEUSERITEM $PARAM(10) 5 = 1
+TAKEM $PARAM(0)
+TAKEM $PARAM(1)
+RefineItem 0
+GOTO @Detectionofdeleteditems
+break
+
+[@Detectionofdeleteditems]
+#IF
+EQUAL P31 1
+#ACT
+TAKEM $PARAM(2)
+break
+#IF
+EQUAL P31 2
+LARGE P32 1
+#ACT
+UPGRADEUSERITEM $PARAM(2) 20 - 1
+break
+#IF
+EQUAL P31 2
+SMALL P32 2
+#ACT
+TAKEM $PARAM(2)
+break
+
+[@UPDATAITEM]
+#IF
+EQUAL $ITEMINFO[$PARAM(1)].NAME 木材
+#ACT
+MOV P31 0
+MOV P32 0
+MOV P33 0
+MOV P35 0
+MOV P36 0
+MOV P37 0
+MOV P38 0
+MOV P39 0
+MOV P34 $ITEMINFO[$PARAM(1)].DURA
+MOV P30 $ITEMINFO[$PARAM(0)].VALUE(11)
+#ELSEACT
+RefineItem 1
+messagebox 你所放入的不是木材，无法进行升级
+break
+#IF
+EQUAL P30 10
+#ACT
+RefineItem 1
+messagebox 你的盾牌品级已经达到最高10级，不能再升级了！
+break
+#IF
+CHECKVARLIST $ITEMINFO[$PARAM(0)].STDNAME ..\QuestDiary\通灵塔\盾牌升级\盾牌名字.txt
+#ACT
+#ELSEACT
+RefineItem 1
+messagebox 你所放入的升级物品不是盾牌，无法进行升级
+break
+#IF
+POS $ITEMINFO[$PARAM(2)].NAME 符
+#ELSEACT
+RefineItem 1
+messagebox 你并没有放上幸运符或护宝符，无法进行升级
+break
+#IF
+EQUAL $ITEMINFO[$PARAM(2)].NAME 护宝符
+#ACT
+MOV P32 1
+#IF
+POS $ITEMINFO[$PARAM(2)].NAME 幸运符
+#ACT
+MOV P32 2
+MOV P31 $ITEMINFO[$PARAM(2)].DURAMAX
+#IF
+CHECKVARLIST $ITEMINFO[$PARAM(0)].STDNAME ..\QuestDiary\通灵塔\盾牌升级\战士盾牌.txt
+#ACT
+MOV P35 5
+MOV P36 4
+#IF
+CHECKVARLIST $ITEMINFO[$PARAM(0)].STDNAME ..\QuestDiary\通灵塔\盾牌升级\法师盾牌.txt
+#ACT
+MOV P35 7
+MOV P36 6
+#IF
+CHECKVARLIST $ITEMINFO[$PARAM(0)].STDNAME ..\QuestDiary\通灵塔\盾牌升级\道士盾牌.txt
+#ACT
+MOV P35 9
+MOV P36 8
+#IF
+SMALL P30 2
+#ACT
+MOV P37 1
+#IF
+LARGE P30 1
+SMALL P30 3
+#ACT
+MOV P37 2
+#IF
+LARGE P30 2
+#ACT
+MOV P37 4
+#IF
+LARGE P30 3
+#ACT
+MOV P37 8
+#IF
+LARGE P30 4
+#ACT
+MOV P37 12
+#IF
+LARGE P30 5
+#ACT
+MOV P37 28
+#IF
+LARGE P30 6
+#ACT
+MOV P37 58
+#IF
+LARGE P30 7
+#ACT
+MOV P37 88
+#IF
+LARGE P30 8
+#ACT
+MOV P37 300
+#IF
+SMALL P34 30000
+SMALL P32 2
+#ACT
+TAKEM $PARAM(1)
+TAKEM $PARAM(2)
+RefineItem 2
+break
+#IF
+SMALL P34 30000
+EQUAL P32 2
+LARGE P31 1
+#ACT
+TAKEM $PARAM(1)
+UPGRADEUSERITEM $PARAM(2) 20 - 1
+RefineItem 2
+break
+#IF
+SMALL P30 30000
+EQUAL P32 2
+SMALL P31 2
+#ACT
+TAKEM $PARAM(1)
+TAKEM $PARAM(2)
+RefineItem 2
+break
+#IF
+RANDOM $STR(37)
+#ACT
+MOV P38 $STR(P30)
+INC P38 1
+UPGRADEUSERITEM $PARAM(0) 11 = $STR(P38)
+UPGRADEUSERITEM $PARAM(0) 12 + 5
+MOV P39 $STR(P38)
+GOTO @Improvegrade
+TAKEM $PARAM(1)
+RefineItem 0
+GOTO @Detectionofdeleteditems1
+break
+#IF
+EQUAL P32 1
+#ACT
+TAKEM $PARAM(1)
+GOTO @Detectionofdeleteditems1
+RefineItem 4
+break
+#IF
+RANDOM 8
+#ACT
+TAKEM $PARAM(0)
+TAKEM $PARAM(1)
+GOTO @Detectionofdeleteditems1
+RefineItem 3
+break
+#ELSEACT
+TAKEM $PARAM(1)
+GOTO @Detectionofdeleteditems1
+RefineItem 2
+break
+
+[@Detectionofdeleteditems1]
+#IF
+EQUAL P32 1
+#ACT
+TAKEM $PARAM(2)
+break
+#IF
+EQUAL P32 2
+LARGE P31 1
+#ACT
+UPGRADEUSERITEM $PARAM(2) 20 - 1
+break
+#IF
+EQUAL P32 2
+SMALL P31 2
+#ACT
+TAKEM $PARAM(2)
+break
+
+[@Improvegrade]
+#IF
+EQUAL P39 1
+#ACT
+UPGRADEUSERITEM $PARAM(0) $STR(P35) + 1
+UPGRADEUSERITEM $PARAM(0) 0 + 1
+UPGRADEUSERITEM $PARAM(0) 1 + 1
+UPGRADEUSERITEM $PARAM(0) 3 + 1
+#IF
+EQUAL P39 2
+#ACT
+UPGRADEUSERITEM $PARAM(0) $STR(P36) + 1
+UPGRADEUSERITEM $PARAM(0) 0 + 1
+UPGRADEUSERITEM $PARAM(0) 1 + 1
+UPGRADEUSERITEM $PARAM(0) 2 + 1
+UPGRADEUSERITEM $PARAM(0) 3 + 1
+#IF
+EQUAL P39 3
+#ACT
+UPGRADEUSERITEM $PARAM(0) $STR(P35) + 1
+UPGRADEUSERITEM $PARAM(0) 0 + 1
+UPGRADEUSERITEM $PARAM(0) 1 + 1
+UPGRADEUSERITEM $PARAM(0) 3 + 1
+#IF
+EQUAL P39 4
+#ACT
+UPGRADEUSERITEM $PARAM(0) $STR(P36) + 1
+UPGRADEUSERITEM $PARAM(0) 0 + 1
+UPGRADEUSERITEM $PARAM(0) 1 + 1
+UPGRADEUSERITEM $PARAM(0) 2 + 1
+UPGRADEUSERITEM $PARAM(0) 3 + 1
+#IF
+EQUAL P39 5
+#ACT
+UPGRADEUSERITEM $PARAM(0) $STR(P35) + 1
+UPGRADEUSERITEM $PARAM(0) 0 + 1
+UPGRADEUSERITEM $PARAM(0) 1 + 1
+UPGRADEUSERITEM $PARAM(0) 3 + 1
+#IF
+EQUAL P39 6
+#ACT
+UPGRADEUSERITEM $PARAM(0) $STR(P36) + 1
+UPGRADEUSERITEM $PARAM(0) 0 + 1
+UPGRADEUSERITEM $PARAM(0) 1 + 1
+UPGRADEUSERITEM $PARAM(0) 2 + 1
+UPGRADEUSERITEM $PARAM(0) 3 + 1
+#IF
+EQUAL P39 7
+#ACT
+UPGRADEUSERITEM $PARAM(0) $STR(P35) + 1
+UPGRADEUSERITEM $PARAM(0) 0 + 1
+UPGRADEUSERITEM $PARAM(0) 1 + 1
+UPGRADEUSERITEM $PARAM(0) 3 + 1
+#IF
+EQUAL P39 8
+#ACT
+UPGRADEUSERITEM $PARAM(0) $STR(P36) + 1
+UPGRADEUSERITEM $PARAM(0) 0 + 1
+UPGRADEUSERITEM $PARAM(0) 1 + 1
+UPGRADEUSERITEM $PARAM(0) 2 + 1
+UPGRADEUSERITEM $PARAM(0) 3 + 1
+#IF
+EQUAL P39 9
+#ACT
+UPGRADEUSERITEM $PARAM(0) $STR(P35) + 1
+UPGRADEUSERITEM $PARAM(0) 0 + 1
+UPGRADEUSERITEM $PARAM(0) 1 + 1
+UPGRADEUSERITEM $PARAM(0) 3 + 1
+break
+
+[@BPDATAITEM]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV S29 |
+INC S29 $ITEMINFO[$PARAM(0)].NAME
+INC S29 |
+MOV P30 0
+MOV P31 0
+MOV P32 0
+MOVR P33 60
+#IF
+PosInList $STR(S29) ..\QuestDiary\通灵塔\盾牌升级\王者装备.txt S30
+#ACT
+GETVALIDSTR $STR(S30) | S31 S32
+#ELSEACT
+RefineItem 1
+messagebox 你放入的物品不是王者级首饰，无法升级王者精装备！
+break
+#IF
+POS $ITEMINFO[$PARAM(2)].NAME 符
+#ELSEACT
+RefineItem 1
+messagebox 你并没有放上幸运符或护宝符，无法进行升级
+break
+#IF
+EQUAL $ITEMINFO[$PARAM(1)].NAME 王者精魄
+#ELSEACT
+RefineItem 1
+messagebox 你并没有放上王者精魄，无法进行升级
+break
+#IF
+CHECKITEMID $PARAM(0)
+#ELSEACT
+RefineItem 1
+messagebox 你并没有放上物品，无法进行升级
+break
+#IF
+CHECKITEMID $PARAM(1)
+#ELSEACT
+RefineItem 1
+messagebox 你并没有放上物品，无法进行升级
+break
+#IF
+CHECKITEMID $PARAM(2)
+#ELSEACT
+RefineItem 1
+messagebox 你并没有放上物品，无法进行升级
+break
+#IF
+EQUAL $ITEMINFO[$PARAM(2)].NAME 护宝符
+#ACT
+MOV P30 50
+MOV P31 1
+#IF
+POS $ITEMINFO[$PARAM(2)].NAME 幸运符
+#ACT
+MOV P30 30
+MOV P31 2
+MOV P32 $ITEMINFO[$PARAM(2)].DURAMAX
+#IF
+LARGE P30 $STR(P33)
+#ACT
+TAKEM $PARAM(0)
+TAKEM $PARAM(1)
+RefineItem 0
+GIVE $STR(S32) 1
+GOTO @Detectionofdeleteditems2
+break
+#ELSEACT
+TAKEM $PARAM(1)
+RefineItem 2
+GOTO @Detectionofdeleteditems2
+break
+
+[@Detectionofdeleteditems2]
+#IF
+EQUAL P31 1
+#ACT
+TAKEM $PARAM(2)
+break
+#IF
+EQUAL P31 2
+LARGE P32 1
+#ACT
+UPGRADEUSERITEM $PARAM(2) 20 - 1
+break
+#IF
+EQUAL P31 2
+SMALL P32 2
+#ACT
+TAKEM $PARAM(2)
+break
+
+;//议事厅================================================================================================
+
+[@RecTask] FLASH(27)
+<TaskName>行会每日任务/1/100/<$GUILDSTABILITYPOINT>/\
+<TaskDes><Color=green 行会每日任务：>每个会员都可接取任务，完成后可获得高纯\
+度木材和经验的奖励。通灵塔层级越高，获得的经验就会越\
+多。每天共有100个任务可供接取。\
+<TaskName>行会天赐任务/2/200/<$GUILDFLOURISHPOINT>/\
+<TaskDes><Color=green 行会天赐任务：>该任务每个行会会员每天只能做1次，每次\
+需要消耗5点行会银就可接取任务。完成后可获得高性价比\
+经验随机的奖励。每天共有200个任务可供接取。\
+<TaskName>行会资源任务/3/100/<$GUILDAURAEPOINT>/\
+<TaskDes><Color=green 行会资源任务：>该任务每个行会会员每天只能做1次，每次\
+完成后可获得高性价比的经验奖励，且还有概率为行会通灵\
+塔增加资源。每天共有100个任务可供接取。
+</@accepttask_1></@accepttask_2></@accepttask_3></@FinishTask_1></@FinishTask_2></@FinishTask_3>
+
+[@accepttask_3] FLASH(31)
+#IF
+LARGE $Task(76) 0
+#SAY
+　　你已经接取过行会任务！
+#ACT
+break
+#IF
+CHECKGUILDAURAEPOINT > 99
+#SAY
+　　你来的太晚了，今天的行会任务已被其他行会成员接完\
+了。明天早点来吧
+#ACT
+break
+#IF
+CHECKLEVELEX < 46
+#SAY
+　　需要等级46级以上才能接取行会天赐任务。
+#ACT
+break
+#IF
+CHECKVAR HUMAN 日45 = $DATE
+#SAY
+　　您今天已经接过任务了，明天再来吧!
+#ACT
+break
+#ELSESAY
+<行会资源任务/@GuildResourcesTask>\\
+<离开/@exit>
+
+[@GuildResourcesTask] FLASH(31)
+　　行会通灵塔每天的正常运作会消耗行会资源。当行会资\
+源为0时，通灵塔将失去灵效。\
+　　维护行会通灵塔是每个成员的义务和责任。所有会员都\
+可以领取行会任务，免费获得资源和经验，来维护通灵塔的\
+运行。\
+<接受任务/@GuildResourcesTask1>　　　　　　　　<离开/@exit>
+
+[@GuildResourcesTask1] FLASH(31)
+#IF
+CHECKGUILDAURAEPOINT > 99
+#SAY
+　　今日行会每日任务接取数量已经达到100个，请明日再来！\\
+　　<离开/@exit>
+#ACT
+break
+#IF
+!HasTask 76
+#ACT
+MOVR P5 6
+INC P5 1
+AddTask 76
+UpdateTask 76 $STR(P0)
+GUILDAURAEPOINT + 1
+CALCVAR HUMAN 日45 = $DATE
+SAVEVAR HUMAN 日45 ..\QUESTDIARY\数据文件\个人变量\<$USERNAME>.txt
+#IF
+EQUAL $Task(63) 1
+#SAY
+　　这次你要完成的任务是找寻一个圣战级别头盔或者项链\
+（圣战、法神、天尊头盔或项链）。完成任务后，能获得丰\
+富的奖励的。\
+<离开/@exit>
+#ACT
+break
+#IF
+EQUAL $Task(63) 2
+#SAY
+　　这次你要完成的任务是找寻一个圣战级别手镯或者戒指\
+（圣战、法神、天尊手镯或戒指）。完成任务后，能获得丰\
+富的奖励的。\
+<离开/@exit>
+#ACT
+break
+#IF
+EQUAL $Task(63) 3
+#SAY
+　　这次你要完成的任务是找寻一个圣战级别靴子或者腰带\
+（圣战、法神、天尊靴子或腰带）。完成任务后，能获得丰\
+富的奖励的。\
+<离开/@exit>
+#ACT
+break
+#IF
+EQUAL $Task(63) 4
+#SAY
+　　这次你要完成的任务是找寻一个神武级别头盔或者项链\
+（神武、幻魔、天玄头盔或项链）。完成任务后，能获得丰\
+富的奖励的。\
+<离开/@exit>
+#ACT
+break
+#IF
+EQUAL $Task(63) 5
+#SAY
+　　这次你要完成的任务是找寻一个神武级别手镯或者戒指\
+（神武、幻魔、天玄手镯或戒指）。完成任务后，能获得丰\
+富的奖励的。\
+<离开/@exit>
+#ACT
+break
+#IF
+EQUAL $Task(63) 6
+#SAY
+　　这次你要完成的任务是找寻一个神武级别靴子或者腰带\
+（神武、幻魔、天玄靴子或腰带）。完成任务后，能获得丰\
+富的奖励的。\
+<离开/@exit>
+#ACT
+break
+
+[@FinishTask_3] FLASH(31)
+#IF
+LARGE $Task(76) 0
+#ACT
+GOTO @CompleteResourcetasks
+break
+#ELSESAY
+　　你先去接任务，完成后再来吧。
+
+[@CompleteResourcetasks]
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSEACT
+MessageBox 对不起，您身上背包的位置不够，请清理出空位！
+break
+#IF
+EQUAL $Task(76) 1
+CHECKITEM 圣战头盔 1
+#ACT
+TAKE 圣战头盔 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 1
+CHECKITEM 法神头盔 1
+#ACT
+TAKE 法神头盔 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 1
+CHECKITEM 天尊头盔 1
+#ACT
+TAKE 天尊头盔 1
+ENDTASK 资源任务1
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 1
+CHECKITEM 圣战项链 1
+#ACT
+TAKE 圣战项链 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 1
+CHECKITEM 法神项链 1
+#ACT
+TAKE 法神项链 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 1
+CHECKITEM 天尊项链 1
+#ACT
+TAKE 天尊项链 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 2
+CHECKITEM 圣战手镯 1
+#ACT
+TAKE 圣战手镯 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 2
+CHECKITEM 法神手镯 1
+#ACT
+TAKE 法神手镯 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 2
+CHECKITEM 天尊手镯 1
+#ACT
+TAKE 天尊手镯 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 2
+CHECKITEM 圣战戒指 1
+#ACT
+TAKE 圣战戒指 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 2
+CHECKITEM 法神戒指 1
+#ACT
+TAKE 法神戒指 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 2
+CHECKITEM 天尊戒指 1
+#ACT
+TAKE 天尊戒指 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 3
+CHECKITEM 圣战靴子 1
+#ACT
+TAKE 圣战靴子 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 3
+CHECKITEM 法神靴子 1
+#ACT
+TAKE 法神靴子 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 3
+CHECKITEM 天尊道靴 1
+#ACT
+TAKE 天尊道靴 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 3
+CHECKITEM 圣战腰带 1
+#ACT
+TAKE 圣战腰带 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 3
+CHECKITEM 法神腰带 1
+#ACT
+TAKE 法神腰带 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 3
+CHECKITEM 天尊腰带 1
+#ACT
+TAKE 天尊腰带1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 4
+CHECKITEM 神武头盔 1
+#ACT
+TAKE 神武头盔 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 4
+CHECKITEM 幻魔头盔 1
+#ACT
+TAKE 幻魔头盔 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 4
+CHECKITEM 天玄头盔 1
+#ACT
+TAKE 天玄头盔 1
+ENDTASK 资源任务1
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 4
+CHECKITEM 神武项链 1
+#ACT
+TAKE 神武项链 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 4
+CHECKITEM 幻魔项链 1
+#ACT
+TAKE 幻魔项链 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 4
+CHECKITEM 天玄项链 1
+#ACT
+TAKE 天玄项链 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 5
+CHECKITEM 神武手镯 1
+#ACT
+TAKE 神武手镯 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 5
+CHECKITEM 幻魔手镯 1
+#ACT
+TAKE 幻魔手镯 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 5
+CHECKITEM 天玄手镯 1
+#ACT
+TAKE 天玄手镯 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 5
+CHECKITEM 神武戒指 1
+#ACT
+TAKE 神武戒指 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 5
+CHECKITEM 幻魔戒指 1
+#ACT
+TAKE 幻魔戒指 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 5
+CHECKITEM 天玄戒指 1
+#ACT
+TAKE 天玄戒指 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 6
+CHECKITEM 神武战靴 1
+#ACT
+TAKE 神武战靴 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 6
+CHECKITEM 幻魔法靴 1
+#ACT
+TAKE 幻魔法靴 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 6
+CHECKITEM 天玄道靴 1
+#ACT
+TAKE 天玄道靴 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 6
+CHECKITEM 神武腰带 1
+#ACT
+TAKE 神武腰带 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 6
+CHECKITEM 幻魔腰带 1
+#ACT
+TAKE 幻魔腰带 1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#IF
+EQUAL $Task(76) 6
+CHECKITEM 天玄腰带 1
+#ACT
+TAKE 天玄腰带1
+SHOWHUMEFFECT 84
+GOTO @ResourcetasksAward
+break
+#ELSESAY
+　　行会资源任务还未完成，勇士尚需努力啊！
+
+[@ResourcetasksAward]
+#IF
+CHECKLEVELEX > 0
+#SAY
+　　勇士，你真的完成了本次行会任务？\
+#ACT
+EndTask 76
+MOVR P3 3
+INC P3 1
+MOVR P4 25
+INC P4 30
+MULT P4 1000
+CHANGEEXP + $STR(P4)
+SetProffer = 1
+#IF
+RANDOM 5
+#ACT
+GuildTowerRes SELF 0 + $STR(P3)
+SENDMSG 5 恭喜你为行会通灵塔作出了贡献，增加矿石资源<$STR(P3)>点！
+
+break
+#IF
+RANDOM 4
+#ACT
+GuildTowerRes SELF 1 + $STR(P3)
+SENDMSG 5 恭喜你为行会通灵塔作出了贡献，增加木材资源<$STR(P3)>点！
+
+break
+#IF
+RANDOM 3
+#ACT
+GuildTowerRes SELF 2 + $STR(P3)
+SENDMSG 5 恭喜你为行会通灵塔作出了贡献，增加宝石资源<$STR(P3)>点！
+
+break
+#IF
+RANDOM 2
+#ACT
+GuildTowerRes SELF 3 + $STR(P3)
+SENDMSG 5 恭喜你为行会通灵塔作出了贡献，增加金币资源<$STR(P3)>点！
+
+break
+#IF
+RANDOM 1
+#ACT
+GuildTowerRes SELF 4 + $STR(P3)
+SENDMSG 5 恭喜你为行会通灵塔作出了贡献，增加灵石资源<$STR(P3)>点！
+
+break
+
+[@accepttask_2]
+#IF
+CHECKGUILDFLOURISHPOINT > 199
+#SAY
+　　你来的太晚了，今天的行会任务已被其他行会成员接完\
+了。明天早点来吧
+#ACT
+break
+#IF
+CHECKLEVELEX < 46
+#SAY
+　　需要等级46级以上才能接取行会每日任务。
+#ACT
+break
+#IF
+CHECKVAR HUMAN 日44 = $DATE
+#SAY
+　　您今天已经接过任务了，明天再来吧!
+#ACT
+break
+#IF
+LARGE $Task(75) 0
+#SAY
+　　任务还没有完成呢，勇士还需要努力啊！
+#ACT
+break
+#ELSESAY
+<行会天赐任务/@Guildprovidentialmission>\\
+<离开/@exit>
+
+[@Guildprovidentialmission]
+    行会通灵塔每天的正常运作会消耗行会资源。当行会资\
+源为0时，通灵塔将失去灵效。\
+    维护行会通灵塔是每个成员的义务和责任。所有会员都\
+可以领取行会任务，免费获得资源和经验，来维护通灵塔的\
+运行。\
+<接受任务/@Guildprovidentialmission1>                <离开/@exit>
+
+[@Guildprovidentialmission1]
+#IF
+CHECKGUILDFLOURISHPOINT > 199
+#SAY
+　　你来的太晚了，今天的行会任务已被其他行会成员接完\
+了。明天早点来吧
+#ACT
+break
+#IF
+HasTask 75
+#ACT
+break
+#IF
+RANDOM 4
+#SAY
+    这次你要完成的任务是找寻二个天之神铁。\
+完成任务后，能获得丰富的奖励。\
+<离开/@exit>
+#ACT
+AddTask 75
+UpdateTask 75 1
+GUILDFLOURISHPOINT + 1
+CALCVAR HUMAN 日44 = $DATE
+SAVEVAR HUMAN 日44 ..\QUESTDIARY\数据文件\个人变量\<$USERNAME>.txt
+break
+#IF
+RANDOM 3
+#SAY
+ 　　这次你要完成的任务是找寻一个黑暗轮回圈轴。\
+完成任务后回到这里,还能得到奖励。\
+<离开/@exit>
+#ACT
+AddTask 75
+UpdateTask 75 2
+GUILDFLOURISHPOINT + 1
+CALCVAR HUMAN 日44 = $DATE
+SAVEVAR HUMAN 日44 ..\QUESTDIARY\数据文件\个人变量\<$USERNAME>.txt
+break
+#IF
+RANDOM 2
+#SAY
+ 　　这次你要完成的任务是找寻一个九重云霄卷轴。\
+完成任务后回到这里,还能得到奖励。\
+<离开/@exit>
+#ACT
+AddTask 75
+UpdateTask 75 3
+GUILDFLOURISHPOINT + 1
+CALCVAR HUMAN 日44 = $DATE
+SAVEVAR HUMAN 日44 ..\QUESTDIARY\数据文件\个人变量\<$USERNAME>.txt
+break
+#IF
+RANDOM 1
+#SAY
+ 　　这次你要完成的任务是找寻一个修罗神殿圈轴。\
+完成任务后回到这里,还能得到奖励。\
+<离开/@exit>
+#ACT
+AddTask 75
+UpdateTask 75 4
+GUILDFLOURISHPOINT + 1
+CALCVAR HUMAN 日44 = $DATE
+SAVEVAR HUMAN 日44 ..\QUESTDIARY\数据文件\个人变量\<$USERNAME>.txt
+break
+
+[@FinishTask_2] FLASH(31)
+#IF
+LARGE $Task(75) 0
+#ACT
+GOTO @Heavenmissiontocomplete
+break
+#ELSESAY
+　　你先去接任务，完成后再来吧。
+
+[@Heavenmissiontocomplete] FLASH(31)
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSEACT
+MessageBox 对不起，您身上背包的位置不够，请清理出空位！
+break
+#IF
+EQUAL $Task(75) 1
+CHECKITEM 天之神铁 2
+#ACT
+TAKE 天之神铁 2
+goto @Providentialtaskreward
+break
+#IF
+EQUAL $Task(75) 2
+CHECKITEM 黑暗轮回卷轴 1
+#ACT
+TAKE 黑暗轮回卷轴 1
+goto @Providentialtaskreward
+break
+#IF
+EQUAL $Task(75) 3
+CHECKITEM 九重云霄卷轴 1
+#ACT
+TAKE 九重云霄卷轴 1
+goto @Providentialtaskreward
+break
+#IF
+EQUAL $Task(75) 4
+CHECKITEM 修罗神殿圈轴 1
+#ACT
+TAKE 修罗神殿圈轴 1
+goto @Providentialtaskreward
+break
+#ELSESAY
+　　任务还没有完成呢，勇士还需要努力啊！
+
+[Providentialtaskreward] FLASH(31)
+#IF
+CHECKLEVELEX > 0
+#SAY
+    勇士，恭喜你完成了本次行会天赐任务\
+#ACT
+MOVR P5 5
+INC P5 5
+MULT P5 1000000
+EndTask 75
+SHOWHUMEFFECT 84
+ReadRandomStr ..\QuestDiary\数据文件\游戏奖励\天赐任务奖励.txt S3
+GIVE $STR(S3) 1
+GIVE 经验 $STR(P5)
+SENDMSG 5 恭喜你获得<$STR(S3)>的奖励
+break
+
+[@accepttask_1] FLASH(30)
+#IF
+CHECKGUILDSTABILITYPOINT > 99
+#SAY
+　　你来的太晚了，今天的行会任务已被其他行会成员接完\
+了。明天早点来吧
+#ACT
+break
+#IF
+CHECKLEVELEX < 46
+#SAY
+　　需要等级46级以上才能接取行会每日任务。
+#ACT
+break
+#IF
+CHECKVAR HUMAN 日43 = $DATE
+#SAY
+　　您今天已经接过任务了，明天再来吧!
+#ACT
+break
+#IF
+SMALL $Task(74) 3
+LARGE $Task(74) 0
+#SAY
+　　任务还没有完成呢，勇士还需要努力啊！
+#ACT
+break
+#ELSESAY
+<行会任务/@GuildDailytasks>\\
+<离开/@exit>
+
+[@GuildDailytasks] FLASH(31)
+　　行会通灵塔每天的正常运作会消耗行会资源。当行会资\
+源为0时，通灵塔将失去灵效。\
+　　维护行会通灵塔是每个成员的义务和责任。所有会员都\
+可以领取行会任务，免费获得资源和经验，来维护通灵塔的\
+运行。\
+<接受任务/@GuildDailytasks1>　　　　　　　　<离开/@exit>
+
+[@GuildDailytasks1] FLASH(31)
+#IF
+CHECKGUILDSTABILITYPOINT > 99
+#SAY
+　　你来的太晚了，今天的行会任务已被其他行会成员接完\
+了。明天早点来吧
+#ACT
+break
+#IF
+!HasTask 74
+#ACT
+AddTask 74
+SetTaskValue 74 I0 = 10
+GUILDSTABILITYPOINT + 1
+CALCVAR HUMAN 日43 = $DATE
+SAVEVAR HUMAN 日43 ..\QUESTDIARY\数据文件\个人变量\<$USERNAME>.txt
+#SAY
+这次你要完成的任务是找到10只沙怪，并且将它们击倒。完\
+成任务后回到这里,还能得到奖励。\
+<离开/@exit>
+
+[@FinishTask_1] FLASH(31)
+#IF
+LARGE $Task(74) 0
+#ACT
+GOTO @Completedailytasks
+break
+#ELSESAY
+　　你先去接任务，完成后再来吧。
+
+[@Completedailytasks] FLASH(31)
+#IF
+CHECKBAGSIZE 1
+#ACT
+#ELSEACT
+MessageBox 对不起，您身上背包的位置不够，请清理出空位！
+break
+#IF
+EQUAL $Task(74) 3
+#ACT
+EndTask 74
+SHOWHUMEFFECT 84
+MOVR P3 5
+INC P3 5
+MULT P3 1000000
+MOVR P4 10
+INC P4 30
+MULT P4 1000
+GIVE 经验 $STR(P3)
+GIVE 木材 1
+UPGRADEUSERITEM $PARAM(10) 20 = $STR(P4)
+break
+#SAY
+　　勇士，恭喜你完成了本次行会每日任务？\
+　　这块高品质木材和<$STR(P3)>经验是给你的奖励。
+#ELSESAY
+　　行会每日任务还没有完成呢，勇士还需要努力啊！
+
+;行会旗帜========================================================================================================================
+
+[@guildlogo]
+#IF
+ISGUILDMASTER
+#ELSEACT
+MessageBox 你不是行会会长，只有会长才会拥有这至高无上的权利
+break
+#IF
+SMALL $GUILD.ORE 20
+#ACT
+MessageBox 当前通灵塔矿石资源不足20点，无法修改行会旗帜
+break
+#ELSEACT
+GuildTowerRes SELF 0 - 20
+ChangeGuildFlag SELF = $SCRIPTPARAM(1)
+SENDMSG 7 行会旗帜设置成功。
+break
+
+;仙灵碑========================================================================================================================
+
+[@XianLingBei] FLASH(38)
+    传说在人们居住的中州大陆之下，存在着一个<Color=green 天绝魔域>\
+乃当年万年战争之时人魔神三族交战之处，那时有太多的战\
+斗在那里发生、太多的英雄在那里陨落。而这场战役的目的\
+就是为了<Color=green “天绝金”>，为了用“天绝金”和一个号称<Color=green “天绝>\
+<Color=green 上人”>的得道高人兑换各种奇珍异宝。\
+    后来随着“天绝上人”的消失，那场惨烈的战役才得以\
+平息。三族领袖分刻三块“仙灵碑”作为记录当年战役的标\
+志，<Color=green 并作为再次发起挑战天绝魔域的灵器！>\
+    天绝魔域将在<Color=green 每月1日-28日0点>期间每<Color=green 周日周三周四周五周六>\
+开放至尊级入口、每<Color=green 周二>开放英雄级入口，每<Color=green 周一>开放勇士级\
+入口。\
+    第一次开启：<Color=green 17:30:00>\
+    第二次开启：<Color=green 21:00:00>\
+</@main></@shengongfang></@RecTask></@OpenTask></@OpenZBGrid></@XianLingBei></@liaojieXLDL>\
+
+[@liaojieXLDL] FLASH(32)
+　　天绝魔域中有一个<Color=green “祭王台”>，此乃当时人、魔、神三\
+界领袖为祭祀在战役中阵亡的族人所设，在王台之下封藏有\
+大量的<Color=green “天绝金”>。只要任何行会将自己的旗帜插在“祭王\
+台”上半小时就能获得台下所有“天绝金”。\
+　　“天绝金”乃天绝魔域特产，散布在天绝魔域各地，各\
+种魔物怪灵身上时常也会携带。\
+　　<Color=green 来自各个世界的行会聚集在天绝魔域，>一场龙争虎斗在\
+所难免。所以，只有实力越强的行会才能获得越多的“天绝\
+金”，一切只能让实力说话！！\
+</@tiaozhanXLDL></@main></@shengongfang></@RecTask></@OpenTask></@OpenZBGrid></@XianLingBei></@liaojieXLDL>\
+
+[@tiaozhanXLDL] FLASH(33)
+#IF
+ISGUILDMASTER
+#ACT
+#ELSESAY
+　　只有行会会长才能代表行会挑战天绝魔域。

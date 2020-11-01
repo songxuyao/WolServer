@@ -1,0 +1,12 @@
+[setup]
+stepcount = 4
+title = 新手任务--深入将军坟
+ID = 25
+stepaim1 = 去找<皇宫史官/@@goto SH000 史官 22,39>打听消息 <color=green [传]/@@flyto 29 SH000 22 39>
+stepaim2 = 去<将军坟东/@@goplace H081 207,321>杀10个尸卫勇士 <color=green [传]/@@flyto 27 H081 207 321>
+stepaim3 = 还要杀<$TASKVAL(25).I0>个<尸卫勇士/@@goplace H081 207,321> <color=green [传]/@@flyto 27 H081 207 321>
+stepaim4 = 任务完成！去找<皇宫史官/@@goto SH000 史官 22,39> <color=green [传]/@@flyto 29 SH000 22 39>
+stepDESC1 = <color=graygolden 任务目的：>去找<皇宫史官/@@goto SH000 史官 22,39>打听消息\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：400000\<color=graygolden 任务介绍:>\    传说将军坟的BOSS是尸霸，非常凶猛！这个我至今\都没有见过，你想了解的话，可以去皇宫找到<史官/@@goto SH000 史官 22,39>，他\知道关于尸霸的一些故事。
+stepDESC2 = <color=graygolden 任务目的：>去<将军坟东/@@goplace H081 207,321>杀10个尸卫勇士\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：400000\<color=graygolden 任务介绍:>\    痴情自古多遗恨，放不了的，最终也都要放下\    一声叹息，十年爱人，生死两茫茫。奈何桥上，饮孟婆\汤前，你可记得，那曾经的爱恋，那来世的承诺。\    想要挑战尸霸，你就要证明你的能力。\    去将军坟东消灭10个尸卫勇士。
+stepDESC3 = <color=graygolden 任务目的：>去<将军坟东/@@goplace H081 207,321>杀10个尸卫勇士\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：400000\<color=graygolden 任务介绍:>\    痴情自古多遗恨，放不了的，最终也都要放下\    一声叹息，十年爱人，生死两茫茫。奈何桥上，饮孟婆\汤前，你可记得，那曾经的爱恋，那来世的承诺。\    想要挑战尸霸，你就要证明你的能力。\    去将军坟东消灭10个尸卫勇士。\    还要干掉<$TASKVAL(24).I0>只尸卫。
+stepDESC4 = <color=graygolden 任务目的：>去<将军坟东/@@goplace H081 207,321>杀10个尸卫勇士\<color=graygolden 任务奖励：></@@!PIC2 10,951>经验：400000\<color=graygolden 任务介绍:>\    痴情自古多遗恨，放不了的，最终也都要放下\    一声叹息，十年爱人，生死两茫茫。奈何桥上，饮孟婆\汤前，你可记得，那曾经的爱恋，那来世的承诺。\    想要挑战尸霸，你就要证明你的能力。\    去将军坟东消灭10个尸卫勇士。\    恭喜，圆满完成任务！快用向皇宫史官回报吧！
